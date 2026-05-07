@@ -6,7 +6,7 @@
   </meta>
     <identifier>
         <use value="temp"/>
-        <system value="http://exampleoflocation.com"/>
+        <system value="http://example.com"/>
         <value value="B1-S.F2"/>
     </identifier>
     <status value="active"/>

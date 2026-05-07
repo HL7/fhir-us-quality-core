@@ -5,7 +5,7 @@
     <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-claim"/>
   </meta>
   <identifier>
-    <system value="http://happysight.com/claim"/>
+    <system value="http://example.com"/>
     <value value="6612346"/>
   </identifier>
   <status value="active"/>

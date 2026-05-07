@@ -988,11 +988,11 @@
     </parameter>
     <parameter>
       <code value="path-expansion-params"/>
-      <value value="resources/parameters-manifest.json"/>
+      <value value="exp-params.json"/>
     </parameter>
     <parameter>
       <code value="pin-canonicals"/>
-      <value value="pin-all"/>
+      <value value="pin-multiples"/>
     </parameter>
     <parameter>
       <code value="pin-manifest"/>

@@ -118,7 +118,7 @@
         "coding": [ {
           "extension": [ {
             "url": "http://hl7.org/fhir/StructureDefinition/valueset-reference",
-            "valueUri": "http://cts.nlm.nih.gov/fhir/2.16.840.1.113883.3.88.12.80.16"
+            "valueUri": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.16"
           } ]
         } ],
         "text": "Medication Brand Name value set"

@@ -51,7 +51,7 @@
         "coding": [ {
           "extension": [ {
             "url": "http://hl7.org/fhir/StructureDefinition/valueset-reference",
-            "valueUri": "http://cts.nlm.nih.gov/fhir/2.16.840.1.113883.3.117.1.7.1.230"
+            "valueUri": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.230"
           } ]
         } ],
         "text": "Venous Foot Pumps (VFP) value set"

@@ -21,7 +21,7 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/valueset-reference",
-            "valueUri": "http://cts.nlm.nih.gov/fhir/2.16.840.1.113883.3.464.1003.196.12.1218"
+            "valueUri": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.196.12.1218"
           }
         ]
       }

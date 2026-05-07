@@ -11,8 +11,8 @@
   <statusReason>
     <coding>
       <system value="http://snomed.info/sct"/>
-      <code value="184081006"/>
-      <display value="Patient has moved away (finding)"/>
+      <code value="443390004"/>
+      <display value="Refused"/>
     </coding>
   </statusReason>
   <category>

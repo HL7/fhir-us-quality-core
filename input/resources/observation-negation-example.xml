@@ -20,7 +20,7 @@
   </category>
   <code>
       <extension url="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet">
-        <valueCanonical value="http://cts.nlm.nih.gov/fhir/2.16.840.1.113762.1.4.1045.131"/>
+        <valueCanonical value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1045.131"/>
       </extension>
     <text value="Not Done Value Set: Hemoglobin lab test"/>
   </code>

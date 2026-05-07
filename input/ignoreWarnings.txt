@@ -8,6 +8,7 @@ WARNING: StructureDefinition.where(url = 'http://fhir.org/guides/onc/us-quality-
 # The following examples are using valid codes in the ICD-10/Occupational Data for Health (ODH) codesystems but no codes are represented in THO
 INFORMATION: Claim/example: Claim.diagnosis[0].diagnosis.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/icd-10-cm' could not be found, so the code cannot be validated
 INFORMATION: Observation/example-odh: Observation.value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
 
 # The following messages are being generated from the inherited/base resource snapshot
 WARNING: StructureDefinition/us-quality-core-careplan: StructureDefinition.snapshot.element[9].comment: The markdown contains content that appears to be an embedded HTML tag starting at 'Th'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
@@ -17,6 +18,18 @@ INFORMATION: StructureDefinition/us-quality-core-organization: StructureDefiniti
 INFORMATION: StructureDefinition/us-quality-core-organization: StructureDefinition.snapshot.element[11].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 INFORMATION: StructureDefinition/us-quality-core-organization: StructureDefinition.snapshot.element[12].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 INFORMATION: StructureDefinition/us-quality-core-practitioner: StructureDefinition.snapshot.element[18].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+
+## The following messages are being generated from FHIR R4 ImagingStudy resource.
+A definition could not be found for Canonical URL 'http://www.rsna.org/RadLex_Playbook.aspx'
+A definition could not be found for Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1'
+The valueSet reference http://www.rsna.org/RadLex_Playbook.aspx on element ImagingStudy.procedureCode could not be resolved
+The definition for the element 'ImagingStudy.series.performer.function' binds to the value set 'http://hl7.org/fhir/ValueSet/series-performer-function|4.0.1' which is experimental, but this structure is not labeled as experimental
+The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 on element ImagingStudy.series.instance.sopClass could not be resolved
+
+## The following message are being generated from QI-Core v7.0.0 examples (https://github.com/HL7/fhir-qi-core/blob/94ea21061ee80093f48e401443c19d5c054bc5ab/input/ignoreWarnings.txt#L88):
+WARNING: Patient/example: Patient.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.36.146.595.217.0.1'
+WARNING: Patient/example-2: Patient.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.36.146.595.217.0.1'
+
 
 # The following messages are generated from code systems and value sets currently in 'draft' status within the inherited/base resource snapshot.
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/adjudication|1.0.0
@@ -64,7 +77,6 @@ INFORMATION: Observation/example-preterm-births: Observation.value.ofType(intege
 
 # The validator is trying to resolve an "example.org" artifact which by convention does not exist
 A definition for CodeSystem 'http://example.org/fhir/CodeSystem/ex-visionservice' could not be found, so the code cannot be validated
-INFORMATION: Flag/example: Flag.code.coding[0].system: A definition for CodeSystem 'http://example.org/local' could not be found, so the code cannot be validated
 
 # Accepted pinned versions
 %Pinned the version of%
@@ -83,13 +95,6 @@ INFORMATION: Flag/example: Flag.code.coding[0].system: A definition for CodeSyst
 %USQualityCoreCommonTests.cql: Result type List of US Quality Core Device Not Requested of definition TestDeviceNotRequested is not supported; implementations may not be able to use the result of this expression
 
 # These are being added by the publisher
-WARNING: Parameters/manifest: Parameters.parameter[5]: If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found string
-WARNING: Parameters/manifest: Parameters.parameter[6]: If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found string
-WARNING: Parameters/manifest: Parameters.parameter[7]: If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found string
-WARNING: Parameters/manifest: Parameters.parameter[8]: If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found string
-WARNING: Parameters/manifest: Parameters.parameter[9]: If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found string
-WARNING: Parameters/manifest: Parameters.parameter[10]: If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found string
-WARNING: Parameters/manifest: Parameters.parameter[123]: If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found string
-WARNING: Parameters/manifest: Parameters.parameter[124]: If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found string
-WARNING: Parameters/manifest: Parameters.parameter[126]: If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found string
-WARNING: Parameters/manifest: Parameters.parameter[127]: If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found string
+WARNING: Parameters/manifest: Parameters.parameter[1]: If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found uri
+WARNING: Parameters/manifest: Parameters.parameter[2]: If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found uri
+WARNING: Parameters/manifest: Parameters.parameter[3]: If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found uri
