@@ -168,9 +168,26 @@
         "mustSupport": false
       },
       {
+        "id": "Claim.diagnosis",
+        "extension": [
+          {
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "valueBoolean": true
+          }
+        ],
+        "path": "Claim.diagnosis",
+        "short": "(USCDI+ Quality) Pertinent diagnosis information"
+      },
+      {
         "id": "Claim.diagnosis.sequence",
+        "extension": [
+          {
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "valueBoolean": true
+          }
+        ],
         "path": "Claim.diagnosis.sequence",
-        "short": "Diagnosis instance identifier",
+        "short": "(USCDI+ Quality) Diagnosis instance identifier",
         "type": [
           {
             "code": "positiveInt"

@@ -273,14 +273,6 @@ The mapping table lists how USCDI+ Quality V1 data classes and elements map to t
         </thead>
         <tbody>
                 <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diagnostic Imaging Reference</td>
-                    <td>
-                            <a href="StructureDefinition-us-quality-core-diagnosticreport-note.html">US Quality Core DiagnosticReport Profile for Report and Note Exchange</a><br />
-                    </td>
-                    <td>
-                    </td>
-                </tr>
-                <tr>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diagnostic Imaging Report</td>
                     <td>
                             <a href="StructureDefinition-us-quality-core-diagnosticreport-lab.html">US Quality Core DiagnosticReport Profile for Laboratory Results Reporting</a><br />
@@ -309,7 +301,24 @@ The mapping table lists how USCDI+ Quality V1 data classes and elements map to t
         </thead>
         <tbody>
                 <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diagnosis Rank</td>
+                    <td>
+                            <a href="StructureDefinition-us-quality-core-claim.html">US Quality Core Claim</a><br />
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;•Encounter Diagnosis</td>
+                    <td>
+                            <a href="StructureDefinition-us-quality-core-condition-encounter-diagnosis.html">US Quality Core Condition Encounter Diagnosis</a><br />
+                            <a href="StructureDefinition-us-quality-core-encounter.html">US Quality Core Encounter</a><br />
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;•Encounter Diagnosis Role</td>
                     <td>
                             <a href="StructureDefinition-us-quality-core-condition-encounter-diagnosis.html">US Quality Core Condition Encounter Diagnosis</a><br />
                     </td>
@@ -1372,9 +1381,7 @@ The mapping table lists how USCDI+ Quality V1 data classes and elements map to t
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;•Procedures</td>
                     <td>
                             <a href="StructureDefinition-us-quality-core-procedure.html">US Quality Core Procedure</a><br />
-                            <a href="StructureDefinition-us-quality-core-servicerequest.html">US Quality Core ServiceRequest</a><br />
                             <a href="StructureDefinition-us-quality-core-procedurenotdone.html">US Quality Core Procedure Not Done</a><br />
-                            <a href="StructureDefinition-us-quality-core-servicenotrequested.html">US Quality Core Service Not Requested</a><br />
                             <a href="StructureDefinition-us-quality-core-task.html">US Quality Core Task</a><br />
                             <a href="StructureDefinition-us-quality-core-taskrejected.html">US Quality Core Task Rejected</a><br />
                     </td>
@@ -1631,8 +1638,8 @@ US Core, including QI-Core 7.0.1 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-observation-adi-documentation.html">US Core Observation ADI Documentation Profile (8.0.1)</a><br />
-                            <a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-adi-documentreference.html">US Core ADI DocumentReference Profile (8.0.1)</a><br />
+                            <a href="http://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-observation-adi-documentation.html">US Core Observation ADI Documentation Profile (8.0.1)</a><br />
+                            <a href="http://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-adi-documentreference.html">US Core ADI DocumentReference Profile (8.0.1)</a><br />
                     </td>
                 </tr>
         </tbody>
@@ -1667,6 +1674,23 @@ US Core, including QI-Core 7.0.1 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;•Non-Medication Allergy Intolerance</td>
                     <td>
                             <a href="http://hl7.org/fhir/us/qicore/STU7.0.1/StructureDefinition-qicore-allergyintolerance.html">QICore AllergyIntolerance (7.0.1)</a><br />
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+        </tbody>
+
+        <thead>
+            <tr>
+                <th class="col-sm-4">Diagnostic Imaging</th>
+                <th class="col-sm-4"></th>
+                <th class="col-sm-4"></th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diagnostic Imaging Reference</td>
+                    <td>
                     </td>
                     <td>
                     </td>
@@ -1795,7 +1819,7 @@ US Core, including QI-Core 7.0.1 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU9.0.0-ballot/StructureDefinition-us-core-device.html">US Core Device Profile (9.0.0)</a><br />
+                            <a href="http://hl7.org/fhir/us/core/STU9.0.0-ballot/StructureDefinition-us-core-device.html">US Core Device Profile (9.0.0)</a><br />
                     </td>
                 </tr>
         </tbody>
@@ -1813,8 +1837,8 @@ US Core, including QI-Core 7.0.1 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-observation-adi-documentation.html">US Core Observation ADI Documentation Profile (8.0.1)</a><br />
-                            <a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-adi-documentreference.html">US Core ADI DocumentReference Profile (8.0.1)</a><br />
+                            <a href="http://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-observation-adi-documentation.html">US Core Observation ADI Documentation Profile (8.0.1)</a><br />
+                            <a href="http://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-adi-documentreference.html">US Core ADI DocumentReference Profile (8.0.1)</a><br />
                     </td>
                 </tr>
         </tbody>
@@ -1832,7 +1856,7 @@ US Core, including QI-Core 7.0.1 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-provenance.html">US Core Provenance Profile (8.0.1)</a><br />
+                            <a href="http://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-provenance.html">US Core Provenance Profile (8.0.1)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1840,31 +1864,7 @@ US Core, including QI-Core 7.0.1 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-provenance.html">US Core Provenance Profile (8.0.1)</a><br />
-                    </td>
-                </tr>
-        </tbody>
-
-        <thead>
-            <tr>
-                <th class="col-sm-4">Encounter Information</th>
-                <th class="col-sm-4"></th>
-                <th class="col-sm-4"></th>
-            </tr>
-        </thead>
-        <tbody>
-                <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diagnosis Rank</td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;•Encounter Diagnosis Role</td>
-                    <td>
-                    </td>
-                    <td>
+                            <a href="http://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-provenance.html">US Core Provenance Profile (8.0.1)</a><br />
                     </td>
                 </tr>
         </tbody>
@@ -1962,7 +1962,15 @@ The following profiles include at least one USCDI+ Quality–flagged element and
     </li>
 
     <li>
+        <a href="StructureDefinition-us-quality-core-imagingstudy.html">US Quality Core ImagingStudy</a>
+    </li>
+
+    <li>
         <a href="StructureDefinition-us-quality-core-diagnosticreport-lab.html">US Quality Core DiagnosticReport Profile for Laboratory Results Reporting</a>
+    </li>
+
+    <li>
+        <a href="StructureDefinition-us-quality-core-claim.html">US Quality Core Claim</a>
     </li>
 
     <li>
@@ -1971,10 +1979,6 @@ The following profiles include at least one USCDI+ Quality–flagged element and
 
     <li>
         <a href="StructureDefinition-us-quality-core-encounter.html">US Quality Core Encounter</a>
-    </li>
-
-    <li>
-        <a href="StructureDefinition-us-quality-core-claim.html">US Quality Core Claim</a>
     </li>
 
     <li>
@@ -2132,10 +2136,6 @@ The following profiles do not include any USCDI+ Quality–flagged elements and 
 
     <li>
         <a href="StructureDefinition-us-quality-core-flag.html">US Quality Core Flag</a>
-    </li>
-
-    <li>
-        <a href="StructureDefinition-us-quality-core-imagingstudy.html">US Quality Core ImagingStudy</a>
     </li>
 
     <li>

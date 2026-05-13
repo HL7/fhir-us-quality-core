@@ -236,8 +236,14 @@
       },
       {
         "id": "Encounter.diagnosis",
+        "extension": [
+          {
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "valueBoolean": true
+          }
+        ],
         "path": "Encounter.diagnosis",
-        "short": "The list of diagnosis relevant to this encounter"
+        "short": "(USCDI+ Quality) The list of diagnosis relevant to this encounter"
       },
       {
         "id": "Encounter.diagnosis.use",

@@ -36,6 +36,7 @@
 <li>status: (USCDI+ Quality) (USCDI) planned \| arrived \| triaged \| in-progress \| onleave \| finished \| cancelled +</li>
 <li>type: (USCDI+ Quality) (USCDI) Specific type of encounter</li>
 <li>period: (USCDI+ Quality) (USCDI) The start and end time of the encounter</li>
+<li>diagnosis: (USCDI+ Quality) The list of diagnosis relevant to this encounter</li>
 <li>hospitalization: (USCDI+ Quality) (USCDI) Details about the admission to a healthcare service</li>
 <li>hospitalization.dischargeDisposition: (USCDI+ Quality) (USCDI) Category or kind of location after discharge</li>
 <li>location: (USCDI+ Quality) (USCDI) List of locations where the patient has been</li>
