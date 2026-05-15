@@ -4,7 +4,7 @@
   <url value="http://fhir.org/guides/onc/us-quality-core/ImplementationGuide/us-quality-core"/>
   <version value="0.5.0"/>
   <name value="USQualityCore"/>
-  <title value="US Quality Core Implementation Guide"/>
+  <title value="2026 US Quality Core Implementation Guide"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2026-05-15"/>
@@ -859,7 +859,7 @@
     </resource>
     <page>
       <nameUrl value="index.html"/>
-      <title value="US Quality Core Implementation Guide"/>
+      <title value="2026 US Quality Core Implementation Guide"/>
       <generation value="markdown"/>
       <page>
         <nameUrl value="conformance.html"/>
