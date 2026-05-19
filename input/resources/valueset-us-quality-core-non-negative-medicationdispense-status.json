@@ -7,8 +7,19 @@
   "title": "Non-Negative MedicationDispense Status",
   "status": "active",
   "experimental": false,
-  "date": "2018-12-05T00:00:00+00:00",
-  "publisher": "Health Level Seven, Inc. - CQI WG",
+  "date": "2026-05-15",
+  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "contact": [
+    {
+      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.healthit.gov/feedback"
+        }
+      ]
+    }
+  ],
   "description": "This value set defines the set of codes that indicate a non-negated medication dispense status (i.e. codes that are not `declined`)",
   "jurisdiction": [
     {

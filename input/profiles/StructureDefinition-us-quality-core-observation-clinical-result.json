@@ -5,15 +5,16 @@
   "name": "USQualityCoreObservationClinicalResult",
   "title": "US Quality Core Observation Clinical Result",
   "status": "active",
-  "date": "2022-04-20",
-  "publisher": "http://www.hl7.org/Special/committees/cqi/index.cfm",
+  "experimental": false,
+  "date": "2026-05-15",
+  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
   "contact": [
     {
-      "name": "Clinical Quality Information WG",
+      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
       "telecom": [
         {
           "system": "url",
-          "value": "http://www.hl7.org/Special/committees/cqi"
+          "value": "https://www.healthit.gov/feedback"
         }
       ]
     }

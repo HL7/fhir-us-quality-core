@@ -6,13 +6,13 @@
   <title value="USQualityCore Negation Reason Codes"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2018-12-05"/>
-  <publisher value="http://www.hl7.org/Special/committees/cqi/index.cfm"/>
+  <date value="2026-05-15"/>
+  <publisher value="Office of the National Coordinator for Health Information Technology (ONC)"/>
   <contact>
-    <name value="Clinical Quality Information WG"/>
+    <name value="Office of the National Coordinator for Health Information Technology (ONC)"/>
     <telecom>
       <system value="url"/>
-      <value value="http://www.hl7.org/Special/committees/cqi"/>
+      <value value="https://www.healthit.gov/feedback"/>
     </telecom>
   </contact>
   <description

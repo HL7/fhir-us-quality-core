@@ -7,14 +7,14 @@
   "status": "draft",
   "experimental": false,
   "date": "2026-05-15",
-  "publisher": "http://www.hl7.org/Special/committees/cqi/index.cfm",
+  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
   "contact": [
     {
-      "name": "Clinical Quality Information WG",
+      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
       "telecom": [
         {
           "system": "url",
-          "value": "http://www.hl7.org/Special/committees/cqi"
+          "value": "https://www.healthit.gov/feedback"
         }
       ]
     }

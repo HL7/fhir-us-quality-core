@@ -6,11 +6,12 @@
   <status value="draft"/>
   <experimental value="false"/>
   <date value="2026-05-15"/>
-  <publisher value="HL7 International - Clinical Quality Improvement Work Group"/>
+  <publisher value="Office of the National Coordinator for Health Information Technology (ONC)"/>
   <contact>
+    <name value="Office of the National Coordinator for Health Information Technology (ONC)"/>
     <telecom>
       <system value="url"/>
-      <value value="http://hl7.org/special/committees/CQI"/>
+      <value value="https://www.healthit.gov/feedback"/>
     </telecom>
   </contact>
   <description value="The appropriateness score for the requested action."/>

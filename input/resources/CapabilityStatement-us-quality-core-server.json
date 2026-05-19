@@ -7,6 +7,18 @@
   "status": "active",
   "experimental": false,
   "date": "2026-05-15",
+  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "contact": [
+    {
+      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.healthit.gov/feedback"
+        }
+      ]
+    }
+  ],
   "description": "This capability statement describes the expected capabilities of the US Quality Core Servers\nwhich is responsible for responding to USCDI+ Quality V1 queries submitted by US Quality Core Clients.\nIt describes a minimum set of FHIR RESTful operations and search parameters necessary to enable access\nto the set of USCDI+ Quality V1 data that is in scope of this implementation guide.  For more information\nabout which USCDI+ Quality data elements are in scope, please review the [USCDI+ Quality](uscdiquality.html) section\nof this implementation guide.\n\nUS Quality Core Servers **SHALL** support the capabilities described in the [US\nCore Server CapabilityStatement\nSTU6.1](https://hl7.org/fhir/us/core/STU6.1/CapabilityStatement-us-core-server.html).\nSome RESTFUL operations and search parameters described in the US Quality Core Server CapabilityStatement are redundant\nto the US Core Server CapabilityStatement, but are listed here to highlight which\ncapabilities are specifically relevant to USCDI+ Quality V1.\n\nThe US Quality Core Implementation Guide v1 is derived from the QI-Core Implementation Guide STU6. It adopts\nall profiles within the [QI-Core Implementation Guide STU6](https://hl7.org/fhir/us/qicore/STU6/) to enable a more seamless adoption of this\nimplementation guide.  However, only those profiles that contain USCDI+ Quality V1 data are required to be supported\nby US Quality Core Servers.  The FHIR RESTful operations and search parameters in this capability statement\nreflects this scope.\n",
   "kind": "requirements",
   "fhirVersion": "4.0.1",

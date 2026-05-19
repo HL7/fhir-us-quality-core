@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="us-quality-core"/>
+  <id value="fhir.onc.us-quality-core"/>
   <url value="http://fhir.org/guides/onc/us-quality-core/ImplementationGuide/us-quality-core"/>
   <version value="0.5.0"/>
   <name value="USQualityCore"/>
@@ -8,11 +8,12 @@
   <status value="active"/>
   <experimental value="false"/>
   <date value="2026-05-15"/>
-  <publisher value="ONC"/>
+  <publisher value="Office of the National Coordinator for Health Information Technology (ONC)"/>
   <contact>
+    <name value="Office of the National Coordinator for Health Information Technology (ONC)"/>
     <telecom>
       <system value="url"/>
-      <value value="https://www.healthit.gov/"/>
+      <value value="https://www.healthit.gov/feedback"/>
     </telecom>
   </contact>
   <description value="The USQualityCore Implementation Guide defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. The profiles in this implementation guide derive from and extend the [US Core](http://hl7.org/fhir/us/core) profiles to provide a common foundation for building, sharing, and evaluating knowledge artifacts across quality improvement efforts in the US Realm."/>

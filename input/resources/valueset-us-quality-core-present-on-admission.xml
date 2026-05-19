@@ -11,12 +11,13 @@
   <title value="USQualityCore Present On Admission Codes"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-05-14"/>
-  <publisher value="Health Level Seven, Inc. - CQI WG"/>
+  <date value="2026-05-15"/>
+  <publisher value="Office of the National Coordinator for Health Information Technology (ONC)"/>
   <contact>
+    <name value="Office of the National Coordinator for Health Information Technology (ONC)"/>
     <telecom>
       <system value="url"/>
-      <value value="http://hl7.org/special/committees/CQI"/>
+      <value value="https://www.healthit.gov/feedback"/>
     </telecom>
   </contact>
   <description value="Value Set for USQualityCore Present On Admission."/>

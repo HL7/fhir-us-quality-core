@@ -22,14 +22,15 @@
   "title": "US Quality Core Observation Body Position",
   "status": "active",
   "experimental": false,
-  "date": "2026-05-15T00:00:00+00:00",
-  "publisher": "Health Level Seven, Inc. - CQI WG",
+  "date": "2026-05-15",
+  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
   "contact": [
     {
+      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
       "telecom": [
         {
           "system": "url",
-          "value": "http://hl7.org/special/committees/CQI"
+          "value": "https://www.healthit.gov/feedback"
         }
       ]
     }

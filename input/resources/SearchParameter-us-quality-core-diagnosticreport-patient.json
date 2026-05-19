@@ -5,6 +5,18 @@
   "name": "UsQualityCoreDiagnosticreportPatient",
   "status": "active",
   "date": "2026-05-15",
+  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "contact": [
+    {
+      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.healthit.gov/feedback"
+        }
+      ]
+    }
+  ],
   "description": "US Quality Core DiagnosticReport Patient Search Parameter",
   "code": "patient",
   "base": [

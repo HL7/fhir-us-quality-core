@@ -7,6 +7,18 @@
   "status": "active",
   "experimental": false,
   "date": "2026-05-15",
+  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "contact": [
+    {
+      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.healthit.gov/feedback"
+        }
+      ]
+    }
+  ],
   "description": "This capability statement describes the expected capabilities of the US Quality\nCore Client which is responsible for initiating queries for USCDI+\nQuality V1 data from US Quality Core Servers.  The set of FHIR RESTful\noperations and search parameters required to be supported by US Quality Core\nServers is provided in the [US Quality Core Server Capability\nStatement](CapabilityStatement-us-quality-core-server.html).  US Quality Core\nClients have the option of choosing from this list to access necessary data\nbased on their local use cases and other contextual requirements.\n",
   "kind": "requirements",
   "fhirVersion": "4.0.1",

@@ -10,6 +10,19 @@
   "name": "USQualityCoreUSCDIQualityExtension",
   "title": "US Quality Core USCDI+ Quality Extension",
   "status": "active",
+  "date": "2026-05-15",
+  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "contact": [
+    {
+      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.healthit.gov/feedback"
+        }
+      ]
+    }
+  ],
   "description": "This extension is only used in the US Quality Core Implementation Guide's Profile StructureDefinition elements.",
   "fhirVersion": "4.0.1",
   "mapping": [

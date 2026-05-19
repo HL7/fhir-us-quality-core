@@ -7,12 +7,13 @@
   <title value="USQualityCore Not Done ValueSet"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2019-11-01T09:29:23+11:00"/>
-  <publisher value="HL7 International - Clinical Quality Improvement Work Group"/>
+  <date value="2026-05-15"/>
+  <publisher value="Office of the National Coordinator for Health Information Technology (ONC)"/>
   <contact>
+    <name value="Office of the National Coordinator for Health Information Technology (ONC)"/>
     <telecom>
       <system value="url"/>
-      <value value="http://hl7.org/special/committees/CQI"/>
+      <value value="https://www.healthit.gov/feedback"/>
     </telecom>
   </contact>
   <description value="A logical reference (e.g. a reference to ValueSet.url) to a value set/version that identifies a set of possible coded values representing activities that were not requested, ordered, or performed."/>
