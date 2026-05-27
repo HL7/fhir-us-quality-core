@@ -35,19 +35,19 @@
 <li>identifier.system: (USCDI+ Quality) (USCDI) The namespace for the identifier value</li>
 <li>identifier.value: (USCDI+ Quality) (USCDI) The value that is unique within the system.</li>
 <li>name: (USCDI+ Quality) (USCDI) A name associated with the patient</li>
-<li>name.use: (USCDI+ Quality) (USCDI) usual \| official \| temp \| nickname \| anonymous \| old \| maiden</li>
+<li>name.use: (USCDI+ Quality) (USCDI) usual | official | temp | nickname | anonymous | old | maiden</li>
 <li>name.family: (USCDI+ Quality) (USCDI) Family name (often called 'Surname')</li>
 <li>name.given: (USCDI+ Quality) (USCDI) Given names (not always 'first'). Includes middle names</li>
 <li>name.suffix: (USCDI+ Quality) (USCDI) Parts that come after the name</li>
 <li>name.period: (USCDI+ Quality) (USCDI) Time period when name was/is in use</li>
 <li>telecom: (USCDI+ Quality) (USCDI) A contact detail for the individual</li>
-<li>telecom.system: (USCDI+ Quality) (USCDI) phone \| fax \| email \| pager \| url \| sms \| other</li>
+<li>telecom.system: (USCDI+ Quality) (USCDI) phone | fax | email | pager | url | sms | other</li>
 <li>telecom.value: (USCDI+ Quality) (USCDI) The actual contact point details</li>
-<li>telecom.use: (USCDI+ Quality) (USCDI) home \| work \| temp \| old \| mobile - purpose of this contact point</li>
+<li>telecom.use: (USCDI+ Quality) (USCDI) home | work | temp | old | mobile - purpose of this contact point</li>
 <li>birthDate: (USCDI+ Quality) (USCDI) The date of birth for the individual</li>
 <li>deceased[x]: (USCDI+ Quality) (USCDI) Indicates if the individual is deceased or not</li>
 <li>address: (USCDI+ Quality) (USCDI) An address for the individual</li>
-<li>address.use: (USCDI+ Quality) (USCDI) home \| work \| temp \| old \| billing - purpose of this address</li>
+<li>address.use: (USCDI+ Quality) (USCDI) home | work | temp | old | billing - purpose of this address</li>
 <li>address.line: (USCDI+ Quality) (USCDI) Street name, number, direction & P.O. Box etc.</li>
 <li>address.city: (USCDI+ Quality) (USCDI) Name of city, town etc.</li>
 <li>address.state: (USCDI+ Quality) (USCDI) Sub-unit of country (abbreviations ok)</li>

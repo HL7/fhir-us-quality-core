@@ -35,7 +35,7 @@
 <li>identifier: (USCDI+ Quality) (USCDI) Member ID and other identifiers</li>
 <li>identifier:memberid: (USCDI+ Quality) (USCDI) Member ID</li>
 <li>identifier:memberid.type: (USCDI+ Quality) (USCDI) Member Number identifier type</li>
-<li>status: (USCDI+ Quality) (USCDI) active \| cancelled \| draft \| entered-in-error</li>
+<li>status: (USCDI+ Quality) (USCDI) active | cancelled | draft | entered-in-error</li>
 <li>type: (USCDI+ Quality) (USCDI) Coverage category such as medical or accident</li>
 <li>subscriberId: (USCDI+ Quality) (USCDI) ID assigned to the subscriber</li>
 <li>beneficiary: (USCDI+ Quality) (USCDI) Plan beneficiary</li>

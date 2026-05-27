@@ -33,7 +33,7 @@
 <li>name: (USCDI+ Quality) The name(s) associated with the practitioner</li>
 <li>name.family: (USCDI+ Quality) Family name (often called 'Surname')</li>
 <li>telecom: (USCDI+ Quality) A contact detail for the practitioner (that apply to all roles)</li>
-<li>telecom.system: (USCDI+ Quality) phone \| fax \| email \| pager \| url \| sms \| other</li>
+<li>telecom.system: (USCDI+ Quality) phone | fax | email | pager | url | sms | other</li>
 <li>telecom.value: (USCDI+ Quality) The actual contact point details</li>
 <li>address: (USCDI+ Quality) Address(es) of the practitioner</li>
 <li>address.line: (USCDI+ Quality) Street name, number, direction & P.O. Box etc.</li>

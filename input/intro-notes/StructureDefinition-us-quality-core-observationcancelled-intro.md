@@ -44,7 +44,7 @@
 <b>USCDI+ Quality Elements:</b>
 <ul>
 <li>extension:notDoneReason: (USCDI+ Quality) Extension</li>
-<li>status: (USCDI+ Quality) registered \| preliminary \| final \| amended +</li>
+<li>status: (USCDI+ Quality) registered | preliminary | final | amended +</li>
 <li>category: (USCDI+ Quality) Classification of type of observation</li>
 <li>code: (USCDI+ Quality) Type of observation (code / type)</li>
 <li>effective[x]: (USCDI+ Quality) Clinically relevant time/time-period for observation</li>

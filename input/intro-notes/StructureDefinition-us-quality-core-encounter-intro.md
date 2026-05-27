@@ -33,7 +33,7 @@
 <li>identifier: (USCDI+ Quality) (USCDI) Identifier(s) by which this encounter is known</li>
 <li>identifier.system: (USCDI+ Quality) (USCDI) The namespace for the identifier value</li>
 <li>identifier.value: (USCDI+ Quality) (USCDI) The value that is unique</li>
-<li>status: (USCDI+ Quality) (USCDI) planned \| arrived \| triaged \| in-progress \| onleave \| finished \| cancelled +</li>
+<li>status: (USCDI+ Quality) (USCDI) planned | arrived | triaged | in-progress | onleave | finished | cancelled +</li>
 <li>type: (USCDI+ Quality) (USCDI) Specific type of encounter</li>
 <li>period: (USCDI+ Quality) (USCDI) The start and end time of the encounter</li>
 <li>diagnosis: (USCDI+ Quality) The list of diagnosis relevant to this encounter</li>
