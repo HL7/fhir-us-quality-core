@@ -217,3 +217,9 @@ define fluent function daysInPeriod(Period Interval<DateTime>):
       dayIndex: DayIndex,
       dayPeriod: Interval[startPeriod, endPeriod)
     }
+
+/*
+@description: Returns the value of the presentOnAdmission extension
+*/
+define fluent function presentOnAdmission(diagnosis Encounter.Diagnosis):
+  diagnosis.ext('http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter-diagnosisPresentOnAdmission').value as FHIR.CodeableConcept
