@@ -167,7 +167,7 @@
 * [Referring Practitioner Example](Practitioner-example.html)
 
 **USQualityCorePractitionerRole**
-* [PractitionerRole Example](StructureDefinition-us-quality-core-practitionerrole.html)
+* [PractitionerRole Example](PractitionerRole-example.html)
 
 **USQualityCoreProcedure**
 * [Appendectomy Example](Procedure-example.html)
