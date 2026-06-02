@@ -3,7 +3,7 @@
 
 {: #us-quality-core-implementation-guide}
 
-{% lang-fragment disclaimer.md %}
+{% include disclaimer.md %}
 
 ### Summary
 {: #summary}

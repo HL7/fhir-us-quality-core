@@ -2,7 +2,7 @@
 
 {: #modelinfo}
 
-{% lang-fragment cql-informational-notice.md %}
+{% include cql-informational-notice.md %}
 
 To support implementations using Clinical Quality Language (CQL) and US Quality Core, model information (ModelInfo) for this IG is provided in conformance with [Using ModelInfo](https://hl7.org/fhir/uv/cql/using-modelinfo.html) in the Using CQL with FHIR IG.
 

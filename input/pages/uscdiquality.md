@@ -32,4 +32,4 @@ Additionally, this implementation guide's conformance requirements with respect 
 
 Data elements that do not clearly fit within these limitations above are out of scope for this version's conformance requirements.  The tables included in [section 3.1.2](uscdiquality.html#in-scope-uscdi-quality-v1-data-elements) and [section 3.1.3](uscdiquality.html#out-of-scope-uscdi-quality-v1-data-elements) below describe which USCDI+ Quality V1 data elements are in scope and which are out of scope for conformance requirements of this version of the guide.
 
-{% lang-fragment mapping-table.md %}
+{% include mapping-table.md %}

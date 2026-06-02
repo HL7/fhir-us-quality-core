@@ -2,7 +2,7 @@
 
 {: #USQualityCore-Patterns}
 
-{% lang-fragment cql-informational-notice.md %}
+{% include cql-informational-notice.md %}
 
 The US Quality Core patterns described here are adapted from the QI-Core patterns developed through the use of QI-Core profiles in creating CQL-based quality measures and decision support, and are aligned for use with US Quality Core profiles. 
 CMS program measures can be accessed at the [Electronic Clinical Quality Improvement (eCQI) Resource Center](https://ecqi.healthit.gov/) on HealthIT.gov.
