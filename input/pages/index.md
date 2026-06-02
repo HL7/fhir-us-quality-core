@@ -26,6 +26,8 @@ This guide descends directly from the [Quality Improvement Core (QI-Core) Implem
 
 This guide extends QI-Core by providing USCDI+ Quality guidance within profiles through the use of flags for [USCDI+ Quality relevant elements](uscdiquality.html). It also introduces [CapabilityStatements](capability-statements.html) that define specific expectations for actors exchanging US Quality Core data over standard RESTful FHIR interfaces. The technical content in this initial version of US Quality Core is intended to be backward compatible with QI-Core 6.0.0. Details of the specific changes made from QI-Core 6.0.0 are provided in the [Change Log](changes.html).
 
+{% include img-landscape.html img="context-diagram.png" caption="US Quality Core defines how to represent and exchange USCDI+ Quality data elements in FHIR, building on the US Core Implementation Guide and USCDI." %}
+
 ### How to read this Guide
 {: #contents}
 

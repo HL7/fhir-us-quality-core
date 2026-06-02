@@ -1,0 +1,10 @@
+<!-- Bootstrap markup for fitting a landscape image into page content. -->
+
+<div>
+<figure class="figure" style="width: 75%; margin-left: auto; margin-right: auto;">
+  <img src="{{include.img}}" class="figure-img img-responsive img-rounded center-block" style="width: 100%;" alt="{{include.alt | default: include.caption | default: include.img}}">
+  <figcaption class="figure-caption"><strong>{{include.caption | default: ""}}</strong></figcaption>
+</figure>
+
+<p></p>
+</div>
