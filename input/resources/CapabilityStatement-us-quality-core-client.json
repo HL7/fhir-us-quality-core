@@ -1494,15 +1494,6 @@
                 }
               ],
               "code": "read"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
-              "code": "search-type"
             }
           ],
           "referencePolicy": [
@@ -2255,15 +2246,6 @@
                 }
               ],
               "code": "read"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
-              "code": "search-type"
             }
           ],
           "referencePolicy": [
@@ -2291,15 +2273,6 @@
                 }
               ],
               "code": "read"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
-              "code": "search-type"
             }
           ],
           "referencePolicy": [
