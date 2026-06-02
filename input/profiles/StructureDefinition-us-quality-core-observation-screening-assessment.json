@@ -51,7 +51,7 @@
           }
         ],
         "path": "Observation.status",
-        "short": "(USCDI+ Quality) (USCDI) registered | prliminary | final | amended | corrected | entered-in-error | unknown",
+        "short": "(USCDI+ Quality) (USCDI) registered | preliminary | final | amended | corrected | entered-in-error | unknown",
         "binding": {
           "strength": "required",
           "valueSet": "http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-non-negative-observation-status"
