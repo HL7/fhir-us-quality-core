@@ -1379,6 +1379,15 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     </td>
                 </tr>
                 <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;•Procedure Type</td>
+                    <td>
+                            <a href="StructureDefinition-us-quality-core-servicerequest.html">US Quality Core ServiceRequest</a><br />
+                            <a href="StructureDefinition-us-quality-core-procedure.html">US Quality Core Procedure</a><br />
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;•Procedures&nbsp;<a href="#procedures-procedures">(see note)</a></td>
                     <td>
                             <a href="StructureDefinition-us-quality-core-procedure.html">US Quality Core Procedure</a><br />
@@ -1906,23 +1915,6 @@ US Core, including QI-Core 7.0.2 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
         <tbody>
                 <tr>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;•Nutrition Order</td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                </tr>
-        </tbody>
-
-        <thead>
-            <tr>
-                <th class="col-sm-4">Procedures</th>
-                <th class="col-sm-4"></th>
-                <th class="col-sm-4"></th>
-            </tr>
-        </thead>
-        <tbody>
-                <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;•Procedure Type</td>
                     <td>
                     </td>
                     <td>

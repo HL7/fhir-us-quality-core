@@ -12,6 +12,7 @@ The following elements are specifically relevant to USCDI+ Quality V1 data class
 <li>identifier.value: (USCDI+ Quality) (USCDI) The value that is unique</li>
 <li>status: (USCDI+ Quality) (USCDI) planned | arrived | triaged | in-progress | onleave | finished | cancelled +</li>
 <li>type: (USCDI+ Quality) (USCDI) Specific type of encounter</li>
+<li>priority: (USCDI+ Quality) Indicates the urgency of the encounter</li>
 <li>period: (USCDI+ Quality) (USCDI) The start and end time of the encounter</li>
 <li>diagnosis: (USCDI+ Quality) The list of diagnosis relevant to this encounter</li>
 <li>diagnosis.extension:diagnosisPresentOnAdmission: (USCDI+ Quality) onAdmission</li>

@@ -125,6 +125,17 @@
         "short": "(USCDI+ Quality) (USCDI) Specific type of encounter"
       },
       {
+        "id": "Encounter.priority",
+        "extension": [
+          {
+            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "valueBoolean": true
+          }
+        ],
+        "path": "Encounter.priority",
+        "short": "(USCDI+ Quality) Indicates the urgency of the encounter"
+      },
+      {
         "id": "Encounter.subject",
         "extension": [
           {
