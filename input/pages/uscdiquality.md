@@ -4,7 +4,7 @@
 
 USCDI+ Quality is intended to improve healthcare interoperability across quality programs by establishing a consistent baseline of harmonized data elements for a wide range of quality measurement and reporting use cases. The USCDI+ Quality data element list serves as a baseline dataset to support digital quality measurement and reporting across the healthcare ecosystem.
 
-USCDI+ Quality comprises of [two data element lists](https://uscdiplus.healthit.gov/uscdiplus/en/announcing-the-release-of-uscdi-quality-version-1-january-2026?id=kb_article&sys_id=9ee9383c87f6fe108edc42e50cbb350b).
+USCDI+ Quality includes [two data element lists](https://uscdiplus.healthit.gov/uscdiplus/en/announcing-the-release-of-uscdi-quality-version-1-january-2026?id=kb_article&sys_id=9ee9383c87f6fe108edc42e50cbb350b).
 
 1. **Final USCDI+ Quality V1**:
    The USCDI+ Quality V1 data element list focuses on data elements that are standardized, ready for implementation, and directly support electronic clinical quality measures. This list will serve as the basis for developing implementation guidance for health IT systems.

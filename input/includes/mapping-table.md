@@ -1628,7 +1628,7 @@ In QI-Core 6.0.0, information about principal procedure is represented using the
 
 The following data elements in USCDI+ Quality V1 are out of scope for the
 conformance expectations of this guide. Data elements listed
-here may map to newer published versions of QI-Core or US Core, and the applicable versions are indicated in parenthesis next to the profile.
+here may map to newer published versions of QI-Core or US Core, and the applicable versions are indicated in parentheses next to the profile.
 
 USCDI+ Quality V1 elements that do not have a
 mapping in the table below indicate those elements are not identified as mandatory or Must Support, or tagged

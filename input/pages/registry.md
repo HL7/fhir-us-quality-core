@@ -13,7 +13,7 @@ topofpage: true
 
 ## Conformance Resource Registry
 
-This table contains a list of all the conformance resources defined as part of the Quality Improvement Core (QI-Core)
+This table contains a list of all the conformance resources defined as part of the US Quality Core
 Implementation Guide:
 
 <table class="grid">

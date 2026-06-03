@@ -173,7 +173,7 @@
 * [Appendectomy Example](Procedure-example.html)
 
 **USQualityCoreProcedureNotDone**
-* [Negation Example with valuset](Procedure-negation-example.html)
+* [Negation Example with valueset](Procedure-negation-example.html)
 * [Negation Example with code](Procedure-negation-with-code-example.html)
 
 **USQualityCoreRelatedPerson**
@@ -198,4 +198,4 @@
 * [Task rejected using a code to indicate what was not done](Task-negation-with-code-example.html)
 
 **Additional Examples**
-* [ODH Example](Observation-example.html)
+* [ODH Example](Observation-example-odh.html)

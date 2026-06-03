@@ -18,7 +18,7 @@ The following pages containing USCDI+ Quality V1 guidance have been **added**:
 * <a href="general-requirements.html">General Requirements</a>: Documents requirements common to all US Quality Core actors in this guide
 * <a href="must-support.html">Must Support</a>: Provides additional context on the usage and requirements of MustSupport elements and the USCDI+ Quality flag
 * <a href="uscdiquality.html">USCDI+ Quality Guidance page</a>: Describes which US Quality Core profiles implement USCDI+ Quality data classes and elements
-* <a href="relationship-with-uscore-qicore.html">Relationship with US and QI-Core</a>: Provides additional context on the relationship of US Quality Core with US Core and QI-Core
+* <a href="relationship-with-uscore-qicore.html">Relationship with US Core and QI-Core</a>: Provides additional context on the relationship of US Quality Core with US Core and QI-Core
 * <a href="capability-statements.html">Capability Statements</a>: Specifies requirements for servers and clients exchanging USCDI+ Quality data via a standard FHIR RESTful interface
 
 The following QI-Core v6.0.0 content has been **altered**:
