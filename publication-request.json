@@ -8,7 +8,10 @@
   "desc" : "US Quality Core",
  	"title": "US Quality Core",
   "descmd" : "This version establishes the US Quality Core Implementation Guide",
- 	"introduction": "Defines quality-focused profiles derived from US Core to support standardized representation and exchange of data for quality improvement applications including digital quality measurement and reporting programs. In the same way US Core provides a FHIR rendering of USCDI, US Quality Core provides a FHIR rendering of USCDI+Quality. The IG provides profiles, guidelines and capability statements that define specific expectations for actors exchanging US Quality Core data over standard RESTful FHIR interfaces and defines additional profiles and extensions to cover quality-related data not fully addressed in US Core and incorporates certification-oriented requirements.",
+  "registry-description" : "The US Quality Core Implementation Guide provides guidance for implementing USCDI+ Quality in FHIR.", 
+  "registry-country:" : "US",
+  "registry-authority" : "US Government", 
+ 	"introduction": "The US Quality Core Implementation Guide provides guidance for implementing USCDI+ Quality in FHIR to support consistent, interoperable representation and exchange of quality data for quality measurement and reporting programs. It defines profiles that derive from and extend the base FHIR version R4 resources and US Core profiles to provide a common foundation for implementing, sharing, and evaluating quality-related knowledge artifacts across quality improvement efforts. It also defines basic system capability expectations for exchanging data to support digital quality measurement and reporting over standard FHIR interfaces.",
  	"ci-build": " http://build.fhir.org/guides/onc/us-quality-core",
   "first" : true,
 	"category": "Quality / CDS"
