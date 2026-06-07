@@ -51,7 +51,7 @@
   <dependsOn id="cqlus">
     <uri value="http://hl7.org/fhir/us/cql/ImplementationGuide/hl7.fhir.us.cql"/>
     <packageId value="hl7.fhir.us.cql"/>
-    <version value="dev"/>
+    <version value="2.0.0-ballot"/>
   </dependsOn>
   <global>
     <type value="Patient"/>
