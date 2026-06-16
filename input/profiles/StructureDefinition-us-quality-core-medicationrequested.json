@@ -1,0 +1,108 @@
+{
+  "id": "us-quality-core-medicationrequested",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested",
+  "version": "1.0.0",
+  "name": "USQualityCoreMedicationRequested",
+  "title": "US Quality Core MedicationRequested",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
+  "contact": [
+    {
+      "name": "Clinical Quality Information WG",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cqi"
+        }
+      ]
+    }
+  ],
+  "description": "Positive profile of MedicationRequest for decision support/quality metrics. Indicates that a medication was proposed, planned, or ordered.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationRequest",
+  "baseDefinition": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationRequest",
+        "path": "MedicationRequest"
+      },
+      {
+        "id": "MedicationRequest.status",
+        "path": "MedicationRequest.status",
+        "short": "active | on-hold | cancelled | completed | stopped | draft",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/quality-core/ValueSet/us-quality-core-positive-medicationrequest-status"
+        }
+      },
+      {
+        "id": "MedicationRequest.category",
+        "path": "MedicationRequest.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "Type of medication usage",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationRequest.category",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "MedicationRequestCategory"
+            }
+          ],
+          "strength": "example",
+          "description": "A coded concept identifying the category of medication request.  For example, where the medication is to be consumed or administered, or the type of medication treatment.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/medicationrequest-category"
+        }
+      },
+      {
+        "id": "MedicationRequest.doNotPerform",
+        "path": "MedicationRequest.doNotPerform",
+        "short": "True if medication was not requested",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "fixedBoolean": false
+      }
+    ]
+  },
+  "resourceType": "StructureDefinition"
+}

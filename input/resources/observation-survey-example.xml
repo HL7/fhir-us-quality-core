@@ -11,7 +11,7 @@
                      value="This example of a US Quality Core Observation Screening Assessment Profile illustrates its use to directly capture individual screening assessment items as an observation. It is not derived from a FHIR QuestionnaireResponse."/>
     </extension>
     <profile
-             value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-screening-assessment"/>
+             value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-screening-assessment"/>
   </meta>
   <status value="final"/>
   <category>

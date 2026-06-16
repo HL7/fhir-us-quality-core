@@ -10,7 +10,7 @@
                      value="This example of a US Quality Core Condition Problems and Health Concerns Profile illustrates its use to capture information about a patient's health concern."/>
     </extension>
     <profile
-             value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns"/>
+             value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns"/>
   </meta>
   <extension
              url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
@@ -19,10 +19,10 @@
   <clinicalStatus>
     <coding>
       <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
-      <code value="resolved"/>
-      <display value="Resolved"/>
+      <code value="active"/>
+      <display value="Active"/>
     </coding>
-    <text value="Resolved"/>
+    <text value="Active"/>
   </clinicalStatus>
   <verificationStatus>
     <coding>
@@ -40,14 +40,6 @@
     </coding>
     <text value="Health Concern"/>
   </category>
-  <severity>
-    <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="255604002"/>
-      <display value="Mild (qualifier value)"/>
-    </coding>
-    <text value="Mild"/>
-  </severity>
   <code>
     <coding>
       <system value="http://snomed.info/sct"/>
@@ -60,6 +52,5 @@
     <reference value="Patient/example"/>
   </subject>
   <onsetDateTime value="2007-12-14"/>
-  <abatementDateTime value="2008-02-01"/>
   <recordedDate value="2007-12-14T07:15:07-08:00"/>
 </Condition>

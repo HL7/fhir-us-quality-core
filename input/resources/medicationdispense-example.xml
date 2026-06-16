@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MedicationDispense xmlns="http://hl7.org/fhir">
+<MedicationDispense xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="example"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationdispense"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense"/>
   </meta>
+	<!-- Extension was removed in R4, not clear where this should appear...
+  <extension url="http://hl7.org/fhir/StructureDefinition/pharmacy-core-refillsRemaining">
+    <valueInteger value="0"/>
+  </extension>
+	-->
+	<!-- Extension was removed in R4, not clear where this should appear...
+  <extension url="http://hl7.org/fhir/StructureDefinition/medicationdispense-validityPeriod">
+    <valuePeriod>
+      <start value="2012-05-30"/>
+      <end value="2012-06-10"/>
+    </valuePeriod>
+  </extension>
+	-->
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.recorded">
+    <valueDateTime value="2017-01-17"/>
+  </extension>
   <status value="completed" />
   <medicationReference>
     <reference value="Medication/example"/>
@@ -20,19 +36,19 @@
     <reference value="MedicationRequest/example"/>
   </authorizingPrescription>
   <quantity>
-    <value value="6"/>
-    <unit value="mL"/>
+    <value value="100"/>
+    <unit value="ml"/>
     <system value="http://unitsofmeasure.org"/>
-    <code value="mL"/>
+    <code value="ml"/>
   </quantity>
   <daysSupply>
-    <value value="5"/>
-    <unit value="days"/>
+    <value value="30"/>
+    <unit value="Day"/>
     <system value="http://unitsofmeasure.org"/>
     <code value="d"/>
   </daysSupply>
-  <whenPrepared value="2015-03-25T16:20:00+00:00"/>
-  <whenHandedOver value="2015-03-26T10:20:00+00:00"/>
+  <whenPrepared value="2012-05-30T16:20:00+00:00"/>
+  <whenHandedOver value="2012-05-31T10:20:00+00:00"/>
   <destination>
     <reference value="Location/example"/>
   </destination>
@@ -40,23 +56,56 @@
     <reference value="Patient/example"/>
   </receiver>
   <dosageInstruction>
-    <text value="Infuse alemtuzumab 12 mg intravenously once daily for 5 days."/>
+		<!-- Extension removed in R4, not clear where this should appear now...
+    <extension url="http://hl7.org/fhir/StructureDefinition/pharmacy-core-infuseOver">
+      <valueDuration>
+        <value value="1"/>
+        <unit value="min"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="min"/>
+      </valueDuration>
+    </extension>
+		-->
+		<!-- Extension removed in R4, not clear where this should appear now...
+    <extension url="http://hl7.org/fhir/StructureDefinition/pharmacy-core-minDosePerPeriod">
+      <valueRatio>
+        <numerator>
+          <value value="15"/>
+          <unit value="ml"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ml"/>
+        </numerator>
+        <denominator>
+          <value value="1"/>
+          <unit value="day"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="day"/>
+        </denominator>
+      </valueRatio>
+    </extension>
+		-->
+		<!-- Extension removed in R4, not clear where this should appear now...
+    <extension url="http://hl7.org/fhir/StructureDefinition/pharmacy-core-maxDeliveryVolume">
+      <valueQuantity>
+        <value value="15"/>
+        <unit value="ml"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="ml"/>
+      </valueQuantity>
+    </extension>
+		-->
     <timing>
       <repeat>
-        <boundsPeriod>
-          <start value="2015-03-26"/>
-          <end value="2015-03-30"/>
-        </boundsPeriod>
-        <frequency value="1"/>
+        <frequency value="3"/>
         <period value="1"/>
         <periodUnit value="d"/>
       </repeat>
     </timing>
     <route>
       <coding>
-        <system value="http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"/>
-        <code value="IV"/>
-        <display value="Infusion, intravenous"/>
+        <system value="http://snomed.info/sct"/>
+        <code value="394899003"/>
+        <display value="oral administration of treatment"/>
       </coding>
     </route>
     <doseAndRate>
@@ -68,10 +117,10 @@
         </coding>
       </type>
       <doseQuantity>
-        <value value="12"/>
-        <unit value="mg"/>
+        <value value="5"/>
+        <unit value="ml"/>
         <system value="http://unitsofmeasure.org"/>
-        <code value="mg"/>
+        <code value="ml"/>
       </doseQuantity>
     </doseAndRate>
   </dosageInstruction>

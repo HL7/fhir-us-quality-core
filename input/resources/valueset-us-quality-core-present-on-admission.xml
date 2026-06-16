@@ -5,22 +5,22 @@
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
   </meta>
-  <url value="http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-present-on-admission"/>
-  <version value="4.0.0"/>
+  <url value="http://hl7.org/fhir/us/quality-core/ValueSet/us-quality-core-present-on-admission"/>
+  <version value="1.0.0"/>
   <name value="USQualityCorePresentOnAdmission"/>
-  <title value="USQualityCore Present On Admission Codes"/>
-  <status value="active"/>
+  <title value="US Quality Core Present On Admission Codes"/>
+  <status value="draft"/>
   <experimental value="false"/>
-  <date value="2026-06-05"/>
-  <publisher value="Office of the National Coordinator for Health Information Technology (ONC)"/>
+  <date value="2026-06-30"/>
+  <publisher value="HL7 International / Clinical Quality Information"/>
   <contact>
-    <name value="Office of the National Coordinator for Health Information Technology (ONC)"/>
+    <name value="Clinical Quality Information WG"/>
     <telecom>
       <system value="url"/>
-      <value value="https://www.healthit.gov/feedback"/>
+      <value value="http://www.hl7.org/Special/committees/cqi"/>
     </telecom>
   </contact>
-  <description value="Value Set for USQualityCore Present On Admission."/>
+  <description value="Value Set for US Quality Core Present On Admission."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

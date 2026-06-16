@@ -1,25 +1,25 @@
 {
   "id": "us-quality-core-immunizationnotdone",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunizationnotdone",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationnotdone",
+  "version": "1.0.0",
   "name": "USQualityCoreImmunizationNotDone",
   "title": "US Quality Core Immunization Not Done",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
   ],
-  "description": "Negation profile of Immunization for decision support/quality metrics. Defines the core set of elements and extensions for quality rule and measure authors.",
+  "description": "Negation profile of Communication for decision support/quality metrics. Indicates that the communication was not performed for a reason.",
   "jurisdiction": [
     {
       "coding": [
@@ -31,68 +31,28 @@
     }
   ],
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
-    },
-    {
-      "identity": "v2",
-      "uri": "http://hl7.org/v2",
-      "name": "HL7 v2 Mapping"
-    },
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    },
-    {
-      "identity": "cda",
-      "uri": "http://hl7.org/v3/cda",
-      "name": "CDA (R2)"
-    }
-  ],
   "kind": "resource",
   "abstract": false,
   "type": "Immunization",
-  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization|6.1.0",
+  "baseDefinition": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
         "id": "Immunization",
         "path": "Immunization",
-        "constraint": [
-          {
-            "key": "ind-1",
-            "severity": "error",
-            "human": "To indicate what immunization was not done, either at least one coding in the vaccineCode element or a notDoneValueSet extension shall be provided",
-            "expression": "vaccineCode.extension('http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet').exists() xor vaccineCode.coding.exists()",
-            "xpath": "exists(f:extension)"
-          }
-        ],
         "mustSupport": false
       },
       {
         "id": "Immunization.status",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Immunization.status",
-        "short": "(USCDI+ Quality) (USCDI) completed | entered-in-error | not-done",
+        "short": "(USCDI+ Quality) not-done",
         "type": [
           {
             "code": "code"
@@ -102,67 +62,27 @@
       },
       {
         "id": "Immunization.statusReason",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Immunization.statusReason",
-        "short": "(USCDI) Reason not done",
+        "short": "Reason not done",
         "min": 1,
         "max": "1",
         "binding": {
           "strength": "extensible",
           "description": "The reason the service was not requested",
-          "valueSet": "http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-negation-reason"
+          "valueSet": "http://hl7.org/fhir/us/quality-core/ValueSet/us-quality-core-negation-reason"
         }
       },
       {
-        "id": "Immunization.vaccineCode",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Immunization.vaccineCode",
-        "short": "(USCDI) Vaccine Product Type (bind to CVX)"
-      },
-      {
-        "id": "Immunization.vaccineCode.extension:notDoneValueSet",
-        "path": "Immunization.vaccineCode.extension",
-        "sliceName": "notDoneValueSet",
-        "short": "What wasn't administered",
+        "id": "Immunization.encounter",
+        "path": "Immunization.encounter",
+        "short": "Encounter the immunization was part of",
         "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet"
-            ]
-          }
-        ],
-        "condition": [
-          "ind-1"
-        ]
-      },
-      {
-        "id": "Immunization.patient",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Immunization.patient",
-        "short": "(USCDI) Who was immunized",
-        "type": [
-          {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter"
             ]
           }
         ]
@@ -171,23 +91,34 @@
         "id": "Immunization.occurrence[x]",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Immunization.occurrence[x]",
-        "short": "(USCDI+ Quality) (USCDI) Vaccine administration date"
+        "short": "(USCDI+ Quality) Vaccine administration date"
       },
       {
         "id": "Immunization.recorded",
         "path": "Immunization.recorded",
-        "short": "When the immunization was first captured in the subject's record",
-        "min": 1,
+        "short": "Documented date Immunization did not occur.",
+        "min": 0,
         "max": "1"
+      },
+      {
+        "id": "Immunization.location",
+        "path": "Immunization.location",
+        "short": "Where the vaccine was administered",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location"
+            ]
+          }
+        ]
       }
     ]
   },

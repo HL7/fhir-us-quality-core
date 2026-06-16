@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ServiceRequest xmlns="http://hl7.org/fhir">
+<ServiceRequest xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="negation-example-code"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicenotrequested"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited"/>
   </meta>
-  <extension url="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-doNotPerformReason">
-    <valueCodeableConcept>
-      <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="416406003"/>
-        <display value="Procedure discontinued (situation)"/>
-      </coding>
-    </valueCodeableConcept>
-  </extension>
   <status value="completed"/>
   <intent value="order"/>
   <category>
@@ -40,9 +31,10 @@
   <occurrenceDateTime value="2013-04-05"/>
   <authoredOn value="2013-04-04"/>
   <reasonCode>
-    <text value="Postoperative venous thromboembolism prophylaxis was considered during the appendicitis admission"/>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="416406003"/>
+        <display value="Procedure discontinued (situation)"/>
+      </coding>
   </reasonCode>
-  <reasonReference>
-    <reference value="Condition/appendicitis-example"/>
-  </reasonReference>
 </ServiceRequest>

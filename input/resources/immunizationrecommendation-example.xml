@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ImmunizationRecommendation xmlns="http://hl7.org/fhir">
+<ImmunizationRecommendation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
     <id value="example"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunizationrecommendation"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationrecommendation"/>
   </meta>
     <identifier>
         <system value="urn:ietf:rfc:3986"/>
@@ -15,18 +15,13 @@
     <recommendation>
         <vaccineCode>
             <coding>
-                <system value="http://hl7.org/fhir/sid/cvx"/>
-                <code value="140"/>
-                <display value="Influenza, seasonal, injectable, preservative free"/>
+                <system value="http://snomed.info/sct"/>
+                <code value="1010308001"/>
+                <display value="Vaccine product containing only inactivated whole Hepatitis A virus HM-175 strain antigen (medicinal product)"/>
             </coding>
         </vaccineCode>
         <forecastStatus>
-            <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
-                <code value="due"/>
-                <display value="Due"/>
-            </coding>
-            <text value="Dose due"/>
+            <text value="Not Complete"/>
         </forecastStatus>
         <dateCriterion>
             <code>
@@ -58,9 +53,9 @@
             </code>
             <value value="2016-12-28T00:00:00-05:00"/>
         </dateCriterion>
-		<description value="Second dose in seasonal influenza vaccination series"/>
+		<description value="First sequence in protocol"/>
 		<series value="Vaccination Series 1"/>
-        <doseNumberPositiveInt value="2"/>
+        <doseNumberPositiveInt value="1"/>
         <supportingImmunization>
             <reference value="Immunization/example"/>
         </supportingImmunization>

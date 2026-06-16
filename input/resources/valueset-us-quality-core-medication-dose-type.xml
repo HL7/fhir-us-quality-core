@@ -5,19 +5,19 @@
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
   </meta>
-  <url value="http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-medication-dose-type"/>
-  <version value="3.2.0"/>
+  <url value="http://hl7.org/fhir/us/quality-core/ValueSet/us-quality-core-medication-dose-type"/>
+  <version value="1.0.0"/>
   <name value="USQualityCoreMedicationDoseType"/>
-  <title value="USQualityCore SNOMED CT Dosage Codes"/>
+  <title value="US Quality Core SNOMED CT Dosage Codes"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2026-06-05"/>
-  <publisher value="Office of the National Coordinator for Health Information Technology (ONC)"/>
+  <date value="2026-06-30"/>
+  <publisher value="HL7 International / Clinical Quality Information"/>
   <contact>
-    <name value="Office of the National Coordinator for Health Information Technology (ONC)"/>
+    <name value="Clinical Quality Information WG"/>
     <telecom>
       <system value="url"/>
-      <value value="https://www.healthit.gov/feedback"/>
+      <value value="http://www.hl7.org/Special/committees/cqi"/>
     </telecom>
   </contact>
   <description value="This value set includes all the &quot;Dosages&quot; SNOMED CT codes (i.e. codes with an is-a relationship with 277406006: Dosages)."/>

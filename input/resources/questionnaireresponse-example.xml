@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <QuestionnaireResponse xmlns="http://hl7.org/fhir">
   <id value="PHQ-9-example"/>
   <meta>
     <profile
-             value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse"/>
+             value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse"/>
   </meta>
   <questionnaire
                  value="http://hl7.org/fhir/uv/sdc/Questionnaire/questionnaire-sdc-profile-example-PHQ9"/>
@@ -128,7 +127,8 @@
       <answer>
         <valueQuantity>
           <value value="13"/>
-          <unit value="{score}"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="1"/>
         </valueQuantity>
       </answer>
     </item>

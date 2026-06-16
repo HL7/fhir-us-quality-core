@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MedicationAdministration xmlns="http://hl7.org/fhir">
+<MedicationAdministration xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
     <id value="negation-example"/>
     <meta>
-      <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone"/>
+      <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone"/>
     </meta>
-    <extension url="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded">
-        <valueDateTime value="2015-01-15"/>
-    </extension>
     <status value="not-done"/>
     <statusReason>
       <coding>
@@ -16,10 +13,10 @@
       </coding>
     </statusReason>
     <medicationCodeableConcept>
-      <extension url="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet">
-        <valueCanonical value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.16"/>
+      <extension url="http://hl7.org/fhir/StructureDefinition/codeOptions">
+          <valueCanonical value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.16"/>
       </extension>
-      <text value="Not Done Value Set: Low Dose Unfractionated Heparin for VTE Prophylaxis"/>
+      <text value="Value Set: Low Dose Unfractionated Heparin for VTE Prophylaxis"/>
     </medicationCodeableConcept>
     <subject>
         <reference value="Patient/example"/>

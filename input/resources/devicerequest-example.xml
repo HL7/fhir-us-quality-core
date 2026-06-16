@@ -3,12 +3,10 @@
 <DeviceRequest xmlns="http://hl7.org/fhir">
   <id value="example"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicerequest"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequest"/>
   </meta>
-  <modifierExtension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceRequest.doNotPerform">
-    <valueBoolean value="false"/>
-  </modifierExtension>
-  <status value="active"/>
+  <!--    insert contents here    -->
+  <status value="completed"/>
   <intent value="original-order"/>
   <codeCodeableConcept>
     <coding>
@@ -16,17 +14,10 @@
       <code value="86184003"/>
       <display value="Electrocardiographic monitor and recorder"/>
     </coding>
-    <text value="Electrocardiographic monitor and recorder"/>
+    <text value="ECG"/>
   </codeCodeableConcept>
   <subject>
     <reference value="Patient/example"/>
-    <display value="Peter Chalmers"/>
+    <display value="Patient/example"/>
   </subject>
-  <encounter>
-    <reference value="Encounter/example"/>
-  </encounter>
-  <authoredOn value="2015-01-15T13:15:00+01:00"/>
-  <requester>
-    <reference value="Practitioner/example"/>
-  </requester>
 </DeviceRequest>

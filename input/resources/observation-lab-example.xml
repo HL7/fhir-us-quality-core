@@ -12,7 +12,7 @@
     <versionId value="1165"/>
     <lastUpdated value="2016-03-09T15:29:58.328+00:00"/>
     <profile
-             value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-lab"/>
+             value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab"/>
   </meta>
   <status value="final"/>
   <category>
@@ -36,7 +36,6 @@
     <display value="Amy Shaw"/>
   </subject>
   <effectiveDateTime value="2005-07-05"/>
-  <issued value="2005-07-05T14:30:00-05:00"/>
   <performer>
     <reference value= "Organization/example1"/>
     <display value="Hendricks Country Hospital"/>
@@ -46,14 +45,6 @@
     <unit value="mg/dL"/>
     <system value="http://unitsofmeasure.org"/>
   </valueQuantity>
-  <interpretation>
-    <coding>
-      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
-      <code value="N"/>
-      <display value="Normal"/>
-    </coding>
-    <text value="Normal"/>
-  </interpretation>
   <referenceRange>
     <low>
       <value value="40.0"/>

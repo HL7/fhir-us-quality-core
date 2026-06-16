@@ -1,20 +1,23 @@
 {
   "id": "us-quality-core-encounter",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter",
-  "version": "0.5.0",
+  "meta": {
+    "lastUpdated": "2022-07-29T00:15:18.578000+00:00"
+  },
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter",
+  "version": "1.0.0",
   "name": "USQualityCoreEncounter",
   "title": "US Quality Core Encounter",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -34,7 +37,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Encounter",
-  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|9.0.0",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -42,93 +45,94 @@
         "id": "Encounter.identifier",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Encounter.identifier",
-        "short": "(USCDI+ Quality) (USCDI) Identifier(s) by which this encounter is known"
+        "short": "(USCDI+ Quality) Identifier(s) by which this encounter is known"
       },
       {
         "id": "Encounter.identifier.system",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Encounter.identifier.system",
-        "short": "(USCDI+ Quality) (USCDI) The namespace for the identifier value"
+        "short": "(USCDI+ Quality) The namespace for the identifier value"
       },
       {
         "id": "Encounter.identifier.value",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Encounter.identifier.value",
-        "short": "(USCDI+ Quality) (USCDI) The value that is unique"
+        "short": "(USCDI+ Quality) The value that is unique"
       },
       {
         "id": "Encounter.status",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Encounter.status",
-        "short": "(USCDI+ Quality) (USCDI) planned | arrived | triaged | in-progress | onleave | finished | cancelled +"
+        "short": "(USCDI+ Quality) planned | arrived | triaged | in-progress | onleave | finished | cancelled +",
+        "definition": "planned | arrived | triaged | in-progress | onleave | finished | cancelled +."
       },
       {
         "id": "Encounter.class",
-        "extension": [
+        "path": "Encounter.class",
+        "short": "Classification of patient encounter",
+        "definition": "Concepts representing classification of patient encounter such as ambulatory (outpatient), inpatient, emergency, home health or others due to local variations.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Encounter.class",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
+            "code": "Coding"
           }
         ],
-        "path": "Encounter.class",
-        "short": "(USCDI) Classification of patient encounter"
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "EncounterClass"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Classification of the encounter.",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode"
+        }
       },
       {
         "id": "Encounter.type",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Encounter.type",
-        "short": "(USCDI+ Quality) (USCDI) Specific type of encounter"
+        "short": "(USCDI+ Quality) Specific type of encounter",
+        "definition": "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation)."
       },
       {
         "id": "Encounter.priority",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -137,52 +141,34 @@
       },
       {
         "id": "Encounter.subject",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Encounter.subject",
-        "short": "(USCDI) The patient or group present at the encounter",
+        "short": "The patient or group present at the encounter",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
             ]
           }
         ]
       },
       {
         "id": "Encounter.participant",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Encounter.participant",
-        "short": "(USCDI) List of participants involved in the encounter"
+        "short": "List of participants involved in the encounter"
       },
       {
         "id": "Encounter.participant.individual",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Encounter.participant.individual",
-        "short": "(USCDI) Persons involved in the encounter other than the patient",
-        "comment": "Should include us-quality-core-relatedperson as a possible participant, but USCore-Encounter only allows USCore-Practitioner.",
+        "short": "Persons involved in the encounter other than the patient",
+        "comment": "Should include US Quality Core RelatedPerson as a possible participant, but USCore-Encounter only allows USCore-Practitioner.",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson"
             ]
           }
         ]
@@ -191,38 +177,24 @@
         "id": "Encounter.period",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Encounter.period",
-        "short": "(USCDI+ Quality) (USCDI) The start and end time of the encounter"
+        "short": "(USCDI+ Quality) The start and end time of the encounter",
+        "definition": "The start and end time of the encounter."
       },
       {
         "id": "Encounter.reasonCode",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Encounter.reasonCode",
-        "short": "(USCDI) Coded reason the encounter takes place"
+        "short": "Coded reason the encounter takes place",
+        "definition": "Reason the encounter takes place, expressed as a code. For admissions, this can be used for a coded admission diagnosis."
       },
       {
         "id": "Encounter.reasonReference",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Encounter.reasonReference",
-        "short": "(USCDI) Reason the encounter takes place (reference)",
+        "short": "Reason the encounter takes place (reference)",
         "min": 0,
         "max": "*",
         "base": {
@@ -234,11 +206,11 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedure",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunizationrecommendation"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationrecommendation"
             ]
           }
         ],
@@ -249,7 +221,7 @@
         "id": "Encounter.diagnosis",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -306,7 +278,7 @@
         "id": "Encounter.diagnosis.extension:diagnosisPresentOnAdmission",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -325,7 +297,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter-diagnosisPresentOnAdmission"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter-diagnosisPresentOnAdmission"
             ]
           }
         ],
@@ -352,29 +324,15 @@
         "isModifier": false
       },
       {
-        "id": "Encounter.diagnosis.use",
-        "path": "Encounter.diagnosis.use",
-        "short": "Role that this diagnosis has within the encounter (e.g. admission, billing, discharge …)"
-      },
-      {
-        "id": "Encounter.diagnosis.rank",
-        "path": "Encounter.diagnosis.rank",
-        "short": "Ranking of the diagnosis (for each role type)"
-      },
-      {
         "id": "Encounter.hospitalization",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Encounter.hospitalization",
-        "short": "(USCDI+ Quality) (USCDI) Details about the admission to a healthcare service"
+        "short": "(USCDI+ Quality) Details about the admission to a healthcare service"
       },
       {
         "id": "Encounter.hospitalization.origin",
@@ -383,7 +341,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location"
             ]
           }
         ],
@@ -396,7 +354,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location"
             ]
           }
         ],
@@ -406,16 +364,12 @@
         "id": "Encounter.hospitalization.dischargeDisposition",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Encounter.hospitalization.dischargeDisposition",
-        "short": "(USCDI+ Quality) (USCDI) Category or kind of location after discharge",
+        "short": "(USCDI+ Quality) Category or kind of location after discharge",
         "definition": "Category or kind of location after discharge.",
         "binding": {
           "strength": "extensible",
@@ -426,36 +380,28 @@
         "id": "Encounter.location",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Encounter.location",
-        "short": "(USCDI+ Quality) (USCDI) List of locations where the patient has been"
+        "short": "(USCDI+ Quality) List of locations where the patient has been"
       },
       {
         "id": "Encounter.location.location",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Encounter.location.location",
-        "short": "(USCDI+ Quality) (USCDI) Location the encounter takes place",
+        "short": "(USCDI+ Quality) Location the encounter takes place",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location"
             ]
           }
         ]
@@ -467,19 +413,13 @@
       },
       {
         "id": "Encounter.serviceProvider",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Encounter.serviceProvider",
-        "short": "(USCDI) The organization (facility) responsible for this encounter",
+        "short": "The organization (facility) responsible for this encounter",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization"
             ]
           }
         ]
@@ -491,7 +431,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter"
             ]
           }
         ],

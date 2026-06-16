@@ -29,21 +29,8 @@ Reference to draft ValueSet http://hl7.org/fhir/ValueSet/servicerequest-category
 # VSAC expansions include an older RxNorm version that is no longer available from the terminology server
 %A definition for CodeSystem 'http://www.nlm.nih.gov/research/umls/rxnorm' version '11062023' could not be found, so the code cannot be validated. Valid versions: 03022026%
 
-# Accepted dependency age warnings
-%The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 9.0.0. This reference is getting old and the more recent version should be considered
-
 # The publisher reports this even though the expansion parameters file is referenced by path-expansion-params
 %The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
 
 # Version choices for known ambiguous terminology are documented in Parameters/manifest
 %There are multiple different potential matches for the url%
-
-# Accepted CQL warnings for type usage, identifier hiding, and terminology target
-%USQualityCoreCommon.cql: Result type US Quality Core Patient of definition Patient is not supported; implementations may not be able to use the result of this expression
-%USQualityCoreCommonTests.cql: An operand identifier reference is hiding another identifier of the same name.
-%USQualityCoreCommonTests: Could not resolve membership operator for terminology target of the retrieve.
-%USQualityCoreCommonTests.cql: Result type US Quality Core Patient of definition Patient is not supported; implementations may not be able to use the result of this expression
-%USQualityCoreCommonTests.cql: Result type List of US Quality Core Communication Not Done of definition TestCommunicationNotDone is not supported; implementations may not be able to use the result of this expression
-%USQualityCoreCommonTests.cql: Result type List of US Quality Core Condition Encounter Diagnosis of definition TestConditionEncounterDiagnosis is not supported; implementations may not be able to use the result of this expression
-%USQualityCoreCommonTests.cql: Result type List of US Quality Core Condition Problems Health Concerns of definition TestConditionProblemsHealthConcerns is not supported; implementations may not be able to use the result of this expression
-%USQualityCoreCommonTests.cql: Result type List of US Quality Core Device Not Requested of definition TestDeviceNotRequested is not supported; implementations may not be able to use the result of this expression

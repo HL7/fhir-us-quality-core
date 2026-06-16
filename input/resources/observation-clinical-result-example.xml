@@ -10,7 +10,7 @@
                      value="This is a Heart rate rhythm Example for the *Clinical Result Observation Profile*."/>
     </extension>
     <profile
-             value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-clinical-result"/>
+             value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-clinical-result"/>
   </meta>
   <status value="final"/>
   <category>

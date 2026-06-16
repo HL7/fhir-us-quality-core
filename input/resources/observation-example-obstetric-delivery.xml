@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Observation xmlns="http://hl7.org/fhir">
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="example-obstetric-delivery"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation"/>
   </meta>
   <status value="final"/>
   <category>
@@ -34,5 +34,5 @@
     <reference value= "Organization/example1"/>
     <display value="Hendricks Country Hospital"/>
   </performer>
-  <valueDateTime value="2023-10-22T07:23:52+05:00"/>
+  <valueDateTime value="2023-10-22T07:23:52+05:00"/> 
 </Observation>

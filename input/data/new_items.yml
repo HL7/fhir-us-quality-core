@@ -1,8 +1,0 @@
-package-id: fhir.onc.us-quality-core
-title: US Quality Core Implementation Guide
-canonical: 'http://fhir.org/guides/onc/us-quality-core'
-introduction: >-
-  The US Quality Core Implementation Guide provides guidance for implementing USCDI+ Quality in FHIR to support consistent, interoperable representation and exchange of quality data for quality measurement and reporting programs.
-list:
-  - version: current
-    desc: todo

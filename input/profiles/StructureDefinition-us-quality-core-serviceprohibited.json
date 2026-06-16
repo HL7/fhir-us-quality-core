@@ -1,0 +1,151 @@
+{
+  "id": "us-quality-core-serviceprohibited",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+  "version": "1.0.0",
+  "name": "USQualityCoreServiceProhibited",
+  "title": "US Quality Core Service Prohibited",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
+  "contact": [
+    {
+      "name": "Clinical Quality Information WG",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cqi"
+        }
+      ]
+    }
+  ],
+  "description": "Negation profile of ServiceRequest for decision support/quality metrics. Indicates a request not to provide a service",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest",
+        "path": "ServiceRequest",
+        "mustSupport": false
+      },
+      {
+        "id": "ServiceRequest.status",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
+            "valueBoolean": true
+          }
+        ],
+        "path": "ServiceRequest.status",
+        "short": "(USCDI+ Quality) draft | active | on-hold | completed",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/quality-core/ValueSet/us-quality-core-positive-request-status"
+        }
+      },
+      {
+        "id": "ServiceRequest.doNotPerform",
+        "path": "ServiceRequest.doNotPerform",
+        "short": "True if service/procedure should not be performed",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "fixedBoolean": true
+      },
+      {
+        "id": "ServiceRequest.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
+            "valueBoolean": true
+          }
+        ],
+        "path": "ServiceRequest.code",
+        "short": "(USCDI+ Quality) What is being requested/ordered"
+      },
+      {
+        "id": "ServiceRequest.authoredOn",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
+            "valueBoolean": true
+          }
+        ],
+        "path": "ServiceRequest.authoredOn",
+        "short": "(USCDI+ Quality) Date request signed",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "ServiceRequest.reasonCode",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
+            "valueBoolean": true
+          }
+        ],
+        "path": "ServiceRequest.reasonCode",
+        "short": "(USCDI+ Quality) Explanation/Justification for procedure or service",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "purpose",
+                  "valueCode": "extensible"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://hl7.org/fhir/us/quality-core/ValueSet/us-quality-core-negation-reason"
+                },
+                {
+                  "url": "key",
+                  "valueId": "3fdfb5b5-0d5e-4b02-bda5-562629399813"
+                }
+              ],
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+            }
+          ],
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
+        }
+      },
+      {
+        "id": "ServiceRequest.reasonReference",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
+            "valueBoolean": true
+          }
+        ],
+        "path": "ServiceRequest.reasonReference",
+        "short": "(USCDI+ Quality) Explanation/Justification for service or service"
+      }
+    ]
+  },
+  "resourceType": "StructureDefinition"
+}

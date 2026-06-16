@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Patient xmlns="http://hl7.org/fhir">
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="example-2"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"/>
   </meta>
   <identifier>
     <use value="usual"/>
     <type>
       <coding>
         <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-        <code value="SS"/>
+        <code value="MR"/>
       </coding>
     </type>
-    <system value="http://hl7.org/fhir/sid/us-ssn"/>
-    <value value="999123457"/>
+    <system value="http://example.org/patient/identifiers"/>
+    <value value="12345"/>
     <period>
       <start value="1995-05-06"/>
     </period>
@@ -61,6 +61,7 @@
     </relationship>
     <name>
       <family value="du Marché">
+        <!--    the "du" part is a family name prefix (VV in iso 21090)    -->
         <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
           <valueString value="VV"/>
         </extension>
@@ -85,6 +86,7 @@
     </address>
     <gender value="female"/>
     <period>
+      <!--    The contact relationship started in 2012    -->
       <start value="2012"/>
     </period>
   </contact>

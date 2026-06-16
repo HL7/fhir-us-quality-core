@@ -40,9 +40,6 @@
 **USQualityCoreCoverage**
 * [General Person Primary Coverage Example](Coverage-example.html)
 
-**USQualityCoreDevice**
-* [General Device Example](Device-example.html)
-
 **USQualityCoreDeviceNotRequested**
 * [Negation Example with valueset](DeviceRequest-negation-example.html)
 * [Negation Example with code](DeviceRequest-negation-with-code-example.html)
@@ -76,7 +73,7 @@
 
 **USQualityCoreImmunization**
 * [Example of Influenza immunization shot](Immunization-example.html)
-* [Example of entered-in-error Influenza immunization record](Immunization-statusreason-example.html)
+* [Example of completed Influenza immunization record](Immunization-done-example.html)
 
 **USQualityCoreImmunizationNotDone**
 * [Negation Example using valueset reference](Immunization-negation-example.html)
@@ -93,7 +90,6 @@
 
 **USQualityCoreMedicationAdministration**
 * [Inhalant Example](MedicationAdministration-example.html)
-* [Cumulative Duration Example](MedicationAdministration-cmd-example.html)
 
 **USQualityCoreMedicationAdministrationNotDone**
 * [Medication not administered using a value set to indicate what was not administered](MedicationAdministration-negation-example.html)
@@ -101,7 +97,6 @@
 
 **USQualityCoreMedicationDispense**
 * [Alemtuzumab MedicationDispense Example](MedicationDispense-example.html)
-* [Alemtuzumab MedicationDispense Course Example](MedicationDispense-cmd-example.html)
 
 **USQualityCoreMedicationDispenseDeclined**
 * [Negation Example with valueset](MedicationDispense-negation-example.html)
@@ -113,7 +108,6 @@
 
 **USQualityCoreMedicationRequest**
 * [Alemtuzumab MedicationRequest Example](MedicationRequest-example.html)
-* [Cumulative Medication Duration Example](MedicationRequest-cmd-example.html)
 * [Patient Reported MedicationRequest Example](MedicationRequest-patient-reported-example.html)
 * [Patient Requested MedicationRequest Example](MedicationRequest-patient-requester-example.html)
 * [Practitioner Ordered MedicationRequest Example](MedicationRequest-practitioner-ordered-example.html)
@@ -136,10 +130,6 @@
 * [Number of Term Births Example](Observation-example-births.html)
 * [Number of Parity Example](Observation-example-parity.html)
 * [Number of Pregnancies Example](Observation-example-pregnancies.html)
-
-**USQualityCoreObservationCancelled**
-* [Negation Example with valueset](Observation-negation-example.html)
-* [Negation Example with code](Observation-negation-with-code-example.html)
 
 **USQualityCoreNonPatientObservation**
 * [Hemodialysis Machine Availability](Observation-example-nonpatient-hemodialysis-machine.html)

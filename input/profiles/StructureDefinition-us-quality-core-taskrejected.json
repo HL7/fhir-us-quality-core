@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-taskrejected",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-taskrejected",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected",
+  "version": "1.0.0",
   "name": "USQualityCoreTaskRejected",
   "title": "US Quality Core Task Rejected",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -41,22 +41,13 @@
       {
         "id": "Task",
         "path": "Task",
-        "constraint": [
-          {
-            "key": "tnd-1",
-            "severity": "error",
-            "human": "to indicate what task was not performed, either at least one coding in the code or a notDoneValueSet extension shall be provided",
-            "expression": "code.extension('http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet').exists() xor  code.coding.exists()",
-            "xpath": "exists(f:extension)"
-          }
-        ],
         "mustSupport": false
       },
       {
         "id": "Task.basedOn",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -67,7 +58,7 @@
         "id": "Task.status",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -86,100 +77,60 @@
         "id": "Task.statusReason",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Task.statusReason",
-        "short": "(USCDI+ Quality)",
+        "short": "(USCDI+ Quality) Reason for current status",
         "min": 1,
         "max": "1",
         "mustSupport": false,
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-negation-reason"
+          "valueSet": "http://hl7.org/fhir/us/quality-core/ValueSet/us-quality-core-negation-reason"
         }
       },
       {
         "id": "Task.code",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Task.code",
-        "short": "(USCDI+ Quality) Task Type",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "condition": [
-          "tnd-1"
-        ],
-        "binding": {
-          "strength": "preferred",
-          "description": "Codes to identify what the task involves. These will typically be specific to a particular workflow.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/task-code"
-        }
-      },
-      {
-        "id": "Task.code.extension:notDoneValueSet",
-        "path": "Task.code.extension",
-        "sliceName": "notDoneValueSet",
-        "short": "Url of a value set of activities not requested or performed",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet"
-            ]
-          }
-        ],
-        "condition": [
-          "tnd-1"
-        ]
+        "short": "(USCDI+ Quality) Task Type"
       },
       {
         "id": "Task.focus",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Task.focus",
-        "short": "(USCDI+ Quality)",
-        "min": 1,
-        "max": "1",
-        "mustSupport": false
-      },
-      {
-        "id": "Task.for",
-        "path": "Task.for",
+        "short": "(USCDI+ Quality) What task is acting on",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/StructureDefinition/Resource"
             ]
           }
         ],
         "mustSupport": false
       },
       {
-        "id": "Task.encounter",
-        "path": "Task.encounter",
+        "id": "Task.for",
+        "path": "Task.for",
+        "short": "Beneficiary of the Task",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
             ]
           }
         ],
@@ -189,12 +140,12 @@
         "id": "Task.executionPeriod",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Task.executionPeriod",
-        "short": "(USCDI+ Quality) The timing the task was rejected and the reason.",
+        "short": "(USCDI+ Quality) The time action first taken meets expectation of the rejected use case.",
         "min": 1,
         "max": "1"
       },
@@ -202,7 +153,7 @@
         "id": "Task.reasonCode",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],

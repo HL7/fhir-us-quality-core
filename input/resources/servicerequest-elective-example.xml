@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><ServiceRequest xmlns="http://hl7.org/fhir">
 	<id value="elective-example"/>
-  <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicerequest"/>
-  </meta>
-  <modifierExtension url="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-isElective">
-    <valueBoolean value="true"/>
-  </modifierExtension>
+	<!--   Example of a device manipulation service request  -->
   <status value="completed"/>
 	<intent value="order"/>
 	<code>
@@ -21,6 +16,7 @@
 	</subject>
 	<authoredOn value="2015-03-30"/>
 	<requester>
+			<!--reference value="Practitioner/3ad0687e-f477-468c-afd5-fcc2bf897809"/-->
 			<display value="Dr. Beverly Crusher"/>
 	</requester>
 	<performer>

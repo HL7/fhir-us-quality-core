@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Procedure xmlns="http://hl7.org/fhir">
+<Procedure xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="negation-with-code-example"/>
-  <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedurenotdone"/>
-  </meta>
-  <extension url="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded">
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Procedure.recorded">
     <valueDateTime value="2013-04-05T10:30:00-04:00"/>
   </extension>
-  <partOf>
-    <reference value="Procedure/example"/>
-    <display value="Appendectomy admission surgical care"/>
-  </partOf>
   <status value="not-done"/>
   <statusReason>
     <coding>
@@ -33,21 +26,11 @@
   <encounter>
     <reference value="Encounter/example"/>
   </encounter>
-  <performedDateTime>
-    <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
-      <valueCode value="not-performed"/>
-    </extension>
-  </performedDateTime>
-  <performer>
-    <actor>
-      <reference value="Practitioner/example"/>
-      <display value="Dr Cecil Surgeon"/>
-    </actor>
-  </performer>
   <reasonCode>
-    <text value="Postoperative venous thromboembolism prophylaxis was considered during the appendicitis admission"/>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="182890002"/>
+      <display value="Patient requests alternative treatment" />
+    </coding>
   </reasonCode>
-  <reasonReference>
-    <reference value="Condition/appendicitis-example"/>
-  </reasonReference>
 </Procedure>

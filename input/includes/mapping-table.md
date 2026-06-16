@@ -190,7 +190,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -198,7 +198,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -206,7 +206,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -222,7 +222,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile (9.0.0)</a><br />
                     </td>
                 </tr>
         </tbody>
@@ -301,7 +301,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
         </thead>
         <tbody>
                 <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diagnosis Rank&nbsp;<a href="#encounter-information-diagnosis-rank">(see note)</a></td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diagnosis Rank</td>
                     <td>
                     </td>
                     <td>
@@ -373,7 +373,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     </td>
                 </tr>
                 <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;•Present on Admission&nbsp;<a href="#encounter-information-present-on-admission">(see note)</a></td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;•Present on Admission</td>
                     <td>
                             <a href="StructureDefinition-us-quality-core-encounter.html">US Quality Core Encounter</a><br />
                     </td>
@@ -572,7 +572,9 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                             <a href="StructureDefinition-us-quality-core-simple-observation.html">US Quality Core Simple Observation</a><br />
                             <a href="StructureDefinition-us-quality-core-observation-screening-assessment.html">US Quality Core Observation Screening Assessment</a><br />
-                            <a href="StructureDefinition-us-quality-core-observationcancelled.html">US Quality Core Observation Cancelled</a><br />
+                            <a href="StructureDefinition-us-quality-core-serviceprohibited.html">US Quality Core Service Prohibited</a><br />
+                            <a href="StructureDefinition-us-quality-core-taskrejected.html">US Quality Core Task Rejected</a><br />
+                            <a href="StructureDefinition-us-quality-core-servicerequested.html">US Quality Core ServiceRequested</a><br />
                             <a href="StructureDefinition-us-quality-core-condition-problems-health-concerns.html">US Quality Core Condition Problems Health Concerns</a><br />
                     </td>
                     <td>
@@ -583,7 +585,9 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                             <a href="StructureDefinition-us-quality-core-simple-observation.html">US Quality Core Simple Observation</a><br />
                             <a href="StructureDefinition-us-quality-core-observation-screening-assessment.html">US Quality Core Observation Screening Assessment</a><br />
-                            <a href="StructureDefinition-us-quality-core-observationcancelled.html">US Quality Core Observation Cancelled</a><br />
+                            <a href="StructureDefinition-us-quality-core-serviceprohibited.html">US Quality Core Service Prohibited</a><br />
+                            <a href="StructureDefinition-us-quality-core-taskrejected.html">US Quality Core Task Rejected</a><br />
+                            <a href="StructureDefinition-us-quality-core-servicerequested.html">US Quality Core ServiceRequested</a><br />
                             <a href="StructureDefinition-us-quality-core-condition-problems-health-concerns.html">US Quality Core Condition Problems Health Concerns</a><br />
                     </td>
                     <td>
@@ -602,7 +606,9 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                             <a href="StructureDefinition-us-quality-core-simple-observation.html">US Quality Core Simple Observation</a><br />
                             <a href="StructureDefinition-us-quality-core-observation-screening-assessment.html">US Quality Core Observation Screening Assessment</a><br />
-                            <a href="StructureDefinition-us-quality-core-observationcancelled.html">US Quality Core Observation Cancelled</a><br />
+                            <a href="StructureDefinition-us-quality-core-serviceprohibited.html">US Quality Core Service Prohibited</a><br />
+                            <a href="StructureDefinition-us-quality-core-taskrejected.html">US Quality Core Task Rejected</a><br />
+                            <a href="StructureDefinition-us-quality-core-servicerequested.html">US Quality Core ServiceRequested</a><br />
                             <a href="StructureDefinition-us-quality-core-condition-problems-health-concerns.html">US Quality Core Condition Problems Health Concerns</a><br />
                     </td>
                     <td>
@@ -613,7 +619,9 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                             <a href="StructureDefinition-us-quality-core-simple-observation.html">US Quality Core Simple Observation</a><br />
                             <a href="StructureDefinition-us-quality-core-observation-screening-assessment.html">US Quality Core Observation Screening Assessment</a><br />
-                            <a href="StructureDefinition-us-quality-core-observationcancelled.html">US Quality Core Observation Cancelled</a><br />
+                            <a href="StructureDefinition-us-quality-core-serviceprohibited.html">US Quality Core Service Prohibited</a><br />
+                            <a href="StructureDefinition-us-quality-core-taskrejected.html">US Quality Core Task Rejected</a><br />
+                            <a href="StructureDefinition-us-quality-core-servicerequested.html">US Quality Core ServiceRequested</a><br />
                             <a href="StructureDefinition-us-quality-core-condition-problems-health-concerns.html">US Quality Core Condition Problems Health Concerns</a><br />
                     </td>
                     <td>
@@ -624,8 +632,8 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-pregnancyintent.html">US Core Observation Pregnancy Intent Profile (6.1.0)</a><br />
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-pregnancystatus.html">US Core Observation Pregnancy Status Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-observation-pregnancyintent.html">US Core Observation Pregnancy Intent Profile (9.0.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-observation-pregnancystatus.html">US Core Observation Pregnancy Status Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -633,7 +641,9 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                             <a href="StructureDefinition-us-quality-core-simple-observation.html">US Quality Core Simple Observation</a><br />
                             <a href="StructureDefinition-us-quality-core-observation-screening-assessment.html">US Quality Core Observation Screening Assessment</a><br />
-                            <a href="StructureDefinition-us-quality-core-observationcancelled.html">US Quality Core Observation Cancelled</a><br />
+                            <a href="StructureDefinition-us-quality-core-serviceprohibited.html">US Quality Core Service Prohibited</a><br />
+                            <a href="StructureDefinition-us-quality-core-taskrejected.html">US Quality Core Task Rejected</a><br />
+                            <a href="StructureDefinition-us-quality-core-servicerequested.html">US Quality Core ServiceRequested</a><br />
                             <a href="StructureDefinition-us-quality-core-condition-problems-health-concerns.html">US Quality Core Condition Problems Health Concerns</a><br />
                     </td>
                     <td>
@@ -644,7 +654,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile (9.0.0)</a><br />
                     </td>
                 </tr>
         </tbody>
@@ -748,7 +758,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-specimen.html">US Core Specimen Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-specimen.html">US Core Specimen Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -784,8 +794,8 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                             <a href="StructureDefinition-us-quality-core-devicerequest.html">US Quality Core DeviceRequest</a><br />
                             <a href="StructureDefinition-us-quality-core-servicerequest.html">US Quality Core ServiceRequest</a><br />
-                            <a href="StructureDefinition-us-quality-core-devicenotrequested.html">US Quality Core Device Not Requested</a><br />
-                            <a href="StructureDefinition-us-quality-core-servicenotrequested.html">US Quality Core Service Not Requested</a><br />
+                            <a href="StructureDefinition-us-quality-core-deviceprohibited.html">US Quality Core Device Prohibited</a><br />
+                            <a href="StructureDefinition-us-quality-core-serviceprohibited.html">US Quality Core Service Prohibited</a><br />
                     </td>
                     <td>
                     </td>
@@ -913,7 +923,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;•Reason Not Performed</td>
                     <td>
                             <a href="StructureDefinition-us-quality-core-medicationadministrationnotdone.html">US Quality Core MedicationAdministration Not Done</a><br />
-                            <a href="StructureDefinition-us-quality-core-medicationnotrequested.html">US Quality Core Medication Not Requested</a><br />
+                            <a href="StructureDefinition-us-quality-core-medicationprohibited.html">US Quality Core Medication Prohibited</a><br />
                             <a href="StructureDefinition-us-quality-core-medicationdispensedeclined.html">US Quality Core MedicationDispense Declined</a><br />
                     </td>
                     <td>
@@ -1066,7 +1076,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-occupation.html">US Core Observation Occupation Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-observation-occupation.html">US Core Observation Occupation Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1074,7 +1084,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-occupation.html">US Core Observation Occupation Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-observation-occupation.html">US Core Observation Occupation Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1362,7 +1372,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                             <a href="StructureDefinition-us-quality-core-procedure.html">US Quality Core Procedure</a><br />
                             <a href="StructureDefinition-us-quality-core-servicerequest.html">US Quality Core ServiceRequest</a><br />
                             <a href="StructureDefinition-us-quality-core-procedurenotdone.html">US Quality Core Procedure Not Done</a><br />
-                            <a href="StructureDefinition-us-quality-core-servicenotrequested.html">US Quality Core Service Not Requested</a><br />
+                            <a href="StructureDefinition-us-quality-core-serviceprohibited.html">US Quality Core Service Prohibited</a><br />
                             <a href="StructureDefinition-us-quality-core-task.html">US Quality Core Task</a><br />
                             <a href="StructureDefinition-us-quality-core-taskrejected.html">US Quality Core Task Rejected</a><br />
                     </td>
@@ -1388,7 +1398,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     </td>
                 </tr>
                 <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;•Procedures&nbsp;<a href="#procedures-procedures">(see note)</a></td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;•Procedures</td>
                     <td>
                             <a href="StructureDefinition-us-quality-core-procedure.html">US Quality Core Procedure</a><br />
                             <a href="StructureDefinition-us-quality-core-procedurenotdone.html">US Quality Core Procedure Not Done</a><br />
@@ -1404,7 +1414,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                             <a href="StructureDefinition-us-quality-core-procedure.html">US Quality Core Procedure</a><br />
                             <a href="StructureDefinition-us-quality-core-servicerequest.html">US Quality Core ServiceRequest</a><br />
                             <a href="StructureDefinition-us-quality-core-procedurenotdone.html">US Quality Core Procedure Not Done</a><br />
-                            <a href="StructureDefinition-us-quality-core-servicenotrequested.html">US Quality Core Service Not Requested</a><br />
+                            <a href="StructureDefinition-us-quality-core-serviceprohibited.html">US Quality Core Service Prohibited</a><br />
                     </td>
                     <td>
                     </td>
@@ -1415,7 +1425,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                             <a href="StructureDefinition-us-quality-core-procedure.html">US Quality Core Procedure</a><br />
                             <a href="StructureDefinition-us-quality-core-servicerequest.html">US Quality Core ServiceRequest</a><br />
                             <a href="StructureDefinition-us-quality-core-procedurenotdone.html">US Quality Core Procedure Not Done</a><br />
-                            <a href="StructureDefinition-us-quality-core-servicenotrequested.html">US Quality Core Service Not Requested</a><br />
+                            <a href="StructureDefinition-us-quality-core-serviceprohibited.html">US Quality Core Service Prohibited</a><br />
                     </td>
                     <td>
                     </td>
@@ -1435,7 +1445,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-provenance.html">US Core Provenance Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-provenance.html">US Core Provenance Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1443,7 +1453,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-provenance.html">US Core Provenance Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-provenance.html">US Core Provenance Profile (9.0.0)</a><br />
                     </td>
                 </tr>
         </tbody>
@@ -1468,7 +1478,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;•Referral Status</td>
                     <td>
                             <a href="StructureDefinition-us-quality-core-servicerequest.html">US Quality Core ServiceRequest</a><br />
-                            <a href="StructureDefinition-us-quality-core-servicenotrequested.html">US Quality Core Service Not Requested</a><br />
+                            <a href="StructureDefinition-us-quality-core-serviceprohibited.html">US Quality Core Service Prohibited</a><br />
                     </td>
                     <td>
                     </td>
@@ -1477,7 +1487,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;•Referral Time</td>
                     <td>
                             <a href="StructureDefinition-us-quality-core-servicerequest.html">US Quality Core ServiceRequest</a><br />
-                            <a href="StructureDefinition-us-quality-core-servicenotrequested.html">US Quality Core Service Not Requested</a><br />
+                            <a href="StructureDefinition-us-quality-core-serviceprohibited.html">US Quality Core Service Prohibited</a><br />
                     </td>
                     <td>
                     </td>
@@ -1497,7 +1507,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-blood-pressure.html">US Core Blood Pressure Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-blood-pressure.html">US Core Blood Pressure Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1505,7 +1515,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-bmi.html">US Core BMI Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-bmi.html">US Core BMI Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1513,7 +1523,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-pediatric-bmi-for-age.html">US Core Pediatric BMI for Age Observation Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-pediatric-bmi-for-age.html">US Core Pediatric BMI for Age Observation Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1521,7 +1531,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-body-height.html">US Core Body Height Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-body-height.html">US Core Body Height Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1529,7 +1539,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-body-temperature.html">US Core Body Temperature Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-body-temperature.html">US Core Body Temperature Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1537,7 +1547,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-body-weight.html">US Core Body Weight Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-body-weight.html">US Core Body Weight Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1545,7 +1555,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-blood-pressure.html">US Core Blood Pressure Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-blood-pressure.html">US Core Blood Pressure Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1553,7 +1563,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-head-occipital-frontal-circumference-percentile.html">US Core Pediatric Head Occipital Frontal Circumference Percentile Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-head-occipital-frontal-circumference-percentile.html">US Core Pediatric Head Occipital Frontal Circumference Percentile Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1561,7 +1571,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-heart-rate.html">US Core Heart Rate Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-heart-rate.html">US Core Heart Rate Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1569,7 +1579,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-pulse-oximetry.html">US Core Pulse Oximetry Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-pulse-oximetry.html">US Core Pulse Oximetry Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1585,7 +1595,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-pulse-oximetry.html">US Core Pulse Oximetry Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-pulse-oximetry.html">US Core Pulse Oximetry Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1593,7 +1603,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-respiratory-rate.html">US Core Respiratory Rate Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-respiratory-rate.html">US Core Respiratory Rate Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1601,7 +1611,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-blood-pressure.html">US Core Blood Pressure Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-blood-pressure.html">US Core Blood Pressure Profile (9.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1609,7 +1619,7 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-pediatric-weight-for-height.html">US Core Pediatric Weight for Height Observation Profile (6.1.0)</a><br />
+                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-pediatric-weight-for-height.html">US Core Pediatric Weight for Height Observation Profile (9.0.0)</a><br />
                     </td>
                 </tr>
         </tbody>
@@ -1617,18 +1627,12 @@ The mapping table identifies any US Quality Core profiles defined in this guide 
 
 #### Notes
 
-##### Encounter Information: Diagnosis Rank
-In QI-Core 6.0.0, information about principal diagnosis is represented using the Claim profile. In US Quality Core v0.5.0, support for the Claim profile is not required for conformance. Implementers may determine the appropriate implementation approach to support this USCDI+ Quality data element. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.
-##### Encounter Information: Present on Admission
-In QI-Core 6.0.0, information about present on admission is represented using the Claim profile. In US Quality Core v0.5.0, support for the Claim profile is not required for conformance. We have reintroduced the Present on Admission extension for Encounter.diagnosis in US Quality Core v0.5.0 and it is (USCDI+ Quality) tagged.
-##### Procedures: Procedures
-In QI-Core 6.0.0, information about principal procedure is represented using the Claim profile. In US Quality Core v0.5.0, support for the Claim profile is not required for conformance. Implementers may determine the appropriate implementation approach to support this USCDI+ Quality data element. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.
 
 ### Out-of-Scope USCDI+ Quality V1 Data Elements
 
 The following data elements in USCDI+ Quality V1 are out of scope for the
 conformance expectations of this guide. Data elements listed
-here may map to newer published versions of QI-Core or US Core, and the applicable versions are indicated in parentheses next to the profile.
+here may map to newer published versions of QI-Core or US Core, and the applicable versions are indicated in parenthesis next to the profile.
 
 USCDI+ Quality V1 elements that do not have a
 mapping in the table below indicate those elements are not identified as mandatory or Must Support, or tagged
@@ -1657,8 +1661,6 @@ US Core, including QI-Core 7.0.2 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-observation-adi-documentation.html">US Core Observation ADI Documentation Profile (8.0.1)</a><br />
-                            <a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-adi-documentreference.html">US Core ADI DocumentReference Profile (8.0.1)</a><br />
                     </td>
                 </tr>
         </tbody>
@@ -1674,7 +1676,6 @@ US Core, including QI-Core 7.0.2 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                 <tr>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;•Adverse Event Degree of Harm</td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/qicore/STU7.0.2/StructureDefinition-qicore-adverseevent.html">QICore AdverseEvent (7.0.2)</a><br />
                     </td>
                     <td>
                     </td>
@@ -1692,7 +1693,6 @@ US Core, including QI-Core 7.0.2 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                 <tr>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;•Non-Medication Allergy Intolerance</td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/qicore/STU7.0.2/StructureDefinition-qicore-allergyintolerance.html">QICore AllergyIntolerance (7.0.2)</a><br />
                     </td>
                     <td>
                     </td>
@@ -1727,7 +1727,6 @@ US Core, including QI-Core 7.0.2 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                 <tr>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;•Facility Identifier</td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/qicore/STU7.0.2/StructureDefinition-qicore-location.html">QICore Location (7.0.2)</a><br />
                     </td>
                     <td>
                     </td>
@@ -1747,7 +1746,6 @@ US Core, including QI-Core 7.0.2 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-care-experience-preference.html">US Core Care Experience Preference Profile (7.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1755,7 +1753,6 @@ US Core, including QI-Core 7.0.2 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-treatment-intervention-preference.html">US Core Treatment Intervention Preference Profile (7.0.0)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1763,7 +1760,6 @@ US Core, including QI-Core 7.0.2 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-treatment-intervention-preference.html">US Core Treatment Intervention Preference Profile (7.0.0)</a><br />
                     </td>
                 </tr>
         </tbody>
@@ -1779,9 +1775,6 @@ US Core, including QI-Core 7.0.2 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                 <tr>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;•Alcohol Use</td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/qicore/STU7.0.2/StructureDefinition-qicore-simple-observation.html">QICore Simple Observation (7.0.2)</a><br />
-                            <a href="https://hl7.org/fhir/us/qicore/STU7.0.2/StructureDefinition-qicore-observation-screening-assessment.html">QICore Observation Screening Assessment (7.0.2)</a><br />
-                            <a href="https://hl7.org/fhir/us/qicore/STU7.0.2/StructureDefinition-qicore-condition-problems-health-concerns.html">QICore Condition Problems Health Concerns (7.0.2)</a><br />
                     </td>
                     <td>
                     </td>
@@ -1789,9 +1782,6 @@ US Core, including QI-Core 7.0.2 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                 <tr>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;•Physical Activity</td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/qicore/STU7.0.2/StructureDefinition-qicore-simple-observation.html">QICore Simple Observation (7.0.2)</a><br />
-                            <a href="https://hl7.org/fhir/us/qicore/STU7.0.2/StructureDefinition-qicore-observation-screening-assessment.html">QICore Observation Screening Assessment (7.0.2)</a><br />
-                            <a href="https://hl7.org/fhir/us/qicore/STU7.0.2/StructureDefinition-qicore-condition-problems-health-concerns.html">QICore Condition Problems Health Concerns (7.0.2)</a><br />
                     </td>
                     <td>
                     </td>
@@ -1799,9 +1789,6 @@ US Core, including QI-Core 7.0.2 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                 <tr>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;•Substance Use</td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/qicore/STU7.0.2/StructureDefinition-qicore-simple-observation.html">QICore Simple Observation (7.0.2)</a><br />
-                            <a href="https://hl7.org/fhir/us/qicore/STU7.0.2/StructureDefinition-qicore-observation-screening-assessment.html">QICore Observation Screening Assessment (7.0.2)</a><br />
-                            <a href="https://hl7.org/fhir/us/qicore/STU7.0.2/StructureDefinition-qicore-condition-problems-health-concerns.html">QICore Condition Problems Health Concerns (7.0.2)</a><br />
                     </td>
                     <td>
                     </td>
@@ -1838,7 +1825,6 @@ US Core, including QI-Core 7.0.2 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-device.html">US Core Device Profile (9.0.0)</a><br />
                     </td>
                 </tr>
         </tbody>
@@ -1856,8 +1842,6 @@ US Core, including QI-Core 7.0.2 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-observation-adi-documentation.html">US Core Observation ADI Documentation Profile (8.0.1)</a><br />
-                            <a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-adi-documentreference.html">US Core ADI DocumentReference Profile (8.0.1)</a><br />
                     </td>
                 </tr>
         </tbody>
@@ -1875,7 +1859,6 @@ US Core, including QI-Core 7.0.2 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-provenance.html">US Core Provenance Profile (8.0.1)</a><br />
                     </td>
                 </tr>
                 <tr>
@@ -1883,7 +1866,6 @@ US Core, including QI-Core 7.0.2 and 8.0.0-ballot, US Core 7.0.0, 8.0.1, and 9.0
                     <td>
                     </td>
                     <td>
-                            <a href="https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-provenance.html">US Core Provenance Profile (8.0.1)</a><br />
                     </td>
                 </tr>
         </tbody>
@@ -1960,7 +1942,7 @@ The following profiles include at least one USCDI+ Quality–flagged element and
     </li>
 
     <li>
-        <a href="StructureDefinition-us-quality-core-devicenotrequested.html">US Quality Core Device Not Requested</a>
+        <a href="StructureDefinition-us-quality-core-deviceprohibited.html">US Quality Core Device Prohibited</a>
     </li>
 
     <li>
@@ -2008,7 +1990,7 @@ The following profiles include at least one USCDI+ Quality–flagged element and
     </li>
 
     <li>
-        <a href="StructureDefinition-us-quality-core-medicationnotrequested.html">US Quality Core Medication Not Requested</a>
+        <a href="StructureDefinition-us-quality-core-medicationprohibited.html">US Quality Core Medication Prohibited</a>
     </li>
 
     <li>
@@ -2029,10 +2011,6 @@ The following profiles include at least one USCDI+ Quality–flagged element and
 
     <li>
         <a href="StructureDefinition-us-quality-core-medicationrequest.html">US Quality Core MedicationRequest</a>
-    </li>
-
-    <li>
-        <a href="StructureDefinition-us-quality-core-observationcancelled.html">US Quality Core Observation Cancelled</a>
     </li>
 
     <li>
@@ -2072,11 +2050,15 @@ The following profiles include at least one USCDI+ Quality–flagged element and
     </li>
 
     <li>
-        <a href="StructureDefinition-us-quality-core-servicenotrequested.html">US Quality Core Service Not Requested</a>
+        <a href="StructureDefinition-us-quality-core-serviceprohibited.html">US Quality Core Service Prohibited</a>
     </li>
 
     <li>
         <a href="StructureDefinition-us-quality-core-servicerequest.html">US Quality Core ServiceRequest</a>
+    </li>
+
+    <li>
+        <a href="StructureDefinition-us-quality-core-servicerequested.html">US Quality Core ServiceRequested</a>
     </li>
 
     <li>
@@ -2121,11 +2103,15 @@ The following profiles do not include any USCDI+ Quality–flagged elements and 
     </li>
 
     <li>
+        <a href="StructureDefinition-us-quality-core-communicationdone.html">US Quality Core CommunicationDone</a>
+    </li>
+
+    <li>
         <a href="StructureDefinition-us-quality-core-communicationrequest.html">US Quality Core CommunicationRequest</a>
     </li>
 
     <li>
-        <a href="StructureDefinition-us-quality-core-device.html">US Quality Core Device</a>
+        <a href="StructureDefinition-us-quality-core-devicerequested.html">US Quality Core DeviceRequested</a>
     </li>
 
     <li>
@@ -2141,11 +2127,27 @@ The following profiles do not include any USCDI+ Quality–flagged elements and 
     </li>
 
     <li>
+        <a href="StructureDefinition-us-quality-core-immunizationdone.html">US Quality Core Immunization Done</a>
+    </li>
+
+    <li>
         <a href="StructureDefinition-us-quality-core-immunizationevaluation.html">US Quality Core ImmunizationEvaluation</a>
     </li>
 
     <li>
         <a href="StructureDefinition-us-quality-core-immunizationrecommendation.html">US Quality Core ImmunizationRecommendation</a>
+    </li>
+
+    <li>
+        <a href="StructureDefinition-us-quality-core-medicationadministrationdone.html">US Quality Core MedicationAdministration Done</a>
+    </li>
+
+    <li>
+        <a href="StructureDefinition-us-quality-core-medicationdispensedone.html">US Quality Core MedicationDispense Done</a>
+    </li>
+
+    <li>
+        <a href="StructureDefinition-us-quality-core-medicationrequested.html">US Quality Core MedicationRequested</a>
     </li>
 
     <li>
@@ -2161,10 +2163,18 @@ The following profiles do not include any USCDI+ Quality–flagged elements and 
     </li>
 
     <li>
+        <a href="StructureDefinition-us-quality-core-proceduredone.html">US Quality Core Procedure Done</a>
+    </li>
+
+    <li>
         <a href="StructureDefinition-us-quality-core-questionnaireresponse.html">US Quality Core QuestionnaireResponse</a>
     </li>
 
     <li>
         <a href="StructureDefinition-us-quality-core-substance.html">US Quality Core Substance</a>
+    </li>
+
+    <li>
+        <a href="StructureDefinition-us-quality-core-taskdone.html">US Quality Core Task Done</a>
     </li>
 </ul>

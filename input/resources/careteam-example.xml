@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CareTeam xmlns="http://hl7.org/fhir">
     <id value="example"/>
-    <meta>
-        <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careteam"/>
-    </meta>
     <status value="active"/>
     <subject>
+        <!--reference value="Patient/mom"/-->
         <display value="Eve Everywoman"/>
     </subject>
     <participant>
@@ -15,8 +13,15 @@
                 <code value="MDWF"/>
                 <display value="midwife"/>
             </coding>
+            <!--coding>
+                <system value="http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-persona"/>
+                <code value="2222"/>
+                <display value="Midwifery professional"/>
+            </coding-->
+            <!--text value="Midwifery professional"/-->
         </role>
         <member>
+            <!--reference value="Practitioner/midwife"/-->
             <display value="Mabel Midwife"/>
         </member>
     </participant>

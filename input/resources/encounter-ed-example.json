@@ -3,7 +3,7 @@
   "id" : "encounter-ed-example",
   "meta" : {
     "profile" : [
-      "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter"
+      "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter"
     ]
   },
   "status" : "in-progress",

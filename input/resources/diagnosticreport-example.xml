@@ -1,8 +1,5 @@
 <DiagnosticReport xmlns="http://hl7.org/fhir">
     <id value="example"/>
-    <meta>
-        <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab"/>
-    </meta>
     <status value="final"/>
     <category>
         <coding>

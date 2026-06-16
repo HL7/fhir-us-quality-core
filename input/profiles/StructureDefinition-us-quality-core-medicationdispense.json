@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-medicationdispense",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationdispense",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense",
+  "version": "1.0.0",
   "name": "USQualityCoreMedicationDispense",
   "title": "US Quality Core MedicationDispense",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -34,43 +34,60 @@
   "kind": "resource",
   "abstract": false,
   "type": "MedicationDispense",
-  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense|6.1.0",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense|9.0.0",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
+        "id": "MedicationDispense",
+        "path": "MedicationDispense",
+        "constraint": [
+          {
+            "key": "mdp-1",
+            "severity": "error",
+            "human": "To indicate what medication, either a reference to a Medication, or at least one coding in the medication or a codeOptions extension shall be provided",
+            "expression": "(medication is Reference).not() implies medication.extension('http://hl7.org/fhir/StructureDefinition/codeOptions').exists() xor medication.coding.exists()",
+            "xpath": "exists(f:extension)"
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.extension:recorded",
+        "path": "MedicationDispense.extension",
+        "sliceName": "recorded",
+        "short": "When recorded",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.recorded"
+            ]
+          }
+        ]
+      },
+      {
         "id": "MedicationDispense.status",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "MedicationDispense.status",
-        "short": "(USCDI+ Quality) (USCDI) preparation​ | in-progress​ | cancelled​ | on-hold​ | completed​ | entered-in-error​ | stopped​ | unknown",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-non-negative-medicationdispense-status"
-        }
+        "short": "(USCDI+ Quality) preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | declined | unknown"
       },
       {
         "id": "MedicationDispense.medication[x]",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "MedicationDispense.medication[x]",
-        "short": "(USCDI+ Quality) (USCDI) What medication was supplied",
+        "short": "(USCDI+ Quality) What medication was supplied",
         "type": [
           {
             "code": "CodeableConcept"
@@ -78,7 +95,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medication"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medication"
             ]
           }
         ],
@@ -89,53 +106,52 @@
         }
       },
       {
-        "id": "MedicationDispense.subject",
-        "extension": [
+        "id": "MedicationDispense.medication[x].extension:codeOptions",
+        "path": "MedicationDispense.medication[x].extension",
+        "sliceName": "codeOptions",
+        "short": "Url of a value set of candidate medications",
+        "definition": "A logical reference (e.g. a reference to ValueSet.url) to a value set/version that identifies a set of possible coded values representing the medication.",
+        "min": 0,
+        "max": "1",
+        "type": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/codeOptions"
+            ]
           }
-        ],
+        ]
+      },
+      {
+        "id": "MedicationDispense.subject",
         "path": "MedicationDispense.subject",
-        "short": "(USCDI) Who the dispense is for",
+        "short": "Who the dispense is for",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
             ]
           }
         ]
       },
       {
         "id": "MedicationDispense.authorizingPrescription",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "MedicationDispense.authorizingPrescription",
-        "short": "(USCDI) Medication order that authorizes the dispense",
+        "short": "Medication order that authorizes the dispense",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest"
             ]
           }
         ]
       },
       {
         "id": "MedicationDispense.type",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "MedicationDispense.type",
-        "short": "(USCDI) Trial fill, partial fill, emergency fill, etc.",
+        "short": "Trial fill, partial fill, emergency fill, etc.",
         "binding": {
           "strength": "extensible",
           "valueSet": "http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType"
@@ -145,22 +161,18 @@
         "id": "MedicationDispense.quantity",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "MedicationDispense.quantity",
-        "short": "(USCDI+ Quality) (USCDI) Amount dispensed"
+        "short": "(USCDI+ Quality) Amount dispensed"
       },
       {
         "id": "MedicationDispense.daysSupply",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -177,65 +189,47 @@
       },
       {
         "id": "MedicationDispense.whenHandedOver",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "MedicationDispense.whenHandedOver",
-        "short": "(USCDI) When product was given out or mailed"
+        "short": "When product was given out or mailed"
       },
       {
         "id": "MedicationDispense.dosageInstruction",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "MedicationDispense.dosageInstruction",
-        "short": "(USCDI+ Quality) (USCDI) How the medication is to be used by the patient or administered by the caregiver"
+        "short": "(USCDI+ Quality) How the medication is to be used by the patient or administered by the caregiver"
       },
       {
         "id": "MedicationDispense.dosageInstruction.text",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "MedicationDispense.dosageInstruction.text",
-        "short": "(USCDI+ Quality) (USCDI) Free text dosage instructions e.g. SIG"
+        "short": "(USCDI+ Quality) Free text dosage instructions e.g. SIG"
       },
       {
         "id": "MedicationDispense.dosageInstruction.timing",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "MedicationDispense.dosageInstruction.timing",
-        "short": "(USCDI+ Quality) (USCDI) When medication should be administered"
+        "short": "(USCDI+ Quality) When medication should be administered"
       },
       {
         "id": "MedicationDispense.dosageInstruction.route",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -246,34 +240,35 @@
         "id": "MedicationDispense.dosageInstruction.doseAndRate",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "MedicationDispense.dosageInstruction.doseAndRate",
-        "short": "(USCDI+ Quality) (USCDI) Amount of medication administered"
+        "short": "(USCDI+ Quality) Amount of medication administered"
       },
       {
         "id": "MedicationDispense.dosageInstruction.doseAndRate.dose[x]",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "MedicationDispense.dosageInstruction.doseAndRate.dose[x]",
-        "short": "(USCDI+ Quality) (USCDI) Amount of medication per dose",
+        "short": "(USCDI+ Quality) Amount of medication per dose",
         "type": [
           {
-            "code": "Quantity"
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ],
+            "code": "Quantity",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+            ]
           },
           {
             "code": "Range"

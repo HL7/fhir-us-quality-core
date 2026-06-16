@@ -16,21 +16,21 @@
       "valueBoolean": true
     }
   ],
-  "url": "http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-observation-body-position",
-  "version": "4.0.0",
+  "url": "http://hl7.org/fhir/us/quality-core/ValueSet/us-quality-core-observation-body-position",
+  "version": "1.0.0",
   "name": "USQualityCoreObservationBodyPosition",
   "title": "US Quality Core Observation Body Position",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }

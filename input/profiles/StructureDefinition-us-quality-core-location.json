@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-location",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location",
+  "version": "1.0.0",
   "name": "USQualityCoreLocation",
   "title": "US Quality Core Location",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -34,20 +34,40 @@
   "kind": "resource",
   "abstract": false,
   "type": "Location",
-  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location|6.1.0",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location|9.0.0",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
         "id": "Location.identifier",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
+            "valueBoolean": true
+          }
+        ],
         "path": "Location.identifier",
-        "short": "Unique business identifier for facility or location."
+        "short": "(USCDI+ Quality) Unique business identifier for facility or location."
+      },
+      {
+        "id": "Location.status",
+        "path": "Location.status",
+        "short": "active | suspended | inactive",
+        "definition": "The status property covers the general availability of the resource, not the current value which may be covered by the operationStatus, or by a schedule/slots if they are configured for the location.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "active"
       },
       {
         "id": "Location.name",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -58,12 +78,13 @@
         "id": "Location.type",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Location.type",
-        "short": "(USCDI+ Quality) Category of service or resource available in a location."
+        "short": "(USCDI+ Quality) Category of service or resource available in a location.",
+        "definition": "Indicates the type of function performed at the location."
       },
       {
         "id": "Location.telecom",
@@ -74,7 +95,7 @@
         "id": "Location.address",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -89,7 +110,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization"
             ]
           }
         ]
@@ -101,7 +122,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location"
             ]
           }
         ],

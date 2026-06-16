@@ -2,7 +2,7 @@
   <id value="note-example"/>
   <meta>
     <profile
-             value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-note"/>
+             value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note"/>
   </meta>
   <status value="final"/>
   <category>
@@ -24,12 +24,6 @@
     <reference value="Patient/example"/>
   </subject>
   <effectiveDateTime value="2019-02-03T19:43:30.000Z"/>
-  <result>
-    <display value="No acute cardiopulmonary abnormality"/>
-  </result>
-  <imagingStudy>
-    <display value="Portable chest radiograph images"/>
-  </imagingStudy>
   <presentedForm>
     <contentType value="application/xhtml"/>
     <data

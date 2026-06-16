@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-patient",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+  "version": "1.0.0",
   "name": "USQualityCorePatient",
   "title": "US Quality Core Patient",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -34,7 +34,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Patient",
-  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|6.1.0",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|9.0.0",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -42,17 +42,13 @@
         "id": "Patient.extension:race",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.extension",
         "sliceName": "race",
-        "short": "(USCDI+ Quality) (USCDI) US Core Race Extension",
+        "short": "(USCDI+ Quality) US Core Race Extension",
         "definition": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:\n\n   - American Indian or Alaska Native\n   - Asian\n   - Black or African American\n   - Native Hawaiian or Other Pacific Islander\n   - White.",
         "min": 0,
         "max": "1",
@@ -65,7 +61,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race|6.1.0"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race|9.0.0"
             ]
           }
         ],
@@ -76,17 +72,13 @@
         "id": "Patient.extension:ethnicity",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.extension",
         "sliceName": "ethnicity",
-        "short": "(USCDI+ Quality) (USCDI) US Core ethnicity Extension",
+        "short": "(USCDI+ Quality) US Core ethnicity Extension",
         "definition": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.",
         "min": 0,
         "max": "1",
@@ -99,7 +91,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity|6.1.0"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity|9.0.0"
             ]
           }
         ],
@@ -110,17 +102,13 @@
         "id": "Patient.extension:tribalAffiliation",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.extension",
         "sliceName": "tribalAffiliation",
-        "short": "(USCDI+ Quality) (USCDI) Tribal Affiliation Extension",
+        "short": "(USCDI+ Quality) Tribal Affiliation Extension",
         "definition": "A tribe or band with which a person associates whether or not they are an enrolled member.",
         "min": 0,
         "max": "*",
@@ -133,7 +121,31 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation|6.1.0"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation|9.0.0"
+            ]
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false
+      },
+      {
+        "id": "Patient.extension:sex",
+        "path": "Patient.extension",
+        "sliceName": "sex",
+        "short": "Sex Extension",
+        "definition": "The US Core Sex Extension is used to reflect the documentation of a person's sex. It aligns with the C-CDA Sex Observation (LOINC 46098-0).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex|9.0.0"
             ]
           }
         ],
@@ -144,76 +156,56 @@
         "id": "Patient.identifier",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.identifier",
-        "short": "(USCDI+ Quality) (USCDI) An identifier for this patient"
+        "short": "(USCDI+ Quality) An identifier for this patient"
       },
       {
         "id": "Patient.identifier.system",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.identifier.system",
-        "short": "(USCDI+ Quality) (USCDI) The namespace for the identifier value"
+        "short": "(USCDI+ Quality) The namespace for the identifier value"
       },
       {
         "id": "Patient.identifier.value",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.identifier.value",
-        "short": "(USCDI+ Quality) (USCDI) The value that is unique within the system."
+        "short": "(USCDI+ Quality) The value that is unique within the system."
       },
       {
         "id": "Patient.name",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.name",
-        "short": "(USCDI+ Quality) (USCDI) A name associated with the patient"
+        "short": "(USCDI+ Quality)"
       },
       {
         "id": "Patient.name.use",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.name.use",
-        "short": "(USCDI+ Quality) (USCDI) usual | official | temp | nickname | anonymous | old | maiden",
+        "short": "(USCDI+ Quality) usual | official | temp | nickname | anonymous | old | maiden",
         "definition": "Identifies the purpose for this name.",
         "comment": "Applications can assume that a name is current unless it explicitly says that it is temporary or old.",
         "requirements": "Allows the appropriate name for a particular context of use to be selected from among a set of names.",
@@ -248,46 +240,34 @@
         "id": "Patient.name.family",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.name.family",
-        "short": "(USCDI+ Quality) (USCDI) Family name (often called 'Surname')"
+        "short": "(USCDI+ Quality) Family name (often called 'Surname')"
       },
       {
         "id": "Patient.name.given",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.name.given",
-        "short": "(USCDI+ Quality) (USCDI) Given names (not always 'first'). Includes middle names"
+        "short": "(USCDI+ Quality) Given names (not always 'first'). Includes middle names"
       },
       {
         "id": "Patient.name.suffix",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.name.suffix",
-        "short": "(USCDI+ Quality) (USCDI) Parts that come after the name",
+        "short": "(USCDI+ Quality) Parts that come after the name",
         "definition": "Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.",
         "min": 0,
         "max": "*",
@@ -310,16 +290,12 @@
         "id": "Patient.name.period",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.name.period",
-        "short": "(USCDI+ Quality) (USCDI) Time period when name was/is in use",
+        "short": "(USCDI+ Quality) Time period when name was/is in use",
         "definition": "Indicates the period of time when this name was valid for the named person.",
         "requirements": "Allows names to be placed in historical context.",
         "min": 0,
@@ -342,129 +318,79 @@
         "id": "Patient.telecom",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.telecom",
-        "short": "(USCDI+ Quality) (USCDI) A contact detail for the individual"
-      },
-      {
-        "id": "Patient.telecom.extension:telecom-preferred",
-        "path": "Patient.telecom.extension",
-        "sliceName": "telecom-preferred",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/iso21090-preferred"
-            ]
-          }
-        ],
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "qidam",
-            "map": "Not in QIDAM, but CDS could need this for notifications in population health contexts, for example."
-          }
-        ]
+        "short": "(USCDI+ Quality) A contact detail for the individual"
       },
       {
         "id": "Patient.telecom.system",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.telecom.system",
-        "short": "(USCDI+ Quality) (USCDI) phone | fax | email | pager | url | sms | other"
+        "short": "(USCDI+ Quality) phone | fax | email | pager | url | sms | other"
       },
       {
         "id": "Patient.telecom.value",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.telecom.value",
-        "short": "(USCDI+ Quality) (USCDI) The actual contact point details"
+        "short": "(USCDI+ Quality) The actual contact point details"
       },
       {
         "id": "Patient.telecom.use",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.telecom.use",
-        "short": "(USCDI+ Quality) (USCDI) home | work | temp | old | mobile - purpose of this contact point"
+        "short": "(USCDI+ Quality) home | work | temp | old | mobile - purpose of this contact point"
       },
       {
         "id": "Patient.birthDate",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.birthDate",
-        "short": "(USCDI+ Quality) (USCDI) The date of birth for the individual"
+        "short": "(USCDI+ Quality) The date of birth for the individual"
       },
       {
         "id": "Patient.deceased[x]",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.deceased[x]",
-        "short": "(USCDI+ Quality) (USCDI) Indicates if the individual is deceased or not",
+        "short": "(USCDI+ Quality) Indicates if the individual is deceased or not",
         "comment": "The \"Cause of death\" for a patient is typically captured as an Observation."
       },
       {
         "id": "Patient.address",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.address",
-        "short": "(USCDI+ Quality) (USCDI) An address for the individual"
+        "short": "(USCDI+ Quality) An address for the individual"
       },
       {
         "id": "Patient.address.extension:address-preferred",
@@ -477,7 +403,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/StructureDefinition/iso21090-preferred"
+              "http://hl7.org/fhir/StructureDefinition/iso21090-preferred|5.2.0-ballot"
             ]
           }
         ],
@@ -493,16 +419,12 @@
         "id": "Patient.address.use",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.address.use",
-        "short": "(USCDI+ Quality) (USCDI) home | work | temp | old | billing - purpose of this address",
+        "short": "(USCDI+ Quality) home | work | temp | old | billing - purpose of this address",
         "definition": "The purpose of this address.",
         "comment": "Applications can assume that an address is current unless it explicitly says that it is temporary or old.",
         "requirements": "Allows an appropriate address to be chosen from a list of many.",
@@ -543,76 +465,56 @@
         "id": "Patient.address.line",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.address.line",
-        "short": "(USCDI+ Quality) (USCDI) Street name, number, direction & P.O. Box etc."
+        "short": "(USCDI+ Quality) Street name, number, direction & P.O. Box etc."
       },
       {
         "id": "Patient.address.city",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.address.city",
-        "short": "(USCDI+ Quality) (USCDI) Name of city, town etc."
+        "short": "(USCDI+ Quality) Name of city, town etc."
       },
       {
         "id": "Patient.address.state",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.address.state",
-        "short": "(USCDI+ Quality) (USCDI) Sub-unit of country (abbreviations ok)"
+        "short": "(USCDI+ Quality) Sub-unit of country (abbreviations ok)"
       },
       {
         "id": "Patient.address.postalCode",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.address.postalCode",
-        "short": "(USCDI+ Quality) (USCDI) US Zip Codes"
+        "short": "(USCDI+ Quality) US Zip Codes"
       },
       {
         "id": "Patient.address.period",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.address.period",
-        "short": "(USCDI+ Quality) (USCDI) Time period when address was/is in use",
+        "short": "(USCDI+ Quality) Time period when address was/is in use",
         "definition": "Time period when address was/is in use.",
         "requirements": "Allows addresses to be placed in historical context.",
         "min": 0,
@@ -643,16 +545,12 @@
         "id": "Patient.communication",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.communication",
-        "short": "(USCDI+ Quality) (USCDI) A language which may be used to communicate with the patient about his or her health",
+        "short": "(USCDI+ Quality) A language which may be used to communicate with the patient about his or her health",
         "definition": "A language which may be used to communicate with the patient about his or her health.",
         "comment": "If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.",
         "requirements": "If a patient does not speak the local language, interpreters may be required, so languages spoken and proficiency are important things to keep track of both for patient and other persons of interest.",
@@ -676,16 +574,12 @@
         "id": "Patient.communication.language",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Patient.communication.language",
-        "short": "(USCDI+ Quality) (USCDI) The language which can be used to communicate with the patient about his or her health"
+        "short": "(USCDI+ Quality) The language which can be used to communicate with the patient about his or her health"
       },
       {
         "id": "Patient.link",
@@ -699,7 +593,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
             ]
           }
         ],

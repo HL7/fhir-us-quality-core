@@ -1,85 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="fhir.onc.us-quality-core"/>
-  <url value="http://fhir.org/guides/onc/us-quality-core/ImplementationGuide/fhir.onc.us-quality-core"/>
-  <version value="0.5.0"/>
+  <id value="hl7.fhir.us.quality-core"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="cqi"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="4"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/quality-core/ImplementationGuide/hl7.fhir.us.quality-core"/>
+  <version value="1.0.0"/>
   <name value="USQualityCore"/>
-  <title value="2026 US Quality Core Implementation Guide"/>
+  <title value="US Quality Core Implementation Guide"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-06-05"/>
-  <publisher value="Office of the National Coordinator for Health Information Technology (ONC)"/>
+  <date value="2026-06-30"/>
+  <publisher value="HL7 International / Clinical Quality Information"/>
   <contact>
-    <name value="Office of the National Coordinator for Health Information Technology (ONC)"/>
+    <name value="Clinical Quality Information WG"/>
     <telecom>
       <system value="url"/>
-      <value value="https://www.healthit.gov/feedback"/>
+      <value value="http://www.hl7.org/Special/committees/cqi"/>
     </telecom>
   </contact>
-  <description value="The USQualityCore Implementation Guide defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. The profiles in this implementation guide derive from and extend the [US Core](http://hl7.org/fhir/us/core) profiles to provide a common foundation for building, sharing, and evaluating knowledge artifacts across quality improvement efforts in the US Realm."/>
+  <description value="The US Quality Core Implementation Guide defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. The profiles in this implementation guide derive from and extend the [US Core](http://hl7.org/fhir/us/core) profiles to provide a common foundation for building, sharing, and evaluating knowledge artifacts across quality improvement efforts in the US Realm."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
       <code value="US"/>
-      <display value="United States of America"/>
     </coding>
-    <text value="USA"/>
   </jurisdiction>
-  <packageId value="fhir.onc.us-quality-core"/>
+  <packageId value="hl7.fhir.us.quality-core"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
   <dependsOn id="uscore">
     <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
     <packageId value="hl7.fhir.us.core"/>
-    <version value="6.1.0"/>
+    <version value="9.0.0"/>
   </dependsOn>
   <dependsOn id="dicom">
     <uri value="http://fhir.org/packages/fhir.dicom/ImplementationGuide/fhir.dicom"/>
     <packageId value="fhir.dicom"/>
-    <version value="2024.1.20240120"/>
+    <version value="2025.2.20250411"/>
   </dependsOn>
   <dependsOn id="terminology">
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="7.1.0"/>
+    <version value="6.5.0"/>
   </dependsOn>
-  <dependsOn id="cqluv">
-    <uri value="http://hl7.org/fhir/uv/cql/ImplementationGuide/hl7.fhir.uv.cql"/>
-    <packageId value="hl7.fhir.uv.cql"/>
-    <version value="2.0.0"/>
-  </dependsOn>
-  <dependsOn id="cqlus">
-    <uri value="http://hl7.org/fhir/us/cql/ImplementationGuide/hl7.fhir.us.cql"/>
-    <packageId value="hl7.fhir.us.cql"/>
-    <version value="2.0.0-ballot"/>
+  <dependsOn id="extensions">
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.2.0"/>
   </dependsOn>
   <global>
     <type value="Patient"/>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"/>
   </global>
   <global>
     <type value="Encounter"/>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter"/>
   </global>
   <global>
     <type value="Practitioner"/>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner"/>
   </global>
   <global>
     <type value="PractitionerRole"/>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole"/>
   </global>
   <global>
     <type value="Immunization"/>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunization"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization"/>
   </global>
   <global>
     <type value="Observation"/>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation"/>
   </global>
   <global>
     <type value="Organization"/>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization"/>
   </global>
   <definition>
     <resource>
@@ -89,7 +91,6 @@
       <name value="AdverseEvent example"/>
       <description value="Example of an allergic reaction adverse event"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-adverseevent"/>
     </resource>
     <resource>
       <reference>
@@ -98,7 +99,6 @@
       <name value="AllergyIntolerance example"/>
       <description value="Example of a clinical assessment record of an allergy"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"/>
     </resource>
     <resource>
       <reference>
@@ -107,7 +107,6 @@
       <name value="AllergyIntolerance refuted example"/>
       <description value="Example of a clinical assessment record of an allergy that has been refuted"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance"/>
     </resource>
     <resource>
       <reference>
@@ -116,7 +115,6 @@
       <name value="BodyStructure example"/>
       <description value="Example of a BodyStructure resource to identify a mass in the spleen"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-bodystructure"/>
     </resource>
     <resource>
       <reference>
@@ -125,7 +123,7 @@
       <name value="CarePlan example"/>
       <description value="Example of an assessment and care plan for a pregnancy"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careplan"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careplan"/>
     </resource>
     <resource>
       <reference>
@@ -133,7 +131,7 @@
       </reference>
       <name value="CareTeam example"/>
       <description value="Example of a CareTeam involved in the delivery of care for a pregnancy"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careteam"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careteam"/>
     </resource>
     <resource>
       <reference>
@@ -142,7 +140,6 @@
       <name value="Claim example"/>
       <description value="Example of a vision claim"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-claim"/>
     </resource>
     <resource>
       <reference>
@@ -151,33 +148,38 @@
       <name value="ClaimResponse example"/>
       <description value="Example of a vision claim response"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-claimresponse"/>
     </resource>
     <resource>
       <reference>
         <reference value="Communication/example"/>
       </reference>
       <name value="Communication example"/>
-      <description value="Example of a notification sent to a patient about an abnormal test result"/>
+      <description value="Example of a notification sent to a patient about an abnormal test result (using the General Communication profile)"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-communication"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Communication/done-example"/>
+      </reference>
+      <name value="CommunicationDone example"/>
+      <description value="Example of a notification sent to a patient about an abnormal test result (using the Positive Communication profile)"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
         <reference value="Communication/negation-example"/>
       </reference>
       <name value="Communication negation example"/>
-      <description value="Example of a notification that failed to be sent to a patient and reason why"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-communicationnotdone"/>
+      <description value="Example of a notification that was not sent to a patient and reason why"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-communicationnotdone"/>
     </resource>
     <resource>
       <reference>
         <reference value="CommunicationRequest/example"/>
       </reference>
       <name value="CommunicationRequest example"/>
-      <description value="Example of a record of request to provide additional information for a claim"/>
+      <description value="Example of a request to provide additional information for a claim"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-communicationrequest"/>
     </resource>
     <resource>
       <reference>
@@ -186,7 +188,6 @@
       <name value="Condition Encounter Diagnosis example"/>
       <description value="Example of a condition encounter diagnosis resource used to record information about a burn of the left ear"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis"/>
     </resource>
     <resource>
       <reference>
@@ -195,7 +196,6 @@
       <name value="Condition Problems Health Concerns example"/>
       <description value="Example of a patient with a condition encounter health concern regarding obesity"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns"/>
     </resource>
     <resource>
       <reference>
@@ -211,40 +211,46 @@
       <name value="Coverage example"/>
       <description value="Example of a coverage resource used to provide information about an individual's specific plan"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-coverage"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Device/example"/>
+        <reference value="Coverage/example-new"/>
       </reference>
-      <name value="Device example"/>
-      <description value="Device example for an ECG"/>
+      <name value="Coverage example - Subscriber ID"/>
+      <description value="Example of a coverage resource used to provide information about an individual's specific plan with a Subscriber Id"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-device"/>
     </resource>
     <resource>
       <reference>
         <reference value="DeviceRequest/example"/>
       </reference>
-      <name value="DeviceRequest example"/>
-      <description value="Request to employ a medical device"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicerequest"/>
+      <name value="DeviceRequest general example"/>
+      <description value="Request to employ a medical device (using the General Profile)"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequest"/>
     </resource>
     <resource>
       <reference>
         <reference value="DeviceRequest/negation-example"/>
       </reference>
-      <name value="DeviceRequest negation example"/>
-      <description value="Example of a request to employ a medical device that was not performed"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicenotrequested"/>
+      <name value="DeviceRequest negation with value set example"/>
+      <description value="Example of a request not to employ any of a class of medical devices"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-deviceprohibited"/>
     </resource>
     <resource>
       <reference>
         <reference value="DeviceRequest/negation-with-code-example"/>
       </reference>
       <name value="DeviceRequest negation with code example"/>
-      <description value="Example of a request to employ a medical device that was not performed"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-devicenotrequested"/>
+      <description value="Example of a request not to employ a specific medical device"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-deviceprohibited"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="DeviceRequest/requested-example"/>
+      </reference>
+      <name value="DeviceRequest positive example"/>
+      <description value="Example of a request to employ a medical device (using the Positive Profile)"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequested"/>
     </resource>
     <resource>
       <reference>
@@ -253,7 +259,6 @@
       <name value="DeviceUseStatement example"/>
       <description value="Example of a record of device use by a patient"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-deviceusestatement"/>
     </resource>
     <resource>
       <reference>
@@ -261,7 +266,7 @@
       </reference>
       <name value="DiagnosticReportLab example"/>
       <description value="Example of the findings and interpretation of a laboratory diagnostic test"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab"/>
     </resource>
     <resource>
       <reference>
@@ -269,7 +274,7 @@
       </reference>
       <name value="DiagnosticReportNote example"/>
       <description value="Example of a DiagnosticReport Note"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-note"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note"/>
     </resource>
     <resource>
       <reference>
@@ -278,7 +283,6 @@
       <name value="Encounter example"/>
       <description value="Example of an Encounter"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter"/>
     </resource>
     <resource>
       <reference>
@@ -287,7 +291,6 @@
       <name value="FamilyMemberHistory example"/>
       <description value="Example of Family Member History for a patient"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-familymemberhistory"/>
     </resource>
     <resource>
       <reference>
@@ -296,7 +299,6 @@
       <name value="Flag example"/>
       <description value="Warning/Notification when providing care example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-flag"/>
     </resource>
     <resource>
       <reference>
@@ -305,7 +307,6 @@
       <name value="Goal example"/>
       <description value="Example of weight loss goal/objective for a patient"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-goal"/>
     </resource>
     <resource>
       <reference>
@@ -313,32 +314,31 @@
       </reference>
       <name value="ImagingStudy example"/>
       <description value="Example of ImagingStudy based on CT imaging study"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-imagingstudy"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy"/>
     </resource>
     <resource>
       <reference>
         <reference value="Immunization/example"/>
       </reference>
-      <name value="Immunization example"/>
-      <description value="Immunization example"/>
-      <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunization"/>
+      <name value="Immunization general example"/>
+      <description value="Immunization example (using the General Profile)"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Immunization/statusreason-example"/>
+        <reference value="Immunization/done-example"/>
       </reference>
-      <name value="Entered-in-error Influenza immunization record example"/>
-      <description value="Example of an entered-in-error influenza immunization record with statusReason"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunization"/>
+      <name value="Immunization positive example"/>
+      <description value="Immunization example (using the Positive Profile)"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationdone"/>
     </resource>
     <resource>
       <reference>
         <reference value="Immunization/negation-example"/>
       </reference>
-      <name value="Immunization negation example"/>
+      <name value="Immunization negation with value set example"/>
       <description value="Example of immunization that was refused/failed to be administered using value set"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunizationnotdone"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationnotdone"/>
     </resource>
     <resource>
       <reference>
@@ -346,7 +346,7 @@
       </reference>
       <name value="Immunization negation with code example"/>
       <description value="Example of immunization that was refused/failed to be administered using code"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunizationnotdone"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationnotdone"/>
     </resource>
     <resource>
       <reference>
@@ -355,7 +355,6 @@
       <name value="ImmunizationEvaluaion example"/>
       <description value="Example of ImmunizationEvaluation"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunizationevaluation"/>
     </resource>
     <resource>
       <reference>
@@ -364,7 +363,6 @@
       <name value="ImmunizationRecommendation example"/>
       <description value="Example of ImmunizationRecommendation for Hepatitis A vaccine"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunizationrecommendation"/>
     </resource>
     <resource>
       <reference>
@@ -373,7 +371,6 @@
       <name value="Location example"/>
       <description value="Example of Location of a provider - south wing of Mean Joe Greene University Medical Center"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location"/>
     </resource>
     <resource>
       <reference>
@@ -382,33 +379,30 @@
       <name value="Medication example"/>
       <description value="Example of Alemtuzumab Medication"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medication"/>
     </resource>
     <resource>
       <reference>
         <reference value="MedicationAdministration/example"/>
       </reference>
-      <name value="MedicationAdministration example"/>
-      <description value="Intravenous example of MedicationAdministration"/>
-      <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministration"/>
+      <name value="MedicationAdministration general example"/>
+      <description value="Intravenous example of MedicationAdministration (using the General Profile)"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministration"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationAdministration/cmd-example"/>
+        <reference value="MedicationAdministration/done-example"/>
       </reference>
-      <name value="MedicationAdministration Cumulative Duration example"/>
-      <description value="Cumulative Medication example of MedicationAdministration"/>
-      <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministration"/>
+      <name value="MedicationAdministration positive example"/>
+      <description value="Intravenous example of MedicationAdministration (using the Positive Profile)"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationdone"/>
     </resource>
     <resource>
       <reference>
         <reference value="MedicationAdministration/negation-example"/>
       </reference>
-      <name value="MedicationAdministration negation example"/>
+      <name value="MedicationAdministration negation with value set example"/>
       <description value="Example of medication not administered using a value set to indicate what was not administered"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone"/>
     </resource>
     <resource>
       <reference>
@@ -416,33 +410,31 @@
       </reference>
       <name value="MedicationAdministration negation with code example"/>
       <description value="Example of medication not administered using a code to indicate that a particular medication was not administered"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone"/>
     </resource>
     <resource>
       <reference>
         <reference value="MedicationDispense/example"/>
       </reference>
-      <name value="MedicationDispense example"/>
-      <description value="Penicillin MedicationDispense Example"/>
-      <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationdispense"/>
+      <name value="MedicationDispense general example"/>
+      <description value="Penicillin MedicationDispense Example (using the General Profile)"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense"/>
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationDispense/cmd-example"/>
+        <reference value="MedicationDispense/done-example"/>
       </reference>
-      <name value="MedicationDispense cumulative dose example"/>
-      <description value="Cumulative Medication Dispense Example"/>
-      <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationdispense"/>
+      <name value="MedicationDispense positive example"/>
+      <description value="Penicillin MedicationDispense Example (using the Positive Profile)"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone"/>
     </resource>
     <resource>
       <reference>
         <reference value="MedicationDispense/negation-example"/>
       </reference>
-      <name value="MedicationDispense negation example"/>
+      <name value="MedicationDispense negation with value set example"/>
       <description value="Example of medication not dispensed using a value set to indicate the reason"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined"/>
     </resource>
     <resource>
       <reference>
@@ -450,25 +442,23 @@
       </reference>
       <name value="MedicationDispense negation with code example"/>
       <description value="Example of medication not dispensed using a code to indicate the reason"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="MedicationRequest/cmd-example"/>
-      </reference>
-      <name value="MedicationRequest Cumulative Duration"/>
-      <description value="Cumulative Medication Duration Example"/>
-      <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined"/>
     </resource>
     <resource>
       <reference>
         <reference value="MedicationRequest/example"/>
       </reference>
-      <name value="MedicationRequest example"/>
-      <description value="Penicillin MedicationRequest Example"/>
+      <name value="MedicationRequest general example"/>
+      <description value="Penicillin MedicationRequest Example (using the General Profile)"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationRequest/requested-example"/>
+      </reference>
+      <name value="MedicationRequest positive example"/>
+      <description value="Penicillin MedicationRequest Example (using the Positive Profile)"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
@@ -477,7 +467,6 @@
       <name value="MedicationRequest Patient Reported Example"/>
       <description value="Patient Reported Example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest"/>
     </resource>
     <resource>
       <reference>
@@ -486,7 +475,6 @@
       <name value="MedicationRequest Patient Requester Example"/>
       <description value="Patient Requester Example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest"/>
     </resource>
     <resource>
       <reference>
@@ -495,23 +483,22 @@
       <name value="MedicationRequest Practitioner Ordered Example"/>
       <description value="Practitioner Ordered Example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest"/>
     </resource>
     <resource>
       <reference>
         <reference value="MedicationRequest/negation-example"/>
       </reference>
-      <name value="MedicationNotRequested using value set example"/>
-      <description value="Example of medication not requested using a value set to indicate the reason"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationnotrequested"/>
+      <name value="MedicationProhibited using value set example"/>
+      <description value="Example of request not to provide a medication using a value set"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationprohibited"/>
     </resource>
     <resource>
       <reference>
         <reference value="MedicationRequest/negation-example-code"/>
       </reference>
-      <name value="MedicationNotRequested using code example"/>
-      <description value="Example of medication not requested using a code to indicate the reason"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationnotrequested"/>
+      <name value="MedicationProhibited using code example"/>
+      <description value="Example of request not to provide a medication using a code"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationprohibited"/>
     </resource>
     <resource>
       <reference>
@@ -520,7 +507,6 @@
       <name value="MedicationStatment example"/>
       <description value="Penicillin MedicationStatement Example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationstatement"/>
     </resource>
     <resource>
       <reference>
@@ -528,7 +514,7 @@
       </reference>
       <name value="NutrientOrder example"/>
       <description value="Example of NutrientOrder for diabetic diet"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-nutritionorder"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-nutritionorder"/>
     </resource>
     <resource>
       <reference>
@@ -537,7 +523,6 @@
       <name value="Observation example"/>
       <description value="Example of Decreased Hemoglobin Observation"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"/>
     </resource>
     <resource>
       <reference>
@@ -546,7 +531,6 @@
       <name value="ODH Observation example"/>
       <description value="Example of occupational data added to observation measure"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"/>
     </resource>
     <resource>
       <reference>
@@ -555,7 +539,6 @@
       <name value="Frailty observation example"/>
       <description value="Example of a frailty observation measure"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"/>
     </resource>
     <resource>
       <reference>
@@ -564,7 +547,6 @@
       <name value="Gestation age at birth observation example"/>
       <description value="Example of a gestation age at birth observation"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"/>
     </resource>
     <resource>
       <reference>
@@ -573,7 +555,6 @@
       <name value="Date and time of obstetric delivery example"/>
       <description value="Example of a obstetric delivery datetime Observation"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"/>
     </resource>
     <resource>
       <reference>
@@ -582,7 +563,6 @@
       <name value="Delivery date estimated example"/>
       <description value="Example of a delivery date estimate Observation"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"/>
     </resource>
     <resource>
       <reference>
@@ -591,7 +571,6 @@
       <name value="Number of preterm births obeservation example"/>
       <description value="Example number of preterm births Observation"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"/>
     </resource>
     <resource>
       <reference>
@@ -600,7 +579,6 @@
       <name value="Number of full-term births obeservation example"/>
       <description value="Example number of full-term births Observation"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"/>
     </resource>
     <resource>
       <reference>
@@ -609,7 +587,6 @@
       <name value="Number of parity obeservation example"/>
       <description value="Example number of parity Observation"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"/>
     </resource>
     <resource>
       <reference>
@@ -618,23 +595,6 @@
       <name value="Number of pregnancies obeservation example"/>
       <description value="Example number of pregnancies Observation"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Observation/negation-example"/>
-      </reference>
-      <name value="ObservationCancelled with value set example"/>
-      <description value="Example of observation not done using a value set to indicate the reason"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observationcancelled"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Observation/negation-with-code-example"/>
-      </reference>
-      <name value="ObservationCancelled with code example"/>
-      <description value="Example of observation not done using a code to indicate the reason"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observationcancelled"/>
     </resource>
     <resource>
       <reference>
@@ -643,7 +603,6 @@
       <name value="Heart rate rhythm clinical result observation example"/>
       <description value="Example of a Heart rate rhythm clinical result observation"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-clinical-result"/>
     </resource>
     <resource>
       <reference>
@@ -652,7 +611,6 @@
       <name value="10 minute Apgar Heart Rate Observation Screening Assessment Example"/>
       <description value="Example of a 10 minute Apgar Heart Rate Observation Screening Assessment"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-screening-assessment"/>
     </resource>
     <resource>
       <reference>
@@ -661,7 +619,6 @@
       <name value="Glucose Laboratory Result Observation Example"/>
       <description value="Example of a glucose laboratory result observation"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-lab"/>
     </resource>
     <resource>
       <reference>
@@ -670,7 +627,6 @@
       <name value="Mechanical Ventilator Availability (physical object) Observation Example"/>
       <description value="Example of mechanical ventilator availability nonpatient observation"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-nonpatient-observation"/>
     </resource>
     <resource>
       <reference>
@@ -679,7 +635,6 @@
       <name value="Hospital Bed Availability (physical object) Observation Example"/>
       <description value="Example of hospital bed availability nonpatient observation"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-nonpatient-observation"/>
     </resource>
     <resource>
       <reference>
@@ -688,7 +643,6 @@
       <name value="Hemodialysis Machine Availability (physical object) Observation Example"/>
       <description value="Example of hempdialysis machine availability nonpatient observation"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-nonpatient-observation"/>
     </resource>
     <resource>
       <reference>
@@ -697,7 +651,6 @@
       <name value="Organization example"/>
       <description value="HL7 Organization example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization"/>
     </resource>
     <resource>
       <reference>
@@ -706,7 +659,6 @@
       <name value="Hospital Organization example"/>
       <description value="Hendricks County Hospital example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization"/>
     </resource>
     <resource>
       <reference>
@@ -715,7 +667,6 @@
       <name value="Patient example"/>
       <description value="Basic Patient example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"/>
     </resource>
     <resource>
       <reference>
@@ -724,7 +675,6 @@
       <name value="65+ Female patient example"/>
       <description value="65+ Female patient example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"/>
     </resource>
     <resource>
       <reference>
@@ -733,7 +683,6 @@
       <name value="Infant patient example"/>
       <description value="Infant patient example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"/>
     </resource>
     <resource>
       <reference>
@@ -742,7 +691,6 @@
       <name value="Practitioner example"/>
       <description value="Referring Practitioner example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner"/>
     </resource>
     <resource>
       <reference>
@@ -751,32 +699,38 @@
       <name value="PractitionerRole example"/>
       <description value="PractitionerRole example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole"/>
     </resource>
     <resource>
       <reference>
         <reference value="Procedure/example"/>
       </reference>
-      <name value="Procedure example"/>
-      <description value="Appendectomy Procedure example"/>
+      <name value="Procedure general example"/>
+      <description value="Appendectomy Procedure example (using the General Profile)"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedure"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Procedure/done-example"/>
+      </reference>
+      <name value="Procedure positive example"/>
+      <description value="Appendectomy Procedure example (using the Positive Profile)"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
         <reference value="Procedure/negation-example"/>
       </reference>
       <name value="ProcedureNotDone with value set example"/>
-      <description value="Example of procedure not done using a value set to indicate the reason"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedurenotdone"/>
+      <description value="Example of procedure not done using a value set"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone"/>
     </resource>
     <resource>
       <reference>
         <reference value="Procedure/negation-with-code-example"/>
       </reference>
       <name value="ProcedureNotDone with code example"/>
-      <description value="Example of procedure not done using a code to indicate the reason"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedurenotdone"/>
+      <description value="Example of procedure not done using a code"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone"/>
     </resource>
     <resource>
       <reference>
@@ -784,16 +738,31 @@
       </reference>
       <name value="PHQ-9 QuestionnaireResponse Example"/>
       <description value="Example of a PHQ-9 Questionnaire Response"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse"/>
     </resource>
     <resource>
       <reference>
         <reference value="ServiceRequest/example"/>
       </reference>
-      <name value="ServiceRequest example"/>
-      <description value="Request for Appendectomy ServiceRequest example"/>
+      <name value="ServiceRequest general example"/>
+      <description value="Request for Appendectomy ServiceRequest example (using the General Profile)"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicerequest"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ServiceRequest/proposal-example"/>
+      </reference>
+      <name value="ServiceRequest positive example with a value set"/>
+      <description value="Request for Intermittent pneumatic compression devices using a value set example (using the Positive Profile)"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ServiceRequest/proposal-example-code"/>
+      </reference>
+      <name value="ServiceRequest positive example with a code"/>
+      <description value="Request for Graduated compression elastic hosiery using a code example (using the Positive Profile)"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
@@ -802,23 +771,22 @@
       <name value="ServiceRequest appropriateness example"/>
       <description value="ServiceRequest appropriateness example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicerequest"/>
     </resource>
     <resource>
       <reference>
         <reference value="ServiceRequest/negation-example"/>
       </reference>
-      <name value="ServiceNotRequested with value set example"/>
-      <description value="Example of service not requested using a value set to indicate the reason"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicenotrequested"/>
+      <name value="ServiceProhibited with value set example"/>
+      <description value="Example of request not to provide a service using a value set"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited"/>
     </resource>
     <resource>
       <reference>
         <reference value="ServiceRequest/negation-example-code"/>
       </reference>
-      <name value="ServiceNotRequested with code example"/>
-      <description value="Example of service not requested using a code to indicate the reason"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicenotrequested"/>
+      <name value="ServiceProhibited with code example"/>
+      <description value="Example of request not to provide a service using a code"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited"/>
     </resource>
     <resource>
       <reference>
@@ -827,7 +795,6 @@
       <name value="ServiceRequest Myringotomy Procedure example"/>
       <description value="ServiceRequest for Myringotomy Procedure example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicerequest"/>
     </resource>
     <resource>
       <reference>
@@ -836,7 +803,14 @@
       <name value="ServiceRequest elective example"/>
       <description value="Elective procedure ServiceRequest example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicerequest"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ServiceRequest/servicerequested-example"/>
+      </reference>
+      <name value="ServiceRequested appendix example"/>
+      <description value="Appendectomy ServiceRequested example"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
@@ -845,7 +819,6 @@
       <name value="RelatedPerson example"/>
       <description value="Emergency contact example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson"/>
     </resource>
     <resource>
       <reference>
@@ -854,32 +827,54 @@
       <name value="Substance example"/>
       <description value="Honey Bee venom (apitoxin) Substance example"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-substance"/>
     </resource>
     <resource>
       <reference>
         <reference value="Task/example"/>
       </reference>
-      <name value="Task example"/>
-      <description value="Task example"/>
+      <name value="Task general example"/>
+      <description value="Task example (using the General Profile)"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-task"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Task/done-example"/>
+      </reference>
+      <name value="Task positive example"/>
+      <description value="Task example (using the Positive Profile)"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
         <reference value="Task/negation-example"/>
       </reference>
       <name value="TaskRejected with value set example"/>
-      <description value="Example of task not done using a value set to indicate the reason"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-taskrejected"/>
+      <description value="Example of task not done using a value set"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected"/>
     </resource>
     <resource>
       <reference>
         <reference value="Task/negation-with-code-example"/>
       </reference>
       <name value="TaskRejected with code example"/>
-      <description value="Example of task not done using a code to indicate the reason"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-taskrejected"/>
+      <description value="Example of task not done using a code"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Task/rejected-example"/>
+      </reference>
+      <name value="TaskRejected example rejecting a proposal using a value set"/>
+      <description value="Example of a task rejecting a proposal that identifies the requested activity with a value set"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Task/rejected-with-code-example"/>
+      </reference>
+      <name value="TaskRejected example rejecting a proposal using a code"/>
+      <description value="Example of a task rejecting a proposal that identifies the requested activity with a code"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected"/>
     </resource>
     <resource>
       <reference>
@@ -888,15 +883,6 @@
       <name value="Encounter example of emergency visit that escalated into inpatient patient"/>
       <description value="Encounter example of emergency visit that escalated into inpatient patient"/>
       <exampleBoolean value="true"/>
-      <exampleCanonical value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Parameters/manifest"/>
-      </reference>
-      <name value="Input Expansion Parameters"/>
-      <description value="The input expansion parameters resource for this implementation guide, specifying SNOMED Edition and version. This resource will be contained within the published implementation guide with all pinned references."/>
-      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
@@ -918,67 +904,75 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/us-quality-core-encounter-diagnosisPresentOnAdmission"/>
+      </reference>
+      <name value="US Quality Core Diagnosis Present on Admission"/>
+      <description value="Indicator of whether the Encounter diagnosis was present at the time of admission."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/us-quality-core-present-on-admission"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <page>
       <nameUrl value="index.html"/>
-      <title value="2026 US Quality Core Implementation Guide"/>
+      <title value="US Quality Core Implementation Guide"/>
       <generation value="markdown"/>
       <page>
         <nameUrl value="conformance.html"/>
         <title value="Conformance"/>
         <generation value="markdown"/>
-        <page>
-          <nameUrl value="general-requirements.html"/>
-          <title value="General Requirements"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="must-support.html"/>
-          <title value="Must Support"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="security.html"/>
-          <title value="Privacy, Security, and Consent"/>
-          <generation value="markdown"/>
-        </page>
+      </page>
+      <page>
+        <nameUrl value="us-quality-core-general-requirements.html"/>
+        <title value="General Requirements"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="must-support.html"/>
+        <title value="Must Support"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="security.html"/>
+        <title value="Security"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="guidance.html"/>
         <title value="Guidance"/>
         <generation value="markdown"/>
-        <page>
-          <nameUrl value="uscdiquality.html"/>
-          <title value="USCDI+ Quality"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="negation.html"/>
-          <title value="US Quality Core Negation"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="provenance.html"/>
-          <title value="Provenance"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="relationship-with-uscore-qicore.html"/>
-          <title value="Relationship with US Core and QI-Core"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="qdm-to-us-quality-core.html"/>
-          <title value="Quality Data Model (QDM) v5.6 to US Quality Core v0.5.0 mapping"/>
-          <generation value="markdown"/>
-        </page>
+      </page>
+      <page>
+        <nameUrl value="uscdiquality.html"/>
+        <title value="USCDI+ Quality"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="negation.html"/>
+        <title value="US Quality Core Negation"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="provenance.html"/>
+        <title value="Provenance"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="relationship-with-uscore-qicore.html"/>
+        <title value="Relationship with US Core and QI-Core"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="qdm-to-us-quality-core.html"/>
+        <title value="Quality Data Model (QDM)v5.6 to US Quality Core R8 Mapping"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="capability-statements.html"/>
-        <title value="US Quality Core Capability Statements"/>
+        <title value="Capability Statements"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -1002,38 +996,23 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="cql-artifacts.html"/>
-        <title value="CQL Artifacts and Patterns (Informational)"/>
-        <generation value="markdown"/>
-        <page>
-          <nameUrl value="modelinfo.html"/>
-          <title value="US Quality Core ModelInfo (Informational)"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="patterns.html"/>
-          <title value="US Quality Core Patterns (Informational)"/>
-          <generation value="markdown"/>
-        </page>
-      </page>
-      <page>
         <nameUrl value="downloads.html"/>
         <title value="US Quality Core Downloads"/>
         <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="changes.html"/>
-        <title value="Change Log"/>
+        <title value="Changes"/>
         <generation value="markdown"/>
       </page>
     </page>
     <parameter>
       <code value="releaselabel"/>
-      <value value="release"/>
+      <value value="STU 1 - ballot"/>
     </parameter>
     <parameter>
       <code value="copyrightyear"/>
-      <value value="2026+"/>
+      <value value="2026"/>
     </parameter>
     <parameter>
       <code value="path-resource"/>
@@ -1044,16 +1023,12 @@
       <value value="templates\liquid"/>
     </parameter>
     <parameter>
-      <code value="path-binary"/>
-      <value value="input/cql"/>
-    </parameter>
-    <parameter>
       <code value="apply-version"/>
       <value value="true"/>
     </parameter>
     <parameter>
       <code value="path-expansion-params"/>
-      <value value="exp-params.json"/>
+      <value value="_resources/exp-params.json"/>
     </parameter>
     <parameter>
       <code value="find-other-resources"/>
@@ -1070,6 +1045,14 @@
     <parameter>
       <code value="generate"/>
       <value value="JSON"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://hl7.org/fhir/StructureDefinition/codeOptions"/>
+    </parameter>
+    <parameter>
+      <code value="pin-canonicals"/>
+      <value value="pin-multiples"/>
     </parameter>
   </definition>
 </ImplementationGuide>

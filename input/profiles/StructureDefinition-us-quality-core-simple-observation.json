@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-simple-observation",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+  "version": "1.0.0",
   "name": "USQualityCoreSimpleObservation",
   "title": "US Quality Core Simple Observation",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -34,7 +34,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|6.1.0",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|9.0.0",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -87,38 +87,31 @@
         "isSummary": false
       },
       {
+        "id": "Observation.partOf",
+        "path": "Observation.partOf",
+        "short": "Part of referenced event"
+      },
+      {
         "id": "Observation.status",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Observation.status",
-        "short": "(USCDI+ Quality) (USCDI) registered | preliminary | final | amended | corrected | entered-in-error | unknown",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-non-negative-observation-status"
-        }
+        "short": "(USCDI+ Quality) registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
       },
       {
         "id": "Observation.category",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Observation.category",
-        "short": "(USCDI+ Quality) (USCDI) Classification of type of observation",
+        "short": "(USCDI+ Quality) Classification of type of observation",
         "min": 1,
         "max": "*"
       },
@@ -126,32 +119,24 @@
         "id": "Observation.category:us-core",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Observation.category",
         "sliceName": "us-core",
-        "short": "(USCDI+ Quality) (USCDI) US Core classification of type of observation"
+        "short": "(USCDI+ Quality) US Core classification of type of observation"
       },
       {
         "id": "Observation.code",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Observation.code",
-        "short": "(USCDI+ Quality) (USCDI) Type of observation (code / type)",
+        "short": "(USCDI+ Quality) Type of observation (code / type)",
         "binding": {
           "strength": "preferred",
           "description": "This value set specifies the type of observation",
@@ -160,14 +145,8 @@
       },
       {
         "id": "Observation.subject",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Observation.subject",
-        "short": "(USCDI) Who and/or what the observation is about",
+        "short": "Who and/or what the observation is about",
         "definition": "The patient, or group of patients, location, or device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation.",
         "comment": "One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.",
         "requirements": "Observations have no value if you don't know who or what they're about.",
@@ -182,7 +161,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
             ]
           }
         ],
@@ -193,16 +172,12 @@
         "id": "Observation.effective[x]",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Observation.effective[x]",
-        "short": "(USCDI+ Quality) (USCDI) Clinically relevant time/time-period for observation",
+        "short": "(USCDI+ Quality) Clinically relevant time/time-period for observation",
         "definition": "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the \"physiologically relevant time\". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.",
         "comment": "At least a date should be present unless this observation is a historical report.  For recording imprecise or \"fuzzy\" times (For example, a blood glucose measurement taken \"after breakfast\") use the [Timing](http://hl7.org/fhir/R4/datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.",
         "requirements": "Knowing when an observation was deemed true is important to its relevance as well as determining trends.",
@@ -235,24 +210,18 @@
       },
       {
         "id": "Observation.performer",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Observation.performer",
-        "short": "(USCDI) Who is responsible for the observation",
+        "short": "Who is responsible for the observation",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careteam",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careteam",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson"
             ]
           }
         ]
@@ -261,11 +230,7 @@
         "id": "Observation.value[x]",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -280,7 +245,7 @@
           "ordered": false,
           "rules": "open"
         },
-        "short": "(USCDI+ Quality) (USCDI) Actual result",
+        "short": "(USCDI+ Quality) Actual result",
         "definition": "The information determined as a result of making the observation, if the information has a simple value.",
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](http://hl7.org/fhir/R4/observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
@@ -330,28 +295,6 @@
         "isSummary": true
       },
       {
-        "id": "Observation.value[x].valueCodeableConcept",
-        "path": "Observation.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "short": "actual | potential",
-        "base": {
-          "path": "Observation.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isModifier": false,
-        "binding": {
-          "strength": "preferred",
-          "description": "SNOMED CT for coded results",
-          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-value-codes"
-        }
-      },
-      {
         "id": "Observation.interpretation",
         "path": "Observation.interpretation",
         "short": "High, low, normal, etc.",
@@ -389,14 +332,8 @@
       },
       {
         "id": "Observation.derivedFrom",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Observation.derivedFrom",
-        "short": "(USCDI) US Core Profiles or other resource the observation is made from",
+        "short": "US Core Profiles or other resource the observation is made from",
         "definition": "US Core Observations, DocumentReference, QuestionnaireResponse or other resource from which this observation value is derived.",
         "comment": "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](http://hl7.org/fhir/R4/observation.html#obsgrouping) below.",
         "min": 0,
@@ -410,10 +347,10 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-imagingstudy",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|6.1.0",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0",
               "http://hl7.org/fhir/StructureDefinition/Media",
               "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
             ]

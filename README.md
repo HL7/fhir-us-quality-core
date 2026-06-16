@@ -2,7 +2,7 @@
 
 This repository contains the source for the US Quality Core implementation guide, which defines a set of FHIR profiles and extensions for use in clinical quality measurement.
 
-The implementation guide is based on [FHIR version 4.0.1 (R4 release)](http://hl7.org/fhir/R4/index.html) and depends on the [US Core implementation guide (STU 6.1.0)](https://hl7.org/fhir/us/core/STU6.1/).
+The implementation guide is based on [FHIR version 4.0.1 (R4 release)](http://hl7.org/fhir/R4/index.html) and depends on the [US Core implementation guide (STU 9.0.0)](https://hl7.org/fhir/us/core/STU9/).
 
 ## Local Build
 

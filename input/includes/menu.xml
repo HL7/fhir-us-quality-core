@@ -1,12 +1,13 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+
   <li><a href="index.html">Home</a></li>
-  
+
   <li class="dropdown">
     <a data-toggle="dropdown" class="dropdown-toggle">Conformance
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <li><a href="general-requirements.html" class="item">General Requirements</a></li>
+      <li><a href="us-quality-core-general-requirements.html" class="item">General Requirements</a></li>
       <li><a href="must-support.html" class="item">Must Support</a></li>
       <li><a href="security.html" class="item">Security</a></li>
     </ul>
@@ -17,10 +18,10 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-      <li><a href="uscdiquality.html" class="item">USCDI+ Quality</a></li>    
+      <li><a href="uscdiquality.html" class="item">USCDI+ Quality</a></li>
       <li><a href="negation.html" class="item">US Quality Core Negation</a></li>
       <li><a href="provenance.html" class="item">Provenance</a></li>
-      <li><a href="relationship-with-uscore-qicore.html" class="item">Relationship with US Core and QI-Core</a></li> 
+      <li><a href="relationship-with-uscore-qicore.html" class="item">Relationship with US Core and QI-Core</a></li>
       <li><a href="qdm-to-us-quality-core.html" class="item">QDM to US Quality Core</a></li>
     </ul>
   </li>
@@ -35,16 +36,6 @@
       <li><a href="extensions.html" class="item">Extensions</a></li>
       <li><a href="terminology.html" class="item">Terminology</a></li>
       <li><a href="examples.html" class="item">Examples</a></li>
-    </ul>
-  </li>
-
-  <li class="dropdown">
-    <a data-toggle="dropdown" class="dropdown-toggle">CQL Artifacts and Patterns (Informational)
-       <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li><a href="modelinfo.html" class="item">US Quality Core ModelInfo (Informational)</a></li>
-      <li><a href="patterns.html" class="item">US Quality Core Patterns (Informational)</a></li>
     </ul>
   </li>
 

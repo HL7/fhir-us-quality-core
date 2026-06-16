@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ClaimResponse xmlns="http://hl7.org/fhir">
+<ClaimResponse xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="example"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-claimresponse"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-claimresponse"/>
   </meta>
   <status value="active"/>
   <type>
     <coding>
       <system value="http://terminology.hl7.org/CodeSystem/claim-type"/>
-      <code value="professional"/>
-      <display value="Professional"/>
+      <code value="vision"/>
     </coding>
   </type>
   <use value="preauthorization"/>
@@ -37,24 +36,9 @@
         </coding>
       </category>
       <amount>
-        <value value="4000.00"/>
+        <value value="235.40"/>
         <currency value="USD"/>
       </amount>
     </adjudication>
-    <detail>
-      <detailSequence value="1"/>
-      <adjudication>
-        <category>
-          <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/adjudication"/>
-            <code value="submitted"/>
-          </coding>
-        </category>
-        <amount>
-          <value value="4000.00"/>
-          <currency value="USD"/>
-        </amount>
-      </adjudication>
-    </detail>
-  </item>
+    </item>
 </ClaimResponse>

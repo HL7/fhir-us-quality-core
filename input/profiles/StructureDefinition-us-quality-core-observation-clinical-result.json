@@ -1,25 +1,24 @@
 {
   "id": "us-quality-core-observation-clinical-result",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-clinical-result",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-clinical-result",
+  "version": "1.0.0",
   "name": "USQualityCoreObservationClinicalResult",
   "title": "US Quality Core Observation Clinical Result",
   "status": "active",
-  "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
   ],
-  "description": "The US Quality Core Observation Clinical Result Profile is based upon the US Core Observation Clinical Result Profile. Clinical results includes non-imaging and non-laboratory tests performed on a patient that results in structured or unstructured (narrative) findings specific to the patient, such as electrocardiogram (ECG), visual acuity exam, macular exam, or graded exercise testing (GXT), to facilitate the diagnosis and management of conditions. The US Quality Core Observation Clinical Result Profile profile defines the core set of elements and extensions for quality rule and measure authors.",
+  "description": "This profile sets minimum expectations for the Observation resource to record and search non-laboratory clinical test results (e.g., radiology and other clinical observations generated from procedures). An example would be when a gastroenterologist reports the size of a polyp observed during a colonoscopy. This profile is the basis for the US Core Clinical  Result Profile, which defines additional data elements to record and search laboratory test results.",
   "jurisdiction": [
     {
       "coding": [
@@ -35,7 +34,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|6.1.0",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|9.0.0",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -43,40 +42,26 @@
         "id": "Observation.status",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Observation.status",
-        "short": "(USCDI+ Quality) (USCDI) registered | preliminary | final | amended | corrected | entered-in-error | unknown",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-non-negative-observation-status"
-        }
+        "short": "(USCDI+ Quality) registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
       },
       {
         "id": "Observation.category",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Observation.category",
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "value",
               "path": "$this"
             }
           ],
           "rules": "open"
         },
-        "short": "(USCDI) Classification of type of observation",
+        "short": "Classification of  type of observation",
         "definition": "A code that classifies the general type of observation being made.",
         "comment": "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.",
         "requirements": "Used for filtering what observations are retrieved and displayed.",
@@ -103,15 +88,9 @@
       },
       {
         "id": "Observation.category:us-core",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Observation.category",
         "sliceName": "us-core",
-        "short": "(USCDI) Classification of type of observation",
+        "short": "Classification of type of observation",
         "definition": "A code that classifies the general type of observation being made.",
         "comment": "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.",
         "requirements": "Used for filtering what observations are retrieved and displayed.",
@@ -131,7 +110,6 @@
         "isSummary": false,
         "binding": {
           "strength": "required",
-          "description": "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category"
         }
       },
@@ -139,16 +117,12 @@
         "id": "Observation.code",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Observation.code",
-        "short": "(USCDI+ Quality) (USCDI) Clinical Test or Procedure Name",
+        "short": "(USCDI+ Quality) Clinical Test or Procedure Name",
         "isModifier": false,
         "isSummary": true,
         "binding": {
@@ -158,20 +132,17 @@
       },
       {
         "id": "Observation.subject",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Observation.subject",
-        "short": "(USCDI) Who and/or what the observation is about",
+        "short": "Who and/or what the observation is about",
         "min": 1,
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+              "http://hl7.org/fhir/StructureDefinition/Group",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location"
             ]
           }
         ]
@@ -180,16 +151,12 @@
         "id": "Observation.effective[x]",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Observation.effective[x]",
-        "short": "(USCDI+ Quality) (USCDI) Clinically relevant time/time-period for observation",
+        "short": "(USCDI+ Quality) Clinically relevant time/time-period for observation",
         "type": [
           {
             "code": "dateTime"
@@ -210,16 +177,12 @@
         "id": "Observation.value[x]",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Observation.value[x]",
-        "short": "(USCDI+ Quality) (USCDI) Result Value",
+        "short": "(USCDI+ Quality) Result Value",
         "type": [
           {
             "code": "Quantity"
@@ -243,6 +206,9 @@
             "code": "Ratio"
           },
           {
+            "code": "SampledData"
+          },
+          {
             "code": "time"
           },
           {
@@ -255,14 +221,8 @@
       },
       {
         "id": "Observation.dataAbsentReason",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Observation.dataAbsentReason",
-        "short": "(USCDI) Why the result is missing",
+        "short": "Why the result is missing",
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -276,11 +236,6 @@
           "description": "Codes specifying why the result (`Observation.value[x]`) is missing.",
           "valueSet": "http://hl7.org/fhir/ValueSet/data-absent-reason"
         }
-      },
-      {
-        "id": "Observation.component",
-        "path": "Observation.component",
-        "short": "Component results"
       }
     ]
   },

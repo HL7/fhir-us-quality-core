@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ServiceRequest xmlns="http://hl7.org/fhir">
+<ServiceRequest xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="example"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-servicerequest"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest"/>
   </meta>
+	<!-- Extension removed in R4, not clear where this should appear
+  <extension url="http://hl7.org/fhir/StructureDefinition/procedurerequest-authorizedBy">
+    <valueReference>
+      <reference value="Practitioner/example"/>
+    </valueReference>
+  </extension>
+	-->
   <status value="completed"/>
   <intent value="order"/>
   <category>
@@ -41,9 +48,6 @@
       <display value="Abdominal pain (finding)"/>
     </coding>
   </reasonCode>
-  <reasonReference>
-    <reference value="Condition/appendicitis-example"/>
-  </reasonReference>
   <bodySite>
       <coding>
         <system value="http://snomed.info/sct"/>

@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-medicationadministration",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministration",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministration",
+  "version": "1.0.0",
   "name": "USQualityCoreMedicationAdministration",
   "title": "US Quality Core MedicationAdministration",
   "status": "draft",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -39,30 +39,35 @@
   "differential": {
     "element": [
       {
+        "id": "MedicationAdministration",
+        "path": "MedicationAdministration",
+        "constraint": [
+          {
+            "key": "qma-1",
+            "severity": "error",
+            "human": "To indicate what medication, either a reference to a Medication or at least one coding in the medication or a codeOptions extension shall be provided",
+            "expression": "(medication is Reference).not() implies medication.extension('http://hl7.org/fhir/StructureDefinition/codeOptions').exists() xor medication.coding.exists()",
+            "xpath": "exists(f:extension)"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
         "id": "MedicationAdministration.status",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "MedicationAdministration.status",
-        "short": "(USCDI+ Quality) in-progress | on-hold | completed | entered-in-error | stopped | unknown",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-non-negative-medication-admin-status"
-        }
-      },
-      {
-        "id": "MedicationAdministration.statusReason",
-        "path": "MedicationAdministration.statusReason",
-        "short": "Reason administration not performed"
+        "short": "(USCDI+ Quality) in-progress | not-done | on-hold | completed | entered-in-error | stopped | unknown"
       },
       {
         "id": "MedicationAdministration.medication[x]",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -75,15 +80,38 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medication"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medication"
             ]
           }
+        ],
+        "condition": [
+          "qma-1"
         ],
         "binding": {
           "strength": "preferred",
           "description": "The set of RxNorm codes to represent medications",
           "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4"
         }
+      },
+      {
+        "id": "MedicationAdministration.medication[x].extension:codeOptions",
+        "path": "MedicationAdministration.medication[x].extension",
+        "sliceName": "codeOptions",
+        "short": "Url of a value set of candidate medications",
+        "definition": "A logical reference (e.g. a reference to ValueSet.url) to a value set/version that identifies a set of possible coded values representing the medication.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/codeOptions"
+            ]
+          }
+        ],
+        "condition": [
+          "qma-1"
+        ]
       },
       {
         "id": "MedicationAdministration.subject",
@@ -93,7 +121,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
             ]
           }
         ]
@@ -106,7 +134,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter",
               "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"
             ]
           }
@@ -116,7 +144,7 @@
         "id": "MedicationAdministration.effective[x]",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -131,7 +159,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationrequest"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest"
             ]
           }
         ]
@@ -140,19 +168,20 @@
         "id": "MedicationAdministration.dosage",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "MedicationAdministration.dosage",
-        "short": "(USCDI+ Quality)",
+        "short": "(USCDI+ Quality) Details of how medication was taken",
+        "definition": "Describes the medication dosage information details e.g. dose, rate, site, route, etc.",
         "mustSupport": false
       },
       {
         "id": "MedicationAdministration.dosage.route",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -167,7 +196,7 @@
         "id": "MedicationAdministration.dosage.dose",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],

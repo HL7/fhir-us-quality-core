@@ -1,20 +1,21 @@
 {
+  "resourceType": "StructureDefinition",
   "id": "us-quality-core-encounter-diagnosisPresentOnAdmission",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter-diagnosisPresentOnAdmission",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter-diagnosisPresentOnAdmission",
+  "version": "1.0.0",
   "name": "USQualityCoreDiagnosisPresentOnAdmission",
   "title": "US Quality Core Diagnosis Present on Admission",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05T00:00:00-06:00",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -31,13 +32,6 @@
     }
   ],
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    }
-  ],
   "kind": "complex-type",
   "abstract": false,
   "context": [
@@ -67,7 +61,7 @@
             "code": "uri"
           }
         ],
-        "fixedUri": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter-diagnosisPresentOnAdmission"
+        "fixedUri": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter-diagnosisPresentOnAdmission"
       },
       {
         "id": "Extension.value[x]",
@@ -80,10 +74,9 @@
         "binding": {
           "strength": "required",
           "description": "Indicator of whether the Encounter diagnosis was present at the time of admission",
-          "valueSet": "http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-present-on-admission"
+          "valueSet": "http://hl7.org/fhir/us/quality-core/ValueSet/us-quality-core-present-on-admission"
         }
       }
     ]
-  },
-  "resourceType": "StructureDefinition"
+  }
 }

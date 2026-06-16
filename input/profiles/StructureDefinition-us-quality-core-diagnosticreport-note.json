@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-diagnosticreport-note",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
+  "version": "1.0.0",
   "name": "USQualityCoreDiagnosticReportNote",
   "title": "US Quality Core DiagnosticReport Profile for Report and Note Exchange",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -34,7 +34,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "DiagnosticReport",
-  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|6.1.0",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|9.0.0",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -42,68 +42,94 @@
         "id": "DiagnosticReport.status",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "DiagnosticReport.status",
-        "short": "(USCDI+ Quality) (USCDI) registered | partial | preliminary | final +"
+        "short": "(USCDI+ Quality) registered | partial | preliminary | final +",
+        "definition": "The status of the diagnostic report.",
+        "requirements": "Diagnostic services routinely issue provisional/incomplete reports, and sometimes withdraw previously released reports.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DiagnosticReport.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "condition": [
+          "us-core-8",
+          "us-core-9"
+        ],
+        "mustSupport": true,
+        "isModifier": true,
+        "isModifierReason": "This element is labeled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
+        "isSummary": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
+        },
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.status"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.status"
+          },
+          {
+            "identity": "v2",
+            "map": "OBR-25 (not 1:1 mapping)"
+          },
+          {
+            "identity": "rim",
+            "map": "statusCode  Note: final and amended are distinguished by whether observation is the subject of a ControlAct event of type \"revise\""
+          }
+        ]
       },
       {
         "id": "DiagnosticReport.category",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "DiagnosticReport.category",
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "value",
               "path": "$this"
             }
           ],
           "rules": "open"
         },
-        "short": "(USCDI) Service Category",
+        "short": "Service Category",
         "min": 1
       },
       {
         "id": "DiagnosticReport.category:us-core",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "DiagnosticReport.category",
         "sliceName": "us-core",
-        "short": "(USCDI+ Quality) (USCDI) Service category"
+        "short": "(USCDI+ Quality) Service category"
       },
       {
         "id": "DiagnosticReport.code",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "DiagnosticReport.code",
-        "short": "(USCDI+ Quality) (USCDI) US Quality Core Report Code",
+        "short": "(USCDI+ Quality) US Quality Core Report Code",
         "definition": "The test, panel, report, or note that was ordered.",
         "comment": "The typical patterns for codes are:  1)  a LOINC code either as a translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
         "alias": [
@@ -131,38 +157,26 @@
       },
       {
         "id": "DiagnosticReport.subject",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "DiagnosticReport.subject",
-        "short": "(USCDI) The subject of the report - usually, but not always, the patient",
+        "short": "The subject of the report - usually, but not always, the patient",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
             ]
           }
         ]
       },
       {
         "id": "DiagnosticReport.encounter",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "DiagnosticReport.encounter",
-        "short": "(USCDI) Health care event when test ordered",
+        "short": "Health care event when test ordered",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter"
             ]
           }
         ]
@@ -171,16 +185,12 @@
         "id": "DiagnosticReport.effective[x]",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "DiagnosticReport.effective[x]",
-        "short": "(USCDI+ Quality) (USCDI) Diagnostically relevant time (typically the time of the procedure)",
+        "short": "(USCDI+ Quality) Diagnostically relevant time (typically the time of the procedure)",
         "min": 0,
         "max": "1",
         "base": {
@@ -201,31 +211,19 @@
       },
       {
         "id": "DiagnosticReport.issued",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "DiagnosticReport.issued",
-        "short": "(USCDI) DateTime this version was made"
+        "short": "DateTime this version was made"
       },
       {
         "id": "DiagnosticReport.performer",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "DiagnosticReport.performer",
-        "short": "(USCDI) Responsible Diagnostic Service",
+        "short": "Responsible Diagnostic Service",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization"
             ]
           }
         ]
@@ -234,22 +232,18 @@
         "id": "DiagnosticReport.result",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "DiagnosticReport.result",
-        "short": "(USCDI+ Quality) (USCDI) Observations",
+        "short": "(USCDI+ Quality) Observations",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-lab",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-observation-clinical-result"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-clinical-result"
             ]
           }
         ]
@@ -262,21 +256,15 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-imagingstudy"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy"
             ]
           }
         ]
       },
       {
         "id": "DiagnosticReport.media",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "DiagnosticReport.media",
-        "short": "(USCDI) Key images associated with this report"
+        "short": "Key images associated with this report"
       }
     ]
   },

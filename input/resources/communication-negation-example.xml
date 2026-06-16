@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Communication xmlns="http://hl7.org/fhir">
+<Communication xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="negation-example"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-communicationnotdone"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-communicationnotdone"/>
   </meta>
-  <extension url="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded">
+  <extension url="http://hl7.org/fhir/StructureDefinition/event-recorded">
     <valueDateTime value="2014-12-12T18:01:10-08:00"/>
   </extension>
   <status value="not-done"/>
   <statusReason>
-    <text value="Patient moved away and could not be reached"/>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="184081006"/>
+      <display value="Patient has moved away (finding)"/>
+    </coding>
   </statusReason>
   <category>
     <coding>
@@ -39,13 +43,16 @@
   <encounter>
     <reference value="Encounter/example"/>
   </encounter>
+  <sent value="2014-12-12T18:01:10-08:00"/>
+  <received value="2014-12-12T18:01:11-08:00"/>
   <recipient>
-    <reference value="Patient/example"/>
+    <reference value="Practitioner/example"/>
   </recipient>
   <sender>
-    <reference value="Practitioner/example"/>
+    <reference value="Organization/example1"/>
+    <display value="Hendricks County Hospital"/>
   </sender>
   <payload>
-    <contentString value="Patient could not be reached to discuss follow-up care after moving away."/>
+    <contentString value="Patient example has moved away"/>
   </payload>
 </Communication>

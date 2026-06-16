@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Observation xmlns="http://hl7.org/fhir">
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="example"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation"/>
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/observation-bodyPosition">
     <valueCodeableConcept>
@@ -51,7 +51,7 @@
   </valueQuantity>
   <interpretation>
     <coding>
-      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0078"/>
       <code value="L"/>
       <display value="Low"/>
     </coding>
@@ -75,12 +75,26 @@
   	<reference value="Observation/example"/>
   </derivedFrom>
   <component>
+    <!--
+           Observations are often coded in multiple code systems.
+           - LOINC provides a very specific code (though not more specific in this particular
+     case)
+           - snomed provides a clinically relevant code that is usually less granular
+     than LOINC
+           - the source system provides its own code, which may be less or more granular
+     than LOINC
+
+this is shown here to demonstrate  the concept of translations within the codeableConcept
+     datatype. The diastolic code below only has a LOINC code
+              -->
     <code>
+      <!--      LOINC -code      -->
       <coding>
         <system value="http://loinc.org"/>
         <code value="8480-6"/>
         <display value="Systolic blood pressure"/>
       </coding>
+      <!--      SNOMED CT Codes      -->
       <coding>
         <system value="http://snomed.info/sct"/>
         <code value="271649006"/>
@@ -93,16 +107,19 @@
       <system value="http://unitsofmeasure.org"/>
       <code value="mm[Hg]"/>
     </valueQuantity>
+    <!--      an interpretation for the individual composite observation    -->
     <interpretation>
       <coding>
-        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0078"/>
         <code value="N"/>
-        <display value="Normal"/>
+        <display value="normal"/>
       </coding>
       <text value="Normal"/>
     </interpretation>
+    <!--       Should have a refrange as well     -->
   </component>
   <component>
+    <!--      this codes only has a LOINC code      -->
     <code>
       <coding>
         <system value="http://loinc.org"/>
@@ -116,13 +133,15 @@
       <system value="http://unitsofmeasure.org"/>
       <code value="mm[Hg]"/>
     </valueQuantity>
+    <!--      an interpretation for the individual composite observation    -->
     <interpretation>
       <coding>
-        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0078"/>
         <code value="L"/>
-        <display value="Low"/>
+        <display value="low"/>
       </coding>
       <text value="Below low normal"/>
     </interpretation>
+    <!--       Should have a refrange as well     -->
   </component>
 </Observation>

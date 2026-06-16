@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Substance xmlns="http://hl7.org/fhir">
+<Substance  xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="example"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-substance"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-substance"/>
   </meta>
   <identifier>
     <system value="http://acme.org/identifiers/substances"/>
@@ -11,7 +11,7 @@
   <status value="active"/>
   <category>
     <coding>
-      <system value="http://terminology.hl7.org/CodeSystem/substance-category"/>
+      <system value="http://terminology.hl7.org/CodeSystem/substance-category"/> 
       <code value="allergen"/>
       <display value="Allergen"/>
     </coding>
@@ -19,4 +19,18 @@
   <code>
     <text value="apitoxin (Honey Bee Venom)"/>
   </code>
+  <ingredient>
+	<quantity>
+	  <numerator>
+		<value value="0.150"/>
+		<unit value="mg"/>
+	  </numerator>
+	  <denominator>
+		<value value="1"/>
+	  </denominator>
+	</quantity>
+	<substanceReference>
+		<reference value="Substance/example"/>
+	</substanceReference>
+  </ingredient>
 </Substance>

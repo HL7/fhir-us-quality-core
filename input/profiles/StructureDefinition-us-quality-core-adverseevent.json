@@ -1,25 +1,25 @@
 {
   "id": "us-quality-core-adverseevent",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-adverseevent",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-adverseevent",
+  "version": "1.0.0",
   "name": "USQualityCoreAdverseEvent",
   "title": "US Quality Core AdverseEvent",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
   ],
-  "description": "An adverse event (AE) is an untoward occurrence during treatment that should be reported, for example, to a clinical study sponsor or safety oversight organization.  AEs include reportable serious medical errors such as those defined by National Quality Forum (see http://www.qualityforum.org/Topics/ SREs/List_of_SREs.aspx), and Patient Safety Healthcare Events as defined by AHRQ.  Some AEs can involve conditions such as \"recurring headaches\" but others do not, such as accidental falls, surgical errors, sexual abuse of patient, and sudden death. An adverse event can also be an unsafe condition that increases the probability of a patient safety event, and near-misses. An adverse event can be caused by exposure to some agent (e.g., a medication, immunization, food, or environmental agent). An adverse reaction can range from a mild reaction, such as a harmless rash to a severe and life-threatening condition. They can occur immediately or develop over time. For example, a patient may develop a rash after taking a particular medication.",
+  "description": "Actual or potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.",
   "jurisdiction": [
     {
       "coding": [
@@ -39,6 +39,10 @@
   "differential": {
     "element": [
       {
+        "id": "AdverseEvent",
+        "path": "AdverseEvent"
+      },
+      {
         "id": "AdverseEvent.actuality",
         "path": "AdverseEvent.actuality",
         "short": "actual | potential"
@@ -47,7 +51,7 @@
         "id": "AdverseEvent.category",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -58,7 +62,7 @@
         "id": "AdverseEvent.event",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -76,16 +80,11 @@
         "id": "AdverseEvent.subject",
         "path": "AdverseEvent.subject",
         "short": "Subject impacted by event",
-        "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient",
-              "http://hl7.org/fhir/StructureDefinition/Group",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
             ]
           }
         ]
@@ -98,7 +97,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter"
             ]
           }
         ]
@@ -107,19 +106,19 @@
         "id": "AdverseEvent.date",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "AdverseEvent.date",
-        "short": "(USCDI+ Quality)",
+        "short": "(USCDI+ Quality) When the event occurred",
         "mustSupport": false
       },
       {
         "id": "AdverseEvent.detected",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -130,7 +129,7 @@
         "id": "AdverseEvent.recordedDate",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -139,14 +138,20 @@
       },
       {
         "id": "AdverseEvent.resultingCondition",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
+            "valueBoolean": true
+          }
+        ],
         "path": "AdverseEvent.resultingCondition",
-        "short": "Effect on the subject due to this event",
+        "short": "(USCDI+ Quality) Effect on the subject due to this event",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis"
             ]
           }
         ]
@@ -158,7 +163,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location"
             ]
           }
         ],
@@ -166,8 +171,41 @@
       },
       {
         "id": "AdverseEvent.seriousness",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
+            "valueBoolean": true
+          }
+        ],
         "path": "AdverseEvent.seriousness",
-        "short": "Seriousness of the event"
+        "short": "(USCDI+ Quality) Seriousness of the event"
+      },
+      {
+        "id": "AdverseEvent.severity",
+        "path": "AdverseEvent.severity",
+        "short": "mild | moderate | severe",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "description": "The severity of the adverse event itself, in direct relation to the subject.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/adverse-event-severity"
+        }
+      },
+      {
+        "id": "AdverseEvent.outcome",
+        "path": "AdverseEvent.outcome",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "AdverseEventOutcome"
+            }
+          ],
+          "strength": "required",
+          "description": "Type of outcome from the adverse event",
+          "valueSet": "http://hl7.org/fhir/ValueSet/adverse-event-outcome|4.0.1"
+        }
       },
       {
         "id": "AdverseEvent.recorder",
@@ -176,10 +214,10 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole"
             ]
           }
         ],
@@ -192,10 +230,9 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-device",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device|6.1.0"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0"
             ]
           }
         ],
@@ -210,7 +247,7 @@
         "id": "AdverseEvent.suspectEntity.instance",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -220,14 +257,13 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunization",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedure",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-substance",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medication",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationadministration",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationstatement",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-device",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device|6.1.0"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-substance",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medication",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministration",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationstatement",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0"
             ]
           }
         ]
@@ -235,8 +271,6 @@
       {
         "id": "AdverseEvent.suspectEntity.causality",
         "path": "AdverseEvent.suspectEntity.causality",
-        "min": 0,
-        "max": "1",
         "mustSupport": false
       },
       {
@@ -246,13 +280,13 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-familymemberhistory",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunization",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedure",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-familymemberhistory",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis"
             ]
           }
         ],

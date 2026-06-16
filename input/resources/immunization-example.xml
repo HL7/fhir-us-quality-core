@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Immunization xmlns="http://hl7.org/fhir">
+<Immunization xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="example"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunization"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization"/>
   </meta>
   <identifier>
     <system value="urn:ietf:rfc:3986"/>
@@ -11,11 +11,10 @@
   <status value="completed"/>
   <vaccineCode>
     <coding>
-      <system value="http://hl7.org/fhir/sid/cvx"/>
-      <code value="140"/>
-      <display value="Influenza, seasonal, injectable, preservative free"/>
+      <system value="urn:oid:1.2.36.1.2001.1005.17"/>
+      <code value="FLUVAX"/>
     </coding>
-    <text value="Seasonal influenza vaccine"/>
+    <text value="Fluvax (Influenza)"/>
   </vaccineCode>
   <patient>
     <reference value="Patient/example"/>
@@ -49,10 +48,9 @@
     </coding>
   </route>
   <doseQuantity>
-    <value value="0.5"/>
-    <unit value="mL"/>
+    <value value="5"/>
     <system value="http://unitsofmeasure.org"/>
-    <code value="mL"/>
+    <code value="mg"/>
   </doseQuantity>
   <performer>
     <function>
@@ -77,11 +75,21 @@
     </actor>
   </performer>
   <note>
-    <text value="Seasonal influenza vaccine administered intramuscularly in the left arm"/>
+    <text value="Notes on adminstration of vaccine"/>
   </note>
   <reasonCode>
-    <text value="Annual influenza vaccination"/>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="429060002"/>
+    </coding>
   </reasonCode>
+  <reaction>
+    <date value="2013-01-10"/>
+    <detail>
+      <reference value="Observation/example"/>
+    </detail>
+    <reported value="true"/>
+  </reaction>
   <protocolApplied>
     <series value="Vaccination Series 1"/>
     <authority>
@@ -90,11 +98,25 @@
     <targetDisease>
       <coding>
         <system value="http://snomed.info/sct"/>
-        <code value="6142004"/>
-        <display value="Influenza (disorder)"/>
+        <code value="1857005"/>
       </coding>
     </targetDisease>
     <doseNumberPositiveInt value="1"/>
     <seriesDosesPositiveInt value="2"/>
+		<!-- Don't know where this goes in R4... isSubpotent and isSubpotentReason? 
+    <doseStatus>
+      <coding>
+        <system value="http://hl7.org/fhir/vaccination-protocol-dose-status"/>
+        <code value="count"/>
+        <display value="Counts"/>
+      </coding>
+    </doseStatus>
+    <doseStatusReason>
+      <coding>
+        <system value="http://hl7.org/fhir/vaccination-protocol-dose-status-reason"/>
+        <code value="coldchbrk"/>
+        <display value="Cold chain break"/>
+      </coding>
+    </doseStatusReason> -->
   </protocolApplied>
 </Immunization>

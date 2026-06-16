@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-communicationrequest",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-communicationrequest",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-communicationrequest",
+  "version": "1.0.0",
   "name": "USQualityCoreCommunicationRequest",
   "title": "US Quality Core CommunicationRequest",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -65,7 +65,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
             ]
           }
         ]
@@ -78,7 +78,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-encounter"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter"
             ]
           }
         ]
@@ -91,14 +91,13 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-device",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device|6.1.0",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson",
               "http://hl7.org/fhir/StructureDefinition/Group",
-              "http://hl7.org/fhir/StructureDefinition/CareTeam"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careteam"
             ]
           }
         ]
@@ -111,12 +110,11 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-device",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device|6.1.0",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson"
             ]
           }
         ]

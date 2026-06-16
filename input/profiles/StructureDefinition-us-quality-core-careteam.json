@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-careteam",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careteam",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careteam",
+  "version": "1.0.0",
   "name": "USQualityCoreCareTeam",
   "title": "US Quality Core CareTeam",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -34,25 +34,23 @@
   "kind": "resource",
   "abstract": false,
   "type": "CareTeam",
-  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam|6.1.0",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam|9.0.0",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
+        "id": "CareTeam",
+        "path": "CareTeam"
+      },
+      {
         "id": "CareTeam.subject",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "CareTeam.subject",
-        "short": "(USCDI) Who the care team is for.",
+        "short": "Who the care team is for.",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
             ]
           }
         ]
@@ -61,54 +59,56 @@
         "id": "CareTeam.participant",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "CareTeam.participant",
-        "short": "(USCDI+ Quality) (USCDI) Members of the team"
+        "short": "(USCDI+ Quality) Members of the team"
       },
       {
         "id": "CareTeam.participant.role",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "CareTeam.participant.role",
-        "short": "(USCDI+ Quality) (USCDI) Type of involvement"
+        "short": "(USCDI+ Quality) Type of involvement",
+        "base": {
+          "path": "CareTeam.participant.role",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
       },
       {
         "id": "CareTeam.participant.member",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "CareTeam.participant.member",
-        "short": "(USCDI+ Quality) (USCDI) Who is involved",
+        "short": "(USCDI+ Quality) Who is involved",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careteam",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson"
             ]
           }
         ]

@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-goal",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-goal",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-goal",
+  "version": "1.0.0",
   "name": "USQualityCoreGoal",
   "title": "US Quality Core Goal",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -51,7 +51,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Goal",
-  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal|6.1.0",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal|9.0.0",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -59,49 +59,33 @@
         "id": "Goal.description",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Goal.description",
-        "short": "(USCDI+ Quality) (USCDI) Code or text describing goal"
+        "short": "(USCDI+ Quality) Code or text describing goal"
       },
       {
         "id": "Goal.subject",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Goal.subject",
-        "short": "(USCDI) Who this goal is intended for",
-        "comment": "Should include us-quality-core-organization, but the base profile only allows USCore-Patient derivatives.",
+        "short": "Who this goal is intended for",
+        "comment": "Should include US Quality Core Organization, but the base profile only allows USCore-Patient derivatives.",
         "min": 1,
         "max": "1",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
             ]
           }
         ]
       },
       {
         "id": "Goal.start[x]",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "Goal.start[x]",
-        "short": "(USCDI) When goal pursuit begins",
+        "short": "When goal pursuit begins",
         "definition": "The date or event after which the goal should begin being pursued.",
         "requirements": "Goals can be established prior to there being an intention to start pursuing them; e.g. Goals for post-surgical recovery established prior to surgery.",
         "min": 0,
@@ -137,16 +121,12 @@
         "id": "Goal.target",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Goal.target",
-        "short": "(USCDI+ Quality) (USCDI) Target outcome for the goal"
+        "short": "(USCDI+ Quality) Target outcome for the goal"
       }
     ]
   },

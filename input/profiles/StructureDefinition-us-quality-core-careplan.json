@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-careplan",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careplan",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careplan",
+  "version": "1.0.0",
   "name": "USQualityCoreCarePlan",
   "title": "US Quality Core CarePlan",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -34,44 +34,38 @@
   "kind": "resource",
   "abstract": false,
   "type": "CarePlan",
-  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan|6.1.0",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan|9.0.0",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
+        "id": "CarePlan",
+        "path": "CarePlan"
+      },
+      {
         "id": "CarePlan.text",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "CarePlan.text",
-        "short": "(USCDI+ Quality) (USCDI) Text summary of the resource, for human interpretation"
+        "short": "(USCDI+ Quality) Text summary of the resource, for human interpretation"
       },
       {
         "id": "CarePlan.category",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "CarePlan.category",
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "value",
               "path": "$this"
             }
           ],
           "rules": "open"
         },
-        "short": "(USCDI) Type of plan",
+        "short": "Type of plan",
         "definition": "Type of plan.",
         "comment": "There may be multiple axes of categorization and one plan may serve multiple purposes.  In some cases, this may be redundant with references to CarePlan.concern.",
         "requirements": "Identifies what \"kind\" of plan this is to support differentiation between multiple co-existing plans; e.g. \"Home health\", \"psychiatric\", \"asthma\", \"disease management\", \"wellness plan\", etc.",
@@ -103,15 +97,9 @@
       },
       {
         "id": "CarePlan.category:AssessPlan",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "CarePlan.category",
         "sliceName": "AssessPlan",
-        "short": "(USCDI) Type of plan",
+        "short": "Type of plan",
         "definition": "Type of plan.",
         "comment": "There may be multiple axes of categorization and one plan may serve multiple purposes.  In some cases, this may be redundant with references to CarePlan.concern.",
         "requirements": "Identifies what \"kind\" of plan this is to support differentiation between multiple co-existing plans; e.g. \"Home health\", \"psychiatric\", \"asthma\", \"disease management\", \"wellness plan\", etc.",
@@ -151,14 +139,8 @@
       },
       {
         "id": "CarePlan.subject",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "CarePlan.subject",
-        "short": "(USCDI) Who the care plan is for.",
+        "short": "Who the care plan is for.",
         "definition": "Who care plan is for.",
         "requirements": "Identifies the patient or group whose intended care is described by the plan.",
         "min": 1,
@@ -167,7 +149,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
             ]
           }
         ]

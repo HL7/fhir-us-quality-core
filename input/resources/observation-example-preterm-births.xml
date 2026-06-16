@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Observation xmlns="http://hl7.org/fhir">
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="example-preterm-births"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation"/>
   </meta>
   <status value="final"/>
   <category>
@@ -34,5 +34,5 @@
     <reference value= "Practitioner/example"/>
     <display value="Practitioner"/>
   </performer>
-  <valueInteger value="0"/>
+  <valueInteger value="0"/> 
 </Observation>

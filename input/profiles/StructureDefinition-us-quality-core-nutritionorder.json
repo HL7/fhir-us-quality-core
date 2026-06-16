@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-nutritionorder",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-nutritionorder",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-nutritionorder",
+  "version": "1.0.0",
   "name": "USQualityCoreNutritionOrder",
   "title": "US Quality Core NutritionOrder",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -49,11 +49,6 @@
         "mustSupport": false
       },
       {
-        "id": "NutritionOrder.intent",
-        "path": "NutritionOrder.intent",
-        "short": "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
-      },
-      {
         "id": "NutritionOrder.patient",
         "path": "NutritionOrder.patient",
         "short": "The person who requires the diet, formula or nutritional supplement",
@@ -63,8 +58,20 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
             ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.oralDiet.type",
+        "path": "NutritionOrder.oralDiet.type",
+        "short": "Oral diet components",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
           }
         ]
       }

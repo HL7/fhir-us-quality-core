@@ -18,7 +18,7 @@ USCDI+ Quality includes [two data element lists](https://uscdiplus.healthit.gov/
 
 **USCDI+ Quality V1** defines high-level data requirements, and the **US Quality Core Implementation Guide** provides detailed FHIR-based profiles to meet those requirements. This guidance is necessary to achieve interoperability and consistency in quality-related healthcare data exchange in the United States, given the flexibility of the FHIR standard in representing this data.
 
-The US Quality Core Implementation Guide v0.5.0 is derived from the [QI-Core 6.0.0](https://hl7.org/fhir/us/qicore/STU6/), adopting its profiles and annotating them with specific requirements for USCDI+ Quality V1. It also defines specific expectations through [CapabilityStatements](capability-statements.html) for accessing the data over a standard FHIR RESTful API.
+The US Quality Core Implementation Guide v1.0.0 defines profiles and specific requirements for USCDI+ Quality V1. It also defines specific expectations through [CapabilityStatements](capability-statements.html) for accessing the data over a standard FHIR RESTful API.
 
 Note that:
 
@@ -27,9 +27,21 @@ Note that:
 
 Additionally, this implementation guide's conformance requirements with respect to USCDI+ Quality V1 are limited to:
 
-- Data elements that align with existing QI-Core 6.0.0 or US Core 6.1.0 profiles, and
-- Data elements used by the 2026 draft CMS eCQMs, which are based on QI-Core 6.0.0.
+- Data elements that align with existing US Quality Core or US Core profiles, and
+- Data elements used by the 2026 draft CMS eCQMs.
 
 Data elements that do not clearly fit within these limitations above are out of scope for this version's conformance requirements.  The tables included in [section 3.1.2](uscdiquality.html#in-scope-uscdi-quality-v1-data-elements) and [section 3.1.3](uscdiquality.html#out-of-scope-uscdi-quality-v1-data-elements) below describe which USCDI+ Quality V1 data elements are in scope and which are out of scope for conformance requirements of this version of the guide.
 
-{% include mapping-table.md %}
+### In-Scope USCDI+ Quality V1 Data Elements
+{: #in-scope-uscdi-quality-v1-data-elements}
+
+### Summary List of In-Scope Profiles for Conformance
+{: #summary-list-of-in-scope-profiles-for-conformance}
+
+### Out-of-Scope USCDI+ Quality V1 Data Elements
+{: #out-of-scope-uscdi-quality-v1-data-elements}
+
+### Summary List of Out-of-Scope Profiles for Conformance
+{: #summary-list-of-out-of-scope-profiles-for-conformance}
+
+todo mapping table

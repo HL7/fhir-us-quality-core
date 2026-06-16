@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-medication",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medication",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medication",
+  "version": "1.0.0",
   "name": "USQualityCoreMedication",
   "title": "US Quality Core Medication",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -34,7 +34,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Medication",
-  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|6.1.0",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|9.0.0",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -42,16 +42,12 @@
         "id": "Medication.code",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Medication.code",
-        "short": "(USCDI+ Quality) (USCDI) Codes that identify this medication"
+        "short": "(USCDI+ Quality) Codes that identify this medication"
       },
       {
         "id": "Medication.manufacturer",
@@ -60,7 +56,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization"
             ]
           }
         ],
@@ -76,8 +72,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-substance",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medication"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-substance",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medication"
             ]
           }
         ],

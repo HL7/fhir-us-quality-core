@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Immunization xmlns="http://hl7.org/fhir">
+<Immunization xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="negation-example"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-immunizationnotdone"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationnotdone"/>
   </meta>
   <status value="not-done"/>
   <statusReason>
@@ -13,10 +13,10 @@
     </coding>
   </statusReason>
   <vaccineCode>
-    <extension url="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet">
-      <valueCanonical value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.526.3.1254"/>
+    <extension url="http://hl7.org/fhir/StructureDefinition/codeOptions">
+      <valueCanonical value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.196.11.1212"/>
     </extension>
-    <text value="Not Done Value Set: Influenza vaccine"/>
+    <text value="Value Set: DTaP Vaccine"/>
   </vaccineCode>
   <patient>
     <reference value="Patient/example"/>

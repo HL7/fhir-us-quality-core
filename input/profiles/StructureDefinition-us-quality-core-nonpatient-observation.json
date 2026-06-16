@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-nonpatient-observation",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-nonpatient-observation",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-nonpatient-observation",
+  "version": "1.0.0",
   "name": "USQualityCoreNonPatientObservation",
   "title": "US Quality Core NonPatient Observation",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -78,11 +78,7 @@
       {
         "id": "Observation.status",
         "path": "Observation.status",
-        "short": "registered | preliminary | final | amended | corrected | entered-in-error | unknown",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-non-negative-observation-status"
-        }
+        "short": "registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
       },
       {
         "id": "Observation.category",
@@ -104,8 +100,8 @@
       {
         "id": "Observation.subject",
         "path": "Observation.subject",
-        "short": "The device/location/implantable device the observation is about",
-        "definition": "The device/location/implantable device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation.",
+        "short": "The device/location the observation is about",
+        "definition": "The device/location this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation.",
         "comment": "One would expect this element to be a cardinality of 1..1.",
         "min": 1,
         "max": "1",
@@ -118,9 +114,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-device",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-location",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device|6.1.0"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location"
             ]
           }
         ]
@@ -167,12 +162,12 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitioner",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-practitionerrole",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-careteam",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careteam",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson"
             ]
           }
         ]
@@ -240,28 +235,6 @@
         "isSummary": true
       },
       {
-        "id": "Observation.value[x].valueCodeableConcept",
-        "path": "Observation.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "short": "actual | potential",
-        "base": {
-          "path": "Observation.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isModifier": false,
-        "binding": {
-          "strength": "preferred",
-          "description": "SNOMED CT for coded results",
-          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-value-codes"
-        }
-      },
-      {
         "id": "Observation.interpretation",
         "path": "Observation.interpretation",
         "short": "High, low, normal, etc.",
@@ -314,10 +287,10 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-simple-observation",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-questionnaireresponse",
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-imagingstudy",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|6.1.0",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse",
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0",
               "http://hl7.org/fhir/StructureDefinition/Media",
               "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
             ]

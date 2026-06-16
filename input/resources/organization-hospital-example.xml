@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Organization xmlns="http://hl7.org/fhir">
+<Organization xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="example1"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-organization"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization"/>
   </meta>
   <identifier>
     <use value="temp"/>
@@ -17,6 +17,7 @@
       <display value="Healthcare Provider"/>
     </coding>
   </type>
+<!--    Hospital itself    -->
   <name value="HENDRICKS COUNTY HOSPITAL"/>
   <telecom>
     <system value="phone"/>

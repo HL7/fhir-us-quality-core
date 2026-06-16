@@ -10,7 +10,7 @@
 
 The US Quality Core Implementation Guide provides guidance for implementing
 [USCDI+ Quality](https://uscdiplus.healthit.gov/uscdiplus) in FHIR to support consistent, interoperable representation and exchange of quality data for quality measurement and reporting programs. It
-defines profiles that derive from and extend the base [FHIR version R4](http://hl7.org/fhir/R4/index.html) resources and [US Core](https://hl7.org/fhir/us/core/STU6.1/) profiles to provide a common foundation for implementing, sharing, and evaluating quality-related knowledge artifacts across quality improvement efforts. It also defines basic system capability expectations for exchanging data to support digital quality measurement and reporting over standard FHIR interfaces.
+defines profiles that derive from and extend the base [FHIR version R4](http://hl7.org/fhir/R4/index.html) resources and [US Core](https://hl7.org/fhir/us/core/STU9/) profiles to provide a common foundation for implementing, sharing, and evaluating quality-related knowledge artifacts across quality improvement efforts. It also defines basic system capability expectations for exchanging data to support digital quality measurement and reporting over standard FHIR interfaces.
 
 ### Background
 
@@ -20,11 +20,11 @@ reporting. [ONC](http://www.healthit.gov/newsroom/about-onc) has established the
 and settings over time, with a transparent process for proposing and considering additional data elements in future versions. This guide specifies how to represent and exchange the USCDI+ Quality data elements as needed to support digital quality measurement and reporting programs, including [electronic clinical quality measures (eCQMs)](https://ecqi.healthit.gov/glossary/electronic-clinical-quality-measure-ecqm) used in certain CMS
 quality reporting programs, as well as providing guidance on additional data elements used in other quality reporting programs. For more detail on USCDI+ Quality and its scope, see the [USCDI+ Quality](uscdiquality.html) page in this guide.
 
-This guide descends directly from the [Quality Improvement Core (QI-Core) Implementation Guide](https://hl7.org/fhir/us/qicore/STU6/), which aligns with the standards adopted for the ONC Health IT Certification Program, including FHIR, US Core, and USCDI. The initial version of this guide targets [USCDI+ Quality V1](https://uscdiplus.healthit.gov/uscdiplus?id=uscdi_record&table=x_g_sshh_uscdi_sub_domain&sys_id=07ff90701b72f25049edc957624bcbf8&view=sp) data elements. It is based on the [QI-Core Implementation Guide v6.0.0](https://hl7.org/fhir/us/qicore/STU6/) (QI-Core 6.0.0), which aligns with the [US Core Implementation Guide v6.1.0](https://hl7.org/fhir/us/core/STU6.1/) (US Core 6.1.0) and [USCDI v3.1](https://isp.healthit.gov/united-states-core-data-interoperability-uscdi#uscdi-v3-1).[^1]
+This guide descends directly from the [Quality Improvement Core (QI-Core) Implementation Guide](https://hl7.org/fhir/us/qicore/STU6/), which aligns with the standards adopted for the ONC Health IT Certification Program, including FHIR, US Core, and USCDI. The initial version of this guide targets [USCDI+ Quality V1](https://uscdiplus.healthit.gov/uscdiplus?id=uscdi_record&table=x_g_sshh_uscdi_sub_domain&sys_id=07ff90701b72f25049edc957624bcbf8&view=sp) data elements. It is based on the [QI-Core Implementation Guide v8.0.0-ballot](https://hl7.org/fhir/us/qicore/2025Sep/) (QI-Core 8.0.0-ballot), which aligns with the [US Core Implementation Guide v8.0.0](https://hl7.org/fhir/us/core/STU8/) (US Core 8.0.0) and [USCDI v3.1](https://isp.healthit.gov/united-states-core-data-interoperability-uscdi#uscdi-v3-1). This guide updates that foundation to build on [US Core 9.0.0](https://hl7.org/fhir/us/core/STU9/).[^1]
 
 [^1]: Consistent with Executive Order 14168 the Sex, Sexual Orientation, and Gender Identity, data elements have been removed or updated in the Patient Demographics/Information Data Class.
 
-This guide extends QI-Core by providing USCDI+ Quality guidance within profiles through the use of flags for [USCDI+ Quality relevant elements](uscdiquality.html). It also introduces [CapabilityStatements](capability-statements.html) that define specific expectations for actors exchanging US Quality Core data over standard RESTful FHIR interfaces. The technical content in this initial version of US Quality Core is intended to be backward compatible with QI-Core 6.0.0. Details of the specific changes made from QI-Core 6.0.0 are provided in the [Change Log](changes.html).
+This guide extends QI-Core by providing USCDI+ Quality guidance within profiles through the use of flags for [USCDI+ Quality relevant elements](uscdiquality.html). It also introduces [CapabilityStatements](capability-statements.html) that define specific expectations for actors exchanging US Quality Core data over standard RESTful FHIR interfaces. The technical content in this initial version of US Quality Core is intended to be backward compatible with QI-Core 8.0.0. Details of the specific changes made from QI-Core 8.0.0 are provided in the [Change Log](changes.html).
 
 {% include img-landscape.html img="context-diagram.png" caption="US Quality Core defines how to represent and exchange USCDI+ Quality data elements in FHIR, building on the US Core Implementation Guide and USCDI." %}
 
@@ -35,7 +35,7 @@ This guide is divided into several pages, which are listed at the top of each pa
 
 * [Home](index.html): Overview of US Quality Core, including its background and scope
 * [Conformance](conformance.html): The set of rules to claim conformance to this implementation guide
-    * [General Requirements](general-requirements.html): Requirements common to all profiles used in this guide
+    * [General Requirements](us-quality-core-general-requirements.html): Requirements common to all profiles used in this guide
     * [Must Support](must-support.html): Expectations for Must Support and USCDI+ Quality flagged elements
     * [Security](security.html): General security requirements
 * [Guidance](guidance.html): Best practices and how to use the profiles defined in this guide
@@ -50,34 +50,29 @@ This guide is divided into several pages, which are listed at the top of each pa
     * [Extensions](extensions.html): Extensions defined as part of US Quality Core
     * [Terminology](terminology.html): US Quality Core ValueSets and Code Systems defined for the profiles
     * [Examples](examples.html): Examples used in this guide
-* [CQL Artifacts and Patterns (Informational)](cql-artifacts.html): The US Quality Core model information (ModelInfo) and document patterns for use with US Quality Core. This content is informational and is not part of the conformance requirements of this guide.
-    * [US Quality Core ModelInfo](modelinfo.html): US Quality Core model information to support implementation using Clinical Quality Language (CQL)
-    * [US Quality Core Patterns](patterns.html): Patterns of usage for US Quality Core applications.
 * [Downloads](downloads.html): Downloadable artifacts
-* [Change Log](changes.html): Change Log that lists changes from QI-Core 6.0.0 to this guide. 
+* [Change Log](changes.html): Change Log that lists changes from QI-Core 8.0.0 to this guide.
 
 ### Scope
 
 The US Quality Core IG provides requirements and guidance for using FHIR to implement the USCDI+ Quality data elements. The scope of the conformance expectations of this version of the guide is limited to the representation and exchange of data described in USCDI+ Quality V1. Note that not all USCDI+ Quality V1 data elements are in scope for this version's conformance requirements. See the [In-Scope USCDI+ Quality Data Elements](uscdiquality.html#in-scope-uscdi-quality-v1-data-elements) section for a complete list of the USCDI+ Quality V1 data elements that are in scope for the conformance requirements of this guide.
 
-The scope of this guide is limited to the published content of [QI-Core 6.0.0](https://hl7.org/fhir/us/qicore/STU6/) and [US Core 6.1.0](https://hl7.org/fhir/us/core/STU6.1/).
+The scope of this guide is limited to the published content of [QI-Core 8.0.0](https://hl7.org/fhir/us/qicore/2025Sep/) and [US Core 9.0.0](https://hl7.org/fhir/us/core/STU9/).
 
-USCDI+ Quality V1 data elements that are not readily represented in the profiles provided by QI-Core 6.0.0 or US Core 6.1.0 are outside the scope of this version of the guide. Implementers are encouraged to provide feedback for inclusion in future versions of this guide.
+USCDI+ Quality V1 data elements that are not readily represented in the profiles provided by QI-Core 8.0.0-ballot or US Core 9.0.0 are outside the scope of this version of the guide. Implementers are encouraged to provide feedback for inclusion in future versions of this guide.
 
-This guide retains all artifacts provided by QI-Core 6.0.0, with limited alterations described below, to support the adoption by existing QI-Core implementers. The US Quality Core profiles adhere to a naming convention that uses the prefix "US Quality Core". For example, the US Quality Core profile of Patient is named US Quality Core Patient.
+This guide retains all artifacts provided by QI-Core 8.0.0-ballot, with limited alterations described below, to support the adoption by existing QI-Core implementers. The US Quality Core profiles adhere to a naming convention that uses the prefix "US Quality Core". For example, the US Quality Core profile of Patient is named US Quality Core Patient.
 
 These limited FHIR artifact changes made in this guide include:
 * Updated the prefix of FHIR profile names from QI-Core to US Quality Core.
 * Updated logical id of the resources from 'qicore' to 'us-quality-core'.
 * Reintroduced the Present on Admission extension for Encounter.diagnosis.
-* Removed 'QI-Core' flags on FHIR elements. This guide uses 'USCDI+ Quality' flags to indicate which elements must be supported to meet [USCDI+ Quality conformance requirements](general-requirements.html#summary-of-conformance-requirements).
-  * In cases where a 'QI-Core' flagged FHIR element within a QI-Core 6.0.0 profile does not map to a USCDI+ Quality data element, the FHIR element is not flagged and is therefore not part of the conformance requirements of this guide.
-
-Note that the informational ModelInfo file that supports implementations using CQL has been updated to reflect the changes made to US Quality Core. See [CQL Artifacts and Patterns (Informational)](cql-artifacts.html) for details; this content is not part of the conformance requirements of this guide.
+* Removed 'QI-Core' flags on FHIR elements. This guide uses 'USCDI+ Quality' flags to indicate which elements must be supported to meet [USCDI+ Quality conformance requirements](us-quality-core-general-requirements.html#summary-of-conformance-requirements).
+  * In cases where a 'QI-Core' flagged FHIR element within a QI-Core 8.0.0-ballot profile does not map to a USCDI+ Quality data element, the FHIR element is not flagged and is therefore not part of the conformance requirements of this guide.
 
 ### Acknowledgements
 
-Content in this initial version of the US Quality Core is primarily based on the QI-Core 6.0.0, as managed by the [HL7 Clinical Quality Information Workgroup](http://www.hl7.org/Special/committees/cqi/index.cfm) and the supporting Quality Improvement (QI) community.
+Content in this initial version of the US Quality Core is primarily based on the QI-Core 8.0.0-ballot, as managed by the [HL7 Clinical Quality Information Workgroup](http://www.hl7.org/Special/committees/cqi/index.cfm) and the supporting Quality Improvement (QI) community.
 
 ---
 Footnotes:

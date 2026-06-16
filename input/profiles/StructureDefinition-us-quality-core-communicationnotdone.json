@@ -1,25 +1,25 @@
 {
   "id": "us-quality-core-communicationnotdone",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-communicationnotdone",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-communicationnotdone",
+  "version": "1.0.0",
   "name": "USQualityCoreCommunicationNotDone",
   "title": "US Quality Core Communication Not Done",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
   ],
-  "description": "Profile of CommunicationNotDone for decision support/quality metrics. Defines the core set of elements and extensions for quality rule and measure authors.",
+  "description": "Negation profile of Communication for decision support/quality metrics. Indicates that the communication was not performed for a reason.",
   "jurisdiction": [
     {
       "coding": [
@@ -34,35 +34,27 @@
   "kind": "resource",
   "abstract": false,
   "type": "Communication",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Communication",
+  "baseDefinition": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-communication",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
         "id": "Communication",
         "path": "Communication",
-        "constraint": [
-          {
-            "key": "cnd-1",
-            "severity": "error",
-            "human": "to indicate what communication was not carried out, either at least one coding in the topic or a notDoneValueSet extension shall be provided",
-            "expression": "topic.extension('http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet').exists() xor topic.coding.exists()"
-          }
-        ],
         "mustSupport": false
       },
       {
-        "id": "Communication.extension:recorded",
+        "id": "Communication.extension:event-recorded",
         "path": "Communication.extension",
-        "sliceName": "recorded",
-        "short": "Extension",
+        "sliceName": "event-recorded",
+        "short": "Captures the recorded date of the communication",
         "min": 1,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded"
+              "http://hl7.org/fhir/StructureDefinition/event-recorded"
             ]
           }
         ]
@@ -70,7 +62,7 @@
       {
         "id": "Communication.status",
         "path": "Communication.status",
-        "short": "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown",
+        "short": "not-done",
         "min": 1,
         "max": "1",
         "type": [
@@ -88,59 +80,8 @@
         "max": "1",
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-negation-reason"
+          "valueSet": "http://hl7.org/fhir/us/quality-core/ValueSet/us-quality-core-negation-reason"
         }
-      },
-      {
-        "id": "Communication.subject",
-        "path": "Communication.subject",
-        "short": "Focus of message",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient",
-              "http://hl7.org/fhir/StructureDefinition/Group"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Communication.topic",
-        "path": "Communication.topic",
-        "short": "Description of the purpose/content",
-        "min": 1,
-        "max": "1",
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "CommunicationTopic"
-            }
-          ],
-          "strength": "preferred",
-          "description": "Codes describing the purpose or content of the communication.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/communication-topic"
-        }
-      },
-      {
-        "id": "Communication.topic.extension:notDoneValueSet",
-        "path": "Communication.topic.extension",
-        "sliceName": "notDoneValueSet",
-        "short": "Url of a value set of activities not requested or performed",
-        "definition": "A logical reference (e.g. a reference to ValueSet.url) to a value set/version that identifies a set of possible coded values representing activities that were not requested, ordered, or performed.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-notDoneValueSet"
-            ]
-          }
-        ]
       }
     ]
   },

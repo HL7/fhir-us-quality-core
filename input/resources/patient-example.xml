@@ -1,58 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Patient xmlns="http://hl7.org/fhir">
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="example"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"/>
   </meta>
-  <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race">
-    <extension url="ombCategory">
-      <valueCoding>
-        <system value="urn:oid:2.16.840.1.113883.6.238"/>
-        <code value="2106-3"/>
-        <display value="White"/>
-      </valueCoding>
-    </extension>
-    <extension url="text">
-      <valueString value="White"/>
-    </extension>
-  </extension>
-  <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity">
-    <extension url="ombCategory">
-      <valueCoding>
-        <system value="urn:oid:2.16.840.1.113883.6.238"/>
-        <code value="2186-5"/>
-        <display value="Not Hispanic or Latino"/>
-      </valueCoding>
-    </extension>
-    <extension url="text">
-      <valueString value="Not Hispanic or Latino"/>
-    </extension>
-  </extension>
-  <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation">
-    <extension url="tribalAffiliation">
-      <valueCodeableConcept>
-        <coding>
-          <system value="http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS"/>
-          <code value="239"/>
-          <display value="Reno-Sparks Indian Colony, Nevada"/>
-        </coding>
-        <text value="Reno-Sparks Indian Colony, Nevada"/>
-      </valueCodeableConcept>
-    </extension>
-    <extension url="isEnrolled">
-      <valueBoolean value="false"/>
-    </extension>
-  </extension>
+  <!--<extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race">-->
+    <!--<extension url="ombCategory">-->
+      <!--<valueCoding>-->
+        <!--<system value="urn:oid:2.16.840.1.113883.6.238"/>-->
+        <!--<code value="2106-3"/>-->
+        <!--<display value="White"/>-->
+      <!--</valueCoding>-->
+    <!--</extension>-->
+    <!--<extension url="ombCategory">-->
+      <!--<valueCoding>-->
+        <!--<system value="urn:oid:2.16.840.1.113883.6.238"/>-->
+        <!--<code value="1002-5"/>-->
+        <!--<display value="American Indian or Alaska Native"/>-->
+      <!--</valueCoding>-->
+    <!--</extension>-->
+    <!--<extension url="ombCategory">-->
+      <!--<valueCoding>-->
+        <!--<system value="urn:oid:2.16.840.1.113883.6.238"/>-->
+        <!--<code value="2028-9"/>-->
+        <!--<display value="Asian"/>-->
+      <!--</valueCoding>-->
+    <!--</extension>-->
+    <!--<extension url="detailed">-->
+      <!--<valueCoding>-->
+        <!--<system value="urn:oid:2.16.840.1.113883.6.238"/>-->
+        <!--<code value="1586-7"/>-->
+        <!--<display value="Shoshone"/>-->
+      <!--</valueCoding>-->
+    <!--</extension>-->
+    <!--<extension url="detailed">-->
+      <!--<valueCoding>-->
+        <!--<system value="urn:oid:2.16.840.1.113883.6.238"/>-->
+        <!--<code value="2036-2"/>-->
+        <!--<display value="Filipino"/>-->
+      <!--</valueCoding>-->
+    <!--</extension>-->
+    <!--<extension url="text">-->
+      <!--<valueString value="Mixed"/>-->
+    <!--</extension>-->
+  <!--</extension>-->
+  <!--<extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity">-->
+    <!--<extension url="ombCategory">-->
+      <!--<valueCoding>-->
+        <!--<system value="urn:oid:2.16.840.1.113883.6.238"/>-->
+        <!--<code value="2135-2"/>-->
+        <!--<display value="Hispanic or Latino"/>-->
+      <!--</valueCoding>-->
+    <!--</extension>-->
+    <!--<extension url="detailed">-->
+      <!--<valueCoding>-->
+        <!--<system value="urn:oid:2.16.840.1.113883.6.238"/>-->
+        <!--<code value="2184-0"/>-->
+        <!--<display value="Dominican"/>-->
+      <!--</valueCoding>-->
+    <!--</extension>-->
+    <!--<extension url="detailed">-->
+      <!--<valueCoding>-->
+        <!--<system value="urn:oid:2.16.840.1.113883.6.238"/>-->
+        <!--<code value="2148-5"/>-->
+        <!--<display value="Mexican"/>-->
+      <!--</valueCoding>-->
+    <!--</extension>-->
+    <!--<extension url="text">-->
+      <!--<valueString value="Hispanic or Latino"/>-->
+    <!--</extension>-->
+  <!--</extension>-->
+  <!--    MRN assigned by ACME healthcare on 6-May 2001    -->
   <identifier>
     <use value="usual"/>
     <type>
       <coding>
         <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-        <code value="SS"/>
+        <code value="MR"/>
       </coding>
     </type>
-    <system value="http://hl7.org/fhir/sid/us-ssn"/>
-    <value value="999123456"/>
+    <system value="http://example.org/patient/identifiers"/>
+    <value value="12345"/>
     <period>
       <start value="2001-05-06"/>
     </period>
@@ -61,12 +89,12 @@
     </assigner>
   </identifier>
   <active value="true"/>
+  <!--    Peter James Chalmers, but called "Jim"    -->
   <name>
     <use value="official"/>
     <family value="Chalmers"/>
     <given value="Peter"/>
     <given value="James"/>
-    <suffix value="Jr."/>
   </name>
   <name>
     <use value="usual"/>
@@ -74,6 +102,8 @@
     <given value="Jim"/>
   </name>
   <name>
+    <!--   Maiden names apply for anyone whose name changes as a result of marriage - irrespective
+     of gender   -->
     <use value="maiden"/>
     <family value="Windsor"/>
     <given value="Peter"/>
@@ -82,6 +112,10 @@
       <end value="2002"/>
     </period>
   </name>
+  <!--    home communication details aren't known    -->
+  <!--<telecom>
+    <use value="home"/>
+  </telecom>-->
   <telecom>
     <system value="phone"/>
     <value value="(03) 5555 6473"/>
@@ -102,6 +136,7 @@
       <end value="2014"/>
     </period>
   </telecom>
+  <!--    use FHIR code system for male / female    -->
   <gender value="male"/>
   <birthDate value="1974-12-25">
     <extension url="http://hl7.org/fhir/StructureDefinition/patient-birthTime">
@@ -131,6 +166,7 @@
     </relationship>
     <name>
       <family value="du Marché">
+        <!--    the "du" part is a family name prefix (VV in iso 21090)    -->
         <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
           <valueString value="VV"/>
         </extension>
@@ -155,19 +191,19 @@
     </address>
     <gender value="female"/>
     <period>
+      <!--    The contact relationship started in 2012    -->
       <start value="2012"/>
     </period>
   </contact>
-  <communication>
-    <language>
-      <coding>
-        <system value="urn:ietf:bcp:47"/>
-        <code value="en"/>
-        <display value="English"/>
-      </coding>
-      <text value="English"/>
-    </language>
-  </communication>
+  <!--<communication>-->
+    <!--<language>-->
+      <!--<coding>-->
+        <!--<system value="urn:ietf:bcp:47"/>-->
+        <!--<code value="fr"/>-->
+        <!--<display value="French"/>-->
+      <!--</coding>-->
+    <!--</language>-->
+  <!--</communication>-->
   <managingOrganization>
     <reference value="Organization/example"/>
   </managingOrganization>

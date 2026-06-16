@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Procedure xmlns="http://hl7.org/fhir">
+<Procedure xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="example"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-procedure"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure"/>
   </meta>
-  <extension url="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-recorded">
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Procedure.recorded">
     <valueDateTime value="2013-04-05T09:35:00-04:00"/>
   </extension>
-  <partOf>
-    <display value="Inpatient appendicitis surgical care"/>
-  </partOf>
   <status value="completed"/>
-  <statusReason>
-    <text value="Appendectomy completed after surgical confirmation of acute appendicitis"/>
-  </statusReason>
   <code>
     <coding>
       <system value="http://snomed.info/sct"/>
@@ -45,9 +39,6 @@
       <display value="Abdominal pain (finding)"/>
     </coding>
   </reasonCode>
-  <reasonReference>
-    <reference value="Condition/appendicitis-example"/>
-  </reasonReference>
   <bodySite>
       <coding>
         <system value="http://snomed.info/sct"/>

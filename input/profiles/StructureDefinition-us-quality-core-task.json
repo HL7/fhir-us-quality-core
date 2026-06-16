@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-task",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-task",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-task",
+  "version": "1.0.0",
   "name": "USQualityCoreTask",
   "title": "US Quality Core Task",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -39,17 +39,24 @@
   "differential": {
     "element": [
       {
-        "id": "Task.identifier",
-        "path": "Task.identifier",
-        "short": "Task Instance Identifier",
-        "min": 1,
-        "max": "*"
+        "id": "Task",
+        "path": "Task",
+        "constraint": [
+          {
+            "key": "tsk-1",
+            "severity": "error",
+            "human": "to indicate what, either at least one coding in the code or a codeOptions extension shall be provided",
+            "expression": "code.extension('http://hl7.org/fhir/StructureDefinition/codeOptions').exists() xor code.coding.exists()",
+            "xpath": "exists(f:extension)"
+          }
+        ],
+        "mustSupport": false
       },
       {
         "id": "Task.basedOn",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -60,24 +67,18 @@
         "id": "Task.status",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Task.status",
-        "short": "(USCDI+ Quality) draft​ | requested​ | received​ | accepted​ | ready​ | cancelled​ | in-progress​ | on-hold​ | failed​ | completed | entered-in-error",
-        "min": 1,
-        "max": "1",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://fhir.org/guides/onc/us-quality-core/ValueSet/us-quality-core-non-negative-task-status"
-        }
+        "short": "(USCDI+ Quality) draft​ | requested​ | received​ | accepted​ | rejected | ready​ | cancelled​ | in-progress​ | on-hold​ | failed​ | completed | entered-in-error"
       },
       {
         "id": "Task.statusReason",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -87,9 +88,7 @@
       {
         "id": "Task.intent",
         "path": "Task.intent",
-        "short": "unknown | proposal | plan | order | original-order | reflex-order | filler-order | instance",
-        "min": 1,
-        "max": "1"
+        "short": "unknown | proposal | plan | order | original-order | reflex-order | filler-order | instance"
       },
       {
         "id": "Task.priority",
@@ -102,7 +101,7 @@
         "id": "Task.code",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -110,6 +109,9 @@
         "short": "(USCDI+ Quality) Task Type",
         "min": 1,
         "max": "1",
+        "condition": [
+          "tsk-1"
+        ],
         "binding": {
           "strength": "preferred",
           "description": "Codes to identify what the task involves. These will typically be specific to a particular workflow",
@@ -117,26 +119,85 @@
         }
       },
       {
+        "id": "Task.code.extension:codeOptions",
+        "path": "Task.code.extension",
+        "sliceName": "codeOptions",
+        "short": "Url of a value set of candidate tasks",
+        "definition": "A logical reference (e.g. a reference to ValueSet.url) to a value set/version that identifies a set of possible coded values representing the task.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/codeOptions"
+            ]
+          }
+        ],
+        "condition": [
+          "tsk-1"
+        ]
+      },
+      {
         "id": "Task.focus",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Task.focus",
-        "short": "(USCDI+ Quality) What task is acting on"
+        "short": "(USCDI+ Quality) What task is acting on",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Resource"
+            ]
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Task.for",
+        "path": "Task.for",
+        "short": "Beneficiary of the Task",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
+            ]
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Task.encounter",
+        "path": "Task.encounter",
+        "short": "Healthcare event during which this task originated",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter"
+            ]
+          }
+        ],
+        "mustSupport": false
       },
       {
         "id": "Task.executionPeriod",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "Task.executionPeriod",
-        "short": "(USCDI+ Quality)",
+        "short": "(USCDI+ Quality) Start and end time of execution",
         "min": 1,
         "max": "1",
         "mustSupport": false
@@ -145,7 +206,7 @@
         "id": "Task.reasonCode",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],

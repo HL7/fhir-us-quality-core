@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-relatedperson",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-relatedperson",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson",
+  "version": "1.0.0",
   "name": "USQualityCoreRelatedPerson",
   "title": "US Quality Core RelatedPerson",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -34,37 +34,25 @@
   "kind": "resource",
   "abstract": false,
   "type": "RelatedPerson",
-  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson|6.1.0",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson|9.0.0",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
         "id": "RelatedPerson.active",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "RelatedPerson.active",
-        "short": "(USCDI) Whether this related person's record is in active use",
+        "short": "Whether this related person's record is in active use",
         "min": 1
       },
       {
         "id": "RelatedPerson.patient",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "RelatedPerson.patient",
-        "short": "(USCDI) The patient this person is related to",
+        "short": "The patient this person is related to",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
             ]
           }
         ]
@@ -73,16 +61,12 @@
         "id": "RelatedPerson.relationship",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "RelatedPerson.relationship",
-        "short": "(USCDI+ Quality) (USCDI) The nature of the relationship",
+        "short": "(USCDI+ Quality) The nature of the relationship",
         "condition": [
           "us-core-14"
         ]
@@ -91,16 +75,12 @@
         "id": "RelatedPerson.name",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "RelatedPerson.name",
-        "short": "(USCDI+ Quality) (USCDI) A name associated with the person",
+        "short": "(USCDI+ Quality) A name associated with the person",
         "condition": [
           "us-core-14"
         ]
@@ -109,16 +89,12 @@
         "id": "RelatedPerson.telecom",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "RelatedPerson.telecom",
-        "short": "(USCDI+ Quality) (USCDI) A contact detail for the person"
+        "short": "(USCDI+ Quality) A contact detail for the person"
       },
       {
         "id": "RelatedPerson.address",
@@ -128,12 +104,12 @@
             "valueBoolean": true
           },
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "RelatedPerson.address",
-        "short": "(USCDI+ Quality) (USCDI) Address where the related person can be contacted or visited"
+        "short": "(USCDI+ Quality) Address where the related person can be contacted or visited"
       }
     ]
   },

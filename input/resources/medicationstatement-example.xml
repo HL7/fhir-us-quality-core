@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MedicationStatement xmlns="http://hl7.org/fhir">
+<MedicationStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../FHIR-Spec/4.0.0/fhir-all-xsd/fhir-all.xsd">
   <id value="example"/>
   <meta>
-    <profile value="http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-medicationstatement"/>
+    <profile value="http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationstatement"/>
   </meta>
   <status value="active"/>
   <medicationReference>
@@ -11,11 +11,8 @@
   <subject>
     <reference value="Patient/example"/>
   </subject>
-  <effectivePeriod>
-    <start value="2015-03-26"/>
-    <end value="2015-03-30"/>
-  </effectivePeriod>
-  <dateAsserted value="2015-03-25T15:00:00-05:00"/>
+  <effectiveDateTime value="2012-06-01T14:30:00+14:00"/>
+  <dateAsserted value="2012-05-14T15:00:00+14:00"/>
   <informationSource>
     <reference value="Practitioner/example"/>
   </informationSource>
@@ -23,31 +20,26 @@
     <reference value="MedicationRequest/example"/>
   </derivedFrom>
   <dosage>
-    <text value="Infuse alemtuzumab 12 mg intravenously once daily for 5 days."/>
     <timing>
       <repeat>
-        <boundsPeriod>
-          <start value="2015-03-26"/>
-          <end value="2015-03-30"/>
-        </boundsPeriod>
-        <frequency value="1"/>
+        <frequency value="3"/>
         <period value="1"/>
         <periodUnit value="d"/>
       </repeat>
     </timing>
     <route>
       <coding>
-        <system value="http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"/>
-        <code value="IV"/>
-        <display value="Infusion, intravenous"/>
+        <system value="http://snomed.info/sct"/>
+        <code value="394899003"/>
+        <display value="oral administration of treatment"/>
       </coding>
     </route>
     <doseAndRate>
 		<doseQuantity>
-		  <value value="12"/>
-		  <unit value="mg"/>
+		  <value value="10"/>
+		  <unit value="ml"/>
 		  <system value="http://unitsofmeasure.org"/>
-		  <code value="mg"/>
+		  <code value="ml"/>
 		</doseQuantity>
     </doseAndRate>
   </dosage>

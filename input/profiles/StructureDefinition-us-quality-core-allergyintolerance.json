@@ -1,20 +1,20 @@
 {
   "id": "us-quality-core-allergyintolerance",
-  "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-allergyintolerance",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance",
+  "version": "1.0.0",
   "name": "USQualityCoreAllergyIntolerance",
   "title": "US Quality Core AllergyIntolerance",
   "status": "active",
   "experimental": false,
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
@@ -34,7 +34,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "AllergyIntolerance",
-  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance|6.1.0",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance|9.0.0",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -45,21 +45,21 @@
         "mustSupport": false
       },
       {
-        "id": "AllergyIntolerance.extension:resolutionAge",
-        "path": "AllergyIntolerance.extension",
-        "sliceName": "resolutionAge",
-        "definition": "The estimated patient age at which the allergy or intolerance resolved. Should be specified only if the status is resolved.",
-        "min": 0,
-        "max": "1",
+        "id": "AllergyIntolerance.clinicalStatus",
+        "path": "AllergyIntolerance.clinicalStatus",
+        "short": "active | inactive | resolved",
+        "definition": "The clinical status of the allergy or intolerance.",
+        "comment": "Refer to [discussion](http://hl7.org/fhir/R4/extensibility.html#Special-Case) if clincalStatus is missing data.\nThe data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity."
+      },
+      {
+        "id": "AllergyIntolerance.verificationStatus",
+        "path": "AllergyIntolerance.verificationStatus",
+        "short": "unconfirmed | confirmed | refuted | entered-in-error",
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/allergyintolerance-resolutionAge"
-            ]
+            "code": "CodeableConcept"
           }
-        ],
-        "mustSupport": false
+        ]
       },
       {
         "id": "AllergyIntolerance.type",
@@ -80,34 +80,30 @@
         "id": "AllergyIntolerance.code",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "AllergyIntolerance.code",
-        "short": "(USCDI+ Quality) (USCDI) Code that identifies the allergy or intolerance"
+        "short": "(USCDI+ Quality) Code that identifies the allergy or intolerance",
+        "alias": [
+          "Code"
+        ],
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
       },
       {
         "id": "AllergyIntolerance.patient",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
         "path": "AllergyIntolerance.patient",
-        "short": "(USCDI) Who the sensitivity is for",
-        "min": 1,
-        "max": "1",
+        "short": "Who the sensitivity is for",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/us-quality-core-patient"
+              "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
             ]
           }
         ]
@@ -116,7 +112,7 @@
         "id": "AllergyIntolerance.onset[x]",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -135,14 +131,13 @@
           {
             "code": "Range"
           }
-        ],
-        "mustSupport": false
+        ]
       },
       {
         "id": "AllergyIntolerance.recordedDate",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -158,7 +153,7 @@
         "id": "AllergyIntolerance.lastOccurrence",
         "extension": [
           {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
@@ -169,27 +164,12 @@
         "id": "AllergyIntolerance.reaction",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          },
-          {
-            "url": "http://fhir.org/guides/onc/us-quality-core/StructureDefinition/uscdiplusquality",
+            "url": "http://hl7.org/fhir/us/quality-core/StructureDefinition/uscdiplusquality",
             "valueBoolean": true
           }
         ],
         "path": "AllergyIntolerance.reaction",
-        "short": "(USCDI+ Quality) (USCDI) Adverse Reaction Events linked to exposure to substance"
-      },
-      {
-        "id": "AllergyIntolerance.reaction.manifestation",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-            "valueBoolean": true
-          }
-        ],
-        "path": "AllergyIntolerance.reaction.manifestation",
-        "short": "(USCDI) Clinical symptoms/signs associated with the Event"
+        "short": "(USCDI+ Quality) Adverse Reaction Events linked to exposure to substance"
       },
       {
         "id": "AllergyIntolerance.reaction.severity",

@@ -1,18 +1,18 @@
 {
   "id": "us-quality-core-condition-patient",
-  "url": "http://fhir.org/guides/onc/us-quality-core/SearchParameter/us-quality-core-condition-patient",
-  "version": "0.5.0",
+  "url": "http://hl7.org/fhir/us/quality-core/SearchParameter/us-quality-core-condition-patient",
+  "version": "1.0.0",
   "name": "UsQualityCoreConditionPatient",
   "status": "active",
-  "date": "2026-06-05",
-  "publisher": "Office of the National Coordinator for Health Information Technology (ONC)",
+  "date": "2026-06-30",
+  "publisher": "HL7 International / Clinical Quality Information",
   "contact": [
     {
-      "name": "Office of the National Coordinator for Health Information Technology (ONC)",
+      "name": "Clinical Quality Information WG",
       "telecom": [
         {
           "system": "url",
-          "value": "https://www.healthit.gov/feedback"
+          "value": "http://www.hl7.org/Special/committees/cqi"
         }
       ]
     }
