@@ -20,11 +20,9 @@ reporting. [ONC](http://www.healthit.gov/newsroom/about-onc) has established the
 and settings over time, with a transparent process for proposing and considering additional data elements in future versions. This guide specifies how to represent and exchange the USCDI+ Quality data elements as needed to support digital quality measurement and reporting programs, including [electronic clinical quality measures (eCQMs)](https://ecqi.healthit.gov/glossary/electronic-clinical-quality-measure-ecqm) used in certain CMS
 quality reporting programs, as well as providing guidance on additional data elements used in other quality reporting programs. For more detail on USCDI+ Quality and its scope, see the [USCDI+ Quality](uscdiquality.html) page in this guide.
 
-This guide descends directly from the [Quality Improvement Core (QI-Core) Implementation Guide](https://hl7.org/fhir/us/qicore/STU6/), which aligns with the standards adopted for the ONC Health IT Certification Program, including FHIR, US Core, and USCDI. The initial version of this guide targets [USCDI+ Quality V1](https://uscdiplus.healthit.gov/uscdiplus?id=uscdi_record&table=x_g_sshh_uscdi_sub_domain&sys_id=07ff90701b72f25049edc957624bcbf8&view=sp) data elements. It is based on the [QI-Core Implementation Guide v8.0.0-ballot](https://hl7.org/fhir/us/qicore/2025Sep/) (QI-Core 8.0.0-ballot), which aligns with the [US Core Implementation Guide v8.0.0](https://hl7.org/fhir/us/core/STU8/) (US Core 8.0.0) and [USCDI v3.1](https://isp.healthit.gov/united-states-core-data-interoperability-uscdi#uscdi-v3-1). This guide updates that foundation to build on [US Core 9.0.0](https://hl7.org/fhir/us/core/STU9/).[^1]
+US Quality Core began as a derivative of [Quality Improvement Core (QI-Core) STU6](https://hl7.org/fhir/us/qicore/STU6/) in the v0.5.0 draft. This v1.0.0 release targets USCDI+ Quality V2 data elements and is based on the [QI-Core Implementation Guide v8.0.0-ballot](https://hl7.org/fhir/us/qicore/2025Sep/) (QI-Core 8.0.0-ballot), which aligns with the [US Core Implementation Guide v8.0.0](https://hl7.org/fhir/us/core/STU8/) (US Core 8.0.0) and [USCDI v3.1](https://isp.healthit.gov/united-states-core-data-interoperability-uscdi#uscdi-v3-1). This guide updates that foundation to build directly on [US Core 9.0.0](https://hl7.org/fhir/us/core/STU9/).[^1]
 
 [^1]: Consistent with Executive Order 14168 the Sex, Sexual Orientation, and Gender Identity, data elements have been removed or updated in the Patient Demographics/Information Data Class.
-
-This guide extends QI-Core by providing USCDI+ Quality guidance within profiles through the use of flags for [USCDI+ Quality relevant elements](uscdiquality.html). It also introduces [CapabilityStatements](capability-statements.html) that define specific expectations for actors exchanging US Quality Core data over standard RESTful FHIR interfaces. The technical content in this initial version of US Quality Core is intended to be backward compatible with QI-Core 8.0.0. Details of the specific changes made from QI-Core 8.0.0 are provided in the [Change Log](changes.html).
 
 {% include img-landscape.html img="context-diagram.png" caption="US Quality Core defines how to represent and exchange USCDI+ Quality data elements in FHIR, building on the US Core Implementation Guide and USCDI." %}
 
@@ -51,13 +49,12 @@ This guide is divided into several pages, which are listed at the top of each pa
     * [Terminology](terminology.html): US Quality Core ValueSets and Code Systems defined for the profiles
     * [Examples](examples.html): Examples used in this guide
 * [Downloads](downloads.html): Downloadable artifacts
-* [Change Log](changes.html): Change Log that lists changes from QI-Core 8.0.0 to this guide.
+* [Change Log](changes.html): Change Log that lists changes to this guide across versions.
 
 ### Scope
 
 The US Quality Core IG provides requirements and guidance for using FHIR to implement the USCDI+ Quality data elements. The scope of the conformance expectations of this version of the guide is limited to the representation and exchange of data described in USCDI+ Quality V1. Note that not all USCDI+ Quality V1 data elements are in scope for this version's conformance requirements. See the [In-Scope USCDI+ Quality Data Elements](uscdiquality.html#in-scope-uscdi-quality-v1-data-elements) section for a complete list of the USCDI+ Quality V1 data elements that are in scope for the conformance requirements of this guide.
 
-The scope of this guide is limited to the published content of [QI-Core 8.0.0](https://hl7.org/fhir/us/qicore/2025Sep/) and [US Core 9.0.0](https://hl7.org/fhir/us/core/STU9/).
 
 USCDI+ Quality V1 data elements that are not readily represented in the profiles provided by QI-Core 8.0.0-ballot or US Core 9.0.0 are outside the scope of this version of the guide. Implementers are encouraged to provide feedback for inclusion in future versions of this guide.
 
@@ -72,7 +69,7 @@ These limited FHIR artifact changes made in this guide include:
 
 ### Acknowledgements
 
-Content in this initial version of the US Quality Core is primarily based on the QI-Core 8.0.0-ballot, as managed by the [HL7 Clinical Quality Information Workgroup](http://www.hl7.org/Special/committees/cqi/index.cfm) and the supporting Quality Improvement (QI) community.
+Content of US Quality Core is primarily based on QI-Core, as managed by the [HL7 Clinical Quality Information Workgroup](http://www.hl7.org/Special/committees/cqi/index.cfm) and the supporting Quality Improvement (QI) community.
 
 ---
 Footnotes:

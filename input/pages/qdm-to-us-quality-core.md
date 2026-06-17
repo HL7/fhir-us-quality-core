@@ -107,17 +107,17 @@ Intolerance is a record of a clinical assessment of a propensity, or a potential
 | --- | --- | --- |
 | Allergy/Intolerance | [AllergyIntolerance](StructureDefinition-us-quality-core-allergyintolerance.html) | &nbsp; |
 | &nbsp; | [AllergyIntolerance.clinicalStatus](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#key_AllergyIntolerance.clinicalStatus) | Identifies if active, inactive, resolved; while not a QDM attribute, this is an important element for retrieving active allergies or intolerances. |
-| &nbsp; | [AllergyIntolerance.type](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#key_AllergyIntolerance.type) | Defines difference between Allergy and Intolerance; while not a QDM attribute, this is an important element for differentiating between allergies and intolerances. |
+| &nbsp; | [AllergyIntolerance.type](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#AllergyIntolerance.type) | Defines difference between Allergy and Intolerance; while not a QDM attribute, this is an important element for differentiating between allergies and intolerances. |
 | &nbsp; | [AllergyIntolerance.verificationStatus](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#key_AllergyIntolerance.verificationStatus) | Identifies if unconfirmed, confirmed, refuted, entered-in-error; while not a QDM attribute, this is an important element for retrieving confirmed allergies or intolerances. |
-| &nbsp; | [AllergyIntolerance.category](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#key_AllergyIntolerance.category) | Helpful to identify classes of potential allergens such as food, medication, environment, biologic; while not a QDM attribute, this may be a helpful element for some use cases. |
+| &nbsp; | [AllergyIntolerance.category](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#AllergyIntolerance.category) | Helpful to identify classes of potential allergens such as food, medication, environment, biologic; while not a QDM attribute, this may be a helpful element for some use cases. |
 | **QDM Attributes** | &nbsp; | &nbsp; |
 | code | [AllergyIntolerance.code](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#key_AllergyIntolerance.code) | USCoreAllergySubstance; RxNorm for medication ingredients |
 | id  | [AllergyIntolerance.id](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#AllergyIntolerance.id) | &nbsp; |
 | prevalencePeriod | [AllergyIntolerance.onset\[x\]](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#key_AllergyIntolerance.onset%5Bx%5D) | Prevalence Period start time maps to AllergyIntolerance.onset\[x\]. Implementers may need to “map” existing allergy onset timings (e.g., day, age, year, etc.) to a corresponding dateTime to allow calculation of measure or CDS expressions. |
 | authorDatetime | [AllergyIntolerance.recordedDate](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#key_AllergyIntolerance.recordedDate) | Indicates when recorded in the record, not necessarily the onset date |
 | type | [AllergyIntolerance.reaction.manifestation](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#key_AllergyIntolerance.reaction.manifestation) | Clinical symptoms/signs associated with the event |
-| severity | [AllergyIntolerance.reaction.severity](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#key_AllergyIntolerance.reaction.severity) | Indicates seriousness, e.g., mild, moderate severe |
-| &nbsp; | [AllergyIntolerance.criticality](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#key_AllergyIntolerance.criticality) | Indicates potential for clinical harm, e.g., low, high, unable-to-assess; not present as an attribute in QDM but may be helpful for some use cases |
+| severity | [AllergyIntolerance.reaction.severity](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#AllergyIntolerance.reaction.severity) | Indicates seriousness, e.g., mild, moderate severe |
+| &nbsp; | [AllergyIntolerance.criticality](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#AllergyIntolerance.criticality) | Indicates potential for clinical harm, e.g., low, high, unable-to-assess; not present as an attribute in QDM but may be helpful for some use cases |
 | recorder | [AllergyIntolerance.recorder](StructureDefinition-us-quality-core-allergyintolerance-definitions.html#AllergyIntolerance.recorder) | The individual entering the data about the allergy or intolerance. Note this element is included in QDM but it is not included in the Key Element Table for US Quality Core AllergyIntolerance as it does not have a clear use case; i.e., no existing measures or clinical decision support usage requires the recorder or even the asserter of the allergy or intolerance. |
 {: .grid}
 
@@ -149,7 +149,7 @@ Assessment, Order uses the ServiceRequest resource. The codes for ordering speci
 | &nbsp; | [ServiceRequest.status](StructureDefinition-us-quality-core-servicerequested-definitions.html#ServiceRequest.status) | Constrain to active, completed. While QDM does not have an attribute comparable to status, as a conceptual model, status is implied by the name “Assessment, Order” and “Assessment, Recommended” datatypes. |
 | &nbsp; | [ServiceRequest.intent](StructureDefinition-us-quality-core-servicerequested-definitions.html#ServiceRequest.intent) | Required to differentiate an order from a recommendation. The intent value set allows such differentiation using “order” for orders and “plan” for recommendation. Constrain only to “order” (include children: original-order, reflex-order, filler-order, instance-order) |
 | **QDM Attributes** | &nbsp; | &nbsp; |
-| Code | [ServiceRequest.codeOptions](StructureDefinition-us-quality-core-servicerequested-definitions.html#ServiceRequest.code.extension:codeOptions) | What is requested, extensible binding to [codeOptions](StructureDefinition-codeOptions.html) |
+| Code | [ServiceRequest.codeOptions](StructureDefinition-us-quality-core-servicerequested-definitions.html#ServiceRequest.code.extension:codeOptions) | What is requested, extensible binding to [codeOptions](http://hl7.org/fhir/StructureDefinition/codeOptions) |
 | id  | [ServiceRequest.id](StructureDefinition-us-quality-core-servicerequested-definitions.html#ServiceRequest.id) | &nbsp; |
 | Reason | [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-servicerequested-definitions.html#ServiceRequest.reasonCode) | Explanation/justification for procedure or service with extensible binding to [US Core Condition Codes](http://hl7.org/fhir/us/core/STU9/ValueSet-us-core-condition-code.html) |
 | Author dateTime | [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-servicerequested-definitions.html#ServiceRequest.authoredOn) | When the request transitioned to being actionable. |
@@ -163,12 +163,12 @@ Assessment, Order uses the ServiceRequest resource. The codes for ordering speci
 - To indicate an assessment not ordered for a reason Use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-servicerequested-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-servicerequested-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to order an assessment with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -253,12 +253,12 @@ Assessment, Recommended uses the ServiceRequest resource. The codes for recommen
 - To indicate an assessment not recommended for a reason Use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to recommend an assessment with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -378,7 +378,7 @@ Non-patient specific communication use cases may include:
 Use [USQualityCoreCommunicationNotDone](StructureDefinition-us-quality-core-communicationnotdone.html), which contains:
 
 - [Communication.status](StructureDefinition-us-quality-core-communicationnotdone-definitions.html#Communication.status) - Fixed Value: "not-done"
-- [Communication.statusReason](StructureDefinition-us-quality-core-communicationnotdone-definitions.html#Communication.statusReason) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html)
+- [Communication.statusReason](StructureDefinition-us-quality-core-communicationnotdone-definitions.html#Communication.statusReason) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html)
 - [Communication.extension:event-recorded](StructureDefinition-us-quality-core-communicationnotdone-definitions.html#Communication.extension:event-recorded)
 -  - dateTime when this was made available
 - [Communication.topic](StructureDefinition-us-quality-core-communication-definitions.html#Communication.topic) - Use [codeOptions](StructureDefinition-us-quality-core-communication-definitions.html#Communication.topic.extension:codeOptions) to indicate the specific topic that was not communicated
@@ -451,12 +451,12 @@ QDM originally designed Device, Applied to allow access to documentation of devi
 - To indicate a non-patient use device not ordered for a reason Use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to order a non-patient use device with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -482,12 +482,12 @@ QDM originally designed Device, Applied to allow access to documentation of devi
 - To indicate a patient-use device not ordered for a reason Use [USQualityCoreDeviceProhibited](StructureDefinition-us-quality-core-deviceprohibited.html), which contains:
     - [DeviceRequest.modifierExtension:doNotPerform](StructureDefinition-us-quality-core-deviceprohibited-definitions.html#DeviceRequest.modifierExtension:doNotPerform) - Fixed value: "true"
     - [DeviceRequest.status](StructureDefinition-us-quality-core-deviceprohibited-definitions.html#DeviceRequest.status) - Fixed value: "completed"
-    - [DeviceRequest.reasonCode](StructureDefinition-us-quality-core-deviceprohibited-definitions.html#DeviceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html)
+    - [DeviceRequest.reasonCode](StructureDefinition-us-quality-core-deviceprohibited-definitions.html#DeviceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html)
     - [DeviceRequest.authoredOn](StructureDefinition-us-quality-core-deviceprohibited-definitions.html#DeviceRequest.authoredOn) - dateTime when this was made available
     - [DeviceRequest.code\[x\]](StructureDefinition-us-quality-core-deviceprohibited-definitions.html#DeviceRequest.code[x]) – Use the [codeOptions](StructureDefinition-us-quality-core-deviceprohibited-definitions.html#DeviceRequest.code[x].extension:codeOptions) extension to indicate the specific DeviceRequest that was prohibited
 - To indicate rejection of a proposal to order a patient-use device with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [DeviceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = DeviceRequested
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -513,12 +513,12 @@ QDM originally designed Device, Applied to allow access to documentation of devi
 - To indicate a non-patient use device not recommended for a reason Use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to recommend a non-patient use device with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -544,12 +544,12 @@ QDM originally designed Device, Applied to allow access to documentation of devi
 - To indicate a patient-use device not recommended for a reason Use [USQualityCoreDeviceProhibited](StructureDefinition-us-quality-core-deviceprohibited.html), which contains:
     - [DeviceRequest.modifierExtension:doNotPerform](StructureDefinition-us-quality-core-deviceprohibited-definitions.html#DeviceRequest.modifierExtension:doNotPerform) - Fixed value: "true"
     - [DeviceRequest.status](StructureDefinition-us-quality-core-deviceprohibited-definitions.html#DeviceRequest.status) - Fixed value: "completed"
-    - [DeviceRequest.reasonCode](StructureDefinition-us-quality-core-deviceprohibited-definitions.html#DeviceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html)
+    - [DeviceRequest.reasonCode](StructureDefinition-us-quality-core-deviceprohibited-definitions.html#DeviceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html)
     - [DeviceRequest.authoredOn](StructureDefinition-us-quality-core-deviceprohibited-definitions.html#DeviceRequest.authoredOn) - dateTime when this was made available
     - [DeviceRequest.code\[x\]](StructureDefinition-us-quality-core-deviceprohibited-definitions.html#DeviceRequest.code[x]) – Use the [codeOptions](StructureDefinition-us-quality-core-deviceprohibited-definitions.html#DeviceRequest.code[x].extension:codeOptions) extension to indicate the specific DeviceRequest that was prohibited
 - To indicate rejection of a proposal to recommend a patient-use device with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [DeviceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) = “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = DeviceRequested
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -585,12 +585,12 @@ US Quality Core has added specific constraints on the US Core STU7 profile that 
 - To indicate an diagnostic study not ordered for a reason Use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to order a diagnostic study with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -652,12 +652,12 @@ Individual studies may use [US Quality Core DiagnosticReport Profile for Report 
 - To indicate an diagnostic study not recommended for a reason Use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to recommend a diagnostic study with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -712,12 +712,12 @@ For this reason, US Quality Core 1.0.0 does not includes Encounter.diagnosis in 
 - To indicate an encounter not ordered for a reason Use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to order an encounter with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -774,12 +774,12 @@ For this reason, US Quality Core 1.0.0 does not includes Encounter.diagnosis in 
 - To indicate an encounter not recommended for a reason Use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to recommend an encounter with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -828,7 +828,7 @@ QDM defines Immunization as vaccines administered to patients in healthcare sett
 To indicate an immunization administered for a reason, use [USQualityCoreImmunizationNotDone](StructureDefinition-us-quality-core-immunizationnotdone.html), which contains:
 
 - [Immunization.status](StructureDefinition-us-quality-core-immunizationnotdone-definitions.html#Immunization.status) - Fixed value: "not-done"
-- [Immunization.statusReason](StructureDefinition-us-quality-core-immunizationnotdone-definitions.html#Immunization.statusReason) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html)
+- [Immunization.statusReason](StructureDefinition-us-quality-core-immunizationnotdone-definitions.html#Immunization.statusReason) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html)
 - [Immunization.occurrence\[x\]](StructureDefinition-us-quality-core-immunizationnotdone-definitions.html#Immunization.occurrence[x]) - Date vaccine administered or was to be administered
 - [Immunization.recorded](StructureDefinition-us-quality-core-immunizationnotdone-definitions.html#Immunization.recorded) – dateTime (for instances in which _occurrence_ is absent
 - [Immunization.vaccineCode](StructureDefinition-us-quality-core-immunizationnotdone-definitions.html#Immunization.vaccineCode) - Use [codeOptions](StructureDefinition-us-quality-core-immunizationnotdone-definitions.html#Immunization.vaccineCode.extension:codeOptions) extension to indicate the specific immunization(s) not administered
@@ -861,12 +861,12 @@ This QDM context references the US Quality Core MedicationRequest profile as the
 - To indicate an immunization not ordered for a reason, Use [USQualityCoreMedicationProhibited](StructureDefinition-us-quality-core-medicationprohibited.html), which contains:
     - [MedicationRequest.doNotPerform](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.doNotPerform) - Fixed value: "true"
     - [MedicationRequest.status](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.status) - Fixed value: "completed"
-    - [MedicationRequest.reasonCode](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html)
+    - [MedicationRequest.reasonCode](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html)
     - [MedicationRequest.authoredOn](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.authoredOn) - dateTime when this was made available
     - [MedicationRequest.medication\[x\]](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.medication[x]) - Use [codeOptions](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.medication[x].extension:codeOptions) extension to indicate the specific medication that was prohibited
 - To indicate rejection of a proposal to order an immunization with a reason for the rejection Use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [MedicationRequested](StructureDefinition-us-quality-core-medicationrequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [MedicationRequested](StructureDefinition-us-quality-core-medicationrequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -999,7 +999,7 @@ FHIR references both of these concepts using the _Procedure_ resource, specifica
 To indicate an intervention not performed for a reason Use [USQualityCoreProcedureNotDone](StructureDefinition-us-quality-core-procedurenotdone.html), which contains:
 
 - [Procedure.status](StructureDefinition-us-quality-core-procedurenotdone-definitions.html#Procedure.status) - Fixed value: "not-done"
-- [Procedure.statusReason](StructureDefinition-us-quality-core-procedurenotdone-definitions.html#Procedure.statusReason) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html)
+- [Procedure.statusReason](StructureDefinition-us-quality-core-procedurenotdone-definitions.html#Procedure.statusReason) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html)
 - [Procedure.extension:recorded](StructureDefinition-us-quality-core-procedurenotdone-definitions.html#Procedure.extension:recorded) - dateTime when this was made available
 - [Procedure.code](StructureDefinition-us-quality-core-procedurenotdone-definitions.html#Procedure.code) - Use [codeOptions](StructureDefinition-us-quality-core-procedurenotdone-definitions.html#Procedure.code.extension:codeOptions) extension to indicate the specific Procedure that was not performed
 
@@ -1025,12 +1025,12 @@ To indicate an intervention not performed for a reason Use [USQualityCoreProcedu
 - To indicate an intervention not ordered for a reason Use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to order an intervention with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -1056,12 +1056,12 @@ To indicate an intervention not performed for a reason Use [USQualityCoreProcedu
 - To indicate an intervention not recommended for a reason Use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to recommend an intervention with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -1097,12 +1097,12 @@ Each laboratory test may be ordered individually or in a panel. Many use panels 
 - To indicate a laboratory test not ordered for a reason Use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to order a laboratory test with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -1162,12 +1162,12 @@ Each laboratory test may be ordered individually or in a panel. Many use panels 
 - To indicate a laboratory test not recommended for a reason Use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to recommend a laboratory test with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -1238,12 +1238,12 @@ This QDM context correlates with a record of a patient consuming or otherwise be
 
 - To indicate a medication not ordered for a reason Use [USQualityCoreMedicationAdministrationNotDone](StructureDefinition-us-quality-core-medicationadministrationnotdone.html):
     - [MedicationAdministration.status](StructureDefinition-us-quality-core-medicationadministrationnotdone-definitions.html#MedicationAdministration.status) - Fixed value: "not-done"
-    - [MedicationAdministration.statusReason](StructureDefinition-us-quality-core-medicationadministrationnotdone-definitions.html#MedicationAdministration.statusReason) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [MedicationAdministration.statusReason](StructureDefinition-us-quality-core-medicationadministrationnotdone-definitions.html#MedicationAdministration.statusReason) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [MedicationAdministration.effective\[x\]](StructureDefinition-us-quality-core-medicationadministrationnotdone-definitions.html#MedicationAdministration.effective[x]) - dateTime when administration did not take place
     - [MedicationAdministration.medication\[x\]](StructureDefinition-us-quality-core-medicationadministrationnotdone-definitions.html#MedicationAdministration.medication[x]) with  [codeOptions extension](StructureDefinition-us-quality-core-medicationadministrationnotdone-definitions.html#MedicationAdministration.medication[x].extension:codeOptions) to indicate the specific code or value set not administered
 - To indicate rejection of a proposal to order a medication with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [MedicationAdministrationDone](StructureDefinition-us-quality-core-medicationadministrationdone.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [MedicationAdministrationDone](StructureDefinition-us-quality-core-medicationadministrationdone.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -1289,12 +1289,12 @@ This change should also be used to reference the mapping from QDM Medication, Or
 - To indicate a medication not ordered for a reason Use [USQualityCoreMedicationProhibited](StructureDefinition-us-quality-core-medicationprohibited.html) and reference the code element specified in the respective observation profile:
     - [MedicationRequest.doNotPerform](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.doNotPerform) - Fixed value: "true"
     - [MedicationRequest.status](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.status) - Fixed value: "active, completed"
-    - [MedicationRequest.reasonCode](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [MedicationRequest.reasonCode](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [MedicationRequest.authoredOn](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.authoredOn) - dateTime when request was originally authored
-    - [MedicationRequest.medication\[x\]](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.medication[x]) with  [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [MedicationRequest.medication\[x\]](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.medication[x]) with  [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to order a medication with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [MedicationRequested](StructureDefinition-us-quality-core-medicationrequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [MedicationRequested](StructureDefinition-us-quality-core-medicationrequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -1332,7 +1332,7 @@ This QDM context maps to the US Quality Core MedicationDispense resource, indica
 Use [USQualityCoreMedicationDispenseDeclined](StructureDefinition-us-quality-core-medicationdispensedeclined.html), which contains:
 
 - [MedicationDispense.status](StructureDefinition-us-quality-core-medicationdispensedeclined-definitions.html#MedicationDispense.status) - Fixed value: "declined"
-- [MedicationDispense.statusReason\[x\]](StructureDefinition-us-quality-core-medicationdispensedeclined-definitions.html#MedicationDispense.statusReason[x]) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html)
+- [MedicationDispense.statusReason\[x\]](StructureDefinition-us-quality-core-medicationdispensedeclined-definitions.html#MedicationDispense.statusReason[x]) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html)
 - [MedicationDispense.extension:recorded](StructureDefinition-us-quality-core-medicationdispensedeclined-definitions.html#MedicationDispense.extension:recorded) - dateTime when this was made available
 - [MedicationDispense.medication\[x\]](StructureDefinition-us-quality-core-medicationdispensedeclined-definitions.html#MedicationDispense.medication[x]) - Use [codeOptions](StructureDefinition-us-quality-core-medicationdispensedeclined-definitions.html#MedicationDispense.medication[x].extension:codeOptions) extension to indicate the specific medication that was not dispensed
 
@@ -1373,12 +1373,12 @@ This QDM context references the US Quality Core MedicationRequest resource with 
 - To indicate a medication not ordered for a reason Use [USQualityCoreMedicationProhibited](StructureDefinition-us-quality-core-medicationprohibited.html) and reference the code element specified in the respective observation profile:
     - [MedicationRequest.doNotPerform](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.doNotPerform) - Fixed value: "true"
     - [MedicationRequest.status](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.status) - Fixed value: "active, completed"
-    - [MedicationRequest.reasonCode](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [MedicationRequest.reasonCode](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [MedicationRequest.authoredOn](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.authoredOn) - dateTime when request was originally authored
-    - [MedicationRequest.medication\[x\]](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.medication[x]) with  [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [MedicationRequest.medication\[x\]](StructureDefinition-us-quality-core-medicationprohibited-definitions.html#MedicationRequest.medication[x]) with  [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to order a medication with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [MedicationRequested](StructureDefinition-us-quality-core-medicationrequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [MedicationRequested](StructureDefinition-us-quality-core-medicationrequested.html)
 - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -1447,12 +1447,12 @@ QDM “Physical Exam, Order” should use ServiceRequest with _intent_ = order f
 - To indicate a physical exam not ordered for a reason Use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to order a physical exam with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -1513,12 +1513,12 @@ QDM “Physical Exam, Recommended” should use ServiceRequest with _intent_ = p
 - To indicate a physical exam not recommended for a reason Use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to recommend a physical exam with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -1592,7 +1592,7 @@ As noted in the QDM to US Quality Core Mapping for Encounter-Related Diagnoses a
 To indicate an procedure not performed for a reason Use [USQualityCoreProcedureNotDone](StructureDefinition-us-quality-core-procedurenotdone.html), which contains:
 
 - [Procedure.status](StructureDefinition-us-quality-core-procedurenotdone-definitions.html#Procedure.status) - Fixed value: "not-done"
-- [Procedure.statusReason](StructureDefinition-us-quality-core-procedurenotdone-definitions.html#Procedure.statusReason) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html)
+- [Procedure.statusReason](StructureDefinition-us-quality-core-procedurenotdone-definitions.html#Procedure.statusReason) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html)
 - [Procedure.extension:recorded](StructureDefinition-us-quality-core-procedurenotdone-definitions.html#Procedure.extension:recorded) - dateTime when this was made available
 - [Procedure.code](StructureDefinition-us-quality-core-procedurenotdone-definitions.html#Procedure.code) - Use [codeOptions](StructureDefinition-us-quality-core-procedurenotdone-definitions.html#Procedure.code.extension:codeOptions) extension to indicate the specific Procedure that was not performed
 
@@ -1618,12 +1618,12 @@ To indicate an procedure not performed for a reason Use [USQualityCoreProcedureN
 - To indicate procedure not ordered for a reason Use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to order a procedure with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 
@@ -1649,12 +1649,12 @@ To indicate an procedure not performed for a reason Use [USQualityCoreProcedureN
 - To indicate a procedure not recommended for a reason use [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html) and reference the code element specified in the respective observation profile:
     - [ServiceRequest.doNotPerform](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.doNotPerform) - Fixed value: "true"
     - [ServiceRequest.status](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.status) - Fixed value: "active, completed"
-    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [ServiceRequest.reasonCode](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.reasonCode) - Use value set [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [ServiceRequest.authoredOn](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.authoredOn) - dateTime when this was made available
-    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](StructureDefinition-codeOptions.html) to indicate the specific code or value set not requested
+    - [code](StructureDefinition-us-quality-core-serviceprohibited-definitions.html#ServiceRequest.code.extension:codeOptions) - Use [codeOptions extension](http://hl7.org/fhir/StructureDefinition/codeOptions) to indicate the specific code or value set not requested
 - To indicate rejection of a proposal to recommend a procedure with a reason for the rejection use [Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) and reference the [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html) as the [focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) of the rejected Task. Example;
     - [Task.status](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.status) – “rejected”
-    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason.html) (extensible binding)
+    - [Task.statusReason](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.statusReason) = [NegationReasonCodes](ValueSet-us-quality-core-negation-reason-codes.html) (extensible binding)
     - [Task.focus](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.focus) = [ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)
     - [Task.executionPeriod](StructureDefinition-us-quality-core-taskrejected-definitions.html#Task.executionPeriod) = timing task was rejected
 

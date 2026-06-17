@@ -23,7 +23,7 @@ Each of the US Quality Core negation rationale profiles define at least the foll
 -   What activity/event did not occur (typically in terms of a value set or list of codes, or as a reference to a request)
 -   Explicit indication that the action/event did not or should not occur (such as doNotPerform or a status of notDone)
 -   Date, and optionally, a time a clinician indicated a reason for avoiding the activity/event
--   The reason the activity/event did not occur (Preferably represented using one of an established set of [Negation Reason Codes](ValueSet-us-quality-core-negation-reason.html))
+-   The reason the activity/event did not occur (Preferably represented using one of an established set of [Negation Reason Codes](ValueSet-us-quality-core-negation-reason-codes.html))
 
 **NOTE:** Although these aspects are all present within each negation profile defined by US Quality Core, they are represented differently in the various FHIR resources. As a result, each negation profile uses a combination of constraints and extensions to ensure complete representation of negated actions or events within US Quality Core.
 

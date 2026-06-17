@@ -1,7 +1,7 @@
 
 US Quality Core derives from US Core, and therefore the [requirements on "MustSupport" defined in US Core]({{site.data.fhir.ver.uscore}}/must-support.html) must be respected.
 
-US Quality Core adopts the QI-Core approach to flag USCDI+ Quality elements with a [US Quality Core USCDI+ Quality Extension](StructureDefinition-uscdiplusquality.html) to indicate significance for implementers, instead of applying additional "MustSupport" flags above the inherited US Core "MustSupport" flags. This is consistent with US Core's use of the [USCDI Requirement Extension](https://hl7.org/fhir/us/core/STU9/StructureDefinition-uscdi-requirement.html) to indicate those requirements specifically applicable to USCDI conformance.
+US Quality Core adopts the QI-Core approach to flag USCDI+ Quality elements with a [US Quality Core USCDI+ Quality Extension](StructureDefinition-us-quality-core-uscdi-quality-extension.html) to indicate significance for implementers, instead of applying additional "MustSupport" flags above the inherited US Core "MustSupport" flags. This is consistent with US Core's use of the [USCDI Requirement Extension](https://hl7.org/fhir/us/core/STU9/StructureDefinition-uscdi-requirement.html) to indicate those requirements specifically applicable to USCDI conformance.
 
 Implementers are expected to implement all profiles and FHIR elements that contain the USCDI+ Quality flag, shown as (USCDI+ Quality).
 

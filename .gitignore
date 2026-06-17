@@ -1,6 +1,8 @@
 temp/
 qa/
 output/
+fsh-generated/
+/translations/
 /.idea
 .DS_Store
 /schema
@@ -8,7 +10,7 @@ output/
 /resources/ig-new.json
 /resources/ig-new.xml
 /resources/ig-validation-parameters.json
+/Requirements-fromNarrative.json
 /input-cache/publisher.jar
 /template
 input-cache/
-

@@ -1,0 +1,124 @@
+canonical: http://hl7.org/fhir/us/quality-core
+fhirVersion: 4.0.1
+applyExtensionMetadataToRoot: false
+id: hl7.fhir.us.quality-core
+name: USQualityCore
+title: US Quality Core Implementation Guide
+status: active
+version: 1.0.0-ballot
+experimental: false
+date: 2026-06-30
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: cqi
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: trial-use
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 4
+releaseLabel: STU 1 - ballot
+copyrightYear: 2026
+license: CC0-1.0
+publisher:
+  name: HL7 International / Clinical Quality Information
+  url: http://www.hl7.org/Special/committees/cqi
+contact:
+  - name: Clinical Quality Information WG
+    telecom:
+      - system: url
+        value: http://www.hl7.org/Special/committees/cqi
+description: The US Quality Core Implementation Guide defines a set of FHIR profiles with extensions and bindings needed to create interoperable, quality-focused applications. The profiles in this implementation guide derive from and extend the [US Core](http://hl7.org/fhir/us/core) profiles to provide a common foundation for building, sharing, and evaluating knowledge artifacts across quality improvement efforts in the US Realm.
+jurisdiction: urn:iso:std:iso:3166#US
+global:
+  Patient: USQualityCorePatient
+  Encounter: USQualityCoreEncounter
+  Practitioner: USQualityCorePractitioner
+  PractitionerRole: USQualityCorePractitionerRole
+  Immunization: USQualityCoreImmunization
+  Observation: USQualityCoreSimpleObservation
+  Organization: USQualityCoreOrganization
+parameters:
+  path-resource: resources
+  path-liquid: templates\liquid
+  apply-version: true
+  path-expansion-params: ../../input/_resources/exp-params.json
+  find-other-resources: true
+  apply-jurisdiction: true
+  generate:
+    - xml
+    - JSON
+  special-url: http://hl7.org/fhir/StructureDefinition/codeOptions
+  pin-canonicals: pin-multiples
+pages:
+  index.md:
+    title: US Quality Core Implementation Guide
+    generation: markdown
+    conformance.md:
+      title: Conformance
+      generation: markdown
+    us-quality-core-general-requirements.md:
+      title: General Requirements
+      generation: markdown
+    must-support.md:
+      title: Must Support
+      generation: markdown
+    security.md:
+      title: Security
+      generation: markdown
+    guidance.md:
+      title: Guidance
+      generation: markdown
+    uscdiquality.md:
+      title: USCDI+ Quality
+      generation: markdown
+    negation.md:
+      title: US Quality Core Negation
+      generation: markdown
+    provenance.md:
+      title: Provenance
+      generation: markdown
+    relationship-with-uscore-qicore.md:
+      title: Relationship with US Core and QI-Core
+      generation: markdown
+    qdm-to-us-quality-core.md:
+      title: Quality Data Model (QDM)v5.6 to US Quality Core R8 Mapping
+      generation: markdown
+    capability-statements.md:
+      title: Capability Statements
+      generation: markdown
+    profiles.md:
+      title: US Quality Core Profiles
+      generation: markdown
+    extensions.md:
+      title: US Quality Core Extensions
+      generation: markdown
+    terminology.md:
+      title: US Quality Core Terminology
+      generation: markdown
+    examples.md:
+      title: US Quality Core Examples
+      generation: markdown
+    downloads.md:
+      title: US Quality Core Downloads
+      generation: markdown
+    changes.md:
+      title: Changes
+      generation: markdown
+dependencies:
+  hl7.fhir.us.core:
+    version: 9.0.0
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    id: uscore
+  fhir.dicom:
+    version: 2025.2.20250411
+    uri: http://fhir.org/packages/fhir.dicom/ImplementationGuide/fhir.dicom
+    id: dicom
+  hl7.terminology.r4:
+    version: 6.5.0
+    uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
+    id: terminology
+  hl7.fhir.uv.extensions.r4:
+    version: 5.2.0
+    uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
+    id: extensions
+  hl7.fhir.uv.xver-r5.r4:
+    version: 0.1.0

@@ -119,7 +119,7 @@
 * [Diabetic diet example](NutritionOrder-example.html)
 
 **USQualityCoreQuestionnaireResponse**
-* [PHQ-9 Questionnaire Response Example](QuestionnaireResponse-PHQ-9-example.html)
+* [PHQ-9 Questionnaire Response Example](QuestionnaireResponse-phq-9-example.html)
 
 **USQualityCoreSimpleObservation**
 * [Frailty Observation Example](Observation-example-frailty.html)
@@ -132,9 +132,9 @@
 * [Number of Pregnancies Example](Observation-example-pregnancies.html)
 
 **USQualityCoreNonPatientObservation**
-* [Hemodialysis Machine Availability](Observation-example-nonpatient-hemodialysis-machine.html)
-* [Hospital Bed Availability](Observation-example-nonpatient-hospital-bed.html)
-* [Mechanical Ventilator Availability](Observation-example-nonpatient-mechanical-ventilator.html)
+* [Hemodialysis Machine Availability](Observation-example-non-patient-hemodialysis-machine.html)
+* [Hospital Bed Availability](Observation-example-non-patient-hospital-bed.html)
+* [Mechanical Ventilator Availability](Observation-example-non-patient-mechanical-ventilator.html)
 
 **USQualityCoreLaboratoryResultObservation**
 * [Glucose Lab Result Observation](Observation-laboratory-result-observation-example-blood-glucose.html)
