@@ -19,13 +19,13 @@ In addition to adherence to core FHIR requirements, conformance to this US Quali
 
 ### API Requirements
 
-US Quality Core RESTful API conformance is defined by the [US Quality Core CapabilityStatements](capability-statements.html). The CapabilityStatements identify required and optional RESTful interactions, including `read` and `search-type`, as well as individual search parameters and combined search parameters used to retrieve in-scope USCDI+ Quality V1 data.
+US Quality Core RESTful API conformance is defined by the [US Quality Core CapabilityStatements](capability-statements.html). The CapabilityStatements identify required and optional RESTful interactions, including `read` and `search-type`, as well as individual search parameters and combined search parameters used to retrieve in-scope USCDI+ Quality V2 data.
 
 US Quality Core implementations are also expected to conform to applicable US Core RESTful API requirements. US Quality Core may restate US Core requirements to highlight those that are relevant to USCDI+ Quality data access. US Core requirements not restated in US Quality Core remain part of applicable US Core conformance.
 
 #### Search Requirement Selection
 
-Like US Core, many US Quality Core RESTful API requirements are search requirements. US Quality Core defines a focused set of searches needed to retrieve in-scope USCDI+ Quality V1 data for quality measurement and reporting.
+Like US Core, many US Quality Core RESTful API requirements are search requirements. US Quality Core defines a focused set of searches needed to retrieve in-scope USCDI+ Quality V2 data for quality measurement and reporting.
 
 US Quality Core CapabilityStatements may restate US Core search requirements when the search is directly relevant to USCDI+ Quality data access. Restating a US Core search in this guide highlights its relevance for US Quality Core; not restating a US Core search does not remove the underlying US Core requirement.
 

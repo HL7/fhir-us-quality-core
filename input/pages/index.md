@@ -53,10 +53,9 @@ This guide is divided into several pages, which are listed at the top of each pa
 
 ### Scope
 
-The US Quality Core IG provides requirements and guidance for using FHIR to implement the USCDI+ Quality data elements. The scope of the conformance expectations of this version of the guide is limited to the representation and exchange of data described in USCDI+ Quality V1. Note that not all USCDI+ Quality V1 data elements are in scope for this version's conformance requirements. See the [In-Scope USCDI+ Quality Data Elements](uscdiquality.html#in-scope-uscdi-quality-v1-data-elements) section for a complete list of the USCDI+ Quality V1 data elements that are in scope for the conformance requirements of this guide.
+The US Quality Core IG provides requirements and guidance for using FHIR to implement the USCDI+ Quality data elements. The scope of the conformance expectations of this version of the guide is limited to the representation and exchange of data described in USCDI+ Quality V2. Note that not all USCDI+ Quality V2 data elements are in scope for this version's conformance requirements. See the [In-Scope USCDI+ Quality Data Elements](uscdiquality.html#in-scope-uscdi-quality-v2-data-elements) section for a complete list of the USCDI+ Quality V2 data elements that are in scope for the conformance requirements of this guide.
 
-
-USCDI+ Quality V1 data elements that are not readily represented in the profiles provided by QI-Core 8.0.0-ballot or US Core 9.0.0 are outside the scope of this version of the guide. Implementers are encouraged to provide feedback for inclusion in future versions of this guide.
+USCDI+ Quality V2 data elements that are not readily represented in the profiles provided by QI-Core 8.0.0-ballot or US Core 9.0.0 are outside the scope of this version of the guide. Implementers are encouraged to provide feedback for inclusion in future versions of this guide.
 
 This guide retains all artifacts provided by QI-Core 8.0.0-ballot, with limited alterations described below, to support the adoption by existing QI-Core implementers. The US Quality Core profiles adhere to a naming convention that uses the prefix "US Quality Core". For example, the US Quality Core profile of Patient is named US Quality Core Patient.
 

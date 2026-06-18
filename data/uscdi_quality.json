@@ -1,0 +1,4110 @@
+[
+  {
+    "class": "Adverse Events",
+    "name": "Adverse Event Condition",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-adverseevent",
+          "elements": [
+            "AdverseEvent.event",
+            "AdverseEvent.date",
+            "AdverseEvent.recordedDate",
+            "AdverseEvent.detected"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Adverse Events",
+    "name": "Adverse Event Outcome",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-adverseevent",
+          "elements": [
+            "AdverseEvent.outcome",
+            "AdverseEvent.resultingCondition"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Allergies and Intolerances",
+    "name": "Drug Class Allergy Intolerance",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance",
+          "elements": [
+            "AllergyIntolerance.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Allergies and Intolerances",
+    "name": "Medication Allergy Intolerance",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance",
+          "elements": [
+            "AllergyIntolerance.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Allergies and Intolerances",
+    "name": "Non-Medication Allergy Intolerance",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance",
+          "elements": [
+            "AllergyIntolerance.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Allergies and Intolerances",
+    "name": "Reaction",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance",
+          "elements": [
+            "AllergyIntolerance.reaction"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Allergies and Intolerances",
+    "name": "Reaction Date and Time",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance",
+          "elements": [
+            "AllergyIntolerance.lastOccurrence"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Allergies and Intolerances",
+    "name": "Allergy Intolerance Onset Date and Time",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance",
+          "elements": [
+            "AllergyIntolerance.onset[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Allergies and Intolerances",
+    "name": "Allergy Intolerance Recorded Date and Time",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-allergyintolerance",
+          "elements": [
+            "AllergyIntolerance.recordedDate"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Care Plans",
+    "name": "Assessment and Plan of Treatment",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careplan",
+          "elements": [
+            "CarePlan.text"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Care Plans",
+    "name": "Care Plan",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careplan",
+          "elements": [
+            "CarePlan.status",
+            "CarePlan.intent",
+            "CarePlan.subject",
+            "CarePlan.category",
+            "CarePlan.contributor",
+            "CarePlan.addresses"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Care Team Members",
+    "name": "Care Team Member Identifier",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careteam",
+          "elements": [
+            "CareTeam.participant",
+            "CareTeam.participant.member"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner",
+          "elements": [
+            "Practitioner.identifier",
+            "Practitioner.identifier.system",
+            "Practitioner.identifier.value",
+            "Practitioner.identifier:ein",
+            "Practitioner.identifier:ein.value",
+            "Practitioner.identifier:NPI",
+            "Practitioner.identifier:NPI.system",
+            "Practitioner.identifier:NPI.value"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole",
+          "elements": [
+            "PractitionerRole.identifier",
+            "PractitionerRole.identifier.system",
+            "PractitionerRole.identifier.value"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Care Team Members",
+    "name": "Care Team Member Location",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner",
+          "elements": [
+            "Practitioner.address",
+            "Practitioner.address.city",
+            "Practitioner.address.country",
+            "Practitioner.address.line",
+            "Practitioner.address.postalCode",
+            "Practitioner.address.state"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole",
+          "elements": [
+            "PractitionerRole.location"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson",
+          "elements": [
+            "RelatedPerson.address"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Care Team Members",
+    "name": "Care Team Member Name",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner",
+          "elements": [
+            "Practitioner.name",
+            "Practitioner.name.family"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole",
+          "elements": [
+            "PractitionerRole.practitioner"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson",
+          "elements": [
+            "RelatedPerson.name"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Care Team Members",
+    "name": "Care Team Member Role",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careteam",
+          "elements": [
+            "CareTeam.participant.role"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole",
+          "elements": [
+            "PractitionerRole.code",
+            "PractitionerRole.specialty"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson",
+          "elements": [
+            "RelatedPerson.relationship"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Care Team Members",
+    "name": "Care Team Member Telecom",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitioner",
+          "elements": [
+            "Practitioner.telecom",
+            "Practitioner.telecom.system",
+            "Practitioner.telecom.value"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-practitionerrole",
+          "elements": [
+            "PractitionerRole.telecom",
+            "PractitionerRole.telecom.system",
+            "PractitionerRole.telecom.value"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson",
+          "elements": [
+            "RelatedPerson.telecom"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Clinical Notes",
+    "name": "Consultation Note",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Clinical Notes",
+    "name": "Discharge Summary Note",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Clinical Notes",
+    "name": "Emergency Department Note",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Clinical Notes",
+    "name": "History & Physical",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Clinical Notes",
+    "name": "Operative Note",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Clinical Notes",
+    "name": "Procedure Note",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
+          "elements": [
+            "DiagnosticReport.category:us-core",
+            "DiagnosticReport.result"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Clinical Notes",
+    "name": "Progress Note",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Clinical Tests",
+    "name": "Clinical Test",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-clinical-result",
+          "elements": [
+            "Observation.code"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
+          "elements": [
+            "DiagnosticReport.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Clinical Tests",
+    "name": "Clinical Test Result/Report",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-clinical-result",
+          "elements": [
+            "Observation.value[x]",
+            "Observation.effective[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
+          "elements": [
+            "DiagnosticReport.result"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Clinical Tests",
+    "name": "Clinical Test Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-clinical-result",
+          "elements": [
+            "Observation.status"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
+          "elements": [
+            "DiagnosticReport.status"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Communications",
+    "name": "Communication Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-communication",
+          "elements": [
+            "Communication.status",
+            "Communication.sent"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Communications",
+    "name": "Communication Topic",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-communication",
+          "elements": [
+            "Communication.category"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Communications",
+    "name": "Reason Not Communicated",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-communicationnotdone",
+          "elements": [
+            "Communication.statusReason"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Diagnostic Imaging",
+    "name": "Diagnostic Imaging Reference",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
+          "elements": [
+            "DiagnosticReport.imagingStudy"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy",
+          "elements": [
+            "ImagingStudy.endpoint"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Diagnostic Imaging",
+    "name": "Diagnostic Imaging Report",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
+          "elements": [
+            "DiagnosticReport.result"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-clinical-result",
+          "elements": [
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Diagnostic Imaging",
+    "name": "Diagnostic Imaging Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
+          "elements": [
+            "DiagnosticReport.status"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy",
+          "elements": [
+            "ImagingStudy.status"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Diagnostic Imaging",
+    "name": "Diagnostic Imaging Test",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
+          "elements": [
+            "DiagnosticReport.code"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-clinical-result",
+          "elements": [
+            "Observation.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Encounter Information",
+    "name": "Diagnosis Rank",
+    "notes": "In QI-Core, information about principal diagnosis is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. Implementers may determine the appropriate implementation approach to support this USCDI+ Quality data element. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Encounter Information",
+    "name": "Encounter Diagnosis",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis",
+          "elements": [
+            "Condition.code",
+            "Condition.encounter"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter",
+          "elements": [
+            "Encounter.diagnosis",
+            "Encounter.priority"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Encounter Information",
+    "name": "Encounter Diagnosis Role",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis",
+          "elements": [
+            "Condition.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Encounter Information",
+    "name": "Encounter Disposition",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter",
+          "elements": [
+            "Encounter.hospitalization",
+            "Encounter.hospitalization.dischargeDisposition"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Encounter Information",
+    "name": "Encounter Identifier",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter",
+          "elements": [
+            "Encounter.identifier",
+            "Encounter.identifier.system",
+            "Encounter.identifier.value"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Encounter Information",
+    "name": "Encounter Location",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter",
+          "elements": [
+            "Encounter.location",
+            "Encounter.location.location"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Encounter Information",
+    "name": "Encounter Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter",
+          "elements": [
+            "Encounter.status"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Encounter Information",
+    "name": "Encounter Time",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter",
+          "elements": [
+            "Encounter.period"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Encounter Information",
+    "name": "Encounter Type",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter",
+          "elements": [
+            "Encounter.type"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Encounter Information",
+    "name": "Present on Admission",
+    "notes": "In QI-Core, information about present on admission is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. We have reintroduced the Present on Admission extension for Encounter.diagnosis in US Quality Core v0.5.0 and it is (USCDI+ Quality) tagged.",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter",
+          "elements": [
+            "Encounter.diagnosis.extension:diagnosisPresentOnAdmission"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Facility Information",
+    "name": "Facility Address",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location",
+          "elements": [
+            "Location.address"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Facility Information",
+    "name": "Facility Identifier",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location",
+          "elements": [
+            "Location.identifier"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Facility Information",
+    "name": "Facility Name",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location",
+          "elements": [
+            "Location.name"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Facility Information",
+    "name": "Facility Type",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location",
+          "elements": [
+            "Location.type"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Family Health History",
+    "name": "Family Health History",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-familymemberhistory",
+          "elements": [
+            "FamilyMemberHistory.condition.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Goals and Preferences",
+    "name": "Advance Directive Observation",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation|9.0.0"
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Goals and Preferences",
+    "name": "Care Experience Preference",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Goals and Preferences",
+    "name": "Patient Goals",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-goal",
+          "elements": [
+            "Goal.description",
+            "Goal.target"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Goals and Preferences",
+    "name": "SDOH Goals",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-goal",
+          "elements": [
+            "Goal.description",
+            "Goal.target"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Goals and Preferences",
+    "name": "Treatment Intervention Preference",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Health Insurance Information",
+    "name": "Coverage Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-coverage",
+          "elements": [
+            "Coverage.status"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Insurance Information",
+    "name": "Coverage Type",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-coverage",
+          "elements": [
+            "Coverage.type"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Insurance Information",
+    "name": "Group Identifier",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-coverage",
+          "elements": [
+            "Coverage.class",
+            "Coverage.class:group",
+            "Coverage.class:group.name",
+            "Coverage.class:group.value"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Insurance Information",
+    "name": "Health Insurance Beneficiary",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-coverage",
+          "elements": [
+            "Coverage.beneficiary"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Insurance Information",
+    "name": "Health Insurance Coverage Period",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-coverage",
+          "elements": [
+            "Coverage.period"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Insurance Information",
+    "name": "Health Insurance Payer",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-coverage",
+          "elements": [
+            "Coverage.payor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization",
+          "elements": [
+            "Organization.name"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Insurance Information",
+    "name": "Health Insurance Plan Identifier",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-coverage",
+          "elements": [
+            "Coverage.class:plan.value"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Insurance Information",
+    "name": "Insurance Plan Name",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-coverage",
+          "elements": [
+            "Coverage.class:plan",
+            "Coverage.class:plan.name"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Insurance Information",
+    "name": "Member Identifier",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-coverage",
+          "elements": [
+            "Coverage.identifier",
+            "Coverage.identifier:memberid",
+            "Coverage.identifier:memberid.type"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Insurance Information",
+    "name": "Payer Identifier",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization",
+          "elements": [
+            "Organization.identifier"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Insurance Information",
+    "name": "Relationship to Subscriber",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-coverage",
+          "elements": [
+            "Coverage.relationship"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Insurance Information",
+    "name": "Subscriber Identifier",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-coverage",
+          "elements": [
+            "Coverage.subscriberId"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Status Assessments",
+    "name": "Alcohol Use",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.category",
+            "Observation.category:us-core",
+            "Observation.code",
+            "Observation.value[x]",
+            "Observation.status",
+            "Observation.effective[x]",
+            "Observation.issued"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-screening-assessment",
+          "elements": [
+            "Observation.category",
+            "Observation.code",
+            "Observation.value[x]",
+            "Observation.status",
+            "Observation.effective[x]",
+            "Observation.issued"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse",
+          "elements": [
+            "QuestionnaireResponse.questionnaire",
+            "QuestionnaireResponse.item"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+          "elements": [
+            "Condition.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Status Assessments",
+    "name": "Disability Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.category",
+            "Observation.category:us-core",
+            "Observation.code",
+            "Observation.value[x]",
+            "Observation.status",
+            "Observation.effective[x]",
+            "Observation.issued"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-screening-assessment",
+          "elements": [
+            "Observation.category",
+            "Observation.code",
+            "Observation.value[x]",
+            "Observation.status",
+            "Observation.effective[x]",
+            "Observation.issued"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Status Assessments",
+    "name": "Functional Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.category",
+            "Observation.category:us-core",
+            "Observation.code",
+            "Observation.value[x]",
+            "Observation.status",
+            "Observation.effective[x]",
+            "Observation.issued"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-screening-assessment",
+          "elements": [
+            "Observation.category",
+            "Observation.code",
+            "Observation.value[x]",
+            "Observation.status",
+            "Observation.effective[x]",
+            "Observation.issued"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Status Assessments",
+    "name": "Health Concerns",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+          "elements": [
+            "Condition.category:us-core",
+            "Condition.code",
+            "Condition.severity"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Status Assessments",
+    "name": "Mental/Cognitive Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.category",
+            "Observation.category:us-core",
+            "Observation.code",
+            "Observation.value[x]",
+            "Observation.status",
+            "Observation.effective[x]",
+            "Observation.issued"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-screening-assessment",
+          "elements": [
+            "Observation.category",
+            "Observation.code",
+            "Observation.value[x]",
+            "Observation.status",
+            "Observation.effective[x]",
+            "Observation.issued"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Status Assessments",
+    "name": "Physical Activity",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.category",
+            "Observation.category:us-core",
+            "Observation.code",
+            "Observation.value[x]",
+            "Observation.status",
+            "Observation.effective[x]",
+            "Observation.issued"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-screening-assessment",
+          "elements": [
+            "Observation.category",
+            "Observation.code",
+            "Observation.value[x]",
+            "Observation.status",
+            "Observation.effective[x]",
+            "Observation.issued"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse",
+          "elements": [
+            "QuestionnaireResponse.questionnaire",
+            "QuestionnaireResponse.item"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+          "elements": [
+            "Condition.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Status Assessments",
+    "name": "Pregnancy Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus|9.0.0"
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Health Status Assessments",
+    "name": "SDOH Assessment",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.category",
+            "Observation.category:us-core",
+            "Observation.code",
+            "Observation.value[x]",
+            "Observation.status",
+            "Observation.effective[x]",
+            "Observation.issued"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-screening-assessment",
+          "elements": [
+            "Observation.category",
+            "Observation.code",
+            "Observation.value[x]",
+            "Observation.status",
+            "Observation.effective[x]",
+            "Observation.issued"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse",
+          "elements": [
+            "QuestionnaireResponse.questionnaire",
+            "QuestionnaireResponse.item"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+          "elements": [
+            "Condition.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Health Status Assessments",
+    "name": "Smoking Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Health Status Assessments",
+    "name": "Substance Use",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.category",
+            "Observation.category:us-core",
+            "Observation.code",
+            "Observation.value[x]",
+            "Observation.status",
+            "Observation.effective[x]",
+            "Observation.issued"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-screening-assessment",
+          "elements": [
+            "Observation.category",
+            "Observation.code",
+            "Observation.value[x]",
+            "Observation.status",
+            "Observation.effective[x]",
+            "Observation.issued"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse",
+          "elements": [
+            "QuestionnaireResponse.questionnaire",
+            "QuestionnaireResponse.item"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+          "elements": [
+            "Condition.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Healthcare Information Attributes",
+    "name": "Reason Not Performed",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone",
+          "elements": [
+            "Procedure.statusReason"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationnotdone",
+          "elements": [
+            "Immunization.statusReason"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone",
+          "elements": [
+            "MedicationAdministration.statusReason"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined",
+          "elements": [
+            "MedicationDispense.statusReason[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationprohibited",
+          "elements": [
+            "MedicationRequest.reasonCode",
+            "MedicationRequest.doNotPerform"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.reasonCode",
+            "ServiceRequest.doNotPerform"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Immunizations",
+    "name": "Immunization Record Source",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization",
+          "elements": [
+            "Immunization.primarySource"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Immunizations",
+    "name": "Immunization Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization",
+          "elements": [
+            "Immunization.status"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Immunizations",
+    "name": "Immunizations",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization",
+          "elements": [
+            "Immunization.vaccineCode"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Immunizations",
+    "name": "Lot Number",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization",
+          "elements": [
+            "Immunization.lotNumber"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Immunizations",
+    "name": "Vaccination Administration Date and Time",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization",
+          "elements": [
+            "Immunization.occurrence[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Laboratory",
+    "name": "Result Interpretation",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab",
+          "elements": [
+            "Observation.interpretation"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Laboratory",
+    "name": "Result Reference Range",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab",
+          "elements": [
+            "Observation.referenceRange"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Laboratory",
+    "name": "Result Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab",
+          "elements": [
+            "Observation.status"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab",
+          "elements": [
+            "DiagnosticReport.status"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Laboratory",
+    "name": "Result Unit of Measure",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab",
+          "elements": [
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Laboratory",
+    "name": "Specimen Condition Acceptability",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Laboratory",
+    "name": "Specimen Identifier",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Laboratory",
+    "name": "Specimen Source Site",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Laboratory",
+    "name": "Specimen Type",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab",
+          "elements": [
+            "Observation.specimen"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Laboratory",
+    "name": "Tests",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab",
+          "elements": [
+            "Observation.category",
+            "Observation.category:us-core",
+            "Observation.code"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab",
+          "elements": [
+            "DiagnosticReport.category",
+            "DiagnosticReport.category:LaboratorySlice",
+            "DiagnosticReport.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Laboratory",
+    "name": "Values/Results",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab",
+          "elements": [
+            "Observation.value[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab",
+          "elements": [
+            "DiagnosticReport.result"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Laboratory",
+    "name": "Laboratory Result Report Date and Time",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab",
+          "elements": [
+            "Observation.issued"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab",
+          "elements": [
+            "DiagnosticReport.effective[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Laboratory",
+    "name": "Specimen Collection Date and Time",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Medical Devices",
+    "name": "Device Type",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequest",
+          "elements": [
+            "DeviceRequest.code[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
+          "elements": [
+            "ServiceRequest.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Medical Devices",
+    "name": "Unique Device Identifier (UDI)",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Medications",
+    "name": "Days Supply",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense",
+          "elements": [
+            "MedicationDispense.daysSupply"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest",
+          "elements": [
+            "MedicationRequest.dispenseRequest.expectedSupplyDuration",
+            "MedicationRequest.dispenseRequest"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Medications",
+    "name": "Dispense Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense",
+          "elements": [
+            "MedicationDispense.status",
+            "MedicationDispense.whenPrepared"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined",
+          "elements": [
+            "MedicationDispense.status",
+            "MedicationDispense.whenPrepared"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Medications",
+    "name": "Dose",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministration",
+          "elements": [
+            "MedicationAdministration.dosage",
+            "MedicationAdministration.dosage.dose"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense",
+          "elements": [
+            "MedicationDispense.dosageInstruction.doseAndRate.dose[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest",
+          "elements": [
+            "MedicationRequest.dosageInstruction.doseAndRate.dose[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Medications",
+    "name": "Dose Unit of Measure",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministration",
+          "elements": [
+            "MedicationAdministration.dosage.dose"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense",
+          "elements": [
+            "MedicationDispense.dosageInstruction.doseAndRate.dose[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest",
+          "elements": [
+            "MedicationRequest.dosageInstruction.doseAndRate.dose[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Medications",
+    "name": "Indication",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest",
+          "elements": [
+            "MedicationRequest.reasonCode",
+            "MedicationRequest.reasonReference"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Medications",
+    "name": "Medication Adherence",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest",
+          "elements": [
+            "MedicationRequest.extension:medicationAdherence"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Medications",
+    "name": "Medication Administration",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministration",
+          "elements": [
+            "MedicationAdministration.medication[x]",
+            "MedicationAdministration.status",
+            "MedicationAdministration.dosage"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone",
+          "elements": [
+            "MedicationAdministration.medication[x]",
+            "MedicationAdministration.status",
+            "MedicationAdministration.dosage"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Medications",
+    "name": "Medication Instructions",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense",
+          "elements": [
+            "MedicationDispense.dosageInstruction",
+            "MedicationDispense.dosageInstruction.doseAndRate",
+            "MedicationDispense.dosageInstruction.text",
+            "MedicationDispense.dosageInstruction.timing"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest",
+          "elements": [
+            "MedicationRequest.dosageInstruction.asNeeded[x]",
+            "MedicationRequest.dosageInstruction",
+            "MedicationRequest.dosageInstruction.doseAndRate",
+            "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
+            "MedicationRequest.dosageInstruction.text",
+            "MedicationRequest.dosageInstruction.timing",
+            "MedicationRequest.dosageInstruction.timing.repeat",
+            "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]",
+            "MedicationRequest.dosageInstruction.timing.repeat.frequency",
+            "MedicationRequest.dosageInstruction.timing.repeat.frequencyMax",
+            "MedicationRequest.dosageInstruction.timing.repeat.period",
+            "MedicationRequest.dosageInstruction.timing.repeat.periodMax",
+            "MedicationRequest.dosageInstruction.timing.repeat.periodUnit"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Medications",
+    "name": "Medication Quantity",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense",
+          "elements": [
+            "MedicationDispense.quantity"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest",
+          "elements": [
+            "MedicationRequest.dispenseRequest.quantity",
+            "MedicationRequest.dispenseRequest"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Medications",
+    "name": "Medications",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medication",
+          "elements": [
+            "Medication.code"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministration",
+          "elements": [
+            "MedicationAdministration.medication[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense",
+          "elements": [
+            "MedicationDispense.medication[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest",
+          "elements": [
+            "MedicationRequest.medication[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Medications",
+    "name": "Route of Administration",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministration",
+          "elements": [
+            "MedicationAdministration.dosage.route"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense",
+          "elements": [
+            "MedicationDispense.dosageInstruction.route"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest",
+          "elements": [
+            "MedicationRequest.dosageInstruction.route"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Medications",
+    "name": "Date and Time Medication Administered",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministration",
+          "elements": [
+            "MedicationAdministration.effective[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone",
+          "elements": [
+            "MedicationAdministration.effective[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Medications",
+    "name": "Date and Time Medication Prescribed",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest",
+          "elements": [
+            "MedicationRequest.authoredOn"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Newborn's Delivery Information",
+    "name": "Birth Outcome",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.code",
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Newborn's Delivery Information",
+    "name": "Birth Weight",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.code",
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Newborn's Delivery Information",
+    "name": "Gestational Age at Delivery",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.code",
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Newborn's Delivery Information",
+    "name": "Birth Date and Time",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.code",
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Orders",
+    "name": "Clinical Test Order",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
+          "elements": [
+            "ServiceRequest.code",
+            "ServiceRequest.status",
+            "ServiceRequest.intent",
+            "ServiceRequest.authoredOn"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.code",
+            "ServiceRequest.status",
+            "ServiceRequest.intent",
+            "ServiceRequest.authoredOn"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Orders",
+    "name": "Diagnostic Imaging Order",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
+          "elements": [
+            "ServiceRequest.code",
+            "ServiceRequest.status",
+            "ServiceRequest.intent",
+            "ServiceRequest.authoredOn"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.code",
+            "ServiceRequest.status",
+            "ServiceRequest.intent",
+            "ServiceRequest.authoredOn"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Orders",
+    "name": "Laboratory Order",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
+          "elements": [
+            "ServiceRequest.code",
+            "ServiceRequest.status",
+            "ServiceRequest.intent",
+            "ServiceRequest.authoredOn"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.code",
+            "ServiceRequest.status",
+            "ServiceRequest.intent",
+            "ServiceRequest.authoredOn"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Orders",
+    "name": "Medical Device Order",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequest",
+          "elements": [
+            "DeviceRequest.code[x]",
+            "DeviceRequest.modifierExtension:doNotPerform",
+            "DeviceRequest.authoredOn",
+            "DeviceRequest.status"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Orders",
+    "name": "Medication Order",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest",
+          "elements": [
+            "MedicationRequest.medication[x]",
+            "MedicationRequest.intent",
+            "MedicationRequest.status",
+            "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
+            "MedicationRequest.dispenseRequest.validityPeriod"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationprohibited",
+          "elements": [
+            "MedicationRequest.medication[x]",
+            "MedicationRequest.intent",
+            "MedicationRequest.status",
+            "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
+            "MedicationRequest.dispenseRequest.validityPeriod"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Orders",
+    "name": "Nutrition Order",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-nutritionorder",
+          "elements": [
+            "NutritionOrder.intent"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Orders",
+    "name": "Portable Medical Order",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
+          "elements": [
+            "ServiceRequest.code",
+            "ServiceRequest.status",
+            "ServiceRequest.intent",
+            "ServiceRequest.authoredOn"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.code",
+            "ServiceRequest.status",
+            "ServiceRequest.intent",
+            "ServiceRequest.authoredOn"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Orders",
+    "name": "Procedure Order",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
+          "elements": [
+            "ServiceRequest.code",
+            "ServiceRequest.status",
+            "ServiceRequest.intent",
+            "ServiceRequest.authoredOn"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.code",
+            "ServiceRequest.status",
+            "ServiceRequest.intent",
+            "ServiceRequest.authoredOn"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Current Address",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.address",
+            "Patient.address.city",
+            "Patient.address.line",
+            "Patient.address.period",
+            "Patient.address.postalCode",
+            "Patient.address.state",
+            "Patient.address.use"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Date of Birth",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.birthDate"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Date of Death",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.deceased[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Email Address",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.telecom",
+            "Patient.telecom.system",
+            "Patient.telecom.use",
+            "Patient.telecom.value"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Ethnicity",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.extension:ethnicity"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "First Name",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.name",
+            "Patient.name.given",
+            "Patient.name.period",
+            "Patient.name.use"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Interpreter Needed",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.extension:interpreterRequired"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Last Name",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.name",
+            "Patient.name.family",
+            "Patient.name.period",
+            "Patient.name.use"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Middle Name (Including middle initial)",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.name",
+            "Patient.name.given",
+            "Patient.name.period",
+            "Patient.name.use"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Name Suffix",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.name",
+            "Patient.name.period",
+            "Patient.name.suffix",
+            "Patient.name.use"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Occupation",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Occupation Industry",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Patient Identifier",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.identifier",
+            "Patient.identifier.system",
+            "Patient.identifier.value"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Phone Number",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.telecom",
+            "Patient.telecom.system",
+            "Patient.telecom.use",
+            "Patient.telecom.value"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Phone Number Type",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.telecom.use"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Preferred Language",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.communication",
+            "Patient.communication.language"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Previous Address",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.address",
+            "Patient.address.city",
+            "Patient.address.line",
+            "Patient.address.period",
+            "Patient.address.postalCode",
+            "Patient.address.state",
+            "Patient.address.use"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Previous Name",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.name",
+            "Patient.name.family",
+            "Patient.name.given",
+            "Patient.name.period",
+            "Patient.name.suffix",
+            "Patient.name.use"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Race",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.extension:race"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Related Person's Name",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson",
+          "elements": [
+            "RelatedPerson.name"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Relationship Type",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-relatedperson",
+          "elements": [
+            "RelatedPerson.relationship"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Sex",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.extension:sex"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Patient Demographics/Information",
+    "name": "Tribal Affiliation",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient",
+          "elements": [
+            "Patient.extension:tribalAffiliation"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Pregnancy Information",
+    "name": "Delivery Procedures",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure",
+          "elements": [
+            "Procedure.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Pregnancy Information",
+    "name": "Estimated Date of Delivery",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.code",
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Pregnancy Information",
+    "name": "Fetal Presentation",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.code",
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Pregnancy Information",
+    "name": "Gestational Age",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.code",
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Pregnancy Information",
+    "name": "Gravidity",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.code",
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Pregnancy Information",
+    "name": "Parity",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.code",
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Pregnancy Information",
+    "name": "Pregnancy Outcomes",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.code",
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Pregnancy Information",
+    "name": "Preterm Births",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.code",
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Pregnancy Information",
+    "name": "Term Births",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.code",
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Pregnancy Information",
+    "name": "Delivery Date and Time",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation",
+          "elements": [
+            "Observation.code",
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Problems",
+    "name": "Condition Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+          "elements": [
+            "Condition.clinicalStatus"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Problems",
+    "name": "Date of Diagnosis",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+          "elements": [
+            "Condition.recordedDate"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis",
+          "elements": [
+            "Condition.recordedDate"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Problems",
+    "name": "Date of Onset",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+          "elements": [
+            "Condition.onset[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis",
+          "elements": [
+            "Condition.onset[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Problems",
+    "name": "Date of Resolution",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+          "elements": [
+            "Condition.abatement[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis",
+          "elements": [
+            "Condition.abatement[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Problems",
+    "name": "Problems",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+          "elements": [
+            "Condition.code",
+            "Condition.severity"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Problems",
+    "name": "SDOH Problems/Health Concerns",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+          "elements": [
+            "Condition.code",
+            "Condition.severity"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Procedures",
+    "name": "Performance Time",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure",
+          "elements": [
+            "Procedure.performed[x]",
+            "Procedure.extension:recorded"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
+          "elements": [
+            "DiagnosticReport.effective[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization",
+          "elements": [
+            "Immunization.occurrence[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Procedures",
+    "name": "Procedure Reason Code",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure",
+          "elements": [
+            "Procedure.reasonCode"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
+          "elements": [
+            "ServiceRequest.reasonCode",
+            "ServiceRequest.reasonReference"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone",
+          "elements": [
+            "Procedure.reasonCode"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.reasonCode",
+            "ServiceRequest.reasonReference"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Procedures",
+    "name": "Procedure Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure",
+          "elements": [
+            "Procedure.status",
+            "Procedure.statusReason"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone",
+          "elements": [
+            "Procedure.status",
+            "Procedure.statusReason"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Procedures",
+    "name": "Procedure Type",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure",
+          "elements": [
+            "Procedure.code"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
+          "elements": [
+            "ServiceRequest.code"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone",
+          "elements": [
+            "Procedure.code"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Procedures",
+    "name": "Procedures",
+    "notes": "In QI-Core, information about principal procedure is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. Implementers may determine the appropriate implementation approach to support this USCDI+ Quality data element. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure",
+          "elements": [
+            "Procedure.code",
+            "Procedure.partOf"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone",
+          "elements": [
+            "Procedure.code",
+            "Procedure.partOf"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Procedures",
+    "name": "Reason for Referral",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure",
+          "elements": [
+            "Procedure.reasonCode",
+            "Procedure.reasonReference"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
+          "elements": [
+            "ServiceRequest.reasonCode",
+            "ServiceRequest.reasonReference"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone",
+          "elements": [
+            "Procedure.reasonCode",
+            "Procedure.reasonReference"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.reasonCode",
+            "ServiceRequest.reasonReference"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Procedures",
+    "name": "SDOH Interventions",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure",
+          "elements": [
+            "Procedure.code"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
+          "elements": [
+            "ServiceRequest.code"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone",
+          "elements": [
+            "Procedure.code"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.code"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Provenance",
+    "name": "Author",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Provenance",
+    "name": "Author Organization",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Provenance",
+    "name": "Author Role",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Provenance",
+    "name": "Author Time Stamp",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Referrals",
+    "name": "Referral Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
+          "elements": [
+            "ServiceRequest.status"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.status"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Referrals",
+    "name": "Referral Date and Time",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
+          "elements": [
+            "ServiceRequest.authoredOn"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.authoredOn"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Task",
+    "name": "Task Code",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-task",
+          "elements": [
+            "Task.code",
+            "Task.focus",
+            "Task.basedOn",
+            "Task.executionPeriod"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected",
+          "elements": [
+            "Task.code",
+            "Task.focus",
+            "Task.basedOn",
+            "Task.executionPeriod"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Task",
+    "name": "Task Status",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-task",
+          "elements": [
+            "Task.status",
+            "Task.statusReason",
+            "Task.reasonCode"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected",
+          "elements": [
+            "Task.status",
+            "Task.statusReason",
+            "Task.reasonCode"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Vital Signs",
+    "name": "Average Blood Pressure",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Vital Signs",
+    "name": "BMI",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Vital Signs",
+    "name": "BMI Percentile (2 - 20 years)",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Vital Signs",
+    "name": "Body Height",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Vital Signs",
+    "name": "Body Temperature",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Vital Signs",
+    "name": "Body Weight",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Vital Signs",
+    "name": "Diastolic Blood Pressure",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Vital Signs",
+    "name": "Head Occipital-frontal Circumference Percentile (Birth - 36 Months)",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Vital Signs",
+    "name": "Heart Rate",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Vital Signs",
+    "name": "Inhaled Oxygen Concentration",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Vital Signs",
+    "name": "Pain Severity",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+
+      ],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-screening-assessment",
+          "elements": [
+            "Observation.code",
+            "Observation.value[x]"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "class": "Vital Signs",
+    "name": "Pulse Oximetry",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Vital Signs",
+    "name": "Respiratory Rate",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Vital Signs",
+    "name": "Systolic Blood Pressure",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  },
+  {
+    "class": "Vital Signs",
+    "name": "Weight-for-length Percentile (Birth - 24 Months)",
+    "notes": "",
+    "mappings": {
+      "usCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height|9.0.0"
+        }
+      ],
+      "usQualityCore": [
+
+      ]
+    }
+  }
+]

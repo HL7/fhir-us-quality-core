@@ -1,5 +1,5 @@
 Instance: done-example-of-us-quality-core-medication-administration
-InstanceOf: USQualityCoreMedicationAdministration
+InstanceOf: USQualityCoreMedicationAdministrationDone
 Title: "MedicationAdministration positive example"
 Description: "Intravenous example of MedicationAdministration (using the Positive Profile)"
 Usage: #example

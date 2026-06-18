@@ -12,18 +12,10 @@ Description: "Profile of Encounter for decision support/quality metrics. Defines
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
-* identifier ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Identifier(s) by which this encounter is known"
-  * system ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) The namespace for the identifier value"
-  * value ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) The value that is unique"
-* status ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) planned | arrived | triaged | in-progress | onleave | finished | cancelled +"
+* identifier ^short = "Identifier(s) by which this encounter is known"
+  * system ^short = "The namespace for the identifier value"
+  * value ^short = "The value that is unique"
+* status ^short = "planned | arrived | triaged | in-progress | onleave | finished | cancelled +"
   * ^definition = "planned | arrived | triaged | in-progress | onleave | finished | cancelled +."
 * class 1..1 MS
 * class only Coding
@@ -36,22 +28,16 @@ Description: "Profile of Encounter for decision support/quality metrics. Defines
   * ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
   * ^binding.extension.valueString = "EncounterClass"
   * ^binding.description = "Classification of the encounter."
-* type ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Specific type of encounter"
+* type ^short = "Specific type of encounter"
   * ^definition = "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation)."
-* priority ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Indicates the urgency of the encounter"
+* priority ^short = "Indicates the urgency of the encounter"
 * subject only Reference(USQualityCorePatient)
   * ^short = "The patient or group present at the encounter"
 * participant ^short = "List of participants involved in the encounter"
   * individual only Reference(USQualityCorePractitioner or USQualityCorePractitionerRole or USQualityCoreRelatedPerson)
     * ^short = "Persons involved in the encounter other than the patient"
     * ^comment = "Should include US Quality Core RelatedPerson as a possible participant, but USCore-Encounter only allows USCore-Practitioner."
-* period ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) The start and end time of the encounter"
+* period ^short = "The start and end time of the encounter"
   * ^definition = "The start and end time of the encounter."
 * partOf
   * ^mustSupport = false
@@ -65,18 +51,12 @@ Description: "Profile of Encounter for decision support/quality metrics. Defines
   * ^base.min = 0
   * ^base.max = "*"
   * ^isModifier = false
-* diagnosis ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) The list of diagnosis relevant to this encounter"
+* diagnosis ^short = "The list of diagnosis relevant to this encounter"
   * extension contains USQualityCoreDiagnosisPresentOnAdmission named diagnosisPresentOnAdmission 0..1 MS
   * extension[diagnosisPresentOnAdmission]
-    * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) onAdmission"
+    * ^short = "onAdmission"
     * ^definition = "Indicator of whether the Encounter diagnosis was present at the time of admission."
-* hospitalization ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Details about the admission to a healthcare service"
+* hospitalization ^short = "Details about the admission to a healthcare service"
   // SUSHI retains inherited targetProfile array entries unless each slot is overwritten.
   * origin ^mustSupport = false
   * origin ^type[0].targetProfile[0] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location"
@@ -85,17 +65,13 @@ Description: "Profile of Encounter for decision support/quality metrics. Defines
   * destination ^type[0].targetProfile[0] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location"
   * destination ^type[0].targetProfile[1] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-location"
   * dischargeDisposition from ClinicalDischargeDisposition (extensible)
-    * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) Category or kind of location after discharge"
+    * ^short = "Category or kind of location after discharge"
     * ^definition = "Category or kind of location after discharge."
-* location ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) List of locations where the patient has been"
+* location ^short = "List of locations where the patient has been"
   * location only Reference(USQualityCoreLocation)
-    * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) Location the encounter takes place"
+    * ^short = "Location the encounter takes place"
   * period ^short = "Time period during which the patient was present at the location"
 * serviceProvider only Reference(USQualityCoreOrganization)
   * ^short = "The organization (facility) responsible for this encounter"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreEncounter

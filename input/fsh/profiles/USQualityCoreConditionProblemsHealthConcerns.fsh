@@ -25,14 +25,10 @@ Description: "Profile of Condition for decision support/quality metrics. Defines
   * ^base.min = 0
   * ^base.max = "*"
   * ^isModifier = false
-* clinicalStatus ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) active | recurrence | relapse | inactive | remission | resolved"
+* clinicalStatus ^short = "active | recurrence | relapse | inactive | remission | resolved"
   * ^definition = "The clinical status of the condition."
   * ^comment = "The data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity."
-* verificationStatus ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) unconfirmed | provisional | differential | confirmed | refuted | entered-in-error"
+* verificationStatus ^short = "unconfirmed | provisional | differential | confirmed | refuted | entered-in-error"
   * ^definition = "The verification status to support the clinical status of the condition."
 * category 1..* MS
 * category only CodeableConcept
@@ -47,29 +43,20 @@ Description: "Profile of Condition for decision support/quality metrics. Defines
   * ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
   * ^binding.extension.valueString = "ConditionCategory"
   * ^binding.description = "A category assigned to the condition."
-* category[us-core] ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) problem-list-item | health-concern"
-* severity ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Subjective severity of condition"
+* category[us-core] ^short = "problem-list-item | health-concern"
+* category[screening-assessment] MS
+* severity ^short = "Subjective severity of condition"
   * ^definition = "A subjective assessment of the severity of the condition as evaluated by the clinician."
   * ^comment = "Coding of the severity with a terminology is preferred, where possible."
-* code ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Identification of the condition, problem or diagnosis"
+* code ^short = "Identification of the condition, problem or diagnosis"
   * ^definition = "Identification of the condition, problem or diagnosis."
 * subject only Reference(USQualityCorePatient or Group)
   * ^short = "Who has the condition?"
 * onset[x] only dateTime or Age or Period or Range
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Estimated or actual date, date-time, or age"
+  * ^short = "Estimated or actual date, date-time, or age"
 * abatement[x] only dateTime or Age or Period or Range
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) When in resolution/remission"
-* recordedDate ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Date record was first recorded"
+  * ^short = "When in resolution/remission"
+* recordedDate ^short = "Date record was first recorded"
   * ^definition = "The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date."
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreConditionProblemsHealthConcerns

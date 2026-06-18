@@ -22,24 +22,16 @@ Description: "Profile of AllergyIntolerance for decision support/quality metrics
 * category ^short = "food | medication | environment | biologic"
 * criticality ^short = "low | high | unable-to-assess"
 * code only CodeableConcept
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Code that identifies the allergy or intolerance"
+  * ^short = "Code that identifies the allergy or intolerance"
   * ^alias = "Code"
 * patient only Reference(USQualityCorePatient)
   * ^short = "Who the sensitivity is for"
 * onset[x] only dateTime or Age or Period or Range
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) When allergy or intolerance was identified"
+  * ^short = "When allergy or intolerance was identified"
 * recordedDate only dateTime
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Date first version of the resource instance was recorded"
-* lastOccurrence ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Date(/time) of last known occurrence of a reaction"
-* reaction ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Adverse Reaction Events linked to exposure to substance"
+  * ^short = "Date first version of the resource instance was recorded"
+* lastOccurrence ^short = "Date(/time) of last known occurrence of a reaction"
+* reaction ^short = "Adverse Reaction Events linked to exposure to substance"
   * severity ^short = "mild | moderate | severe (of event as a whole)"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreAllergyIntolerance

@@ -20,23 +20,15 @@ Description: "Profile of Task for decision support/quality metrics. Defines the 
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * obeys tsk-1
 * . ^mustSupport = false
-* basedOn ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Request fulfilled by this task"
-* status ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) draft​ | requested​ | received​ | accepted​ | rejected | ready​ | cancelled​ | in-progress​ | on-hold​ | failed​ | completed | entered-in-error"
-* statusReason ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Reason for current status"
+* basedOn ^short = "Request fulfilled by this task"
+* status ^short = "draft | requested | received | accepted | rejected | ready | cancelled | in-progress | on-hold | failed | completed | entered-in-error"
+* statusReason ^short = "Reason for current status"
 * intent ^short = "unknown | proposal | plan | order | original-order | reflex-order | filler-order | instance"
 * priority 1..1
   * ^short = "routine | urgent | asap | stat"
 * code 1..1
 * code from TaskCode (preferred)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Task Type"
+  * ^short = "Task Type"
   * ^condition = "tsk-1"
   * ^binding.description = "Codes to identify what the task involves. These will typically be specific to a particular workflow"
   * extension contains $codeOptions named codeOptions 0..1
@@ -45,9 +37,7 @@ Description: "Profile of Task for decision support/quality metrics. Defines the 
     * ^condition = "tsk-1"
 * focus 0..1
 * focus only Reference(Resource)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) What task is acting on"
+  * ^short = "What task is acting on"
   * ^mustSupport = false
 * for only Reference(USQualityCorePatient)
   * ^short = "Beneficiary of the Task"
@@ -56,11 +46,8 @@ Description: "Profile of Task for decision support/quality metrics. Defines the 
   * ^short = "Healthcare event during which this task originated"
   * ^mustSupport = false
 * executionPeriod 1..1
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Start and end time of execution"
+  * ^short = "Start and end time of execution"
   * ^mustSupport = false
-* reasonCode ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality)"
-  * ^mustSupport = false
+* reasonCode ^mustSupport = false
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreTask

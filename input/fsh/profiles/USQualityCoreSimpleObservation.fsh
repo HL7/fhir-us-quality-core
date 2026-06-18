@@ -35,20 +35,13 @@ Description: "Profile of Simple Observation for decision support/quality metrics
   * ^isModifierReason = "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them"
   * ^isSummary = false
 * partOf ^short = "Part of referenced event"
-* status ^extension[1].url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension[=].valueBoolean = true
-  * ^short = "(USCDI+ Quality) registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
+* status ^short = "registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
 * category 1..*
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Classification of type of observation"
-* category[us-core] ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) US Core classification of type of observation"
+  * ^short = "Classification of type of observation"
+* category[us-core] ^short = "US Core classification of type of observation"
+* category[us-core] MS
 * code from LOINCCodes (preferred)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Type of observation (code / type)"
+  * ^short = "Type of observation (code / type)"
   * ^binding.description = "This value set specifies the type of observation"
 * subject 1..1 SU
 * subject only Reference(USQualityCorePatient)
@@ -62,9 +55,7 @@ Description: "Profile of Simple Observation for decision support/quality metrics
   * ^isModifier = false
 * effective[x] 0..1 SU
 * effective[x] only dateTime or Period or Timing or instant
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Clinically relevant time/time-period for observation"
+  * ^short = "Clinically relevant time/time-period for observation"
   * ^definition = "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the \"physiologically relevant time\". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself."
   * ^comment = "At least a date should be present unless this observation is a historical report.  For recording imprecise or \"fuzzy\" times (For example, a blood glucose measurement taken \"after breakfast\") use the [Timing](http://hl7.org/fhir/R4/datatypes.html#timing) datatype which allow the measurement to be tied to regular life events."
   * ^requirements = "Knowing when an observation was deemed true is important to its relevance as well as determining trends."
@@ -77,13 +68,11 @@ Description: "Profile of Simple Observation for decision support/quality metrics
   * ^short = "Who is responsible for the observation"
 * value[x] 0..1 SU
 * value[x] only Quantity or CodeableConcept or string or boolean or integer or Range or Ratio or SampledData or time or dateTime or Period
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
   * ^slicing.discriminator.type = #type
   * ^slicing.discriminator.path = "$this"
   * ^slicing.ordered = false
   * ^slicing.rules = #open
-  * ^short = "(USCDI+ Quality) Actual result"
+  * ^short = "Actual result"
   * ^definition = "The information determined as a result of making the observation, if the information has a simple value."
   * ^comment = "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](http://hl7.org/fhir/R4/observation.html#notes) below."
   * ^requirements = "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations."
@@ -117,3 +106,5 @@ Description: "Profile of Simple Observation for decision support/quality metrics
   * ^base.max = "*"
   * ^mustSupport = false
   * ^isModifier = false
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreSimpleObservation

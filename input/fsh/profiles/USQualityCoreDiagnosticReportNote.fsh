@@ -14,9 +14,7 @@ Description: "Profile of DiagnosticReport for Note exchange for decision support
 * status 1..1 MS ?! SU
 * status only code
 * status from DiagnosticReportStatus (required)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) registered | partial | preliminary | final +"
+  * ^short = "registered | partial | preliminary | final +"
   * ^definition = "The status of the diagnostic report."
   * ^requirements = "Diagnostic services routinely issue provisional/incomplete reports, and sometimes withdraw previously released reports."
   * ^base.path = "DiagnosticReport.status"
@@ -30,15 +28,11 @@ Description: "Profile of DiagnosticReport for Note exchange for decision support
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
   * ^short = "Service Category"
-* category[us-core] ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Service category"
+* category[us-core] ^short = "Service category"
 * code 1..1 SU
 * code only CodeableConcept
 * code from http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes (extensible)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) US Quality Core Report Code"
+  * ^short = "US Quality Core Report Code"
   * ^definition = "The test, panel, report, or note that was ordered."
   * ^comment = "The typical patterns for codes are:  1)  a LOINC code either as a translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists."
   * ^alias = "Type"
@@ -53,9 +47,7 @@ Description: "Profile of DiagnosticReport for Note exchange for decision support
   * ^short = "Health care event when test ordered"
 * effective[x] 0..1 SU
 * effective[x] only dateTime or Period
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Diagnostically relevant time (typically the time of the procedure)"
+  * ^short = "Diagnostically relevant time (typically the time of the procedure)"
   * ^base.path = "DiagnosticReport.effective[x]"
   * ^base.min = 0
   * ^base.max = "1"
@@ -64,9 +56,9 @@ Description: "Profile of DiagnosticReport for Note exchange for decision support
 * performer only Reference(USQualityCorePractitioner or USQualityCoreOrganization)
   * ^short = "Responsible Diagnostic Service"
 * result only Reference(USQualityCoreObservationLab or USQualityCoreObservationClinicalResult)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Observations"
+  * ^short = "Observations"
   * ^short = "Reference to full details of imaging associated with the diagnostic report"
 * imagingStudy ^type[0].targetProfile[0] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy"
 * media ^short = "Key images associated with this report"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreDiagnosticReportNote

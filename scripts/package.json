@@ -1,0 +1,16 @@
+{
+  "name": "@us-quality-core/scripts",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Helper scripts for the US Quality Core Implementation Guide.",
+  "type": "commonjs",
+  "scripts": {
+    "generate": "npm run generate:rest && npm run generate:flags && npm run generate:view-data",
+    "generate:rest": "node generate_rest.js",
+    "generate:view-data": "node generate_view_data.js",
+    "generate:flags": "node generate_flags.js"
+  },
+  "dependencies": {
+    "fsh-sushi": "3.20.0"
+  }
+}

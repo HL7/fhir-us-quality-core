@@ -11,4 +11,4 @@ Description: "Positive profile of Procedure for decision support/quality metrics
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * status from USQualityCorePositiveEventStatus (required)
-  * ^short = "preparation | in-progress | ​on-hold​ | stopped​ | completed"
+  * ^short = "preparation | in-progress | on-hold | stopped | completed"

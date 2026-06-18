@@ -17,18 +17,12 @@ Description: "Profile of ServiceRequest for decision support/quality metrics. De
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * obeys srq-1
-* status ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) draft | active | on-hold | revoked | completed | entered-in-error | unknown"
-* intent ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
+* status ^short = "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
+* intent ^short = "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
 * doNotPerform 0..1
 * doNotPerform only boolean
   * ^short = "True if service/procedure should not be performed"
-* code ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) What is being requested/ordered"
+* code ^short = "What is being requested/ordered"
   * ^condition = "srq-1"
   * extension contains $codeOptions named codeOptions 0..1
   * extension[codeOptions] ^short = "Url of a value set of candidate services"
@@ -40,19 +34,15 @@ Description: "Profile of ServiceRequest for decision support/quality metrics. De
 * occurrence[x] only dateTime or Period or Timing
   * ^short = "When service should occur"
 * authoredOn 0..1
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Date request signed"
+  * ^short = "Date request signed"
 * requester only Reference(USQualityCorePractitioner or USQualityCorePractitionerRole or USQualityCoreOrganization or USQualityCorePatient or USQualityCoreRelatedPerson or http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0)
-* reasonCode ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Explanation/Justification for procedure or service"
+* reasonCode ^short = "Explanation/Justification for procedure or service"
 * reasonReference 0..*
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Explanation/Justification for service or service"
+  * ^short = "Explanation/Justification for service or service"
   * ^type[0].targetProfile[0] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis"
   * ^type[0].targetProfile[1] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns"
   * ^type[0].targetProfile[2] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note"
   * ^type[0].targetProfile[3] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
   * ^type[0].targetProfile[4] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreServiceRequest

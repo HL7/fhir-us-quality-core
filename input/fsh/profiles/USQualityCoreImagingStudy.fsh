@@ -57,3 +57,5 @@ Description: "Profile of ImagingStudy for decision support/quality metrics. Defi
   * ^base.min = 1
   * ^base.max = "1"
   * ^isModifier = false
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreImagingStudy

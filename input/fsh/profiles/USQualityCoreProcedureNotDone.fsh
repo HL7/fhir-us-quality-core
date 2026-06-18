@@ -13,33 +13,19 @@ Description: "Negative profile of Procedure for decision support/quality metrics
 * . ^mustSupport = false
 * extension[recorded] 1..1
 * extension[recorded] only $extension-Procedure.recorded
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) When the procedure was first captured in the subject's record"
-* partOf ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Part of referenced event"
+  * ^short = "When the procedure was first captured in the subject's record"
+* partOf ^short = "Part of referenced event"
 * status 1..1
 * status only code
 * status = #not-done (exactly)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) not-done"
+  * ^short = "not-done"
 * statusReason 1..1
 * statusReason from USQualityCoreNegationReasonCodes (extensible)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Reason for the current status"
+  * ^short = "Reason for the current status"
   * ^binding.description = "The reason the procedure was not done"
-* code ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) What procedure"
-* performed[x] ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) When the procedure was performed"
-* reasonCode ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Coded reason procedure performed"
-* reasonReference ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) The justification that the procedure was performed"
+* code ^short = "What procedure"
+* performed[x] ^short = "When the procedure was performed"
+* reasonCode ^short = "Coded reason procedure performed"
+* reasonReference ^short = "The justification that the procedure was performed"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreProcedureNotDone

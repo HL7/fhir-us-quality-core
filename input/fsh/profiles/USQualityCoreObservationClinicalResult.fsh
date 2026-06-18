@@ -11,9 +11,7 @@ Description: "This profile sets minimum expectations for the Observation resourc
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * ^copyright = "Used by permission of HL7 International, all rights reserved Creative Commons License"
-* status ^extension[1].url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension[=].valueBoolean = true
-  * ^short = "(USCDI+ Quality) registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
+* status ^short = "registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
 * category 1..*
 * category from $observation-category-vs (preferred)
   * ^slicing.discriminator.type = #value
@@ -45,22 +43,16 @@ Description: "This profile sets minimum expectations for the Observation resourc
   * ^isSummary = false
 * code SU
 * code from LOINCCodes (extensible)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Clinical Test or Procedure Name"
+  * ^short = "Clinical Test or Procedure Name"
   * ^isModifier = false
 * subject 1..
 * subject only Reference(USQualityCorePatient or Group or USCoreDeviceProfile or USQualityCoreLocation)
   * ^short = "Who and/or what the observation is about"
 * effective[x] only dateTime or Period or Timing or instant
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Clinically relevant time/time-period for observation"
+  * ^short = "Clinically relevant time/time-period for observation"
   * ^isModifier = false
 * value[x] only Quantity or CodeableConcept or string or boolean or integer or Range or Ratio or SampledData or time or dateTime or Period
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Result Value"
+  * ^short = "Result Value"
 * dataAbsentReason from DataAbsentReason (extensible)
   * ^short = "Why the result is missing"
   * ^isModifier = false
@@ -68,3 +60,5 @@ Description: "This profile sets minimum expectations for the Observation resourc
   * ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
   * ^binding.extension.valueString = "ObservationValueAbsentReason"
   * ^binding.description = "Codes specifying why the result (`Observation.value[x]`) is missing."
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreObservationClinicalResult

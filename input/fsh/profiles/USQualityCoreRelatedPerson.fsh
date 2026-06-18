@@ -15,19 +15,12 @@ Description: "Profile of RelatedPerson for decision support/quality metrics. Def
   * ^short = "Whether this related person's record is in active use"
 * patient only Reference(USQualityCorePatient)
   * ^short = "The patient this person is related to"
-* relationship ^extension[0].url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension[=].valueBoolean = true
-  * ^short = "(USCDI+ Quality) The nature of the relationship"
+* relationship ^short = "The nature of the relationship"
   * ^condition = "us-core-14"
-* name ^extension[0].url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension[=].valueBoolean = true
-  * ^short = "(USCDI+ Quality) A name associated with the person"
+* name ^short = "A name associated with the person"
   * ^condition = "us-core-14"
-* telecom ^extension[0].url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension[=].valueBoolean = true
-  * ^short = "(USCDI+ Quality) A contact detail for the person"
-* address ^extension[0].url = "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement"
-  * ^extension[=].valueBoolean = true
-  * ^extension[+].url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension[=].valueBoolean = true
-  * ^short = "(USCDI+ Quality) Address where the related person can be contacted or visited"
+* telecom ^short = "A contact detail for the person"
+* address ^extension[http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement].valueBoolean = true
+  * ^short = "Address where the related person can be contacted or visited"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreRelatedPerson

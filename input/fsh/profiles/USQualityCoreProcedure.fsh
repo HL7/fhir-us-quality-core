@@ -20,25 +20,15 @@ Description: "Profile of Procedure for decision support/quality metrics. Defines
 * . ^mustSupport = false
 * implicitRules ^short = "A set of rules under which this content was created"
 * extension contains $extension-Procedure.recorded named recorded 1..1
-* extension[recorded] ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) When the procedure was first captured in the subject's record"
+* extension[recorded] ^short = "When the procedure was first captured in the subject's record"
 * basedOn 0..*
 * basedOn only Reference(USQualityCoreCarePlan or USQualityCoreServiceRequest)
   * ^short = "A request for this procedure"
   * ^mustSupport = false
-* partOf ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Part of referenced event"
-* status ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown"
-* statusReason ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Reason for current status"
-* code ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) What procedure"
+* partOf ^short = "Part of referenced event"
+* status ^short = "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown"
+* statusReason ^short = "Reason for current status"
+* code ^short = "What procedure"
   * ^condition = "prc-1"
   * extension contains $codeOptions named codeOptions 0..1
   * extension[codeOptions] ^short = "Url of a value set of candidate procedures"
@@ -46,21 +36,17 @@ Description: "Profile of Procedure for decision support/quality metrics. Defines
     * ^condition = "prc-1"
 * subject only Reference(USQualityCorePatient)
   * ^short = "Who the procedure was performed on"
-* performed[x] ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) When the procedure was performed"
+* performed[x] ^short = "When the procedure was performed"
 * performer.actor only Reference(USQualityCorePractitioner or USQualityCoreOrganization or USQualityCorePatient or USQualityCoreRelatedPerson)
   * ^mustSupport = false
-* reasonCode ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Coded reason procedure performed"
+* reasonCode ^short = "Coded reason procedure performed"
 // SUSHI retains inherited targetProfile array entries unless each slot is overwritten.
 * reasonReference
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) The justification that the procedure was performed"
+  * ^short = "The justification that the procedure was performed"
   * ^type[0].targetProfile[0] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis"
   * ^type[0].targetProfile[1] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns"
   * ^type[0].targetProfile[2] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note"
   * ^type[0].targetProfile[3] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
   * ^type[0].targetProfile[4] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreProcedure

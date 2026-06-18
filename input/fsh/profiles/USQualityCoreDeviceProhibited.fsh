@@ -19,9 +19,7 @@ Description: "Negation profile of DeviceRequest for decision support/quality met
   * value[x] only boolean
   * value[x] = true (exactly)
     * ^short = "Value of extension"
-* code[x] ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Device requested"
+* code[x] ^short = "Device requested"
 * authoredOn 1..1
   * ^short = "When recorded"
 * reasonCode only CodeableConcept

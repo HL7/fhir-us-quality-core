@@ -11,9 +11,7 @@ Description: "Profile of Medication for decision support/quality metrics. Define
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
-* code ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Codes that identify this medication"
+* code ^short = "Codes that identify this medication"
 * manufacturer
   * ^mustSupport = false
   * ^type[0].targetProfile[0] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization"
@@ -24,3 +22,5 @@ Description: "Profile of Medication for decision support/quality metrics. Define
   * isActive 0..1
   * isActive only boolean
     * ^mustSupport = false
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedication

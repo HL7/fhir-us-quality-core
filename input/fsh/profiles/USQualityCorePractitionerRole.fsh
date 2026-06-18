@@ -12,59 +12,41 @@ Description: "Profile of PractitionerRole for decision support/quality metrics. 
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * identifier 1..*
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Business Identifiers that are specific to a role/location"
+  * ^short = "Business Identifiers that are specific to a role/location"
   * use 1..1
   * use only code
     * ^short = "usual | official | temp | secondary | old (If known)"
   * system 1..1
   * system only uri
-    * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) The namespace for the identifier value"
+    * ^short = "The namespace for the identifier value"
   * value 1..1
   * value only string
-    * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) The value that is unique"
+    * ^short = "The value that is unique"
 * active 1..1
   * ^short = "Whether this practitioner role record is in active use"
 * period 1..1
   * ^short = "The period during which the practitioner is authorized to perform in these role(s)"
 * practitioner only Reference(USQualityCorePractitioner)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Practitioner that is able to provide the defined services for the organization"
+  * ^short = "Practitioner that is able to provide the defined services for the organization"
 * organization only Reference(USQualityCoreOrganization)
   * ^short = "Organization where the roles are available"
 * code from http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.30 (extensible)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Roles which this practitioner may perform"
+  * ^short = "Roles which this practitioner may perform"
   * ^binding.description = "Indicates specific responsibility of an individual within the care team, such as Primary physician, Team coordinator, Caregiver, etc."
 * specialty from http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066 (extensible)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Specific specialty of the practitioner"
+  * ^short = "Specific specialty of the practitioner"
 * location only Reference(USQualityCoreLocation)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) The location(s) at which this practitioner provides care"
+  * ^short = "The location(s) at which this practitioner provides care"
 * healthcareService ^condition = "us-core-13"
-* telecom ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Contact details that are specific to the role/location/service"
+* telecom ^short = "Contact details that are specific to the role/location/service"
   * ^condition = "pd-1"
   * system 1..1
   * system only code
-    * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) phone | fax | email | pager | url | sms | other"
+    * ^short = "phone | fax | email | pager | url | sms | other"
   * value 1..1
   * value only string
-    * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) The actual contact point details"
+    * ^short = "The actual contact point details"
 * endpoint ^short = "Technical endpoints providing access to services operated for the practitioner with this role"
   * ^condition = "pd-1"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCorePractitionerRole

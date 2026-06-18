@@ -20,14 +20,10 @@ Description: "Profile of MedicationAdministration for decision support/quality m
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * obeys qma-1
 * . ^mustSupport = false
-* status ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) in-progress | not-done | on-hold | completed | entered-in-error | stopped | unknown"
+* status ^short = "in-progress | not-done | on-hold | completed | entered-in-error | stopped | unknown"
 * medication[x] only CodeableConcept or Reference(USQualityCoreMedication)
 * medication[x] from $vsac-medication-clinical-drug (preferred)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) What was administered"
+  * ^short = "What was administered"
   * ^condition = "qma-1"
   * ^binding.description = "The set of RxNorm codes to represent medications"
   * extension contains $codeOptions named codeOptions 0..1
@@ -38,20 +34,14 @@ Description: "Profile of MedicationAdministration for decision support/quality m
   * ^short = "Who received medication"
 * context only Reference(USQualityCoreEncounter or EpisodeOfCare)
   * ^short = "Encounter or Episode of Care administered as part of"
-* effective[x] ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Start and end time of administration"
+* effective[x] ^short = "Start and end time of administration"
 * request only Reference(USQualityCoreMedicationRequest)
   * ^short = "Request administration performed against"
-* dosage ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Details of how medication was taken"
+* dosage ^short = "Details of how medication was taken"
   * ^definition = "Describes the medication dosage information details e.g. dose, rate, site, route, etc."
   * ^mustSupport = false
   * route from SNOMEDCTRouteCodes (preferred)
-    * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) Path of substance into body"
-  * dose ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) Amount of medication per dose"
+    * ^short = "Path of substance into body"
+  * dose ^short = "Amount of medication per dose"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationAdministration

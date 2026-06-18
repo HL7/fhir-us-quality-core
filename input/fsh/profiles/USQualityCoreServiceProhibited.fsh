@@ -12,25 +12,17 @@ Description: "Negation profile of ServiceRequest for decision support/quality me
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * . ^mustSupport = false
 * status from USQualityCorePositiveRequestStatus (required)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) draft | active | on-hold | completed"
+  * ^short = "draft | active | on-hold | completed"
 * doNotPerform 1..1
 * doNotPerform only boolean
 * doNotPerform = true (exactly)
   * ^short = "True if service/procedure should not be performed"
-* code ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) What is being requested/ordered"
+* code ^short = "What is being requested/ordered"
 * authoredOn 1..1
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Date request signed"
+  * ^short = "Date request signed"
 * reasonCode only CodeableConcept
 * reasonCode from http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code (extensible)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Explanation/Justification for procedure or service"
+  * ^short = "Explanation/Justification for procedure or service"
   * ^binding.extension.extension[0].url = "purpose"
   * ^binding.extension.extension[=].valueCode = #extensible
   * ^binding.extension.extension[+].url = "valueSet"
@@ -38,6 +30,6 @@ Description: "Negation profile of ServiceRequest for decision support/quality me
   * ^binding.extension.extension[+].url = "key"
   * ^binding.extension.extension[=].valueId = "3fdfb5b5-0d5e-4b02-bda5-562629399813"
   * ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-* reasonReference ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Explanation/Justification for service or service"
+* reasonReference ^short = "Explanation/Justification for service or service"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreServiceProhibited

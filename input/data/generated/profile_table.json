@@ -1,0 +1,1219 @@
+{
+  "resources": [
+    {
+      "name": "AdverseEvent",
+      "path": "adverseevent.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-adverseevent",
+          "title": "US Quality Core AdverseEvent",
+          "path": "StructureDefinition-us-quality-core-adverseevent.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "AllergyIntolerance",
+      "path": "allergyintolerance.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-allergyintolerance",
+          "title": "US Quality Core AllergyIntolerance",
+          "path": "StructureDefinition-us-quality-core-allergyintolerance.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-allergyintolerance",
+            "title": "US Core AllergyIntolerance Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BodyStructure",
+      "path": "bodystructure.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-bodystructure",
+          "title": "US Quality Core BodyStructure",
+          "path": "StructureDefinition-us-quality-core-bodystructure.html",
+          "depth": 0,
+          "inScope": false,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "CarePlan",
+      "path": "careplan.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-careplan",
+          "title": "US Quality Core CarePlan",
+          "path": "StructureDefinition-us-quality-core-careplan.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-careplan",
+            "title": "US Core CarePlan Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "CareTeam",
+      "path": "careteam.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-careteam",
+          "title": "US Quality Core CareTeam",
+          "path": "StructureDefinition-us-quality-core-careteam.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-careteam",
+            "title": "US Core CareTeam Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Claim",
+      "path": "claim.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-claim",
+          "title": "US Quality Core Claim",
+          "path": "StructureDefinition-us-quality-core-claim.html",
+          "depth": 0,
+          "inScope": false,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "ClaimResponse",
+      "path": "claimresponse.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-claimresponse",
+          "title": "US Quality Core ClaimResponse",
+          "path": "StructureDefinition-us-quality-core-claimresponse.html",
+          "depth": 0,
+          "inScope": false,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "Communication",
+      "path": "communication.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-communication",
+          "title": "US Quality Core Communication",
+          "path": "StructureDefinition-us-quality-core-communication.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": null
+        },
+        {
+          "id": "us-quality-core-communicationnotdone",
+          "title": "US Quality Core Communication Not Done",
+          "path": "StructureDefinition-us-quality-core-communicationnotdone.html",
+          "depth": 1,
+          "inScope": true,
+          "showResource": false,
+          "usCore": null
+        },
+        {
+          "id": "us-quality-core-communicationdone",
+          "title": "US Quality Core CommunicationDone",
+          "path": "StructureDefinition-us-quality-core-communicationdone.html",
+          "depth": 1,
+          "inScope": false,
+          "showResource": false,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "CommunicationRequest",
+      "path": "communicationrequest.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-communicationrequest",
+          "title": "US Quality Core CommunicationRequest",
+          "path": "StructureDefinition-us-quality-core-communicationrequest.html",
+          "depth": 0,
+          "inScope": false,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "Condition",
+      "path": "condition.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-condition-encounter-diagnosis",
+          "title": "US Quality Core Condition Encounter Diagnosis",
+          "path": "StructureDefinition-us-quality-core-condition-encounter-diagnosis.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-condition-encounter-diagnosis",
+            "title": "US Core Condition Encounter Diagnosis Profile"
+          }
+        },
+        {
+          "id": "us-quality-core-condition-problems-health-concerns",
+          "title": "US Quality Core Condition Problems Health Concerns",
+          "path": "StructureDefinition-us-quality-core-condition-problems-health-concerns.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-condition-problems-health-concerns",
+            "title": "US Core Condition Problems and Health Concerns Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Coverage",
+      "path": "coverage.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-coverage",
+          "title": "US Quality Core Coverage",
+          "path": "StructureDefinition-us-quality-core-coverage.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-coverage",
+            "title": "US Core Coverage Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Device",
+      "path": "device.html",
+      "profiles": [
+        {
+          "id": "us-core-device",
+          "title": "US Core Device Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-device",
+            "title": "US Core Device Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "DeviceRequest",
+      "path": "devicerequest.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-devicerequest",
+          "title": "US Quality Core DeviceRequest",
+          "path": "StructureDefinition-us-quality-core-devicerequest.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": null
+        },
+        {
+          "id": "us-quality-core-deviceprohibited",
+          "title": "US Quality Core Device Prohibited",
+          "path": "StructureDefinition-us-quality-core-deviceprohibited.html",
+          "depth": 1,
+          "inScope": false,
+          "showResource": false,
+          "usCore": null
+        },
+        {
+          "id": "us-quality-core-devicerequested",
+          "title": "US Quality Core DeviceRequested",
+          "path": "StructureDefinition-us-quality-core-devicerequested.html",
+          "depth": 1,
+          "inScope": false,
+          "showResource": false,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "DeviceUseStatement",
+      "path": "deviceusestatement.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-deviceusestatement",
+          "title": "US Quality Core DeviceUseStatement",
+          "path": "StructureDefinition-us-quality-core-deviceusestatement.html",
+          "depth": 0,
+          "inScope": false,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "DiagnosticReport",
+      "path": "diagnosticreport.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-diagnosticreport-lab",
+          "title": "US Quality Core DiagnosticReport Profile for Laboratory Results Reporting",
+          "path": "StructureDefinition-us-quality-core-diagnosticreport-lab.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-diagnosticreport-lab",
+            "title": "US Core DiagnosticReport Profile for Laboratory Results Reporting"
+          }
+        },
+        {
+          "id": "us-quality-core-diagnosticreport-note",
+          "title": "US Quality Core DiagnosticReport Profile for Report and Note Exchange",
+          "path": "StructureDefinition-us-quality-core-diagnosticreport-note.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-diagnosticreport-note",
+            "title": "US Core DiagnosticReport Profile for Report and Note Exchange"
+          }
+        }
+      ]
+    },
+    {
+      "name": "DocumentReference",
+      "path": "documentreference.html",
+      "profiles": [
+        {
+          "id": "us-core-adi-documentreference",
+          "title": "US Core ADI DocumentReference Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-adi-documentreference",
+            "title": "US Core ADI DocumentReference Profile"
+          }
+        },
+        {
+          "id": "us-core-documentreference",
+          "title": "US Core DocumentReference Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-documentreference",
+            "title": "US Core DocumentReference Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Encounter",
+      "path": "encounter.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-encounter",
+          "title": "US Quality Core Encounter",
+          "path": "StructureDefinition-us-quality-core-encounter.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-encounter",
+            "title": "US Core Encounter Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "FamilyMemberHistory",
+      "path": "familymemberhistory.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-familymemberhistory",
+          "title": "US Quality Core FamilyMemberHistory",
+          "path": "StructureDefinition-us-quality-core-familymemberhistory.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "Flag",
+      "path": "flag.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-flag",
+          "title": "US Quality Core Flag",
+          "path": "StructureDefinition-us-quality-core-flag.html",
+          "depth": 0,
+          "inScope": false,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "Goal",
+      "path": "goal.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-goal",
+          "title": "US Quality Core Goal",
+          "path": "StructureDefinition-us-quality-core-goal.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-goal",
+            "title": "US Core Goal Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ImagingStudy",
+      "path": "imagingstudy.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-imagingstudy",
+          "title": "US Quality Core ImagingStudy",
+          "path": "StructureDefinition-us-quality-core-imagingstudy.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "Immunization",
+      "path": "immunization.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-immunization",
+          "title": "US Quality Core Immunization",
+          "path": "StructureDefinition-us-quality-core-immunization.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-immunization",
+            "title": "US Core Immunization Profile"
+          }
+        },
+        {
+          "id": "us-quality-core-immunizationdone",
+          "title": "US Quality Core Immunization Done",
+          "path": "StructureDefinition-us-quality-core-immunizationdone.html",
+          "depth": 1,
+          "inScope": false,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-immunization",
+            "title": "US Core Immunization Profile"
+          }
+        },
+        {
+          "id": "us-quality-core-immunizationnotdone",
+          "title": "US Quality Core Immunization Not Done",
+          "path": "StructureDefinition-us-quality-core-immunizationnotdone.html",
+          "depth": 1,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-immunization",
+            "title": "US Core Immunization Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ImmunizationEvaluation",
+      "path": "immunizationevaluation.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-immunizationevaluation",
+          "title": "US Quality Core ImmunizationEvaluation",
+          "path": "StructureDefinition-us-quality-core-immunizationevaluation.html",
+          "depth": 0,
+          "inScope": false,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "ImmunizationRecommendation",
+      "path": "immunizationrecommendation.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-immunizationrecommendation",
+          "title": "US Quality Core ImmunizationRecommendation",
+          "path": "StructureDefinition-us-quality-core-immunizationrecommendation.html",
+          "depth": 0,
+          "inScope": false,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "Location",
+      "path": "location.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-location",
+          "title": "US Quality Core Location",
+          "path": "StructureDefinition-us-quality-core-location.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-location",
+            "title": "US Core Location Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Medication",
+      "path": "medication.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-medication",
+          "title": "US Quality Core Medication",
+          "path": "StructureDefinition-us-quality-core-medication.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-medication",
+            "title": "US Core Medication Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "MedicationAdministration",
+      "path": "medicationadministration.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-medicationadministration",
+          "title": "US Quality Core MedicationAdministration",
+          "path": "StructureDefinition-us-quality-core-medicationadministration.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": null
+        },
+        {
+          "id": "us-quality-core-medicationadministrationdone",
+          "title": "US Quality Core MedicationAdministration Done",
+          "path": "StructureDefinition-us-quality-core-medicationadministrationdone.html",
+          "depth": 1,
+          "inScope": false,
+          "showResource": false,
+          "usCore": null
+        },
+        {
+          "id": "us-quality-core-medicationadministrationnotdone",
+          "title": "US Quality Core MedicationAdministration Not Done",
+          "path": "StructureDefinition-us-quality-core-medicationadministrationnotdone.html",
+          "depth": 1,
+          "inScope": true,
+          "showResource": false,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "MedicationDispense",
+      "path": "medicationdispense.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-medicationdispense",
+          "title": "US Quality Core MedicationDispense",
+          "path": "StructureDefinition-us-quality-core-medicationdispense.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-medicationdispense",
+            "title": "US Core MedicationDispense Profile"
+          }
+        },
+        {
+          "id": "us-quality-core-medicationdispensedeclined",
+          "title": "US Quality Core MedicationDispense Declined",
+          "path": "StructureDefinition-us-quality-core-medicationdispensedeclined.html",
+          "depth": 1,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-medicationdispense",
+            "title": "US Core MedicationDispense Profile"
+          }
+        },
+        {
+          "id": "us-quality-core-medicationdispensedone",
+          "title": "US Quality Core MedicationDispense Done",
+          "path": "StructureDefinition-us-quality-core-medicationdispensedone.html",
+          "depth": 1,
+          "inScope": false,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-medicationdispense",
+            "title": "US Core MedicationDispense Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "MedicationRequest",
+      "path": "medicationrequest.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-medicationrequest",
+          "title": "US Quality Core MedicationRequest",
+          "path": "StructureDefinition-us-quality-core-medicationrequest.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-medicationrequest",
+            "title": "US Core MedicationRequest Profile"
+          }
+        },
+        {
+          "id": "us-quality-core-medicationprohibited",
+          "title": "US Quality Core Medication Prohibited",
+          "path": "StructureDefinition-us-quality-core-medicationprohibited.html",
+          "depth": 1,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-medicationrequest",
+            "title": "US Core MedicationRequest Profile"
+          }
+        },
+        {
+          "id": "us-quality-core-medicationrequested",
+          "title": "US Quality Core MedicationRequested",
+          "path": "StructureDefinition-us-quality-core-medicationrequested.html",
+          "depth": 1,
+          "inScope": false,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-medicationrequest",
+            "title": "US Core MedicationRequest Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "MedicationStatement",
+      "path": "medicationstatement.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-medicationstatement",
+          "title": "US Quality Core MedicationStatement",
+          "path": "StructureDefinition-us-quality-core-medicationstatement.html",
+          "depth": 0,
+          "inScope": false,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "NutritionOrder",
+      "path": "nutritionorder.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-nutritionorder",
+          "title": "US Quality Core NutritionOrder",
+          "path": "StructureDefinition-us-quality-core-nutritionorder.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "Observation",
+      "path": "observation.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-observation-lab",
+          "title": "US Quality Core Laboratory Result Observation",
+          "path": "StructureDefinition-us-quality-core-observation-lab.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-observation-lab",
+            "title": "US Core Laboratory Result Observation Profile"
+          }
+        },
+        {
+          "id": "us-quality-core-nonpatient-observation",
+          "title": "US Quality Core NonPatient Observation",
+          "path": "StructureDefinition-us-quality-core-nonpatient-observation.html",
+          "depth": 0,
+          "inScope": false,
+          "showResource": true,
+          "usCore": null
+        },
+        {
+          "id": "us-quality-core-observation-clinical-result",
+          "title": "US Quality Core Observation Clinical Result",
+          "path": "StructureDefinition-us-quality-core-observation-clinical-result.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-observation-clinical-result",
+            "title": "US Core Observation Clinical Result Profile"
+          }
+        },
+        {
+          "id": "us-quality-core-observation-screening-assessment",
+          "title": "US Quality Core Observation Screening Assessment",
+          "path": "StructureDefinition-us-quality-core-observation-screening-assessment.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-observation-screening-assessment",
+            "title": "US Core Observation Screening Assessment Profile"
+          }
+        },
+        {
+          "id": "us-quality-core-simple-observation",
+          "title": "US Quality Core Simple Observation",
+          "path": "StructureDefinition-us-quality-core-simple-observation.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-simple-observation",
+            "title": "US Core Simple Observation Profile"
+          }
+        },
+        {
+          "id": "us-core-blood-pressure",
+          "title": "US Core Blood Pressure Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-blood-pressure",
+            "title": "US Core Blood Pressure Profile"
+          }
+        },
+        {
+          "id": "us-core-bmi",
+          "title": "US Core BMI Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-bmi",
+            "title": "US Core BMI Profile"
+          }
+        },
+        {
+          "id": "us-core-body-height",
+          "title": "US Core Body Height Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-body-height",
+            "title": "US Core Body Height Profile"
+          }
+        },
+        {
+          "id": "us-core-body-temperature",
+          "title": "US Core Body Temperature Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-body-temperature",
+            "title": "US Core Body Temperature Profile"
+          }
+        },
+        {
+          "id": "us-core-body-weight",
+          "title": "US Core Body Weight Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-body-weight",
+            "title": "US Core Body Weight Profile"
+          }
+        },
+        {
+          "id": "us-core-heart-rate",
+          "title": "US Core Heart Rate Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-heart-rate",
+            "title": "US Core Heart Rate Profile"
+          }
+        },
+        {
+          "id": "us-core-observation-adi-documentation",
+          "title": "US Core Observation ADI Documentation Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-observation-adi-documentation",
+            "title": "US Core Observation ADI Documentation Profile"
+          }
+        },
+        {
+          "id": "us-core-observation-occupation",
+          "title": "US Core Observation Occupation Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-observation-occupation",
+            "title": "US Core Observation Occupation Profile"
+          }
+        },
+        {
+          "id": "us-core-observation-pregnancyintent",
+          "title": "US Core Observation Pregnancy Intent Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-observation-pregnancyintent",
+            "title": "US Core Observation Pregnancy Intent Profile"
+          }
+        },
+        {
+          "id": "us-core-observation-pregnancystatus",
+          "title": "US Core Observation Pregnancy Status Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-observation-pregnancystatus",
+            "title": "US Core Observation Pregnancy Status Profile"
+          }
+        },
+        {
+          "id": "pediatric-bmi-for-age",
+          "title": "US Core Pediatric BMI for Age Observation Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "pediatric-bmi-for-age",
+            "title": "US Core Pediatric BMI for Age Observation Profile"
+          }
+        },
+        {
+          "id": "head-occipital-frontal-circumference-percentile",
+          "title": "US Core Pediatric Head Occipital Frontal Circumference Percentile Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "head-occipital-frontal-circumference-percentile",
+            "title": "US Core Pediatric Head Occipital Frontal Circumference Percentile Profile"
+          }
+        },
+        {
+          "id": "pediatric-weight-for-height",
+          "title": "US Core Pediatric Weight for Height Observation Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "pediatric-weight-for-height",
+            "title": "US Core Pediatric Weight for Height Observation Profile"
+          }
+        },
+        {
+          "id": "us-core-pulse-oximetry",
+          "title": "US Core Pulse Oximetry Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-pulse-oximetry",
+            "title": "US Core Pulse Oximetry Profile"
+          }
+        },
+        {
+          "id": "us-core-respiratory-rate",
+          "title": "US Core Respiratory Rate Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-respiratory-rate",
+            "title": "US Core Respiratory Rate Profile"
+          }
+        },
+        {
+          "id": "us-core-smokingstatus",
+          "title": "US Core Smoking Status Observation Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-smokingstatus",
+            "title": "US Core Smoking Status Observation Profile"
+          }
+        },
+        {
+          "id": "us-core-treatment-intervention-preference",
+          "title": "US Core Treatment Intervention Preference Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-treatment-intervention-preference",
+            "title": "US Core Treatment Intervention Preference Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Organization",
+      "path": "organization.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-organization",
+          "title": "US Quality Core Organization",
+          "path": "StructureDefinition-us-quality-core-organization.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-organization",
+            "title": "US Core Organization Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Patient",
+      "path": "patient.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-patient",
+          "title": "US Quality Core Patient",
+          "path": "StructureDefinition-us-quality-core-patient.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-patient",
+            "title": "US Core Patient Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Practitioner",
+      "path": "practitioner.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-practitioner",
+          "title": "US Quality Core Practitioner",
+          "path": "StructureDefinition-us-quality-core-practitioner.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-practitioner",
+            "title": "US Core Practitioner Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PractitionerRole",
+      "path": "practitionerrole.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-practitionerrole",
+          "title": "US Quality Core PractitionerRole",
+          "path": "StructureDefinition-us-quality-core-practitionerrole.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-practitionerrole",
+            "title": "US Core PractitionerRole Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Procedure",
+      "path": "procedure.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-procedure",
+          "title": "US Quality Core Procedure",
+          "path": "StructureDefinition-us-quality-core-procedure.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-procedure",
+            "title": "US Core Procedure Profile"
+          }
+        },
+        {
+          "id": "us-quality-core-proceduredone",
+          "title": "US Quality Core Procedure Done",
+          "path": "StructureDefinition-us-quality-core-proceduredone.html",
+          "depth": 1,
+          "inScope": false,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-procedure",
+            "title": "US Core Procedure Profile"
+          }
+        },
+        {
+          "id": "us-quality-core-procedurenotdone",
+          "title": "US Quality Core Procedure Not Done",
+          "path": "StructureDefinition-us-quality-core-procedurenotdone.html",
+          "depth": 1,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-procedure",
+            "title": "US Core Procedure Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Provenance",
+      "path": "provenance.html",
+      "profiles": [
+        {
+          "id": "us-core-provenance",
+          "title": "US Core Provenance Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-provenance",
+            "title": "US Core Provenance Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "QuestionnaireResponse",
+      "path": "questionnaireresponse.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-questionnaireresponse",
+          "title": "US Quality Core QuestionnaireResponse",
+          "path": "StructureDefinition-us-quality-core-questionnaireresponse.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-questionnaireresponse",
+            "title": "US Core QuestionnaireResponse Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "RelatedPerson",
+      "path": "relatedperson.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-relatedperson",
+          "title": "US Quality Core RelatedPerson",
+          "path": "StructureDefinition-us-quality-core-relatedperson.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-relatedperson",
+            "title": "US Core RelatedPerson Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ServiceRequest",
+      "path": "servicerequest.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-servicerequest",
+          "title": "US Quality Core ServiceRequest",
+          "path": "StructureDefinition-us-quality-core-servicerequest.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-servicerequest",
+            "title": "US Core ServiceRequest Profile"
+          }
+        },
+        {
+          "id": "us-quality-core-serviceprohibited",
+          "title": "US Quality Core Service Prohibited",
+          "path": "StructureDefinition-us-quality-core-serviceprohibited.html",
+          "depth": 1,
+          "inScope": true,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-servicerequest",
+            "title": "US Core ServiceRequest Profile"
+          }
+        },
+        {
+          "id": "us-quality-core-servicerequested",
+          "title": "US Quality Core ServiceRequested",
+          "path": "StructureDefinition-us-quality-core-servicerequested.html",
+          "depth": 1,
+          "inScope": false,
+          "showResource": false,
+          "usCore": {
+            "id": "us-core-servicerequest",
+            "title": "US Core ServiceRequest Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Specimen",
+      "path": "specimen.html",
+      "profiles": [
+        {
+          "id": "us-core-specimen",
+          "title": "US Core Specimen Profile",
+          "path": null,
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": {
+            "id": "us-core-specimen",
+            "title": "US Core Specimen Profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Substance",
+      "path": "substance.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-substance",
+          "title": "US Quality Core Substance",
+          "path": "StructureDefinition-us-quality-core-substance.html",
+          "depth": 0,
+          "inScope": false,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    },
+    {
+      "name": "Task",
+      "path": "task.html",
+      "profiles": [
+        {
+          "id": "us-quality-core-task",
+          "title": "US Quality Core Task",
+          "path": "StructureDefinition-us-quality-core-task.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": null
+        },
+        {
+          "id": "us-quality-core-taskdone",
+          "title": "US Quality Core Task Done",
+          "path": "StructureDefinition-us-quality-core-taskdone.html",
+          "depth": 1,
+          "inScope": false,
+          "showResource": false,
+          "usCore": null
+        },
+        {
+          "id": "us-quality-core-taskrejected",
+          "title": "US Quality Core Task Rejected",
+          "path": "StructureDefinition-us-quality-core-taskrejected.html",
+          "depth": 0,
+          "inScope": true,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    }
+  ]
+}

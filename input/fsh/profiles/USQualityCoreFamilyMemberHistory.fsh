@@ -28,8 +28,8 @@ Description: "Profile of Family Member History for decision support/quality metr
   * extension[condition-severity].value[x] from http://hl7.org/fhir/ValueSet/condition-severity (preferred)
     * ^binding.description = "Valueset to identify the severity of the problem"
   * code from http://hl7.org/fhir/ValueSet/condition-code (extensible)
-    * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) Condition suffered by relation"
+    * ^short = "Condition suffered by relation"
     * ^binding.description = "Identification of the Condition or diagnosis."
   * onset[x] ^mustSupport = false
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreFamilyMemberHistory

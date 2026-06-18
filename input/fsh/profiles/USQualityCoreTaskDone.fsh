@@ -12,4 +12,4 @@ Description: "Positive profile of Task for decision support/quality metrics. Ind
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * status 1..1
 * status from USQualityCorePositiveTaskStatus (required)
-  * ^short = "draft​ | requested​ | received​ | accepted​ | ready | in-progress​ | on-hold​ | completed"
+  * ^short = "draft | requested | received | accepted | ready | in-progress | on-hold | completed"

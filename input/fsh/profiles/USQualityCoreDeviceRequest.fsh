@@ -28,9 +28,7 @@ Description: "Profile of DeviceRequest for decision support/quality metrics. Def
 * intent ^short = "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
 * code[x] only CodeableConcept or Reference(http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0)
 * code[x] from FHIRDeviceTypes (preferred)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Device requested"
+  * ^short = "Device requested"
   * ^condition = "drq-3"
 * codeCodeableConcept
   * extension contains $codeOptions named codeOptions 0..1
@@ -40,3 +38,5 @@ Description: "Profile of DeviceRequest for decision support/quality metrics. Def
 * subject only Reference(USQualityCorePatient)
   * ^short = "Focus of request"
 * authoredOn ^short = "When recorded"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreDeviceRequest

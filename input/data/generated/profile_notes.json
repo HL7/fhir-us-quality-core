@@ -1,0 +1,3144 @@
+{
+  "us-quality-core-adverseevent": {
+    "id": "us-quality-core-adverseevent",
+    "title": "US Quality Core AdverseEvent",
+    "path": "StructureDefinition-us-quality-core-adverseevent.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "date",
+        "short": "When the event occurred"
+      },
+      {
+        "path": "detected",
+        "short": "When the event was detected"
+      },
+      {
+        "path": "event",
+        "short": "Type of the event itself in relation to the subject"
+      },
+      {
+        "path": "outcome",
+        "short": "resolved | recovering | ongoing | resolvedWithSequelae | fatal | unknown"
+      },
+      {
+        "path": "recordedDate",
+        "short": "When the event was recorded"
+      },
+      {
+        "path": "resultingCondition",
+        "short": "Effect on the subject due to this event"
+      }
+    ],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "AdverseEvent",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "subject",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "event",
+          "expectation": "MAY"
+        },
+        {
+          "name": "recorded-date",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "subject + event",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "subject + recorded-date",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-allergyintolerance": {
+    "id": "us-quality-core-allergyintolerance",
+    "title": "US Quality Core AllergyIntolerance",
+    "path": "StructureDefinition-us-quality-core-allergyintolerance.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "code",
+        "short": "Code that identifies the allergy or intolerance"
+      },
+      {
+        "path": "lastOccurrence",
+        "short": "Date(/time) of last known occurrence of a reaction"
+      },
+      {
+        "path": "onset:x",
+        "short": "When allergy or intolerance was identified"
+      },
+      {
+        "path": "reaction",
+        "short": "Adverse Reaction Events linked to exposure to substance"
+      },
+      {
+        "path": "recordedDate",
+        "short": "Date first version of the resource instance was recorded"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "AllergyIntolerance",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        }
+      ],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-bodystructure": {
+    "id": "us-quality-core-bodystructure",
+    "title": "US Quality Core BodyStructure",
+    "path": "StructureDefinition-us-quality-core-bodystructure.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "BodyStructure",
+      "hasSearchParameters": false,
+      "searchParams": [],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-careplan": {
+    "id": "us-quality-core-careplan",
+    "title": "US Quality Core CarePlan",
+    "path": "StructureDefinition-us-quality-core-careplan.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "addresses",
+        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Health issues this plan addresses"
+      },
+      {
+        "path": "category",
+        "short": "Type of plan"
+      },
+      {
+        "path": "contributor",
+        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Who provided the content of the care plan"
+      },
+      {
+        "path": "intent",
+        "short": "proposal | plan | order | option"
+      },
+      {
+        "path": "status",
+        "short": "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
+      },
+      {
+        "path": "subject",
+        "short": "Who the care plan is for."
+      },
+      {
+        "path": "text",
+        "short": "Text summary of the resource, for human interpretation"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "CarePlan",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "MAY"
+        },
+        {
+          "name": "category",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + category",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-careteam": {
+    "id": "us-quality-core-careteam",
+    "title": "US Quality Core CareTeam",
+    "path": "StructureDefinition-us-quality-core-careteam.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "participant",
+        "short": "Members of the team"
+      },
+      {
+        "path": "participant.member",
+        "short": "Who is involved"
+      },
+      {
+        "path": "participant.role",
+        "short": "Type of involvement"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "CareTeam",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "MAY"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-claim": {
+    "id": "us-quality-core-claim",
+    "title": "US Quality Core Claim",
+    "path": "StructureDefinition-us-quality-core-claim.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "Claim",
+      "hasSearchParameters": false,
+      "searchParams": [],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-claimresponse": {
+    "id": "us-quality-core-claimresponse",
+    "title": "US Quality Core ClaimResponse",
+    "path": "StructureDefinition-us-quality-core-claimresponse.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "ClaimResponse",
+      "hasSearchParameters": false,
+      "searchParams": [],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-communication": {
+    "id": "us-quality-core-communication",
+    "title": "US Quality Core Communication",
+    "path": "StructureDefinition-us-quality-core-communication.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "category",
+        "short": "Message category"
+      },
+      {
+        "path": "sent",
+        "short": "When sent"
+      },
+      {
+        "path": "status",
+        "short": "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown"
+      }
+    ],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "Communication",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "subject",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "topic",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "subject + topic",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-communicationdone": {
+    "id": "us-quality-core-communicationdone",
+    "title": "US Quality Core CommunicationDone",
+    "path": "StructureDefinition-us-quality-core-communicationdone.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "Communication",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "subject",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "topic",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "subject + topic",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-communicationnotdone": {
+    "id": "us-quality-core-communicationnotdone",
+    "title": "US Quality Core Communication Not Done",
+    "path": "StructureDefinition-us-quality-core-communicationnotdone.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "statusReason",
+        "short": "Reason for current status"
+      }
+    ],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "Communication",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "subject",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "topic",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "subject + topic",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-communicationrequest": {
+    "id": "us-quality-core-communicationrequest",
+    "title": "US Quality Core CommunicationRequest",
+    "path": "StructureDefinition-us-quality-core-communicationrequest.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "CommunicationRequest",
+      "hasSearchParameters": false,
+      "searchParams": [],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-condition-encounter-diagnosis": {
+    "id": "us-quality-core-condition-encounter-diagnosis",
+    "title": "US Quality Core Condition Encounter Diagnosis",
+    "path": "StructureDefinition-us-quality-core-condition-encounter-diagnosis.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "abatement:x",
+        "short": "When in resolution/remission"
+      },
+      {
+        "path": "code",
+        "short": "Identification of the condition, problem or diagnosis"
+      },
+      {
+        "path": "encounter",
+        "short": "Encounter created as part of"
+      },
+      {
+        "path": "onset:x",
+        "short": "Estimated or actual date, date-time, or age"
+      },
+      {
+        "path": "recordedDate",
+        "short": "Date record was first recorded"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Condition",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "category",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + category",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-condition-problems-health-concerns": {
+    "id": "us-quality-core-condition-problems-health-concerns",
+    "title": "US Quality Core Condition Problems Health Concerns",
+    "path": "StructureDefinition-us-quality-core-condition-problems-health-concerns.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "abatement:x",
+        "short": "When in resolution/remission"
+      },
+      {
+        "path": "category:us-core",
+        "short": "problem-list-item | health-concern"
+      },
+      {
+        "path": "clinicalStatus",
+        "short": "active | recurrence | relapse | inactive | remission | resolved"
+      },
+      {
+        "path": "code",
+        "short": "Identification of the condition, problem or diagnosis"
+      },
+      {
+        "path": "onset:x",
+        "short": "Estimated or actual date, date-time, or age"
+      },
+      {
+        "path": "recordedDate",
+        "short": "Date record was first recorded"
+      },
+      {
+        "path": "severity",
+        "short": "Subjective severity of condition"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Condition",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "category",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + category",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-coverage": {
+    "id": "us-quality-core-coverage",
+    "title": "US Quality Core Coverage",
+    "path": "StructureDefinition-us-quality-core-coverage.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "beneficiary",
+        "short": "Plan beneficiary"
+      },
+      {
+        "path": "class",
+        "short": "Additional coverage classifications"
+      },
+      {
+        "path": "class:group",
+        "short": "Group"
+      },
+      {
+        "path": "class:group.name",
+        "short": "Human readable description of the type and value"
+      },
+      {
+        "path": "class:group.value",
+        "short": "Group Identifier"
+      },
+      {
+        "path": "class:plan",
+        "short": "Plan"
+      },
+      {
+        "path": "class:plan.name",
+        "short": "Plan Name"
+      },
+      {
+        "path": "class:plan.value",
+        "short": "Plan Number"
+      },
+      {
+        "path": "identifier",
+        "short": "Member ID and other identifiers"
+      },
+      {
+        "path": "identifier:memberid",
+        "short": "Member ID"
+      },
+      {
+        "path": "identifier:memberid.type",
+        "short": "Member Number identifier type"
+      },
+      {
+        "path": "payor",
+        "short": "Issuer of the policy"
+      },
+      {
+        "path": "period",
+        "short": "Coverage start and end dates"
+      },
+      {
+        "path": "relationship",
+        "short": "Beneficiary relationship to the subscriber"
+      },
+      {
+        "path": "status",
+        "short": "active | cancelled | draft | entered-in-error"
+      },
+      {
+        "path": "subscriberId",
+        "short": "ID assigned to the subscriber"
+      },
+      {
+        "path": "type",
+        "short": "Owner of the policy"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Coverage",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        }
+      ],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-deviceprohibited": {
+    "id": "us-quality-core-deviceprohibited",
+    "title": "US Quality Core Device Prohibited",
+    "path": "StructureDefinition-us-quality-core-deviceprohibited.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "DeviceRequest",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "do-not-perform",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + do-not-perform",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-devicerequest": {
+    "id": "us-quality-core-devicerequest",
+    "title": "US Quality Core DeviceRequest",
+    "path": "StructureDefinition-us-quality-core-devicerequest.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "authoredOn",
+        "short": "When recorded"
+      },
+      {
+        "path": "code:x",
+        "short": "Device requested"
+      },
+      {
+        "path": "modifierExtension:doNotPerform",
+        "short": "Extensions that cannot be ignored"
+      },
+      {
+        "path": "status",
+        "short": "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
+      }
+    ],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "DeviceRequest",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "do-not-perform",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + do-not-perform",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-devicerequested": {
+    "id": "us-quality-core-devicerequested",
+    "title": "US Quality Core DeviceRequested",
+    "path": "StructureDefinition-us-quality-core-devicerequested.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "DeviceRequest",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "do-not-perform",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + do-not-perform",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-deviceusestatement": {
+    "id": "us-quality-core-deviceusestatement",
+    "title": "US Quality Core DeviceUseStatement",
+    "path": "StructureDefinition-us-quality-core-deviceusestatement.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "DeviceUseStatement",
+      "hasSearchParameters": false,
+      "searchParams": [],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-diagnosticreport-lab": {
+    "id": "us-quality-core-diagnosticreport-lab",
+    "title": "US Quality Core DiagnosticReport Profile for Laboratory Results Reporting",
+    "path": "StructureDefinition-us-quality-core-diagnosticreport-lab.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "category",
+        "short": "Service category"
+      },
+      {
+        "path": "category:LaboratorySlice",
+        "short": "Service category"
+      },
+      {
+        "path": "code",
+        "short": "US Core Laboratory Report Order Code"
+      },
+      {
+        "path": "effective:x",
+        "short": "Diagnostically relevant time (typically the time of specimen collection)"
+      },
+      {
+        "path": "result",
+        "short": "Observations"
+      },
+      {
+        "path": "status",
+        "short": "registered | partial | preliminary | final +"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "DiagnosticReport",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "category",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "date",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + category",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + category + date",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-diagnosticreport-note": {
+    "id": "us-quality-core-diagnosticreport-note",
+    "title": "US Quality Core DiagnosticReport Profile for Report and Note Exchange",
+    "path": "StructureDefinition-us-quality-core-diagnosticreport-note.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "category:us-core",
+        "short": "Service category"
+      },
+      {
+        "path": "code",
+        "short": "US Quality Core Report Code"
+      },
+      {
+        "path": "effective:x",
+        "short": "Diagnostically relevant time (typically the time of the procedure)"
+      },
+      {
+        "path": "imagingStudy",
+        "short": "Reference to full details of imaging associated with the diagnostic report"
+      },
+      {
+        "path": "result",
+        "short": "Reference to full details of imaging associated with the diagnostic report"
+      },
+      {
+        "path": "status",
+        "short": "registered | partial | preliminary | final +"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "DiagnosticReport",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "category",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "date",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + category",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + category + date",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-encounter": {
+    "id": "us-quality-core-encounter",
+    "title": "US Quality Core Encounter",
+    "path": "StructureDefinition-us-quality-core-encounter.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "diagnosis",
+        "short": "The list of diagnosis relevant to this encounter"
+      },
+      {
+        "path": "diagnosis.extension:diagnosisPresentOnAdmission",
+        "short": "onAdmission"
+      },
+      {
+        "path": "hospitalization",
+        "short": "Details about the admission to a healthcare service"
+      },
+      {
+        "path": "hospitalization.dischargeDisposition",
+        "short": "Category or kind of location after discharge"
+      },
+      {
+        "path": "identifier",
+        "short": "Identifier(s) by which this encounter is known"
+      },
+      {
+        "path": "identifier.system",
+        "short": "The namespace for the identifier value"
+      },
+      {
+        "path": "identifier.value",
+        "short": "The value that is unique"
+      },
+      {
+        "path": "location",
+        "short": "List of locations where the patient has been"
+      },
+      {
+        "path": "location.location",
+        "short": "Location the encounter takes place"
+      },
+      {
+        "path": "period",
+        "short": "The start and end time of the encounter"
+      },
+      {
+        "path": "priority",
+        "short": "Indicates the urgency of the encounter"
+      },
+      {
+        "path": "status",
+        "short": "planned | arrived | triaged | in-progress | onleave | finished | cancelled +"
+      },
+      {
+        "path": "type",
+        "short": "Specific type of encounter"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Encounter",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "_id",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "type",
+          "expectation": "MAY"
+        },
+        {
+          "name": "date",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + type",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + date",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-familymemberhistory": {
+    "id": "us-quality-core-familymemberhistory",
+    "title": "US Quality Core FamilyMemberHistory",
+    "path": "StructureDefinition-us-quality-core-familymemberhistory.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "condition.code",
+        "short": "Condition suffered by relation"
+      }
+    ],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "FamilyMemberHistory",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        }
+      ],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-flag": {
+    "id": "us-quality-core-flag",
+    "title": "US Quality Core Flag",
+    "path": "StructureDefinition-us-quality-core-flag.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "Flag",
+      "hasSearchParameters": false,
+      "searchParams": [],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-goal": {
+    "id": "us-quality-core-goal",
+    "title": "US Quality Core Goal",
+    "path": "StructureDefinition-us-quality-core-goal.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "description",
+        "short": "Code or text describing goal"
+      },
+      {
+        "path": "target",
+        "short": "Target outcome for the goal"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Goal",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        }
+      ],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-imagingstudy": {
+    "id": "us-quality-core-imagingstudy",
+    "title": "US Quality Core ImagingStudy",
+    "path": "StructureDefinition-us-quality-core-imagingstudy.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "endpoint",
+        "short": "Study access endpoint"
+      },
+      {
+        "path": "status",
+        "short": "registered | available | cancelled | entered-in-error | unknown"
+      }
+    ],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "ImagingStudy",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "subject",
+          "expectation": "SHALL"
+        }
+      ],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-immunization": {
+    "id": "us-quality-core-immunization",
+    "title": "US Quality Core Immunization",
+    "path": "StructureDefinition-us-quality-core-immunization.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "lotNumber",
+        "short": "Vaccine lot number"
+      },
+      {
+        "path": "occurrence:x",
+        "short": "Vaccine administration date"
+      },
+      {
+        "path": "primarySource",
+        "short": "Indicates context the data was recorded in"
+      },
+      {
+        "path": "status",
+        "short": "completed | not-done | entered-in-error"
+      },
+      {
+        "path": "vaccineCode",
+        "short": "Vaccine Product Type (bind to CVX)"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Immunization",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-immunizationdone": {
+    "id": "us-quality-core-immunizationdone",
+    "title": "US Quality Core Immunization Done",
+    "path": "StructureDefinition-us-quality-core-immunizationdone.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Immunization",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-immunizationevaluation": {
+    "id": "us-quality-core-immunizationevaluation",
+    "title": "US Quality Core ImmunizationEvaluation",
+    "path": "StructureDefinition-us-quality-core-immunizationevaluation.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "ImmunizationEvaluation",
+      "hasSearchParameters": false,
+      "searchParams": [],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-immunizationnotdone": {
+    "id": "us-quality-core-immunizationnotdone",
+    "title": "US Quality Core Immunization Not Done",
+    "path": "StructureDefinition-us-quality-core-immunizationnotdone.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "statusReason",
+        "short": "Reason not done"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Immunization",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-immunizationrecommendation": {
+    "id": "us-quality-core-immunizationrecommendation",
+    "title": "US Quality Core ImmunizationRecommendation",
+    "path": "StructureDefinition-us-quality-core-immunizationrecommendation.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "ImmunizationRecommendation",
+      "hasSearchParameters": false,
+      "searchParams": [],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-location": {
+    "id": "us-quality-core-location",
+    "title": "US Quality Core Location",
+    "path": "StructureDefinition-us-quality-core-location.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "address",
+        "short": "Physical location"
+      },
+      {
+        "path": "identifier",
+        "short": "Unique business identifier for facility or location."
+      },
+      {
+        "path": "name",
+        "short": "Name by which a facility or location is known."
+      },
+      {
+        "path": "type",
+        "short": "Category of service or resource available in a location."
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Location",
+      "hasSearchParameters": false,
+      "searchParams": [],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-medication": {
+    "id": "us-quality-core-medication",
+    "title": "US Quality Core Medication",
+    "path": "StructureDefinition-us-quality-core-medication.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "code",
+        "short": "Codes that identify this medication"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Medication",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "code",
+          "expectation": "SHALL"
+        }
+      ],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-medicationadministration": {
+    "id": "us-quality-core-medicationadministration",
+    "title": "US Quality Core MedicationAdministration",
+    "path": "StructureDefinition-us-quality-core-medicationadministration.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "dosage",
+        "short": "Details of how medication was taken"
+      },
+      {
+        "path": "dosage.dose",
+        "short": "Amount of medication per dose"
+      },
+      {
+        "path": "dosage.route",
+        "short": "Path of substance into body"
+      },
+      {
+        "path": "effective:x",
+        "short": "Start and end time of administration"
+      },
+      {
+        "path": "medication:x",
+        "short": "What was administered"
+      },
+      {
+        "path": "status",
+        "short": "in-progress | not-done | on-hold | completed | entered-in-error | stopped | unknown"
+      }
+    ],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "MedicationAdministration",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "effective-time",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + effective-time",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-medicationadministrationdone": {
+    "id": "us-quality-core-medicationadministrationdone",
+    "title": "US Quality Core MedicationAdministration Done",
+    "path": "StructureDefinition-us-quality-core-medicationadministrationdone.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "MedicationAdministration",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "effective-time",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + effective-time",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-medicationadministrationnotdone": {
+    "id": "us-quality-core-medicationadministrationnotdone",
+    "title": "US Quality Core MedicationAdministration Not Done",
+    "path": "StructureDefinition-us-quality-core-medicationadministrationnotdone.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "dosage",
+        "short": "Details of how medication was taken"
+      },
+      {
+        "path": "effective:x",
+        "short": "Start and end time of administration"
+      },
+      {
+        "path": "medication:x",
+        "short": "What was administered"
+      },
+      {
+        "path": "status",
+        "short": "not-done"
+      },
+      {
+        "path": "statusReason",
+        "short": "Reason administration not performed"
+      }
+    ],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "MedicationAdministration",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "effective-time",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + effective-time",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-medicationdispense": {
+    "id": "us-quality-core-medicationdispense",
+    "title": "US Quality Core MedicationDispense",
+    "path": "StructureDefinition-us-quality-core-medicationdispense.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "daysSupply",
+        "short": "Amount of medication expressed as a timing amount"
+      },
+      {
+        "path": "dosageInstruction",
+        "short": "How the medication is to be used by the patient or administered by the caregiver"
+      },
+      {
+        "path": "dosageInstruction.doseAndRate",
+        "short": "Amount of medication administered"
+      },
+      {
+        "path": "dosageInstruction.doseAndRate.dose:x",
+        "short": "Amount of medication per dose"
+      },
+      {
+        "path": "dosageInstruction.route",
+        "short": "How drug should enter body"
+      },
+      {
+        "path": "dosageInstruction.text",
+        "short": "Free text dosage instructions e.g. SIG"
+      },
+      {
+        "path": "dosageInstruction.timing",
+        "short": "When medication should be administered"
+      },
+      {
+        "path": "medication:x",
+        "short": "What medication was supplied"
+      },
+      {
+        "path": "quantity",
+        "short": "Amount dispensed"
+      },
+      {
+        "path": "status",
+        "short": "preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | declined | unknown"
+      },
+      {
+        "path": "whenPrepared",
+        "short": "When product was packaged and reviewed"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "MedicationDispense",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-medicationdispensedeclined": {
+    "id": "us-quality-core-medicationdispensedeclined",
+    "title": "US Quality Core MedicationDispense Declined",
+    "path": "StructureDefinition-us-quality-core-medicationdispensedeclined.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "status",
+        "short": "declined"
+      },
+      {
+        "path": "statusReason:x",
+        "short": "Why a dispense was not performed"
+      },
+      {
+        "path": "whenPrepared",
+        "short": "When product was packaged and reviewed"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "MedicationDispense",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-medicationdispensedone": {
+    "id": "us-quality-core-medicationdispensedone",
+    "title": "US Quality Core MedicationDispense Done",
+    "path": "StructureDefinition-us-quality-core-medicationdispensedone.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "MedicationDispense",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-medicationprohibited": {
+    "id": "us-quality-core-medicationprohibited",
+    "title": "US Quality Core Medication Prohibited",
+    "path": "StructureDefinition-us-quality-core-medicationprohibited.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "dispenseRequest.numberOfRepeatsAllowed",
+        "short": "Number of refills authorized"
+      },
+      {
+        "path": "dispenseRequest.validityPeriod",
+        "short": "Time period supply is authorized for"
+      },
+      {
+        "path": "doNotPerform",
+        "short": "True if medication was not requested"
+      },
+      {
+        "path": "intent",
+        "short": "proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"
+      },
+      {
+        "path": "medication:x",
+        "short": "Medication to be taken"
+      },
+      {
+        "path": "reasonCode",
+        "short": "Reason or indication for not ordering the medication"
+      },
+      {
+        "path": "status",
+        "short": "active | on-hold | cancelled | completed | stopped | draft"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "MedicationRequest",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "MAY"
+        },
+        {
+          "name": "intent",
+          "expectation": "MAY"
+        },
+        {
+          "name": "do-not-perform",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + intent + do-not-perform",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + intent",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-medicationrequest": {
+    "id": "us-quality-core-medicationrequest",
+    "title": "US Quality Core MedicationRequest",
+    "path": "StructureDefinition-us-quality-core-medicationrequest.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "authoredOn",
+        "short": "When request was initially authored"
+      },
+      {
+        "path": "dispenseRequest",
+        "short": "Medication supply authorization"
+      },
+      {
+        "path": "dispenseRequest.expectedSupplyDuration",
+        "short": "Number of days supply per dispense"
+      },
+      {
+        "path": "dispenseRequest.numberOfRepeatsAllowed",
+        "short": "Number of refills authorized"
+      },
+      {
+        "path": "dispenseRequest.quantity",
+        "short": "Amount of medication to supply per dispense"
+      },
+      {
+        "path": "dispenseRequest.validityPeriod",
+        "short": "Time period supply is authorized for"
+      },
+      {
+        "path": "dosageInstruction",
+        "short": "How medication should be taken"
+      },
+      {
+        "path": "dosageInstruction.asNeeded:x",
+        "short": "Take \"as needed\" (for x)"
+      },
+      {
+        "path": "dosageInstruction.doseAndRate",
+        "short": "Amount of medication administered"
+      },
+      {
+        "path": "dosageInstruction.doseAndRate.dose:x",
+        "short": "Amount of medication per dose"
+      },
+      {
+        "path": "dosageInstruction.route",
+        "short": "How drug should enter body"
+      },
+      {
+        "path": "dosageInstruction.text",
+        "short": "Free text dosage instructions e.g. SIG"
+      },
+      {
+        "path": "dosageInstruction.timing",
+        "short": "When medication should be administered"
+      },
+      {
+        "path": "dosageInstruction.timing.repeat",
+        "short": "When the event is to occur"
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.bounds:x",
+        "short": "Length/Range of lengths, or (Start and/or end) limits"
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.frequency",
+        "short": "Event occurs frequency times per period"
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.frequencyMax",
+        "short": "Event occurs frequencyMax times per period"
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.period",
+        "short": "Event occurs frequency times per period"
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.periodMax",
+        "short": "Upper limit of period (3-4 hours)"
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.periodUnit",
+        "short": "s | min | h | d | wk | mo | a - unit of time (UCUM)"
+      },
+      {
+        "path": "extension:medicationAdherence",
+        "short": "Reported adherence to prescribed medication instructions."
+      },
+      {
+        "path": "intent",
+        "short": "proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"
+      },
+      {
+        "path": "medication:x",
+        "short": "Medication to be taken"
+      },
+      {
+        "path": "reasonCode",
+        "short": "Reason or indication for ordering or not ordering the medication"
+      },
+      {
+        "path": "reasonReference",
+        "short": "US Quality Core Condition or Observation that supports the prescription"
+      },
+      {
+        "path": "status",
+        "short": "active | on-hold | cancelled | completed | entered-in-error | stopped | draft | unknown"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "MedicationRequest",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "MAY"
+        },
+        {
+          "name": "intent",
+          "expectation": "MAY"
+        },
+        {
+          "name": "do-not-perform",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + intent + do-not-perform",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + intent",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-medicationrequested": {
+    "id": "us-quality-core-medicationrequested",
+    "title": "US Quality Core MedicationRequested",
+    "path": "StructureDefinition-us-quality-core-medicationrequested.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "MedicationRequest",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "MAY"
+        },
+        {
+          "name": "intent",
+          "expectation": "MAY"
+        },
+        {
+          "name": "do-not-perform",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + intent + do-not-perform",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + intent",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-medicationstatement": {
+    "id": "us-quality-core-medicationstatement",
+    "title": "US Quality Core MedicationStatement",
+    "path": "StructureDefinition-us-quality-core-medicationstatement.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "MedicationStatement",
+      "hasSearchParameters": false,
+      "searchParams": [],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-nonpatient-observation": {
+    "id": "us-quality-core-nonpatient-observation",
+    "title": "US Quality Core NonPatient Observation",
+    "path": "StructureDefinition-us-quality-core-nonpatient-observation.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "Observation",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "MAY"
+        },
+        {
+          "name": "category",
+          "expectation": "MAY"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "date",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + category + status",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + category",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + category + date",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-nutritionorder": {
+    "id": "us-quality-core-nutritionorder",
+    "title": "US Quality Core NutritionOrder",
+    "path": "StructureDefinition-us-quality-core-nutritionorder.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "intent",
+        "short": "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
+      }
+    ],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "NutritionOrder",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        }
+      ],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-observation-clinical-result": {
+    "id": "us-quality-core-observation-clinical-result",
+    "title": "US Quality Core Observation Clinical Result",
+    "path": "StructureDefinition-us-quality-core-observation-clinical-result.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "code",
+        "short": "Clinical Test or Procedure Name"
+      },
+      {
+        "path": "effective:x",
+        "short": "Clinically relevant time/time-period for observation"
+      },
+      {
+        "path": "status",
+        "short": "registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
+      },
+      {
+        "path": "value:x",
+        "short": "Result Value"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Observation",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "MAY"
+        },
+        {
+          "name": "category",
+          "expectation": "MAY"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "date",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + category + status",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + category",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + category + date",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-observation-lab": {
+    "id": "us-quality-core-observation-lab",
+    "title": "US Quality Core Laboratory Result Observation",
+    "path": "StructureDefinition-us-quality-core-observation-lab.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "category",
+        "short": "Classification of type of observation"
+      },
+      {
+        "path": "category:us-core",
+        "short": "Classification of type of observation"
+      },
+      {
+        "path": "code",
+        "short": "Laboratory Test Name"
+      },
+      {
+        "path": "interpretation",
+        "short": "High, low, normal, etc."
+      },
+      {
+        "path": "issued",
+        "short": "Date/Time this version was made available"
+      },
+      {
+        "path": "referenceRange",
+        "short": "Result reference range"
+      },
+      {
+        "path": "specimen",
+        "short": "Specimen used for this observation"
+      },
+      {
+        "path": "status",
+        "short": "registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
+      },
+      {
+        "path": "value:x",
+        "short": "Result Value"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Observation",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "MAY"
+        },
+        {
+          "name": "category",
+          "expectation": "MAY"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "date",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + category + status",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + category",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + category + date",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-observation-screening-assessment": {
+    "id": "us-quality-core-observation-screening-assessment",
+    "title": "US Quality Core Observation Screening Assessment",
+    "path": "StructureDefinition-us-quality-core-observation-screening-assessment.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "category",
+        "short": "Classification of type of observation"
+      },
+      {
+        "path": "code",
+        "short": "Type of observation (code / type)"
+      },
+      {
+        "path": "effective:x",
+        "short": "Clinically relevant time/time-period for observation"
+      },
+      {
+        "path": "issued",
+        "short": "Date/Time this version was made available"
+      },
+      {
+        "path": "status",
+        "short": "registered | preliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
+      },
+      {
+        "path": "value:x",
+        "short": "Actual result"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Observation",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "MAY"
+        },
+        {
+          "name": "category",
+          "expectation": "MAY"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "date",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + category + status",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + category",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + category + date",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-organization": {
+    "id": "us-quality-core-organization",
+    "title": "US Quality Core Organization",
+    "path": "StructureDefinition-us-quality-core-organization.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "identifier",
+        "short": "Identifies this organization across multiple systems"
+      },
+      {
+        "path": "name",
+        "short": "Name used for the organization"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Organization",
+      "hasSearchParameters": false,
+      "searchParams": [],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-patient": {
+    "id": "us-quality-core-patient",
+    "title": "US Quality Core Patient",
+    "path": "StructureDefinition-us-quality-core-patient.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "address",
+        "short": "An address for the individual"
+      },
+      {
+        "path": "address.city",
+        "short": "Name of city, town etc."
+      },
+      {
+        "path": "address.line",
+        "short": "Street name, number, direction & P.O. Box etc."
+      },
+      {
+        "path": "address.period",
+        "short": "Time period when address was/is in use"
+      },
+      {
+        "path": "address.postalCode",
+        "short": "US Zip Codes"
+      },
+      {
+        "path": "address.state",
+        "short": "Sub-unit of country (abbreviations ok)"
+      },
+      {
+        "path": "address.use",
+        "short": "home | work | temp | old | billing - purpose of this address"
+      },
+      {
+        "path": "birthDate",
+        "short": "The date of birth for the individual"
+      },
+      {
+        "path": "communication",
+        "short": "A language which may be used to communicate with the patient about his or her health"
+      },
+      {
+        "path": "communication.language",
+        "short": "The language which can be used to communicate with the patient about his or her health"
+      },
+      {
+        "path": "deceased:x",
+        "short": "Indicates if the individual is deceased or not"
+      },
+      {
+        "path": "extension:ethnicity",
+        "short": "US Core ethnicity Extension"
+      },
+      {
+        "path": "extension:interpreterRequired",
+        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Whether the patient needs an interpreter"
+      },
+      {
+        "path": "extension:race",
+        "short": "US Core Race Extension"
+      },
+      {
+        "path": "extension:sex",
+        "short": "Sex Extension"
+      },
+      {
+        "path": "extension:tribalAffiliation",
+        "short": "Tribal Affiliation Extension"
+      },
+      {
+        "path": "identifier",
+        "short": "An identifier for this patient"
+      },
+      {
+        "path": "identifier.system",
+        "short": "The namespace for the identifier value"
+      },
+      {
+        "path": "identifier.value",
+        "short": "The value that is unique within the system."
+      },
+      {
+        "path": "name",
+        "short": "A name associated with the patient"
+      },
+      {
+        "path": "name.family",
+        "short": "Family name (often called 'Surname')"
+      },
+      {
+        "path": "name.given",
+        "short": "Given names (not always 'first'). Includes middle names"
+      },
+      {
+        "path": "name.period",
+        "short": "Time period when name was/is in use"
+      },
+      {
+        "path": "name.suffix",
+        "short": "Parts that come after the name"
+      },
+      {
+        "path": "name.use",
+        "short": "usual | official | temp | nickname | anonymous | old | maiden"
+      },
+      {
+        "path": "telecom",
+        "short": "A contact detail for the individual"
+      },
+      {
+        "path": "telecom.system",
+        "short": "phone | fax | email | pager | url | sms | other"
+      },
+      {
+        "path": "telecom.use",
+        "short": "home | work | temp | old | mobile - purpose of this contact point"
+      },
+      {
+        "path": "telecom.value",
+        "short": "The actual contact point details"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Patient",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "_id",
+          "expectation": "SHALL"
+        }
+      ],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-practitioner": {
+    "id": "us-quality-core-practitioner",
+    "title": "US Quality Core Practitioner",
+    "path": "StructureDefinition-us-quality-core-practitioner.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "address",
+        "short": "Address(es) of the practitioner"
+      },
+      {
+        "path": "address.city",
+        "short": "Name of city, town etc."
+      },
+      {
+        "path": "address.country",
+        "short": "Country (e.g. can be ISO 3166 2 or 3 letter code)"
+      },
+      {
+        "path": "address.line",
+        "short": "Street name, number, direction & P.O. Box etc."
+      },
+      {
+        "path": "address.postalCode",
+        "short": "US Zip Codes"
+      },
+      {
+        "path": "address.state",
+        "short": "Sub-unit of country (abbreviations ok)"
+      },
+      {
+        "path": "identifier",
+        "short": "An identifier for the person as this agent"
+      },
+      {
+        "path": "identifier.system",
+        "short": "The namespace for the identifier value"
+      },
+      {
+        "path": "identifier.value",
+        "short": "The value that is unique"
+      },
+      {
+        "path": "identifier:NPI",
+        "short": "An identifier for the person as this agent"
+      },
+      {
+        "path": "identifier:NPI.system",
+        "short": "The namespace for the identifier value"
+      },
+      {
+        "path": "identifier:NPI.value",
+        "short": "The value that is unique"
+      },
+      {
+        "path": "identifier:ein",
+        "short": "There is not a general Tax Identifier Numer (TIN) OID. There is an SSN, a PTIN, and an ITIN, but no TIN generally. So the only slice specified here is EIN, if consumers determine a need for an SSN, submit a comment to that effect."
+      },
+      {
+        "path": "identifier:ein.value",
+        "short": "The value that is unique"
+      },
+      {
+        "path": "name",
+        "short": "The name(s) associated with the practitioner"
+      },
+      {
+        "path": "name.family",
+        "short": "Family name (often called 'Surname')"
+      },
+      {
+        "path": "telecom",
+        "short": "A contact detail for the practitioner (that apply to all roles)"
+      },
+      {
+        "path": "telecom.system",
+        "short": "phone | fax | email | pager | url | sms | other"
+      },
+      {
+        "path": "telecom.value",
+        "short": "The actual contact point details"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Practitioner",
+      "hasSearchParameters": false,
+      "searchParams": [],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-practitionerrole": {
+    "id": "us-quality-core-practitionerrole",
+    "title": "US Quality Core PractitionerRole",
+    "path": "StructureDefinition-us-quality-core-practitionerrole.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "code",
+        "short": "Roles which this practitioner may perform"
+      },
+      {
+        "path": "identifier",
+        "short": "Business Identifiers that are specific to a role/location"
+      },
+      {
+        "path": "identifier.system",
+        "short": "The namespace for the identifier value"
+      },
+      {
+        "path": "identifier.value",
+        "short": "The value that is unique"
+      },
+      {
+        "path": "location",
+        "short": "The location(s) at which this practitioner provides care"
+      },
+      {
+        "path": "practitioner",
+        "short": "Practitioner that is able to provide the defined services for the organization"
+      },
+      {
+        "path": "specialty",
+        "short": "Specific specialty of the practitioner"
+      },
+      {
+        "path": "telecom",
+        "short": "Contact details that are specific to the role/location/service"
+      },
+      {
+        "path": "telecom.system",
+        "short": "phone | fax | email | pager | url | sms | other"
+      },
+      {
+        "path": "telecom.value",
+        "short": "The actual contact point details"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "PractitionerRole",
+      "hasSearchParameters": false,
+      "searchParams": [],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-procedure": {
+    "id": "us-quality-core-procedure",
+    "title": "US Quality Core Procedure",
+    "path": "StructureDefinition-us-quality-core-procedure.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "code",
+        "short": "What procedure"
+      },
+      {
+        "path": "extension:recorded",
+        "short": "When the procedure was first captured in the subject's record"
+      },
+      {
+        "path": "partOf",
+        "short": "Part of referenced event"
+      },
+      {
+        "path": "performed:x",
+        "short": "When the procedure was performed"
+      },
+      {
+        "path": "reasonCode",
+        "short": "Coded reason procedure performed"
+      },
+      {
+        "path": "reasonReference",
+        "short": "The justification that the procedure was performed"
+      },
+      {
+        "path": "status",
+        "short": "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown"
+      },
+      {
+        "path": "statusReason",
+        "short": "Reason for current status"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Procedure",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        },
+        {
+          "name": "date",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + date",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-proceduredone": {
+    "id": "us-quality-core-proceduredone",
+    "title": "US Quality Core Procedure Done",
+    "path": "StructureDefinition-us-quality-core-proceduredone.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Procedure",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        },
+        {
+          "name": "date",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + date",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-procedurenotdone": {
+    "id": "us-quality-core-procedurenotdone",
+    "title": "US Quality Core Procedure Not Done",
+    "path": "StructureDefinition-us-quality-core-procedurenotdone.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "code",
+        "short": "What procedure"
+      },
+      {
+        "path": "partOf",
+        "short": "Part of referenced event"
+      },
+      {
+        "path": "reasonCode",
+        "short": "Coded reason procedure performed"
+      },
+      {
+        "path": "reasonReference",
+        "short": "The justification that the procedure was performed"
+      },
+      {
+        "path": "status",
+        "short": "not-done"
+      },
+      {
+        "path": "statusReason",
+        "short": "Reason for the current status"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Procedure",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        },
+        {
+          "name": "date",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + date",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-questionnaireresponse": {
+    "id": "us-quality-core-questionnaireresponse",
+    "title": "US Quality Core QuestionnaireResponse",
+    "path": "StructureDefinition-us-quality-core-questionnaireresponse.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "item",
+        "short": "Groups and questions"
+      },
+      {
+        "path": "questionnaire",
+        "short": "Form being answered"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "QuestionnaireResponse",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "questionnaire",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + questionnaire",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-relatedperson": {
+    "id": "us-quality-core-relatedperson",
+    "title": "US Quality Core RelatedPerson",
+    "path": "StructureDefinition-us-quality-core-relatedperson.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "address",
+        "short": "Address where the related person can be contacted or visited"
+      },
+      {
+        "path": "name",
+        "short": "A name associated with the person"
+      },
+      {
+        "path": "relationship",
+        "short": "The nature of the relationship"
+      },
+      {
+        "path": "telecom",
+        "short": "A contact detail for the person"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "RelatedPerson",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "_id",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        }
+      ],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-serviceprohibited": {
+    "id": "us-quality-core-serviceprohibited",
+    "title": "US Quality Core Service Prohibited",
+    "path": "StructureDefinition-us-quality-core-serviceprohibited.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "authoredOn",
+        "short": "Date request signed"
+      },
+      {
+        "path": "code",
+        "short": "What is being requested/ordered"
+      },
+      {
+        "path": "doNotPerform",
+        "short": "True if service/procedure should not be performed"
+      },
+      {
+        "path": "intent",
+        "short": "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
+      },
+      {
+        "path": "reasonCode",
+        "short": "Explanation/Justification for procedure or service"
+      },
+      {
+        "path": "reasonReference",
+        "short": "Explanation/Justification for service or service"
+      },
+      {
+        "path": "status",
+        "short": "draft | active | on-hold | completed"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "ServiceRequest",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "_id",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "category",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "authored",
+          "expectation": "MAY"
+        },
+        {
+          "name": "do-not-perform",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + category",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + category + authored",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + do-not-perform",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-servicerequest": {
+    "id": "us-quality-core-servicerequest",
+    "title": "US Quality Core ServiceRequest",
+    "path": "StructureDefinition-us-quality-core-servicerequest.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "authoredOn",
+        "short": "Date request signed"
+      },
+      {
+        "path": "code",
+        "short": "What is being requested/ordered"
+      },
+      {
+        "path": "intent",
+        "short": "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
+      },
+      {
+        "path": "reasonCode",
+        "short": "Explanation/Justification for procedure or service"
+      },
+      {
+        "path": "reasonReference",
+        "short": "Explanation/Justification for service or service"
+      },
+      {
+        "path": "status",
+        "short": "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "ServiceRequest",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "_id",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "category",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "authored",
+          "expectation": "MAY"
+        },
+        {
+          "name": "do-not-perform",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + category",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + category + authored",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + do-not-perform",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-servicerequested": {
+    "id": "us-quality-core-servicerequested",
+    "title": "US Quality Core ServiceRequested",
+    "path": "StructureDefinition-us-quality-core-servicerequested.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "ServiceRequest",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "_id",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "category",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "authored",
+          "expectation": "MAY"
+        },
+        {
+          "name": "do-not-perform",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + category",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + category + authored",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + do-not-perform",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-simple-observation": {
+    "id": "us-quality-core-simple-observation",
+    "title": "US Quality Core Simple Observation",
+    "path": "StructureDefinition-us-quality-core-simple-observation.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "category",
+        "short": "Classification of type of observation"
+      },
+      {
+        "path": "category:us-core",
+        "short": "US Core classification of type of observation"
+      },
+      {
+        "path": "code",
+        "short": "Type of observation (code / type)"
+      },
+      {
+        "path": "effective:x",
+        "short": "Clinically relevant time/time-period for observation"
+      },
+      {
+        "path": "issued",
+        "short": "Date/Time this version was made available"
+      },
+      {
+        "path": "status",
+        "short": "registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
+      },
+      {
+        "path": "value:x",
+        "short": "Actual result"
+      }
+    ],
+    "hasUsCoreLineage": true,
+    "search": {
+      "resource": "Observation",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "MAY"
+        },
+        {
+          "name": "category",
+          "expectation": "MAY"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        },
+        {
+          "name": "date",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + category + status",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + category",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + category + date",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-substance": {
+    "id": "us-quality-core-substance",
+    "title": "US Quality Core Substance",
+    "path": "StructureDefinition-us-quality-core-substance.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "Substance",
+      "hasSearchParameters": false,
+      "searchParams": [],
+      "searchCombinations": []
+    }
+  },
+  "us-quality-core-task": {
+    "id": "us-quality-core-task",
+    "title": "US Quality Core Task",
+    "path": "StructureDefinition-us-quality-core-task.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "basedOn",
+        "short": "Request fulfilled by this task"
+      },
+      {
+        "path": "code",
+        "short": "Task Type"
+      },
+      {
+        "path": "executionPeriod",
+        "short": "Start and end time of execution"
+      },
+      {
+        "path": "focus",
+        "short": "What task is acting on"
+      },
+      {
+        "path": "reasonCode",
+        "short": "Why task is needed"
+      },
+      {
+        "path": "status",
+        "short": "draft | requested | received | accepted | rejected | ready | cancelled | in-progress | on-hold | failed | completed | entered-in-error"
+      },
+      {
+        "path": "statusReason",
+        "short": "Reason for current status"
+      }
+    ],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "Task",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-taskdone": {
+    "id": "us-quality-core-taskdone",
+    "title": "US Quality Core Task Done",
+    "path": "StructureDefinition-us-quality-core-taskdone.html",
+    "hasUscdiQualityElements": false,
+    "uscdiQualityElements": [],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "Task",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  },
+  "us-quality-core-taskrejected": {
+    "id": "us-quality-core-taskrejected",
+    "title": "US Quality Core Task Rejected",
+    "path": "StructureDefinition-us-quality-core-taskrejected.html",
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "basedOn",
+        "short": "Request fulfilled by this task"
+      },
+      {
+        "path": "code",
+        "short": "Task Type"
+      },
+      {
+        "path": "executionPeriod",
+        "short": "The time action first taken meets expectation of the rejected use case."
+      },
+      {
+        "path": "focus",
+        "short": "What task is acting on"
+      },
+      {
+        "path": "reasonCode",
+        "short": "Why task is needed"
+      },
+      {
+        "path": "status",
+        "short": "The potential performer who claimed ownership of the task has decided not to execute it prior to performing any action"
+      },
+      {
+        "path": "statusReason",
+        "short": "Reason for current status"
+      }
+    ],
+    "hasUsCoreLineage": false,
+    "search": {
+      "resource": "Task",
+      "hasSearchParameters": true,
+      "searchParams": [
+        {
+          "name": "patient",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "status",
+          "expectation": "MAY"
+        },
+        {
+          "name": "code",
+          "expectation": "MAY"
+        }
+      ],
+      "searchCombinations": [
+        {
+          "name": "patient + status",
+          "expectation": "SHALL"
+        },
+        {
+          "name": "patient + code",
+          "expectation": "SHALL"
+        }
+      ]
+    }
+  }
+}

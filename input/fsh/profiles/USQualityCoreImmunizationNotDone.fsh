@@ -13,9 +13,7 @@ Description: "Negation profile of Communication for decision support/quality met
 * . ^mustSupport = false
 * status only code
 * status = #not-done (exactly)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) not-done"
+  * ^short = "not-done"
 * statusReason 1..1
 * statusReason from USQualityCoreNegationReasonCodes (extensible)
   * ^short = "Reason not done"
@@ -23,11 +21,11 @@ Description: "Negation profile of Communication for decision support/quality met
 * encounter 0..1
 * encounter only Reference(USQualityCoreEncounter)
   * ^short = "Encounter the immunization was part of"
-* occurrence[x] ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Vaccine administration date"
+* occurrence[x] ^short = "Vaccine administration date"
 * recorded 0..1
   * ^short = "Documented date Immunization did not occur."
 * location 0..1
 * location only Reference(USQualityCoreLocation)
   * ^short = "Where the vaccine was administered"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreImmunizationNotDone

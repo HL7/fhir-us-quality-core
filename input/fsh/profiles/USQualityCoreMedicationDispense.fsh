@@ -20,14 +20,10 @@ Description: "Profile of MedicationDispense for decision support/quality metrics
 * obeys mdp-1
 * extension contains $extension-MedicationDispense.recorded named recorded 0..1
 * extension[recorded] ^short = "When recorded"
-* status ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | declined | unknown"
+* status ^short = "preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | declined | unknown"
 * medication[x] only CodeableConcept or Reference(USQualityCoreMedication)
 * medication[x] from $vsac-medication-clinical-drug (extensible)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) What medication was supplied"
+  * ^short = "What medication was supplied"
   * ^binding.description = "The set of RxNorm codes to represent medications"
   * extension contains $codeOptions named codeOptions 0..1
   * extension[codeOptions] ^short = "Url of a value set of candidate medications"
@@ -38,34 +34,20 @@ Description: "Profile of MedicationDispense for decision support/quality metrics
   * ^short = "Medication order that authorizes the dispense"
 * type from http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType (extensible)
   * ^short = "Trial fill, partial fill, emergency fill, etc."
-* quantity ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Amount dispensed"
-* daysSupply ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Amount of medication expressed as a timing amount"
+* quantity ^short = "Amount dispensed"
+* daysSupply ^short = "Amount of medication expressed as a timing amount"
 * whenPrepared 0..1
   * ^short = "When product was packaged and reviewed"
   * ^comment = "When used as part of a cumulative medication duration calculation, the whenPrepared element is used if whenHandedOver is not available to determine a starting point for the period covered by the dispense."
 * whenHandedOver ^short = "When product was given out or mailed"
-* dosageInstruction ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) How the medication is to be used by the patient or administered by the caregiver"
-  * text ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) Free text dosage instructions e.g. SIG"
-  * timing ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) When medication should be administered"
-  * route ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) How drug should enter body"
-  * doseAndRate ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) Amount of medication administered"
+* dosageInstruction ^short = "How the medication is to be used by the patient or administered by the caregiver"
+  * text ^short = "Free text dosage instructions e.g. SIG"
+  * timing ^short = "When medication should be administered"
+  * route ^short = "How drug should enter body"
+  * doseAndRate ^short = "Amount of medication administered"
     * dose[x] only SimpleQuantity or Range
-      * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-      * ^extension.valueBoolean = true
-      * ^short = "(USCDI+ Quality) Amount of medication per dose"
+      * ^short = "Amount of medication per dose"
       * ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
       * ^type.extension.valueBoolean = true
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationDispense

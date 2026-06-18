@@ -11,9 +11,7 @@ Description: "Profile of Goal for decision support/quality metrics. Defines the 
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
-* description ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Code or text describing goal"
+* description ^short = "Code or text describing goal"
 * subject 1..1
 * subject only Reference(USQualityCorePatient)
   * ^short = "Who this goal is intended for"
@@ -31,6 +29,6 @@ Description: "Profile of Goal for decision support/quality metrics. Defines the 
   * ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
   * ^binding.extension.valueString = "GoalStartEvent"
   * ^binding.description = "Codes describing events that can trigger the initiation of a goal."
-* target ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Target outcome for the goal"
+* target ^short = "Target outcome for the goal"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreGoal

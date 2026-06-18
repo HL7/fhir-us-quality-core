@@ -22,9 +22,7 @@ Description: "Profile of DiagnosticReport for laboratory results for decision su
 * status 1..1 MS ?! SU
 * status only code
 * status from DiagnosticReportStatus (required)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) registered | partial | preliminary | final +"
+  * ^short = "registered | partial | preliminary | final +"
   * ^definition = "The status of the diagnostic report."
   * ^requirements = "Diagnostic services routinely issue provisional/incomplete reports, and sometimes withdraw previously released reports."
   * ^base.path = "DiagnosticReport.status"
@@ -36,12 +34,10 @@ Description: "Profile of DiagnosticReport for laboratory results for decision su
 * category only CodeableConcept
 * category SU
 * category from DiagnosticServiceSectionCodes (preferred)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-  * ^short = "(USCDI+ Quality) Service category"
+  * ^short = "Service category"
   * ^isModifier = false
   * ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
   * ^binding.extension.valueString = "DiagnosticServiceSection"
@@ -50,9 +46,7 @@ Description: "Profile of DiagnosticReport for laboratory results for decision su
 * category[LaboratorySlice] = $v2-0074#LAB
 * category[LaboratorySlice] SU
 * category[LaboratorySlice] from DiagnosticServiceSectionCodes (preferred)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Service category"
+  * ^short = "Service category"
   * ^isModifier = false
   * ^binding.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
   * ^binding.extension.valueString = "DiagnosticServiceSection"
@@ -60,9 +54,7 @@ Description: "Profile of DiagnosticReport for laboratory results for decision su
 * code 1..1 MS SU
 * code only CodeableConcept
 * code from USCoreLaboratoryTestCodes (extensible)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) US Core Laboratory Report Order Code"
+  * ^short = "US Core Laboratory Report Order Code"
   * ^definition = "The test, panel or battery that was ordered."
   * ^comment = "UsageNote= The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists."
   * ^alias[0] = "Type"
@@ -77,9 +69,7 @@ Description: "Profile of DiagnosticReport for laboratory results for decision su
   * ^short = "Encounter associated with DiagnosticReport"
 * effective[x] only dateTime or Period
 * effective[x] SU
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Diagnostically relevant time (typically the time of specimen collection)"
+  * ^short = "Diagnostically relevant time (typically the time of specimen collection)"
   * ^isModifier = false
 * issued 0..1 MS SU
 * issued only instant
@@ -98,6 +88,6 @@ Description: "Profile of DiagnosticReport for laboratory results for decision su
 * performer only Reference(USQualityCorePractitioner or USQualityCorePractitionerRole or USQualityCoreOrganization)
   * ^short = "Responsible Diagnostic Service"
 * result only Reference(USQualityCoreObservationLab)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Observations"
+  * ^short = "Observations"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreDiagnosticReportLab

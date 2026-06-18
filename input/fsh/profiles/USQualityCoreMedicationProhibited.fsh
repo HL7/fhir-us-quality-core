@@ -16,14 +16,12 @@ Description: "Negation profile of MedicationRequest for decision support/quality
 * doNotPerform 1..1
 * doNotPerform only boolean
 * doNotPerform = true (exactly)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) True if medication was not requested"
+  * ^short = "True if medication was not requested"
 * authoredOn 1..1
   * ^short = "When request was initially authored"
 * reasonCode 1..1
 * reasonCode from USQualityCoreNegationReasonCodes (extensible)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Reason or indication for not ordering the medication"
+  * ^short = "Reason or indication for not ordering the medication"
   * ^binding.description = "The reason the medication was prohibited"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationProhibited

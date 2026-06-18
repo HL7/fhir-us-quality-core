@@ -87,7 +87,7 @@ QDM version 5.6 (and earlier versions) only address one of these elements, the e
 | &nbsp; | [AdverseEvent.actuality](StructureDefinition-us-quality-core-adverseevent-definitions.html#key_AdverseEvent.actuality) | Although not specified in QDM, US Quality Core provides the ability to differentiate between potential versus actual events |
 | **QDM Attributes** | &nbsp; | &nbsp; |
 | code | [AdverseEvent.event](StructureDefinition-us-quality-core-adverseevent-definitions.html#key_AdverseEvent.event) | Type of the event itself in relation to the subject; reference SNOMED-CT event hierarchy to represent the event in an eCQM. Note: QDM does not include an attribute to address additional elements available in US Quality Core: AdverseEvent.suspectEntity (the suspected cause), or the AdverseEvent.resultingCondition. |
-| type | [AdverseEvent.category](StructureDefinition-us-quality-core-adverseevent-definitions.html#key_AdverseEvent.category) | &nbsp; |
+| type | [AdverseEvent.category](StructureDefinition-us-quality-core-adverseevent-definitions.html#AdverseEvent.category) | &nbsp; |
 | severity | [AdverseEvent.severity](StructureDefinition-us-quality-core-adverseevent-definitions.html#AdverseEvent.severity) | &nbsp; |
 | relevantdateTime | [AdverseEvent.date](StructureDefinition-us-quality-core-adverseevent-definitions.html#key_AdverseEvent.date) | &nbsp; |
 | facilityLocations | [AdverseEvent.location](StructureDefinition-us-quality-core-adverseevent-definitions.html#key_AdverseEvent.location) | &nbsp; |

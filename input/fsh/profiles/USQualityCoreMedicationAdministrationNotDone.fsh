@@ -23,12 +23,10 @@ Description: "Negation profile of MedicationAdministration for decision support/
   * ^isModifierReason = "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation"
 * status only code
 * status = #not-done (exactly)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) not-done"
+  * ^short = "not-done"
 * statusReason 1..1
 * statusReason from USQualityCoreNegationReasonCodes (extensible)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Reason administration not performed"
+  * ^short = "Reason administration not performed"
   * ^binding.description = "The reason the event did not occur or was not performed"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationAdministrationNotDone

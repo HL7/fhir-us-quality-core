@@ -12,18 +12,14 @@ Description: "The US Quality Core Laboratory Result Observation Profile is based
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * meta.lastUpdated ^short = "When the resource last changed"
-* status ^extension[1].url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension[=].valueBoolean = true
-  * ^short = "(USCDI+ Quality) registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
+* status ^short = "registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
 * category ..*
 * category only CodeableConcept
 * category from $observation-category-vs (preferred)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-  * ^short = "(USCDI+ Quality) Classification of type of observation"
+  * ^short = "Classification of type of observation"
   * ^definition = "A code that classifies the general type of observation being made."
   * ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set."
   * ^requirements = "Used for filtering what observations are retrieved and displayed."
@@ -39,9 +35,7 @@ Description: "The US Quality Core Laboratory Result Observation Profile is based
 * category[us-core] only CodeableConcept
 * category[us-core] = $observation-category#laboratory
 * category[us-core] from USCoreClinicalResultObservationCategory (required)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Classification of type of observation"
+  * ^short = "Classification of type of observation"
   * ^definition = "A code that classifies the general type of observation being made."
   * ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set."
   * ^requirements = "Used for filtering what observations are retrieved and displayed."
@@ -53,9 +47,7 @@ Description: "The US Quality Core Laboratory Result Observation Profile is based
 * code only CodeableConcept
 * code SU
 * code from USCoreLaboratoryTestCodes (extensible)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Laboratory Test Name"
+  * ^short = "Laboratory Test Name"
   * ^definition = "The name of the clinical test or procedure performed on a patient.  A LOINC **SHALL** be used if the concept is present in LOINC."
   * ^comment = "The typical patterns for codes are:  1)  a LOINC code either as a translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.  When using LOINC , Use either the SHORTNAME or LONG_COMMON_NAME field for the display."
   * ^requirements = "Knowing what kind of observation is being made is essential to understanding the observation."
@@ -76,23 +68,17 @@ Description: "The US Quality Core Laboratory Result Observation Profile is based
   * ^isModifier = false
 * issued only instant
 * issued SU
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Date/Time this version was made available"
+  * ^short = "Date/Time this version was made available"
   * ^definition = "The date and time this version of the observation was made available to providers, typically after the results have been reviewed and verified."
   * ^comment = "For Observations that don’t require review and verification, it may be the same as the [`lastUpdated` ](http://hl7.org/fhir/R4/resource-definitions.html#Meta.lastUpdated) time of the resource itself.  For Observations that do require review and verification for certain updates, it might not be the same as the `lastUpdated` time of the resource itself due to a non-clinically significant update that doesn’t require the new version to be reviewed and verified again."
   * ^isModifier = false
 * value[x] only Quantity or CodeableConcept or string or boolean or integer or Range or Ratio or SampledData or time or dateTime or Period
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Result Value"
+  * ^short = "Result Value"
   * ^definition = "The Laboratory result value.  If a coded value,  the valueCodeableConcept.code **SHOULD** be selected from [SNOMED CT](http://hl7.org/fhir/ValueSet/uslab-obs-codedresults) if the concept exists. If a numeric value, valueQuantity.code **SHALL** be selected from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html) that defines all UCUM codes is in the FHIR specification."
 * interpretation 0..*
 * interpretation only CodeableConcept
 * interpretation from ObservationInterpretationCodes (extensible)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) High, low, normal, etc."
+  * ^short = "High, low, normal, etc."
   * ^definition = "A categorical assessment of an observation value.  For example, high, low, normal."
   * ^comment = "Historically used for laboratory results (known as 'abnormal flag' ),  its use extends to other use cases where coded interpretations  are relevant.  Often reported as one or more simple compact codes this element is often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result."
   * ^requirements = "For some results, particularly numeric results, an interpretation is necessary to fully understand the significance of a result."
@@ -106,6 +92,6 @@ Description: "The US Quality Core Laboratory Result Observation Profile is based
   * ^binding.extension.valueString = "ObservationInterpretation"
   * ^binding.description = "Codes identifying interpretations of observations."
 * referenceRange 0..* MS
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Result reference range"
+  * ^short = "Result reference range"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreObservationLab

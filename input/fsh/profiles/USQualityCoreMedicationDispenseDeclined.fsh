@@ -15,13 +15,11 @@ Description: "Negation profile of MedicationDispense for decision support/qualit
   * ^short = "Extension"
 * status only code
 * status = #declined (exactly)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) declined"
+  * ^short = "declined"
 * statusReason[x] 1..1
 * statusReason[x] only CodeableConcept
 * statusReason[x] from USQualityCoreNegationReasonCodes (extensible)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Why a dispense was not performed"
+  * ^short = "Why a dispense was not performed"
   * ^binding.description = "The reason the event did not occur or was not performed"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationDispenseDeclined

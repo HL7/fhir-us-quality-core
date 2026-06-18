@@ -14,3 +14,5 @@ fsh-generated/
 /input-cache/publisher.jar
 /template
 input-cache/
+scripts/package-lock.json
+scripts/node_modules/

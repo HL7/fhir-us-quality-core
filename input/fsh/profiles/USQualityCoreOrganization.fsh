@@ -11,12 +11,10 @@ Description: "Profile of Organization for decision support/quality metrics. Defi
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
-* identifier ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
+* identifier ^short = "Identifies this organization across multiple systems"
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-  * ^short = "(USCDI+ Quality) Identifies this organization across multiple systems"
 * identifier contains
     ccn 0..1 and
     ein 0..1
@@ -43,3 +41,5 @@ Description: "Profile of Organization for decision support/quality metrics. Defi
   * ^short = "Kind of organization"
   * ^binding.description = "Used to categorize the organization"
 * partOf ^type[0].targetProfile[0] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreOrganization

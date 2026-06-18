@@ -13,36 +13,24 @@ Description: "Profile of TaskRejected for decision support/quality metrics. Defi
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * . ^mustSupport = false
-* basedOn ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Request fulfilled by this task"
+* basedOn ^short = "Request fulfilled by this task"
 * status 1..1
 * status only code
 * status = #rejected (exactly)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) The potential performer who claimed ownership of the task has decided not to execute it prior to performing any action"
+  * ^short = "The potential performer who claimed ownership of the task has decided not to execute it prior to performing any action"
 * statusReason 1..1
 * statusReason from USQualityCoreNegationReasonCodes (extensible)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Reason for current status"
+  * ^short = "Reason for current status"
   * ^mustSupport = false
-* code ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Task Type"
+* code ^short = "Task Type"
 * focus only Reference(Resource)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) What task is acting on"
+  * ^short = "What task is acting on"
   * ^mustSupport = false
 * for only Reference(USQualityCorePatient)
   * ^short = "Beneficiary of the Task"
   * ^mustSupport = false
 * executionPeriod 1..1
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) The time action first taken meets expectation of the rejected use case."
-* reasonCode ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Why task is needed"
+  * ^short = "The time action first taken meets expectation of the rejected use case."
+* reasonCode ^short = "Why task is needed"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreTaskRejected

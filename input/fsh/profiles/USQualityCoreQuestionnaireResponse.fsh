@@ -24,3 +24,5 @@ Description: "The US Quality Core QuestionnaireResponse Profile is based upon th
   * answer.value[x] 0..1
   * answer.value[x] only Coding or string or decimal or date or dateTime or integer or Quantity
     * ^short = "Single-valued answer to the question"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreQuestionnaireResponse

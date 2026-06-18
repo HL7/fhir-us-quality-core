@@ -13,19 +13,15 @@ Description: "Profile of CareTeam for decision support/quality metrics. Defines 
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * subject only Reference(USQualityCorePatient)
   * ^short = "Who the care team is for."
-* participant ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Members of the team"
+* participant ^short = "Members of the team"
   * role only CodeableConcept
   * role SU
-    * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) Type of involvement"
+    * ^short = "Type of involvement"
     * ^base.path = "CareTeam.participant.role"
     * ^base.min = 0
     * ^base.max = "*"
     * ^isModifier = false
   * member only Reference(USQualityCorePatient or USQualityCorePractitioner or USQualityCorePractitionerRole or USQualityCoreOrganization or USQualityCoreCareTeam or USQualityCoreRelatedPerson)
-    * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-    * ^extension.valueBoolean = true
-    * ^short = "(USCDI+ Quality) Who is involved"
+    * ^short = "Who is involved"
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreCareTeam

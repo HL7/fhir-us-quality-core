@@ -11,4 +11,4 @@ Description: "Positive profile of MedicationDispense for decision support/qualit
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * status from USQualityCorePositiveMedicationDispenseStatus (required)
-  * ^short = "preparation​ | in-progress​ | on-hold​ | completed​ | stopped​"
+  * ^short = "preparation | in-progress | on-hold | completed | stopped"

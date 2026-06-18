@@ -11,9 +11,7 @@ Description: "The US Quality Core CarePlan is based upon the US Core CarePlan Pr
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
-* text ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Text summary of the resource, for human interpretation"
+* text ^short = "Text summary of the resource, for human interpretation"
 * category ..* SU
 * category only CodeableConcept
 * category from CarePlanCategory (preferred)
@@ -51,3 +49,5 @@ Description: "The US Quality Core CarePlan is based upon the US Core CarePlan Pr
   * ^short = "Who the care plan is for."
   * ^definition = "Who care plan is for."
   * ^requirements = "Identifies the patient or group whose intended care is described by the plan."
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreCarePlan

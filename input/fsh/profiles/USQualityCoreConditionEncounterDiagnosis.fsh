@@ -40,25 +40,19 @@ Description: "The US Quality Core Condition Encounter Diagnosis Profile is based
   * ^binding.description = "A category assigned to the condition."
 * severity ^short = "Subjective severity of condition"
   * ^definition = "A subjective assessment of the severity of the condition as evaluated by the clinician."
-* code ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Identification of the condition, problem or diagnosis"
+* code ^short = "Identification of the condition, problem or diagnosis"
   * ^definition = "Identification of the condition, problem or diagnosis."
 * subject only Reference(USQualityCorePatient or Group)
 * subject MS SU
   * ^short = "Who has the condition?"
   * ^isModifier = false
 * encounter only Reference(USQualityCoreEncounter)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Encounter created as part of"
+  * ^short = "Encounter created as part of"
 * onset[x] only dateTime or Age or Period or Range
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Estimated or actual date, date-time, or age"
+  * ^short = "Estimated or actual date, date-time, or age"
 * abatement[x] only dateTime or Age or Period or Range
   * ^short = "When in resolution/remission"
-* recordedDate ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Date record was first recorded"
+* recordedDate ^short = "Date record was first recorded"
   * ^definition = "The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date."
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreConditionEncounterDiagnosis

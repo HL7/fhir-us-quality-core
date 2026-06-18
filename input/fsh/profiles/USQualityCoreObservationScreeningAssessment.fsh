@@ -10,18 +10,14 @@ Description: "The US Quality Core Observation Screening Assessment Profile is ba
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
-* status ^extension[1].url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension[=].valueBoolean = true
-  * ^short = "(USCDI+ Quality) registered | preliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
+* status ^short = "registered | preliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
 * category ..*
 * category only CodeableConcept
 * category from $observation-category-vs (required)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-  * ^short = "(USCDI+ Quality) Classification of type of observation"
+  * ^short = "Classification of type of observation"
   * ^definition = "A code that classifies the general type of observation being made."
   * ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set."
   * ^requirements = "Used for filtering what observations are retrieved and displayed."
@@ -64,9 +60,7 @@ Description: "The US Quality Core Observation Screening Assessment Profile is ba
 * code 1..1 SU
 * code only CodeableConcept
 * code from http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.13 (preferred)
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Type of observation (code / type)"
+  * ^short = "Type of observation (code / type)"
   * ^definition = "Describes what was observed. Sometimes this is called the observation \"name\"."
   * ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation."
   * ^requirements = "Knowing what kind of observation is being made is essential to understanding the observation."
@@ -80,9 +74,7 @@ Description: "The US Quality Core Observation Screening Assessment Profile is ba
   * ^short = "Who and/or what the observation is about"
 * effective[x] 0..1 SU
 * effective[x] only dateTime or Period or Timing or instant
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Clinically relevant time/time-period for observation"
+  * ^short = "Clinically relevant time/time-period for observation"
   * ^definition = "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the \"physiologically relevant time\"."
   * ^comment = "At least a date should be present unless this observation is a historical report."
   * ^requirements = "Knowing when an observation was deemed true is important to its relevance as well as determining trends."
@@ -95,9 +87,7 @@ Description: "The US Quality Core Observation Screening Assessment Profile is ba
   * ^short = "Who is responsible for the observation"
   * ^comment = "Some questions on questionnaires are not answered directly (e.g., asserted) by the individual completing the questionnaire, but are derived from answers to one or more other questions. For types of answers, `Observation.performer` should not be specified and `Observation.derivedFrom` should reference the relevant Screening Response Observation(s)."
 * value[x] only Quantity or CodeableConcept or string or boolean or integer or Range or Ratio or SampledData or time or dateTime or Period
-  * ^extension.url = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension"
-  * ^extension.valueBoolean = true
-  * ^short = "(USCDI+ Quality) Actual result"
+  * ^short = "Actual result"
   * ^comment = "An observation may have a value if it represents an individual survey question and answer pair. An observation should not have a value if it represents a multi-question survey or multi-select “check all that apply” question. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value."
 * dataAbsentReason from DataAbsentReason (extensible)
   * ^short = "Why the result is missing"
@@ -133,3 +123,5 @@ Description: "The US Quality Core Observation Screening Assessment Profile is ba
 * derivedFrom only Reference(USQualityCoreObservationScreeningAssessment or USQualityCoreQuestionnaireResponse)
   * ^short = "Related Observations or QuestionnaireResponses that the observation is made from"
   * ^definition = "Observations or QuestionnaireResponses from which this observation value is derived."
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreObservationScreeningAssessment
