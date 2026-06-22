@@ -17,7 +17,7 @@ Description: "Profile of Condition for decision support/quality metrics. Defines
   * lastUpdated MS
     * ^short = "When the resource last changed"
 * extension[assertedDate] 0..1 MS
-* extension[assertedDate] only http://hl7.org/fhir/StructureDefinition/condition-assertedDate|5.2.0
+* extension[assertedDate] only http://hl7.org/fhir/StructureDefinition/condition-assertedDate|5.3.0
   * ^short = "Date the condition was first asserted"
   * ^definition = "The date on which the existence of the Condition was first asserted or acknowledged."
   * ^comment = "The assertedDate is in the context of the recording practitioner and might not be the same as the recordedDate."

@@ -5,7 +5,6 @@ Description: "Example of a coverage resource used to provide information about a
 Usage: #example
 * identifier.type = $v2-0203#MB
 * status = #active
-* type = $sopt#59 "Other Private Insurance"
 * policyHolder.reference = "Patient/example"
 * subscriber.reference = "Patient/example"
 * subscriberId = "12191"

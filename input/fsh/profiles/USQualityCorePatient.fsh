@@ -98,7 +98,7 @@ Description: "Profile of Patient for decision support/quality metrics. Defines t
 * deceased[x] ^short = "Indicates if the individual is deceased or not"
   * ^comment = "The \"Cause of death\" for a patient is typically captured as an Observation."
 * address ^short = "An address for the individual"
-  * extension contains http://hl7.org/fhir/StructureDefinition/iso21090-preferred|5.2.0 named address-preferred 0..1
+  * extension contains http://hl7.org/fhir/StructureDefinition/iso21090-preferred|5.3.0 named address-preferred 0..1
   * extension[address-preferred] ^comment = "Make general extension."
     * ^mustSupport = false
   * use 0..1 ?! SU

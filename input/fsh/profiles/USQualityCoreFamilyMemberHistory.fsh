@@ -21,8 +21,8 @@ Description: "Profile of Family Member History for decision support/quality metr
 * deceased[x] ^short = "Dead? How old/when?"
 * condition ^mustSupport = false
   * extension contains
-      http://hl7.org/fhir/StructureDefinition/familymemberhistory-abatement|5.2.0 named condition-abatement 0..1 and
-      http://hl7.org/fhir/StructureDefinition/familymemberhistory-severity|5.2.0 named condition-severity 0..1
+      http://hl7.org/fhir/StructureDefinition/familymemberhistory-abatement|5.3.0 named condition-abatement 0..1 and
+      http://hl7.org/fhir/StructureDefinition/familymemberhistory-severity|5.3.0 named condition-severity 0..1
   * extension[condition-abatement] ^mustSupport = false
   * extension[condition-severity] ^mustSupport = false
   * extension[condition-severity].value[x] from http://hl7.org/fhir/ValueSet/condition-severity (preferred)

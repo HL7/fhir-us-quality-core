@@ -1,4 +1,4 @@
-Alias: $v2-0078 = http://terminology.hl7.org/CodeSystem/v2-0078
+Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 
 Instance: example-of-us-quality-core-simple-observation
 InstanceOf: USQualityCoreSimpleObservation
@@ -22,7 +22,7 @@ Usage: #example
   * reference = "Practitioner/example"
   * display = "Practitioner"
 * valueQuantity = 7.2 'g/dL' "g/dl"
-* interpretation = $v2-0078#L "Low"
+* interpretation = $v3-ObservationInterpretation#L "Low"
   * text = "Below low normal"
 * bodySite = $sct#308046002 "Superficial forearm vein"
 * method = $sct#120220003 "Injection to forearm"
@@ -32,10 +32,10 @@ Usage: #example
     * coding[0] = $loinc#8480-6 "Systolic blood pressure"
     * coding[+] = $sct#271649006 "Systolic blood pressure"
   * valueQuantity = 107 'mm[Hg]' "mmHg"
-  * interpretation = $v2-0078#N "normal"
+  * interpretation = $v3-ObservationInterpretation#N "Normal"
     * text = "Normal"
 * component[+]
   * code = $loinc#8462-4 "Diastolic blood pressure"
   * valueQuantity = 60 'mm[Hg]' "mmHg"
-  * interpretation = $v2-0078#L "low"
+  * interpretation = $v3-ObservationInterpretation#L "Low"
     * text = "Below low normal"

@@ -6,7 +6,6 @@ Usage: #example
 * id = "example"
 * identifier.type = $v2-0203#MB
 * status = #active
-* type = $sopt#59 "Other Private Insurance"
 * policyHolder.reference = "Patient/example"
 * subscriber.reference = "Patient/example"
 * beneficiary.reference = "Patient/example"

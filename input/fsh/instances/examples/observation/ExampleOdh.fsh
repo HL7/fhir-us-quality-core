@@ -14,4 +14,4 @@ Usage: #example
 * performer
   * reference = "Practitioner/example"
   * display = "Practitioner"
-* valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH#29-2099.06.034077 "Radiology Technician (Radiology Tech) [Radiologic Technicians]"
+* valueCodeableConcept.text = "Radiology Technician (Radiology Tech) [Radiologic Technicians]"

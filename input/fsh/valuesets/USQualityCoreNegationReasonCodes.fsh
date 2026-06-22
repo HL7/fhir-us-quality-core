@@ -16,8 +16,8 @@ Description: "This value set defines the set of codes that can be used to indica
 * include codes from valueset http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.526.3.1007
 * include codes from valueset http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.526.3.1008
 * SNOMED_CT#107724000 "Patient transfer (procedure)"
-* SNOMED_CT#182856006 "Drug not available - out of stock (finding)"
-* SNOMED_CT#182857002 "Drug not available-off market (finding)"
+* SNOMED_CT#182856006 "Drug not available - out of stock"
+* SNOMED_CT#182857002 "Drug not available - off market"
 * SNOMED_CT#185335007 "Appointment canceled by hospital (finding)"
 * SNOMED_CT#224194003 "Not entitled to benefits (finding)"
 * SNOMED_CT#224198000 "Loss of benefits (finding)"

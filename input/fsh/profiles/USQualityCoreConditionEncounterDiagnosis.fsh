@@ -12,7 +12,7 @@ Description: "The US Quality Core Condition Encounter Diagnosis Profile is based
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * ^copyright = "Used by permission of HL7 International, all rights reserved Creative Commons License"
-* extension contains http://hl7.org/fhir/StructureDefinition/condition-assertedDate|5.2.0 named assertedDate 0..1 MS
+* extension contains http://hl7.org/fhir/StructureDefinition/condition-assertedDate|5.3.0 named assertedDate 0..1 MS
 * extension[assertedDate] ^short = "Date the condition was first asserted"
   * ^definition = "The date on which the existence of the Condition was first asserted or acknowledged."
   * ^comment = "The assertedDate is in the context of the recording practitioner and might not be the same as the recordedDate."

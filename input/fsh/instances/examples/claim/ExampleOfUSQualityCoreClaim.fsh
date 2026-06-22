@@ -1,5 +1,3 @@
-Alias: $ex-visionservice = http://example.org/fhir/CodeSystem/ex-visionservice
-
 Instance: example-of-us-quality-core-claim
 InstanceOf: USQualityCoreClaim
 Title: "Claim example"
@@ -34,14 +32,14 @@ Usage: #example
 * item
   * sequence = 1
   * careTeamSequence = 1
-  * productOrService = $ex-visionservice#glasses
+  * productOrService = $cpt#92014
   * servicedDate = "2014-08-16"
   * unitPrice
     * value = 214.00
     * currency = #USD
   * detail[0]
     * sequence = 1
-    * productOrService = $ex-visionservice#frame
+    * productOrService = $cpt#92340
     * unitPrice
       * value = 100.00
       * currency = #USD
@@ -50,7 +48,7 @@ Usage: #example
       * currency = #USD
   * detail[+]
     * sequence = 2
-    * productOrService = $ex-visionservice#lens
+    * productOrService = $cpt#92015
     * quantity.value = 2
     * unitPrice
       * value = 50.00
@@ -60,7 +58,7 @@ Usage: #example
       * currency = #USD
   * detail[+]
     * sequence = 3
-    * productOrService = $ex-visionservice#fst
+    * productOrService = $cpt#92370
     * unitPrice
       * value = 200.00
       * currency = #USD

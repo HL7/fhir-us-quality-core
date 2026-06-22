@@ -8,8 +8,9 @@ Usage: #example
   * system = "urn:ietf:rfc:3986"
   * value = "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
 * status = #completed
-* vaccineCode = urn:oid:1.2.36.1.2001.1005.17#FLUVAX
-  * text = "Fluvax (Influenza)"
+* vaccineCode
+  * coding[0] = http://hl7.org/fhir/sid/cvx#160 "Influenza A monovalent (H5N1), adjuvanted, National stockpile 2013"
+  * coding[+] = http://hl7.org/fhir/sid/ndc#49281012165
 * patient.reference = "Patient/example"
 * encounter.reference = "Encounter/example"
 * occurrenceDateTime = "2013-01-01"

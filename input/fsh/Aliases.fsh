@@ -14,7 +14,6 @@ Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-cli
 Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
 Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $sopt = https://nahdo.org/sopt
 Alias: $subscriber-relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship
 Alias: $v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias: $loinc = http://loinc.org
