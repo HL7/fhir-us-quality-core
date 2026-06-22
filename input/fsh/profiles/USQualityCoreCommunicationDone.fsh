@@ -13,3 +13,6 @@ Description: "Positive profile of Communication for decision support/quality met
 * . ^mustSupport = false
 * status from USQualityCorePositiveEventStatus (required)
   * ^short = "preparation | in-progress | on-hold | stopped | completed"
+
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreCommunicationDone

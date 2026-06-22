@@ -141,7 +141,7 @@
           "title": "US Quality Core CommunicationDone",
           "path": "StructureDefinition-us-quality-core-communicationdone.html",
           "depth": 1,
-          "inScope": false,
+          "inScope": true,
           "showResource": false,
           "usCore": null
         }
@@ -246,7 +246,7 @@
           "title": "US Quality Core Device Prohibited",
           "path": "StructureDefinition-us-quality-core-deviceprohibited.html",
           "depth": 1,
-          "inScope": false,
+          "inScope": true,
           "showResource": false,
           "usCore": null
         },
@@ -255,7 +255,7 @@
           "title": "US Quality Core DeviceRequested",
           "path": "StructureDefinition-us-quality-core-devicerequested.html",
           "depth": 1,
-          "inScope": false,
+          "inScope": true,
           "showResource": false,
           "usCore": null
         }
@@ -438,7 +438,7 @@
           "title": "US Quality Core Immunization Done",
           "path": "StructureDefinition-us-quality-core-immunizationdone.html",
           "depth": 1,
-          "inScope": false,
+          "inScope": true,
           "showResource": false,
           "usCore": {
             "id": "us-core-immunization",
@@ -543,7 +543,7 @@
           "title": "US Quality Core MedicationAdministration Done",
           "path": "StructureDefinition-us-quality-core-medicationadministrationdone.html",
           "depth": 1,
-          "inScope": false,
+          "inScope": true,
           "showResource": false,
           "usCore": null
         },
@@ -591,7 +591,7 @@
           "title": "US Quality Core MedicationDispense Done",
           "path": "StructureDefinition-us-quality-core-medicationdispensedone.html",
           "depth": 1,
-          "inScope": false,
+          "inScope": true,
           "showResource": false,
           "usCore": {
             "id": "us-core-medicationdispense",
@@ -633,7 +633,7 @@
           "title": "US Quality Core MedicationRequested",
           "path": "StructureDefinition-us-quality-core-medicationrequested.html",
           "depth": 1,
-          "inScope": false,
+          "inScope": true,
           "showResource": false,
           "usCore": {
             "id": "us-core-medicationrequest",
@@ -1032,7 +1032,7 @@
           "title": "US Quality Core Procedure Done",
           "path": "StructureDefinition-us-quality-core-proceduredone.html",
           "depth": 1,
-          "inScope": false,
+          "inScope": true,
           "showResource": false,
           "usCore": {
             "id": "us-core-procedure",
@@ -1140,7 +1140,7 @@
           "title": "US Quality Core ServiceRequested",
           "path": "StructureDefinition-us-quality-core-servicerequested.html",
           "depth": 1,
-          "inScope": false,
+          "inScope": true,
           "showResource": false,
           "usCore": {
             "id": "us-core-servicerequest",
@@ -1200,7 +1200,7 @@
           "title": "US Quality Core Task Done",
           "path": "StructureDefinition-us-quality-core-taskdone.html",
           "depth": 1,
-          "inScope": false,
+          "inScope": true,
           "showResource": false,
           "usCore": null
         },

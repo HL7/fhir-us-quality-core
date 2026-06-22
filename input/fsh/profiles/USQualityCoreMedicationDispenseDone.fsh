@@ -12,3 +12,6 @@ Description: "Positive profile of MedicationDispense for decision support/qualit
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * status from USQualityCorePositiveMedicationDispenseStatus (required)
   * ^short = "preparation | in-progress | on-hold | completed | stopped"
+
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationDispenseDone

@@ -16,3 +16,6 @@ Description: "Positive profile of ServiceRequest for decision support/quality me
 * doNotPerform only boolean
 * doNotPerform = false (exactly)
   * ^short = "True if service/procedure should not be performed"
+
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreServiceRequested

@@ -603,6 +603,13 @@
             "Communication.status",
             "Communication.sent"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-communicationdone",
+          "elements": [
+            "Communication.status",
+            "Communication.sent"
+          ]
         }
       ]
     }
@@ -619,6 +626,14 @@
       "usQualityCore": [
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-communication",
+          "elements": [
+            "Communication.category",
+            "Communication.topic",
+            "Communication.subject"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-communicationdone",
           "elements": [
             "Communication.category",
             "Communication.topic",
@@ -1798,6 +1813,12 @@
           "elements": [
             "Immunization.primarySource"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationdone",
+          "elements": [
+            "Immunization.primarySource"
+          ]
         }
       ]
     }
@@ -1814,6 +1835,12 @@
       "usQualityCore": [
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization",
+          "elements": [
+            "Immunization.status"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationdone",
           "elements": [
             "Immunization.status"
           ]
@@ -1836,6 +1863,12 @@
           "elements": [
             "Immunization.vaccineCode"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationdone",
+          "elements": [
+            "Immunization.vaccineCode"
+          ]
         }
       ]
     }
@@ -1855,6 +1888,12 @@
           "elements": [
             "Immunization.lotNumber"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationdone",
+          "elements": [
+            "Immunization.lotNumber"
+          ]
         }
       ]
     }
@@ -1871,6 +1910,12 @@
       "usQualityCore": [
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization",
+          "elements": [
+            "Immunization.occurrence[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationdone",
           "elements": [
             "Immunization.occurrence[x]"
           ]
@@ -2147,6 +2192,18 @@
           "elements": [
             "ServiceRequest.code"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequested",
+          "elements": [
+            "DeviceRequest.code[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
+          "elements": [
+            "ServiceRequest.code"
+          ]
         }
       ]
     }
@@ -2189,6 +2246,19 @@
             "MedicationRequest.dispenseRequest.expectedSupplyDuration",
             "MedicationRequest.dispenseRequest"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone",
+          "elements": [
+            "MedicationDispense.daysSupply"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested",
+          "elements": [
+            "MedicationRequest.dispenseRequest.expectedSupplyDuration",
+            "MedicationRequest.dispenseRequest"
+          ]
         }
       ]
     }
@@ -2212,6 +2282,13 @@
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined",
+          "elements": [
+            "MedicationDispense.status",
+            "MedicationDispense.whenPrepared"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone",
           "elements": [
             "MedicationDispense.status",
             "MedicationDispense.whenPrepared"
@@ -2248,6 +2325,25 @@
           "elements": [
             "MedicationRequest.dosageInstruction.doseAndRate.dose[x]"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationdone",
+          "elements": [
+            "MedicationAdministration.dosage",
+            "MedicationAdministration.dosage.dose"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone",
+          "elements": [
+            "MedicationDispense.dosageInstruction.doseAndRate.dose[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested",
+          "elements": [
+            "MedicationRequest.dosageInstruction.doseAndRate.dose[x]"
+          ]
         }
       ]
     }
@@ -2279,6 +2375,24 @@
           "elements": [
             "MedicationRequest.dosageInstruction.doseAndRate.dose[x]"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationdone",
+          "elements": [
+            "MedicationAdministration.dosage.dose"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone",
+          "elements": [
+            "MedicationDispense.dosageInstruction.doseAndRate.dose[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested",
+          "elements": [
+            "MedicationRequest.dosageInstruction.doseAndRate.dose[x]"
+          ]
         }
       ]
     }
@@ -2299,6 +2413,13 @@
             "MedicationRequest.reasonCode",
             "MedicationRequest.reasonReference"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested",
+          "elements": [
+            "MedicationRequest.reasonCode",
+            "MedicationRequest.reasonReference"
+          ]
         }
       ]
     }
@@ -2315,6 +2436,12 @@
       "usQualityCore": [
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest",
+          "elements": [
+            "MedicationRequest.extension:medicationAdherence"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested",
           "elements": [
             "MedicationRequest.extension:medicationAdherence"
           ]
@@ -2342,6 +2469,14 @@
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone",
+          "elements": [
+            "MedicationAdministration.medication[x]",
+            "MedicationAdministration.status",
+            "MedicationAdministration.dosage"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationdone",
           "elements": [
             "MedicationAdministration.medication[x]",
             "MedicationAdministration.status",
@@ -2387,6 +2522,33 @@
             "MedicationRequest.dosageInstruction.timing.repeat.periodMax",
             "MedicationRequest.dosageInstruction.timing.repeat.periodUnit"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone",
+          "elements": [
+            "MedicationDispense.dosageInstruction",
+            "MedicationDispense.dosageInstruction.doseAndRate",
+            "MedicationDispense.dosageInstruction.text",
+            "MedicationDispense.dosageInstruction.timing"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested",
+          "elements": [
+            "MedicationRequest.dosageInstruction.asNeeded[x]",
+            "MedicationRequest.dosageInstruction",
+            "MedicationRequest.dosageInstruction.doseAndRate",
+            "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
+            "MedicationRequest.dosageInstruction.text",
+            "MedicationRequest.dosageInstruction.timing",
+            "MedicationRequest.dosageInstruction.timing.repeat",
+            "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]",
+            "MedicationRequest.dosageInstruction.timing.repeat.frequency",
+            "MedicationRequest.dosageInstruction.timing.repeat.frequencyMax",
+            "MedicationRequest.dosageInstruction.timing.repeat.period",
+            "MedicationRequest.dosageInstruction.timing.repeat.periodMax",
+            "MedicationRequest.dosageInstruction.timing.repeat.periodUnit"
+          ]
         }
       ]
     }
@@ -2409,6 +2571,19 @@
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest",
+          "elements": [
+            "MedicationRequest.dispenseRequest.quantity",
+            "MedicationRequest.dispenseRequest"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone",
+          "elements": [
+            "MedicationDispense.quantity"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested",
           "elements": [
             "MedicationRequest.dispenseRequest.quantity",
             "MedicationRequest.dispenseRequest"
@@ -2450,6 +2625,24 @@
           "elements": [
             "MedicationRequest.medication[x]"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationdone",
+          "elements": [
+            "MedicationAdministration.medication[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone",
+          "elements": [
+            "MedicationDispense.medication[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested",
+          "elements": [
+            "MedicationRequest.medication[x]"
+          ]
         }
       ]
     }
@@ -2481,6 +2674,24 @@
           "elements": [
             "MedicationRequest.dosageInstruction.route"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationdone",
+          "elements": [
+            "MedicationAdministration.dosage.route"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone",
+          "elements": [
+            "MedicationDispense.dosageInstruction.route"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested",
+          "elements": [
+            "MedicationRequest.dosageInstruction.route"
+          ]
         }
       ]
     }
@@ -2506,6 +2717,12 @@
           "elements": [
             "MedicationAdministration.effective[x]"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationdone",
+          "elements": [
+            "MedicationAdministration.effective[x]"
+          ]
         }
       ]
     }
@@ -2522,6 +2739,12 @@
       "usQualityCore": [
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest",
+          "elements": [
+            "MedicationRequest.authoredOn"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested",
           "elements": [
             "MedicationRequest.authoredOn"
           ]
@@ -2636,6 +2859,15 @@
             "ServiceRequest.intent",
             "ServiceRequest.authoredOn"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
+          "elements": [
+            "ServiceRequest.code",
+            "ServiceRequest.status",
+            "ServiceRequest.intent",
+            "ServiceRequest.authoredOn"
+          ]
         }
       ]
     }
@@ -2661,6 +2893,15 @@
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.code",
+            "ServiceRequest.status",
+            "ServiceRequest.intent",
+            "ServiceRequest.authoredOn"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
           "elements": [
             "ServiceRequest.code",
             "ServiceRequest.status",
@@ -2698,6 +2939,15 @@
             "ServiceRequest.intent",
             "ServiceRequest.authoredOn"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
+          "elements": [
+            "ServiceRequest.code",
+            "ServiceRequest.status",
+            "ServiceRequest.intent",
+            "ServiceRequest.authoredOn"
+          ]
         }
       ]
     }
@@ -2714,6 +2964,24 @@
       "usQualityCore": [
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequest",
+          "elements": [
+            "DeviceRequest.code[x]",
+            "DeviceRequest.modifierExtension:doNotPerform",
+            "DeviceRequest.authoredOn",
+            "DeviceRequest.status"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequested",
+          "elements": [
+            "DeviceRequest.code[x]",
+            "DeviceRequest.modifierExtension:doNotPerform",
+            "DeviceRequest.authoredOn",
+            "DeviceRequest.status"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-deviceprohibited",
           "elements": [
             "DeviceRequest.code[x]",
             "DeviceRequest.modifierExtension:doNotPerform",
@@ -2746,6 +3014,16 @@
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationprohibited",
+          "elements": [
+            "MedicationRequest.medication[x]",
+            "MedicationRequest.intent",
+            "MedicationRequest.status",
+            "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
+            "MedicationRequest.dispenseRequest.validityPeriod"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested",
           "elements": [
             "MedicationRequest.medication[x]",
             "MedicationRequest.intent",
@@ -2803,6 +3081,15 @@
             "ServiceRequest.intent",
             "ServiceRequest.authoredOn"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
+          "elements": [
+            "ServiceRequest.code",
+            "ServiceRequest.status",
+            "ServiceRequest.intent",
+            "ServiceRequest.authoredOn"
+          ]
         }
       ]
     }
@@ -2828,6 +3115,15 @@
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.code",
+            "ServiceRequest.status",
+            "ServiceRequest.intent",
+            "ServiceRequest.authoredOn"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
           "elements": [
             "ServiceRequest.code",
             "ServiceRequest.status",
@@ -3322,6 +3618,12 @@
           "elements": [
             "Procedure.code"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
+          "elements": [
+            "Procedure.code"
+          ]
         }
       ]
     }
@@ -3668,6 +3970,19 @@
           "elements": [
             "Immunization.occurrence[x]"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationdone",
+          "elements": [
+            "Immunization.occurrence[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
+          "elements": [
+            "Procedure.performed[x]",
+            "Procedure.extension:recorded"
+          ]
         }
       ]
     }
@@ -3707,6 +4022,19 @@
             "ServiceRequest.reasonCode",
             "ServiceRequest.reasonReference"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
+          "elements": [
+            "Procedure.reasonCode"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
+          "elements": [
+            "ServiceRequest.reasonCode",
+            "ServiceRequest.reasonReference"
+          ]
         }
       ]
     }
@@ -3730,6 +4058,13 @@
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone",
+          "elements": [
+            "Procedure.status",
+            "Procedure.statusReason"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
           "elements": [
             "Procedure.status",
             "Procedure.statusReason"
@@ -3771,6 +4106,18 @@
           "elements": [
             "ServiceRequest.code"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
+          "elements": [
+            "Procedure.code"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
+          "elements": [
+            "ServiceRequest.code"
+          ]
         }
       ]
     }
@@ -3794,6 +4141,13 @@
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone",
+          "elements": [
+            "Procedure.code",
+            "Procedure.partOf"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
           "elements": [
             "Procedure.code",
             "Procedure.partOf"
@@ -3839,6 +4193,20 @@
             "ServiceRequest.reasonCode",
             "ServiceRequest.reasonReference"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
+          "elements": [
+            "Procedure.reasonCode",
+            "Procedure.reasonReference"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
+          "elements": [
+            "ServiceRequest.reasonCode",
+            "ServiceRequest.reasonReference"
+          ]
         }
       ]
     }
@@ -3873,6 +4241,18 @@
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.code"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
+          "elements": [
+            "Procedure.code"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
           "elements": [
             "ServiceRequest.code"
           ]
@@ -3965,6 +4345,12 @@
           "elements": [
             "ServiceRequest.status"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
+          "elements": [
+            "ServiceRequest.status"
+          ]
         }
       ]
     }
@@ -3987,6 +4373,12 @@
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.authoredOn"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
           "elements": [
             "ServiceRequest.authoredOn"
           ]
@@ -4021,6 +4413,15 @@
             "Task.basedOn",
             "Task.executionPeriod"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskdone",
+          "elements": [
+            "Task.code",
+            "Task.focus",
+            "Task.basedOn",
+            "Task.executionPeriod"
+          ]
         }
       ]
     }
@@ -4045,6 +4446,14 @@
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected",
+          "elements": [
+            "Task.status",
+            "Task.statusReason",
+            "Task.reasonCode"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskdone",
           "elements": [
             "Task.status",
             "Task.statusReason",

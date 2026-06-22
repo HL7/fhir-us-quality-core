@@ -293,8 +293,29 @@
     "id": "us-quality-core-communicationdone",
     "title": "US Quality Core CommunicationDone",
     "path": "StructureDefinition-us-quality-core-communicationdone.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "category",
+        "short": "Message category"
+      },
+      {
+        "path": "sent",
+        "short": "When sent"
+      },
+      {
+        "path": "status",
+        "short": "preparation | in-progress | on-hold | stopped | completed"
+      },
+      {
+        "path": "subject",
+        "short": "Focus of message"
+      },
+      {
+        "path": "topic",
+        "short": "Description of the purpose/content"
+      }
+    ],
     "hasUsCoreLineage": false,
     "search": {
       "resource": "Communication",
@@ -578,8 +599,25 @@
     "id": "us-quality-core-deviceprohibited",
     "title": "US Quality Core Device Prohibited",
     "path": "StructureDefinition-us-quality-core-deviceprohibited.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "authoredOn",
+        "short": "When recorded"
+      },
+      {
+        "path": "code:x",
+        "short": "Device requested"
+      },
+      {
+        "path": "modifierExtension:doNotPerform",
+        "short": "Extension"
+      },
+      {
+        "path": "status",
+        "short": "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
+      }
+    ],
     "hasUsCoreLineage": false,
     "search": {
       "resource": "DeviceRequest",
@@ -667,8 +705,25 @@
     "id": "us-quality-core-devicerequested",
     "title": "US Quality Core DeviceRequested",
     "path": "StructureDefinition-us-quality-core-devicerequested.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "authoredOn",
+        "short": "When recorded"
+      },
+      {
+        "path": "code:x",
+        "short": "Device requested"
+      },
+      {
+        "path": "modifierExtension:doNotPerform",
+        "short": "Extension"
+      },
+      {
+        "path": "status",
+        "short": "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
+      }
+    ],
     "hasUsCoreLineage": false,
     "search": {
       "resource": "DeviceRequest",
@@ -1091,8 +1146,29 @@
     "id": "us-quality-core-immunizationdone",
     "title": "US Quality Core Immunization Done",
     "path": "StructureDefinition-us-quality-core-immunizationdone.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "lotNumber",
+        "short": "Vaccine lot number"
+      },
+      {
+        "path": "occurrence:x",
+        "short": "Vaccine administration date"
+      },
+      {
+        "path": "primarySource",
+        "short": "Indicates context the data was recorded in"
+      },
+      {
+        "path": "status",
+        "short": "completed"
+      },
+      {
+        "path": "vaccineCode",
+        "short": "Vaccine Product Type (bind to CVX)"
+      }
+    ],
     "hasUsCoreLineage": true,
     "search": {
       "resource": "Immunization",
@@ -1304,8 +1380,33 @@
     "id": "us-quality-core-medicationadministrationdone",
     "title": "US Quality Core MedicationAdministration Done",
     "path": "StructureDefinition-us-quality-core-medicationadministrationdone.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "dosage",
+        "short": "Details of how medication was taken"
+      },
+      {
+        "path": "dosage.dose",
+        "short": "Amount of medication per dose"
+      },
+      {
+        "path": "dosage.route",
+        "short": "Path of substance into body"
+      },
+      {
+        "path": "effective:x",
+        "short": "Start and end time of administration"
+      },
+      {
+        "path": "medication:x",
+        "short": "What was administered"
+      },
+      {
+        "path": "status",
+        "short": "in-progress | on-hold | completed | stopped"
+      }
+    ],
     "hasUsCoreLineage": false,
     "search": {
       "resource": "MedicationAdministration",
@@ -1527,8 +1628,53 @@
     "id": "us-quality-core-medicationdispensedone",
     "title": "US Quality Core MedicationDispense Done",
     "path": "StructureDefinition-us-quality-core-medicationdispensedone.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "daysSupply",
+        "short": "Amount of medication expressed as a timing amount"
+      },
+      {
+        "path": "dosageInstruction",
+        "short": "How the medication is to be used by the patient or administered by the caregiver"
+      },
+      {
+        "path": "dosageInstruction.doseAndRate",
+        "short": "Amount of medication administered"
+      },
+      {
+        "path": "dosageInstruction.doseAndRate.dose:x",
+        "short": "Amount of medication per dose"
+      },
+      {
+        "path": "dosageInstruction.route",
+        "short": "How drug should enter body"
+      },
+      {
+        "path": "dosageInstruction.text",
+        "short": "Free text dosage instructions e.g. SIG"
+      },
+      {
+        "path": "dosageInstruction.timing",
+        "short": "When medication should be administered"
+      },
+      {
+        "path": "medication:x",
+        "short": "What medication was supplied"
+      },
+      {
+        "path": "quantity",
+        "short": "Amount dispensed"
+      },
+      {
+        "path": "status",
+        "short": "preparation | in-progress | on-hold | completed | stopped"
+      },
+      {
+        "path": "whenPrepared",
+        "short": "When product was packaged and reviewed"
+      }
+    ],
     "hasUsCoreLineage": true,
     "search": {
       "resource": "MedicationDispense",
@@ -1761,8 +1907,113 @@
     "id": "us-quality-core-medicationrequested",
     "title": "US Quality Core MedicationRequested",
     "path": "StructureDefinition-us-quality-core-medicationrequested.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "authoredOn",
+        "short": "When request was initially authored"
+      },
+      {
+        "path": "dispenseRequest",
+        "short": "Medication supply authorization"
+      },
+      {
+        "path": "dispenseRequest.expectedSupplyDuration",
+        "short": "Number of days supply per dispense"
+      },
+      {
+        "path": "dispenseRequest.numberOfRepeatsAllowed",
+        "short": "Number of refills authorized"
+      },
+      {
+        "path": "dispenseRequest.quantity",
+        "short": "Amount of medication to supply per dispense"
+      },
+      {
+        "path": "dispenseRequest.validityPeriod",
+        "short": "Time period supply is authorized for"
+      },
+      {
+        "path": "dosageInstruction",
+        "short": "How medication should be taken"
+      },
+      {
+        "path": "dosageInstruction.asNeeded:x",
+        "short": "Take \"as needed\" (for x)"
+      },
+      {
+        "path": "dosageInstruction.doseAndRate",
+        "short": "Amount of medication administered"
+      },
+      {
+        "path": "dosageInstruction.doseAndRate.dose:x",
+        "short": "Amount of medication per dose"
+      },
+      {
+        "path": "dosageInstruction.route",
+        "short": "How drug should enter body"
+      },
+      {
+        "path": "dosageInstruction.text",
+        "short": "Free text dosage instructions e.g. SIG"
+      },
+      {
+        "path": "dosageInstruction.timing",
+        "short": "When medication should be administered"
+      },
+      {
+        "path": "dosageInstruction.timing.repeat",
+        "short": "When the event is to occur"
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.bounds:x",
+        "short": "Length/Range of lengths, or (Start and/or end) limits"
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.frequency",
+        "short": "Event occurs frequency times per period"
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.frequencyMax",
+        "short": "Event occurs frequencyMax times per period"
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.period",
+        "short": "Event occurs frequency times per period"
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.periodMax",
+        "short": "Upper limit of period (3-4 hours)"
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.periodUnit",
+        "short": "s | min | h | d | wk | mo | a - unit of time (UCUM)"
+      },
+      {
+        "path": "extension:medicationAdherence",
+        "short": "Reported adherence to prescribed medication instructions."
+      },
+      {
+        "path": "intent",
+        "short": "proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"
+      },
+      {
+        "path": "medication:x",
+        "short": "Medication to be taken"
+      },
+      {
+        "path": "reasonCode",
+        "short": "Reason or indication for ordering or not ordering the medication"
+      },
+      {
+        "path": "reasonReference",
+        "short": "US Quality Core Condition or Observation that supports the prescription"
+      },
+      {
+        "path": "status",
+        "short": "active | on-hold | cancelled | completed | stopped | draft"
+      }
+    ],
     "hasUsCoreLineage": true,
     "search": {
       "resource": "MedicationRequest",
@@ -2496,8 +2747,41 @@
     "id": "us-quality-core-proceduredone",
     "title": "US Quality Core Procedure Done",
     "path": "StructureDefinition-us-quality-core-proceduredone.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "code",
+        "short": "What procedure"
+      },
+      {
+        "path": "extension:recorded",
+        "short": "When the procedure was first captured in the subject's record"
+      },
+      {
+        "path": "partOf",
+        "short": "Part of referenced event"
+      },
+      {
+        "path": "performed:x",
+        "short": "When the procedure was performed"
+      },
+      {
+        "path": "reasonCode",
+        "short": "Coded reason procedure performed"
+      },
+      {
+        "path": "reasonReference",
+        "short": "The justification that the procedure was performed"
+      },
+      {
+        "path": "status",
+        "short": "preparation | in-progress | on-hold | stopped | completed"
+      },
+      {
+        "path": "statusReason",
+        "short": "Reason for current status"
+      }
+    ],
     "hasUsCoreLineage": true,
     "search": {
       "resource": "Procedure",
@@ -2836,8 +3120,33 @@
     "id": "us-quality-core-servicerequested",
     "title": "US Quality Core ServiceRequested",
     "path": "StructureDefinition-us-quality-core-servicerequested.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "authoredOn",
+        "short": "Date request signed"
+      },
+      {
+        "path": "code",
+        "short": "What is being requested/ordered"
+      },
+      {
+        "path": "intent",
+        "short": "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
+      },
+      {
+        "path": "reasonCode",
+        "short": "Explanation/Justification for procedure or service"
+      },
+      {
+        "path": "reasonReference",
+        "short": "Explanation/Justification for service or service"
+      },
+      {
+        "path": "status",
+        "short": "draft | active | on-hold | completed"
+      }
+    ],
     "hasUsCoreLineage": true,
     "search": {
       "resource": "ServiceRequest",
@@ -3052,8 +3361,37 @@
     "id": "us-quality-core-taskdone",
     "title": "US Quality Core Task Done",
     "path": "StructureDefinition-us-quality-core-taskdone.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
+    "hasUscdiQualityElements": true,
+    "uscdiQualityElements": [
+      {
+        "path": "basedOn",
+        "short": "Request fulfilled by this task"
+      },
+      {
+        "path": "code",
+        "short": "Task Type"
+      },
+      {
+        "path": "executionPeriod",
+        "short": "Start and end time of execution"
+      },
+      {
+        "path": "focus",
+        "short": "What task is acting on"
+      },
+      {
+        "path": "reasonCode",
+        "short": "Why task is needed"
+      },
+      {
+        "path": "status",
+        "short": "draft | requested | received | accepted | ready | in-progress | on-hold | completed"
+      },
+      {
+        "path": "statusReason",
+        "short": "Reason for current status"
+      }
+    ],
     "hasUsCoreLineage": false,
     "search": {
       "resource": "Task",

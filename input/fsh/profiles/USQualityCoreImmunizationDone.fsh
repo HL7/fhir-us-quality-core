@@ -13,3 +13,6 @@ Description: "Positive profile of Immunization for decision support/quality metr
 * id ^mustSupport = false
 * status = #completed (exactly)
   * ^short = "completed"
+
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreImmunizationDone

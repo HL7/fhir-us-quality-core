@@ -25,3 +25,6 @@ Description: "Negation profile of DeviceRequest for decision support/quality met
 * reasonCode only CodeableConcept
 * reasonCode from USQualityCoreNegationReasonCodes (extensible)
   * ^short = "Explanation/Justification for procedure or service"
+
+// Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
+* insert GeneratedUSCDIQualityFlagsForUSQualityCoreDeviceProhibited
