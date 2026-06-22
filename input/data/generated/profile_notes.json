@@ -257,6 +257,14 @@
       {
         "path": "status",
         "short": "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown"
+      },
+      {
+        "path": "subject",
+        "short": "Focus of message"
+      },
+      {
+        "path": "topic",
+        "short": "Description of the purpose/content"
       }
     ],
     "hasUsCoreLineage": false,

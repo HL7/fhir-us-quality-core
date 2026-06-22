@@ -156,6 +156,10 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreCommunication
 * sent ^short = "(USCDI+ Quality) When sent"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown"
+* subject ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* subject ^short = "(USCDI+ Quality) Focus of message"
+* topic ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* topic ^short = "(USCDI+ Quality) Description of the purpose/content"
 
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreCommunicationNotDone
 * statusReason ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
