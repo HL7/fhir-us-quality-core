@@ -1,7 +1,9 @@
 == Suppressed Messages ==
 
 # The following messages are being generated from the inherited/base resource snapshot
+INFORMATION: StructureDefinition/us-quality-core-medicationdispense: StructureDefinition.snapshot.element[32].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/us-quality-core-medicationdispensedeclined: StructureDefinition.snapshot.element[32].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: StructureDefinition/us-quality-core-medicationdispensedone: StructureDefinition.snapshot.element[32].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/us-quality-core-organization: StructureDefinition.snapshot.element[10].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 INFORMATION: StructureDefinition/us-quality-core-practitioner: StructureDefinition.snapshot.element[18].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 WARNING: StructureDefinition/us-quality-core-organization: StructureDefinition.snapshot: The slice 'CLIA' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
@@ -14,7 +16,10 @@ The definition for the element 'ImagingStudy.series.performer.function' binds to
 
 # The following messages are generated from code systems and value sets currently in 'draft' status within the inherited/base resource snapshot.
 Reference to draft CodeSystem http://hl7.org/fhir/event-status|4.0.1
+Reference to draft CodeSystem http://hl7.org/fhir/CodeSystem/medicationrequest-status|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
+Reference to draft CodeSystem http://hl7.org/fhir/request-status|4.0.1
+Reference to draft CodeSystem http://hl7.org/fhir/CodeSystem/task-code|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/task-status|4.0.1
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medication-admin-status|4.0.1
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationdispense-status|4.0.1
@@ -22,3 +27,6 @@ Reference to draft ValueSet http://hl7.org/fhir/ValueSet/servicerequest-category
 
 # The publisher reports this even though the expansion parameters file is referenced by path-expansion-params
 %The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
+
+# US Core 9 uses capabilitystatement-expectation as a child of capabilitystatement-search-parameter-combination; the expectation extension explicitly allows that context.
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination%

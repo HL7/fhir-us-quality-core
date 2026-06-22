@@ -3,7 +3,7 @@ Parent: USQualityCoreMedicationAdministration
 Id: us-quality-core-medicationadministrationdone
 Title: "US Quality Core MedicationAdministration Done"
 Description: "Positive profile of MedicationAdministration for decision support/quality metrics. Indicates that a medication administration is being or was performed (as opposed to the negative profile)"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * ^date = "2026-06-30"
 * ^publisher = "HL7 International / Clinical Quality Information"

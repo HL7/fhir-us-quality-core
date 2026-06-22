@@ -15,7 +15,7 @@ The following search parameters are defined for the underlying `{{ search.resour
 | Name | Expectation |
 |---|---|
 {% for search_param in search_params -%}
-| `{{ search_param.name }}` | {{ search_param.expectation }} |
+| `{{ search_param.name }}` | {{ search_param.expectation | replace: "SHALL", "Required" | replace: "SHOULD", "Recommended" | replace: "MAY", "Optional" }} |
 {% endfor %}
 {% endif %}
 
@@ -26,7 +26,7 @@ The following search parameters are defined for the underlying `{{ search.resour
 | Name | Expectation |
 |---|---|
 {% for combination in search_combinations -%}
-| `{{ combination.name }}` | {{ combination.expectation }} |
+| `{{ combination.name }}` | {{ combination.expectation | replace: "SHALL", "Required" | replace: "SHOULD", "Recommended" | replace: "MAY", "Optional" }} |
 {% endfor %}
 {% endif %}
 {% endif %}

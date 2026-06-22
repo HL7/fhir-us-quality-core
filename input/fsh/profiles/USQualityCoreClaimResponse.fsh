@@ -4,7 +4,7 @@ Id: us-quality-core-claimresponse
 Title: "US Quality Core ClaimResponse"
 Description: "The US Quality Core ClaimResponse profile is used to provide the results of the adjudication and/or authorization of a set of healthcare-related products and services for a patient against the patient's insurance coverages, or to respond with what the adjudication would be for a supplied set of products or services should they be actually supplied to the patient. It identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the ClaimResponse resource when using this profile"
 * ^version = "1.0.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * ^date = "2026-06-30"
 * ^publisher = "HL7 International / Clinical Quality Information"

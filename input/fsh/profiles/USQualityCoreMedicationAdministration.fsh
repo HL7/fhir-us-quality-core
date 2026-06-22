@@ -10,7 +10,7 @@ Id: us-quality-core-medicationadministration
 Title: "US Quality Core MedicationAdministration"
 Description: "Profile of MedicationAdministration for decision support/quality metrics. Defines the core set of elements and extensions for quality rule and measure authors."
 * ^version = "1.0.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * ^date = "2026-06-30"
 * ^publisher = "HL7 International / Clinical Quality Information"

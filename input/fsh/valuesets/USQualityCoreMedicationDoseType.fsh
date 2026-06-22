@@ -6,7 +6,7 @@ Title: "US Quality Core SNOMED CT Dosage Codes"
 Description: "This value set includes all the \"Dosages\" SNOMED CT codes (i.e. codes with an is-a relationship with 277406006: Dosages)."
 * ^meta.profile = $shareablevalueset
 * ^version = "1.0.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * ^date = "2026-06-30"
 * ^publisher = "HL7 International / Clinical Quality Information"
