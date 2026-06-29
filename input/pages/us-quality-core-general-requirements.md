@@ -1,3 +1,8 @@
+{:toc}
+
+
+{: .note}
+> TODO: Review content & rephrase the 'at least one USCDI+ Quality element flagged' language if all included profiles are required.
 
 This page documents requirements common to all US Quality Core actors in this guide. The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules](https://hl7.org/fhir/R4/conformance-rules.html).
 

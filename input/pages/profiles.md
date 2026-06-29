@@ -1,9 +1,11 @@
 {:toc}
 
+
+{: .note}
+> TODO: Still need to remove the profiles from QI-Core 8 that are not relevant to USCDI+ Quality.  Also, we don't need the whole 'identified by USCDI+ Quality mappings' concept, as every profile should be in scope now.
+
 ### US Quality Core Profiles
 The following table lists the US Quality Core profiles that are part of the IG, directly supported US Core profiles identified by USCDI+ Quality mappings, and the underlying FHIR resources.
-
-Not all profiles included in this guide are required for conformance. Implementations are expected to support profiles with at least one USCDI+ Quality flagged data element, as described in the [Summary of Conformance Requirements](us-quality-core-general-requirements.html#summary-of-conformance-requirements) and the [USCDI+ Quality in-scope](uscdiquality.html#summary-list-of-in-scope-profiles-for-conformance) and [out-of-scope](uscdiquality.html#summary-list-of-out-of-scope-profiles-for-conformance) profile summaries. Profiles that are not part of the conformance expectations of this guide are marked with an asterisk (`*`) in the US Quality Core profile column.
 
 {% include profile-table.md %}
 

@@ -1,3 +1,7 @@
+{:toc}
+
+{: .note}
+> TODO: Update language here because all profiles are expected to be required
 
 US Quality Core derives from US Core, and therefore the [requirements on "MustSupport" defined in US Core]({{site.data.fhir.ver.uscore}}/must-support.html) must be respected.
 

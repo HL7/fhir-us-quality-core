@@ -1,5 +1,8 @@
 {: toc}
 
+{: .note}
+> TODO: Determine if we need v0.5.0 here; this is a new IG technically.
+
 {: #changes}
 
 This page lists the change history for each version of **US Quality Core**. The

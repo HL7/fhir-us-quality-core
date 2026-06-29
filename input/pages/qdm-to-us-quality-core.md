@@ -1,5 +1,9 @@
 {:toc}
 
+{: .note}
+> TODO: Determine if this is in-scope for this version of the IG.
+
+
 [comment]: # The contents of this page were converted to markdwon from the Word document attached to https://jira.hl7.org/browse/FHIR-48920
 
 This page is part of the US Quality Core Implementation Guide (v1.0.0) based on [FHIR R4](http://hl7.org/fhir/R4/). For a full list of available versions, see the [Directory of published versions](http://hl7.org/fhir/us/quality-core/history.html).
