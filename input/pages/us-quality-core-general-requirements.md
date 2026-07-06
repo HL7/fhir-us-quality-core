@@ -1,17 +1,14 @@
 {:toc}
 
 
-{: .note}
-> TODO: Review content & rephrase the 'at least one USCDI+ Quality element flagged' language if all included profiles are required.
-
 This page documents requirements common to all US Quality Core actors in this guide. The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules](https://hl7.org/fhir/R4/conformance-rules.html).
 
 ### Summary of Conformance Requirements
 
 In addition to adherence to core FHIR requirements, conformance to this US Quality Core Implementation Guide also requires the following:
 
-- Implementations **SHALL** support all profile types that contain at least one USCDI+ Quality flagged data element, as described in the [USCDI+ Quality](uscdiquality.html) page.
-- Implementations **SHALL** support all USCDI+ Quality flagged data elements, and those flagged as MustSupport from underlying US Core profiles.
+- Implementations **SHALL** support all [US Quality Core profiles](profiles.html).
+- Implementations **SHALL** support all elements flagged as USCDI+ Quality and all elements flagged MustSupport in underlying US Core profiles.
 - Server implementations **SHALL** support the requirements described in the [US Quality Core Server CapabilityStatement](CapabilityStatement-us-quality-core-server.html).
 - Server implementations **SHALL** support all interactions, search parameters, and combined search parameters that have `SHALL` conformance expectations in the US Quality Core Server CapabilityStatement.
 - Server implementations **SHALL** declare their support of the US Quality Core profiles in a FHIR CapabilityStatement.
@@ -24,13 +21,13 @@ In addition to adherence to core FHIR requirements, conformance to this US Quali
 
 ### API Requirements
 
-US Quality Core RESTful API conformance is defined by the [US Quality Core CapabilityStatements](capability-statements.html). The CapabilityStatements identify required and optional RESTful interactions, including `read` and `search-type`, as well as individual search parameters and combined search parameters used to retrieve in-scope USCDI+ Quality V2 data.
+US Quality Core RESTful API conformance is defined by the [US Quality Core CapabilityStatements](capability-statements.html). The CapabilityStatements identify required and optional RESTful interactions, including `read` and `search-type`, as well as individual search parameters and combined search parameters used to retrieve in-scope Draft USCDI+ Quality V2 data.
 
 US Quality Core implementations are also expected to conform to applicable US Core RESTful API requirements. US Quality Core may restate US Core requirements to highlight those that are relevant to USCDI+ Quality data access. US Core requirements not restated in US Quality Core remain part of applicable US Core conformance.
 
 #### Search Requirement Selection
 
-Like US Core, many US Quality Core RESTful API requirements are search requirements. US Quality Core defines a focused set of searches needed to retrieve in-scope USCDI+ Quality V2 data for quality measurement and reporting.
+Like US Core, many US Quality Core RESTful API requirements are search requirements. US Quality Core defines a focused set of searches needed to retrieve in-scope Draft USCDI+ Quality V2 data for quality measurement and reporting.
 
 US Quality Core CapabilityStatements may restate US Core search requirements when the search is directly relevant to USCDI+ Quality data access. Restating a US Core search in this guide highlights its relevance for US Quality Core; not restating a US Core search does not remove the underlying US Core requirement.
 
@@ -48,12 +45,12 @@ The presence of a SearchParameter artifact in this guide does not, by itself, cr
 
 Within FHIR resources, some elements are considered [Modifier Elements]({{site.data.fhir.path}}conformance-rules.html#isModifier), indicating that the value of that element may change the interpretation of the resource. Typical examples of modifier elements are elements such as `status` that exists in many resources and `doNotPerform` element in MedicationRequest. For example, `Procedure.status` with a value of not-done indicating that the procedure was not performed.
 
-Decision support and quality implementations MUST always check the values of modifier elements. For example, in processing a Procedure resource, the application must inspect the `status` element to determine whether the procedure was performed or not performed to the patient. For this reason, modifier elements SHALL be treated as MustSupport, even if not declared.
+Decision support and quality implementations **SHALL** always check the values of modifier elements. For example, in processing a Procedure resource, the application must inspect the `status` element to determine whether the procedure was performed or not performed to the patient. For this reason, modifier elements SHALL be treated as MustSupport, even if not declared.
 
 ### Negation in US Quality Core
 {: #negation-in-us-quality-core}
 
-US Quality Core adopts US Quality Core’s concept of negation and its approach to constraining negated concepts, which follows the informative publication established by HL7.[^2]
+US Quality Core adopts QI-Core's concept of negation and its approach to constraining negated concepts, which follows the informative publication established by HL7.[^2]
 
 US Quality Core constrains these negated concepts as follows:
 
