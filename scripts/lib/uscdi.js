@@ -68,7 +68,7 @@ function assertAllDataElementsMapped(dataElements) {
 
   throw new Error(
     [
-      'Every data/uscdi_quality.json data element must have at least one US Quality Core or US Core mapping.',
+      'Every data/uscdi_plus_quality.json data element must have at least one US Quality Core or US Core mapping.',
       'Missing mappings:',
       ...unmapped.map(dataElement => `- ${dataElement.class}: ${dataElement.name}`)
     ].join('\n')
@@ -96,7 +96,7 @@ function mappingProfileUrls(dataElements) {
 }
 
 // Builds the CapabilityStatement supportedProfile source of truth from
-// data/uscdi_quality.json mappings, grouped by resolved FHIR resource type.
+// data/uscdi_plus_quality.json mappings, grouped by resolved FHIR resource type.
 function mappedProfileResourceType(url, profilesById, profilesByName, fhirDefs) {
   const localProfile = profilesById.get(urlTail(url));
   if (localProfile) return profileResourceType(localProfile, profilesById, profilesByName, fhirDefs);

@@ -203,7 +203,7 @@ function addSystemInteractions(ruleSet) {
 function generatedFsh(ruleSet) {
   return generatedFshFile({
     scriptName: 'generate_rest.js',
-    inputPaths: ['data/rest.json', 'data/uscdi_quality.json'],
+    inputPaths: ['data/rest.json', 'data/uscdi_plus_quality.json'],
     content: ruleSetToFsh(ruleSet)
   });
 }
@@ -291,7 +291,7 @@ function assertResourceCoverage(resources, supportedProfilesByResource) {
 
   if (unmappedConfigs.length) {
     throw new Error(
-      `data/rest.json includes resources with no data/uscdi_quality.json profile mappings:\n- ${unmappedConfigs.join(
+      `data/rest.json includes resources with no data/uscdi_plus_quality.json profile mappings:\n- ${unmappedConfigs.join(
         '\n- '
       )}`
     );

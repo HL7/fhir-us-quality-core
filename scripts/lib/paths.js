@@ -8,7 +8,7 @@ const GENERATED_DATA_DIR = path.join(DATA_DIR, 'generated');
 const GENERATED_DIR = path.join(FSH_DIR, 'generated');
 const GENERATED_SEARCH_PARAMETER_DIR = path.join(GENERATED_DIR, 'search-parameters');
 const GENERATED_FLAGS_PATH = path.join(GENERATED_DIR, 'USCDIQualityFlags.fsh');
-const USCDI_QUALITY_DATA_PATH = path.join(SOURCE_DATA_DIR, 'uscdi_quality.json');
+const USCDI_QUALITY_DATA_PATH = path.join(SOURCE_DATA_DIR, 'uscdi_plus_quality.json');
 const REST_DATA_PATH = path.join(SOURCE_DATA_DIR, 'rest.json');
 
 const USCDI_QUALITY_RULESET_PREFIX = 'GeneratedUSCDIQualityFlagsFor';

@@ -25,7 +25,7 @@ us-quality-core/
 |-- ig.ini                        IG Publisher entry point
 |-- fsh.ini                       SUSHI configuration used by the IG Publisher
 |-- data/                         Maintained JSON inputs for project-specific generators
-|   |-- uscdi_quality.json        USCDI+ Quality data element and profile mappings
+|   |-- uscdi_plus_quality.json   USCDI+ Quality data element and profile mappings
 |   `-- rest.json                 REST/search conformance requirements
 |-- scripts/                      Node-based generators and shared helper code
 |   |-- generate_flags.js         Generates USCDI+ Quality flag RuleSets
@@ -71,7 +71,7 @@ requirements, CapabilityStatement REST content, or generated SearchParameters.
 
 ### Add Or Revise USCDI+ Quality Mappings
 
-Edit `data/uscdi_quality.json`.
+Edit `data/uscdi_plus_quality.json`.
 
 Use this file when adding or changing:
 
@@ -119,7 +119,7 @@ Use this file when adding or changing:
 - required search parameter combinations
 
 The REST generator uses this data, together with mappings in
-`data/uscdi_quality.json`, to generate CapabilityStatement REST rules and local
+`data/uscdi_plus_quality.json`, to generate CapabilityStatement REST rules and local
 SearchParameter FSH.
 
 After editing REST/search requirements, run:
@@ -238,7 +238,7 @@ The npm scripts are:
 
 ### Important Inputs
 
-- `data/uscdi_quality.json` - the data element mapping source for USCDI+
+- `data/uscdi_plus_quality.json` - the data element mapping source for USCDI+
   Quality flagging. This file identifies the US Quality Core profiles and
   element paths that should receive the USCDI+ Quality extension and short-text
   prefix. Its US Core and US Quality Core profile mappings also determine which
@@ -250,17 +250,17 @@ The npm scripts are:
 
 This script keeps local SearchParameter definitions and the repeated
 CapabilityStatement rest section driven by `data/rest.json` and the profile
-mappings in `data/uscdi_quality.json`. It writes SearchParameter FSH files under
+mappings in `data/uscdi_plus_quality.json`. It writes SearchParameter FSH files under
 `input/fsh/generated/search-parameters/` and generates
 `input/fsh/generated/USQualityCoreCapabilityStatementRest.fsh`, which is
 inserted into the authored server and client CapabilityStatement instances.
-Supported profile lists are inferred from `data/uscdi_quality.json`; do not
+Supported profile lists are inferred from `data/uscdi_plus_quality.json`; do not
 duplicate them in `data/rest.json`.
 
 ### `generate_flags.js`
 
 This script keeps USCDI+ Quality element flagging driven by
-`data/uscdi_quality.json`. It generates USCDI+ Quality flagging RuleSets and
+`data/uscdi_plus_quality.json`. It generates USCDI+ Quality flagging RuleSets and
 validates that mapped element paths exist before writing updates.
 
 Flagged profiles are expected to contain a stable
@@ -292,12 +292,12 @@ rerun the relevant npm script from the IG root.
 
 | File | Generator | Primary inputs |
 | --- | --- | --- |
-| `input/fsh/generated/USQualityCoreCapabilityStatementRest.fsh` | `npm --prefix scripts run generate:rest` | `data/rest.json`, `data/uscdi_quality.json`, authored FSH |
-| `input/fsh/generated/search-parameters/*.fsh` | `npm --prefix scripts run generate:rest` | `data/rest.json`, `data/uscdi_quality.json`, authored FSH |
-| `input/fsh/generated/USCDIQualityFlags.fsh` | `npm --prefix scripts run generate:flags` | `data/uscdi_quality.json`, authored profile FSH |
+| `input/fsh/generated/USQualityCoreCapabilityStatementRest.fsh` | `npm --prefix scripts run generate:rest` | `data/rest.json`, `data/uscdi_plus_quality.json`, authored FSH |
+| `input/fsh/generated/search-parameters/*.fsh` | `npm --prefix scripts run generate:rest` | `data/rest.json`, `data/uscdi_plus_quality.json`, authored FSH |
+| `input/fsh/generated/USCDIQualityFlags.fsh` | `npm --prefix scripts run generate:flags` | `data/uscdi_plus_quality.json`, authored profile FSH |
 | `input/data/generated/profile_notes.json` | `npm --prefix scripts run generate:view-data` | `data/rest.json`, generated flag RuleSets, authored profile FSH |
-| `input/data/generated/profile_table.json` | `npm --prefix scripts run generate:view-data` | `data/uscdi_quality.json`, authored profile FSH, generated flag RuleSets |
-| `input/data/generated/data_elements.json` | `npm --prefix scripts run generate:view-data` | `data/uscdi_quality.json`, authored profile FSH |
+| `input/data/generated/profile_table.json` | `npm --prefix scripts run generate:view-data` | `data/uscdi_plus_quality.json`, authored profile FSH, generated flag RuleSets |
+| `input/data/generated/data_elements.json` | `npm --prefix scripts run generate:view-data` | `data/uscdi_plus_quality.json`, authored profile FSH |
 
 Generated RuleSet FSH files are inserted from authored FSH using RuleSet
 inserts. Generated SearchParameter FSH files are regular FSH instance

@@ -216,7 +216,7 @@ function buildRuleSets(flags, profilesById, profileData) {
 function generatedFsh(ruleSets) {
   return generatedFshFile({
     scriptName: 'generate_flags.js',
-    inputPaths: ['data/uscdi_quality.json'],
+    inputPaths: ['data/uscdi_plus_quality.json'],
     content: ruleSets.map(ruleSetToFsh).join('\n\n')
   });
 }
@@ -225,7 +225,7 @@ function generatedRuleSetInsertHint(message) {
   if (!message.includes(`RuleSet ${RULESET_PREFIX}For`)) return message;
   return [
     message,
-    'This usually means a profile still contains a generated USCDI+ Quality RuleSet insert, but data/uscdi_quality.json no longer has mappings for that profile.',
+    'This usually means a profile still contains a generated USCDI+ Quality RuleSet insert, but data/uscdi_plus_quality.json no longer has mappings for that profile.',
     `If this profile no longer has any mappings, you may need to remove the generated insert and comment from the profile FSH:\n${INSERT_COMMENT}\n* insert ${RULESET_PREFIX}For...`
   ].join('\n');
 }
