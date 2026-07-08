@@ -9,9 +9,13 @@ The following elements are specifically relevant to USCDI+ Quality V2 data class
 
 **USCDI+ Quality Elements:**
 
-{: .usqc-uscdi-quality-elements}
+{: .usqc-generated-table .usqc-profile-uscdi-quality-elements}
+| Profile element | Description | USCDI+ Quality Data Element(s) |
+|---|---|---|
 {% for element in profile_notes.uscdiQualityElements -%}
-{% assign element_short = element.short | replace: "|", "&#124;" -%}
-- {{ element.path }}: {{ element_short }}
+{%- assign element_path = element.path | replace: "|", "&#124;" -%}
+{%- assign element_short = element.short | replace: "|", "&#124;" -%}
+{%- capture data_elements -%}{%- for item in element.dataElements -%}{%- assign data_class = item.class | replace: "|", "&#124;" -%}{%- assign data_name = item.name | replace: "|", "&#124;" -%}[{{ data_class }}: {{ data_name }}]({{ item.path }}){%- unless forloop.last %}, {% endunless -%}{%- endfor -%}{%- endcapture -%}
+| `{{ element_path }}` | {{ element_short }} | {{ data_elements | strip }} |
 {% endfor %}
 {% endif %}

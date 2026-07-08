@@ -3,7 +3,7 @@
 const { GENERATED_DATA_DIR, US_CORE_PROFILE_PREFIX, path } = require('./lib/paths');
 const { configuredFhirDefinitions, parseFsh, sourceFshFiles } = require('./lib/sushi');
 const { ensureDir, readRestData, readUscdiQualityData, writeJson } = require('./lib/io');
-const { fshPathToDisplayPath, getOrSet, markdownText, urlTail } = require('./lib/text');
+const { fshPathToDisplayPath, getOrSet, jsonPathToFshPath, markdownText, urlTail } = require('./lib/text');
 const {
   displayTitle,
   hasUsCoreLineage,
@@ -55,6 +55,10 @@ function noteId(dataElement) {
     .replace(/^-|-$/g, '');
 }
 
+function dataElementId(dataElement) {
+  return `data-element-${noteId(dataElement)}`;
+}
+
 function groupsByClass(dataElements) {
   const groups = new Map();
   for (const dataElement of dataElements) {
@@ -89,6 +93,8 @@ function resolvedDataElement(dataElement, profilesById, fhirDefs) {
   return {
     class: dataElement.class,
     name: dataElement.name,
+    description: markdownText(dataElement.description ?? ''),
+    dataElementId: dataElementId(dataElement),
     noteId: noteId(dataElement),
     notes: String(dataElement.notes ?? '').trim(),
     usQualityCore: uniqueMappings(dataElement.mappings.usQualityCore).map(mapping =>
@@ -244,14 +250,64 @@ function assertProfilesHaveUscdiQualityElements(profileElements) {
   );
 }
 
-function profileNotesData(profiles, ruleSets, profilesById, profilesByName, resourceTypes, restResources, fhirDefs) {
+function dataElementLink(dataElement) {
+  return {
+    class: dataElement.class,
+    name: dataElement.name,
+    path: `uscdiquality.html#${dataElementId(dataElement)}`
+  };
+}
+
+function mappedDataElementsByProfilePath(dataElements) {
+  const byProfilePath = new Map();
+
+  for (const dataElement of dataElements) {
+    for (const mapping of dataElement.mappings?.usQualityCore ?? []) {
+      const profileId = urlTail(mapping.profile);
+      const byPath = getOrSet(byProfilePath, profileId, () => new Map());
+
+      for (const elementPath of mapping.elements ?? []) {
+        const fshPath = jsonPathToFshPath(elementPath);
+        const links = getOrSet(byPath, fshPath, () => []);
+        const link = dataElementLink(dataElement);
+        if (!links.some(existing => existing.class === link.class && existing.name === link.name)) {
+          links.push(link);
+        }
+      }
+    }
+  }
+
+  return byProfilePath;
+}
+
+function mappedDataElementsForFlag(profile, element, mappedElements) {
+  const links = mappedElements.get(profile.id)?.get(element.path) ?? [];
+  if (links.length) return links;
+
+  throw new Error(
+    `No data/uscdi_plus_quality.json data element mapping found for generated flag ${profile.id}.${element.path}.`
+  );
+}
+
+function profileNotesData(
+  profiles,
+  ruleSets,
+  dataElements,
+  profilesById,
+  profilesByName,
+  resourceTypes,
+  restResources,
+  fhirDefs
+) {
+  const mappedElements = mappedDataElementsByProfilePath(dataElements);
   const profileElements = [...profiles]
     .sort((a, b) => a.id.localeCompare(b.id))
     .map(profile => ({
       profile,
       elements: generatedUscdiQualityElements(profile, ruleSets).map(element => ({
         path: fshPathToDisplayPath(element.path),
-        short: stripUscdiQualityPrefix(element.short)
+        short: stripUscdiQualityPrefix(element.short),
+        dataElements: mappedDataElementsForFlag(profile, element, mappedElements)
       }))
     }));
 
@@ -308,6 +364,7 @@ async function main(log) {
       'profile_notes.json': profileNotesData(
         profiles,
         ruleSets,
+        dataElements,
         profilesById,
         profilesByName,
         resourceTypes,

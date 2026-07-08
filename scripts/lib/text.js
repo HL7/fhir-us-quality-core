@@ -56,7 +56,11 @@ function jsonPathToFshPath(elementPath) {
 function fshPathToDisplayPath(fshPath) {
   return fshPath
     .split('.')
-    .map(part => part.replace(/^([^[]+)\[([^\]]+)]$/, '$1:$2'))
+    .map(part =>
+      part.replace(/^([^[]+)\[([^\]]+)]$/, (_, name, bracket) =>
+        bracket === 'x' ? `${name}[x]` : `${name}:${bracket}`
+      )
+    )
     .join('.');
 }
 

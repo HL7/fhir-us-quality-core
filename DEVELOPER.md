@@ -281,7 +281,9 @@ one-off path exceptions to the generator.
 
 This script writes generated view-data JSON files under `input/data/generated`.
 Those files are consumed by Liquid includes in `input/includes` and rendered by
-Jekyll during the IG build.
+Jekyll during the IG build. Generated profile guidance uses
+`data/uscdi_plus_quality.json` to link flagged profile elements back to the
+USCDI+ Quality data class and element rows that caused each path to be flagged.
 
 This script depends on `input/fsh/generated/USCDIQualityFlags.fsh`, which is
 created by `generate_flags.js`. Run
@@ -309,7 +311,7 @@ rerun the relevant npm script from the IG root.
 | `input/fsh/generated/USQualityCoreCapabilityStatementRest.fsh` | `npm --prefix scripts run generate:rest` | `data/rest.json`, `data/uscdi_plus_quality.json`, authored FSH |
 | `input/fsh/generated/search-parameters/*.fsh` | `npm --prefix scripts run generate:rest` | `data/rest.json`, `data/uscdi_plus_quality.json`, authored FSH |
 | `input/fsh/generated/USCDIQualityFlags.fsh` | `npm --prefix scripts run generate:flags` | `data/uscdi_plus_quality.json`, authored profile FSH |
-| `input/data/generated/profile_notes.json` | `npm --prefix scripts run generate:view-data` | `data/rest.json`, generated flag RuleSets, authored profile FSH |
+| `input/data/generated/profile_notes.json` | `npm --prefix scripts run generate:view-data` | `data/uscdi_plus_quality.json`, `data/rest.json`, generated flag RuleSets, authored profile FSH |
 | `input/data/generated/profile_table.json` | `npm --prefix scripts run generate:view-data` | `data/uscdi_plus_quality.json`, authored profile FSH, generated flag RuleSets |
 | `input/data/generated/data_elements.json` | `npm --prefix scripts run generate:view-data` | `data/uscdi_plus_quality.json`, authored profile FSH |
 | `input/images/generated/uscdi-quality-data-elements.csv` | `npm --prefix scripts run generate:uscdi-quality-csv` | `data/uscdi_plus_quality.json`, authored profile FSH |

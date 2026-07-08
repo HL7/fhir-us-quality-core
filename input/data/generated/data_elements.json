@@ -6,6 +6,8 @@
         {
           "class": "Adverse Events",
           "name": "Adverse Event Condition",
+          "description": "Change to patient condition that could be an unintended effect of clinical interventions. Examples include but are not limited to rash, fracture, fever, etc.",
+          "dataElementId": "data-element-adverse-events-adverse-event-condition",
           "noteId": "adverse-events-adverse-event-condition",
           "notes": "",
           "usQualityCore": [
@@ -20,6 +22,8 @@
         {
           "class": "Adverse Events",
           "name": "Adverse Event Outcome",
+          "description": "Resulting patient status or consequence following an unexpected condition change or clinical event. Examples include but are not limited to hospitalized, recovered, recovered with sequelae, and death.",
+          "dataElementId": "data-element-adverse-events-adverse-event-outcome",
           "noteId": "adverse-events-adverse-event-outcome",
           "notes": "",
           "usQualityCore": [
@@ -39,6 +43,8 @@
         {
           "class": "Allergies and Intolerances",
           "name": "Drug Class Allergy Intolerance",
+          "description": "Pharmacologic category for an agent believed to cause a harmful or undesired physiologic response following exposure.",
+          "dataElementId": "data-element-allergies-and-intolerances-drug-class-allergy-intolerance",
           "noteId": "allergies-and-intolerances-drug-class-allergy-intolerance",
           "notes": "",
           "usQualityCore": [
@@ -53,6 +59,8 @@
         {
           "class": "Allergies and Intolerances",
           "name": "Medication Allergy Intolerance",
+          "description": "Pharmacologic agent believed to cause a harmful or undesired physiologic response following exposure.",
+          "dataElementId": "data-element-allergies-and-intolerances-medication-allergy-intolerance",
           "noteId": "allergies-and-intolerances-medication-allergy-intolerance",
           "notes": "",
           "usQualityCore": [
@@ -67,6 +75,8 @@
         {
           "class": "Allergies and Intolerances",
           "name": "Non-Medication Allergy Intolerance",
+          "description": "Non-pharmacologic agent believed to cause a harmful or undesired physiologic response following exposure. Examples include but are not limited to latex, eggs, pollen, and peanuts.",
+          "dataElementId": "data-element-allergies-and-intolerances-non-medication-allergy-intolerance",
           "noteId": "allergies-and-intolerances-non-medication-allergy-intolerance",
           "notes": "",
           "usQualityCore": [
@@ -81,6 +91,8 @@
         {
           "class": "Allergies and Intolerances",
           "name": "Reaction",
+          "description": "Harmful or undesired physiologic response following exposure to a substance",
+          "dataElementId": "data-element-allergies-and-intolerances-reaction",
           "noteId": "allergies-and-intolerances-reaction",
           "notes": "",
           "usQualityCore": [
@@ -95,6 +107,8 @@
         {
           "class": "Allergies and Intolerances",
           "name": "Reaction Date and Time",
+          "description": "Last date and time a patient had a reaction to an allergen.",
+          "dataElementId": "data-element-allergies-and-intolerances-reaction-date-and-time",
           "noteId": "allergies-and-intolerances-reaction-date-and-time",
           "notes": "",
           "usQualityCore": [
@@ -109,6 +123,8 @@
         {
           "class": "Allergies and Intolerances",
           "name": "Allergy Intolerance Onset Date and Time",
+          "description": "Date and time when an allergy or intolerance developed.",
+          "dataElementId": "data-element-allergies-and-intolerances-allergy-intolerance-onset-date-and-time",
           "noteId": "allergies-and-intolerances-allergy-intolerance-onset-date-and-time",
           "notes": "",
           "usQualityCore": [
@@ -123,6 +139,8 @@
         {
           "class": "Allergies and Intolerances",
           "name": "Allergy Intolerance Recorded Date and Time",
+          "description": "Date and time of documentation for the allergy.",
+          "dataElementId": "data-element-allergies-and-intolerances-allergy-intolerance-recorded-date-and-time",
           "noteId": "allergies-and-intolerances-allergy-intolerance-recorded-date-and-time",
           "notes": "",
           "usQualityCore": [
@@ -142,6 +160,8 @@
         {
           "class": "Care Plans",
           "name": "Assessment and Plan of Treatment",
+          "description": "Health professional's conclusions and working assumptions that will guide treatment of the patient.",
+          "dataElementId": "data-element-care-plans-assessment-and-plan-of-treatment",
           "noteId": "care-plans-assessment-and-plan-of-treatment",
           "notes": "",
           "usQualityCore": [
@@ -156,6 +176,8 @@
         {
           "class": "Care Plans",
           "name": "Care Plan",
+          "description": "Shared plan informed by members of a coordinated care team that details conditions, needs, and goals along with strategies for addressing them. Usage notes: Includes problems, health concerns, assessments, goals, and interventions from across care settings. Examples include but are not limited to clinical care plans, condition-specific care plans, coordinated care plan.",
+          "dataElementId": "data-element-care-plans-care-plan",
           "noteId": "care-plans-care-plan",
           "notes": "",
           "usQualityCore": [
@@ -175,6 +197,8 @@
         {
           "class": "Care Team Members",
           "name": "Care Team Member Identifier",
+          "description": "Sequence of characters used to uniquely refer to a member of the care team. Examples include but are not limited to National Provider Identifier (NPI) and National Council of State Boards of Nursing Identifier (NCSBN ID).",
+          "dataElementId": "data-element-care-team-members-care-team-member-identifier",
           "noteId": "care-team-members-care-team-member-identifier",
           "notes": "",
           "usQualityCore": [
@@ -199,6 +223,8 @@
         {
           "class": "Care Team Members",
           "name": "Care Team Member Location",
+          "description": "Place where care is delivered by a care team member. Examples include but are not limited to clinic address, and location description.",
+          "dataElementId": "data-element-care-team-members-care-team-member-location",
           "noteId": "care-team-members-care-team-member-location",
           "notes": "",
           "usQualityCore": [
@@ -223,6 +249,8 @@
         {
           "class": "Care Team Members",
           "name": "Care Team Member Name",
+          "description": "Word or phrase that constitutes the distinctive designation of a care team member. Examples include but are not limited to given name, middle name, surname, and name suffix.",
+          "dataElementId": "data-element-care-team-members-care-team-member-name",
           "noteId": "care-team-members-care-team-member-name",
           "notes": "",
           "usQualityCore": [
@@ -247,6 +275,8 @@
         {
           "class": "Care Team Members",
           "name": "Care Team Member Role",
+          "description": "Responsibility of an individual within the care team. Examples include but are not limited to primary care physician and caregiver.",
+          "dataElementId": "data-element-care-team-members-care-team-member-role",
           "noteId": "care-team-members-care-team-member-role",
           "notes": "",
           "usQualityCore": [
@@ -271,6 +301,8 @@
         {
           "class": "Care Team Members",
           "name": "Care Team Member Telecom",
+          "description": "Phone or email contact information for a care team member.",
+          "dataElementId": "data-element-care-team-members-care-team-member-telecom",
           "noteId": "care-team-members-care-team-member-telecom",
           "notes": "",
           "usQualityCore": [
@@ -300,6 +332,8 @@
         {
           "class": "Clinical Notes",
           "name": "Consultation Note",
+          "description": "Narrative summary of care provided in response to a request from a clinician for an opinion, advice, or service. Examples include but are not limited to dermatology, dentistry, and acupuncture.",
+          "dataElementId": "data-element-clinical-notes-consultation-note",
           "noteId": "clinical-notes-consultation-note",
           "notes": "",
           "usQualityCore": [],
@@ -313,6 +347,8 @@
         {
           "class": "Clinical Notes",
           "name": "Discharge Summary Note",
+          "description": "Narrative summary of a patient's admission and course in a hospital or post-acute care setting. Usage note: Must contain admission and discharge dates and locations, discharge instructions, and reason(s) for hospitalization. Examples include but are not limited to dermatology discharge summary, hematology discharge summary, and neurology discharge summary.",
+          "dataElementId": "data-element-clinical-notes-discharge-summary-note",
           "noteId": "clinical-notes-discharge-summary-note",
           "notes": "",
           "usQualityCore": [],
@@ -326,6 +362,8 @@
         {
           "class": "Clinical Notes",
           "name": "Emergency Department Note",
+          "description": "Narrative summary of care delivered in an emergency department.",
+          "dataElementId": "data-element-clinical-notes-emergency-department-note",
           "noteId": "clinical-notes-emergency-department-note",
           "notes": "",
           "usQualityCore": [],
@@ -339,6 +377,8 @@
         {
           "class": "Clinical Notes",
           "name": "History & Physical",
+          "description": "Narrative summary of current and past conditions and observations used to inform an episode of care. Examples include but are not limited to admission, surgery, and other procedure.",
+          "dataElementId": "data-element-clinical-notes-history-physical",
           "noteId": "clinical-notes-history-physical",
           "notes": "",
           "usQualityCore": [],
@@ -352,6 +392,8 @@
         {
           "class": "Clinical Notes",
           "name": "Operative Note",
+          "description": "Narrative summary of a surgical procedure. Usage note: May include procedures performed, operative and anesthesia times, findings observed, fluids administered, specimens obtained, and complications identified.",
+          "dataElementId": "data-element-clinical-notes-operative-note",
           "noteId": "clinical-notes-operative-note",
           "notes": "",
           "usQualityCore": [],
@@ -365,6 +407,8 @@
         {
           "class": "Clinical Notes",
           "name": "Procedure Note",
+          "description": "Narrative summary of non-operative procedure. Examples include but are not limited to interventional cardiology, gastrointestinal endoscopy, and osteopathic manipulation.",
+          "dataElementId": "data-element-clinical-notes-procedure-note",
           "noteId": "clinical-notes-procedure-note",
           "notes": "",
           "usQualityCore": [
@@ -384,6 +428,8 @@
         {
           "class": "Clinical Notes",
           "name": "Progress Note",
+          "description": "Narrative summary of a patient's interval status during an encounter. Examples include but are not limited to hospitalization, outpatient visit, and treatment with a post-acute care provider, or other healthcare encounter.",
+          "dataElementId": "data-element-clinical-notes-progress-note",
           "noteId": "clinical-notes-progress-note",
           "notes": "",
           "usQualityCore": [],
@@ -402,6 +448,8 @@
         {
           "class": "Clinical Tests",
           "name": "Clinical Test",
+          "description": "Non-imaging or non-laboratory test. Examples include but are not limited to electrocardiogram (ECG), visual acuity exam, macular exam, and graded exercise testing (GXT).",
+          "dataElementId": "data-element-clinical-tests-clinical-test",
           "noteId": "clinical-tests-clinical-test",
           "notes": "",
           "usQualityCore": [
@@ -421,6 +469,8 @@
         {
           "class": "Clinical Tests",
           "name": "Clinical Test Result/Report",
+          "description": "Findings of clinical tests.",
+          "dataElementId": "data-element-clinical-tests-clinical-test-result-report",
           "noteId": "clinical-tests-clinical-test-result-report",
           "notes": "",
           "usQualityCore": [
@@ -440,6 +490,8 @@
         {
           "class": "Clinical Tests",
           "name": "Clinical Test Status",
+          "description": "The completion status of a clinical test at the level of a single observation.",
+          "dataElementId": "data-element-clinical-tests-clinical-test-status",
           "noteId": "clinical-tests-clinical-test-status",
           "notes": "",
           "usQualityCore": [
@@ -464,6 +516,8 @@
         {
           "class": "Communications",
           "name": "Communication Status",
+          "description": "The current state of the communication transition.",
+          "dataElementId": "data-element-communications-communication-status",
           "noteId": "communications-communication-status",
           "notes": "",
           "usQualityCore": [
@@ -483,6 +537,8 @@
         {
           "class": "Communications",
           "name": "Communication Topic",
+          "description": "Purpose or content of communication.",
+          "dataElementId": "data-element-communications-communication-topic",
           "noteId": "communications-communication-topic",
           "notes": "",
           "usQualityCore": [
@@ -502,6 +558,8 @@
         {
           "class": "Communications",
           "name": "Reason Not Communicated",
+          "description": "The reason why a communication did not happen.",
+          "dataElementId": "data-element-communications-reason-not-communicated",
           "noteId": "communications-reason-not-communicated",
           "notes": "",
           "usQualityCore": [
@@ -521,6 +579,8 @@
         {
           "class": "Diagnostic Imaging",
           "name": "Diagnostic Imaging Reference",
+          "description": "The technical details of the retrieval access path to indicate network services that can be used to access DICOM studies, series, or instances content and metadata (e.g., a DICOMweb server endpoint providing QIDO-RS, WADO-RS, or WADO-URI).",
+          "dataElementId": "data-element-diagnostic-imaging-diagnostic-imaging-reference",
           "noteId": "diagnostic-imaging-diagnostic-imaging-reference",
           "notes": "",
           "usQualityCore": [
@@ -545,6 +605,8 @@
         {
           "class": "Diagnostic Imaging",
           "name": "Diagnostic Imaging Report",
+          "description": "Interpreted results of imaging tests. Usage Note: Includes both structured and unstructured (narrative) components.",
+          "dataElementId": "data-element-diagnostic-imaging-diagnostic-imaging-report",
           "noteId": "diagnostic-imaging-diagnostic-imaging-report",
           "notes": "",
           "usQualityCore": [
@@ -564,6 +626,8 @@
         {
           "class": "Diagnostic Imaging",
           "name": "Diagnostic Imaging Status",
+          "description": "The current status of the imaging study- registered, available, cancelled, entered-in-error, or unknown.",
+          "dataElementId": "data-element-diagnostic-imaging-diagnostic-imaging-status",
           "noteId": "diagnostic-imaging-diagnostic-imaging-status",
           "notes": "",
           "usQualityCore": [
@@ -583,6 +647,8 @@
         {
           "class": "Diagnostic Imaging",
           "name": "Diagnostic Imaging Test",
+          "description": "Tests that generate visual images and require interpretation by qualified professionals. Examples include but are not limited to computed tomography-head, radiograph-chest, and ultrasound-pelvis.",
+          "dataElementId": "data-element-diagnostic-imaging-diagnostic-imaging-test",
           "noteId": "diagnostic-imaging-diagnostic-imaging-test",
           "notes": "",
           "usQualityCore": [
@@ -607,6 +673,8 @@
         {
           "class": "Encounter Information",
           "name": "Diagnosis Rank",
+          "description": "Ordinal number or code that identifies the priority or significance of a diagnosis for a given encounter.",
+          "dataElementId": "data-element-encounter-information-diagnosis-rank",
           "noteId": "encounter-information-diagnosis-rank",
           "notes": "",
           "usQualityCore": [
@@ -621,6 +689,8 @@
         {
           "class": "Encounter Information",
           "name": "Encounter Diagnosis",
+          "description": "Coded diagnoses associated with an episode of care.",
+          "dataElementId": "data-element-encounter-information-encounter-diagnosis",
           "noteId": "encounter-information-encounter-diagnosis",
           "notes": "",
           "usQualityCore": [
@@ -640,6 +710,8 @@
         {
           "class": "Encounter Information",
           "name": "Encounter Diagnosis Role",
+          "description": "The specific use or role of diagnosis within the context of an encounter e.g., admitting diagnosis, principal diagnosis, discharge diagnosis, etc.",
+          "dataElementId": "data-element-encounter-information-encounter-diagnosis-role",
           "noteId": "encounter-information-encounter-diagnosis-role",
           "notes": "",
           "usQualityCore": [
@@ -654,6 +726,8 @@
         {
           "class": "Encounter Information",
           "name": "Encounter Disposition",
+          "description": "Place or setting where the patient went after a hospital stay or encounter.",
+          "dataElementId": "data-element-encounter-information-encounter-disposition",
           "noteId": "encounter-information-encounter-disposition",
           "notes": "",
           "usQualityCore": [
@@ -668,6 +742,8 @@
         {
           "class": "Encounter Information",
           "name": "Encounter Identifier",
+          "description": "Sequence of characters by which an encounter is known.",
+          "dataElementId": "data-element-encounter-information-encounter-identifier",
           "noteId": "encounter-information-encounter-identifier",
           "notes": "",
           "usQualityCore": [
@@ -682,6 +758,8 @@
         {
           "class": "Encounter Information",
           "name": "Encounter Location",
+          "description": "Place where a patient's care is delivered.",
+          "dataElementId": "data-element-encounter-information-encounter-location",
           "noteId": "encounter-information-encounter-location",
           "notes": "",
           "usQualityCore": [
@@ -696,6 +774,8 @@
         {
           "class": "Encounter Information",
           "name": "Encounter Status",
+          "description": "Current state of the encounter: Planned; Arrived; Triaged; In progress; On leave; Finished; Canceled; Entered in error; Unknown.",
+          "dataElementId": "data-element-encounter-information-encounter-status",
           "noteId": "encounter-information-encounter-status",
           "notes": "",
           "usQualityCore": [
@@ -710,6 +790,8 @@
         {
           "class": "Encounter Information",
           "name": "Encounter Time",
+          "description": "Date/times related to an encounter. Examples include but are not limited to scheduled appointment time, check in time, and start and stop times.",
+          "dataElementId": "data-element-encounter-information-encounter-time",
           "noteId": "encounter-information-encounter-time",
           "notes": "",
           "usQualityCore": [
@@ -724,6 +806,8 @@
         {
           "class": "Encounter Information",
           "name": "Encounter Type",
+          "description": "Category of health care service. Examples include but are not limited to office visit, telephone assessment, and home visit.",
+          "dataElementId": "data-element-encounter-information-encounter-type",
           "noteId": "encounter-information-encounter-type",
           "notes": "",
           "usQualityCore": [
@@ -738,6 +822,8 @@
         {
           "class": "Encounter Information",
           "name": "Present on Admission",
+          "description": "An indicator of whether a patient's condition or diagnosis was known to be present at the time of admission.",
+          "dataElementId": "data-element-encounter-information-present-on-admission",
           "noteId": "encounter-information-present-on-admission",
           "notes": "",
           "usQualityCore": [
@@ -757,6 +843,8 @@
         {
           "class": "Facility Information",
           "name": "Facility Address",
+          "description": "Physical location of available services or resources.",
+          "dataElementId": "data-element-facility-information-facility-address",
           "noteId": "facility-information-facility-address",
           "notes": "",
           "usQualityCore": [
@@ -771,6 +859,8 @@
         {
           "class": "Facility Information",
           "name": "Facility Identifier",
+          "description": "Sequence of characters representing a physical place of available services or resources.",
+          "dataElementId": "data-element-facility-information-facility-identifier",
           "noteId": "facility-information-facility-identifier",
           "notes": "",
           "usQualityCore": [
@@ -785,6 +875,8 @@
         {
           "class": "Facility Information",
           "name": "Facility Name",
+          "description": "Word or words by which a facility is known.",
+          "dataElementId": "data-element-facility-information-facility-name",
           "noteId": "facility-information-facility-name",
           "notes": "",
           "usQualityCore": [
@@ -799,6 +891,8 @@
         {
           "class": "Facility Information",
           "name": "Facility Type",
+          "description": "Category of service or resource available in a location. Examples include but are not limited to hospital, laboratory, pharmacy, ambulatory clinic, long-term and post-acute care facility, and food pantry.",
+          "dataElementId": "data-element-facility-information-facility-type",
           "noteId": "facility-information-facility-type",
           "notes": "",
           "usQualityCore": [
@@ -818,6 +912,8 @@
         {
           "class": "Family Health History",
           "name": "Family Health History",
+          "description": "Family member health condition(s) that are relevant to a patient's care.",
+          "dataElementId": "data-element-family-health-history-family-health-history",
           "noteId": "family-health-history-family-health-history",
           "notes": "",
           "usQualityCore": [
@@ -837,6 +933,8 @@
         {
           "class": "Goals and Preferences",
           "name": "Advance Directive Observation",
+          "description": "Information about a patient or provider authored document indicating its location, content, type, and verification status. Usage note: May include structured or unstructured data, whether a person has one or more advance directive documents, the type of advance directive, the location of the document, and whether it has been verified. Such documents may be used should a person be unable to communicate their wishes, preferences, or priorities to their provider. Examples include but are not limited to an indication that a living will is on file, a reference to the location of durable medical power of attorney, and the validating provider.",
+          "dataElementId": "data-element-goals-and-preferences-advance-directive-observation",
           "noteId": "goals-and-preferences-advance-directive-observation",
           "notes": "",
           "usQualityCore": [],
@@ -854,6 +952,8 @@
         {
           "class": "Goals and Preferences",
           "name": "Care Experience Preference",
+          "description": "Person's goals, preferences, and priorities for overall experiences during their care and treatment. Examples include but are not limited to religious beliefs, dislikes and fears, and thoughts and feelings to be shared.",
+          "dataElementId": "data-element-goals-and-preferences-care-experience-preference",
           "noteId": "goals-and-preferences-care-experience-preference",
           "notes": "",
           "usQualityCore": [],
@@ -867,6 +967,8 @@
         {
           "class": "Goals and Preferences",
           "name": "Patient Goals",
+          "description": "Desired outcomes of patient's care. Examples include but are not limited to blood pressure control, functional ability, and nutrition.",
+          "dataElementId": "data-element-goals-and-preferences-patient-goals",
           "noteId": "goals-and-preferences-patient-goals",
           "notes": "",
           "usQualityCore": [
@@ -881,6 +983,8 @@
         {
           "class": "Goals and Preferences",
           "name": "SDOH Goals",
+          "description": "Desired future states for an identified Social Determinants of Health-related health concern, condition, or diagnosis. Examples include but are not limited to food security, transportation security, and ability to access health care.",
+          "dataElementId": "data-element-goals-and-preferences-sdoh-goals",
           "noteId": "goals-and-preferences-sdoh-goals",
           "notes": "",
           "usQualityCore": [
@@ -895,6 +999,8 @@
         {
           "class": "Goals and Preferences",
           "name": "Treatment Intervention Preference",
+          "description": "Person's goals, preferences, and priorities for care and treatment in case that person is unable to make medical decisions because of a serious illness or injury. Examples include but are not limited to thoughts on cardiopulmonary resuscitation, mental health treatment preferences, and thoughts on pain management.",
+          "dataElementId": "data-element-goals-and-preferences-treatment-intervention-preference",
           "noteId": "goals-and-preferences-treatment-intervention-preference",
           "notes": "",
           "usQualityCore": [],
@@ -913,6 +1019,8 @@
         {
           "class": "Health Insurance Information",
           "name": "Coverage Status",
+          "description": "Presence or absence of health care insurance.",
+          "dataElementId": "data-element-health-insurance-information-coverage-status",
           "noteId": "health-insurance-information-coverage-status",
           "notes": "",
           "usQualityCore": [
@@ -927,6 +1035,8 @@
         {
           "class": "Health Insurance Information",
           "name": "Coverage Type",
+          "description": "Category of healthcare payers, insurance products, or benefits. Examples include but are not limited to Medicaid, commercial, HMO, Veterans Benefits Administration, Medicare Part D, and dental.",
+          "dataElementId": "data-element-health-insurance-information-coverage-type",
           "noteId": "health-insurance-information-coverage-type",
           "notes": "",
           "usQualityCore": [
@@ -941,6 +1051,8 @@
         {
           "class": "Health Insurance Information",
           "name": "Group Identifier",
+          "description": "Sequence of characters used to uniquely refer to a specific health insurance plan.",
+          "dataElementId": "data-element-health-insurance-information-group-identifier",
           "noteId": "health-insurance-information-group-identifier",
           "notes": "",
           "usQualityCore": [
@@ -955,6 +1067,8 @@
         {
           "class": "Health Insurance Information",
           "name": "Health Insurance Beneficiary",
+          "description": "The party who benefits from the health insurance coverage.",
+          "dataElementId": "data-element-health-insurance-information-health-insurance-beneficiary",
           "noteId": "health-insurance-information-health-insurance-beneficiary",
           "notes": "",
           "usQualityCore": [
@@ -969,6 +1083,8 @@
         {
           "class": "Health Insurance Information",
           "name": "Health Insurance Coverage Period",
+          "description": "The time frame in which the policy is in force.",
+          "dataElementId": "data-element-health-insurance-information-health-insurance-coverage-period",
           "noteId": "health-insurance-information-health-insurance-coverage-period",
           "notes": "",
           "usQualityCore": [
@@ -983,6 +1099,8 @@
         {
           "class": "Health Insurance Information",
           "name": "Health Insurance Payer",
+          "description": "Issuer of the policy.",
+          "dataElementId": "data-element-health-insurance-information-health-insurance-payer",
           "noteId": "health-insurance-information-health-insurance-payer",
           "notes": "",
           "usQualityCore": [
@@ -1002,6 +1120,8 @@
         {
           "class": "Health Insurance Information",
           "name": "Health Insurance Plan Identifier",
+          "description": "Sequence of characters used to uniquely refer to an insurance plan.",
+          "dataElementId": "data-element-health-insurance-information-health-insurance-plan-identifier",
           "noteId": "health-insurance-information-health-insurance-plan-identifier",
           "notes": "",
           "usQualityCore": [
@@ -1016,6 +1136,8 @@
         {
           "class": "Health Insurance Information",
           "name": "Insurance Plan Name",
+          "description": "Name of the health plan benefit offering assigned to the Plan Identifier.",
+          "dataElementId": "data-element-health-insurance-information-insurance-plan-name",
           "noteId": "health-insurance-information-insurance-plan-name",
           "notes": "",
           "usQualityCore": [
@@ -1030,6 +1152,8 @@
         {
           "class": "Health Insurance Information",
           "name": "Member Identifier",
+          "description": "Sequence of characters used to uniquely refer to an individual with respect to their insurance.",
+          "dataElementId": "data-element-health-insurance-information-member-identifier",
           "noteId": "health-insurance-information-member-identifier",
           "notes": "",
           "usQualityCore": [
@@ -1044,6 +1168,8 @@
         {
           "class": "Health Insurance Information",
           "name": "Payer Identifier",
+          "description": "Sequence of characters used to uniquely refer to an insurance payer.",
+          "dataElementId": "data-element-health-insurance-information-payer-identifier",
           "noteId": "health-insurance-information-payer-identifier",
           "notes": "",
           "usQualityCore": [
@@ -1058,6 +1184,8 @@
         {
           "class": "Health Insurance Information",
           "name": "Relationship to Subscriber",
+          "description": "Relationship of a patient to the primary insured person.",
+          "dataElementId": "data-element-health-insurance-information-relationship-to-subscriber",
           "noteId": "health-insurance-information-relationship-to-subscriber",
           "notes": "",
           "usQualityCore": [
@@ -1072,6 +1200,8 @@
         {
           "class": "Health Insurance Information",
           "name": "Subscriber Identifier",
+          "description": "Sequence of characters used to uniquely refer to the individual that selects insurance benefits.",
+          "dataElementId": "data-element-health-insurance-information-subscriber-identifier",
           "noteId": "health-insurance-information-subscriber-identifier",
           "notes": "",
           "usQualityCore": [
@@ -1091,6 +1221,8 @@
         {
           "class": "Health Status Assessments",
           "name": "Alcohol Use",
+          "description": "Evaluation of a patient's consumption of alcohol. Examples include but are not limited to history of alcohol use, alcohol use disorder identification test and alcohol intake assessment.",
+          "dataElementId": "data-element-health-status-assessments-alcohol-use",
           "noteId": "health-status-assessments-alcohol-use",
           "notes": "",
           "usQualityCore": [
@@ -1120,6 +1252,8 @@
         {
           "class": "Health Status Assessments",
           "name": "Disability Status",
+          "description": "Assessment of a patient's physical, cognitive, or psychiatric disabilities. Examples include but are not limited to American Community Survey, Veterans RAND Health Survey, and Patient-Reported Outcomes Measurement Information System (PROMIS).",
+          "dataElementId": "data-element-health-status-assessments-disability-status",
           "noteId": "health-status-assessments-disability-status",
           "notes": "",
           "usQualityCore": [
@@ -1139,6 +1273,8 @@
         {
           "class": "Health Status Assessments",
           "name": "Functional Status",
+          "description": "Assessment of a person's ability to perform activities of daily living and activities across other situations and settings. Examples include but are not limited to Functional Assessment Standardized Items (FASI) and Timed Up and Go (TUG).",
+          "dataElementId": "data-element-health-status-assessments-functional-status",
           "noteId": "health-status-assessments-functional-status",
           "notes": "",
           "usQualityCore": [
@@ -1158,6 +1294,8 @@
         {
           "class": "Health Status Assessments",
           "name": "Health Concerns",
+          "description": "Health-related issue or worry. Examples include but are not limited to weight gain and cancer risk.",
+          "dataElementId": "data-element-health-status-assessments-health-concerns",
           "noteId": "health-status-assessments-health-concerns",
           "notes": "",
           "usQualityCore": [
@@ -1172,6 +1310,8 @@
         {
           "class": "Health Status Assessments",
           "name": "Mental/Cognitive Status",
+          "description": "Assessment or screening for the presence of a mental or behavioral problem. Examples include but are not limited to Confusion Assessment Method (CAM) and Patient Health Questionnaire (PHQ).",
+          "dataElementId": "data-element-health-status-assessments-mental-cognitive-status",
           "noteId": "health-status-assessments-mental-cognitive-status",
           "notes": "",
           "usQualityCore": [
@@ -1191,6 +1331,8 @@
         {
           "class": "Health Status Assessments",
           "name": "Physical Activity",
+          "description": "Evaluation of a patient's current or usual exercise. Examples include but are not limited to frequency of muscle-strengthening physical activity, days per week with moderate to strenuous physical activity, and minutes per day of moderate to strenuous physical activity.",
+          "dataElementId": "data-element-health-status-assessments-physical-activity",
           "noteId": "health-status-assessments-physical-activity",
           "notes": "",
           "usQualityCore": [
@@ -1220,6 +1362,8 @@
         {
           "class": "Health Status Assessments",
           "name": "Pregnancy Status",
+          "description": "State or condition of being pregnant or intent to become pregnant. Examples include but are not limited to pregnant, not pregnant, and unknown.",
+          "dataElementId": "data-element-health-status-assessments-pregnancy-status",
           "noteId": "health-status-assessments-pregnancy-status",
           "notes": "",
           "usQualityCore": [],
@@ -1237,6 +1381,8 @@
         {
           "class": "Health Status Assessments",
           "name": "SDOH Assessment",
+          "description": "Screening questionnaire-based, structured evaluation for a Social Determinants of Health-related risk. Examples include but are not limited to food, housing, transportation security, and health literacy.",
+          "dataElementId": "data-element-health-status-assessments-sdoh-assessment",
           "noteId": "health-status-assessments-sdoh-assessment",
           "notes": "",
           "usQualityCore": [
@@ -1266,6 +1412,8 @@
         {
           "class": "Health Status Assessments",
           "name": "Smoking Status",
+          "description": "Assessment of a patient's smoking behaviors. Examples include but are not limited to pack- years and current use.",
+          "dataElementId": "data-element-health-status-assessments-smoking-status",
           "noteId": "health-status-assessments-smoking-status",
           "notes": "",
           "usQualityCore": [],
@@ -1279,6 +1427,8 @@
         {
           "class": "Health Status Assessments",
           "name": "Substance Use",
+          "description": "Evaluation of a patient's reported use of drugs or other substances for non-medical purposes or in excess of a valid prescription. Examples include but are not limited to substance use disorder score, and substance use knowledge assessment.",
+          "dataElementId": "data-element-health-status-assessments-substance-use",
           "noteId": "health-status-assessments-substance-use",
           "notes": "",
           "usQualityCore": [
@@ -1313,6 +1463,8 @@
         {
           "class": "Healthcare Information Attributes",
           "name": "Reason Not Performed",
+          "description": "Explanation or justification provided when an order or practice guideline is not carried out. Usage note: Should be included with a procedure, immunization, and medication.",
+          "dataElementId": "data-element-healthcare-information-attributes-reason-not-performed",
           "noteId": "healthcare-information-attributes-reason-not-performed",
           "notes": "",
           "usQualityCore": [
@@ -1357,6 +1509,8 @@
         {
           "class": "Immunizations",
           "name": "Immunization Record Source",
+          "description": "Immunization event information source. Examples include but are not limited to facility administering the immunization and an external record.",
+          "dataElementId": "data-element-immunizations-immunization-record-source",
           "noteId": "immunizations-immunization-record-source",
           "notes": "",
           "usQualityCore": [
@@ -1376,6 +1530,8 @@
         {
           "class": "Immunizations",
           "name": "Immunization Status",
+          "description": "State of an immunization event.",
+          "dataElementId": "data-element-immunizations-immunization-status",
           "noteId": "immunizations-immunization-status",
           "notes": "",
           "usQualityCore": [
@@ -1395,6 +1551,8 @@
         {
           "class": "Immunizations",
           "name": "Immunizations",
+          "description": "Vaccine product administered, planned, or reported.",
+          "dataElementId": "data-element-immunizations-immunizations",
           "noteId": "immunizations-immunizations",
           "notes": "",
           "usQualityCore": [
@@ -1414,6 +1572,8 @@
         {
           "class": "Immunizations",
           "name": "Lot Number",
+          "description": "Sequence of characters representing a specific quantity of manufactured material within a batch of a vaccine product.",
+          "dataElementId": "data-element-immunizations-lot-number",
           "noteId": "immunizations-lot-number",
           "notes": "",
           "usQualityCore": [
@@ -1433,6 +1593,8 @@
         {
           "class": "Immunizations",
           "name": "Vaccination Administration Date and Time",
+          "description": "The date and time the vaccination event occurred.",
+          "dataElementId": "data-element-immunizations-vaccination-administration-date-and-time",
           "noteId": "immunizations-vaccination-administration-date-and-time",
           "notes": "",
           "usQualityCore": [
@@ -1457,6 +1619,8 @@
         {
           "class": "Laboratory",
           "name": "Result Interpretation",
+          "description": "Categorical assessment of a laboratory value, often in relation to a test's reference range. Examples include but are not limited to high, low, critical high, and normal.",
+          "dataElementId": "data-element-laboratory-result-interpretation",
           "noteId": "laboratory-result-interpretation",
           "notes": "",
           "usQualityCore": [
@@ -1471,6 +1635,8 @@
         {
           "class": "Laboratory",
           "name": "Result Reference Range",
+          "description": "Upper and lower limit of quantitative test values expected for a designated population of individuals.Usage note: Reference range values may differ by patient characteristics, laboratory test manufacturer, and laboratory test performer.",
+          "dataElementId": "data-element-laboratory-result-reference-range",
           "noteId": "laboratory-result-reference-range",
           "notes": "",
           "usQualityCore": [
@@ -1485,6 +1651,8 @@
         {
           "class": "Laboratory",
           "name": "Result Status",
+          "description": "State or condition of a laboratory test.",
+          "dataElementId": "data-element-laboratory-result-status",
           "noteId": "laboratory-result-status",
           "notes": "",
           "usQualityCore": [
@@ -1504,6 +1672,8 @@
         {
           "class": "Laboratory",
           "name": "Result Unit of Measure",
+          "description": "Unit of measurement to report quantitative results.",
+          "dataElementId": "data-element-laboratory-result-unit-of-measure",
           "noteId": "laboratory-result-unit-of-measure",
           "notes": "",
           "usQualityCore": [
@@ -1518,6 +1688,8 @@
         {
           "class": "Laboratory",
           "name": "Specimen Condition Acceptability",
+          "description": "Information about a specimen, including the container, that is used to determine a laboratory's criteria for acceptability. Usage note: This may include information about the contents of the container, the container, and the label. Examples include but are not limited to hemolyzed, clotted, container leaking, and missing patient name.",
+          "dataElementId": "data-element-laboratory-specimen-condition-acceptability",
           "noteId": "laboratory-specimen-condition-acceptability",
           "notes": "",
           "usQualityCore": [],
@@ -1531,6 +1703,8 @@
         {
           "class": "Laboratory",
           "name": "Specimen Identifier",
+          "description": "Sequence of characters assigned by a laboratory for an individual specimen. Example includes but is not limited to accession number.",
+          "dataElementId": "data-element-laboratory-specimen-identifier",
           "noteId": "laboratory-specimen-identifier",
           "notes": "",
           "usQualityCore": [],
@@ -1544,6 +1718,8 @@
         {
           "class": "Laboratory",
           "name": "Specimen Source Site",
+          "description": "Body location from where a specimen was obtained. Examples include but are not limited to right internal jugular, left arm, and right eye.",
+          "dataElementId": "data-element-laboratory-specimen-source-site",
           "noteId": "laboratory-specimen-source-site",
           "notes": "",
           "usQualityCore": [],
@@ -1557,6 +1733,8 @@
         {
           "class": "Laboratory",
           "name": "Specimen Type",
+          "description": "Substance being sampled or tested. Examples include but are not limited to nasopharyngeal swab, whole blood, serum, urine, and wound swab.",
+          "dataElementId": "data-element-laboratory-specimen-type",
           "noteId": "laboratory-specimen-type",
           "notes": "",
           "usQualityCore": [
@@ -1576,6 +1754,8 @@
         {
           "class": "Laboratory",
           "name": "Tests",
+          "description": "Analysis of specimens derived from humans which provide information for the diagnosis, prevention,treatmentofdisease,orassessment of health.",
+          "dataElementId": "data-element-laboratory-tests",
           "noteId": "laboratory-tests",
           "notes": "",
           "usQualityCore": [
@@ -1595,6 +1775,8 @@
         {
           "class": "Laboratory",
           "name": "Values/Results",
+          "description": "Documentedfindingsofatestedspecimen including structured and unstructured components",
+          "dataElementId": "data-element-laboratory-values-results",
           "noteId": "laboratory-values-results",
           "notes": "",
           "usQualityCore": [
@@ -1614,6 +1796,8 @@
         {
           "class": "Laboratory",
           "name": "Laboratory Result Report Date and Time",
+          "description": "The date and time when the laboratory result(s) report is made available to inform clinical decision making.",
+          "dataElementId": "data-element-laboratory-laboratory-result-report-date-and-time",
           "noteId": "laboratory-laboratory-result-report-date-and-time",
           "notes": "",
           "usQualityCore": [
@@ -1633,6 +1817,8 @@
         {
           "class": "Laboratory",
           "name": "Specimen Collection Date and Time",
+          "description": "Date and time the test sample was collected.",
+          "dataElementId": "data-element-laboratory-specimen-collection-date-and-time",
           "noteId": "laboratory-specimen-collection-date-and-time",
           "notes": "",
           "usQualityCore": [],
@@ -1651,6 +1837,8 @@
         {
           "class": "Medical Devices",
           "name": "Device Type",
+          "description": "Kind of instrument, machine, appliance, implant, software, and similar medical device.",
+          "dataElementId": "data-element-medical-devices-device-type",
           "noteId": "medical-devices-device-type",
           "notes": "",
           "usQualityCore": [
@@ -1685,6 +1873,8 @@
         {
           "class": "Medical Devices",
           "name": "Unique Device Identifier (UDI)",
+          "description": "Numeric or alphanumeric code that uniquely identifies a medical device. Usage note: Contains a device identifier (DI) and one or more production identifiers (PI).",
+          "dataElementId": "data-element-medical-devices-unique-device-identifier-udi",
           "noteId": "medical-devices-unique-device-identifier-udi",
           "notes": "",
           "usQualityCore": [],
@@ -1703,6 +1893,8 @@
         {
           "class": "Medications",
           "name": "Days Supply",
+          "description": "Number of days supply of medication dispensed by the pharmacy.",
+          "dataElementId": "data-element-medications-days-supply",
           "noteId": "medications-days-supply",
           "notes": "",
           "usQualityCore": [
@@ -1732,6 +1924,8 @@
         {
           "class": "Medications",
           "name": "Dispense Status",
+          "description": "State of a medication with regards to dispensing or other activity. Examples include but are not limited to dispensed, partially dispensed, not dispensed.",
+          "dataElementId": "data-element-medications-dispense-status",
           "noteId": "medications-dispense-status",
           "notes": "",
           "usQualityCore": [
@@ -1756,6 +1950,8 @@
         {
           "class": "Medications",
           "name": "Dose",
+          "description": "Amount of a medication for each administration.",
+          "dataElementId": "data-element-medications-dose",
           "noteId": "medications-dose",
           "notes": "",
           "usQualityCore": [
@@ -1795,6 +1991,8 @@
         {
           "class": "Medications",
           "name": "Dose Unit of Measure",
+          "description": "Units of measure of a medication. Examples include but are not limited to milligram (mg) and milliliter (mL).",
+          "dataElementId": "data-element-medications-dose-unit-of-measure",
           "noteId": "medications-dose-unit-of-measure",
           "notes": "",
           "usQualityCore": [
@@ -1834,6 +2032,8 @@
         {
           "class": "Medications",
           "name": "Indication",
+          "description": "Sign, symptom, or medical condition that is the reason for giving or taking a medication.",
+          "dataElementId": "data-element-medications-indication",
           "noteId": "medications-indication",
           "notes": "",
           "usQualityCore": [
@@ -1853,6 +2053,8 @@
         {
           "class": "Medications",
           "name": "Medication Adherence",
+          "description": "Statement of whether a medication has been consumed according to instructions. Examples include but are not limited to taking as directed, taking less than directed, and not taking.",
+          "dataElementId": "data-element-medications-medication-adherence",
           "noteId": "medications-medication-adherence",
           "notes": "",
           "usQualityCore": [
@@ -1872,6 +2074,8 @@
         {
           "class": "Medications",
           "name": "Medication Administration",
+          "description": "Information about the event of a patient consuming or otherwise being given a medication. Examples include but are not limited to swallowing a tablet, administering an injection, and a long running infusion.",
+          "dataElementId": "data-element-medications-medication-administration",
           "noteId": "medications-medication-administration",
           "notes": "",
           "usQualityCore": [
@@ -1896,6 +2100,8 @@
         {
           "class": "Medications",
           "name": "Medication Instructions",
+          "description": "Directions for administering or taking a medication. Usage note: May include route, quantity, timing/frequency, and special instructions (PRN, sliding scale, taper). Examples include but are not limited to prescription directions for taking a medication, and package instructions for over-the-counter medications.",
+          "dataElementId": "data-element-medications-medication-instructions",
           "noteId": "medications-medication-instructions",
           "notes": "",
           "usQualityCore": [
@@ -1925,6 +2131,8 @@
         {
           "class": "Medications",
           "name": "Medication Quantity",
+          "description": "The amount of medication, including the unit of measure, that is prescribed or dispensed.",
+          "dataElementId": "data-element-medications-medication-quantity",
           "noteId": "medications-medication-quantity",
           "notes": "",
           "usQualityCore": [
@@ -1954,6 +2162,8 @@
         {
           "class": "Medications",
           "name": "Medications",
+          "description": "Pharmacologicagentusedinthediagnosis, cure, mitigation, treatment, or prevention of disease.",
+          "dataElementId": "data-element-medications-medications",
           "noteId": "medications-medications",
           "notes": "",
           "usQualityCore": [
@@ -1998,6 +2208,8 @@
         {
           "class": "Medications",
           "name": "Route of Administration",
+          "description": "Physiological administration path of a therapeutic agent into or onto a patient. Examples include but are not limited to oral, topical, and intravenous.",
+          "dataElementId": "data-element-medications-route-of-administration",
           "noteId": "medications-route-of-administration",
           "notes": "",
           "usQualityCore": [
@@ -2037,6 +2249,8 @@
         {
           "class": "Medications",
           "name": "Date and Time Medication Administered",
+          "description": "A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true).",
+          "dataElementId": "data-element-medications-date-and-time-medication-administered",
           "noteId": "medications-date-and-time-medication-administered",
           "notes": "",
           "usQualityCore": [
@@ -2061,6 +2275,8 @@
         {
           "class": "Medications",
           "name": "Date and Time Medication Prescribed",
+          "description": "The date when the prescription was initially written or authored.",
+          "dataElementId": "data-element-medications-date-and-time-medication-prescribed",
           "noteId": "medications-date-and-time-medication-prescribed",
           "notes": "",
           "usQualityCore": [
@@ -2085,6 +2301,8 @@
         {
           "class": "Newborn's Delivery Information",
           "name": "Birth Outcome",
+          "description": "The clinical status and health indicators of the newborn including clinical event during labor, delivery, and the immediate post-partum period.",
+          "dataElementId": "data-element-newborn-s-delivery-information-birth-outcome",
           "noteId": "newborn-s-delivery-information-birth-outcome",
           "notes": "",
           "usQualityCore": [
@@ -2099,6 +2317,8 @@
         {
           "class": "Newborn's Delivery Information",
           "name": "Birth Weight",
+          "description": "The weight of the infant/fetus at birth/delivery.",
+          "dataElementId": "data-element-newborn-s-delivery-information-birth-weight",
           "noteId": "newborn-s-delivery-information-birth-weight",
           "notes": "",
           "usQualityCore": [
@@ -2113,6 +2333,8 @@
         {
           "class": "Newborn's Delivery Information",
           "name": "Gestational Age at Delivery",
+          "description": "Gestational age at delivery refers to how far along the pregnancy is at delivery, generally expressed as a combination of weeks and days.",
+          "dataElementId": "data-element-newborn-s-delivery-information-gestational-age-at-delivery",
           "noteId": "newborn-s-delivery-information-gestational-age-at-delivery",
           "notes": "",
           "usQualityCore": [
@@ -2127,6 +2349,8 @@
         {
           "class": "Newborn's Delivery Information",
           "name": "Birth Date and Time",
+          "description": "The recorded date time of birth of the newborn documented in the fetal record.",
+          "dataElementId": "data-element-newborn-s-delivery-information-birth-date-and-time",
           "noteId": "newborn-s-delivery-information-birth-date-and-time",
           "notes": "",
           "usQualityCore": [
@@ -2146,6 +2370,8 @@
         {
           "class": "Orders",
           "name": "Clinical Test Order",
+          "description": "Provider-authored request for the performance of a non-laboratory or non-imaging test.",
+          "dataElementId": "data-element-orders-clinical-test-order",
           "noteId": "orders-clinical-test-order",
           "notes": "",
           "usQualityCore": [
@@ -2170,6 +2396,8 @@
         {
           "class": "Orders",
           "name": "Diagnostic Imaging Order",
+          "description": "Provider-authored request for the performance of a diagnostic imaging study.",
+          "dataElementId": "data-element-orders-diagnostic-imaging-order",
           "noteId": "orders-diagnostic-imaging-order",
           "notes": "",
           "usQualityCore": [
@@ -2194,6 +2422,8 @@
         {
           "class": "Orders",
           "name": "Laboratory Order",
+          "description": "Provider-authored request for laboratory testing.",
+          "dataElementId": "data-element-orders-laboratory-order",
           "noteId": "orders-laboratory-order",
           "notes": "",
           "usQualityCore": [
@@ -2218,6 +2448,8 @@
         {
           "class": "Orders",
           "name": "Medical Device Order",
+          "description": "Provider-authored request for medical devices. Examples include but are not limited to therapeutic footwear, insulin infusion pump, and continuous positive airway pressure (CPAP) machine.",
+          "dataElementId": "data-element-orders-medical-device-order",
           "noteId": "orders-medical-device-order",
           "notes": "",
           "usQualityCore": [
@@ -2242,6 +2474,8 @@
         {
           "class": "Orders",
           "name": "Medication Order",
+          "description": "Provider-authored request for the dispensing of a therapeutic agent.",
+          "dataElementId": "data-element-orders-medication-order",
           "noteId": "orders-medication-order",
           "notes": "",
           "usQualityCore": [
@@ -2266,6 +2500,8 @@
         {
           "class": "Orders",
           "name": "Nutrition Order",
+          "description": "A provider-authored request for nutrition support such as therapeutic diets, enteral feedings, parenteral nutrition, or oral nutritional supplements.",
+          "dataElementId": "data-element-orders-nutrition-order",
           "noteId": "orders-nutrition-order",
           "notes": "",
           "usQualityCore": [
@@ -2280,6 +2516,8 @@
         {
           "class": "Orders",
           "name": "Portable Medical Order",
+          "description": "Provider-authored request for end-of-life or life-sustaining care for a person who has a serious life-limiting medical condition. Usage note: These are meant to follow a person regardless of when and where such an order might be needed (e.g., hospital, care facility, community, home). There are variations in requirements and names for portable medical orders based on jurisdiction. Examples include, but are not limited to, POLST (Portable Medical Order for Life-Sustaining Treatment), MOLST (Medical Orders for Life-Sustaining Treatment), and out-of-hospital DNR (do-not-resuscitate).",
+          "dataElementId": "data-element-orders-portable-medical-order",
           "noteId": "orders-portable-medical-order",
           "notes": "",
           "usQualityCore": [
@@ -2304,6 +2542,8 @@
         {
           "class": "Orders",
           "name": "Procedure Order",
+          "description": "Provider-authored request for the delivery of patient care services.",
+          "dataElementId": "data-element-orders-procedure-order",
           "noteId": "orders-procedure-order",
           "notes": "",
           "usQualityCore": [
@@ -2333,6 +2573,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Current Address",
+          "description": "Place where a person is located or may be contacted.",
+          "dataElementId": "data-element-patient-demographics-information-current-address",
           "noteId": "patient-demographics-information-current-address",
           "notes": "",
           "usQualityCore": [
@@ -2347,6 +2589,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Date of Birth",
+          "description": "Known or estimated year, month, and day of the patient's birth.",
+          "dataElementId": "data-element-patient-demographics-information-date-of-birth",
           "noteId": "patient-demographics-information-date-of-birth",
           "notes": "",
           "usQualityCore": [
@@ -2361,6 +2605,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Date of Death",
+          "description": "Known or estimated year, month, and day of the patient's death.",
+          "dataElementId": "data-element-patient-demographics-information-date-of-death",
           "noteId": "patient-demographics-information-date-of-death",
           "notes": "",
           "usQualityCore": [
@@ -2375,6 +2621,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Email Address",
+          "description": "Unique identifier of an individual's email account that is used to send and receive email messages.",
+          "dataElementId": "data-element-patient-demographics-information-email-address",
           "noteId": "patient-demographics-information-email-address",
           "notes": "",
           "usQualityCore": [
@@ -2389,6 +2637,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Ethnicity",
+          "description": "Patient's self-identification as Hispanic/ Latino or Non- Hispanic/ Non-Latino.",
+          "dataElementId": "data-element-patient-demographics-information-ethnicity",
           "noteId": "patient-demographics-information-ethnicity",
           "notes": "",
           "usQualityCore": [
@@ -2403,6 +2653,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "First Name",
+          "description": "A personal name used before a family name.",
+          "dataElementId": "data-element-patient-demographics-information-first-name",
           "noteId": "patient-demographics-information-first-name",
           "notes": "",
           "usQualityCore": [
@@ -2417,6 +2669,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Interpreter Needed",
+          "description": "Indication of whether a person needs language interpretation services.",
+          "dataElementId": "data-element-patient-demographics-information-interpreter-needed",
           "noteId": "patient-demographics-information-interpreter-needed",
           "notes": "",
           "usQualityCore": [
@@ -2431,6 +2685,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Last Name",
+          "description": "Portion of one's personal name indicating familial or communal ties.",
+          "dataElementId": "data-element-patient-demographics-information-last-name",
           "noteId": "patient-demographics-information-last-name",
           "notes": "",
           "usQualityCore": [
@@ -2445,6 +2701,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Middle Name (Including middle initial)",
+          "description": "A second or subsequent given name, between the first given name and the family name or surname.",
+          "dataElementId": "data-element-patient-demographics-information-middle-name-including-middle-initial",
           "noteId": "patient-demographics-information-middle-name-including-middle-initial",
           "notes": "",
           "usQualityCore": [
@@ -2459,6 +2717,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Name Suffix",
+          "description": "Name component following family name that may be used to describe a person's position in a family.",
+          "dataElementId": "data-element-patient-demographics-information-name-suffix",
           "noteId": "patient-demographics-information-name-suffix",
           "notes": "",
           "usQualityCore": [
@@ -2473,6 +2733,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Occupation",
+          "description": "Type of work of a person. Examples include but are not limited to infantry, business analyst, and social worker.",
+          "dataElementId": "data-element-patient-demographics-information-occupation",
           "noteId": "patient-demographics-information-occupation",
           "notes": "",
           "usQualityCore": [],
@@ -2486,6 +2748,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Occupation Industry",
+          "description": "Type of business that compensates for work or assigns work to an unpaid worker or volunteer. Examples include but are not limited to U.S. Army, cement manufacturing, and children and youth services.",
+          "dataElementId": "data-element-patient-demographics-information-occupation-industry",
           "noteId": "patient-demographics-information-occupation-industry",
           "notes": "",
           "usQualityCore": [],
@@ -2499,6 +2763,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Patient Identifier",
+          "description": "An identifier for the patient.",
+          "dataElementId": "data-element-patient-demographics-information-patient-identifier",
           "noteId": "patient-demographics-information-patient-identifier",
           "notes": "",
           "usQualityCore": [
@@ -2513,6 +2779,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Phone Number",
+          "description": "Numbers and symbols to contact an individual when using a phone.",
+          "dataElementId": "data-element-patient-demographics-information-phone-number",
           "noteId": "patient-demographics-information-phone-number",
           "notes": "",
           "usQualityCore": [
@@ -2527,6 +2795,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Phone Number Type",
+          "description": "Contact point when using a phone. Examples include but are not limited to home, work, and mobile.",
+          "dataElementId": "data-element-patient-demographics-information-phone-number-type",
           "noteId": "patient-demographics-information-phone-number-type",
           "notes": "",
           "usQualityCore": [
@@ -2541,6 +2811,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Preferred Language",
+          "description": "Documented language that the patient would like to use when discussing health care.",
+          "dataElementId": "data-element-patient-demographics-information-preferred-language",
           "noteId": "patient-demographics-information-preferred-language",
           "notes": "",
           "usQualityCore": [
@@ -2555,6 +2827,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Previous Address",
+          "description": "Prior place where a person may have been located or could have been contacted. Includes street name, number, city/town, state, and zip code.",
+          "dataElementId": "data-element-patient-demographics-information-previous-address",
           "noteId": "patient-demographics-information-previous-address",
           "notes": "",
           "usQualityCore": [
@@ -2569,6 +2843,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Previous Name",
+          "description": "Any first and last name an individual may have used in the past for any reason.",
+          "dataElementId": "data-element-patient-demographics-information-previous-name",
           "noteId": "patient-demographics-information-previous-name",
           "notes": "",
           "usQualityCore": [
@@ -2583,6 +2859,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Race",
+          "description": "An individual's response to the race question based upon self-identification.",
+          "dataElementId": "data-element-patient-demographics-information-race",
           "noteId": "patient-demographics-information-race",
           "notes": "",
           "usQualityCore": [
@@ -2597,6 +2875,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Related Person's Name",
+          "description": "Name of a person with a legal or familial relationship to a patient.",
+          "dataElementId": "data-element-patient-demographics-information-related-person-s-name",
           "noteId": "patient-demographics-information-related-person-s-name",
           "notes": "",
           "usQualityCore": [
@@ -2611,6 +2891,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Relationship Type",
+          "description": "Relationship of a person to a patient. Examples include but are not limited to parent, next-of-kin, guardian, and custodian.",
+          "dataElementId": "data-element-patient-demographics-information-relationship-type",
           "noteId": "patient-demographics-information-relationship-type",
           "notes": "",
           "usQualityCore": [
@@ -2625,6 +2907,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Sex",
+          "description": "Documentation of a specific instance of sex.",
+          "dataElementId": "data-element-patient-demographics-information-sex",
           "noteId": "patient-demographics-information-sex",
           "notes": "",
           "usQualityCore": [
@@ -2639,6 +2923,8 @@
         {
           "class": "Patient Demographics/Information",
           "name": "Tribal Affiliation",
+          "description": "Tribe or band with which an individual associates.",
+          "dataElementId": "data-element-patient-demographics-information-tribal-affiliation",
           "noteId": "patient-demographics-information-tribal-affiliation",
           "notes": "",
           "usQualityCore": [
@@ -2658,6 +2944,8 @@
         {
           "class": "Pregnancy Information",
           "name": "Delivery Procedures",
+          "description": "The method by which a baby is delivered (e.g., vaginal delivery, cesarean section).",
+          "dataElementId": "data-element-pregnancy-information-delivery-procedures",
           "noteId": "pregnancy-information-delivery-procedures",
           "notes": "",
           "usQualityCore": [
@@ -2677,6 +2965,8 @@
         {
           "class": "Pregnancy Information",
           "name": "Estimated Date of Delivery",
+          "description": "The estimated due date (EDD) is the date that spontaneous onset of labor is expected to occur.",
+          "dataElementId": "data-element-pregnancy-information-estimated-date-of-delivery",
           "noteId": "pregnancy-information-estimated-date-of-delivery",
           "notes": "",
           "usQualityCore": [
@@ -2691,6 +2981,8 @@
         {
           "class": "Pregnancy Information",
           "name": "Fetal Presentation",
+          "description": "The anatomical part of the fetus closest to the maternal pelvic inlet at the onset of labor.",
+          "dataElementId": "data-element-pregnancy-information-fetal-presentation",
           "noteId": "pregnancy-information-fetal-presentation",
           "notes": "",
           "usQualityCore": [
@@ -2705,6 +2997,8 @@
         {
           "class": "Pregnancy Information",
           "name": "Gestational Age",
+          "description": "The estimated age of the pregnancy, expressed in weeks and fractions of weeks.",
+          "dataElementId": "data-element-pregnancy-information-gestational-age",
           "noteId": "pregnancy-information-gestational-age",
           "notes": "",
           "usQualityCore": [
@@ -2719,6 +3013,8 @@
         {
           "class": "Pregnancy Information",
           "name": "Gravidity",
+          "description": "The number of pregnancies, current and past, regardless of the pregnancy outcome.",
+          "dataElementId": "data-element-pregnancy-information-gravidity",
           "noteId": "pregnancy-information-gravidity",
           "notes": "",
           "usQualityCore": [
@@ -2733,6 +3029,8 @@
         {
           "class": "Pregnancy Information",
           "name": "Parity",
+          "description": "Parity is defined as the number of pregnancies reaching 20 weeks and 0 days ofgestation or beyond, including the present pregnancy",
+          "dataElementId": "data-element-pregnancy-information-parity",
           "noteId": "pregnancy-information-parity",
           "notes": "",
           "usQualityCore": [
@@ -2747,6 +3045,8 @@
         {
           "class": "Pregnancy Information",
           "name": "Pregnancy Outcomes",
+          "description": "The clinical conclusion of the pregnancy focusing on the end status of the pregnancy and the clinical status of the mother.",
+          "dataElementId": "data-element-pregnancy-information-pregnancy-outcomes",
           "noteId": "pregnancy-information-pregnancy-outcomes",
           "notes": "",
           "usQualityCore": [
@@ -2761,6 +3061,8 @@
         {
           "class": "Pregnancy Information",
           "name": "Preterm Births",
+          "description": "Number of births or deliveries that have occurred before 37 0/7 weeks of gestation",
+          "dataElementId": "data-element-pregnancy-information-preterm-births",
           "noteId": "pregnancy-information-preterm-births",
           "notes": "",
           "usQualityCore": [
@@ -2775,6 +3077,8 @@
         {
           "class": "Pregnancy Information",
           "name": "Term Births",
+          "description": "Number of deliveries that have occurred at 37 0/7 weeks of gestation, or after.",
+          "dataElementId": "data-element-pregnancy-information-term-births",
           "noteId": "pregnancy-information-term-births",
           "notes": "",
           "usQualityCore": [
@@ -2789,6 +3093,8 @@
         {
           "class": "Pregnancy Information",
           "name": "Delivery Date and Time",
+          "description": "The date and time when the newborn is completely delivered, either by full expulsion from the birth canal or full removal from the uterus, documented in the maternal record.",
+          "dataElementId": "data-element-pregnancy-information-delivery-date-and-time",
           "noteId": "pregnancy-information-delivery-date-and-time",
           "notes": "",
           "usQualityCore": [
@@ -2808,6 +3114,8 @@
         {
           "class": "Problems",
           "name": "Condition Status",
+          "description": "Statement of how a diagnosis, problem, or condition presents or manifests in the patient. Examples include but are not limited to active, resolved, recurrence, and remission.",
+          "dataElementId": "data-element-problems-condition-status",
           "noteId": "problems-condition-status",
           "notes": "",
           "usQualityCore": [
@@ -2822,6 +3130,8 @@
         {
           "class": "Problems",
           "name": "Date of Diagnosis",
+          "description": "Date of first determination by a qualified professional of the presence of a problem or condition affecting a patient.",
+          "dataElementId": "data-element-problems-date-of-diagnosis",
           "noteId": "problems-date-of-diagnosis",
           "notes": "",
           "usQualityCore": [
@@ -2841,6 +3151,8 @@
         {
           "class": "Problems",
           "name": "Date of Onset",
+          "description": "Date when a problem/condition started.",
+          "dataElementId": "data-element-problems-date-of-onset",
           "noteId": "problems-date-of-onset",
           "notes": "",
           "usQualityCore": [
@@ -2860,6 +3172,8 @@
         {
           "class": "Problems",
           "name": "Date of Resolution",
+          "description": "Date of subsiding or termination of a symptom, problem or condition.",
+          "dataElementId": "data-element-problems-date-of-resolution",
           "noteId": "problems-date-of-resolution",
           "notes": "",
           "usQualityCore": [
@@ -2879,6 +3193,8 @@
         {
           "class": "Problems",
           "name": "Problems",
+          "description": "Condition, diagnosis, or reason for seeking medical attention.",
+          "dataElementId": "data-element-problems-problems",
           "noteId": "problems-problems",
           "notes": "",
           "usQualityCore": [
@@ -2893,6 +3209,8 @@
         {
           "class": "Problems",
           "name": "SDOH Problems/Health Concerns",
+          "description": "Social Determinants of Health-related health concerns, conditions, or diagnoses. Examples include but are not limited to homelessness and food insecurity.",
+          "dataElementId": "data-element-problems-sdoh-problems-health-concerns",
           "noteId": "problems-sdoh-problems-health-concerns",
           "notes": "",
           "usQualityCore": [
@@ -2912,6 +3230,8 @@
         {
           "class": "Procedures",
           "name": "Performance Time",
+          "description": "Time and/or date an activity is performed. Examples include but are not limited to vaccine or medication administration times, surgery start time, time ultrasound performed, and laboratory specimen collection time.",
+          "dataElementId": "data-element-procedures-performance-time",
           "noteId": "procedures-performance-time",
           "notes": "",
           "usQualityCore": [
@@ -2946,6 +3266,8 @@
         {
           "class": "Procedures",
           "name": "Procedure Reason Code",
+          "description": "An explanation or justification for a service requested in coded or textual form.",
+          "dataElementId": "data-element-procedures-procedure-reason-code",
           "noteId": "procedures-procedure-reason-code",
           "notes": "",
           "usQualityCore": [
@@ -2985,6 +3307,8 @@
         {
           "class": "Procedures",
           "name": "Procedure Status",
+          "description": "The status of planned or performed activity.",
+          "dataElementId": "data-element-procedures-procedure-status",
           "noteId": "procedures-procedure-status",
           "notes": "",
           "usQualityCore": [
@@ -3009,6 +3333,8 @@
         {
           "class": "Procedures",
           "name": "Procedure Type",
+          "description": "The specific type of medical procedure performed.",
+          "dataElementId": "data-element-procedures-procedure-type",
           "noteId": "procedures-procedure-type",
           "notes": "",
           "usQualityCore": [
@@ -3048,6 +3374,8 @@
         {
           "class": "Procedures",
           "name": "Procedures",
+          "description": "Activity performed for or on a patient as part of the provision of care.",
+          "dataElementId": "data-element-procedures-procedures",
           "noteId": "procedures-procedures",
           "notes": "",
           "usQualityCore": [
@@ -3072,6 +3400,8 @@
         {
           "class": "Procedures",
           "name": "Reason for Referral",
+          "description": "Explanation or justification for a referral or consultation.",
+          "dataElementId": "data-element-procedures-reason-for-referral",
           "noteId": "procedures-reason-for-referral",
           "notes": "",
           "usQualityCore": [
@@ -3111,6 +3441,8 @@
         {
           "class": "Procedures",
           "name": "SDOH Interventions",
+          "description": "Actions or services to address an identified Social Determinants of Health-related health concern, condition, or diagnosis. Examples include but are not limited to education about food pantry program and referral to non- emergency medical transportation program.",
+          "dataElementId": "data-element-procedures-sdoh-interventions",
           "noteId": "procedures-sdoh-interventions",
           "notes": "",
           "usQualityCore": [
@@ -3155,6 +3487,8 @@
         {
           "class": "Provenance",
           "name": "Author",
+          "description": "Actor that created or revised the data. Usage note: The actor may be a provider, a patient, a device, an outside medical record, or something else. The source of the information can be used to form assessments about its quality, reliability, trustworthiness, or can indicate where to go to determine the origins of the information.",
+          "dataElementId": "data-element-provenance-author",
           "noteId": "provenance-author",
           "notes": "",
           "usQualityCore": [],
@@ -3168,6 +3502,8 @@
         {
           "class": "Provenance",
           "name": "Author Organization",
+          "description": "Organization associated with author.",
+          "dataElementId": "data-element-provenance-author-organization",
           "noteId": "provenance-author-organization",
           "notes": "",
           "usQualityCore": [],
@@ -3181,6 +3517,8 @@
         {
           "class": "Provenance",
           "name": "Author Role",
+          "description": "Category of actor that participated in the creation or revision of data. Usage note: The source of the information can be used to form assessments about its quality, reliability, trustworthiness, or can indicate where to go to determine the origins of the information. Examples include but are not limited to provider, patient, family member, and device.",
+          "dataElementId": "data-element-provenance-author-role",
           "noteId": "provenance-author-role",
           "notes": "",
           "usQualityCore": [],
@@ -3194,6 +3532,8 @@
         {
           "class": "Provenance",
           "name": "Author Time Stamp",
+          "description": "Date and time of author action.",
+          "dataElementId": "data-element-provenance-author-time-stamp",
           "noteId": "provenance-author-time-stamp",
           "notes": "",
           "usQualityCore": [],
@@ -3212,6 +3552,8 @@
         {
           "class": "Referrals",
           "name": "Referral Status",
+          "description": "The current state of a referral e.g., draft, active, on-hold, revoked, completed, entered-in-error, unknown.",
+          "dataElementId": "data-element-referrals-referral-status",
           "noteId": "referrals-referral-status",
           "notes": "",
           "usQualityCore": [
@@ -3236,6 +3578,8 @@
         {
           "class": "Referrals",
           "name": "Referral Date and Time",
+          "description": "Date and time when a provider wrote an order requesting services.",
+          "dataElementId": "data-element-referrals-referral-date-and-time",
           "noteId": "referrals-referral-date-and-time",
           "notes": "",
           "usQualityCore": [
@@ -3265,6 +3609,8 @@
         {
           "class": "Task",
           "name": "Task Code",
+          "description": "Identifies the type of task that is involved.",
+          "dataElementId": "data-element-task-task-code",
           "noteId": "task-task-code",
           "notes": "",
           "usQualityCore": [
@@ -3289,6 +3635,8 @@
         {
           "class": "Task",
           "name": "Task Status",
+          "description": "Thecurrent status of the task.",
+          "dataElementId": "data-element-task-task-status",
           "noteId": "task-task-status",
           "notes": "",
           "usQualityCore": [
@@ -3318,6 +3666,8 @@
         {
           "class": "Vital Signs",
           "name": "Average Blood Pressure",
+          "description": "Arithmetic average of systolic and diastolic components of two of more blood pressure readings in a specified time period or according to a specified algorithm or protocol. Examples include but are not limited to 3-day morning and evening home monitoring, clinical encounter repeat average, and 24-hour ambulatory measurement.",
+          "dataElementId": "data-element-vital-signs-average-blood-pressure",
           "noteId": "vital-signs-average-blood-pressure",
           "notes": "",
           "usQualityCore": [],
@@ -3331,6 +3681,8 @@
         {
           "class": "Vital Signs",
           "name": "BMI",
+          "description": "Body mass index is a value derived from the mass and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m², resulting from mass in kilograms and height in meters.",
+          "dataElementId": "data-element-vital-signs-bmi",
           "noteId": "vital-signs-bmi",
           "notes": "",
           "usQualityCore": [],
@@ -3344,6 +3696,8 @@
         {
           "class": "Vital Signs",
           "name": "BMI Percentile (2 - 20 years)",
+          "description": "BMI-for-age percentile shows how a child's weight compares to that of other children of the same age and sex.",
+          "dataElementId": "data-element-vital-signs-bmi-percentile-2-20-years",
           "noteId": "vital-signs-bmi-percentile-2-20-years",
           "notes": "",
           "usQualityCore": [],
@@ -3357,6 +3711,8 @@
         {
           "class": "Vital Signs",
           "name": "Body Height",
+          "description": "The vertical measurement of an individual's stature from the feet to the top of the head when standing upright.",
+          "dataElementId": "data-element-vital-signs-body-height",
           "noteId": "vital-signs-body-height",
           "notes": "",
           "usQualityCore": [],
@@ -3370,6 +3726,8 @@
         {
           "class": "Vital Signs",
           "name": "Body Temperature",
+          "description": "Temperature is a measure of the patient's ability to generate and get rid of heat.",
+          "dataElementId": "data-element-vital-signs-body-temperature",
           "noteId": "vital-signs-body-temperature",
           "notes": "",
           "usQualityCore": [],
@@ -3383,6 +3741,8 @@
         {
           "class": "Vital Signs",
           "name": "Body Weight",
+          "description": "The measurement of weight without heavy items located on the person.",
+          "dataElementId": "data-element-vital-signs-body-weight",
           "noteId": "vital-signs-body-weight",
           "notes": "",
           "usQualityCore": [],
@@ -3396,6 +3756,8 @@
         {
           "class": "Vital Signs",
           "name": "Diastolic Blood Pressure",
+          "description": "Diastolic Blood Pressure",
+          "dataElementId": "data-element-vital-signs-diastolic-blood-pressure",
           "noteId": "vital-signs-diastolic-blood-pressure",
           "notes": "",
           "usQualityCore": [],
@@ -3409,6 +3771,8 @@
         {
           "class": "Vital Signs",
           "name": "Head Occipital-frontal Circumference Percentile (Birth - 36 Months)",
+          "description": "Measurement of head circumference, or OFC (occipital frontal circumference), is a reflection of head growth and is a useful tool in tracking and monitoring childhood growth and development.",
+          "dataElementId": "data-element-vital-signs-head-occipital-frontal-circumference-percentile-birth-36-months",
           "noteId": "vital-signs-head-occipital-frontal-circumference-percentile-birth-36-months",
           "notes": "",
           "usQualityCore": [],
@@ -3422,6 +3786,8 @@
         {
           "class": "Vital Signs",
           "name": "Heart Rate",
+          "description": "Number of times the heart beats each minute.",
+          "dataElementId": "data-element-vital-signs-heart-rate",
           "noteId": "vital-signs-heart-rate",
           "notes": "",
           "usQualityCore": [],
@@ -3435,6 +3801,8 @@
         {
           "class": "Vital Signs",
           "name": "Inhaled Oxygen Concentration",
+          "description": "Inhaled oxygen concentration is the percent of oxygen inhaled (FIO2).",
+          "dataElementId": "data-element-vital-signs-inhaled-oxygen-concentration",
           "noteId": "vital-signs-inhaled-oxygen-concentration",
           "notes": "",
           "usQualityCore": [],
@@ -3448,6 +3816,8 @@
         {
           "class": "Vital Signs",
           "name": "Pain Severity",
+          "description": "A patient's self-reported or clinically observed assessment of the intensity of pain, expressed using a standardized scale or measure.",
+          "dataElementId": "data-element-vital-signs-pain-severity",
           "noteId": "vital-signs-pain-severity",
           "notes": "",
           "usQualityCore": [
@@ -3462,6 +3832,8 @@
         {
           "class": "Vital Signs",
           "name": "Pulse Oximetry",
+          "description": "Pulse oximetry is a test used to measure the oxygen level (oxygen saturation) of the blood.",
+          "dataElementId": "data-element-vital-signs-pulse-oximetry",
           "noteId": "vital-signs-pulse-oximetry",
           "notes": "",
           "usQualityCore": [],
@@ -3475,6 +3847,8 @@
         {
           "class": "Vital Signs",
           "name": "Respiratory Rate",
+          "description": "The respiration rate is the number of breaths a person takes per minute.",
+          "dataElementId": "data-element-vital-signs-respiratory-rate",
           "noteId": "vital-signs-respiratory-rate",
           "notes": "",
           "usQualityCore": [],
@@ -3488,6 +3862,8 @@
         {
           "class": "Vital Signs",
           "name": "Systolic Blood Pressure",
+          "description": "Systolic Blood Pressure",
+          "dataElementId": "data-element-vital-signs-systolic-blood-pressure",
           "noteId": "vital-signs-systolic-blood-pressure",
           "notes": "",
           "usQualityCore": [],
@@ -3501,6 +3877,8 @@
         {
           "class": "Vital Signs",
           "name": "Weight-for-length Percentile (Birth - 24 Months)",
+          "description": "The higher the percentile number, the bigger a child is compared with other kids of the same age and gender, whether it's for height or weight.",
+          "dataElementId": "data-element-vital-signs-weight-for-length-percentile-birth-24-months",
           "noteId": "vital-signs-weight-for-length-percentile-birth-24-months",
           "notes": "",
           "usQualityCore": [],
