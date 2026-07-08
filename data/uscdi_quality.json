@@ -774,7 +774,12 @@
 
       ],
       "usQualityCore": [
-
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter",
+          "elements": [
+            "Encounter.diagnosis.rank"
+          ]
+        }
       ]
     }
   },

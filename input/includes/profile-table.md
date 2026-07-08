@@ -12,7 +12,7 @@
 
 {% capture us_quality_core_profile -%}
 {% if profile.path -%}
-{{ indent }}[{{ profile.title }}]({{ profile.path }}){% unless profile.inScope %}*{% endunless %}
+{{ indent }}[{{ profile.title }}]({{ profile.path }})
 {% else -%}
 &mdash;
 {% endif -%}

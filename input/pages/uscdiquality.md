@@ -30,4 +30,4 @@ Note that:
 - USCDI+ Quality V2 data class and element names may differ from the US Quality Core profile and element names.
 - Not every USCDI+ Quality V2 data class and element maps to a single US Quality Core profile.
 
-{% include uscdi-quality-data-elements.md scope="inScope" us_quality_core_header="Implement with US Quality Core Profile(s)" us_core_header="Implement with US Core Profile(s)" %}
+{% include uscdi-quality-data-elements.md %}

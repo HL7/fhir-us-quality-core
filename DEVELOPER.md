@@ -297,7 +297,7 @@ rerun the relevant npm script from the IG root.
 | `input/fsh/generated/USCDIQualityFlags.fsh` | `npm --prefix scripts run generate:flags` | `data/uscdi_quality.json`, authored profile FSH |
 | `input/data/generated/profile_notes.json` | `npm --prefix scripts run generate:view-data` | `data/rest.json`, generated flag RuleSets, authored profile FSH |
 | `input/data/generated/profile_table.json` | `npm --prefix scripts run generate:view-data` | `data/uscdi_quality.json`, authored profile FSH, generated flag RuleSets |
-| `input/data/generated/uscdi_quality_scope.json` | `npm --prefix scripts run generate:view-data` | `data/uscdi_quality.json`, generated flag RuleSets, authored profile FSH |
+| `input/data/generated/data_elements.json` | `npm --prefix scripts run generate:view-data` | `data/uscdi_quality.json`, authored profile FSH |
 
 Generated RuleSet FSH files are inserted from authored FSH using RuleSet
 inserts. Generated SearchParameter FSH files are regular FSH instance

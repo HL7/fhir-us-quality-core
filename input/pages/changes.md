@@ -29,17 +29,18 @@ The following changes have been made for v1.0.0:
 * Updates USCDI+ Quality mapping guidance to reflect USCDI+ Quality V2.
 * Replaces legacy locally carried US Core terminology artifacts with references to upstream US Core artifacts where possible, leaving only terminology introduced by US Quality Core in this guide.
 * Converts the maintained IG source to FHIR Shorthand (FSH) for SUSHI-based generation while preserving the generated FHIR artifacts needed by the IG Publisher.
-* Removes the US Quality Core BodyStructure profile because it does not have USCDI+ Quality mappings.
-* Removes the US Quality Core Claim profile because it does not have USCDI+ Quality mappings.
-* Removes the US Quality Core ClaimResponse profile because it does not have USCDI+ Quality mappings.
-* Removes the US Quality Core CommunicationRequest profile because it does not have USCDI+ Quality mappings.
-* Removes the US Quality Core DeviceUseStatement profile because it does not have USCDI+ Quality mappings.
-* Removes the US Quality Core Flag profile because it does not have USCDI+ Quality mappings.
-* Removes the US Quality Core ImmunizationEvaluation profile because it does not have USCDI+ Quality mappings.
-* Removes the US Quality Core ImmunizationRecommendation profile because it does not have USCDI+ Quality mappings.
-* Removes the US Quality Core MedicationStatement profile because it does not have USCDI+ Quality mappings.
-* Removes the US Quality Core NonPatient Observation profile because it does not have USCDI+ Quality mappings.
-* Removes the US Quality Core Substance profile because it does not have USCDI+ Quality mappings.
+* Removes the following US Quality Core profiles and associated artifacts as they do not have USCDI+ Quality mappings:
+  * USQualityCoreBodyStructure
+  * USQualityCoreClaim
+  * USQualityCoreClaimResponse
+  * USQualityCoreCommunicationRequest
+  * USQualityCoreDeviceUseStatement
+  * USQualityCoreFlag
+  * USQualityCoreImmunizationEvaluation
+  * USQualityCoreImmunizationRecommendation
+  * USQualityCoreMedicationStatement
+  * USQualityCoreNonPatient Observation
+  * USQualityCoreSubstance
 * Removes CQL modelinfo and supporting artifacts and guidance.
 
 ### v0.5.0

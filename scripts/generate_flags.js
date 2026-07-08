@@ -6,6 +6,7 @@ const { elementIdToFshPath, getOrSet, joinLines, jsonPathToFshPath, splitLines, 
 const { ensureDir, read, readUscdiQualityData, write } = require('./lib/io');
 const { generatedFshFile, ruleSetToFsh } = require('./lib/fsh-output');
 const { profileMaps } = require('./lib/profiles');
+const { assertAllDataElementsMapped } = require('./lib/uscdi');
 const { runGenerator } = require('./lib/runner');
 
 const { fshrules, fshtypes } = sushi;
@@ -28,8 +29,11 @@ function rulesetName(profileName) {
 function readMappings() {
   const flags = new Map();
   const sources = new Map();
+  const dataElements = readUscdiQualityData();
 
-  for (const dataElement of readUscdiQualityData()) {
+  assertAllDataElementsMapped(dataElements);
+
+  for (const dataElement of dataElements) {
     for (const mapping of dataElement.mappings.usQualityCore) {
       const id = urlTail(mapping.profile);
       const flaggedPaths = getOrSet(flags, id, () => new Set());

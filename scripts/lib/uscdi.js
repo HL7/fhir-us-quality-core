@@ -58,16 +58,26 @@ function generatedUscdiQualityElements(profile, ruleSets) {
     }));
 }
 
-function uscdiQualityProfileIds(profiles, ruleSets) {
-  return new Set(
-    profiles
-      .filter(profile => profile.id?.startsWith('us-quality-core-'))
-      .filter(profile => generatedUscdiQualityElements(profile, ruleSets).length > 0)
-      .map(profile => profile.id)
+function mappingCount(dataElement) {
+  return (dataElement.mappings?.usQualityCore?.length ?? 0) + (dataElement.mappings?.usCore?.length ?? 0);
+}
+
+function assertAllDataElementsMapped(dataElements) {
+  const unmapped = dataElements.filter(dataElement => mappingCount(dataElement) === 0);
+  if (!unmapped.length) return;
+
+  throw new Error(
+    [
+      'Every data/uscdi_quality.json data element must have at least one US Quality Core or US Core mapping.',
+      'Missing mappings:',
+      ...unmapped.map(dataElement => `- ${dataElement.class}: ${dataElement.name}`)
+    ].join('\n')
   );
 }
 
 function mappingProfileUrls(dataElements) {
+  assertAllDataElementsMapped(dataElements);
+
   const urls = [];
   const seen = new Set();
 
@@ -83,10 +93,6 @@ function mappingProfileUrls(dataElements) {
   }
 
   return urls;
-}
-
-function hasMappings(dataElement) {
-  return dataElement.mappings.usQualityCore.length > 0 || dataElement.mappings.usCore.length > 0;
 }
 
 // Builds the CapabilityStatement supportedProfile source of truth from
@@ -135,11 +141,10 @@ function mappedProfilesByResource(dataElements, profilesById, profilesByName, fh
 }
 
 module.exports = {
+  assertAllDataElementsMapped,
   generatedUscdiQualityElements,
   generatedUscdiQualityRuleSetName,
   generatedUscdiQualityRuleSets,
-  hasMappings,
   mappedProfilesByResource,
-  mappingProfileUrls,
-  uscdiQualityProfileIds
+  mappingProfileUrls
 };

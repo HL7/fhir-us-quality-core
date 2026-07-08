@@ -15,11 +15,10 @@ const {
   usCoreAncestor
 } = require('./lib/profiles');
 const {
+  assertAllDataElementsMapped,
   generatedUscdiQualityElements,
   generatedUscdiQualityRuleSets,
-  hasMappings,
-  mappedProfilesByResource,
-  uscdiQualityProfileIds
+  mappedProfilesByResource
 } = require('./lib/uscdi');
 const { runGenerator } = require('./lib/runner');
 
@@ -99,33 +98,12 @@ function resolvedDataElement(dataElement, profilesById, fhirDefs) {
   };
 }
 
-function scopeSection(dataElements, inScope, profilesById, fhirDefs) {
-  const elements = dataElements
-    .filter(dataElement => hasMappings(dataElement) === inScope)
-    .map(dataElement => resolvedDataElement(dataElement, profilesById, fhirDefs));
+function uscdiQualityDataElementsData(dataElements, profilesById, fhirDefs) {
+  const elements = dataElements.map(dataElement => resolvedDataElement(dataElement, profilesById, fhirDefs));
 
   return {
     groups: groupsByClass(elements),
     notes: elements.filter(element => element.notes)
-  };
-}
-
-function profileList(profiles) {
-  return sortByDisplayTitle([...profiles]).map(profileSummary);
-}
-
-function uscdiQualityScopeData(dataElements, profiles, profilesById, fhirDefs, inScopeProfileIds) {
-  const usQualityCoreProfiles = profiles.filter(profile => profile.id?.startsWith('us-quality-core-'));
-
-  return {
-    dataElements: {
-      inScope: scopeSection(dataElements, true, profilesById, fhirDefs),
-      outOfScope: scopeSection(dataElements, false, profilesById, fhirDefs)
-    },
-    profiles: {
-      inScope: profileList(usQualityCoreProfiles.filter(profile => inScopeProfileIds.has(profile.id))),
-      outOfScope: profileList(usQualityCoreProfiles.filter(profile => !inScopeProfileIds.has(profile.id)))
-    }
   };
 }
 
@@ -159,13 +137,12 @@ function orderedProfiles(profiles, profilesById, profilesByName) {
   return ordered;
 }
 
-function usQualityCoreProfileTableRow(profile, depth, inScopeProfileIds, profilesById, profilesByName, fhirDefs) {
+function usQualityCoreProfileTableRow(profile, depth, profilesById, profilesByName, fhirDefs) {
   const usCore = usCoreAncestor(profile, profilesById, profilesByName, fhirDefs);
 
   return {
     ...profileSummary(profile),
     depth,
-    inScope: inScopeProfileIds.has(profile.id),
     showResource: depth === 0,
     usCore: usCore ? usCoreProfileSummary(usCore) : null
   };
@@ -181,7 +158,6 @@ function usCoreProfileTableRows(resource, urls, hasLocalProfiles, fhirDefs) {
       title: usCoreProfileSummary(profile).title,
       path: null,
       depth: 0,
-      inScope: true,
       showResource: !hasLocalProfiles && index === 0,
       usCore: usCoreProfileSummary(profile)
     }));
@@ -190,7 +166,6 @@ function usCoreProfileTableRows(resource, urls, hasLocalProfiles, fhirDefs) {
 function profileTableData(
   profilesById,
   profilesByName,
-  inScopeProfileIds,
   resourceTypes,
   supportedProfilesByResource,
   fhirDefs
@@ -210,7 +185,7 @@ function profileTableData(
     resources: [...resources.keys()].sort().map(resource => {
       const localProfiles = resources.get(resource);
       const localRows = orderedProfiles(localProfiles, profilesById, profilesByName).map(({ profile, depth }) =>
-        usQualityCoreProfileTableRow(profile, depth, inScopeProfileIds, profilesById, profilesByName, fhirDefs)
+        usQualityCoreProfileTableRow(profile, depth, profilesById, profilesByName, fhirDefs)
       );
       const usCoreRows = usCoreProfileTableRows(
         resource,
@@ -256,21 +231,39 @@ function profileSearchData(profile, resourceTypes, restResources) {
   };
 }
 
-function profileNotesData(profiles, ruleSets, profilesById, profilesByName, resourceTypes, restResources, fhirDefs) {
-  return Object.fromEntries(
-    [...profiles]
-      .sort((a, b) => a.id.localeCompare(b.id))
-      .map(profile => {
-        const elements = generatedUscdiQualityElements(profile, ruleSets).map(element => ({
-          path: fshPathToDisplayPath(element.path),
-          short: stripUscdiQualityPrefix(element.short)
-        }));
+function assertProfilesHaveUscdiQualityElements(profileElements) {
+  const missing = profileElements.filter(({ elements }) => elements.length === 0);
+  if (!missing.length) return;
 
+  throw new Error(
+    [
+      'Every US Quality Core profile must have generated USCDI+ Quality elements.',
+      'Missing elements:',
+      ...missing.map(({ profile }) => `- ${profile.id}`)
+    ].join('\n')
+  );
+}
+
+function profileNotesData(profiles, ruleSets, profilesById, profilesByName, resourceTypes, restResources, fhirDefs) {
+  const profileElements = [...profiles]
+    .sort((a, b) => a.id.localeCompare(b.id))
+    .map(profile => ({
+      profile,
+      elements: generatedUscdiQualityElements(profile, ruleSets).map(element => ({
+        path: fshPathToDisplayPath(element.path),
+        short: stripUscdiQualityPrefix(element.short)
+      }))
+    }));
+
+  assertProfilesHaveUscdiQualityElements(profileElements);
+
+  return Object.fromEntries(
+    profileElements
+      .map(({ profile, elements }) => {
         return [
           profile.id,
           {
             ...profileSummary(profile),
-            hasUscdiQualityElements: elements.length > 0,
             uscdiQualityElements: elements,
             hasUsCoreLineage: hasUsCoreLineage(profile, profilesById, profilesByName, fhirDefs),
             search: profileSearchData(profile, resourceTypes, restResources)
@@ -297,7 +290,7 @@ async function main(log) {
     profileMaps(parseFsh(FSH_FILES))
   );
   const ruleSets = await log.step('Reading generated USCDI+ Quality RuleSets', generatedUscdiQualityRuleSets);
-  const inScopeProfileIds = uscdiQualityProfileIds(profiles, ruleSets);
+  await log.step('Checking USCDI+ Quality mappings', () => assertAllDataElementsMapped(dataElements));
   const resourceTypes = await log.step('Resolving profile resource types', () =>
     profileResourceTypes(
       profiles.filter(profile => profile.id?.startsWith('us-quality-core-')),
@@ -324,17 +317,14 @@ async function main(log) {
       'profile_table.json': profileTableData(
         profilesById,
         profilesByName,
-        inScopeProfileIds,
         resourceTypes,
         supportedProfilesByResource,
         fhirDefs
       ),
-      'uscdi_quality_scope.json': uscdiQualityScopeData(
+      'data_elements.json': uscdiQualityDataElementsData(
         dataElements,
-        profiles,
         profilesById,
-        fhirDefs,
-        inScopeProfileIds
+        fhirDefs
       )
     })
   );

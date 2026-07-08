@@ -1,11 +1,7 @@
 {:toc}
 
-
-{: .note}
-> TODO: Still need to remove the profiles from QI-Core 8 that are not relevant to USCDI+ Quality.  Also, we don't need the whole 'identified by USCDI+ Quality mappings' concept, as every profile should be in scope now.
-
 ### US Quality Core Profiles
-The following table lists the US Quality Core profiles that are part of the IG, directly supported US Core profiles identified by USCDI+ Quality mappings, and the underlying FHIR resources.
+The following table lists the US Quality Core profiles that are part of the IG, directly supported US Core profiles, and the underlying FHIR resources.
 
 {% include profile-table.md %}
 

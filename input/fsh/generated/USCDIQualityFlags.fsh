@@ -183,23 +183,13 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreImagingStudy
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) registered | available | cancelled | entered-in-error | unknown"
 
-RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreConditionEncounterDiagnosis
-* abatement[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* abatement[x] ^short = "(USCDI+ Quality) When in resolution/remission"
-* code ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* code ^short = "(USCDI+ Quality) Identification of the condition, problem or diagnosis"
-* encounter ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* encounter ^short = "(USCDI+ Quality) Encounter created as part of"
-* onset[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* onset[x] ^short = "(USCDI+ Quality) Estimated or actual date, date-time, or age"
-* recordedDate ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* recordedDate ^short = "(USCDI+ Quality) Date record was first recorded"
-
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreEncounter
 * diagnosis ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * diagnosis ^short = "(USCDI+ Quality) The list of diagnosis relevant to this encounter"
 * diagnosis.extension[diagnosisPresentOnAdmission] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * diagnosis.extension[diagnosisPresentOnAdmission] ^short = "(USCDI+ Quality) onAdmission"
+* diagnosis.rank ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* diagnosis.rank ^short = "(USCDI+ Quality) Ranking of the diagnosis (for each role type)"
 * hospitalization ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * hospitalization ^short = "(USCDI+ Quality) Details about the admission to a healthcare service"
 * hospitalization.dischargeDisposition ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
@@ -222,6 +212,18 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreEncounter
 * status ^short = "(USCDI+ Quality) planned | arrived | triaged | in-progress | onleave | finished | cancelled +"
 * type ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * type ^short = "(USCDI+ Quality) Specific type of encounter"
+
+RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreConditionEncounterDiagnosis
+* abatement[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* abatement[x] ^short = "(USCDI+ Quality) When in resolution/remission"
+* code ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* code ^short = "(USCDI+ Quality) Identification of the condition, problem or diagnosis"
+* encounter ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* encounter ^short = "(USCDI+ Quality) Encounter created as part of"
+* onset[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* onset[x] ^short = "(USCDI+ Quality) Estimated or actual date, date-time, or age"
+* recordedDate ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* recordedDate ^short = "(USCDI+ Quality) Date record was first recorded"
 
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreLocation
 * address ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true

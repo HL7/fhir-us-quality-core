@@ -1,8 +1,7 @@
-{% assign scope_key = include.scope | default: "inScope" %}
-{% assign section = site.data.generated.uscdi_quality_scope.dataElements[scope_key] %}
+{% assign section = site.data.generated.data_elements %}
 
 {: .usqc-generated-table .usqc-uscdi-quality-data-elements}
-| USCDI+ Quality Data Class / Element | {{ include.us_quality_core_header }} | {{ include.us_core_header }} |
+| USCDI+ Quality Data Class / Element | Implement with US Quality Core Profile(s) | Implement with US Core Profile(s) |
 |---|---|---|
 {% for group in section.groups -%}
 | **{{ group.name }}** | | |
