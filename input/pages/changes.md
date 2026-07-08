@@ -31,6 +31,7 @@ The following changes have been made for v1.0.0:
 * Converts the maintained IG source to FHIR Shorthand (FSH) for SUSHI-based generation while preserving the generated FHIR artifacts needed by the IG Publisher.
 * Removes the US Quality Core BodyStructure profile because it does not have USCDI+ Quality mappings.
 * Removes the US Quality Core ClaimResponse profile because it does not have USCDI+ Quality mappings.
+* Removes the US Quality Core CommunicationRequest profile because it does not have USCDI+ Quality mappings.
 * Removes CQL modelinfo and supporting artifacts and guidance.
 
 ### v0.5.0

@@ -343,20 +343,6 @@
       ]
     }
   },
-  "us-quality-core-communicationrequest": {
-    "id": "us-quality-core-communicationrequest",
-    "title": "US Quality Core CommunicationRequest",
-    "path": "StructureDefinition-us-quality-core-communicationrequest.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
-    "hasUsCoreLineage": false,
-    "search": {
-      "resource": "CommunicationRequest",
-      "hasSearchParameters": false,
-      "searchParams": [],
-      "searchCombinations": []
-    }
-  },
   "us-quality-core-condition-encounter-diagnosis": {
     "id": "us-quality-core-condition-encounter-diagnosis",
     "title": "US Quality Core Condition Encounter Diagnosis",

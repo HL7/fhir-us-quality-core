@@ -118,21 +118,6 @@
       ]
     },
     {
-      "name": "CommunicationRequest",
-      "path": "communicationrequest.html",
-      "profiles": [
-        {
-          "id": "us-quality-core-communicationrequest",
-          "title": "US Quality Core CommunicationRequest",
-          "path": "StructureDefinition-us-quality-core-communicationrequest.html",
-          "depth": 0,
-          "inScope": false,
-          "showResource": true,
-          "usCore": null
-        }
-      ]
-    },
-    {
       "name": "Condition",
       "path": "condition.html",
       "profiles": [

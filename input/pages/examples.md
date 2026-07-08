@@ -25,9 +25,6 @@
 **USQualityCoreCommunicationNotDone**
 * [Negation Example](Communication-negation-example.html)
 
-**USQualityCoreCommunicationRequest**
-* [CommunicationRequest Example](CommunicationRequest-example.html)
-
 **USQualityCoreConditionEncounterDiagnosis**
 * [Severe Burn Example](Condition-example.html)
 * [Appendicitis Example](Condition-appendicitis-example.html)
