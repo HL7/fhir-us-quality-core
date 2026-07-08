@@ -727,7 +727,7 @@
               "class": "Encounter Information",
               "name": "Present on Admission",
               "noteId": "encounter-information-present-on-admission",
-              "notes": "In QI-Core, information about present on admission is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. We have reintroduced the Present on Admission extension for Encounter.diagnosis in US Quality Core v0.5.0 and it is (USCDI+ Quality) tagged.",
+              "notes": "",
               "usQualityCore": [
                 {
                   "id": "us-quality-core-encounter",
@@ -3037,7 +3037,7 @@
               "class": "Procedures",
               "name": "Procedures",
               "noteId": "procedures-procedures",
-              "notes": "In QI-Core, information about principal procedure is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. Implementers may determine the appropriate implementation approach to support this USCDI+ Quality data element. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
+              "notes": "",
               "usQualityCore": [
                 {
                   "id": "us-quality-core-procedure",
@@ -3502,46 +3502,7 @@
           ]
         }
       ],
-      "notes": [
-        {
-          "class": "Encounter Information",
-          "name": "Present on Admission",
-          "noteId": "encounter-information-present-on-admission",
-          "notes": "In QI-Core, information about present on admission is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. We have reintroduced the Present on Admission extension for Encounter.diagnosis in US Quality Core v0.5.0 and it is (USCDI+ Quality) tagged.",
-          "usQualityCore": [
-            {
-              "id": "us-quality-core-encounter",
-              "title": "US Quality Core Encounter",
-              "path": "StructureDefinition-us-quality-core-encounter.html"
-            }
-          ],
-          "usCore": []
-        },
-        {
-          "class": "Procedures",
-          "name": "Procedures",
-          "noteId": "procedures-procedures",
-          "notes": "In QI-Core, information about principal procedure is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. Implementers may determine the appropriate implementation approach to support this USCDI+ Quality data element. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
-          "usQualityCore": [
-            {
-              "id": "us-quality-core-procedure",
-              "title": "US Quality Core Procedure",
-              "path": "StructureDefinition-us-quality-core-procedure.html"
-            },
-            {
-              "id": "us-quality-core-procedurenotdone",
-              "title": "US Quality Core Procedure Not Done",
-              "path": "StructureDefinition-us-quality-core-procedurenotdone.html"
-            },
-            {
-              "id": "us-quality-core-proceduredone",
-              "title": "US Quality Core Procedure Done",
-              "path": "StructureDefinition-us-quality-core-proceduredone.html"
-            }
-          ],
-          "usCore": []
-        }
-      ]
+      "notes": []
     },
     "outOfScope": {
       "groups": [
@@ -3552,23 +3513,14 @@
               "class": "Encounter Information",
               "name": "Diagnosis Rank",
               "noteId": "encounter-information-diagnosis-rank",
-              "notes": "In QI-Core, information about principal diagnosis is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. Implementers may determine the appropriate implementation approach to support this USCDI+ Quality data element. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
+              "notes": "",
               "usQualityCore": [],
               "usCore": []
             }
           ]
         }
       ],
-      "notes": [
-        {
-          "class": "Encounter Information",
-          "name": "Diagnosis Rank",
-          "noteId": "encounter-information-diagnosis-rank",
-          "notes": "In QI-Core, information about principal diagnosis is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. Implementers may determine the appropriate implementation approach to support this USCDI+ Quality data element. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
-          "usQualityCore": [],
-          "usCore": []
-        }
-      ]
+      "notes": []
     }
   },
   "profiles": {
@@ -3839,12 +3791,6 @@
         "path": "StructureDefinition-us-quality-core-taskrejected.html"
       }
     ],
-    "outOfScope": [
-      {
-        "id": "us-quality-core-claim",
-        "title": "US Quality Core Claim",
-        "path": "StructureDefinition-us-quality-core-claim.html"
-      }
-    ]
+    "outOfScope": []
   }
 }

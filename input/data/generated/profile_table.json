@@ -70,21 +70,6 @@
       ]
     },
     {
-      "name": "Claim",
-      "path": "claim.html",
-      "profiles": [
-        {
-          "id": "us-quality-core-claim",
-          "title": "US Quality Core Claim",
-          "path": "StructureDefinition-us-quality-core-claim.html",
-          "depth": 0,
-          "inScope": false,
-          "showResource": true,
-          "usCore": null
-        }
-      ]
-    },
-    {
       "name": "Communication",
       "path": "communication.html",
       "profiles": [

@@ -5,7 +5,6 @@ Alias: $sct = http://snomed.info/sct
 Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $rxnorm = http://www.nlm.nih.gov/research/umls/rxnorm
-Alias: $claim-type = http://terminology.hl7.org/CodeSystem/claim-type
 Alias: $communication-not-done-reason = http://terminology.hl7.org/CodeSystem/communication-not-done-reason
 Alias: $communication-category = http://terminology.hl7.org/CodeSystem/communication-category
 Alias: $v3-ParticipationMode = http://terminology.hl7.org/CodeSystem/v3-ParticipationMode

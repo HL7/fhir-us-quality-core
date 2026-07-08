@@ -30,6 +30,7 @@ The following changes have been made for v1.0.0:
 * Replaces legacy locally carried US Core terminology artifacts with references to upstream US Core artifacts where possible, leaving only terminology introduced by US Quality Core in this guide.
 * Converts the maintained IG source to FHIR Shorthand (FSH) for SUSHI-based generation while preserving the generated FHIR artifacts needed by the IG Publisher.
 * Removes the US Quality Core BodyStructure profile because it does not have USCDI+ Quality mappings.
+* Removes the US Quality Core Claim profile because it does not have USCDI+ Quality mappings.
 * Removes the US Quality Core ClaimResponse profile because it does not have USCDI+ Quality mappings.
 * Removes the US Quality Core CommunicationRequest profile because it does not have USCDI+ Quality mappings.
 * Removes the US Quality Core DeviceUseStatement profile because it does not have USCDI+ Quality mappings.

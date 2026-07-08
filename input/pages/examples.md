@@ -16,9 +16,6 @@
 **USQualityCoreCareTeam**
 * [Example of a CareTeam involved in the delivery of care for a pregnancy](CareTeam-example.html)
 
-**USQualityCoreClaim**
-* [Professional Claim for Appendectomy](Claim-example.html)
-
 **USQualityCoreCommunication**
 * [Radiology Report Notification Example](Communication-example.html)
 

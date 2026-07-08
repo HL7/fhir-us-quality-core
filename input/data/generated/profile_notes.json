@@ -198,20 +198,6 @@
       ]
     }
   },
-  "us-quality-core-claim": {
-    "id": "us-quality-core-claim",
-    "title": "US Quality Core Claim",
-    "path": "StructureDefinition-us-quality-core-claim.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
-    "hasUsCoreLineage": false,
-    "search": {
-      "resource": "Claim",
-      "hasSearchParameters": false,
-      "searchParams": [],
-      "searchCombinations": []
-    }
-  },
   "us-quality-core-communication": {
     "id": "us-quality-core-communication",
     "title": "US Quality Core Communication",

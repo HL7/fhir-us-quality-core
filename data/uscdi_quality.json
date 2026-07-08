@@ -768,7 +768,7 @@
     "class": "Encounter Information",
     "name": "Diagnosis Rank",
     "description": "Ordinal number or code that identifies the priority or significance of a diagnosis for a given encounter.",
-    "notes": "In QI-Core, information about principal diagnosis is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. Implementers may determine the appropriate implementation approach to support this USCDI+ Quality data element. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
+    "notes": "",
     "mappings": {
       "usCore": [
 
@@ -946,7 +946,7 @@
     "class": "Encounter Information",
     "name": "Present on Admission",
     "description": "An indicator of whether a patient's condition or diagnosis was known to be present at the time of admission.",
-    "notes": "In QI-Core, information about present on admission is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. We have reintroduced the Present on Admission extension for Encounter.diagnosis in US Quality Core v0.5.0 and it is (USCDI+ Quality) tagged.",
+    "notes": "",
     "mappings": {
       "usCore": [
 
@@ -4126,7 +4126,7 @@
     "class": "Procedures",
     "name": "Procedures",
     "description": "Activity performed for or on a patient as part of the provision of care.",
-    "notes": "In QI-Core, information about principal procedure is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. Implementers may determine the appropriate implementation approach to support this USCDI+ Quality data element. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
+    "notes": "",
     "mappings": {
       "usCore": [
 

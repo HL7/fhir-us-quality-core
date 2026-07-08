@@ -12,7 +12,6 @@
 <artifact id="AllergyIntolerance/example-refuted" key="AllergyIntolerance-example-refuted" name="AllergyIntolerance refuted example"/>
 <artifact id="CarePlan/example" key="CarePlan-example" name="CarePlan example"/>
 <artifact id="CareTeam/example" key="CareTeam-example" name="CareTeam example"/>
-<artifact id="Claim/example" key="Claim-example" name="Claim example"/>
 <artifact id="Communication/example" key="Communication-example" name="Communication example"/>
 <artifact id="Communication/negation-example" key="Communication-negation-example" name="Communication negation example"/>
 <artifact id="Communication/done-example" key="Communication-done-example" name="CommunicationDone example"/>
@@ -103,7 +102,6 @@
 <artifact id="StructureDefinition/us-quality-core-allergyintolerance" key="StructureDefinition-us-quality-core-allergyintolerance" name="US Quality Core AllergyIntolerance"/>
 <artifact id="StructureDefinition/us-quality-core-careplan" key="StructureDefinition-us-quality-core-careplan" name="US Quality Core CarePlan"/>
 <artifact id="StructureDefinition/us-quality-core-careteam" key="StructureDefinition-us-quality-core-careteam" name="US Quality Core CareTeam"/>
-<artifact id="StructureDefinition/us-quality-core-claim" key="StructureDefinition-us-quality-core-claim" name="US Quality Core Claim"/>
 <artifact id="CapabilityStatement/us-quality-core-client" key="CapabilityStatement-us-quality-core-client" name="US Quality Core Client CapabilityStatement"/>
 <artifact id="StructureDefinition/us-quality-core-communication" key="StructureDefinition-us-quality-core-communication" name="US Quality Core Communication"/>
 <artifact id="StructureDefinition/us-quality-core-communicationnotdone" key="StructureDefinition-us-quality-core-communicationnotdone" name="US Quality Core Communication Not Done"/>
