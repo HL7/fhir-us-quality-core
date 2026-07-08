@@ -45,7 +45,6 @@
 <artifact id="Immunization/negation-example-code" key="Immunization-negation-example-code" name="Immunization negation with code example"/>
 <artifact id="Immunization/negation-example" key="Immunization-negation-example" name="Immunization negation with value set example"/>
 <artifact id="Immunization/done-example" key="Immunization-done-example" name="Immunization positive example"/>
-<artifact id="ImmunizationEvaluation/example" key="ImmunizationEvaluation-example" name="ImmunizationEvaluaion example"/>
 <artifact id="ImmunizationRecommendation/example" key="ImmunizationRecommendation-example" name="ImmunizationRecommendation example"/>
 <artifact id="Patient/infant-example" key="Patient-infant-example" name="Infant patient example"/>
 <artifact id="Location/example" key="Location-example" name="Location example"/>
@@ -131,7 +130,6 @@
 <artifact id="StructureDefinition/us-quality-core-immunization" key="StructureDefinition-us-quality-core-immunization" name="US Quality Core Immunization"/>
 <artifact id="StructureDefinition/us-quality-core-immunizationdone" key="StructureDefinition-us-quality-core-immunizationdone" name="US Quality Core Immunization Done"/>
 <artifact id="StructureDefinition/us-quality-core-immunizationnotdone" key="StructureDefinition-us-quality-core-immunizationnotdone" name="US Quality Core Immunization Not Done"/>
-<artifact id="StructureDefinition/us-quality-core-immunizationevaluation" key="StructureDefinition-us-quality-core-immunizationevaluation" name="US Quality Core ImmunizationEvaluation"/>
 <artifact id="StructureDefinition/us-quality-core-immunizationrecommendation" key="StructureDefinition-us-quality-core-immunizationrecommendation" name="US Quality Core ImmunizationRecommendation"/>
 <artifact id="StructureDefinition/us-quality-core-observation-lab" key="StructureDefinition-us-quality-core-observation-lab" name="US Quality Core Laboratory Result Observation"/>
 <artifact id="StructureDefinition/us-quality-core-location" key="StructureDefinition-us-quality-core-location" name="US Quality Core Location"/>

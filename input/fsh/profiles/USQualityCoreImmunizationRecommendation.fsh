@@ -22,7 +22,7 @@ Description: "Profile of ImmunizationRecommendation for decision support/quality
     * ^short = "Vaccine or vaccine group recommendation applies to"
     * ^binding.description = "CVX Vaccines Administered Vaccine Set"
   * doseNumber[x] ^short = "Recommended dose number within series"
-  * supportingImmunization only Reference(USQualityCoreImmunization or USQualityCoreImmunizationEvaluation)
+  * supportingImmunization only Reference(USQualityCoreImmunization or ImmunizationEvaluation)
     * ^mustSupport = false
   * supportingPatientInformation only Reference(USQualityCoreSimpleObservation or USQualityCoreAllergyIntolerance)
     * ^mustSupport = false

@@ -1121,20 +1121,6 @@
       ]
     }
   },
-  "us-quality-core-immunizationevaluation": {
-    "id": "us-quality-core-immunizationevaluation",
-    "title": "US Quality Core ImmunizationEvaluation",
-    "path": "StructureDefinition-us-quality-core-immunizationevaluation.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
-    "hasUsCoreLineage": false,
-    "search": {
-      "resource": "ImmunizationEvaluation",
-      "hasSearchParameters": false,
-      "searchParams": [],
-      "searchCombinations": []
-    }
-  },
   "us-quality-core-immunizationnotdone": {
     "id": "us-quality-core-immunizationnotdone",
     "title": "US Quality Core Immunization Not Done",
