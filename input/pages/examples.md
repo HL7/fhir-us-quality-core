@@ -42,9 +42,6 @@
 **USQualityCoreDeviceRequest**
 * [General DeviceRequest Example](DeviceRequest-example.html)
 
-**USQualityCoreDeviceUseStatement**
-* [ECG Monitor Use by a Patient Example](DeviceUseStatement-example.html)
-
 **USQualityCoreDiagnosticReportLab**
 * [Blood Panel Example](DiagnosticReport-example.html)
 

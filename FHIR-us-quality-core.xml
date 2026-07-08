@@ -27,7 +27,6 @@
 <artifact id="DeviceRequest/negation-with-code-example" key="DeviceRequest-negation-with-code-example" name="DeviceRequest negation with code example"/>
 <artifact id="DeviceRequest/negation-example" key="DeviceRequest-negation-example" name="DeviceRequest negation with value set example"/>
 <artifact id="DeviceRequest/requested-example" key="DeviceRequest-requested-example" name="DeviceRequest positive example"/>
-<artifact id="DeviceUseStatement/example" key="DeviceUseStatement-example" name="DeviceUseStatement example"/>
 <artifact id="DiagnosticReport/example" key="DiagnosticReport-example" name="DiagnosticReportLab example"/>
 <artifact id="DiagnosticReport/note-example" key="DiagnosticReport-note-example" name="DiagnosticReportNote example"/>
 <artifact id="Encounter/example" key="Encounter-example" name="Encounter example"/>
@@ -123,7 +122,6 @@
 <artifact id="StructureDefinition/us-quality-core-deviceprohibited" key="StructureDefinition-us-quality-core-deviceprohibited" name="US Quality Core Device Prohibited"/>
 <artifact id="StructureDefinition/us-quality-core-devicerequest" key="StructureDefinition-us-quality-core-devicerequest" name="US Quality Core DeviceRequest"/>
 <artifact id="StructureDefinition/us-quality-core-devicerequested" key="StructureDefinition-us-quality-core-devicerequested" name="US Quality Core DeviceRequested"/>
-<artifact id="StructureDefinition/us-quality-core-deviceusestatement" key="StructureDefinition-us-quality-core-deviceusestatement" name="US Quality Core DeviceUseStatement"/>
 <artifact id="StructureDefinition/us-quality-core-diagnosis-present-on-admission" key="StructureDefinition-us-quality-core-diagnosis-present-on-admission" name="US Quality Core Diagnosis Present on Admission"/>
 <artifact id="StructureDefinition/us-quality-core-diagnosticreport-lab" key="StructureDefinition-us-quality-core-diagnosticreport-lab" name="US Quality Core DiagnosticReport Profile for Laboratory Results Reporting"/>
 <artifact id="StructureDefinition/us-quality-core-diagnosticreport-note" key="StructureDefinition-us-quality-core-diagnosticreport-note" name="US Quality Core DiagnosticReport Profile for Report and Note Exchange"/>

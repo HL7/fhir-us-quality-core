@@ -712,20 +712,6 @@
       ]
     }
   },
-  "us-quality-core-deviceusestatement": {
-    "id": "us-quality-core-deviceusestatement",
-    "title": "US Quality Core DeviceUseStatement",
-    "path": "StructureDefinition-us-quality-core-deviceusestatement.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
-    "hasUsCoreLineage": false,
-    "search": {
-      "resource": "DeviceUseStatement",
-      "hasSearchParameters": false,
-      "searchParams": [],
-      "searchCombinations": []
-    }
-  },
   "us-quality-core-diagnosticreport-lab": {
     "id": "us-quality-core-diagnosticreport-lab",
     "title": "US Quality Core DiagnosticReport Profile for Laboratory Results Reporting",

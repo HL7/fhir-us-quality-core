@@ -3846,11 +3846,6 @@
         "path": "StructureDefinition-us-quality-core-claim.html"
       },
       {
-        "id": "us-quality-core-deviceusestatement",
-        "title": "US Quality Core DeviceUseStatement",
-        "path": "StructureDefinition-us-quality-core-deviceusestatement.html"
-      },
-      {
         "id": "us-quality-core-flag",
         "title": "US Quality Core Flag",
         "path": "StructureDefinition-us-quality-core-flag.html"

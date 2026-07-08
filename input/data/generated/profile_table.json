@@ -217,21 +217,6 @@
       ]
     },
     {
-      "name": "DeviceUseStatement",
-      "path": "deviceusestatement.html",
-      "profiles": [
-        {
-          "id": "us-quality-core-deviceusestatement",
-          "title": "US Quality Core DeviceUseStatement",
-          "path": "StructureDefinition-us-quality-core-deviceusestatement.html",
-          "depth": 0,
-          "inScope": false,
-          "showResource": true,
-          "usCore": null
-        }
-      ]
-    },
-    {
       "name": "DiagnosticReport",
       "path": "diagnosticreport.html",
       "profiles": [
