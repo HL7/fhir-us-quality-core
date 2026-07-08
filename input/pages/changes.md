@@ -42,6 +42,7 @@ The following changes have been made for v1.0.0:
   * USQualityCoreNonPatientObservation
   * USQualityCoreSubstance
 * Removes CQL modelinfo and supporting artifacts and guidance.
+* Adds a downloadable USCDI+ Quality data element mappings CSV.
 
 ### v0.5.0
 

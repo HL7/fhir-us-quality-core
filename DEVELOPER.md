@@ -19,35 +19,37 @@ The basic source structure is:
 
 ```text
 us-quality-core/
-|-- README.md                     Repository overview
-|-- DEVELOPER.md                  Developer documentation
-|-- sushi-config.yaml             IG metadata, dependencies, pages, and build parameters
-|-- ig.ini                        IG Publisher entry point
-|-- fsh.ini                       SUSHI configuration used by the IG Publisher
-|-- data/                         Maintained JSON inputs for project-specific generators
-|   |-- uscdi_plus_quality.json   USCDI+ Quality data element and profile mappings
-|   `-- rest.json                 REST/search conformance requirements
-|-- scripts/                      Node-based generators and shared helper code
-|   |-- generate_flags.js         Generates USCDI+ Quality flag RuleSets
-|   |-- generate_rest.js          Generates REST RuleSets and SearchParameters
-|   |-- generate_view_data.js     Generates JSON consumed by Liquid/Jekyll templates
-|   `-- lib/                      Shared generator helpers
+|-- README.md                          Repository overview
+|-- DEVELOPER.md                       Developer documentation
+|-- sushi-config.yaml                  IG metadata, dependencies, pages, and build parameters
+|-- ig.ini                             IG Publisher entry point
+|-- fsh.ini                            SUSHI configuration used by the IG Publisher
+|-- data/                              Maintained JSON inputs for project-specific generators
+|   |-- uscdi_plus_quality.json        USCDI+ Quality data element and profile mappings
+|   `-- rest.json                      REST/search conformance requirements
+|-- scripts/                           Node-based generators and shared helper code
+|   |-- generate_flags.js              Generates USCDI+ Quality flag RuleSets
+|   |-- generate_rest.js               Generates REST RuleSets and SearchParameters
+|   |-- generate_uscdi_quality_csv.js  Generates the USCDI+ Quality CSV download
+|   |-- generate_view_data.js          Generates JSON consumed by Liquid/Jekyll templates
+|   `-- lib/                           Shared generator helpers
 |-- input/
-|   |-- fsh/                      FHIR Shorthand source
-|   |   |-- profiles/             Authored US Quality Core profile definitions
-|   |   |-- extensions/           Authored extension definitions
-|   |   |-- valuesets/            Authored value set definitions
-|   |   |-- instances/            Authored CapabilityStatements, examples, and other instances
-|   |   `-- generated/            Committed generated FSH; do not edit by hand
-|   |       `-- search-parameters/ Generated SearchParameter definitions
-|   |-- pages/                    Authored narrative pages in Markdown
-|   |-- intro-notes/              Profile intro and notes Markdown fragments
-|   |-- includes/                 Liquid/Jekyll includes for generated narrative sections
+|   |-- fsh/                           FHIR Shorthand source
+|   |   |-- profiles/                  Authored US Quality Core profile definitions
+|   |   |-- extensions/                Authored extension definitions
+|   |   |-- valuesets/                 Authored value set definitions
+|   |   |-- instances/                 Authored CapabilityStatements, examples, and other instances
+|   |   `-- generated/                 Committed generated FSH; do not edit by hand
+|   |       `-- search-parameters/     Generated SearchParameter definitions
+|   |-- pages/                         Authored narrative pages in Markdown
+|   |-- intro-notes/                   Profile intro and notes Markdown fragments
+|   |-- includes/                      Liquid/Jekyll includes for generated narrative sections
 |   |-- data/
-|   |   `-- generated/            Committed generated JSON view data; do not edit by hand
-|   |-- _resources/               Supporting IG resources
-|   `-- images/                   Static image assets
-`-- output/                       IG Publisher output; not maintained source
+|   |   `-- generated/                 Committed generated JSON view data; do not edit by hand
+|   |-- _resources/                    Supporting IG resources
+|   `-- images/                        Static image assets
+|       `-- generated/                 Committed generated downloads; do not edit by hand
+`-- output/                            IG Publisher output; not maintained source
 ```
 
 ## How To Make Changes
@@ -201,7 +203,8 @@ Review affected pages and `output/qa.html`.
 
 Project-specific generators live under `scripts/`. Maintained JSON inputs live
 under `data/`. Scripts use those inputs, authored FSH, and SUSHI-resolved
-profile metadata to generate formal FSH and view data for rendered IG pages.
+profile metadata to generate formal FSH, view data for rendered IG pages, and
+downloadable mapping files.
 
 Install script dependencies once from the IG root:
 
@@ -224,6 +227,7 @@ Run an individual generator when only one output family needs to be refreshed:
 npm --prefix scripts run generate:rest
 npm --prefix scripts run generate:flags
 npm --prefix scripts run generate:view-data
+npm --prefix scripts run generate:uscdi-quality-csv
 ```
 
 The npm scripts are:
@@ -235,6 +239,8 @@ The npm scripts are:
   element mapping JSON.
 - `generate:view-data` - generates JSON under `input/data/generated` for
   rendered profile guidance, profile tables, and USCDI+ Quality scope tables.
+- `generate:uscdi-quality-csv` - generates the USCDI+ Quality CSV download
+  under `input/images/generated`.
 
 ### Important Inputs
 
@@ -283,6 +289,14 @@ created by `generate_flags.js`. Run
 `npm --prefix scripts run generate` to execute the npm scripts in the correct
 order.
 
+### `generate_uscdi_quality_csv.js`
+
+This script writes the generated USCDI+ Quality CSV download under
+`input/images/generated`, which is copied into the rendered IG output. The CSV
+contains one row per USCDI+ Quality data element. It uses official profile URLs
+in the mapped profile columns and profile computable names in the US Quality
+Core mapped elements column.
+
 ## Generated Files
 
 This repository commits a small set of generated source files so the IG source
@@ -298,6 +312,7 @@ rerun the relevant npm script from the IG root.
 | `input/data/generated/profile_notes.json` | `npm --prefix scripts run generate:view-data` | `data/rest.json`, generated flag RuleSets, authored profile FSH |
 | `input/data/generated/profile_table.json` | `npm --prefix scripts run generate:view-data` | `data/uscdi_plus_quality.json`, authored profile FSH, generated flag RuleSets |
 | `input/data/generated/data_elements.json` | `npm --prefix scripts run generate:view-data` | `data/uscdi_plus_quality.json`, authored profile FSH |
+| `input/images/generated/uscdi-quality-data-elements.csv` | `npm --prefix scripts run generate:uscdi-quality-csv` | `data/uscdi_plus_quality.json`, authored profile FSH |
 
 Generated RuleSet FSH files are inserted from authored FSH using RuleSet
 inserts. Generated SearchParameter FSH files are regular FSH instance

@@ -30,4 +30,6 @@ Note that:
 - USCDI+ Quality V2 data class and element names may differ from the US Quality Core profile and element names.
 - Not every USCDI+ Quality V2 data class and element maps to a single US Quality Core profile.
 
+A downloadable CSV version of the USCDI+ Quality data element mappings is available here: [USCDI+ Quality Data Element Mappings](generated/uscdi-quality-data-elements.csv).
+
 {% include uscdi-quality-data-elements.md %}
