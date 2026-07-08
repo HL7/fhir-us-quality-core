@@ -385,21 +385,6 @@
       ]
     },
     {
-      "name": "ImmunizationRecommendation",
-      "path": "immunizationrecommendation.html",
-      "profiles": [
-        {
-          "id": "us-quality-core-immunizationrecommendation",
-          "title": "US Quality Core ImmunizationRecommendation",
-          "path": "StructureDefinition-us-quality-core-immunizationrecommendation.html",
-          "depth": 0,
-          "inScope": false,
-          "showResource": true,
-          "usCore": null
-        }
-      ]
-    },
-    {
       "name": "Location",
       "path": "location.html",
       "profiles": [

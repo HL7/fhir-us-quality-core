@@ -3846,11 +3846,6 @@
         "path": "StructureDefinition-us-quality-core-claim.html"
       },
       {
-        "id": "us-quality-core-immunizationrecommendation",
-        "title": "US Quality Core ImmunizationRecommendation",
-        "path": "StructureDefinition-us-quality-core-immunizationrecommendation.html"
-      },
-      {
         "id": "us-quality-core-medicationstatement",
         "title": "US Quality Core MedicationStatement",
         "path": "StructureDefinition-us-quality-core-medicationstatement.html"

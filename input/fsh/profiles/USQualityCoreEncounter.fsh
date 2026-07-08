@@ -45,7 +45,7 @@ Description: "Profile of Encounter for decision support/quality metrics. Defines
 * reasonCode ^short = "Coded reason the encounter takes place"
   * ^definition = "Reason the encounter takes place, expressed as a code. For admissions, this can be used for a coded admission diagnosis."
 * reasonReference 0..* SU
-* reasonReference only Reference(USQualityCoreConditionProblemsHealthConcerns or USQualityCoreConditionEncounterDiagnosis or USQualityCoreProcedure or USQualityCoreSimpleObservation or USQualityCoreImmunizationRecommendation)
+* reasonReference only Reference(USQualityCoreConditionProblemsHealthConcerns or USQualityCoreConditionEncounterDiagnosis or USQualityCoreProcedure or USQualityCoreSimpleObservation or ImmunizationRecommendation)
   * ^short = "Reason the encounter takes place (reference)"
   * ^base.path = "Encounter.reasonReference"
   * ^base.min = 0

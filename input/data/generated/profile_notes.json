@@ -1154,20 +1154,6 @@
       ]
     }
   },
-  "us-quality-core-immunizationrecommendation": {
-    "id": "us-quality-core-immunizationrecommendation",
-    "title": "US Quality Core ImmunizationRecommendation",
-    "path": "StructureDefinition-us-quality-core-immunizationrecommendation.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
-    "hasUsCoreLineage": false,
-    "search": {
-      "resource": "ImmunizationRecommendation",
-      "hasSearchParameters": false,
-      "searchParams": [],
-      "searchCombinations": []
-    }
-  },
   "us-quality-core-location": {
     "id": "us-quality-core-location",
     "title": "US Quality Core Location",

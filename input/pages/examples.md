@@ -68,9 +68,6 @@
 * [Negation Example using valueset reference](Immunization-negation-example.html)
 * [Negation Example using coding](Immunization-negation-example-code.html)
 
-**USQualityCoreImmunizationRecommendation**
-* [Example of immunizationrecommendation using a vaccine code](ImmunizationRecommendation-example.html)
-
 **USQualityCoreMedication**
 * [Example of an IV medication - Alemtuzumab](Medication-example.html)
 

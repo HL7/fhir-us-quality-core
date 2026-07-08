@@ -15,7 +15,7 @@ Description: "Profile of DiagnosticReport for laboratory results for decision su
 * basedOn ^mustSupport = false
 * basedOn
   * ^type[0].targetProfile[0] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-careplan"
-  * ^type[0].targetProfile[1] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationrecommendation"
+  * ^type[0].targetProfile[1] = "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"
   * ^type[0].targetProfile[2] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequest"
   * ^type[0].targetProfile[3] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-nutritionorder"
   * ^type[0].targetProfile[4] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest"
