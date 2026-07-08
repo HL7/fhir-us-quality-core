@@ -100,20 +100,6 @@
       "searchCombinations": []
     }
   },
-  "us-quality-core-bodystructure": {
-    "id": "us-quality-core-bodystructure",
-    "title": "US Quality Core BodyStructure",
-    "path": "StructureDefinition-us-quality-core-bodystructure.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
-    "hasUsCoreLineage": false,
-    "search": {
-      "resource": "BodyStructure",
-      "hasSearchParameters": false,
-      "searchParams": [],
-      "searchCombinations": []
-    }
-  },
   "us-quality-core-careplan": {
     "id": "us-quality-core-careplan",
     "title": "US Quality Core CarePlan",

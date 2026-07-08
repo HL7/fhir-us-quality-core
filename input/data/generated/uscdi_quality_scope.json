@@ -3841,11 +3841,6 @@
     ],
     "outOfScope": [
       {
-        "id": "us-quality-core-bodystructure",
-        "title": "US Quality Core BodyStructure",
-        "path": "StructureDefinition-us-quality-core-bodystructure.html"
-      },
-      {
         "id": "us-quality-core-claim",
         "title": "US Quality Core Claim",
         "path": "StructureDefinition-us-quality-core-claim.html"

@@ -34,21 +34,6 @@
       ]
     },
     {
-      "name": "BodyStructure",
-      "path": "bodystructure.html",
-      "profiles": [
-        {
-          "id": "us-quality-core-bodystructure",
-          "title": "US Quality Core BodyStructure",
-          "path": "StructureDefinition-us-quality-core-bodystructure.html",
-          "depth": 0,
-          "inScope": false,
-          "showResource": true,
-          "usCore": null
-        }
-      ]
-    },
-    {
       "name": "CarePlan",
       "path": "careplan.html",
       "profiles": [

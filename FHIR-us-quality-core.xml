@@ -10,7 +10,6 @@
 <artifact id="AdverseEvent/example" key="AdverseEvent-example" name="AdverseEvent example"/>
 <artifact id="AllergyIntolerance/example" key="AllergyIntolerance-example" name="AllergyIntolerance example"/>
 <artifact id="AllergyIntolerance/example-refuted" key="AllergyIntolerance-example-refuted" name="AllergyIntolerance refuted example"/>
-<artifact id="BodyStructure/example" key="BodyStructure-example" name="BodyStructure example"/>
 <artifact id="CarePlan/example" key="CarePlan-example" name="CarePlan example"/>
 <artifact id="CareTeam/example" key="CareTeam-example" name="CareTeam example"/>
 <artifact id="Claim/example" key="Claim-example" name="Claim example"/>
@@ -113,7 +112,6 @@
 <artifact id="Task/negation-example" key="Task-negation-example" name="TaskRejected with value set example"/>
 <artifact id="StructureDefinition/us-quality-core-adverseevent" key="StructureDefinition-us-quality-core-adverseevent" name="US Quality Core AdverseEvent"/>
 <artifact id="StructureDefinition/us-quality-core-allergyintolerance" key="StructureDefinition-us-quality-core-allergyintolerance" name="US Quality Core AllergyIntolerance"/>
-<artifact id="StructureDefinition/us-quality-core-bodystructure" key="StructureDefinition-us-quality-core-bodystructure" name="US Quality Core BodyStructure"/>
 <artifact id="StructureDefinition/us-quality-core-careplan" key="StructureDefinition-us-quality-core-careplan" name="US Quality Core CarePlan"/>
 <artifact id="StructureDefinition/us-quality-core-careteam" key="StructureDefinition-us-quality-core-careteam" name="US Quality Core CareTeam"/>
 <artifact id="StructureDefinition/us-quality-core-claim" key="StructureDefinition-us-quality-core-claim" name="US Quality Core Claim"/>

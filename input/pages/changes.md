@@ -29,6 +29,7 @@ The following changes have been made for v1.0.0:
 * Updates USCDI+ Quality mapping guidance to reflect USCDI+ Quality V2.
 * Replaces legacy locally carried US Core terminology artifacts with references to upstream US Core artifacts where possible, leaving only terminology introduced by US Quality Core in this guide.
 * Converts the maintained IG source to FHIR Shorthand (FSH) for SUSHI-based generation while preserving the generated FHIR artifacts needed by the IG Publisher.
+* Removes the US Quality Core BodyStructure profile because it does not have USCDI+ Quality mappings.
 * Removes CQL modelinfo and supporting artifacts and guidance.
 
 ### v0.5.0

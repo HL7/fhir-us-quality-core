@@ -10,9 +10,6 @@
 * [Typical Food Allergy](AllergyIntolerance-example.html)
 * [Refuted Food Allergy](AllergyIntolerance-example-refuted.html)
 
-**USQualityCoreBodyStructure**
-* [BodyStructure example identifying a specific tumor or lesion](BodyStructure-example.html)
-
 **USQualityCoreCarePlan**
 * [Assessment and care plan for a pregnancy](CarePlan-example.html)
 
