@@ -93,7 +93,6 @@
 <artifact id="ServiceRequest/proposal-example-code" key="ServiceRequest-proposal-example-code" name="ServiceRequest positive example with a code"/>
 <artifact id="ServiceRequest/proposal-example" key="ServiceRequest-proposal-example" name="ServiceRequest positive example with a value set"/>
 <artifact id="ServiceRequest/service-requested-example" key="ServiceRequest-service-requested-example" name="ServiceRequested appendix example"/>
-<artifact id="Substance/example" key="Substance-example" name="Substance example"/>
 <artifact id="Task/example" key="Task-example" name="Task general example"/>
 <artifact id="Task/done-example" key="Task-done-example" name="Task positive example"/>
 <artifact id="Task/rejected-with-code-example" key="Task-rejected-with-code-example" name="TaskRejected example rejecting a proposal using a code"/>
@@ -158,7 +157,6 @@
 <artifact id="StructureDefinition/us-quality-core-servicerequest" key="StructureDefinition-us-quality-core-servicerequest" name="US Quality Core ServiceRequest"/>
 <artifact id="StructureDefinition/us-quality-core-servicerequested" key="StructureDefinition-us-quality-core-servicerequested" name="US Quality Core ServiceRequested"/>
 <artifact id="StructureDefinition/us-quality-core-simple-observation" key="StructureDefinition-us-quality-core-simple-observation" name="US Quality Core Simple Observation"/>
-<artifact id="StructureDefinition/us-quality-core-substance" key="StructureDefinition-us-quality-core-substance" name="US Quality Core Substance"/>
 <artifact id="StructureDefinition/us-quality-core-task" key="StructureDefinition-us-quality-core-task" name="US Quality Core Task"/>
 <artifact id="StructureDefinition/us-quality-core-taskdone" key="StructureDefinition-us-quality-core-taskdone" name="US Quality Core Task Done"/>
 <artifact id="StructureDefinition/us-quality-core-taskrejected" key="StructureDefinition-us-quality-core-taskrejected" name="US Quality Core Task Rejected"/>

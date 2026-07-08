@@ -152,9 +152,6 @@
 * [Request for Appendectomy Example](ServiceRequest-example.html)
 * [Request for Myringotomy Procedure Example](ServiceRequest-myringotomy-example.html)
 
-**USQualityCoreSubstance**
-* [Honey Bee venom (apitoxin) Example](Substance-example.html)
-
 **USQualityCoreTask**
 * [Task Example](Task-example.html)
 

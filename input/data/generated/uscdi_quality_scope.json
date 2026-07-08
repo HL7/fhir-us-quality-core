@@ -3844,11 +3844,6 @@
         "id": "us-quality-core-claim",
         "title": "US Quality Core Claim",
         "path": "StructureDefinition-us-quality-core-claim.html"
-      },
-      {
-        "id": "us-quality-core-substance",
-        "title": "US Quality Core Substance",
-        "path": "StructureDefinition-us-quality-core-substance.html"
       }
     ]
   }

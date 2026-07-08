@@ -3114,20 +3114,6 @@
       ]
     }
   },
-  "us-quality-core-substance": {
-    "id": "us-quality-core-substance",
-    "title": "US Quality Core Substance",
-    "path": "StructureDefinition-us-quality-core-substance.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
-    "hasUsCoreLineage": false,
-    "search": {
-      "resource": "Substance",
-      "hasSearchParameters": false,
-      "searchParams": [],
-      "searchCombinations": []
-    }
-  },
   "us-quality-core-task": {
     "id": "us-quality-core-task",
     "title": "US Quality Core Task",

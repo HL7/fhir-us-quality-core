@@ -1039,21 +1039,6 @@
       ]
     },
     {
-      "name": "Substance",
-      "path": "substance.html",
-      "profiles": [
-        {
-          "id": "us-quality-core-substance",
-          "title": "US Quality Core Substance",
-          "path": "StructureDefinition-us-quality-core-substance.html",
-          "depth": 0,
-          "inScope": false,
-          "showResource": true,
-          "usCore": null
-        }
-      ]
-    },
-    {
       "name": "Task",
       "path": "task.html",
       "profiles": [

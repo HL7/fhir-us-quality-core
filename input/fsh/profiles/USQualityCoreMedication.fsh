@@ -17,7 +17,7 @@ Description: "Profile of Medication for decision support/quality metrics. Define
   * ^type[0].targetProfile[0] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization"
 * ingredient
   * item[x] ^mustSupport = false
-  * item[x] ^type[1].targetProfile[0] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-substance"
+  * item[x] ^type[1].targetProfile[0] = "http://hl7.org/fhir/StructureDefinition/Substance"
   * item[x] ^type[1].targetProfile[1] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medication"
   * isActive 0..1
   * isActive only boolean
