@@ -39,7 +39,7 @@ The following changes have been made for v1.0.0:
   * USQualityCoreImmunizationEvaluation
   * USQualityCoreImmunizationRecommendation
   * USQualityCoreMedicationStatement
-  * USQualityCoreNonPatient Observation
+  * USQualityCoreNonPatientObservation
   * USQualityCoreSubstance
 * Removes CQL modelinfo and supporting artifacts and guidance.
 
