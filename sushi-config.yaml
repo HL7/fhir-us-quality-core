@@ -79,9 +79,6 @@ pages:
     relationship-with-uscore-qicore.md:
       title: Relationship with US Core and QI-Core
       generation: markdown
-    qdm-to-us-quality-core.md:
-      title: Quality Data Model (QDM)v5.6 to US Quality Core R8 Mapping
-      generation: markdown
     capability-statements.md:
       title: Capability Statements
       generation: markdown

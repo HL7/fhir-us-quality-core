@@ -101,7 +101,6 @@ This guide is divided into several pages, which are listed at the top of each pa
     * [US Quality Core Negation](negation.html): Guidance on using US Quality Core negation profiles
     * [Provenance](provenance.html): Description of the use of Provenance in US Quality Core
     * [Relationship with US Core and QI-Core](relationship-with-uscore-qicore.html): Relationship between US Quality Core with US Core and QI-Core
-    * [QDM-to-US Quality Core Mapping](qdm-to-us-quality-core.html): Mapping from the Quality Data Model (QDM) to US Quality Core
 * [FHIR Artifacts](artifacts.html): Detailed descriptions and formal definitions for all the FHIR artifacts defined in this guide
     * [Capability Statements](capability-statements.html): Expected FHIR capabilities of the US Quality Core Servers and Clients
     * [Profiles](profiles.html): All profiles defined in or used by US Quality Core
