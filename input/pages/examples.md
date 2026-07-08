@@ -95,9 +95,6 @@
 * [Patient Requested MedicationRequest Example](MedicationRequest-patient-requester-example.html)
 * [Practitioner Ordered MedicationRequest Example](MedicationRequest-practitioner-ordered-example.html)
 
-**USQualityCoreMedicationStatement**
-* [Alemtuzumab MedicationStatement Example](MedicationStatement-example.html)
-
 **USQualityCoreNutritionOrder**
 * [Diabetic diet example](NutritionOrder-example.html)
 

@@ -1946,20 +1946,6 @@
       ]
     }
   },
-  "us-quality-core-medicationstatement": {
-    "id": "us-quality-core-medicationstatement",
-    "title": "US Quality Core MedicationStatement",
-    "path": "StructureDefinition-us-quality-core-medicationstatement.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
-    "hasUsCoreLineage": false,
-    "search": {
-      "resource": "MedicationStatement",
-      "hasSearchParameters": false,
-      "searchParams": [],
-      "searchCombinations": []
-    }
-  },
   "us-quality-core-nonpatient-observation": {
     "id": "us-quality-core-nonpatient-observation",
     "title": "US Quality Core NonPatient Observation",

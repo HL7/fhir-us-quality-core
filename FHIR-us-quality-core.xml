@@ -64,7 +64,6 @@
 <artifact id="MedicationRequest/practitioner-ordered-example" key="MedicationRequest-practitioner-ordered-example" name="MedicationRequest Practitioner Ordered Example"/>
 <artifact id="MedicationRequest/example" key="MedicationRequest-example" name="MedicationRequest general example"/>
 <artifact id="MedicationRequest/requested-example" key="MedicationRequest-requested-example" name="MedicationRequest positive example"/>
-<artifact id="MedicationStatement/example" key="MedicationStatement-example" name="MedicationStatment example"/>
 <artifact id="Observation/example-births" key="Observation-example-births" name="Number of full-term births obeservation example"/>
 <artifact id="Observation/example-parity" key="Observation-example-parity" name="Number of parity obeservation example"/>
 <artifact id="Observation/example-pregnancies" key="Observation-example-pregnancies" name="Number of pregnancies obeservation example"/>
@@ -141,7 +140,6 @@
 <artifact id="StructureDefinition/us-quality-core-medicationdispensedone" key="StructureDefinition-us-quality-core-medicationdispensedone" name="US Quality Core MedicationDispense Done"/>
 <artifact id="StructureDefinition/us-quality-core-medicationrequest" key="StructureDefinition-us-quality-core-medicationrequest" name="US Quality Core MedicationRequest"/>
 <artifact id="StructureDefinition/us-quality-core-medicationrequested" key="StructureDefinition-us-quality-core-medicationrequested" name="US Quality Core MedicationRequested"/>
-<artifact id="StructureDefinition/us-quality-core-medicationstatement" key="StructureDefinition-us-quality-core-medicationstatement" name="US Quality Core MedicationStatement"/>
 <artifact id="ValueSet/us-quality-core-negation-reason-codes" key="ValueSet-us-quality-core-negation-reason-codes" name="US Quality Core Negation Reason Codes"/>
 <artifact id="StructureDefinition/us-quality-core-nonpatient-observation" key="StructureDefinition-us-quality-core-nonpatient-observation" name="US Quality Core NonPatient Observation"/>
 <artifact id="StructureDefinition/us-quality-core-nutritionorder" key="StructureDefinition-us-quality-core-nutritionorder" name="US Quality Core NutritionOrder"/>

@@ -44,7 +44,7 @@ Description: "Actual or potential/avoided event causing unintended physical inju
 * contributor only Reference(USQualityCorePractitioner or USQualityCorePractitionerRole or http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0)
   * ^mustSupport = false
 * suspectEntity ^mustSupport = false
-  * instance only Reference(USQualityCoreImmunization or USQualityCoreProcedure or USQualityCoreSubstance or USQualityCoreMedication or USQualityCoreMedicationAdministration or USQualityCoreMedicationStatement or http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0)
+  * instance only Reference(USQualityCoreImmunization or USQualityCoreProcedure or USQualityCoreSubstance or USQualityCoreMedication or USQualityCoreMedicationAdministration or MedicationStatement or http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0)
     * ^short = "Refers to the specific entity that caused the adverse event"
   * causality ^mustSupport = false
 * subjectMedicalHistory only Reference(USQualityCoreSimpleObservation or USQualityCoreAllergyIntolerance or USQualityCoreFamilyMemberHistory or USQualityCoreImmunization or USQualityCoreProcedure or USQualityCoreConditionProblemsHealthConcerns or USQualityCoreConditionEncounterDiagnosis)

@@ -538,21 +538,6 @@
       ]
     },
     {
-      "name": "MedicationStatement",
-      "path": "medicationstatement.html",
-      "profiles": [
-        {
-          "id": "us-quality-core-medicationstatement",
-          "title": "US Quality Core MedicationStatement",
-          "path": "StructureDefinition-us-quality-core-medicationstatement.html",
-          "depth": 0,
-          "inScope": false,
-          "showResource": true,
-          "usCore": null
-        }
-      ]
-    },
-    {
       "name": "NutritionOrder",
       "path": "nutritionorder.html",
       "profiles": [

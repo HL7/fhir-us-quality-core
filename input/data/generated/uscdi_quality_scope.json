@@ -3846,11 +3846,6 @@
         "path": "StructureDefinition-us-quality-core-claim.html"
       },
       {
-        "id": "us-quality-core-medicationstatement",
-        "title": "US Quality Core MedicationStatement",
-        "path": "StructureDefinition-us-quality-core-medicationstatement.html"
-      },
-      {
         "id": "us-quality-core-nonpatient-observation",
         "title": "US Quality Core NonPatient Observation",
         "path": "StructureDefinition-us-quality-core-nonpatient-observation.html"
