@@ -111,11 +111,6 @@
 * [Number of Parity Example](Observation-example-parity.html)
 * [Number of Pregnancies Example](Observation-example-pregnancies.html)
 
-**USQualityCoreNonPatientObservation**
-* [Hemodialysis Machine Availability](Observation-example-non-patient-hemodialysis-machine.html)
-* [Hospital Bed Availability](Observation-example-non-patient-hospital-bed.html)
-* [Mechanical Ventilator Availability](Observation-example-non-patient-mechanical-ventilator.html)
-
 **USQualityCoreLaboratoryResultObservation**
 * [Glucose Lab Result Observation](Observation-laboratory-result-observation-example-blood-glucose.html)
 

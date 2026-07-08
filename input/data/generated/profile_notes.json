@@ -1946,58 +1946,6 @@
       ]
     }
   },
-  "us-quality-core-nonpatient-observation": {
-    "id": "us-quality-core-nonpatient-observation",
-    "title": "US Quality Core NonPatient Observation",
-    "path": "StructureDefinition-us-quality-core-nonpatient-observation.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
-    "hasUsCoreLineage": false,
-    "search": {
-      "resource": "Observation",
-      "hasSearchParameters": true,
-      "searchParams": [
-        {
-          "name": "patient",
-          "expectation": "MAY"
-        },
-        {
-          "name": "category",
-          "expectation": "MAY"
-        },
-        {
-          "name": "status",
-          "expectation": "MAY"
-        },
-        {
-          "name": "code",
-          "expectation": "MAY"
-        },
-        {
-          "name": "date",
-          "expectation": "MAY"
-        }
-      ],
-      "searchCombinations": [
-        {
-          "name": "patient + category + status",
-          "expectation": "SHALL"
-        },
-        {
-          "name": "patient + category",
-          "expectation": "SHALL"
-        },
-        {
-          "name": "patient + category + date",
-          "expectation": "SHALL"
-        },
-        {
-          "name": "patient + code",
-          "expectation": "SHALL"
-        }
-      ]
-    }
-  },
   "us-quality-core-nutritionorder": {
     "id": "us-quality-core-nutritionorder",
     "title": "US Quality Core NutritionOrder",

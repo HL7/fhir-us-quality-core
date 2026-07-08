@@ -37,6 +37,7 @@ The following changes have been made for v1.0.0:
 * Removes the US Quality Core ImmunizationEvaluation profile because it does not have USCDI+ Quality mappings.
 * Removes the US Quality Core ImmunizationRecommendation profile because it does not have USCDI+ Quality mappings.
 * Removes the US Quality Core MedicationStatement profile because it does not have USCDI+ Quality mappings.
+* Removes the US Quality Core NonPatient Observation profile because it does not have USCDI+ Quality mappings.
 * Removes CQL modelinfo and supporting artifacts and guidance.
 
 ### v0.5.0

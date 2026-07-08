@@ -3846,11 +3846,6 @@
         "path": "StructureDefinition-us-quality-core-claim.html"
       },
       {
-        "id": "us-quality-core-nonpatient-observation",
-        "title": "US Quality Core NonPatient Observation",
-        "path": "StructureDefinition-us-quality-core-nonpatient-observation.html"
-      },
-      {
         "id": "us-quality-core-substance",
         "title": "US Quality Core Substance",
         "path": "StructureDefinition-us-quality-core-substance.html"

@@ -569,15 +569,6 @@
           }
         },
         {
-          "id": "us-quality-core-nonpatient-observation",
-          "title": "US Quality Core NonPatient Observation",
-          "path": "StructureDefinition-us-quality-core-nonpatient-observation.html",
-          "depth": 0,
-          "inScope": false,
-          "showResource": true,
-          "usCore": null
-        },
-        {
           "id": "us-quality-core-observation-clinical-result",
           "title": "US Quality Core Observation Clinical Result",
           "path": "StructureDefinition-us-quality-core-observation-clinical-result.html",

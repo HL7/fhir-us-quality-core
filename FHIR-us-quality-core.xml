@@ -37,8 +37,6 @@
 <artifact id="Observation/laboratory-result-observation-example-blood-glucose" key="Observation-laboratory-result-observation-example-blood-glucose" name="Glucose Laboratory Result Observation Example"/>
 <artifact id="Goal/example" key="Goal-example" name="Goal example"/>
 <artifact id="Observation/clinical-result-heart-rate-rhythm" key="Observation-clinical-result-heart-rate-rhythm" name="Heart rate rhythm clinical result observation example"/>
-<artifact id="Observation/example-non-patient-hemodialysis-machine" key="Observation-example-non-patient-hemodialysis-machine" name="Hemodialysis Machine Availability (physical object) Observation Example"/>
-<artifact id="Observation/example-non-patient-hospital-bed" key="Observation-example-non-patient-hospital-bed" name="Hospital Bed Availability (physical object) Observation Example"/>
 <artifact id="Organization/example-1" key="Organization-example-1" name="Hospital Organization example"/>
 <artifact id="ImagingStudy/example" key="ImagingStudy-example" name="ImagingStudy example"/>
 <artifact id="Immunization/example" key="Immunization-example" name="Immunization general example"/>
@@ -47,7 +45,6 @@
 <artifact id="Immunization/done-example" key="Immunization-done-example" name="Immunization positive example"/>
 <artifact id="Patient/infant-example" key="Patient-infant-example" name="Infant patient example"/>
 <artifact id="Location/example" key="Location-example" name="Location example"/>
-<artifact id="Observation/example-non-patient-mechanical-ventilator" key="Observation-example-non-patient-mechanical-ventilator" name="Mechanical Ventilator Availability (physical object) Observation Example"/>
 <artifact id="Medication/example" key="Medication-example" name="Medication example"/>
 <artifact id="MedicationAdministration/example" key="MedicationAdministration-example" name="MedicationAdministration general example"/>
 <artifact id="MedicationAdministration/negation-with-code-example" key="MedicationAdministration-negation-with-code-example" name="MedicationAdministration negation with code example"/>
@@ -141,7 +138,6 @@
 <artifact id="StructureDefinition/us-quality-core-medicationrequest" key="StructureDefinition-us-quality-core-medicationrequest" name="US Quality Core MedicationRequest"/>
 <artifact id="StructureDefinition/us-quality-core-medicationrequested" key="StructureDefinition-us-quality-core-medicationrequested" name="US Quality Core MedicationRequested"/>
 <artifact id="ValueSet/us-quality-core-negation-reason-codes" key="ValueSet-us-quality-core-negation-reason-codes" name="US Quality Core Negation Reason Codes"/>
-<artifact id="StructureDefinition/us-quality-core-nonpatient-observation" key="StructureDefinition-us-quality-core-nonpatient-observation" name="US Quality Core NonPatient Observation"/>
 <artifact id="StructureDefinition/us-quality-core-nutritionorder" key="StructureDefinition-us-quality-core-nutritionorder" name="US Quality Core NutritionOrder"/>
 <artifact id="ValueSet/us-quality-core-observation-body-position" key="ValueSet-us-quality-core-observation-body-position" name="US Quality Core Observation Body Position"/>
 <artifact id="StructureDefinition/us-quality-core-observation-clinical-result" key="StructureDefinition-us-quality-core-observation-clinical-result" name="US Quality Core Observation Clinical Result"/>
