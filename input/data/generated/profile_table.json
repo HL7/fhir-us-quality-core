@@ -310,21 +310,6 @@
       ]
     },
     {
-      "name": "Flag",
-      "path": "flag.html",
-      "profiles": [
-        {
-          "id": "us-quality-core-flag",
-          "title": "US Quality Core Flag",
-          "path": "StructureDefinition-us-quality-core-flag.html",
-          "depth": 0,
-          "inScope": false,
-          "showResource": true,
-          "usCore": null
-        }
-      ]
-    },
-    {
       "name": "Goal",
       "path": "goal.html",
       "profiles": [

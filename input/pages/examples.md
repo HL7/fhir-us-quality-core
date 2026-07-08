@@ -54,9 +54,6 @@
 **USQualityCoreFamilyMemberHistory**
 * [Father Died of Heart Attack Example](FamilyMemberHistory-example.html)
 
-**USQualityCoreFlag**
-* [Fall Risk Safety Flag Example](Flag-example.html)
-
 **USQualityCoreGoal**
 * [Weight Loss Example](Goal-example.html)
 

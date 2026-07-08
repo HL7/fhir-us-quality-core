@@ -33,6 +33,7 @@ The following changes have been made for v1.0.0:
 * Removes the US Quality Core ClaimResponse profile because it does not have USCDI+ Quality mappings.
 * Removes the US Quality Core CommunicationRequest profile because it does not have USCDI+ Quality mappings.
 * Removes the US Quality Core DeviceUseStatement profile because it does not have USCDI+ Quality mappings.
+* Removes the US Quality Core Flag profile because it does not have USCDI+ Quality mappings.
 * Removes CQL modelinfo and supporting artifacts and guidance.
 
 ### v0.5.0

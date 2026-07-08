@@ -967,20 +967,6 @@
       "searchCombinations": []
     }
   },
-  "us-quality-core-flag": {
-    "id": "us-quality-core-flag",
-    "title": "US Quality Core Flag",
-    "path": "StructureDefinition-us-quality-core-flag.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
-    "hasUsCoreLineage": false,
-    "search": {
-      "resource": "Flag",
-      "hasSearchParameters": false,
-      "searchParams": [],
-      "searchCombinations": []
-    }
-  },
   "us-quality-core-goal": {
     "id": "us-quality-core-goal",
     "title": "US Quality Core Goal",

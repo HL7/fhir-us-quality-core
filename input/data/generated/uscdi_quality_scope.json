@@ -3846,11 +3846,6 @@
         "path": "StructureDefinition-us-quality-core-claim.html"
       },
       {
-        "id": "us-quality-core-flag",
-        "title": "US Quality Core Flag",
-        "path": "StructureDefinition-us-quality-core-flag.html"
-      },
-      {
         "id": "us-quality-core-immunizationevaluation",
         "title": "US Quality Core ImmunizationEvaluation",
         "path": "StructureDefinition-us-quality-core-immunizationevaluation.html"
