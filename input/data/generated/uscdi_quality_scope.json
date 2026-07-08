@@ -3846,11 +3846,6 @@
         "path": "StructureDefinition-us-quality-core-claim.html"
       },
       {
-        "id": "us-quality-core-claimresponse",
-        "title": "US Quality Core ClaimResponse",
-        "path": "StructureDefinition-us-quality-core-claimresponse.html"
-      },
-      {
         "id": "us-quality-core-communicationrequest",
         "title": "US Quality Core CommunicationRequest",
         "path": "StructureDefinition-us-quality-core-communicationrequest.html"

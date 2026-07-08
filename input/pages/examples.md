@@ -19,9 +19,6 @@
 **USQualityCoreClaim**
 * [Professional Claim for Appendectomy](Claim-example.html)
 
-**USQualityCoreClaimResponse**
-* [Professional ClaimResponse for Appendectomy](ClaimResponse-example.html)
-
 **USQualityCoreCommunication**
 * [Radiology Report Notification Example](Communication-example.html)
 

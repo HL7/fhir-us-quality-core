@@ -85,21 +85,6 @@
       ]
     },
     {
-      "name": "ClaimResponse",
-      "path": "claimresponse.html",
-      "profiles": [
-        {
-          "id": "us-quality-core-claimresponse",
-          "title": "US Quality Core ClaimResponse",
-          "path": "StructureDefinition-us-quality-core-claimresponse.html",
-          "depth": 0,
-          "inScope": false,
-          "showResource": true,
-          "usCore": null
-        }
-      ]
-    },
-    {
       "name": "Communication",
       "path": "communication.html",
       "profiles": [

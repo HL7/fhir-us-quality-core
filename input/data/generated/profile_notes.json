@@ -212,20 +212,6 @@
       "searchCombinations": []
     }
   },
-  "us-quality-core-claimresponse": {
-    "id": "us-quality-core-claimresponse",
-    "title": "US Quality Core ClaimResponse",
-    "path": "StructureDefinition-us-quality-core-claimresponse.html",
-    "hasUscdiQualityElements": false,
-    "uscdiQualityElements": [],
-    "hasUsCoreLineage": false,
-    "search": {
-      "resource": "ClaimResponse",
-      "hasSearchParameters": false,
-      "searchParams": [],
-      "searchCombinations": []
-    }
-  },
   "us-quality-core-communication": {
     "id": "us-quality-core-communication",
     "title": "US Quality Core Communication",
