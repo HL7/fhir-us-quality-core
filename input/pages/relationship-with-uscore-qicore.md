@@ -27,8 +27,8 @@ US Quality Core profiles use the same bindings as US Core.
 {: #search-expectations-and-us-core}
 
 The US Quality Core CapabilityStatements identify the RESTful API capabilities
-specifically needed for [in-scope USCDI+ Quality V2
-data](uscdiquality.html#in-scope-uscdi-quality-v2-data-elements). They do not
+specifically needed for [USCDI+ Quality V2
+data](uscdiquality.html). They do not
 repeat every US Core search expectation. For the search selection approach and
 conformance details, see [API
 Requirements](us-quality-core-general-requirements.html#api-requirements).

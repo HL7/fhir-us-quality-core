@@ -10,7 +10,7 @@
   >
   > We took a pass at the new scope. We are putting anything
   > that does not fall in USCDI+ Quality as 'out of scope', and in this
-  > version of the guide that means we are planning on removing profiles
+  > version of the guide that means we have removed profiles
   > that do not have any USCDI+ Quality tagged elements. Also, out of scope
   > now are the artifacts that provide bindings to CQL.
 

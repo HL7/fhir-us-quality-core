@@ -66,8 +66,8 @@ source and rerun the relevant generator.
 ## Automation-Driven Content
 
 Use this workflow when changing USCDI+ Quality mappings, generated flags,
-profile tables, USCDI+ Quality scope tables, generated profile guidance, REST
-requirements, CapabilityStatement REST content, or generated SearchParameters.
+profile tables, generated profile guidance, REST requirements,
+CapabilityStatement REST content, or generated SearchParameters.
 
 ### Add Or Revise USCDI+ Quality Mappings
 
