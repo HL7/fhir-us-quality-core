@@ -49,5 +49,9 @@ Description: "The US Quality Core CarePlan is based upon the US Core CarePlan Pr
   * ^short = "Who the care plan is for."
   * ^definition = "Who care plan is for."
   * ^requirements = "Identifies the patient or group whose intended care is described by the plan."
+* addresses ^short = "Health issues this plan addresses"
+* contributor ^short = "Who provided the content of the care plan"
+* intent ^short = "proposal | plan | order | option"
+* status ^short = "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreCarePlan

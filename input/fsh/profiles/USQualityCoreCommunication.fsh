@@ -35,5 +35,6 @@ Description: "Profile of Communication for decision support/quality metrics. Def
   * ^short = "Message recipient"
 * sender only Reference(http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0 or USQualityCoreOrganization or USQualityCorePatient or USQualityCorePractitioner or USQualityCoreRelatedPerson)
   * ^short = "Message sender"
+* category ^short = "Message category"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreCommunication

@@ -123,5 +123,6 @@ Description: "The US Quality Core Observation Screening Assessment Profile is ba
 * derivedFrom only Reference(USQualityCoreObservationScreeningAssessment or USQualityCoreQuestionnaireResponse)
   * ^short = "Related Observations or QuestionnaireResponses that the observation is made from"
   * ^definition = "Observations or QuestionnaireResponses from which this observation value is derived."
+* issued ^short = "Date/Time this version was made available"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreObservationScreeningAssessment

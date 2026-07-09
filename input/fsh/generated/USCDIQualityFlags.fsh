@@ -31,11 +31,11 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreAllergyIntolerance
 
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreCarePlan
 * addresses ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* addresses ^short = "(USCDI+ Quality) 𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Health issues this plan addresses"
+* addresses ^short = "(USCDI+ Quality) Health issues this plan addresses"
 * category ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * category ^short = "(USCDI+ Quality) Type of plan"
 * contributor ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* contributor ^short = "(USCDI+ Quality) 𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Who provided the content of the care plan"
+* contributor ^short = "(USCDI+ Quality) Who provided the content of the care plan"
 * intent ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * intent ^short = "(USCDI+ Quality) proposal | plan | order | option"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
@@ -743,7 +743,7 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCorePatient
 * extension[ethnicity] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * extension[ethnicity] ^short = "(USCDI+ Quality) US Core ethnicity Extension"
 * extension[interpreterRequired] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* extension[interpreterRequired] ^short = "(USCDI+ Quality) 𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Whether the patient needs an interpreter"
+* extension[interpreterRequired] ^short = "(USCDI+ Quality) Whether the patient needs an interpreter"
 * extension[race] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * extension[race] ^short = "(USCDI+ Quality) US Core Race Extension"
 * extension[sex] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true

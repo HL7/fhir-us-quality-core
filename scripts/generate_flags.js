@@ -139,6 +139,22 @@ async function compiledProfileData(profilesById, cleanContents) {
   return profileData;
 }
 
+function authoredProfileData(profilesById) {
+  const profileData = new Map();
+
+  for (const [id, profile] of profilesById.entries()) {
+    const paths = new Set();
+
+    for (const rule of profile.rules) {
+      if (rule.path) paths.add(rule.path);
+    }
+
+    profileData.set(id, { paths, file: profile.sourceInfo.file });
+  }
+
+  return profileData;
+}
+
 function sourceText(sources, profileIdValue, fshPath) {
   const sourceEntries = sources.get(profileIdValue)?.get(fshPath) ?? [];
   return sourceEntries.length
@@ -146,19 +162,29 @@ function sourceText(sources, profileIdValue, fshPath) {
     : 'No JSON source mapping found for this generated rule.';
 }
 
-function assertMappedElementsAndShorts(flags, profilesById, profileData, sources) {
+function assertMappedElementsAndShorts(flags, profilesById, profileData, authoredData, sources) {
   const missingElements = [];
+  const inheritedOnlyElements = [];
   const missingShorts = [];
 
   for (const [id, paths] of flags.entries()) {
     const profile = profilesById.get(id);
     const data = profileData.get(id) ?? { elements: new Set(), shorts: new Map() };
+    const authored = authoredData.get(id) ?? { paths: new Set(), file: profile?.sourceInfo.file };
 
     for (const fshPath of paths) {
       if (!data.elements.has(fshPath)) {
         missingElements.push(
           [
-            `${profile.name}.${fshPath} does not currently exist on the target FSH profile definition and needs to be added before it can be flagged.`,
+            `${profile.name}.${fshPath} does not exist in the compiled target profile snapshot.`,
+            `  JSON mapping: ${sourceText(sources, id, fshPath)}`
+          ].join('\n')
+        );
+      } else if (!authored.paths.has(fshPath)) {
+        inheritedOnlyElements.push(
+          [
+            `${profile.name}.${fshPath} exists only by inheritance and is not defined in ${authored.file}.`,
+            '  Add an explicit rule for this element to the target profile FSH before it can be flagged.',
             `  JSON mapping: ${sourceText(sources, id, fshPath)}`
           ].join('\n')
         );
@@ -172,6 +198,14 @@ function assertMappedElementsAndShorts(flags, profilesById, profileData, sources
     throw new Error(
       `Generated USCDI+ Quality flags reference elements that SUSHI cannot find:\n\n${[
         ...new Set(missingElements)
+      ].join('\n\n')}`
+    );
+  }
+
+  if (inheritedOnlyElements.length) {
+    throw new Error(
+      `Generated USCDI+ Quality flags reference inherited-only elements that need explicit target profile FSH rules before they can be flagged:\n\n${[
+        ...new Set(inheritedOnlyElements)
       ].join('\n\n')}`
     );
   }
@@ -266,8 +300,9 @@ async function main(log) {
   const profileData = await log.step('Compiling profile snapshots for mapped element checks', () =>
     compiledProfileData(profilesById, cleanContents)
   );
-  await log.step('Checking mapped elements and short text', () =>
-    assertMappedElementsAndShorts(flags, profilesById, profileData, sources)
+  const authoredData = authoredProfileData(profilesById);
+  await log.step('Checking mapped elements, authored profile paths, and short text', () =>
+    assertMappedElementsAndShorts(flags, profilesById, profileData, authoredData, sources)
   );
 
   const generated = await log.step('Building generated USCDI+ Quality RuleSets', () =>

@@ -41,5 +41,6 @@ Description: "Profile of Immunization for decision support/quality metrics. Defi
 * location 0..1
 * location only Reference(USQualityCoreLocation)
   * ^short = "Where the vaccine was administered"
+* lotNumber ^short = "Vaccine lot number"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreImmunization

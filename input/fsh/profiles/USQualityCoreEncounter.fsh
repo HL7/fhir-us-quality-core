@@ -73,5 +73,6 @@ Description: "Profile of Encounter for decision support/quality metrics. Defines
   * period ^short = "Time period during which the patient was present at the location"
 * serviceProvider only Reference(USQualityCoreOrganization)
   * ^short = "The organization (facility) responsible for this encounter"
+* diagnosis.rank ^short = "Ranking of the diagnosis (for each role type)"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreEncounter

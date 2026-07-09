@@ -41,5 +41,6 @@ Description: "Profile of Organization for decision support/quality metrics. Defi
   * ^short = "Kind of organization"
   * ^binding.description = "Used to categorize the organization"
 * partOf ^type[0].targetProfile[0] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-organization"
+* name ^short = "Name used for the organization"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreOrganization

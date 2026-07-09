@@ -18,6 +18,8 @@ Description: "Positive profile of DeviceRequest for decision support/quality met
   * value[x] only boolean
   * value[x] = false (exactly)
     * ^short = "Value of extension"
-
+* authoredOn ^short = "When recorded"
+* code[x] ^short = "Device requested"
+* status ^short = "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreDeviceRequested

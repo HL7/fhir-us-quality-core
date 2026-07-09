@@ -21,5 +21,6 @@ Description: "Negation profile of MedicationDispense for decision support/qualit
 * statusReason[x] from USQualityCoreNegationReasonCodes (extensible)
   * ^short = "Why a dispense was not performed"
   * ^binding.description = "The reason the event did not occur or was not performed"
+* whenPrepared ^short = "When product was packaged and reviewed"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationDispenseDeclined

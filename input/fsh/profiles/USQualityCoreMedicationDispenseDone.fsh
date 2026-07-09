@@ -12,6 +12,15 @@ Description: "Positive profile of MedicationDispense for decision support/qualit
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * status from USQualityCorePositiveMedicationDispenseStatus (required)
   * ^short = "preparation | in-progress | on-hold | completed | stopped"
-
+* daysSupply ^short = "Amount of medication expressed as a timing amount"
+* dosageInstruction ^short = "How the medication is to be used by the patient or administered by the caregiver"
+* dosageInstruction.doseAndRate ^short = "Amount of medication administered"
+* dosageInstruction.doseAndRate.dose[x] ^short = "Amount of medication per dose"
+* dosageInstruction.route ^short = "How drug should enter body"
+* dosageInstruction.text ^short = "Free text dosage instructions e.g. SIG"
+* dosageInstruction.timing ^short = "When medication should be administered"
+* medication[x] ^short = "What medication was supplied"
+* quantity ^short = "Amount dispensed"
+* whenPrepared ^short = "When product was packaged and reviewed"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationDispenseDone

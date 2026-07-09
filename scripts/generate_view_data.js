@@ -6,7 +6,6 @@ const { ensureDir, readRestData, readUscdiQualityData, writeJson } = require('./
 const { fshPathToDisplayPath, getOrSet, jsonPathToFshPath, markdownText, urlTail } = require('./lib/text');
 const {
   displayTitle,
-  hasUsCoreLineage,
   localParent,
   profileMaps,
   profileResourceTypes,
@@ -316,12 +315,15 @@ function profileNotesData(
   return Object.fromEntries(
     profileElements
       .map(({ profile, elements }) => {
+        const usCore = usCoreAncestor(profile, profilesById, profilesByName, fhirDefs);
+
         return [
           profile.id,
           {
             ...profileSummary(profile),
             uscdiQualityElements: elements,
-            hasUsCoreLineage: hasUsCoreLineage(profile, profilesById, profilesByName, fhirDefs),
+            hasUsCoreLineage: Boolean(usCore),
+            usCore: usCore ? usCoreProfileSummary(usCore) : null,
             search: profileSearchData(profile, resourceTypes, restResources)
           }
         ];

@@ -28,5 +28,8 @@ Description: "Negation profile of MedicationAdministration for decision support/
 * statusReason from USQualityCoreNegationReasonCodes (extensible)
   * ^short = "Reason administration not performed"
   * ^binding.description = "The reason the event did not occur or was not performed"
+* dosage ^short = "Details of how medication was taken"
+* effective[x] ^short = "Start and end time of administration"
+* medication[x] ^short = "What was administered"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationAdministrationNotDone

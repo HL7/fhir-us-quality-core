@@ -12,6 +12,12 @@ Description: "Positive profile of Procedure for decision support/quality metrics
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * status from USQualityCorePositiveEventStatus (required)
   * ^short = "preparation | in-progress | on-hold | stopped | completed"
-
+* code ^short = "What procedure"
+* extension[recorded] ^short = "When the procedure was first captured in the subject's record"
+* partOf ^short = "Part of referenced event"
+* performed[x] ^short = "When the procedure was performed"
+* reasonCode ^short = "Coded reason procedure performed"
+* reasonReference ^short = "The justification that the procedure was performed"
+* statusReason ^short = "Reason for current status"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreProcedureDone

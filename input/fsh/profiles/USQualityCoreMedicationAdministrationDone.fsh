@@ -13,6 +13,10 @@ Description: "Positive profile of MedicationAdministration for decision support/
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * status from USQualityCorePositiveMedicationAdministrationStatus (required)
   * ^short = "in-progress | on-hold | completed | stopped"
-
+* dosage ^short = "Details of how medication was taken"
+* dosage.dose ^short = "Amount of medication per dose"
+* dosage.route ^short = "Path of substance into body"
+* effective[x] ^short = "Start and end time of administration"
+* medication[x] ^short = "What was administered"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationAdministrationDone

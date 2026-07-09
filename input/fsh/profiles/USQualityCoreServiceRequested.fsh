@@ -16,6 +16,10 @@ Description: "Positive profile of ServiceRequest for decision support/quality me
 * doNotPerform only boolean
 * doNotPerform = false (exactly)
   * ^short = "True if service/procedure should not be performed"
-
+* authoredOn ^short = "Date request signed"
+* code ^short = "What is being requested/ordered"
+* intent ^short = "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
+* reasonCode ^short = "Explanation/Justification for procedure or service"
+* reasonReference ^short = "Explanation/Justification for service or service"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreServiceRequested

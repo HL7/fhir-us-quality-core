@@ -72,6 +72,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "AdverseEvent",
       "hasSearchParameters": true,
@@ -173,6 +174,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-allergyintolerance",
+      "title": "US Core AllergyIntolerance Profile"
+    },
     "search": {
       "resource": "AllergyIntolerance",
       "hasSearchParameters": true,
@@ -192,7 +197,7 @@
     "uscdiQualityElements": [
       {
         "path": "addresses",
-        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Health issues this plan addresses",
+        "short": "Health issues this plan addresses",
         "dataElements": [
           {
             "class": "Care Plans",
@@ -214,7 +219,7 @@
       },
       {
         "path": "contributor",
-        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Who provided the content of the care plan",
+        "short": "Who provided the content of the care plan",
         "dataElements": [
           {
             "class": "Care Plans",
@@ -269,6 +274,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-careplan",
+      "title": "US Core CarePlan Profile"
+    },
     "search": {
       "resource": "CarePlan",
       "hasSearchParameters": true,
@@ -330,6 +339,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-careteam",
+      "title": "US Core CareTeam Profile"
+    },
     "search": {
       "resource": "CareTeam",
       "hasSearchParameters": true,
@@ -413,6 +426,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "Communication",
       "hasSearchParameters": true,
@@ -496,6 +510,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "Communication",
       "hasSearchParameters": true,
@@ -535,6 +550,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "Communication",
       "hasSearchParameters": true,
@@ -623,6 +639,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-condition-encounter-diagnosis",
+      "title": "US Core Condition Encounter Diagnosis Profile"
+    },
     "search": {
       "resource": "Condition",
       "hasSearchParameters": true,
@@ -776,6 +796,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-condition-problems-health-concerns",
+      "title": "US Core Condition Problems and Health Concerns Profile"
+    },
     "search": {
       "resource": "Condition",
       "hasSearchParameters": true,
@@ -999,6 +1023,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-coverage",
+      "title": "US Core Coverage Profile"
+    },
     "search": {
       "resource": "Coverage",
       "hasSearchParameters": true,
@@ -1062,6 +1090,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "DeviceRequest",
       "hasSearchParameters": true,
@@ -1147,6 +1176,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "DeviceRequest",
       "hasSearchParameters": true,
@@ -1232,6 +1262,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "DeviceRequest",
       "hasSearchParameters": true,
@@ -1334,6 +1365,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-diagnosticreport-lab",
+      "title": "US Core DiagnosticReport Profile for Laboratory Results Reporting"
+    },
     "search": {
       "resource": "DiagnosticReport",
       "hasSearchParameters": true,
@@ -1464,6 +1499,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-diagnosticreport-note",
+      "title": "US Core DiagnosticReport Profile for Report and Note Exchange"
+    },
     "search": {
       "resource": "DiagnosticReport",
       "hasSearchParameters": true,
@@ -1662,6 +1701,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-encounter",
+      "title": "US Core Encounter Profile"
+    },
     "search": {
       "resource": "Encounter",
       "hasSearchParameters": true,
@@ -1713,6 +1756,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "FamilyMemberHistory",
       "hasSearchParameters": true,
@@ -1764,6 +1808,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-goal",
+      "title": "US Core Goal Profile"
+    },
     "search": {
       "resource": "Goal",
       "hasSearchParameters": true,
@@ -1805,6 +1853,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "ImagingStudy",
       "hasSearchParameters": true,
@@ -1884,6 +1933,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-immunization",
+      "title": "US Core Immunization Profile"
+    },
     "search": {
       "resource": "Immunization",
       "hasSearchParameters": true,
@@ -1972,6 +2025,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-immunization",
+      "title": "US Core Immunization Profile"
+    },
     "search": {
       "resource": "Immunization",
       "hasSearchParameters": true,
@@ -2011,6 +2068,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-immunization",
+      "title": "US Core Immunization Profile"
+    },
     "search": {
       "resource": "Immunization",
       "hasSearchParameters": true,
@@ -2083,6 +2144,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-location",
+      "title": "US Core Location Profile"
+    },
     "search": {
       "resource": "Location",
       "hasSearchParameters": false,
@@ -2108,6 +2173,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-medication",
+      "title": "US Core Medication Profile"
+    },
     "search": {
       "resource": "Medication",
       "hasSearchParameters": true,
@@ -2208,6 +2277,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "MedicationAdministration",
       "hasSearchParameters": true,
@@ -2333,6 +2403,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "MedicationAdministration",
       "hasSearchParameters": true,
@@ -2432,6 +2503,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "MedicationAdministration",
       "hasSearchParameters": true,
@@ -2602,6 +2674,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-medicationdispense",
+      "title": "US Core MedicationDispense Profile"
+    },
     "search": {
       "resource": "MedicationDispense",
       "hasSearchParameters": true,
@@ -2663,6 +2739,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-medicationdispense",
+      "title": "US Core MedicationDispense Profile"
+    },
     "search": {
       "resource": "MedicationDispense",
       "hasSearchParameters": true,
@@ -2817,6 +2897,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-medicationdispense",
+      "title": "US Core MedicationDispense Profile"
+    },
     "search": {
       "resource": "MedicationDispense",
       "hasSearchParameters": true,
@@ -2922,6 +3006,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-medicationrequest",
+      "title": "US Core MedicationRequest Profile"
+    },
     "search": {
       "resource": "MedicationRequest",
       "hasSearchParameters": true,
@@ -3264,6 +3352,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-medicationrequest",
+      "title": "US Core MedicationRequest Profile"
+    },
     "search": {
       "resource": "MedicationRequest",
       "hasSearchParameters": true,
@@ -3606,6 +3698,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-medicationrequest",
+      "title": "US Core MedicationRequest Profile"
+    },
     "search": {
       "resource": "MedicationRequest",
       "hasSearchParameters": true,
@@ -3653,6 +3749,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "NutritionOrder",
       "hasSearchParameters": true,
@@ -3726,6 +3823,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-observation-clinical-result",
+      "title": "US Core Observation Clinical Result Profile"
+    },
     "search": {
       "resource": "Observation",
       "hasSearchParameters": true,
@@ -3882,6 +3983,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-observation-lab",
+      "title": "US Core Laboratory Result Observation Profile"
+    },
     "search": {
       "resource": "Observation",
       "hasSearchParameters": true,
@@ -4190,6 +4295,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-observation-screening-assessment",
+      "title": "US Core Observation Screening Assessment Profile"
+    },
     "search": {
       "resource": "Observation",
       "hasSearchParameters": true,
@@ -4264,6 +4373,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-organization",
+      "title": "US Core Organization Profile"
+    },
     "search": {
       "resource": "Organization",
       "hasSearchParameters": false,
@@ -4445,7 +4558,7 @@
       },
       {
         "path": "extension:interpreterRequired",
-        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Whether the patient needs an interpreter",
+        "short": "Whether the patient needs an interpreter",
         "dataElements": [
           {
             "class": "Patient Demographics/Information",
@@ -4737,6 +4850,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-patient",
+      "title": "US Core Patient Profile"
+    },
     "search": {
       "resource": "Patient",
       "hasSearchParameters": true,
@@ -4965,6 +5082,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-practitioner",
+      "title": "US Core Practitioner Profile"
+    },
     "search": {
       "resource": "Practitioner",
       "hasSearchParameters": false,
@@ -5089,6 +5210,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-practitionerrole",
+      "title": "US Core PractitionerRole Profile"
+    },
     "search": {
       "resource": "PractitionerRole",
       "hasSearchParameters": false,
@@ -5211,6 +5336,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-procedure",
+      "title": "US Core Procedure Profile"
+    },
     "search": {
       "resource": "Procedure",
       "hasSearchParameters": true,
@@ -5355,6 +5484,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-procedure",
+      "title": "US Core Procedure Profile"
+    },
     "search": {
       "resource": "Procedure",
       "hasSearchParameters": true,
@@ -5477,6 +5610,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-procedure",
+      "title": "US Core Procedure Profile"
+    },
     "search": {
       "resource": "Procedure",
       "hasSearchParameters": true,
@@ -5565,6 +5702,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-questionnaireresponse",
+      "title": "US Core QuestionnaireResponse Profile"
+    },
     "search": {
       "resource": "QuestionnaireResponse",
       "hasSearchParameters": true,
@@ -5647,6 +5788,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-relatedperson",
+      "title": "US Core RelatedPerson Profile"
+    },
     "search": {
       "resource": "RelatedPerson",
       "hasSearchParameters": true,
@@ -5862,6 +6007,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-servicerequest",
+      "title": "US Core ServiceRequest Profile"
+    },
     "search": {
       "resource": "ServiceRequest",
       "hasSearchParameters": true,
@@ -6099,6 +6248,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-servicerequest",
+      "title": "US Core ServiceRequest Profile"
+    },
     "search": {
       "resource": "ServiceRequest",
       "hasSearchParameters": true,
@@ -6336,6 +6489,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-servicerequest",
+      "title": "US Core ServiceRequest Profile"
+    },
     "search": {
       "resource": "ServiceRequest",
       "hasSearchParameters": true,
@@ -6809,6 +6966,10 @@
       }
     ],
     "hasUsCoreLineage": true,
+    "usCore": {
+      "id": "us-core-simple-observation",
+      "title": "US Core Simple Observation Profile"
+    },
     "search": {
       "resource": "Observation",
       "hasSearchParameters": true,
@@ -6938,6 +7099,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "Task",
       "hasSearchParameters": true,
@@ -7051,6 +7213,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "Task",
       "hasSearchParameters": true,
@@ -7164,6 +7327,7 @@
       }
     ],
     "hasUsCoreLineage": false,
+    "usCore": null,
     "search": {
       "resource": "Task",
       "hasSearchParameters": true,

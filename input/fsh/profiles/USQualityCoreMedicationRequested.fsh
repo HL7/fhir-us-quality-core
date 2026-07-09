@@ -29,6 +29,30 @@ Description: "Positive profile of MedicationRequest for decision support/quality
 * doNotPerform only boolean
 * doNotPerform = false (exactly)
   * ^short = "True if medication was not requested"
-
+* authoredOn ^short = "When request was initially authored"
+* dispenseRequest ^short = "Medication supply authorization"
+* dispenseRequest.expectedSupplyDuration ^short = "Number of days supply per dispense"
+* dispenseRequest.numberOfRepeatsAllowed ^short = "Number of refills authorized"
+* dispenseRequest.quantity ^short = "Amount of medication to supply per dispense"
+* dispenseRequest.validityPeriod ^short = "Time period supply is authorized for"
+* dosageInstruction ^short = "How medication should be taken"
+* dosageInstruction.asNeeded[x] ^short = "Take \"as needed\" (for x)"
+* dosageInstruction.doseAndRate ^short = "Amount of medication administered"
+* dosageInstruction.doseAndRate.dose[x] ^short = "Amount of medication per dose"
+* dosageInstruction.route ^short = "How drug should enter body"
+* dosageInstruction.text ^short = "Free text dosage instructions e.g. SIG"
+* dosageInstruction.timing ^short = "When medication should be administered"
+* dosageInstruction.timing.repeat ^short = "When the event is to occur"
+* dosageInstruction.timing.repeat.bounds[x] ^short = "Length/Range of lengths, or (Start and/or end) limits"
+* dosageInstruction.timing.repeat.frequency ^short = "Event occurs frequency times per period"
+* dosageInstruction.timing.repeat.frequencyMax ^short = "Event occurs frequencyMax times per period"
+* dosageInstruction.timing.repeat.period ^short = "Event occurs frequency times per period"
+* dosageInstruction.timing.repeat.periodMax ^short = "Upper limit of period (3-4 hours)"
+* dosageInstruction.timing.repeat.periodUnit ^short = "s | min | h | d | wk | mo | a - unit of time (UCUM)"
+* extension[medicationAdherence] ^short = "Reported adherence to prescribed medication instructions."
+* intent ^short = "proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"
+* medication[x] ^short = "Medication to be taken"
+* reasonCode ^short = "Reason or indication for ordering or not ordering the medication"
+* reasonReference ^short = "US Quality Core Condition or Observation that supports the prescription"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationRequested

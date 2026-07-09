@@ -86,11 +86,12 @@ Use this file when adding or changing:
 US Quality Core mappings include profile URLs and element paths. US Core
 mappings include only profile URLs; they do not include element mappings.
 
-If the mapping references a US Quality Core element that does not exist on the
-target profile, add the needed rule to the appropriate profile in
-`input/fsh/profiles/`. Element short descriptions should be maintained in
-profile FSH; the flag generator reads those shorts and applies the USCDI+
-Quality prefix in generated RuleSets.
+If the mapping references a US Quality Core element that is not explicitly
+defined in the target profile FSH, add the needed rule to the appropriate
+profile in `input/fsh/profiles/`. This applies even when the element exists by
+inheritance in the compiled profile snapshot. Element short descriptions should
+be maintained in profile FSH; the flag generator reads those shorts and applies
+the USCDI+ Quality prefix in generated RuleSets.
 
 After editing mappings, run:
 
@@ -149,8 +150,9 @@ Edit FSH under `input/fsh/` for profiles, extensions, value sets, examples,
 CapabilityStatements, and other authored FHIR artifacts.
 
 Profile FSH is also where element short descriptions are maintained. If an
-element is flagged for USCDI+ Quality, the flag generator reads the authored
-short and applies the USCDI+ Quality prefix in generated RuleSets.
+element is flagged for USCDI+ Quality, the target profile FSH must contain an
+explicit rule for that element path. The flag generator reads the authored short
+and applies the USCDI+ Quality prefix in generated RuleSets.
 
 If a profile has USCDI+ Quality mappings, keep its generated flag insert at the
 end of the profile:
@@ -267,15 +269,18 @@ duplicate them in `data/rest.json`.
 
 This script keeps USCDI+ Quality element flagging driven by
 `data/uscdi_plus_quality.json`. It generates USCDI+ Quality flagging RuleSets and
-validates that mapped element paths exist before writing updates.
+validates that mapped element paths both exist in the compiled profile snapshot
+and are explicitly authored in the target profile FSH before writing updates.
 
 Flagged profiles are expected to contain a stable
 `* insert GeneratedUSCDIQualityFlagsFor...` rule at the end of the profile. The
 script verifies those inserts, but it does not edit authored profile FSH.
 
 If the script reports that an element path does not exist on a target FSH
-profile, update the JSON path or add the element to the profile FSH. Do not add
-one-off path exceptions to the generator.
+profile, update the JSON path or add the element to the profile FSH. If it
+reports an inherited-only element, add an explicit rule for that element to the
+target profile FSH, such as an authored `^short` rule that preserves the current
+short text. Do not add one-off path exceptions to the generator.
 
 ### `generate_view_data.js`
 

@@ -23,5 +23,9 @@ Description: "Negation profile of MedicationRequest for decision support/quality
 * reasonCode from USQualityCoreNegationReasonCodes (extensible)
   * ^short = "Reason or indication for not ordering the medication"
   * ^binding.description = "The reason the medication was prohibited"
+* dispenseRequest.numberOfRepeatsAllowed ^short = "Number of refills authorized"
+* dispenseRequest.validityPeriod ^short = "Time period supply is authorized for"
+* intent ^short = "proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"
+* medication[x] ^short = "Medication to be taken"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationProhibited

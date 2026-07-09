@@ -106,5 +106,6 @@ Description: "Profile of Simple Observation for decision support/quality metrics
   * ^base.max = "*"
   * ^mustSupport = false
   * ^isModifier = false
+* issued ^short = "Date/Time this version was made available"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreSimpleObservation

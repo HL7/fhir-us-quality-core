@@ -151,5 +151,7 @@ Description: "Profile of Patient for decision support/quality metrics. Defines t
 * link.other ^mustSupport = false
 * link.other ^type[0].targetProfile[0] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
 * link.other ^type[0].targetProfile[1] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-patient"
+* extension[interpreterRequired] ^short = "Whether the patient needs an interpreter"
+* name ^short = "A name associated with the patient"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCorePatient
