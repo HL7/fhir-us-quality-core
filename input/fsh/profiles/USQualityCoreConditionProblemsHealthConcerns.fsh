@@ -52,6 +52,9 @@ Description: "Profile of Condition for decision support/quality metrics. Defines
   * ^definition = "Identification of the condition, problem or diagnosis."
 * subject only Reference(USQualityCorePatient or Group)
   * ^short = "Who has the condition?"
+  // Restore the must-support flag on the Patient target profile. US Core marks it true, but the `only` rule above drops it (leaving a null _targetProfile entry) when us-core-patient is replaced by us-quality-core-patient.
+  * ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+  * ^type[0].targetProfile[0].extension.valueBoolean = true
 * onset[x] only dateTime or Age or Period or Range
   * ^short = "Estimated or actual date, date-time, or age"
 * abatement[x] only dateTime or Age or Period or Range

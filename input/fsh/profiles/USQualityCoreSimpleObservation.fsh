@@ -100,6 +100,15 @@ Description: "Profile of Simple Observation for decision support/quality metrics
 * derivedFrom only Reference(USQualityCoreSimpleObservation or USQualityCoreQuestionnaireResponse or USQualityCoreImagingStudy or http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0 or Media or MolecularSequence)
   * ^short = "US Core Profiles or other resource the observation is made from"
   * ^definition = "US Core Observations, DocumentReference, QuestionnaireResponse or other resource from which this observation value is derived."
+  // Restore the target-profile must-support flags. US Core sets these (all false here), but the `only` rule above drops them (leaving null _targetProfile entries) when the us-core-*/base profiles are replaced by us-quality-core-* profiles.
+  * ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+  * ^type[0].targetProfile[0].extension.valueBoolean = false
+  * ^type[0].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+  * ^type[0].targetProfile[1].extension.valueBoolean = false
+  * ^type[0].targetProfile[2].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+  * ^type[0].targetProfile[2].extension.valueBoolean = false
+  * ^type[0].targetProfile[3].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+  * ^type[0].targetProfile[3].extension.valueBoolean = false
   * ^comment = "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](http://hl7.org/fhir/R4/observation.html#obsgrouping) below."
   * ^base.path = "Observation.derivedFrom"
   * ^base.min = 0

@@ -51,6 +51,15 @@ Description: "Profile of Encounter for decision support/quality metrics. Defines
   * ^base.min = 0
   * ^base.max = "*"
   * ^isModifier = false
+  // Restore the target-profile must-support flags. US Core sets these, but the `only` rule above drops them (leaving null _targetProfile entries) when the us-core-* profiles are replaced by us-quality-core-* profiles.
+  * ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+  * ^type[0].targetProfile[0].extension.valueBoolean = true
+  * ^type[0].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+  * ^type[0].targetProfile[1].extension.valueBoolean = true
+  * ^type[0].targetProfile[2].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+  * ^type[0].targetProfile[2].extension.valueBoolean = false
+  * ^type[0].targetProfile[3].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+  * ^type[0].targetProfile[3].extension.valueBoolean = false
 * diagnosis ^short = "The list of diagnosis relevant to this encounter"
   * extension contains USQualityCoreDiagnosisPresentOnAdmission named diagnosisPresentOnAdmission 0..1 MS
   * extension[diagnosisPresentOnAdmission]
