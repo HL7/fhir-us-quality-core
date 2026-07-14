@@ -3796,7 +3796,7 @@
       },
       {
         "path": "status",
-        "short": "registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown",
+        "short": "registered | preliminary | final | amended | corrected | cancelled | entered-in-error | unknown",
         "dataElements": [
           {
             "class": "Clinical Tests",
@@ -3956,7 +3956,7 @@
       },
       {
         "path": "status",
-        "short": "registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown",
+        "short": "registered | preliminary | final | amended | corrected | cancelled | entered-in-error | unknown",
         "dataElements": [
           {
             "class": "Laboratory",
@@ -6819,7 +6819,7 @@
       },
       {
         "path": "status",
-        "short": "registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown",
+        "short": "registered | preliminary | final | amended | corrected | cancelled | entered-in-error | unknown",
         "dataElements": [
           {
             "class": "Health Status Assessments",

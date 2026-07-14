@@ -11,7 +11,7 @@ Description: "This profile sets minimum expectations for the Observation resourc
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * ^copyright = "Used by permission of HL7 International, all rights reserved Creative Commons License"
-* status ^short = "registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
+* status ^short = "registered | preliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
 * category 1..*
 * category from $observation-category-vs (preferred)
   * ^slicing.discriminator.type = #value

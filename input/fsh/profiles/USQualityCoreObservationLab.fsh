@@ -12,7 +12,7 @@ Description: "The US Quality Core Laboratory Result Observation Profile is based
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/cqi"
 * ^jurisdiction = urn:iso:std:iso:3166#US
 * meta.lastUpdated ^short = "When the resource last changed"
-* status ^short = "registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
+* status ^short = "registered | preliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
 * category ..*
 * category only CodeableConcept
 * category from $observation-category-vs (preferred)

@@ -145,7 +145,7 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreObservationClinicalResult
 * effective[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * effective[x] ^short = "(USCDI+ Quality) Clinically relevant time/time-period for observation"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* status ^short = "(USCDI+ Quality) registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
+* status ^short = "(USCDI+ Quality) registered | preliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
 * value[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * value[x] ^short = "(USCDI+ Quality) Result Value"
 
@@ -299,7 +299,7 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreSimpleObservation
 * issued ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * issued ^short = "(USCDI+ Quality) Date/Time this version was made available"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* status ^short = "(USCDI+ Quality) registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
+* status ^short = "(USCDI+ Quality) registered | preliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
 * value[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * value[x] ^short = "(USCDI+ Quality) Actual result"
 
@@ -449,7 +449,7 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreObservationLab
 * specimen ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * specimen ^short = "(USCDI+ Quality) Specimen used for this observation"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* status ^short = "(USCDI+ Quality) registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
+* status ^short = "(USCDI+ Quality) registered | preliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
 * value[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * value[x] ^short = "(USCDI+ Quality) Result Value"
 

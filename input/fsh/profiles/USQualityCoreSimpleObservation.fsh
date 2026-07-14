@@ -35,7 +35,7 @@ Description: "Profile of Simple Observation for decision support/quality metrics
   * ^isModifierReason = "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them"
   * ^isSummary = false
 * partOf ^short = "Part of referenced event"
-* status ^short = "registered | prliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
+* status ^short = "registered | preliminary | final | amended | corrected | cancelled | entered-in-error | unknown"
 * category 1..*
   * ^short = "Classification of type of observation"
 * category[us-core] ^short = "US Core classification of type of observation"
