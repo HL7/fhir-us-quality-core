@@ -48,16 +48,14 @@ detail on USCDI+ Quality and its scope, see the [USCDI+
 Quality](uscdiquality.html) page in this guide.
 
 US Quality Core began as a derivative of [Quality Improvement Core (QI-Core)
-STU6](https://hl7.org/fhir/us/qicore/STU6/) in the v0.5.0 draft. This v1.0.0
+STU6](https://hl7.org/fhir/us/qicore/STU6/) in the v0.5.0 draft. This
 release targets USCDI+ Quality V2 data elements and is based on the [QI-Core
 Implementation Guide v8.0.0-ballot](https://hl7.org/fhir/us/qicore/2025Sep/)
 (QI-Core 8.0.0-ballot), which aligns with the [US Core Implementation Guide
-v8.0.0](https://hl7.org/fhir/us/core/STU8/) (US Core 8.0.0) and [USCDI
-v3.1](https://isp.healthit.gov/united-states-core-data-interoperability-uscdi#uscdi-v3-1).
+v8.0.1](https://hl7.org/fhir/us/core/STU8.0.1/) (US Core 8.0.1) and [USCDI
+v5](https://isp.healthit.gov/united-states-core-data-interoperability-uscdi#uscdi-v5).
 This guide updates that foundation to build directly on [US Core
 9.0.0](https://hl7.org/fhir/us/core/STU9/).
-
-[^1]: Consistent with Executive Order 14168 the Sex, Sexual Orientation, and Gender Identity, data elements have been removed or updated in the Patient Demographics/Information Data Class.
 
 {% include img-landscape.html img="context-diagram.png" caption="US Quality Core defines how to represent and exchange USCDI+ Quality data elements in FHIR, building on the US Core Implementation Guide and USCDI." %}
 
@@ -70,21 +68,21 @@ defined by the USCDI+ Quality data element list, which establishes a consistent
 baseline of harmonized data elements for a wide range of measurement use cases.
 This guide defines a standardized method for exchanging this data between
 producers of data (e.g., EHRs) and the quality measurement systems that
-calculate reports based on this data.  This is exchange definition does not
-introduce use-case specific or novel methods for exchanging this data, and
+calculate reports based on this data.  This exchange definition does not
+introduce use-case-specific or novel methods for exchanging this data, and
 instead extends the US Core RESTful API to provide a flexible and widely-adopted
 data access method.
 
 The scope of this version of the guide is limited to the representation and
-exchange of data described in Draft USCDI+ Quality V2.  While this version of the
+exchange of data described in USCDI+ Quality V2.  While this version of the
 guide is primarily composed of content from QI-Core and US Core, only that content
-that is relevant to Draft USCDI+ Quality V2 is included.
+that is relevant to USCDI+ Quality V2 is included.
 
 Additionally, the following topics are outside the scope of this guide:
 * How consumers of the quality data described in this guide calculate measures
 * How to reference data elements in this guide within measures, including those represented using standards such as CQL
 * How to represent and exchange quality measurement reports using FHIR
-* Specifics of quality program policy, such as who reports, when, what format, and "form and matter"
+* Specifics of quality program policy, such as who reports, when, and the "form and manner" of submission
 
 ### How to read this Guide
 {: #contents}
@@ -100,7 +98,7 @@ This guide is divided into several pages, which are listed at the top of each pa
     * [USCDI+ Quality](uscdiquality.html): Description of the relationship between USCDI+ Quality and US Quality Core, including profile mappings and conformance scope
     * [US Quality Core Negation](negation.html): Guidance on using US Quality Core negation profiles
     * [Provenance](provenance.html): Description of the use of Provenance in US Quality Core
-    * [Relationship with US Core and QI-Core](relationship-with-uscore-qicore.html): Relationship between US Quality Core with US Core and QI-Core
+    * [Relationship with US Core and QI-Core](relationship-with-uscore-qicore.html): Relationship between US Quality Core, US Core, and QI-Core
 * [FHIR Artifacts](artifacts.html): Detailed descriptions and formal definitions for all the FHIR artifacts defined in this guide
     * [Capability Statements](capability-statements.html): Expected FHIR capabilities of the US Quality Core Servers and Clients
     * [Profiles](profiles.html): All profiles defined in or used by US Quality Core
@@ -108,11 +106,8 @@ This guide is divided into several pages, which are listed at the top of each pa
     * [Terminology](terminology.html): US Quality Core ValueSets and Code Systems defined for the profiles
     * [Examples](examples.html): Examples used in this guide
 * [Downloads](downloads.html): Downloadable artifacts
-* [Change Log](changes.html): Change Log that lists changes to this guide across versions.
+* [Change Log](changes.html): Change Log that lists changes to this guide across versions
 
 ### Acknowledgements
 
 Content of US Quality Core is primarily based on QI-Core, as managed by the [HL7 Clinical Quality Information Workgroup](http://www.hl7.org/Special/committees/cqi/index.cfm) and the supporting Quality Improvement (QI) community.
-
----
-Footnotes:
