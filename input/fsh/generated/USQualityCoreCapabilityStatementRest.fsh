@@ -516,8 +516,8 @@ RuleSet: GeneratedUSQualityCoreCapabilityStatementRest
 * resource[12].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * resource[12].extension[0].valueCode = #SHALL
 * resource[12].type = #FamilyMemberHistory
-* resource[12].supportedProfile[0] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-familymemberhistory"
-* resource[12].documentation = "Search requirements are selected according to the rules described in [Search Requirement Selection](us-quality-core-general-requirements.html#search-requirement-selection). The table below summarizes why each required individual search or required search parameter combination is included for this resource.\n\n| Required search | US Core alignment | Rationale |\n|---|---|---|\n| `patient` | Added in US Quality Core. | Supports patient-scoped retrieval of family member history for quality reporting. This US Quality Core-specific search is included because FamilyMemberHistory is in scope for USCDI+ Quality V2 and this search requirement is not inherited from the US Core Server CapabilityStatement. |"
+* resource[12].supportedProfile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory|9.0.0"
+* resource[12].documentation = "Search requirements are selected according to the rules described in [Search Requirement Selection](us-quality-core-general-requirements.html#search-requirement-selection). The table below summarizes why each required individual search or required search parameter combination is included for this resource.\n\n| Required search | US Core alignment | Rationale |\n|---|---|---|\n| `patient` | Required by [US Core](https://hl7.org/fhir/us/core/STU9/CapabilityStatement-us-core-server.html#familymemberhistory). | Supports patient-scoped retrieval of family member history needed for in-scope USCDI+ Quality data access. |"
 * resource[12].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * resource[12].interaction[0].extension[0].valueCode = #SHALL
 * resource[12].interaction[0].code = #read
@@ -531,7 +531,7 @@ RuleSet: GeneratedUSQualityCoreCapabilityStatementRest
 * resource[12].searchParam[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * resource[12].searchParam[0].extension[0].valueCode = #SHALL
 * resource[12].searchParam[0].name = "patient"
-* resource[12].searchParam[0].definition = "http://hl7.org/fhir/us/quality-core/SearchParameter/us-quality-core-family-member-history-patient"
+* resource[12].searchParam[0].definition = "http://hl7.org/fhir/us/core/SearchParameter/us-core-familymemberhistory-patient|9.0.0"
 * resource[12].searchParam[0].type = #reference
 * resource[12].searchParam[0].documentation = "The client **SHALL** provide an id value for the reference."
 * resource[13].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"

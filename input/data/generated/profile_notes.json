@@ -5,13 +5,24 @@
     "path": "StructureDefinition-us-quality-core-adverseevent.html",
     "uscdiQualityElements": [
       {
+        "path": "actuality",
+        "short": "actual | potential",
+        "dataElements": [
+          {
+            "class": "Adverse Events",
+            "name": "Adverse Event Outcome",
+            "path": "uscdiquality.html#data-element-adverse-events-adverse-event-outcome"
+          }
+        ]
+      },
+      {
         "path": "date",
         "short": "When the event occurred",
         "dataElements": [
           {
             "class": "Adverse Events",
-            "name": "Adverse Event Condition",
-            "path": "uscdiquality.html#data-element-adverse-events-adverse-event-condition"
+            "name": "Adverse Event Outcome",
+            "path": "uscdiquality.html#data-element-adverse-events-adverse-event-outcome"
           }
         ]
       },
@@ -21,8 +32,8 @@
         "dataElements": [
           {
             "class": "Adverse Events",
-            "name": "Adverse Event Condition",
-            "path": "uscdiquality.html#data-element-adverse-events-adverse-event-condition"
+            "name": "Adverse Event Outcome",
+            "path": "uscdiquality.html#data-element-adverse-events-adverse-event-outcome"
           }
         ]
       },
@@ -32,8 +43,8 @@
         "dataElements": [
           {
             "class": "Adverse Events",
-            "name": "Adverse Event Condition",
-            "path": "uscdiquality.html#data-element-adverse-events-adverse-event-condition"
+            "name": "Adverse Event Outcome",
+            "path": "uscdiquality.html#data-element-adverse-events-adverse-event-outcome"
           }
         ]
       },
@@ -54,8 +65,8 @@
         "dataElements": [
           {
             "class": "Adverse Events",
-            "name": "Adverse Event Condition",
-            "path": "uscdiquality.html#data-element-adverse-events-adverse-event-condition"
+            "name": "Adverse Event Outcome",
+            "path": "uscdiquality.html#data-element-adverse-events-adverse-event-outcome"
           }
         ]
       },
@@ -65,8 +76,8 @@
         "dataElements": [
           {
             "class": "Adverse Events",
-            "name": "Adverse Event Outcome",
-            "path": "uscdiquality.html#data-element-adverse-events-adverse-event-outcome"
+            "name": "Adverse Event Condition",
+            "path": "uscdiquality.html#data-element-adverse-events-adverse-event-condition"
           }
         ]
       }
@@ -423,6 +434,17 @@
             "path": "uscdiquality.html#data-element-communications-communication-topic"
           }
         ]
+      },
+      {
+        "path": "topic.extension:codeOptions",
+        "short": "Url of a value set of candidate topics",
+        "dataElements": [
+          {
+            "class": "Communications",
+            "name": "Communication Topic",
+            "path": "uscdiquality.html#data-element-communications-communication-topic"
+          }
+        ]
       }
     ],
     "hasUsCoreLineage": false,
@@ -507,6 +529,17 @@
             "path": "uscdiquality.html#data-element-communications-communication-topic"
           }
         ]
+      },
+      {
+        "path": "topic.extension:codeOptions",
+        "short": "Url of a value set of candidate topics",
+        "dataElements": [
+          {
+            "class": "Communications",
+            "name": "Communication Topic",
+            "path": "uscdiquality.html#data-element-communications-communication-topic"
+          }
+        ]
       }
     ],
     "hasUsCoreLineage": false,
@@ -538,8 +571,52 @@
     "path": "StructureDefinition-us-quality-core-communicationnotdone.html",
     "uscdiQualityElements": [
       {
+        "path": "extension:event-recorded",
+        "short": "Captures the recorded date of the communication",
+        "dataElements": [
+          {
+            "class": "Communications",
+            "name": "Reason Not Communicated",
+            "path": "uscdiquality.html#data-element-communications-reason-not-communicated"
+          }
+        ]
+      },
+      {
+        "path": "status",
+        "short": "not-done",
+        "dataElements": [
+          {
+            "class": "Communications",
+            "name": "Reason Not Communicated",
+            "path": "uscdiquality.html#data-element-communications-reason-not-communicated"
+          }
+        ]
+      },
+      {
         "path": "statusReason",
         "short": "Reason for current status",
+        "dataElements": [
+          {
+            "class": "Communications",
+            "name": "Reason Not Communicated",
+            "path": "uscdiquality.html#data-element-communications-reason-not-communicated"
+          }
+        ]
+      },
+      {
+        "path": "subject",
+        "short": "Focus of message",
+        "dataElements": [
+          {
+            "class": "Communications",
+            "name": "Reason Not Communicated",
+            "path": "uscdiquality.html#data-element-communications-reason-not-communicated"
+          }
+        ]
+      },
+      {
+        "path": "topic.extension:codeOptions",
+        "short": "Url of a value set of candidate topics",
         "dataElements": [
           {
             "class": "Communications",
@@ -596,11 +673,6 @@
             "class": "Encounter Information",
             "name": "Encounter Diagnosis",
             "path": "uscdiquality.html#data-element-encounter-information-encounter-diagnosis"
-          },
-          {
-            "class": "Encounter Information",
-            "name": "Encounter Diagnosis Role",
-            "path": "uscdiquality.html#data-element-encounter-information-encounter-diagnosis-role"
           }
         ]
       },
@@ -721,8 +793,23 @@
           },
           {
             "class": "Health Status Assessments",
+            "name": "Disability Status",
+            "path": "uscdiquality.html#data-element-health-status-assessments-disability-status"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Functional Status",
+            "path": "uscdiquality.html#data-element-health-status-assessments-functional-status"
+          },
+          {
+            "class": "Health Status Assessments",
             "name": "Health Concerns",
             "path": "uscdiquality.html#data-element-health-status-assessments-health-concerns"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Mental/Cognitive Status",
+            "path": "uscdiquality.html#data-element-health-status-assessments-mental-cognitive-status"
           },
           {
             "class": "Health Status Assessments",
@@ -777,11 +864,6 @@
         "path": "severity",
         "short": "Subjective severity of condition",
         "dataElements": [
-          {
-            "class": "Health Status Assessments",
-            "name": "Health Concerns",
-            "path": "uscdiquality.html#data-element-health-status-assessments-health-concerns"
-          },
           {
             "class": "Problems",
             "name": "Problems",
@@ -963,6 +1045,11 @@
             "class": "Health Insurance Information",
             "name": "Health Insurance Payer",
             "path": "uscdiquality.html#data-element-health-insurance-information-health-insurance-payer"
+          },
+          {
+            "class": "Health Insurance Information",
+            "name": "Payer Identifier",
+            "path": "uscdiquality.html#data-element-health-insurance-information-payer-identifier"
           }
         ]
       },
@@ -1067,6 +1154,17 @@
         ]
       },
       {
+        "path": "intent",
+        "short": "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Medical Device Order",
+            "path": "uscdiquality.html#data-element-orders-medical-device-order"
+          }
+        ]
+      },
+      {
         "path": "modifierExtension:doNotPerform",
         "short": "Extension",
         "dataElements": [
@@ -1141,10 +1239,27 @@
         "short": "Device requested",
         "dataElements": [
           {
+            "class": "Orders",
+            "name": "Medical Device Order",
+            "path": "uscdiquality.html#data-element-orders-medical-device-order"
+          }
+        ]
+      },
+      {
+        "path": "code[x][codeCodeableConcept].extension:codeOptions",
+        "short": "Url of a value set of candidate devices",
+        "dataElements": [
+          {
             "class": "Medical Devices",
             "name": "Device Type",
             "path": "uscdiquality.html#data-element-medical-devices-device-type"
-          },
+          }
+        ]
+      },
+      {
+        "path": "intent",
+        "short": "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option",
+        "dataElements": [
           {
             "class": "Orders",
             "name": "Medical Device Order",
@@ -1227,10 +1342,27 @@
         "short": "Device requested",
         "dataElements": [
           {
+            "class": "Orders",
+            "name": "Medical Device Order",
+            "path": "uscdiquality.html#data-element-orders-medical-device-order"
+          }
+        ]
+      },
+      {
+        "path": "code[x][codeCodeableConcept].extension:codeOptions",
+        "short": "Url of a value set of candidate devices",
+        "dataElements": [
+          {
             "class": "Medical Devices",
             "name": "Device Type",
             "path": "uscdiquality.html#data-element-medical-devices-device-type"
-          },
+          }
+        ]
+      },
+      {
+        "path": "intent",
+        "short": "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option",
+        "dataElements": [
           {
             "class": "Orders",
             "name": "Medical Device Order",
@@ -1327,17 +1459,6 @@
             "class": "Laboratory",
             "name": "Tests",
             "path": "uscdiquality.html#data-element-laboratory-tests"
-          }
-        ]
-      },
-      {
-        "path": "effective[x]",
-        "short": "Diagnostically relevant time (typically the time of specimen collection)",
-        "dataElements": [
-          {
-            "class": "Laboratory",
-            "name": "Laboratory Result Report Date and Time",
-            "path": "uscdiquality.html#data-element-laboratory-laboratory-result-report-date-and-time"
           }
         ]
       },
@@ -1579,6 +1700,17 @@
         ]
       },
       {
+        "path": "diagnosis.use",
+        "short": "Role that this diagnosis has within the encounter (e.g. admission, billing, discharge …)",
+        "dataElements": [
+          {
+            "class": "Encounter Information",
+            "name": "Encounter Diagnosis Role",
+            "path": "uscdiquality.html#data-element-encounter-information-encounter-diagnosis-role"
+          }
+        ]
+      },
+      {
         "path": "hospitalization",
         "short": "Details about the admission to a healthcare service",
         "dataElements": [
@@ -1738,37 +1870,6 @@
       ]
     }
   },
-  "us-quality-core-familymemberhistory": {
-    "id": "us-quality-core-familymemberhistory",
-    "title": "US Quality Core FamilyMemberHistory",
-    "path": "StructureDefinition-us-quality-core-familymemberhistory.html",
-    "uscdiQualityElements": [
-      {
-        "path": "condition.code",
-        "short": "Condition suffered by relation",
-        "dataElements": [
-          {
-            "class": "Family Health History",
-            "name": "Family Health History",
-            "path": "uscdiquality.html#data-element-family-health-history-family-health-history"
-          }
-        ]
-      }
-    ],
-    "hasUsCoreLineage": false,
-    "usCore": null,
-    "search": {
-      "resource": "FamilyMemberHistory",
-      "hasSearchParameters": true,
-      "searchParams": [
-        {
-          "name": "patient",
-          "expectation": "SHALL"
-        }
-      ],
-      "searchCombinations": []
-    }
-  },
   "us-quality-core-goal": {
     "id": "us-quality-core-goal",
     "title": "US Quality Core Goal",
@@ -1830,20 +1931,14 @@
     "path": "StructureDefinition-us-quality-core-imagingstudy.html",
     "uscdiQualityElements": [
       {
-        "path": "endpoint",
-        "short": "Study access endpoint",
+        "path": "status",
+        "short": "registered | available | cancelled | entered-in-error | unknown",
         "dataElements": [
           {
             "class": "Diagnostic Imaging",
             "name": "Diagnostic Imaging Reference",
             "path": "uscdiquality.html#data-element-diagnostic-imaging-diagnostic-imaging-reference"
-          }
-        ]
-      },
-      {
-        "path": "status",
-        "short": "registered | available | cancelled | entered-in-error | unknown",
-        "dataElements": [
+          },
           {
             "class": "Diagnostic Imaging",
             "name": "Diagnostic Imaging Status",
@@ -2056,8 +2151,52 @@
     "path": "StructureDefinition-us-quality-core-immunizationnotdone.html",
     "uscdiQualityElements": [
       {
+        "path": "recorded",
+        "short": "Documented date Immunization did not occur.",
+        "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          }
+        ]
+      },
+      {
+        "path": "status",
+        "short": "not-done",
+        "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          }
+        ]
+      },
+      {
         "path": "statusReason",
         "short": "Reason not done",
+        "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          }
+        ]
+      },
+      {
+        "path": "vaccineCode",
+        "short": "Vaccine Product Type (bind to CVX)",
+        "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          }
+        ]
+      },
+      {
+        "path": "vaccineCode.extension:codeOptions",
+        "short": "Url of a value set of candidate vaccines",
         "dataElements": [
           {
             "class": "Healthcare Information Attributes",
@@ -2265,6 +2404,17 @@
         ]
       },
       {
+        "path": "medication[x].extension:codeOptions",
+        "short": "Url of a value set of candidate medications",
+        "dataElements": [
+          {
+            "class": "Medications",
+            "name": "Medication Administration",
+            "path": "uscdiquality.html#data-element-medications-medication-administration"
+          }
+        ]
+      },
+      {
         "path": "status",
         "short": "in-progress | not-done | on-hold | completed | entered-in-error | stopped | unknown",
         "dataElements": [
@@ -2391,6 +2541,17 @@
         ]
       },
       {
+        "path": "medication[x].extension:codeOptions",
+        "short": "Url of a value set of candidate medications",
+        "dataElements": [
+          {
+            "class": "Medications",
+            "name": "Medication Administration",
+            "path": "uscdiquality.html#data-element-medications-medication-administration"
+          }
+        ]
+      },
+      {
         "path": "status",
         "short": "in-progress | on-hold | completed | stopped",
         "dataElements": [
@@ -2473,6 +2634,27 @@
         "short": "What was administered",
         "dataElements": [
           {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
+          {
+            "class": "Medications",
+            "name": "Medication Administration",
+            "path": "uscdiquality.html#data-element-medications-medication-administration"
+          }
+        ]
+      },
+      {
+        "path": "medication[x].extension:codeOptions",
+        "short": "Url of a value set of candidate medications",
+        "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
+          {
             "class": "Medications",
             "name": "Medication Administration",
             "path": "uscdiquality.html#data-element-medications-medication-administration"
@@ -2483,6 +2665,11 @@
         "path": "status",
         "short": "not-done",
         "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
           {
             "class": "Medications",
             "name": "Medication Administration",
@@ -2660,17 +2847,6 @@
             "path": "uscdiquality.html#data-element-medications-dispense-status"
           }
         ]
-      },
-      {
-        "path": "whenPrepared",
-        "short": "When product was packaged and reviewed",
-        "dataElements": [
-          {
-            "class": "Medications",
-            "name": "Dispense Status",
-            "path": "uscdiquality.html#data-element-medications-dispense-status"
-          }
-        ]
       }
     ],
     "hasUsCoreLineage": true,
@@ -2705,9 +2881,47 @@
     "path": "StructureDefinition-us-quality-core-medicationdispensedeclined.html",
     "uscdiQualityElements": [
       {
+        "path": "extension:recorded",
+        "short": "Extension",
+        "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          }
+        ]
+      },
+      {
+        "path": "medication[x]",
+        "short": "What medication was supplied",
+        "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          }
+        ]
+      },
+      {
+        "path": "medication[x].extension:codeOptions",
+        "short": "Url of a value set of candidate medications",
+        "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          }
+        ]
+      },
+      {
         "path": "status",
         "short": "declined",
         "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
           {
             "class": "Medications",
             "name": "Dispense Status",
@@ -2723,17 +2937,6 @@
             "class": "Healthcare Information Attributes",
             "name": "Reason Not Performed",
             "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
-          }
-        ]
-      },
-      {
-        "path": "whenPrepared",
-        "short": "When product was packaged and reviewed",
-        "dataElements": [
-          {
-            "class": "Medications",
-            "name": "Dispense Status",
-            "path": "uscdiquality.html#data-element-medications-dispense-status"
           }
         ]
       }
@@ -2883,17 +3086,6 @@
             "path": "uscdiquality.html#data-element-medications-dispense-status"
           }
         ]
-      },
-      {
-        "path": "whenPrepared",
-        "short": "When product was packaged and reviewed",
-        "dataElements": [
-          {
-            "class": "Medications",
-            "name": "Dispense Status",
-            "path": "uscdiquality.html#data-element-medications-dispense-status"
-          }
-        ]
       }
     ],
     "hasUsCoreLineage": true,
@@ -2928,6 +3120,17 @@
     "path": "StructureDefinition-us-quality-core-medicationprohibited.html",
     "uscdiQualityElements": [
       {
+        "path": "authoredOn",
+        "short": "When request was initially authored",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Medication Order",
+            "path": "uscdiquality.html#data-element-orders-medication-order"
+          }
+        ]
+      },
+      {
         "path": "dispenseRequest.numberOfRepeatsAllowed",
         "short": "Number of refills authorized",
         "dataElements": [
@@ -2957,6 +3160,11 @@
             "class": "Healthcare Information Attributes",
             "name": "Reason Not Performed",
             "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
+          {
+            "class": "Orders",
+            "name": "Medication Order",
+            "path": "uscdiquality.html#data-element-orders-medication-order"
           }
         ]
       },
@@ -2975,6 +3183,27 @@
         "path": "medication[x]",
         "short": "Medication to be taken",
         "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
+          {
+            "class": "Orders",
+            "name": "Medication Order",
+            "path": "uscdiquality.html#data-element-orders-medication-order"
+          }
+        ]
+      },
+      {
+        "path": "medication[x].extension:codeOptions",
+        "short": "Url of a value set of candidate medications",
+        "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
           {
             "class": "Orders",
             "name": "Medication Order",
@@ -3052,6 +3281,11 @@
             "class": "Medications",
             "name": "Date and Time Medication Prescribed",
             "path": "uscdiquality.html#data-element-medications-date-and-time-medication-prescribed"
+          },
+          {
+            "class": "Orders",
+            "name": "Medication Order",
+            "path": "uscdiquality.html#data-element-orders-medication-order"
           }
         ]
       },
@@ -3107,6 +3341,17 @@
       {
         "path": "dispenseRequest.validityPeriod",
         "short": "Time period supply is authorized for",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Medication Order",
+            "path": "uscdiquality.html#data-element-orders-medication-order"
+          }
+        ]
+      },
+      {
+        "path": "doNotPerform",
+        "short": "True if the order is not to provide the medication",
         "dataElements": [
           {
             "class": "Orders",
@@ -3310,6 +3555,17 @@
             "name": "Medications",
             "path": "uscdiquality.html#data-element-medications-medications"
           },
+          {
+            "class": "Orders",
+            "name": "Medication Order",
+            "path": "uscdiquality.html#data-element-orders-medication-order"
+          }
+        ]
+      },
+      {
+        "path": "medication[x].extension:codeOptions",
+        "short": "Url of a value set of candidate medications",
+        "dataElements": [
           {
             "class": "Orders",
             "name": "Medication Order",
@@ -3398,6 +3654,11 @@
             "class": "Medications",
             "name": "Date and Time Medication Prescribed",
             "path": "uscdiquality.html#data-element-medications-date-and-time-medication-prescribed"
+          },
+          {
+            "class": "Orders",
+            "name": "Medication Order",
+            "path": "uscdiquality.html#data-element-orders-medication-order"
           }
         ]
       },
@@ -3453,6 +3714,17 @@
       {
         "path": "dispenseRequest.validityPeriod",
         "short": "Time period supply is authorized for",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Medication Order",
+            "path": "uscdiquality.html#data-element-orders-medication-order"
+          }
+        ]
+      },
+      {
+        "path": "doNotPerform",
+        "short": "True if medication was not requested",
         "dataElements": [
           {
             "class": "Orders",
@@ -3656,6 +3928,17 @@
             "name": "Medications",
             "path": "uscdiquality.html#data-element-medications-medications"
           },
+          {
+            "class": "Orders",
+            "name": "Medication Order",
+            "path": "uscdiquality.html#data-element-orders-medication-order"
+          }
+        ]
+      },
+      {
+        "path": "medication[x].extension:codeOptions",
+        "short": "Url of a value set of candidate medications",
+        "dataElements": [
           {
             "class": "Orders",
             "name": "Medication Order",
@@ -3746,6 +4029,50 @@
             "path": "uscdiquality.html#data-element-orders-nutrition-order"
           }
         ]
+      },
+      {
+        "path": "oralDiet",
+        "short": "Oral diet components",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Nutrition Order",
+            "path": "uscdiquality.html#data-element-orders-nutrition-order"
+          }
+        ]
+      },
+      {
+        "path": "oralDiet.type",
+        "short": "Oral diet components",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Nutrition Order",
+            "path": "uscdiquality.html#data-element-orders-nutrition-order"
+          }
+        ]
+      },
+      {
+        "path": "patient",
+        "short": "The person who requires the diet, formula or nutritional supplement",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Nutrition Order",
+            "path": "uscdiquality.html#data-element-orders-nutrition-order"
+          }
+        ]
+      },
+      {
+        "path": "status",
+        "short": "draft | active | on-hold | revoked | completed | entered-in-error | unknown",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Nutrition Order",
+            "path": "uscdiquality.html#data-element-orders-nutrition-order"
+          }
+        ]
       }
     ],
     "hasUsCoreLineage": false,
@@ -3780,17 +4107,6 @@
             "class": "Diagnostic Imaging",
             "name": "Diagnostic Imaging Test",
             "path": "uscdiquality.html#data-element-diagnostic-imaging-diagnostic-imaging-test"
-          }
-        ]
-      },
-      {
-        "path": "effective[x]",
-        "short": "Clinically relevant time/time-period for observation",
-        "dataElements": [
-          {
-            "class": "Clinical Tests",
-            "name": "Clinical Test Result/Report",
-            "path": "uscdiquality.html#data-element-clinical-tests-clinical-test-result-report"
           }
         ]
       },
@@ -3911,6 +4227,17 @@
         ]
       },
       {
+        "path": "effective[x]",
+        "short": "Clinically relevant time/time-period for observation",
+        "dataElements": [
+          {
+            "class": "Laboratory",
+            "name": "Specimen Collection Date and Time",
+            "path": "uscdiquality.html#data-element-laboratory-specimen-collection-date-and-time"
+          }
+        ]
+      },
+      {
         "path": "interpretation",
         "short": "High, low, normal, etc.",
         "dataElements": [
@@ -3949,8 +4276,28 @@
         "dataElements": [
           {
             "class": "Laboratory",
+            "name": "Specimen Condition Acceptability",
+            "path": "uscdiquality.html#data-element-laboratory-specimen-condition-acceptability"
+          },
+          {
+            "class": "Laboratory",
+            "name": "Specimen Identifier",
+            "path": "uscdiquality.html#data-element-laboratory-specimen-identifier"
+          },
+          {
+            "class": "Laboratory",
+            "name": "Specimen Source Site",
+            "path": "uscdiquality.html#data-element-laboratory-specimen-source-site"
+          },
+          {
+            "class": "Laboratory",
             "name": "Specimen Type",
             "path": "uscdiquality.html#data-element-laboratory-specimen-type"
+          },
+          {
+            "class": "Laboratory",
+            "name": "Specimen Collection Date and Time",
+            "path": "uscdiquality.html#data-element-laboratory-specimen-collection-date-and-time"
           }
         ]
       },
@@ -4127,47 +4474,6 @@
       {
         "path": "effective[x]",
         "short": "Clinically relevant time/time-period for observation",
-        "dataElements": [
-          {
-            "class": "Health Status Assessments",
-            "name": "Alcohol Use",
-            "path": "uscdiquality.html#data-element-health-status-assessments-alcohol-use"
-          },
-          {
-            "class": "Health Status Assessments",
-            "name": "Disability Status",
-            "path": "uscdiquality.html#data-element-health-status-assessments-disability-status"
-          },
-          {
-            "class": "Health Status Assessments",
-            "name": "Functional Status",
-            "path": "uscdiquality.html#data-element-health-status-assessments-functional-status"
-          },
-          {
-            "class": "Health Status Assessments",
-            "name": "Mental/Cognitive Status",
-            "path": "uscdiquality.html#data-element-health-status-assessments-mental-cognitive-status"
-          },
-          {
-            "class": "Health Status Assessments",
-            "name": "Physical Activity",
-            "path": "uscdiquality.html#data-element-health-status-assessments-physical-activity"
-          },
-          {
-            "class": "Health Status Assessments",
-            "name": "SDOH Assessment",
-            "path": "uscdiquality.html#data-element-health-status-assessments-sdoh-assessment"
-          },
-          {
-            "class": "Health Status Assessments",
-            "name": "Substance Use",
-            "path": "uscdiquality.html#data-element-health-status-assessments-substance-use"
-          }
-        ]
-      },
-      {
-        "path": "issued",
-        "short": "Date/Time this version was made available",
         "dataElements": [
           {
             "class": "Health Status Assessments",
@@ -4759,21 +5065,6 @@
           },
           {
             "class": "Patient Demographics/Information",
-            "name": "Last Name",
-            "path": "uscdiquality.html#data-element-patient-demographics-information-last-name"
-          },
-          {
-            "class": "Patient Demographics/Information",
-            "name": "Middle Name (Including middle initial)",
-            "path": "uscdiquality.html#data-element-patient-demographics-information-middle-name-including-middle-initial"
-          },
-          {
-            "class": "Patient Demographics/Information",
-            "name": "Name Suffix",
-            "path": "uscdiquality.html#data-element-patient-demographics-information-name-suffix"
-          },
-          {
-            "class": "Patient Demographics/Information",
             "name": "Previous Name",
             "path": "uscdiquality.html#data-element-patient-demographics-information-previous-name"
           }
@@ -5253,17 +5544,6 @@
         ]
       },
       {
-        "path": "extension:recorded",
-        "short": "When the procedure was first captured in the subject's record",
-        "dataElements": [
-          {
-            "class": "Procedures",
-            "name": "Performance Time",
-            "path": "uscdiquality.html#data-element-procedures-performance-time"
-          }
-        ]
-      },
-      {
         "path": "partOf",
         "short": "Part of referenced event",
         "dataElements": [
@@ -5305,6 +5585,11 @@
         "path": "reasonReference",
         "short": "The justification that the procedure was performed",
         "dataElements": [
+          {
+            "class": "Procedures",
+            "name": "Procedure Reason Code",
+            "path": "uscdiquality.html#data-element-procedures-procedure-reason-code"
+          },
           {
             "class": "Procedures",
             "name": "Reason for Referral",
@@ -5401,17 +5686,6 @@
         ]
       },
       {
-        "path": "extension:recorded",
-        "short": "When the procedure was first captured in the subject's record",
-        "dataElements": [
-          {
-            "class": "Procedures",
-            "name": "Performance Time",
-            "path": "uscdiquality.html#data-element-procedures-performance-time"
-          }
-        ]
-      },
-      {
         "path": "partOf",
         "short": "Part of referenced event",
         "dataElements": [
@@ -5453,6 +5727,11 @@
         "path": "reasonReference",
         "short": "The justification that the procedure was performed",
         "dataElements": [
+          {
+            "class": "Procedures",
+            "name": "Procedure Reason Code",
+            "path": "uscdiquality.html#data-element-procedures-procedure-reason-code"
+          },
           {
             "class": "Procedures",
             "name": "Reason for Referral",
@@ -5528,29 +5807,30 @@
         "dataElements": [
           {
             "class": "Procedures",
-            "name": "Procedure Type",
-            "path": "uscdiquality.html#data-element-procedures-procedure-type"
-          },
-          {
-            "class": "Procedures",
-            "name": "Procedures",
-            "path": "uscdiquality.html#data-element-procedures-procedures"
-          },
-          {
-            "class": "Procedures",
             "name": "SDOH Interventions",
             "path": "uscdiquality.html#data-element-procedures-sdoh-interventions"
           }
         ]
       },
       {
-        "path": "partOf",
-        "short": "Part of referenced event",
+        "path": "code.extension:codeOptions",
+        "short": "Url of a value set of candidate procedures",
         "dataElements": [
           {
-            "class": "Procedures",
-            "name": "Procedures",
-            "path": "uscdiquality.html#data-element-procedures-procedures"
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          }
+        ]
+      },
+      {
+        "path": "extension:recorded",
+        "short": "When the procedure was first captured in the subject's record",
+        "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
           }
         ]
       },
@@ -5558,6 +5838,11 @@
         "path": "reasonCode",
         "short": "Coded reason procedure performed",
         "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
           {
             "class": "Procedures",
             "name": "Procedure Reason Code",
@@ -5574,6 +5859,16 @@
         "path": "reasonReference",
         "short": "The justification that the procedure was performed",
         "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
+          {
+            "class": "Procedures",
+            "name": "Procedure Reason Code",
+            "path": "uscdiquality.html#data-element-procedures-procedure-reason-code"
+          },
           {
             "class": "Procedures",
             "name": "Reason for Referral",
@@ -5649,13 +5944,110 @@
     "path": "StructureDefinition-us-quality-core-questionnaireresponse.html",
     "uscdiQualityElements": [
       {
-        "path": "item",
-        "short": "Groups and questions",
+        "path": "authored",
+        "short": "Date the answers were gathered",
         "dataElements": [
           {
             "class": "Health Status Assessments",
             "name": "Alcohol Use",
             "path": "uscdiquality.html#data-element-health-status-assessments-alcohol-use"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Disability Status",
+            "path": "uscdiquality.html#data-element-health-status-assessments-disability-status"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Functional Status",
+            "path": "uscdiquality.html#data-element-health-status-assessments-functional-status"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Mental/Cognitive Status",
+            "path": "uscdiquality.html#data-element-health-status-assessments-mental-cognitive-status"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Physical Activity",
+            "path": "uscdiquality.html#data-element-health-status-assessments-physical-activity"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "SDOH Assessment",
+            "path": "uscdiquality.html#data-element-health-status-assessments-sdoh-assessment"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Substance Use",
+            "path": "uscdiquality.html#data-element-health-status-assessments-substance-use"
+          }
+        ]
+      },
+      {
+        "path": "item.answer",
+        "short": "The response(s) to the question",
+        "dataElements": [
+          {
+            "class": "Health Status Assessments",
+            "name": "Alcohol Use",
+            "path": "uscdiquality.html#data-element-health-status-assessments-alcohol-use"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Disability Status",
+            "path": "uscdiquality.html#data-element-health-status-assessments-disability-status"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Functional Status",
+            "path": "uscdiquality.html#data-element-health-status-assessments-functional-status"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Mental/Cognitive Status",
+            "path": "uscdiquality.html#data-element-health-status-assessments-mental-cognitive-status"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Physical Activity",
+            "path": "uscdiquality.html#data-element-health-status-assessments-physical-activity"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "SDOH Assessment",
+            "path": "uscdiquality.html#data-element-health-status-assessments-sdoh-assessment"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Substance Use",
+            "path": "uscdiquality.html#data-element-health-status-assessments-substance-use"
+          }
+        ]
+      },
+      {
+        "path": "item.answer.value[x]",
+        "short": "Single-valued answer to the question",
+        "dataElements": [
+          {
+            "class": "Health Status Assessments",
+            "name": "Alcohol Use",
+            "path": "uscdiquality.html#data-element-health-status-assessments-alcohol-use"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Disability Status",
+            "path": "uscdiquality.html#data-element-health-status-assessments-disability-status"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Functional Status",
+            "path": "uscdiquality.html#data-element-health-status-assessments-functional-status"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Mental/Cognitive Status",
+            "path": "uscdiquality.html#data-element-health-status-assessments-mental-cognitive-status"
           },
           {
             "class": "Health Status Assessments",
@@ -5682,6 +6074,21 @@
             "class": "Health Status Assessments",
             "name": "Alcohol Use",
             "path": "uscdiquality.html#data-element-health-status-assessments-alcohol-use"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Disability Status",
+            "path": "uscdiquality.html#data-element-health-status-assessments-disability-status"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Functional Status",
+            "path": "uscdiquality.html#data-element-health-status-assessments-functional-status"
+          },
+          {
+            "class": "Health Status Assessments",
+            "name": "Mental/Cognitive Status",
+            "path": "uscdiquality.html#data-element-health-status-assessments-mental-cognitive-status"
           },
           {
             "class": "Health Status Assessments",
@@ -5818,6 +6225,11 @@
         "short": "Date request signed",
         "dataElements": [
           {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
+          {
             "class": "Orders",
             "name": "Clinical Test Order",
             "path": "uscdiquality.html#data-element-orders-clinical-test-order"
@@ -5854,6 +6266,11 @@
         "short": "What is being requested/ordered",
         "dataElements": [
           {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
+          {
             "class": "Orders",
             "name": "Clinical Test Order",
             "path": "uscdiquality.html#data-element-orders-clinical-test-order"
@@ -5880,13 +6297,39 @@
           },
           {
             "class": "Procedures",
-            "name": "Procedure Type",
-            "path": "uscdiquality.html#data-element-procedures-procedure-type"
-          },
-          {
-            "class": "Procedures",
             "name": "SDOH Interventions",
             "path": "uscdiquality.html#data-element-procedures-sdoh-interventions"
+          }
+        ]
+      },
+      {
+        "path": "code.extension:codeOptions",
+        "short": "Url of a value set of candidate services",
+        "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
+          {
+            "class": "Orders",
+            "name": "Clinical Test Order",
+            "path": "uscdiquality.html#data-element-orders-clinical-test-order"
+          },
+          {
+            "class": "Orders",
+            "name": "Diagnostic Imaging Order",
+            "path": "uscdiquality.html#data-element-orders-diagnostic-imaging-order"
+          },
+          {
+            "class": "Orders",
+            "name": "Laboratory Order",
+            "path": "uscdiquality.html#data-element-orders-laboratory-order"
+          },
+          {
+            "class": "Orders",
+            "name": "Procedure Order",
+            "path": "uscdiquality.html#data-element-orders-procedure-order"
           }
         ]
       },
@@ -5898,6 +6341,21 @@
             "class": "Healthcare Information Attributes",
             "name": "Reason Not Performed",
             "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
+          {
+            "class": "Orders",
+            "name": "Clinical Test Order",
+            "path": "uscdiquality.html#data-element-orders-clinical-test-order"
+          },
+          {
+            "class": "Orders",
+            "name": "Diagnostic Imaging Order",
+            "path": "uscdiquality.html#data-element-orders-diagnostic-imaging-order"
+          },
+          {
+            "class": "Orders",
+            "name": "Laboratory Order",
+            "path": "uscdiquality.html#data-element-orders-laboratory-order"
           }
         ]
       },
@@ -6106,11 +6564,6 @@
         "short": "What is being requested/ordered",
         "dataElements": [
           {
-            "class": "Medical Devices",
-            "name": "Device Type",
-            "path": "uscdiquality.html#data-element-medical-devices-device-type"
-          },
-          {
             "class": "Orders",
             "name": "Clinical Test Order",
             "path": "uscdiquality.html#data-element-orders-clinical-test-order"
@@ -6144,6 +6597,58 @@
             "class": "Procedures",
             "name": "SDOH Interventions",
             "path": "uscdiquality.html#data-element-procedures-sdoh-interventions"
+          }
+        ]
+      },
+      {
+        "path": "code.extension:codeOptions",
+        "short": "Url of a value set of candidate services",
+        "dataElements": [
+          {
+            "class": "Medical Devices",
+            "name": "Device Type",
+            "path": "uscdiquality.html#data-element-medical-devices-device-type"
+          },
+          {
+            "class": "Orders",
+            "name": "Clinical Test Order",
+            "path": "uscdiquality.html#data-element-orders-clinical-test-order"
+          },
+          {
+            "class": "Orders",
+            "name": "Diagnostic Imaging Order",
+            "path": "uscdiquality.html#data-element-orders-diagnostic-imaging-order"
+          },
+          {
+            "class": "Orders",
+            "name": "Laboratory Order",
+            "path": "uscdiquality.html#data-element-orders-laboratory-order"
+          },
+          {
+            "class": "Orders",
+            "name": "Procedure Order",
+            "path": "uscdiquality.html#data-element-orders-procedure-order"
+          }
+        ]
+      },
+      {
+        "path": "doNotPerform",
+        "short": "True if service/procedure should not be performed",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Clinical Test Order",
+            "path": "uscdiquality.html#data-element-orders-clinical-test-order"
+          },
+          {
+            "class": "Orders",
+            "name": "Diagnostic Imaging Order",
+            "path": "uscdiquality.html#data-element-orders-diagnostic-imaging-order"
+          },
+          {
+            "class": "Orders",
+            "name": "Laboratory Order",
+            "path": "uscdiquality.html#data-element-orders-laboratory-order"
           }
         ]
       },
@@ -6347,11 +6852,6 @@
         "short": "What is being requested/ordered",
         "dataElements": [
           {
-            "class": "Medical Devices",
-            "name": "Device Type",
-            "path": "uscdiquality.html#data-element-medical-devices-device-type"
-          },
-          {
             "class": "Orders",
             "name": "Clinical Test Order",
             "path": "uscdiquality.html#data-element-orders-clinical-test-order"
@@ -6385,6 +6885,58 @@
             "class": "Procedures",
             "name": "SDOH Interventions",
             "path": "uscdiquality.html#data-element-procedures-sdoh-interventions"
+          }
+        ]
+      },
+      {
+        "path": "code.extension:codeOptions",
+        "short": "Url of a value set of candidate services",
+        "dataElements": [
+          {
+            "class": "Medical Devices",
+            "name": "Device Type",
+            "path": "uscdiquality.html#data-element-medical-devices-device-type"
+          },
+          {
+            "class": "Orders",
+            "name": "Clinical Test Order",
+            "path": "uscdiquality.html#data-element-orders-clinical-test-order"
+          },
+          {
+            "class": "Orders",
+            "name": "Diagnostic Imaging Order",
+            "path": "uscdiquality.html#data-element-orders-diagnostic-imaging-order"
+          },
+          {
+            "class": "Orders",
+            "name": "Laboratory Order",
+            "path": "uscdiquality.html#data-element-orders-laboratory-order"
+          },
+          {
+            "class": "Orders",
+            "name": "Procedure Order",
+            "path": "uscdiquality.html#data-element-orders-procedure-order"
+          }
+        ]
+      },
+      {
+        "path": "doNotPerform",
+        "short": "True if service/procedure should not be performed",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Clinical Test Order",
+            "path": "uscdiquality.html#data-element-orders-clinical-test-order"
+          },
+          {
+            "class": "Orders",
+            "name": "Diagnostic Imaging Order",
+            "path": "uscdiquality.html#data-element-orders-diagnostic-imaging-order"
+          },
+          {
+            "class": "Orders",
+            "name": "Laboratory Order",
+            "path": "uscdiquality.html#data-element-orders-laboratory-order"
           }
         ]
       },
@@ -6738,47 +7290,6 @@
       {
         "path": "effective[x]",
         "short": "Clinically relevant time/time-period for observation",
-        "dataElements": [
-          {
-            "class": "Health Status Assessments",
-            "name": "Alcohol Use",
-            "path": "uscdiquality.html#data-element-health-status-assessments-alcohol-use"
-          },
-          {
-            "class": "Health Status Assessments",
-            "name": "Disability Status",
-            "path": "uscdiquality.html#data-element-health-status-assessments-disability-status"
-          },
-          {
-            "class": "Health Status Assessments",
-            "name": "Functional Status",
-            "path": "uscdiquality.html#data-element-health-status-assessments-functional-status"
-          },
-          {
-            "class": "Health Status Assessments",
-            "name": "Mental/Cognitive Status",
-            "path": "uscdiquality.html#data-element-health-status-assessments-mental-cognitive-status"
-          },
-          {
-            "class": "Health Status Assessments",
-            "name": "Physical Activity",
-            "path": "uscdiquality.html#data-element-health-status-assessments-physical-activity"
-          },
-          {
-            "class": "Health Status Assessments",
-            "name": "SDOH Assessment",
-            "path": "uscdiquality.html#data-element-health-status-assessments-sdoh-assessment"
-          },
-          {
-            "class": "Health Status Assessments",
-            "name": "Substance Use",
-            "path": "uscdiquality.html#data-element-health-status-assessments-substance-use"
-          }
-        ]
-      },
-      {
-        "path": "issued",
-        "short": "Date/Time this version was made available",
         "dataElements": [
           {
             "class": "Health Status Assessments",

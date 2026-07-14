@@ -676,7 +676,7 @@
           "description": "Ordinal number or code that identifies the priority or significance of a diagnosis for a given encounter.",
           "dataElementId": "data-element-encounter-information-diagnosis-rank",
           "noteId": "encounter-information-diagnosis-rank",
-          "notes": "",
+          "notes": "In QI-Core, information about principal diagnosis is represented using the Claim profile. In US Quality Core v1.0.0-ballot, support for the Claim profile is not required for conformance. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
           "usQualityCore": [
             {
               "id": "us-quality-core-encounter",
@@ -716,9 +716,9 @@
           "notes": "",
           "usQualityCore": [
             {
-              "id": "us-quality-core-condition-encounter-diagnosis",
-              "title": "US Quality Core Condition Encounter Diagnosis",
-              "path": "StructureDefinition-us-quality-core-condition-encounter-diagnosis.html"
+              "id": "us-quality-core-encounter",
+              "title": "US Quality Core Encounter",
+              "path": "StructureDefinition-us-quality-core-encounter.html"
             }
           ],
           "usCore": []
@@ -825,7 +825,7 @@
           "description": "An indicator of whether a patient's condition or diagnosis was known to be present at the time of admission.",
           "dataElementId": "data-element-encounter-information-present-on-admission",
           "noteId": "encounter-information-present-on-admission",
-          "notes": "",
+          "notes": "In QI-Core, information about present on admission is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. We have reintroduced the Present on Admission extension for Encounter.diagnosis in this US Quality Core v1.0.0-ballot and it is (USCDI+ Quality) tagged.",
           "usQualityCore": [
             {
               "id": "us-quality-core-encounter",
@@ -916,14 +916,13 @@
           "dataElementId": "data-element-family-health-history-family-health-history",
           "noteId": "family-health-history-family-health-history",
           "notes": "",
-          "usQualityCore": [
+          "usQualityCore": [],
+          "usCore": [
             {
-              "id": "us-quality-core-familymemberhistory",
-              "title": "US Quality Core FamilyMemberHistory",
-              "path": "StructureDefinition-us-quality-core-familymemberhistory.html"
+              "id": "us-core-familymemberhistory",
+              "title": "US Core FamilyMemberHistory Profile"
             }
-          ],
-          "usCore": []
+          ]
         }
       ]
     },
@@ -1177,6 +1176,11 @@
               "id": "us-quality-core-organization",
               "title": "US Quality Core Organization",
               "path": "StructureDefinition-us-quality-core-organization.html"
+            },
+            {
+              "id": "us-quality-core-coverage",
+              "title": "US Quality Core Coverage",
+              "path": "StructureDefinition-us-quality-core-coverage.html"
             }
           ],
           "usCore": []
@@ -1266,6 +1270,16 @@
               "id": "us-quality-core-observation-screening-assessment",
               "title": "US Quality Core Observation Screening Assessment",
               "path": "StructureDefinition-us-quality-core-observation-screening-assessment.html"
+            },
+            {
+              "id": "us-quality-core-questionnaireresponse",
+              "title": "US Quality Core QuestionnaireResponse",
+              "path": "StructureDefinition-us-quality-core-questionnaireresponse.html"
+            },
+            {
+              "id": "us-quality-core-condition-problems-health-concerns",
+              "title": "US Quality Core Condition Problems Health Concerns",
+              "path": "StructureDefinition-us-quality-core-condition-problems-health-concerns.html"
             }
           ],
           "usCore": []
@@ -1287,6 +1301,16 @@
               "id": "us-quality-core-observation-screening-assessment",
               "title": "US Quality Core Observation Screening Assessment",
               "path": "StructureDefinition-us-quality-core-observation-screening-assessment.html"
+            },
+            {
+              "id": "us-quality-core-questionnaireresponse",
+              "title": "US Quality Core QuestionnaireResponse",
+              "path": "StructureDefinition-us-quality-core-questionnaireresponse.html"
+            },
+            {
+              "id": "us-quality-core-condition-problems-health-concerns",
+              "title": "US Quality Core Condition Problems Health Concerns",
+              "path": "StructureDefinition-us-quality-core-condition-problems-health-concerns.html"
             }
           ],
           "usCore": []
@@ -1324,6 +1348,16 @@
               "id": "us-quality-core-observation-screening-assessment",
               "title": "US Quality Core Observation Screening Assessment",
               "path": "StructureDefinition-us-quality-core-observation-screening-assessment.html"
+            },
+            {
+              "id": "us-quality-core-questionnaireresponse",
+              "title": "US Quality Core QuestionnaireResponse",
+              "path": "StructureDefinition-us-quality-core-questionnaireresponse.html"
+            },
+            {
+              "id": "us-quality-core-condition-problems-health-concerns",
+              "title": "US Quality Core Condition Problems Health Concerns",
+              "path": "StructureDefinition-us-quality-core-condition-problems-health-concerns.html"
             }
           ],
           "usCore": []
@@ -1692,7 +1726,13 @@
           "dataElementId": "data-element-laboratory-specimen-condition-acceptability",
           "noteId": "laboratory-specimen-condition-acceptability",
           "notes": "",
-          "usQualityCore": [],
+          "usQualityCore": [
+            {
+              "id": "us-quality-core-observation-lab",
+              "title": "US Quality Core Laboratory Result Observation",
+              "path": "StructureDefinition-us-quality-core-observation-lab.html"
+            }
+          ],
           "usCore": [
             {
               "id": "us-core-specimen",
@@ -1707,7 +1747,13 @@
           "dataElementId": "data-element-laboratory-specimen-identifier",
           "noteId": "laboratory-specimen-identifier",
           "notes": "",
-          "usQualityCore": [],
+          "usQualityCore": [
+            {
+              "id": "us-quality-core-observation-lab",
+              "title": "US Quality Core Laboratory Result Observation",
+              "path": "StructureDefinition-us-quality-core-observation-lab.html"
+            }
+          ],
           "usCore": [
             {
               "id": "us-core-specimen",
@@ -1722,7 +1768,13 @@
           "dataElementId": "data-element-laboratory-specimen-source-site",
           "noteId": "laboratory-specimen-source-site",
           "notes": "",
-          "usQualityCore": [],
+          "usQualityCore": [
+            {
+              "id": "us-quality-core-observation-lab",
+              "title": "US Quality Core Laboratory Result Observation",
+              "path": "StructureDefinition-us-quality-core-observation-lab.html"
+            }
+          ],
           "usCore": [
             {
               "id": "us-core-specimen",
@@ -1805,11 +1857,6 @@
               "id": "us-quality-core-observation-lab",
               "title": "US Quality Core Laboratory Result Observation",
               "path": "StructureDefinition-us-quality-core-observation-lab.html"
-            },
-            {
-              "id": "us-quality-core-diagnosticreport-lab",
-              "title": "US Quality Core DiagnosticReport Profile for Laboratory Results Reporting",
-              "path": "StructureDefinition-us-quality-core-diagnosticreport-lab.html"
             }
           ],
           "usCore": []
@@ -1821,7 +1868,13 @@
           "dataElementId": "data-element-laboratory-specimen-collection-date-and-time",
           "noteId": "laboratory-specimen-collection-date-and-time",
           "notes": "",
-          "usQualityCore": [],
+          "usQualityCore": [
+            {
+              "id": "us-quality-core-observation-lab",
+              "title": "US Quality Core Laboratory Result Observation",
+              "path": "StructureDefinition-us-quality-core-observation-lab.html"
+            }
+          ],
           "usCore": [
             {
               "id": "us-core-specimen",
@@ -1848,14 +1901,14 @@
               "path": "StructureDefinition-us-quality-core-devicerequest.html"
             },
             {
-              "id": "us-quality-core-servicerequest",
-              "title": "US Quality Core ServiceRequest",
-              "path": "StructureDefinition-us-quality-core-servicerequest.html"
-            },
-            {
               "id": "us-quality-core-devicerequested",
               "title": "US Quality Core DeviceRequested",
               "path": "StructureDefinition-us-quality-core-devicerequested.html"
+            },
+            {
+              "id": "us-quality-core-servicerequest",
+              "title": "US Quality Core ServiceRequest",
+              "path": "StructureDefinition-us-quality-core-servicerequest.html"
             },
             {
               "id": "us-quality-core-servicerequested",
@@ -2537,7 +2590,16 @@
               "path": "StructureDefinition-us-quality-core-servicerequested.html"
             }
           ],
-          "usCore": []
+          "usCore": [
+            {
+              "id": "us-core-documentreference",
+              "title": "US Core DocumentReference Profile"
+            },
+            {
+              "id": "us-core-adi-documentreference",
+              "title": "US Core ADI DocumentReference Profile"
+            }
+          ]
         },
         {
           "class": "Orders",
@@ -3241,6 +3303,11 @@
               "path": "StructureDefinition-us-quality-core-procedure.html"
             },
             {
+              "id": "us-quality-core-proceduredone",
+              "title": "US Quality Core Procedure Done",
+              "path": "StructureDefinition-us-quality-core-proceduredone.html"
+            },
+            {
               "id": "us-quality-core-diagnosticreport-note",
               "title": "US Quality Core DiagnosticReport Profile for Report and Note Exchange",
               "path": "StructureDefinition-us-quality-core-diagnosticreport-note.html"
@@ -3254,11 +3321,6 @@
               "id": "us-quality-core-immunizationdone",
               "title": "US Quality Core Immunization Done",
               "path": "StructureDefinition-us-quality-core-immunizationdone.html"
-            },
-            {
-              "id": "us-quality-core-proceduredone",
-              "title": "US Quality Core Procedure Done",
-              "path": "StructureDefinition-us-quality-core-proceduredone.html"
             }
           ],
           "usCore": []
@@ -3349,16 +3411,6 @@
               "path": "StructureDefinition-us-quality-core-servicerequest.html"
             },
             {
-              "id": "us-quality-core-procedurenotdone",
-              "title": "US Quality Core Procedure Not Done",
-              "path": "StructureDefinition-us-quality-core-procedurenotdone.html"
-            },
-            {
-              "id": "us-quality-core-serviceprohibited",
-              "title": "US Quality Core Service Prohibited",
-              "path": "StructureDefinition-us-quality-core-serviceprohibited.html"
-            },
-            {
               "id": "us-quality-core-proceduredone",
               "title": "US Quality Core Procedure Done",
               "path": "StructureDefinition-us-quality-core-proceduredone.html"
@@ -3377,17 +3429,12 @@
           "description": "Activity performed for or on a patient as part of the provision of care.",
           "dataElementId": "data-element-procedures-procedures",
           "noteId": "procedures-procedures",
-          "notes": "",
+          "notes": "In QI-Core, information about principal procedure is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. Implementers may determine the appropriate implementation approach to support this USCDI+ Quality data element. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
           "usQualityCore": [
             {
               "id": "us-quality-core-procedure",
               "title": "US Quality Core Procedure",
               "path": "StructureDefinition-us-quality-core-procedure.html"
-            },
-            {
-              "id": "us-quality-core-procedurenotdone",
-              "title": "US Quality Core Procedure Not Done",
-              "path": "StructureDefinition-us-quality-core-procedurenotdone.html"
             },
             {
               "id": "us-quality-core-proceduredone",
@@ -3892,5 +3939,59 @@
       ]
     }
   ],
-  "notes": []
+  "notes": [
+    {
+      "class": "Encounter Information",
+      "name": "Diagnosis Rank",
+      "description": "Ordinal number or code that identifies the priority or significance of a diagnosis for a given encounter.",
+      "dataElementId": "data-element-encounter-information-diagnosis-rank",
+      "noteId": "encounter-information-diagnosis-rank",
+      "notes": "In QI-Core, information about principal diagnosis is represented using the Claim profile. In US Quality Core v1.0.0-ballot, support for the Claim profile is not required for conformance. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
+      "usQualityCore": [
+        {
+          "id": "us-quality-core-encounter",
+          "title": "US Quality Core Encounter",
+          "path": "StructureDefinition-us-quality-core-encounter.html"
+        }
+      ],
+      "usCore": []
+    },
+    {
+      "class": "Encounter Information",
+      "name": "Present on Admission",
+      "description": "An indicator of whether a patient's condition or diagnosis was known to be present at the time of admission.",
+      "dataElementId": "data-element-encounter-information-present-on-admission",
+      "noteId": "encounter-information-present-on-admission",
+      "notes": "In QI-Core, information about present on admission is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. We have reintroduced the Present on Admission extension for Encounter.diagnosis in this US Quality Core v1.0.0-ballot and it is (USCDI+ Quality) tagged.",
+      "usQualityCore": [
+        {
+          "id": "us-quality-core-encounter",
+          "title": "US Quality Core Encounter",
+          "path": "StructureDefinition-us-quality-core-encounter.html"
+        }
+      ],
+      "usCore": []
+    },
+    {
+      "class": "Procedures",
+      "name": "Procedures",
+      "description": "Activity performed for or on a patient as part of the provision of care.",
+      "dataElementId": "data-element-procedures-procedures",
+      "noteId": "procedures-procedures",
+      "notes": "In QI-Core, information about principal procedure is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. Implementers may determine the appropriate implementation approach to support this USCDI+ Quality data element. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
+      "usQualityCore": [
+        {
+          "id": "us-quality-core-procedure",
+          "title": "US Quality Core Procedure",
+          "path": "StructureDefinition-us-quality-core-procedure.html"
+        },
+        {
+          "id": "us-quality-core-proceduredone",
+          "title": "US Quality Core Procedure Done",
+          "path": "StructureDefinition-us-quality-core-proceduredone.html"
+        }
+      ],
+      "usCore": []
+    }
+  ]
 }

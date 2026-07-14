@@ -265,12 +265,15 @@
       "path": "familymemberhistory.html",
       "profiles": [
         {
-          "id": "us-quality-core-familymemberhistory",
-          "title": "US Quality Core FamilyMemberHistory",
-          "path": "StructureDefinition-us-quality-core-familymemberhistory.html",
+          "id": "us-core-familymemberhistory",
+          "title": "US Core FamilyMemberHistory Profile",
+          "path": null,
           "depth": 0,
           "showResource": true,
-          "usCore": null
+          "usCore": {
+            "id": "us-core-familymemberhistory",
+            "title": "US Core FamilyMemberHistory Profile"
+          }
         }
       ]
     },
