@@ -12,10 +12,7 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-adverseevent",
           "elements": [
-            "AdverseEvent.event",
-            "AdverseEvent.date",
-            "AdverseEvent.recordedDate",
-            "AdverseEvent.detected"
+            "AdverseEvent.resultingCondition"
           ]
         }
       ]
@@ -35,7 +32,11 @@
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-adverseevent",
           "elements": [
             "AdverseEvent.outcome",
-            "AdverseEvent.resultingCondition"
+            "AdverseEvent.event",
+            "AdverseEvent.date",
+            "AdverseEvent.recordedDate",
+            "AdverseEvent.detected",
+            "AdverseEvent.actuality"
           ]
         }
       ]
@@ -549,8 +550,7 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-clinical-result",
           "elements": [
-            "Observation.value[x]",
-            "Observation.effective[x]"
+            "Observation.value[x]"
           ]
         },
         {
@@ -629,6 +629,7 @@
           "elements": [
             "Communication.category",
             "Communication.topic",
+            "Communication.topic.extension:codeOptions",
             "Communication.subject"
           ]
         },
@@ -637,6 +638,7 @@
           "elements": [
             "Communication.category",
             "Communication.topic",
+            "Communication.topic.extension:codeOptions",
             "Communication.subject"
           ]
         }
@@ -656,7 +658,11 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-communicationnotdone",
           "elements": [
-            "Communication.statusReason"
+            "Communication.statusReason",
+            "Communication.status",
+            "Communication.extension:event-recorded",
+            "Communication.topic.extension:codeOptions",
+            "Communication.subject"
           ]
         }
       ]
@@ -683,7 +689,7 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy",
           "elements": [
-            "ImagingStudy.endpoint"
+            "ImagingStudy.status"
           ]
         }
       ]
@@ -768,7 +774,7 @@
     "class": "Encounter Information",
     "name": "Diagnosis Rank",
     "description": "Ordinal number or code that identifies the priority or significance of a diagnosis for a given encounter.",
-    "notes": "",
+    "notes": "In QI-Core, information about principal diagnosis is represented using the Claim profile. In US Quality Core v1.0.0-ballot, support for the Claim profile is not required for conformance. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
     "mappings": {
       "usCore": [
 
@@ -821,9 +827,9 @@
       ],
       "usQualityCore": [
         {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-encounter-diagnosis",
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-encounter",
           "elements": [
-            "Condition.code"
+            "Encounter.diagnosis.use"
           ]
         }
       ]
@@ -951,7 +957,7 @@
     "class": "Encounter Information",
     "name": "Present on Admission",
     "description": "An indicator of whether a patient's condition or diagnosis was known to be present at the time of admission.",
-    "notes": "",
+    "notes": "In QI-Core, information about present on admission is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. We have reintroduced the Present on Admission extension for Encounter.diagnosis in this US Quality Core v1.0.0-ballot and it is (USCDI+ Quality) tagged.",
     "mappings": {
       "usCore": [
 
@@ -1049,15 +1055,12 @@
     "notes": "",
     "mappings": {
       "usCore": [
-
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory|9.0.0"
+        }
       ],
       "usQualityCore": [
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-familymemberhistory",
-          "elements": [
-            "FamilyMemberHistory.condition.code"
-          ]
-        }
+
       ]
     }
   },
@@ -1350,6 +1353,12 @@
           "elements": [
             "Organization.identifier"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-coverage",
+          "elements": [
+            "Coverage.payor"
+          ]
         }
       ]
     }
@@ -1410,8 +1419,7 @@
             "Observation.code",
             "Observation.value[x]",
             "Observation.status",
-            "Observation.effective[x]",
-            "Observation.issued"
+            "Observation.effective[x]"
           ]
         },
         {
@@ -1421,15 +1429,16 @@
             "Observation.code",
             "Observation.value[x]",
             "Observation.status",
-            "Observation.effective[x]",
-            "Observation.issued"
+            "Observation.effective[x]"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse",
           "elements": [
             "QuestionnaireResponse.questionnaire",
-            "QuestionnaireResponse.item"
+            "QuestionnaireResponse.item.answer",
+            "QuestionnaireResponse.item.answer.value[x]",
+            "QuestionnaireResponse.authored"
           ]
         },
         {
@@ -1459,8 +1468,7 @@
             "Observation.code",
             "Observation.value[x]",
             "Observation.status",
-            "Observation.effective[x]",
-            "Observation.issued"
+            "Observation.effective[x]"
           ]
         },
         {
@@ -1470,8 +1478,22 @@
             "Observation.code",
             "Observation.value[x]",
             "Observation.status",
-            "Observation.effective[x]",
-            "Observation.issued"
+            "Observation.effective[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse",
+          "elements": [
+            "QuestionnaireResponse.questionnaire",
+            "QuestionnaireResponse.item.answer",
+            "QuestionnaireResponse.item.answer.value[x]",
+            "QuestionnaireResponse.authored"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+          "elements": [
+            "Condition.code"
           ]
         }
       ]
@@ -1495,8 +1517,7 @@
             "Observation.code",
             "Observation.value[x]",
             "Observation.status",
-            "Observation.effective[x]",
-            "Observation.issued"
+            "Observation.effective[x]"
           ]
         },
         {
@@ -1506,8 +1527,22 @@
             "Observation.code",
             "Observation.value[x]",
             "Observation.status",
-            "Observation.effective[x]",
-            "Observation.issued"
+            "Observation.effective[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse",
+          "elements": [
+            "QuestionnaireResponse.questionnaire",
+            "QuestionnaireResponse.item.answer",
+            "QuestionnaireResponse.item.answer.value[x]",
+            "QuestionnaireResponse.authored"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+          "elements": [
+            "Condition.code"
           ]
         }
       ]
@@ -1527,8 +1562,7 @@
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
           "elements": [
             "Condition.category:us-core",
-            "Condition.code",
-            "Condition.severity"
+            "Condition.code"
           ]
         }
       ]
@@ -1552,8 +1586,7 @@
             "Observation.code",
             "Observation.value[x]",
             "Observation.status",
-            "Observation.effective[x]",
-            "Observation.issued"
+            "Observation.effective[x]"
           ]
         },
         {
@@ -1563,8 +1596,22 @@
             "Observation.code",
             "Observation.value[x]",
             "Observation.status",
-            "Observation.effective[x]",
-            "Observation.issued"
+            "Observation.effective[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse",
+          "elements": [
+            "QuestionnaireResponse.questionnaire",
+            "QuestionnaireResponse.item.answer",
+            "QuestionnaireResponse.item.answer.value[x]",
+            "QuestionnaireResponse.authored"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
+          "elements": [
+            "Condition.code"
           ]
         }
       ]
@@ -1588,8 +1635,7 @@
             "Observation.code",
             "Observation.value[x]",
             "Observation.status",
-            "Observation.effective[x]",
-            "Observation.issued"
+            "Observation.effective[x]"
           ]
         },
         {
@@ -1599,15 +1645,16 @@
             "Observation.code",
             "Observation.value[x]",
             "Observation.status",
-            "Observation.effective[x]",
-            "Observation.issued"
+            "Observation.effective[x]"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse",
           "elements": [
             "QuestionnaireResponse.questionnaire",
-            "QuestionnaireResponse.item"
+            "QuestionnaireResponse.item.answer",
+            "QuestionnaireResponse.item.answer.value[x]",
+            "QuestionnaireResponse.authored"
           ]
         },
         {
@@ -1656,8 +1703,7 @@
             "Observation.code",
             "Observation.value[x]",
             "Observation.status",
-            "Observation.effective[x]",
-            "Observation.issued"
+            "Observation.effective[x]"
           ]
         },
         {
@@ -1667,15 +1713,16 @@
             "Observation.code",
             "Observation.value[x]",
             "Observation.status",
-            "Observation.effective[x]",
-            "Observation.issued"
+            "Observation.effective[x]"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse",
           "elements": [
             "QuestionnaireResponse.questionnaire",
-            "QuestionnaireResponse.item"
+            "QuestionnaireResponse.item.answer",
+            "QuestionnaireResponse.item.answer.value[x]",
+            "QuestionnaireResponse.authored"
           ]
         },
         {
@@ -1721,8 +1768,7 @@
             "Observation.code",
             "Observation.value[x]",
             "Observation.status",
-            "Observation.effective[x]",
-            "Observation.issued"
+            "Observation.effective[x]"
           ]
         },
         {
@@ -1732,15 +1778,16 @@
             "Observation.code",
             "Observation.value[x]",
             "Observation.status",
-            "Observation.effective[x]",
-            "Observation.issued"
+            "Observation.effective[x]"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse",
           "elements": [
             "QuestionnaireResponse.questionnaire",
-            "QuestionnaireResponse.item"
+            "QuestionnaireResponse.item.answer",
+            "QuestionnaireResponse.item.answer.value[x]",
+            "QuestionnaireResponse.authored"
           ]
         },
         {
@@ -1765,39 +1812,59 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone",
           "elements": [
-            "Procedure.statusReason"
+            "Procedure.statusReason",
+            "Procedure.extension:recorded",
+            "Procedure.code.extension:codeOptions",
+            "Procedure.reasonCode",
+            "Procedure.reasonReference"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationnotdone",
           "elements": [
-            "Immunization.statusReason"
+            "Immunization.statusReason",
+            "Immunization.status",
+            "Immunization.vaccineCode",
+            "Immunization.vaccineCode.extension:codeOptions",
+            "Immunization.recorded"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone",
           "elements": [
-            "MedicationAdministration.statusReason"
+            "MedicationAdministration.statusReason",
+            "MedicationAdministration.status",
+            "MedicationAdministration.medication[x]",
+            "MedicationAdministration.medication[x].extension:codeOptions"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined",
           "elements": [
-            "MedicationDispense.statusReason[x]"
+            "MedicationDispense.statusReason[x]",
+            "MedicationDispense.extension:recorded",
+            "MedicationDispense.status",
+            "MedicationDispense.medication[x]",
+            "MedicationDispense.medication[x].extension:codeOptions"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationprohibited",
           "elements": [
             "MedicationRequest.reasonCode",
-            "MedicationRequest.doNotPerform"
+            "MedicationRequest.doNotPerform",
+            "MedicationRequest.medication[x]",
+            "MedicationRequest.medication[x].extension:codeOptions"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
           "elements": [
             "ServiceRequest.reasonCode",
-            "ServiceRequest.doNotPerform"
+            "ServiceRequest.doNotPerform",
+            "ServiceRequest.code",
+            "ServiceRequest.code.extension:codeOptions",
+            "ServiceRequest.authoredOn"
           ]
         }
       ]
@@ -2022,7 +2089,12 @@
         }
       ],
       "usQualityCore": [
-
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab",
+          "elements": [
+            "Observation.specimen"
+          ]
+        }
       ]
     }
   },
@@ -2038,7 +2110,12 @@
         }
       ],
       "usQualityCore": [
-
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab",
+          "elements": [
+            "Observation.specimen"
+          ]
+        }
       ]
     }
   },
@@ -2054,7 +2131,12 @@
         }
       ],
       "usQualityCore": [
-
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab",
+          "elements": [
+            "Observation.specimen"
+          ]
+        }
       ]
     }
   },
@@ -2148,12 +2230,6 @@
           "elements": [
             "Observation.issued"
           ]
-        },
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab",
-          "elements": [
-            "DiagnosticReport.effective[x]"
-          ]
         }
       ]
     }
@@ -2170,7 +2246,13 @@
         }
       ],
       "usQualityCore": [
-
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-observation-lab",
+          "elements": [
+            "Observation.effective[x]",
+            "Observation.specimen"
+          ]
+        }
       ]
     }
   },
@@ -2189,25 +2271,25 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequest",
           "elements": [
-            "DeviceRequest.code[x]"
-          ]
-        },
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
-          "elements": [
-            "ServiceRequest.code"
+            "DeviceRequest.code[x]:codeCodeableConcept.extension:codeOptions"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequested",
           "elements": [
-            "DeviceRequest.code[x]"
+            "DeviceRequest.code[x]:codeCodeableConcept.extension:codeOptions"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
+          "elements": [
+            "ServiceRequest.code.extension:codeOptions"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
           "elements": [
-            "ServiceRequest.code"
+            "ServiceRequest.code.extension:codeOptions"
           ]
         }
       ]
@@ -2281,22 +2363,19 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispense",
           "elements": [
-            "MedicationDispense.status",
-            "MedicationDispense.whenPrepared"
+            "MedicationDispense.status"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined",
           "elements": [
-            "MedicationDispense.status",
-            "MedicationDispense.whenPrepared"
+            "MedicationDispense.status"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone",
           "elements": [
-            "MedicationDispense.status",
-            "MedicationDispense.whenPrepared"
+            "MedicationDispense.status"
           ]
         }
       ]
@@ -2469,7 +2548,8 @@
           "elements": [
             "MedicationAdministration.medication[x]",
             "MedicationAdministration.status",
-            "MedicationAdministration.dosage"
+            "MedicationAdministration.dosage",
+            "MedicationAdministration.medication[x].extension:codeOptions"
           ]
         },
         {
@@ -2477,7 +2557,8 @@
           "elements": [
             "MedicationAdministration.medication[x]",
             "MedicationAdministration.status",
-            "MedicationAdministration.dosage"
+            "MedicationAdministration.dosage",
+            "MedicationAdministration.medication[x].extension:codeOptions"
           ]
         },
         {
@@ -2485,7 +2566,8 @@
           "elements": [
             "MedicationAdministration.medication[x]",
             "MedicationAdministration.status",
-            "MedicationAdministration.dosage"
+            "MedicationAdministration.dosage",
+            "MedicationAdministration.medication[x].extension:codeOptions"
           ]
         }
       ]
@@ -2853,7 +2935,9 @@
             "ServiceRequest.code",
             "ServiceRequest.status",
             "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
+            "ServiceRequest.authoredOn",
+            "ServiceRequest.code.extension:codeOptions",
+            "ServiceRequest.doNotPerform"
           ]
         },
         {
@@ -2862,7 +2946,9 @@
             "ServiceRequest.code",
             "ServiceRequest.status",
             "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
+            "ServiceRequest.authoredOn",
+            "ServiceRequest.code.extension:codeOptions",
+            "ServiceRequest.doNotPerform"
           ]
         },
         {
@@ -2871,7 +2957,9 @@
             "ServiceRequest.code",
             "ServiceRequest.status",
             "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
+            "ServiceRequest.authoredOn",
+            "ServiceRequest.code.extension:codeOptions",
+            "ServiceRequest.doNotPerform"
           ]
         }
       ]
@@ -2893,7 +2981,9 @@
             "ServiceRequest.code",
             "ServiceRequest.status",
             "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
+            "ServiceRequest.authoredOn",
+            "ServiceRequest.code.extension:codeOptions",
+            "ServiceRequest.doNotPerform"
           ]
         },
         {
@@ -2902,7 +2992,9 @@
             "ServiceRequest.code",
             "ServiceRequest.status",
             "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
+            "ServiceRequest.authoredOn",
+            "ServiceRequest.code.extension:codeOptions",
+            "ServiceRequest.doNotPerform"
           ]
         },
         {
@@ -2911,7 +3003,9 @@
             "ServiceRequest.code",
             "ServiceRequest.status",
             "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
+            "ServiceRequest.authoredOn",
+            "ServiceRequest.code.extension:codeOptions",
+            "ServiceRequest.doNotPerform"
           ]
         }
       ]
@@ -2933,7 +3027,9 @@
             "ServiceRequest.code",
             "ServiceRequest.status",
             "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
+            "ServiceRequest.authoredOn",
+            "ServiceRequest.code.extension:codeOptions",
+            "ServiceRequest.doNotPerform"
           ]
         },
         {
@@ -2942,7 +3038,9 @@
             "ServiceRequest.code",
             "ServiceRequest.status",
             "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
+            "ServiceRequest.authoredOn",
+            "ServiceRequest.code.extension:codeOptions",
+            "ServiceRequest.doNotPerform"
           ]
         },
         {
@@ -2951,7 +3049,9 @@
             "ServiceRequest.code",
             "ServiceRequest.status",
             "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
+            "ServiceRequest.authoredOn",
+            "ServiceRequest.code.extension:codeOptions",
+            "ServiceRequest.doNotPerform"
           ]
         }
       ]
@@ -2973,7 +3073,8 @@
             "DeviceRequest.code[x]",
             "DeviceRequest.modifierExtension:doNotPerform",
             "DeviceRequest.authoredOn",
-            "DeviceRequest.status"
+            "DeviceRequest.status",
+            "DeviceRequest.intent"
           ]
         },
         {
@@ -2982,7 +3083,8 @@
             "DeviceRequest.code[x]",
             "DeviceRequest.modifierExtension:doNotPerform",
             "DeviceRequest.authoredOn",
-            "DeviceRequest.status"
+            "DeviceRequest.status",
+            "DeviceRequest.intent"
           ]
         },
         {
@@ -2991,7 +3093,8 @@
             "DeviceRequest.code[x]",
             "DeviceRequest.modifierExtension:doNotPerform",
             "DeviceRequest.authoredOn",
-            "DeviceRequest.status"
+            "DeviceRequest.status",
+            "DeviceRequest.intent"
           ]
         }
       ]
@@ -3014,7 +3117,10 @@
             "MedicationRequest.intent",
             "MedicationRequest.status",
             "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
-            "MedicationRequest.dispenseRequest.validityPeriod"
+            "MedicationRequest.dispenseRequest.validityPeriod",
+            "MedicationRequest.doNotPerform",
+            "MedicationRequest.medication[x].extension:codeOptions",
+            "MedicationRequest.authoredOn"
           ]
         },
         {
@@ -3024,7 +3130,10 @@
             "MedicationRequest.intent",
             "MedicationRequest.status",
             "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
-            "MedicationRequest.dispenseRequest.validityPeriod"
+            "MedicationRequest.dispenseRequest.validityPeriod",
+            "MedicationRequest.doNotPerform",
+            "MedicationRequest.medication[x].extension:codeOptions",
+            "MedicationRequest.authoredOn"
           ]
         },
         {
@@ -3034,7 +3143,10 @@
             "MedicationRequest.intent",
             "MedicationRequest.status",
             "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
-            "MedicationRequest.dispenseRequest.validityPeriod"
+            "MedicationRequest.dispenseRequest.validityPeriod",
+            "MedicationRequest.doNotPerform",
+            "MedicationRequest.medication[x].extension:codeOptions",
+            "MedicationRequest.authoredOn"
           ]
         }
       ]
@@ -3053,7 +3165,11 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-nutritionorder",
           "elements": [
-            "NutritionOrder.intent"
+            "NutritionOrder.intent",
+            "NutritionOrder.patient",
+            "NutritionOrder.status",
+            "NutritionOrder.oralDiet",
+            "NutritionOrder.oralDiet.type"
           ]
         }
       ]
@@ -3066,7 +3182,12 @@
     "notes": "",
     "mappings": {
       "usCore": [
-
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference|9.0.0"
+        }
       ],
       "usQualityCore": [
         {
@@ -3115,7 +3236,8 @@
             "ServiceRequest.code",
             "ServiceRequest.status",
             "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
+            "ServiceRequest.authoredOn",
+            "ServiceRequest.code.extension:codeOptions"
           ]
         },
         {
@@ -3124,7 +3246,8 @@
             "ServiceRequest.code",
             "ServiceRequest.status",
             "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
+            "ServiceRequest.authoredOn",
+            "ServiceRequest.code.extension:codeOptions"
           ]
         },
         {
@@ -3133,7 +3256,8 @@
             "ServiceRequest.code",
             "ServiceRequest.status",
             "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
+            "ServiceRequest.authoredOn",
+            "ServiceRequest.code.extension:codeOptions"
           ]
         }
       ]
@@ -3299,8 +3423,7 @@
           "elements": [
             "Patient.name",
             "Patient.name.family",
-            "Patient.name.period",
-            "Patient.name.use"
+            "Patient.name.period"
           ]
         }
       ]
@@ -3321,8 +3444,7 @@
           "elements": [
             "Patient.name",
             "Patient.name.given",
-            "Patient.name.period",
-            "Patient.name.use"
+            "Patient.name.period"
           ]
         }
       ]
@@ -3343,8 +3465,7 @@
           "elements": [
             "Patient.name",
             "Patient.name.period",
-            "Patient.name.suffix",
-            "Patient.name.use"
+            "Patient.name.suffix"
           ]
         }
       ]
@@ -3960,8 +4081,13 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure",
           "elements": [
-            "Procedure.performed[x]",
-            "Procedure.extension:recorded"
+            "Procedure.performed[x]"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
+          "elements": [
+            "Procedure.performed[x]"
           ]
         },
         {
@@ -3981,13 +4107,6 @@
           "elements": [
             "Immunization.occurrence[x]"
           ]
-        },
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
-          "elements": [
-            "Procedure.performed[x]",
-            "Procedure.extension:recorded"
-          ]
         }
       ]
     }
@@ -4005,7 +4124,8 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure",
           "elements": [
-            "Procedure.reasonCode"
+            "Procedure.reasonCode",
+            "Procedure.reasonReference"
           ]
         },
         {
@@ -4018,7 +4138,8 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone",
           "elements": [
-            "Procedure.reasonCode"
+            "Procedure.reasonCode",
+            "Procedure.reasonReference"
           ]
         },
         {
@@ -4031,7 +4152,8 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
           "elements": [
-            "Procedure.reasonCode"
+            "Procedure.reasonCode",
+            "Procedure.reasonReference"
           ]
         },
         {
@@ -4101,18 +4223,6 @@
           ]
         },
         {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone",
-          "elements": [
-            "Procedure.code"
-          ]
-        },
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
-          "elements": [
-            "ServiceRequest.code"
-          ]
-        },
-        {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
           "elements": [
             "Procedure.code"
@@ -4131,7 +4241,7 @@
     "class": "Procedures",
     "name": "Procedures",
     "description": "Activity performed for or on a patient as part of the provision of care.",
-    "notes": "",
+    "notes": "In QI-Core, information about principal procedure is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. Implementers may determine the appropriate implementation approach to support this USCDI+ Quality data element. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
     "mappings": {
       "usCore": [
 
@@ -4139,13 +4249,6 @@
       "usQualityCore": [
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedure",
-          "elements": [
-            "Procedure.code",
-            "Procedure.partOf"
-          ]
-        },
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone",
           "elements": [
             "Procedure.code",
             "Procedure.partOf"
