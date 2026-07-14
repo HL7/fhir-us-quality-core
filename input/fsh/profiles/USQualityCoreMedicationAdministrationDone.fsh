@@ -18,5 +18,6 @@ Description: "Positive profile of MedicationAdministration for decision support/
 * dosage.route ^short = "Path of substance into body"
 * effective[x] ^short = "Start and end time of administration"
 * medication[x] ^short = "What was administered"
+* medication[x].extension[codeOptions] ^short = "Url of a value set of candidate medications"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationAdministrationDone

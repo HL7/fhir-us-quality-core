@@ -18,6 +18,7 @@ Description: "Negation profile of ServiceRequest for decision support/quality me
 * doNotPerform = true (exactly)
   * ^short = "True if service/procedure should not be performed"
 * code ^short = "What is being requested/ordered"
+* code.extension[codeOptions] ^short = "Url of a value set of candidate services"
 * authoredOn 1..1
   * ^short = "Date request signed"
 * reasonCode only CodeableConcept

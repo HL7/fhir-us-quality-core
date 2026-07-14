@@ -26,5 +26,6 @@ Description: "Negation profile of DeviceRequest for decision support/quality met
 * reasonCode from USQualityCoreNegationReasonCodes (extensible)
   * ^short = "Explanation/Justification for procedure or service"
 * status ^short = "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
+* intent ^short = "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreDeviceProhibited

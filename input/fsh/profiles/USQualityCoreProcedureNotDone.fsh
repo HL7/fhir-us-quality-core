@@ -24,6 +24,7 @@ Description: "Negative profile of Procedure for decision support/quality metrics
   * ^short = "Reason for the current status"
   * ^binding.description = "The reason the procedure was not done"
 * code ^short = "What procedure"
+* code.extension[codeOptions] ^short = "Url of a value set of candidate procedures"
 * performed[x] ^short = "When the procedure was performed"
 * reasonCode ^short = "Coded reason procedure performed"
 * reasonReference ^short = "The justification that the procedure was performed"

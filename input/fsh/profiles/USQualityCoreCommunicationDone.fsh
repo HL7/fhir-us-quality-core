@@ -17,5 +17,6 @@ Description: "Positive profile of Communication for decision support/quality met
 * sent ^short = "When sent"
 * subject ^short = "Focus of message"
 * topic ^short = "Description of the purpose/content"
+* topic.extension[codeOptions] ^short = "Url of a value set of candidate topics"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreCommunicationDone

@@ -35,6 +35,7 @@ Description: "Profile of DeviceRequest for decision support/quality metrics. Def
   * extension[codeOptions] ^short = "Url of a value set of candidate devices"
     * ^definition = "A logical reference (e.g. a reference to ValueSet.url) to a value set/version that identifies a set of possible coded values representing the device."
     * ^condition = "drq-3"
+* code[x][codeCodeableConcept].extension[codeOptions] ^short = "Url of a value set of candidate devices"
 * subject only Reference(USQualityCorePatient)
   * ^short = "Focus of request"
 * authoredOn ^short = "When recorded"

@@ -20,5 +20,7 @@ Description: "Negation profile of Communication for decision support/quality met
 * statusReason 1..1
 * statusReason from USQualityCoreNegationReasonCodes (extensible)
   * ^short = "Reason for current status"
+* subject ^short = "Focus of message"
+* topic.extension[codeOptions] ^short = "Url of a value set of candidate topics"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreCommunicationNotDone

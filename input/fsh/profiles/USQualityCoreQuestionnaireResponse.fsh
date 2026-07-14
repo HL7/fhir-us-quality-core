@@ -13,6 +13,7 @@ Description: "The US Quality Core QuestionnaireResponse Profile is based upon th
 * ^copyright = "Used by permission of HL7 International, all rights reserved Creative Commons License"
 * questionnaire 1..1
   * ^short = "Form being answered"
+* authored ^short = "Date the answers were gathered"
 * subject 1..
 * subject only Reference(USQualityCorePatient)
   * ^short = "The subject of the questions"
@@ -24,5 +25,6 @@ Description: "The US Quality Core QuestionnaireResponse Profile is based upon th
   * answer.value[x] 0..1
   * answer.value[x] only Coding or string or decimal or date or dateTime or integer or Quantity
     * ^short = "Single-valued answer to the question"
+* item.answer ^short = "The response(s) to the question"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreQuestionnaireResponse

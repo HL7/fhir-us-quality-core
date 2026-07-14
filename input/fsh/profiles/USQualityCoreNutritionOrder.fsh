@@ -18,9 +18,11 @@ Description: "Defines constraints and extensions on the NutritionOrder resource 
   * ^short = "The person who requires the diet, formula or nutritional supplement"
   * ^definition = "The person (patient) who needs the nutrition order for an oral diet, nutritional supplement and/or enteral or formula feeding."
   * ^requirements = "The person who requires the diet, formula or nutritional supplement."
+* oralDiet ^short = "Oral diet components"
 * oralDiet.type 0..1
 * oralDiet.type only CodeableConcept
   * ^short = "Oral diet components"
 * intent ^short = "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
+* status ^short = "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreNutritionOrder

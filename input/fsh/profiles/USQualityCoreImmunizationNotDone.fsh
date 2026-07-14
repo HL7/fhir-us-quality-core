@@ -21,6 +21,8 @@ Description: "Negation profile of Communication for decision support/quality met
 * encounter 0..1
 * encounter only Reference(USQualityCoreEncounter)
   * ^short = "Encounter the immunization was part of"
+* vaccineCode ^short = "Vaccine Product Type (bind to CVX)"
+* vaccineCode.extension[codeOptions] ^short = "Url of a value set of candidate vaccines"
 * occurrence[x] ^short = "Vaccine administration date"
 * recorded 0..1
   * ^short = "Documented date Immunization did not occur."

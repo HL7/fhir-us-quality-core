@@ -56,6 +56,7 @@ Description: "Profile of Encounter for decision support/quality metrics. Defines
   * extension[diagnosisPresentOnAdmission]
     * ^short = "onAdmission"
     * ^definition = "Indicator of whether the Encounter diagnosis was present at the time of admission."
+* diagnosis.use ^short = "Role that this diagnosis has within the encounter (e.g. admission, billing, discharge …)"
 * hospitalization ^short = "Details about the admission to a healthcare service"
   // SUSHI retains inherited targetProfile array entries unless each slot is overwritten.
   * origin ^mustSupport = false
