@@ -162,6 +162,18 @@ function sourceText(sources, profileIdValue, fshPath) {
     : 'No JSON source mapping found for this generated rule.';
 }
 
+function inheritedShortSuggestion(data, fshPath) {
+  const inheritedShort = data.shorts.get(fshPath);
+  if (!inheritedShort) {
+    return '  The compiled target profile snapshot does not provide an inherited short to preserve.';
+  }
+
+  return [
+    '  Suggested FSH rule using the inherited short:',
+    `    ${caretRule(fshPath, 'short', inheritedShort).toFSH()}`
+  ].join('\n');
+}
+
 function assertMappedElementsAndShorts(flags, profilesById, profileData, authoredData, sources) {
   const missingElements = [];
   const inheritedOnlyElements = [];
@@ -185,6 +197,7 @@ function assertMappedElementsAndShorts(flags, profilesById, profileData, authore
           [
             `${profile.name}.${fshPath} exists only by inheritance and is not defined in ${authored.file}.`,
             '  Add an explicit rule for this element to the target profile FSH before it can be flagged.',
+            inheritedShortSuggestion(data, fshPath),
             `  JSON mapping: ${sourceText(sources, id, fshPath)}`
           ].join('\n')
         );
