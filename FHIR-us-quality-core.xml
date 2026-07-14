@@ -30,7 +30,6 @@
 <artifact id="DiagnosticReport/note-example" key="DiagnosticReport-note-example" name="DiagnosticReportNote example"/>
 <artifact id="Encounter/example" key="Encounter-example" name="Encounter example"/>
 <artifact id="Encounter/encounter-ed-example" key="Encounter-encounter-ed-example" name="Encounter example of emergency visit that escalated into inpatient patient"/>
-<artifact id="FamilyMemberHistory/example" key="FamilyMemberHistory-example" name="FamilyMemberHistory example"/>
 <artifact id="Observation/example-frailty" key="Observation-example-frailty" name="Frailty observation example"/>
 <artifact id="Observation/example-gestation" key="Observation-example-gestation" name="Gestation age at birth observation example"/>
 <artifact id="Observation/laboratory-result-observation-example-blood-glucose" key="Observation-laboratory-result-observation-example-blood-glucose" name="Glucose Laboratory Result Observation Example"/>
@@ -116,7 +115,6 @@
 <artifact id="StructureDefinition/us-quality-core-diagnosticreport-lab" key="StructureDefinition-us-quality-core-diagnosticreport-lab" name="US Quality Core DiagnosticReport Profile for Laboratory Results Reporting"/>
 <artifact id="StructureDefinition/us-quality-core-diagnosticreport-note" key="StructureDefinition-us-quality-core-diagnosticreport-note" name="US Quality Core DiagnosticReport Profile for Report and Note Exchange"/>
 <artifact id="StructureDefinition/us-quality-core-encounter" key="StructureDefinition-us-quality-core-encounter" name="US Quality Core Encounter"/>
-<artifact id="StructureDefinition/us-quality-core-familymemberhistory" key="StructureDefinition-us-quality-core-familymemberhistory" name="US Quality Core FamilyMemberHistory"/>
 <artifact id="StructureDefinition/us-quality-core-goal" key="StructureDefinition-us-quality-core-goal" name="US Quality Core Goal"/>
 <artifact id="StructureDefinition/us-quality-core-imagingstudy" key="StructureDefinition-us-quality-core-imagingstudy" name="US Quality Core ImagingStudy"/>
 <artifact id="StructureDefinition/us-quality-core-immunization" key="StructureDefinition-us-quality-core-immunization" name="US Quality Core Immunization"/>

@@ -48,9 +48,6 @@
 **USQualityCoreEncounter**
 * [Inpatient Admission for Appendicitis](Encounter-example.html)
 
-**USQualityCoreFamilyMemberHistory**
-* [Father Died of Heart Attack Example](FamilyMemberHistory-example.html)
-
 **USQualityCoreGoal**
 * [Weight Loss Example](Goal-example.html)
 

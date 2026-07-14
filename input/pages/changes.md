@@ -41,6 +41,7 @@ The following changes have been made for v1.0.0:
   * USQualityCoreMedicationStatement
   * USQualityCoreNonPatientObservation
   * USQualityCoreSubstance
+  * USQualityCoreFamilyMemberHistory (FamilyMemberHistory added in US Core STU9)
 * Removes CQL modelinfo and supporting artifacts and guidance.
 * Adds a downloadable USCDI+ Quality data element mappings CSV.
 * Removes QDM to US Quality Core mapping page
