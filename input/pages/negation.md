@@ -295,9 +295,7 @@ Second, a fulfillment task with a status of `rejected` and the `focus` referenci
 }
 ```
 
-See the [Service Requested With Code](ServiceRequest-proposal-example-code.html) for a complete example.
-
-See the [Task Rejected With Code Example](Task-rejected-with-code-example.html) for a complete example.
+See the [Service Requested With Code](ServiceRequest-proposal-example-code.html) and [Task Rejected With Code Example](Task-rejected-with-code-example.html) for complete examples.
 
 ##### Rejecting a proposal to perform any of a class of activities
 
@@ -369,6 +367,4 @@ Followed by a fulfillment task with a status of `rejected` and the `focus` refer
 }
 ```
 
-See the [Service Requested Example](ServiceRequest-proposal-example.html) for a complete example.
-
-See the [Task Rejected Example](Task-rejected-example.html) for a complete example.
+See the [Service Requested Example](ServiceRequest-proposal-example.html) and [Task Rejected Example](Task-rejected-example.html) for complete examples.
