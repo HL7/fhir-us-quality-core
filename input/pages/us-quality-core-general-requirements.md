@@ -15,19 +15,19 @@ In addition to adherence to core FHIR requirements, conformance to this US Quali
 - Quality improvement applications **SHALL** recognize and process all MustSupport elements in US Quality Core.
 - Modifier elements **SHALL** be treated as MustSupport, even if not explicitly declared.
     - Applications **SHALL NOT** process resource instances that include unknown modifier elements.
-- The resources in "Any" references **SHALL** conform to US Quality Core profiles if the base resource has a US Quality Core profile.
-- Quality improvement applications **SHALL** be simultaneously compliant with US Quality Core profiles and US Core profiles. Because US Quality Core profiles are derived from US Core, the more restrictive US Quality Core bindings SHALL be applied where they exist.
+- If a target resource referenced by a US Quality Core profile has a US Quality Core profile, it **SHALL** conform to the US Quality Core profile.
+- Quality improvement applications **SHALL** be simultaneously compliant with US Quality Core profiles and US Core profiles. Because US Quality Core profiles are derived from US Core, the more restrictive US Quality Core bindings **SHALL** be applied where they exist.
 - Applications **SHOULD** use the preferred value sets as defined by US Quality Core profiles.
 
 ### API Requirements
 
-US Quality Core RESTful API conformance is defined by the [US Quality Core CapabilityStatements](capability-statements.html). The CapabilityStatements identify required and optional RESTful interactions, including `read` and `search-type`, as well as individual search parameters and combined search parameters used to retrieve in-scope Draft USCDI+ Quality V2 data.
+US Quality Core RESTful API conformance is defined by the [US Quality Core CapabilityStatements](capability-statements.html). The CapabilityStatements identify required and optional RESTful interactions, including `read` and `search-type`, as well as individual search parameters and combined search parameters used to retrieve in-scope USCDI+ Quality V2 data.
 
 US Quality Core implementations are also expected to conform to applicable US Core RESTful API requirements. US Quality Core may restate US Core requirements to highlight those that are relevant to USCDI+ Quality data access. US Core requirements not restated in US Quality Core remain part of applicable US Core conformance.
 
 #### Search Requirement Selection
 
-Like US Core, many US Quality Core RESTful API requirements are search requirements. US Quality Core defines a focused set of searches needed to retrieve in-scope Draft USCDI+ Quality V2 data for quality measurement and reporting.
+Like US Core, many US Quality Core RESTful API requirements are search requirements. US Quality Core defines a focused set of searches needed to retrieve in-scope USCDI+ Quality V2 data for quality measurement and reporting.
 
 US Quality Core CapabilityStatements may restate US Core search requirements when the search is directly relevant to USCDI+ Quality data access. Restating a US Core search in this guide highlights its relevance for US Quality Core; not restating a US Core search does not remove the underlying US Core requirement.
 
@@ -43,9 +43,9 @@ The presence of a SearchParameter artifact in this guide does not, by itself, cr
 
 ### Modifier Elements
 
-Within FHIR resources, some elements are considered [Modifier Elements]({{site.data.fhir.path}}conformance-rules.html#isModifier), indicating that the value of that element may change the interpretation of the resource. Typical examples of modifier elements are elements such as `status` that exists in many resources and `doNotPerform` element in MedicationRequest. For example, `Procedure.status` with a value of not-done indicating that the procedure was not performed.
+Within FHIR resources, some elements are considered [Modifier Elements]({{site.data.fhir.path}}conformance-rules.html#isModifier), indicating that the value of that element may change the interpretation of the resource. A typical example of modifier elements is the `status` element present in many QI Core resources. For example, `Procedure.status` with a value of `not-done` indicating that the procedure was not performed.
 
-Decision support and quality implementations **SHALL** always check the values of modifier elements. For example, in processing a Procedure resource, the application must inspect the `status` element to determine whether the procedure was performed or not performed to the patient. For this reason, modifier elements SHALL be treated as MustSupport, even if not declared.
+Decision support and quality implementations **SHALL** always check the values of modifier elements. For example, in processing a Procedure resource, the application must inspect the `status` element to determine whether the procedure was performed or not performed. For this reason, modifier elements **SHALL** be treated as MustSupport, even if not declared.
 
 ### Negation in US Quality Core
 {: #negation-in-us-quality-core}
@@ -64,7 +64,7 @@ US Quality Core constrains these negated concepts as follows:
 
     The measure or CDS artifact uses a specifically designed US Quality Core profile to indicate that an activity intentionally did not occur for a valid reason.
 
-When there is a need to document evidence that an expected activity was not done due to patient preference and/or specific criteria, systems should use one of the ten US Quality Core specific *negation* *rationale* profiles that align with existing profiles representing the expected actions.
+When there is a need to document evidence that an expected activity was not done due to patient preference and/or specific criteria, systems should use one of the nine US Quality Core specific *negation rationale* profiles that align with existing profiles representing the expected actions.
 The [US Quality Core Negation](negation.html) page of this guide provides detailed descriptions and guidance on these profiles.
 
 ### Terminology Bindings
@@ -72,13 +72,17 @@ The [US Quality Core Negation](negation.html) page of this guide provides detail
 Quality improvement artifact authors should pay close attention to binding parameters specified in the
 profiles to determine whether the value set defined in the binding is exemplar or should be constrained to a specific value set when used. For example, the `code` element of the US Quality Core Medication profile is bound to the complete value set for the RxNorm code system, indicating that all Medication instances SHALL use codes from the RxNorm code system, but within any given artifact, instances will typically use a restricted value set.
 
-### Resource References and "Any"
+### Resource References
 
 FHIR resources frequently contain references (pointers) to other FHIR resources. For example, `Encounter.subject` is a reference to a Patient resource. In US Quality Core, most references are constrained to US Quality Core profiled resources. For example, the US Quality Core Encounter profile's `Encounter.subject` must point to a Patient resource that conforms to the US Quality Core Patient profile. Consequently, any extensions or bindings expected to exist in US Quality Core Patient are also present in the resource pointed to by `Encounter.subject`. References to US Quality Core extensions accessed through references are guaranteed to be valid. References to resources that do not currently have US Quality Core profiles are not constrained, and as such, only the core FHIR properties and bindings are guaranteed to exist.
 
-A particular problem occurs when a resource reference permits any type of resource, such as Encounter.indication. When
-dealing with "Any" references, the current method of specifying profiles does not allow the profile author to specify
-something to the effect of "a US Quality Core resource when there is one, and a FHIR core resource if there isn't." As stated in the [Summary of Conformance Requirements](us-quality-core-general-requirements.html#summary-of-conformance-requirements) section above, in US Quality Core, the resources in "Any" references SHALL conform to US Quality Core profiles if the base resource has been profiled.
+A particular problem occurs when a resource reference permits any type of resource, such as `Task.basedOn` or
+`Provenance.target`. These are rendered as `Reference(Resource)` in the profile tables. When dealing with
+`Reference(Resource)` elements, the current method of specifying profiles does not allow the profile author to specify
+something to the effect of "a US Quality Core resource when there is one, and a FHIR core resource if there isn't." As
+stated in the [Summary of Conformance Requirements](us-quality-core-general-requirements.html#summary-of-conformance-requirements)
+section above, in US Quality Core, the resources referenced by `Reference(Resource)` elements **SHALL** conform to US Quality
+Core profiles if the base resource has been profiled.
 
 ---
 Footnotes:
