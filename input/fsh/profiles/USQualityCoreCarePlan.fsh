@@ -2,7 +2,7 @@ Profile: USQualityCoreCarePlan
 Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan|9.0.0
 Id: us-quality-core-careplan
 Title: "US Quality Core CarePlan"
-Description: "The US Quality Core CarePlan is based upon the US Core CarePlan Profile which is based upon the core FHIR CarePlan Resource and created to meet the 2015 Edition Common Clinical Data Set 'Assessment and Plan of Treatment requirements. Defines constraints and extensions on the CarePlan resource for the minimal set of data to query and retrieve a patient's Care Plan."
+Description: "Defines constraints and extensions on the CarePlan resource for the minimal set of data to query and retrieve a patient's Care Plan."
 * ^version = "1.0.0"
 * ^experimental = false
 * ^date = "2026-06-30"
