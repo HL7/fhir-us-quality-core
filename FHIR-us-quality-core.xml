@@ -182,7 +182,6 @@
 <artifact id="SearchParameter/us-quality-core-encounter-id" key="SearchParameter-us-quality-core-encounter-id" name="us-quality-core-encounter-id"/>
 <artifact id="SearchParameter/us-quality-core-encounter-patient" key="SearchParameter-us-quality-core-encounter-patient" name="us-quality-core-encounter-patient"/>
 <artifact id="SearchParameter/us-quality-core-encounter-type" key="SearchParameter-us-quality-core-encounter-type" name="us-quality-core-encounter-type"/>
-<artifact id="SearchParameter/us-quality-core-family-member-history-patient" key="SearchParameter-us-quality-core-family-member-history-patient" name="us-quality-core-family-member-history-patient"/>
 <artifact id="SearchParameter/us-quality-core-goal-patient" key="SearchParameter-us-quality-core-goal-patient" name="us-quality-core-goal-patient"/>
 <artifact id="SearchParameter/us-quality-core-imaging-study-subject" key="SearchParameter-us-quality-core-imaging-study-subject" name="us-quality-core-imaging-study-subject"/>
 <artifact id="SearchParameter/us-quality-core-immunization-patient" key="SearchParameter-us-quality-core-immunization-patient" name="us-quality-core-immunization-patient"/>
