@@ -66,7 +66,7 @@
 * [Example of an IV medication - Alemtuzumab](Medication-example.html)
 
 **USQualityCoreMedicationAdministration**
-* [Inhalant Example](MedicationAdministration-example.html)
+* [Intravenous medication example](MedicationAdministration-example.html)
 
 **USQualityCoreMedicationAdministrationNotDone**
 * [Medication not administered using a value set to indicate what was not administered](MedicationAdministration-negation-example.html)
