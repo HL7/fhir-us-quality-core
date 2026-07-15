@@ -48,8 +48,6 @@ The negation profiles in US Quality Core can be used to make two different types
 
 In the following example the measure numerator criterion allows for documentation that specifies a single antithrombotic medication using a CodeableConcept drawn from the list of possible expected medications (in the value set) was not administered. In the example the profiled MedicationAdministration resource documents that the clinician specifically did not administer ticagrelor 90 MG Oral Tablet because drug treatment is not indicated. The evidence of a reason for not administering this single member of the value set “Antithrombotic Therapy for Ischemic Stroke” fulfills criteria for the numerator.
 
-See the [MedicationAdministration example using a specific code](MedicationAdministration-negation-with-code-example.html) for a complete example.
-
 ```json
 {
     "resourceType" : "MedicationAdministration",
@@ -82,6 +80,8 @@ See the [MedicationAdministration example using a specific code](MedicationAdmin
 }
 ```
 
+See the [MedicationAdministration example using a specific code](MedicationAdministration-negation-with-code-example.html) for a complete example.
+
 ##### Documenting that no members of an entire value set were performed for a given reason
 
 This kind of negation statement applies when a measure criterion can be satisfied when none of the concepts in a value set represent an appropriate treatment. This approach allows systems to document that no activities in a particular value set were performed using a single profiled data instance, rather than requiring documentation of multiple individual activities from that value set.
@@ -89,9 +89,6 @@ This kind of negation statement applies when a measure criterion can be satisfie
 Using the [codeOptions](http://hl7.org/fhir/StructureDefinition/codeOptions) extension, the following example documents that providers did not administer any of the medications in the "Antithrombotic Therapy for Ischemic Stroke" value set, fulfilling the criteria for the numerator:
 
 **NOTE:** Implementing systems must ensure that this approach does not result in conflicting data. For example, the above example indicating no administration of a medication in the Antithrombotic Therapy value set should not be used if there are administrations of individual medications in the same value set. In other words, it is a contradiction to say "a provider administered a specific medication" at the same time as "a provider did not administer any of the medications in this value set" if that value set includes the medication that was administered in the specific case.
-
-See the [MedicationAdministration example using a value set](MedicationAdministration-negation-example.html) for a complete example.
-
 
 ```json
 {
@@ -125,6 +122,7 @@ See the [MedicationAdministration example using a value set](MedicationAdministr
 }
 ```
 
+See the [MedicationAdministration example using a value set](MedicationAdministration-negation-example.html) for a complete example.
 
 #### Do Not Perform Requests
 
