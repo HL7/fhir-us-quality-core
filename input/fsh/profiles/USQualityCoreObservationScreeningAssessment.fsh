@@ -117,6 +117,9 @@ Description: "The US Quality Core Observation Screening Assessment Profile is ba
   * ^binding.description = "Codes identifying interpretations of observations."
 * hasMember only Reference(USQualityCoreObservationScreeningAssessment or QuestionnaireResponse)
   * ^type[0].targetProfile[1] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-questionnaireresponse"
+  // Restore the must-support flag on the screening-assessment target profile. US Core marks it true, but the `only` rule above drops it (leaving a null _targetProfile entry).
+  * ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+  * ^type[0].targetProfile[0].extension.valueBoolean = true
   * ^short = "Reference to panel or multi-select responses"
   * ^definition = "Aggregate set of Observations that represent question answer pairs for both multi-question surveys and multi-select questions."
   * ^comment = "This grouping element is used to represent surveys that group several questions together or individual questions with  “check all that apply” responses. For example in the simplest case a flat multi-question survey where the \"panel\" observation is the survey instrument itself and instead of an `Observation.value` the `hasMember` element references other Observation that represent the individual questions answer pairs. In a survey that has a heirarchical grouping of questions, the observation \"panels\" can be nested. Because surveys can be arbitrarily complex structurally, not all survey structures can be represented using this Observation grouping pattern."

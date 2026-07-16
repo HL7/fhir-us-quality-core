@@ -46,6 +46,9 @@ Description: "The US Quality Core Condition Encounter Diagnosis Profile is based
 * subject MS SU
   * ^short = "Who has the condition?"
   * ^isModifier = false
+  // Restore the must-support flag on the Patient target profile. US Core marks it true, but the `only` rule above drops it (leaving a null _targetProfile entry) when us-core-patient is replaced by us-quality-core-patient.
+  * ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+  * ^type[0].targetProfile[0].extension.valueBoolean = true
 * encounter only Reference(USQualityCoreEncounter)
   * ^short = "Encounter created as part of"
 * onset[x] only dateTime or Age or Period or Range

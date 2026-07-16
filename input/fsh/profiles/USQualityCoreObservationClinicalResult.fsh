@@ -48,6 +48,11 @@ Description: "This profile sets minimum expectations for the Observation resourc
 * subject 1..
 * subject only Reference(USQualityCorePatient or Group or USCoreDeviceProfile or USQualityCoreLocation)
   * ^short = "Who and/or what the observation is about"
+  // Restore the target-profile must-support flags. US Core sets these, but the `only` rule above drops them (leaving null _targetProfile entries) when the us-core-* profiles are replaced by us-quality-core-* profiles.
+  * ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+  * ^type[0].targetProfile[0].extension.valueBoolean = true
+  * ^type[0].targetProfile[3].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+  * ^type[0].targetProfile[3].extension.valueBoolean = false
 * effective[x] only dateTime or Period or Timing or instant
   * ^short = "Clinically relevant time/time-period for observation"
   * ^isModifier = false
