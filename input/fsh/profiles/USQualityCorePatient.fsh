@@ -42,10 +42,10 @@ Description: "Profile of Patient for decision support/quality metrics. Defines t
   * ^mustSupport = false
   * ^isModifier = false
 * extension[sex] 0..1
-* extension[sex] only http://hl7.org/fhir/us/core/StructureDefinition/us-core-individual-sex
-  * ^type[0].profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex|9.0.0"
+* extension[sex] only http://hl7.org/fhir/us/core/StructureDefinition/us-core-individual-sex|9.0.0
+  * ^type[0].profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-individual-sex|9.0.0"
   * ^short = "Sex Extension"
-  * ^definition = "The US Core Sex Extension is used to reflect the documentation of a person's sex. It aligns with the C-CDA Sex Observation (LOINC 46098-0)."
+  * ^definition = "The US Core Individual Sex Extension is used to reflect the documentation of a person's sex. It aligns with the C-CDA Sex Observation (LOINC 46098-0)."
   * ^base.path = "DomainResource.extension"
   * ^base.min = 0
   * ^base.max = "*"
