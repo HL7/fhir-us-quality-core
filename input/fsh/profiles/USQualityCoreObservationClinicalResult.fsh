@@ -2,7 +2,7 @@ Profile: USQualityCoreObservationClinicalResult
 Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|9.0.0
 Id: us-quality-core-observation-clinical-result
 Title: "US Quality Core Observation Clinical Result"
-Description: "This profile sets minimum expectations for the Observation resource to record and search non-laboratory clinical test results (e.g., radiology and other clinical observations generated from procedures). An example would be when a gastroenterologist reports the size of a polyp observed during a colonoscopy. This profile is the basis for the US Core Clinical  Result Profile, which defines additional data elements to record and search laboratory test results."
+Description: "This profile sets minimum expectations for the Observation resource to record and search non-laboratory clinical test results (e.g., radiology and other clinical observations generated from procedures). An example would be when a gastroenterologist reports the size of a polyp observed during a colonoscopy. This profile is the basis for the US Core Clinical Result Profile, which defines additional data elements to record and search laboratory test results."
 * ^version = "1.0.0"
 * ^date = "2026-06-30"
 * ^publisher = "HL7 International / Clinical Quality Information"

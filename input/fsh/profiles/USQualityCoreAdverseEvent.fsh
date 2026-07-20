@@ -47,6 +47,8 @@ Description: "Actual or potential/avoided event causing unintended physical inju
   * instance only Reference(USQualityCoreImmunization or USQualityCoreProcedure or Substance or USQualityCoreMedication or USQualityCoreMedicationAdministration or MedicationStatement or http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0)
     * ^short = "Refers to the specific entity that caused the adverse event"
   * causality ^mustSupport = false
+    * method from http://hl7.org/fhir/ValueSet/adverse-event-causality-method|4.0.1 (example)
+      * ^binding.description = "Method used to assess event causality"
 * subjectMedicalHistory only Reference(USQualityCoreSimpleObservation or USQualityCoreAllergyIntolerance or http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory|9.0.0 or USQualityCoreImmunization or USQualityCoreProcedure or USQualityCoreConditionProblemsHealthConcerns or USQualityCoreConditionEncounterDiagnosis)
   * ^mustSupport = false
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.

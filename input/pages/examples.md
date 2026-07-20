@@ -27,7 +27,7 @@
 * [Appendicitis Example](Condition-appendicitis-example.html)
 
 **USQualityCoreConditionProblemsHealthConcerns**
-* [Patient with concerns of becoming fat](Condition-health-concern-example.html)
+* [Patient with a fear of blood](Condition-health-concern-example.html)
 
 **USQualityCoreCoverage**
 * [General Person Primary Coverage Example](Coverage-example.html)
@@ -66,7 +66,7 @@
 * [Example of an IV medication - Alemtuzumab](Medication-example.html)
 
 **USQualityCoreMedicationAdministration**
-* [Inhalant Example](MedicationAdministration-example.html)
+* [Intravenous medication example](MedicationAdministration-example.html)
 
 **USQualityCoreMedicationAdministrationNotDone**
 * [Medication not administered using a value set to indicate what was not administered](MedicationAdministration-negation-example.html)

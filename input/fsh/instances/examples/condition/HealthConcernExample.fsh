@@ -1,7 +1,7 @@
 Instance: health-concern-example
 InstanceOf: USQualityCoreConditionProblemsHealthConcerns
 Title: "Condition Problems Health Concerns example"
-Description: "Example of a patient with a condition encounter health concern regarding obesity"
+Description: "Example of a patient with a health concern regarding fear of blood"
 Usage: #example
 * meta
   * extension[0]
@@ -19,8 +19,8 @@ Usage: #example
   * text = "Confirmed"
 * category = USCoreConditionCategoryExtensionCodes#health-concern "Health Concern"
   * text = "Health Concern"
-* code = $sct#247824007 "Fear of becoming fat"
-  * text = "Fear of becoming fat"
+* code = $sct#102917001 "Fear of blood"
+  * text = "Fear of blood"
 * subject.reference = "Patient/example"
 * onsetDateTime = "2007-12-14"
 * recordedDate = "2007-12-14T07:15:07-08:00"

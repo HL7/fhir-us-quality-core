@@ -13,7 +13,7 @@ Usage: #example
 * active = true
 * name
   * use = #official
-  * family = "Hugankiss"
+  * family = "Patient"
   * given = "Sarah"
 * telecom
   * system = #phone
