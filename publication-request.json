@@ -11,7 +11,7 @@
   "registry-description": "The US Quality Core Implementation Guide provides guidance for implementing USCDI+ Quality in FHIR.",
   "changes": "changes.html",
   "registry-country": "US",
-  "registry-authority": "US Government",
+  "registry-authority": "HL7",
   "introduction": "The Office of the National Coordinator for Health IT (ONC) established the USCDI+ Quality data element list as a common, reusable foundation that supports digital quality measurement and reporting programs, including electronic clinical quality measures (eCQMs) used in CMS quality reporting programs. The US Quality Core Implementation Guide defines profiles and basic system capabilities for exchanging USCDI+ Quality data elements in FHIR. It defines profiles that derive from and extend the base FHIR version R4 resources and US Core profiles, and reflects a coordinated federal effort to enable standardized FHIR-based exchange of data for digital quality measurement and reporting.",
   "ci-build": "https://build.fhir.org/ig/HL7/fhir-us-quality-core",
   "first": true,
