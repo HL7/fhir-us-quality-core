@@ -19,20 +19,20 @@
 
 The US Quality Core Implementation Guide provides guidance for implementing
 [USCDI+ Quality](https://uscdiplus.healthit.gov/uscdiplus) in FHIR to support
-consistent, interoperable representation and exchange of quality data for
+standardized, interoperable representation and exchange of quality data for
 quality measurement and reporting programs. It defines profiles that derive from
 and extend the base [FHIR version R4](http://hl7.org/fhir/R4/index.html)
 resources and [US Core](https://hl7.org/fhir/us/core/STU9/) profiles to provide
 a common foundation for implementing, sharing, and evaluating quality-related
-knowledge artifacts across quality improvement efforts. It also defines basic
-system capability expectations for exchanging data to support digital quality
-measurement and reporting over standard FHIR interfaces.
+knowledge artifacts across quality improvement efforts. It also specifies
+baseline system capability expectations for exchanging data to support digital
+quality measurement and reporting over standard FHIR interfaces.
 
 ### Background
 
 This guide reflects a coordinated federal effort to enable standardized
 FHIR-based exchange of data for digital quality measurement and reporting.
-[ONC](http://www.healthit.gov/newsroom/about-onc) has established the [USCDI+
+[The Office of the National Coordinator for Health Information Technology (ONC)](http://www.healthit.gov/newsroom/about-onc) has established the [USCDI+
 Quality data element
 list](https://uscdiplus.healthit.gov/uscdiplus?id=uscdi_record&table=x_g_sshh_uscdi_domain&sys_id=7ddf78228745b95098e5edb90cbb3525&view=sp)
 as a common, reusable foundation that can support quality measurement across
@@ -47,44 +47,38 @@ additional data elements used in other quality reporting programs. For more
 detail on USCDI+ Quality and its scope, see the [USCDI+
 Quality](uscdiquality.html) page in this guide.
 
-US Quality Core began as a derivative of [Quality Improvement Core (QI-Core)
-STU6](https://hl7.org/fhir/us/qicore/STU6/) in the v0.5.0 draft. This v1.0.0
-release targets USCDI+ Quality V2 data elements and is based on the [QI-Core
-Implementation Guide v8.0.0-ballot](https://hl7.org/fhir/us/qicore/2025Sep/)
-(QI-Core 8.0.0-ballot), which aligns with the [US Core Implementation Guide
-v8.0.0](https://hl7.org/fhir/us/core/STU8/) (US Core 8.0.0) and [USCDI
-v3.1](https://isp.healthit.gov/united-states-core-data-interoperability-uscdi#uscdi-v3-1).
-This guide updates that foundation to build directly on [US Core
-9.0.0](https://hl7.org/fhir/us/core/STU9/).
-
-[^1]: Consistent with Executive Order 14168 the Sex, Sexual Orientation, and Gender Identity, data elements have been removed or updated in the Patient Demographics/Information Data Class.
-
 {% include img-landscape.html img="context-diagram.png" caption="US Quality Core defines how to represent and exchange USCDI+ Quality data elements in FHIR, building on the US Core Implementation Guide and USCDI." %}
+
+US Quality Core descends from [Quality Improvement Core
+(QI-Core)](https://hl7.org/fhir/us/qicore/) and is aligned to [US
+Core](https://hl7.org/fhir/us/core/). For more information on the relationship
+between US Quality Core and these guides, see [Relationship with US Core and
+QI-Core](relationship-with-uscore-qicore.html).
 
 ### Scope
 
 The US Quality Core IG provides requirements and guidance for representing and
-exchanging clinical data used in quality measurement programs and activities in
-FHIR within the US Realm.  The scope of the data described in this guide is
-defined by the USCDI+ Quality data element list, which establishes a consistent
-baseline of harmonized data elements for a wide range of measurement use cases.
+exchanging clinical data used in quality measurement programs in FHIR within the
+US Realm.  The scope of the data described in this guide is defined by the
+USCDI+ Quality Data Element List, which establishes a consistent baseline of
+harmonized data elements for a wide range of quality measurement use cases.
 This guide defines a standardized method for exchanging this data between
 producers of data (e.g., EHRs) and the quality measurement systems that
-calculate reports based on this data.  This is exchange definition does not
-introduce use-case specific or novel methods for exchanging this data, and
-instead extends the US Core RESTful API to provide a flexible and widely-adopted
-data access method.
+calculate measure reports based on this data.  This exchange definition does not
+introduce use-case-specific or novel methods for exchanging these data, instead,
+it extends the US Core RESTful API to provide a flexible and widely-adopted
+method for accessing quality related data.
 
-The scope of this version of the guide is limited to the representation and
-exchange of data described in Draft USCDI+ Quality V2.  While this version of the
-guide is primarily composed of content from QI-Core and US Core, only that content
-that is relevant to Draft USCDI+ Quality V2 is included.
+The scope of this implementation guide is limited to the representation and
+exchange of data described in the USCDI+ Quality Data Element List. It includes
+only those FHIR profiles, extensions, and constraints needed to represent and
+exchange data relevant to USCDI+ Quality.
 
 Additionally, the following topics are outside the scope of this guide:
-* How consumers of the quality data described in this guide calculate measures
-* How to reference data elements in this guide within measures, including those represented using standards such as CQL
+* How consumers of the quality data described in this guide calculate quality measures
+* How to reference data elements in this guide within quality measures, including those represented using standards such as CQL
 * How to represent and exchange quality measurement reports using FHIR
-* Specifics of quality program policy, such as who reports, when, what format, and "form and matter"
+* Specifics of quality program policy, such as who reports, when, and the "form and manner" of submission
 
 ### How to read this Guide
 {: #contents}
@@ -100,7 +94,7 @@ This guide is divided into several pages, which are listed at the top of each pa
     * [USCDI+ Quality](uscdiquality.html): Description of the relationship between USCDI+ Quality and US Quality Core, including profile mappings and conformance scope
     * [US Quality Core Negation](negation.html): Guidance on using US Quality Core negation profiles
     * [Provenance](provenance.html): Description of the use of Provenance in US Quality Core
-    * [Relationship with US Core and QI-Core](relationship-with-uscore-qicore.html): Relationship between US Quality Core with US Core and QI-Core
+    * [Relationship with US Core and QI-Core](relationship-with-uscore-qicore.html): Relationship between US Quality Core, US Core, and QI-Core
 * [FHIR Artifacts](artifacts.html): Detailed descriptions and formal definitions for all the FHIR artifacts defined in this guide
     * [Capability Statements](capability-statements.html): Expected FHIR capabilities of the US Quality Core Servers and Clients
     * [Profiles](profiles.html): All profiles defined in or used by US Quality Core
@@ -108,11 +102,4 @@ This guide is divided into several pages, which are listed at the top of each pa
     * [Terminology](terminology.html): US Quality Core ValueSets and Code Systems defined for the profiles
     * [Examples](examples.html): Examples used in this guide
 * [Downloads](downloads.html): Downloadable artifacts
-* [Change Log](changes.html): Change Log that lists changes to this guide across versions.
-
-### Acknowledgements
-
-Content of US Quality Core is primarily based on QI-Core, as managed by the [HL7 Clinical Quality Information Workgroup](http://www.hl7.org/Special/committees/cqi/index.cfm) and the supporting Quality Improvement (QI) community.
-
----
-Footnotes:
+* [Change Log](changes.html): Change Log that lists changes to this guide across versions
