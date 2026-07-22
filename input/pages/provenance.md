@@ -4,10 +4,10 @@ US Core maps the US Core data elements that communicate the author and author ro
 
 ### Author and Author Role Data Elements
 
-The following profiles were omitted from the Author and Author Role provenance mappings because they are typically not associated with individual authorship:
-•	[US Quality Core Communication](StructureDefinition-us-quality-core-communication.html)
-•	[US Quality Core CommunicationDone](StructureDefinition-us-quality-core-communicationdone.html)
-•	[US Quality Core Communication Not Done](StructureDefinition-us-quality-core-communicationnotdone.html)
+The following profiles were omitted from the Author and Author Role provenance mappings because they are typically not associated with individual authorship:  
+•	[US Quality Core Communication](StructureDefinition-us-quality-core-communication.html)  
+•	[US Quality Core CommunicationDone](StructureDefinition-us-quality-core-communicationdone.html)  
+•	[US Quality Core Communication Not Done](StructureDefinition-us-quality-core-communicationnotdone.html)  
 
 
 | US Quality Core Profile | Data Element Corresponding to Author Provenance | Target Resource Types Corresponding to Author Role Provenance |
