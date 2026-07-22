@@ -53,9 +53,9 @@ pages:
   index.md:
     title: US Quality Core Implementation Guide
     generation: markdown
-    conformance.md:
-      title: Conformance
-      generation: markdown
+  conformance.md:
+    title: Conformance
+    generation: markdown
     us-quality-core-general-requirements.md:
       title: General Requirements
       generation: markdown
@@ -65,9 +65,9 @@ pages:
     security.md:
       title: Security
       generation: markdown
-    guidance.md:
-      title: Guidance
-      generation: markdown
+  guidance.md:
+    title: Guidance
+    generation: markdown
     uscdiquality.md:
       title: USCDI+ Quality
       generation: markdown
@@ -80,6 +80,9 @@ pages:
     relationship-with-uscore-qicore.md:
       title: Relationship with US Core and QI-Core
       generation: markdown
+  fhir-artifacts.md:
+    title: FHIR Artifacts
+    generation: markdown
     capability-statements.md:
       title: Capability Statements
       generation: markdown
@@ -95,12 +98,12 @@ pages:
     examples.md:
       title: US Quality Core Examples
       generation: markdown
-    downloads.md:
-      title: US Quality Core Downloads
-      generation: markdown
-    changes.md:
-      title: Changes
-      generation: markdown
+  downloads.md:
+    title: US Quality Core Downloads
+    generation: markdown
+  changes.md:
+    title: Changes
+    generation: markdown
 dependencies:
   hl7.fhir.us.core:
     version: 9.0.0

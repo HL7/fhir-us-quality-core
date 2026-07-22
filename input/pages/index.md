@@ -86,16 +86,16 @@ Additionally, the following topics are outside the scope of this guide:
 This guide is divided into several pages, which are listed at the top of each page in the menu bar.
 
 * [Home](index.html): Overview of US Quality Core, including its background and scope
-* [Conformance](conformance.html): The set of rules to claim conformance to this implementation guide
+* [Conformance](conformance.html): Requirements for claiming conformance to this implementation guide
     * [General Requirements](us-quality-core-general-requirements.html): Requirements common to all profiles used in this guide
     * [Must Support](must-support.html): Expectations for Must Support and USCDI+ Quality flagged elements
     * [Security](security.html): General security requirements
-* [Guidance](guidance.html): Best practices and how to use the profiles defined in this guide
+* [Guidance](guidance.html): Implementation guidance for using US Quality Core profiles
     * [USCDI+ Quality](uscdiquality.html): Description of the relationship between USCDI+ Quality and US Quality Core, including profile mappings and conformance scope
     * [US Quality Core Negation](negation.html): Guidance on using US Quality Core negation profiles
     * [Provenance](provenance.html): Description of the use of Provenance in US Quality Core
     * [Relationship with US Core and QI-Core](relationship-with-uscore-qicore.html): Relationship between US Quality Core, US Core, and QI-Core
-* [FHIR Artifacts](artifacts.html): Detailed descriptions and formal definitions for all the FHIR artifacts defined in this guide
+* [FHIR Artifacts](fhir-artifacts.html): Computable artifacts and examples defined by this guide
     * [Capability Statements](capability-statements.html): Expected FHIR capabilities of the US Quality Core Servers and Clients
     * [Profiles](profiles.html): All profiles defined in or used by US Quality Core
     * [Extensions](extensions.html): Extensions defined as part of US Quality Core

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/quality-core/STU1" ciUrl="https://build.fhir.org/ig/HL7/fhir-us-quality-core" defaultVersion="1.0.0-ballot" defaultWorkgroup="cqi" url="http://hl7.org/fhir/us/quality-core">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/quality-core/1.0.0-202609-ballot" ciUrl="https://build.fhir.org/ig/HL7/fhir-us-quality-core" defaultVersion="1.0.0-ballot" defaultWorkgroup="cqi" gitUrl="https://github.com/HL7/fhir-us-quality-core" url="http://hl7.org/fhir/us/quality-core">
 <version code="current" url="https://build.fhir.org/ig/HL7/fhir-us-quality-core"/>
-<version code="1.0.0-ballot" url="http://hl7.org/fhir/us/quality-core/STU1"/>
+<version code="1.0.0-ballot" url="http://hl7.org/fhir/us/quality-core/1.0.0-202609-ballot"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
@@ -225,6 +225,7 @@
 <page key="capability-statements" name="Capability Statements"/>
 <page key="changes" name="Changes"/>
 <page key="conformance" name="Conformance"/>
+<page key="fhir-artifacts" name="FHIR Artifacts"/>
 <page key="us-quality-core-general-requirements" name="General Requirements"/>
 <page key="guidance" name="Guidance"/>
 <page key="must-support" name="Must Support"/>

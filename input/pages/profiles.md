@@ -1,6 +1,6 @@
 {:toc}
 
-### US Quality Core Profiles
+### Profile List
 The following table lists the US Quality Core profiles that are part of the IG, directly supported US Core profiles, and the underlying FHIR resources.
 
 {% include profile-table.md %}
