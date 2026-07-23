@@ -2,7 +2,7 @@ US Quality Core addresses provenance at the level of data elements defined in ea
 
 US Core maps the US Core data elements that communicate the author and author roles corresponding to the [U.S. Core Data for Interoperability (USCDI)](https://isp.healthit.gov/united-states-core-data-interoperability-uscdi) Provenance Author and Author Role data elements requirements. The US Quality Core mappings below extend this same individual-level provenance pattern to the US Quality Core profiles that lack corresponding US Core profiles and therefore are not covered by the US Core guidance table. For each row, the Data Element Corresponding to Author Provenance identifies the resource element that conveys the author and maps to the USCDI+ Quality Author, and the Target Resource Types Corresponding to Author Role Provenance identifies the referenced resources that maps to the USCDI+ Author Role.
 
-### Author and Author Role Data Elements
+### Individual Provenance: Author and Author Role Data Elements
 
 {: .table-bordered}
 | US Quality Core Profile | Data Element Corresponding to Author Provenance | Target Resource Types Corresponding to Author Role Provenance |
