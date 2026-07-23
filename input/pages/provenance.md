@@ -4,12 +4,6 @@ US Core maps the US Core data elements that communicate the author and author ro
 
 ### Author and Author Role Data Elements
 
-The following profiles were omitted from the Author and Author Role provenance mappings because they are typically not associated with individual authorship:
-* [US Quality Core Communication](StructureDefinition-us-quality-core-communication.html)
-* [US Quality Core CommunicationDone](StructureDefinition-us-quality-core-communicationdone.html)
-* [US Quality Core Communication Not Done](StructureDefinition-us-quality-core-communicationnotdone.html)
-
-
 | US Quality Core Profile | Data Element Corresponding to Author Provenance | Target Resource Types Corresponding to Author Role Provenance |
 |---|---|---|
 | [US Quality Core AdverseEvent](StructureDefinition-us-quality-core-adverseevent.html) | AdverseEvent.recorder | US Quality Core Practitioner Profile, US Quality Core PractitionerRole Profile, US Quality Core Patient Profile, US Quality Core RelatedPerson Profile |
@@ -26,5 +20,10 @@ The following profiles were omitted from the Author and Author Role provenance m
 | [US Quality Core Procedure Done](StructureDefinition-us-quality-core-proceduredone.html), [US Quality Core Procedure Not Done](StructureDefinition-us-quality-core-procedurenotdone.html) | Procedure.performer.actor | US Quality Core Practitioner Profile, US Quality Core Organization Profile, US Quality Core PractitionerRole Profile, US Quality Core Patient Profile, US Quality Core RelatedPerson Profile, US Core Device |
 | [US Quality Core ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html), [US Quality Core Service Prohibited](StructureDefinition-us-quality-core-serviceprohibited.html) | ServiceRequest.requester | US Quality Core Practitioner Profile, US Quality Core Organization Profile, US Quality Core PractitionerRole Profile, US Quality Core Patient Profile, US Quality Core RelatedPerson Profile, US Core Device |
 | [US Quality Core Task](StructureDefinition-us-quality-core-task.html), [US Quality Core Task Done](StructureDefinition-us-quality-core-taskdone.html), [US Quality Core Task Rejected](StructureDefinition-us-quality-core-taskrejected.html) | Task.requester | US Quality Core Practitioner Profile, US Quality Core Organization Profile, US Quality Core PractitionerRole Profile, US Quality Core Patient Profile, US Quality Core RelatedPerson Profile, US Core Device |
+
+The following profiles were omitted from the Author and Author Role provenance mappings because they are typically not associated with individual authorship:
+* [US Quality Core Communication](StructureDefinition-us-quality-core-communication.html)
+* [US Quality Core CommunicationDone](StructureDefinition-us-quality-core-communicationdone.html)
+* [US Quality Core Communication Not Done](StructureDefinition-us-quality-core-communicationnotdone.html)
 
 US Quality Core will continue to monitor and address future US Core version changes if they alter the US Core approach to provenance.
