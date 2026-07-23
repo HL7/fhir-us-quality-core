@@ -2,21 +2,14 @@
 
 {: #changes}
 
-This page lists the change history for each version of **US Quality Core**. The
-v1.0.0 section summarizes changes from the v0.5.0 draft. The v0.5.0 section
-records the original derivation from QI-Core v6.0.0.
+This page lists the change history for each version of **US Quality Core**. 
 
-The v0.5.0 (2026 US Quality Core) release is published through the
-[FHIR Foundation](https://www.fhir.org/) at
-[fhir.org/guides/onc/us-quality-core/0.5.0](https://fhir.org/guides/onc/us-quality-core/0.5.0/).
-Subsequent publications are published through [HL7 International](https://www.hl7.org/).
-
-### v1.0.0
+### Version 1.0.0-ballot
 
 {: #v1.0.0}
 
-This version establishes US Quality Core as an STU 1 ballot release for
-implementing USCDI+ Quality V2 in FHIR R4. It updates the v0.5.0 draft, which
+This version establishes US Quality Core as an STU 1.0.0-ballot release for
+implementing USCDI+ Quality V2 in FHIR R4. It updates the 2026 US Quality Core Implementation guide, which
 was based on <a href="https://hl7.org/fhir/us/qicore/STU6/">QI-Core v6.0.0</a>
 and <a href="https://hl7.org/fhir/us/core/STU6.1/">US Core v6.1.0</a>, to a
 foundation based on <a href="https://hl7.org/fhir/us/qicore/2025Sep/">QI-Core
@@ -24,7 +17,7 @@ v8.0.0-ballot</a>. Because QI-Core v8.0.0-ballot was developed against US Core
 v8.0.0, this guide also updates its direct US Core dependency and profile
 alignment to <a href="https://hl7.org/fhir/us/core/STU9/">US Core v9.0.0</a>.
 
-The following changes have been made for v1.0.0:
+The following changes have been made for 1.0.0-ballot from the 2026 US Quality Core IG. :
 
 * Updates US Quality Core profiles and resources to derive from, or align with, QI-Core v8.0.0-ballot profiles and resources where possible.
 * Updates US Quality Core US Core dependency to v9.0.0.
@@ -48,13 +41,15 @@ The following changes have been made for v1.0.0:
 * Adds a downloadable USCDI+ Quality data element mappings CSV.
 * Removes QDM to US Quality Core mapping page
 
-### v0.5.0 (2026 US Quality Core)
+### 2026 US Quality Core IG 
 
 {: #v0.5.0}
 
-This initial version of the US Quality Core IG is
-based on <a href="https://hl7.org/fhir/us/qicore/STU6/">QI-Core v6.0.0</a> and adds USCDI+ Quality V1 guidance and
-requirements. This version of the guide retains all artifacts provided by QI-Core v6.0.0; it does not remove QI-Core profiles that are not relevant to USCDI+ Quality. Instead, scope and conformance requirements are described on the <a href="https://fhir.org/guides/onc/us-quality-core/0.5.0/en/uscdiquality.html">USCDI+ Quality Guidance</a> and <a href="https://fhir.org/guides/onc/us-quality-core/0.5.0/en/must-support.html">Must Support</a> pages.
+The 2026 US Quality Core Implementation Guide v0.5.0 (2026 US Quality Core IG) release is published by ONC through the [FHIR Foundation](https://www.fhir.org/) at [fhir.org/guides/onc/us-quality-core/0.5.0](https://fhir.org/guides/onc/us-quality-core/0.5.0/). Subsequent publications of US Quality Core Implementation Guide are balloted and published through [HL7 International](https://www.hl7.org/).
+
+This section documents the changes from the Quality Improvement Core (QI-Core) Implementation Guide STU 6.0.0 (QI-Core v6.0.0).
+
+The 2026 US Quality Core IG is based on <a href="https://hl7.org/fhir/us/qicore/STU6/">QI-Core v6.0.0</a> and adds USCDI+ Quality V1 guidance and requirements. The 2026 US Quality Core IG retains all artifacts provided by QI-Core v6.0.0; it does not remove QI-Core profiles that are not relevant to USCDI+ Quality. Instead, scope and conformance requirements are described on the <a href="https://fhir.org/guides/onc/us-quality-core/0.5.0/en/uscdiquality.html">USCDI+ Quality Guidance</a> and <a href="https://fhir.org/guides/onc/us-quality-core/0.5.0/en/must-support.html">Must Support</a> pages.
 
 The following pages containing USCDI+ Quality V1 guidance have been **added**:
 
@@ -71,11 +66,10 @@ The following QI-Core v6.0.0 content has been **altered**:
 * The Table of Contents and associated navigation header has been reorganized similar to US Core to contain dropdowns for Conformance, Guidance, and FHIR Artifacts
 * Informational artifacts inherited from QI-Core v6.0.0 supporting measure authoring, including the ModelInfo file and CQL scripts, have been modernized in a manner consistent with later versions of QI-Core. These informational artifacts are outside the scope of conformance expectations of this IG but are retained in this version to support continuity in the CQL tooling ecosystem.
 
-Several other updates have been made to provide this Implementation Guide
-a separate identity from QI-Core, particularly around naming and machine-readable
+Several other updates have been made to provide the 2026 US Quality Core IG a separate identity from QI-Core, particularly around naming and machine-readable
 content.  This includes:
 * Updates Implementation Guide metadata to establish a separate identity from QI-Core, resulting in the following changes:
-   * Title updated to US Quality Core
+   * Title updated to 2026 US Quality Core
    * Computable name updated to USQualityCore
    * Version reset to v0.5.0
    * Logical id of resources updated to us-quality-core
