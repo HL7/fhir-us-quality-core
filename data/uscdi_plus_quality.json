@@ -2092,7 +2092,7 @@
             "DeviceRequest.reasonCode",
             "DeviceRequest.status",
             "DeviceRequest.code[x]",
-            "DeviceRequest.code[x].extension:codeOptions",
+            "DeviceRequest.code[x]:codeCodeableConcept.extension:codeOptions",
             "DeviceRequest.modifierExtension:doNotPerform"
           ]
         },
@@ -4944,14 +4944,14 @@
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested",
           "elements": [
             "MedicationRequest.requester",
-            "MedicationRequest.reportedReference"
+            "MedicationRequest.reported[x]:reportedReference"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationprohibited",
           "elements": [
             "MedicationRequest.requester",
-            "MedicationRequest.reportedReference"
+            "MedicationRequest.reported[x]:reportedReference"
           ]
         },
         {

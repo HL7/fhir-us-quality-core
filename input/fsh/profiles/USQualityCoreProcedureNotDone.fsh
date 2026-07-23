@@ -28,5 +28,7 @@ Description: "Negative profile of Procedure for decision support/quality metrics
 * performed[x] ^short = "When the procedure was performed"
 * reasonCode ^short = "Coded reason procedure performed"
 * reasonReference ^short = "The justification that the procedure was performed"
+* asserter ^short = "Person who asserts this procedure"
+* performer.actor ^short = "The reference to the practitioner"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreProcedureNotDone

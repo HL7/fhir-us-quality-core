@@ -19,5 +19,6 @@ Description: "Positive profile of MedicationAdministration for decision support/
 * effective[x] ^short = "Start and end time of administration"
 * medication[x] ^short = "What was administered"
 * medication[x].extension[codeOptions] ^short = "Url of a value set of candidate medications"
+* performer.actor ^short = "Who performed the medication administration"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationAdministrationDone

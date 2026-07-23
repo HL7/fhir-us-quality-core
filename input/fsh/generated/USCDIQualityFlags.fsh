@@ -16,6 +16,8 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreAdverseEvent
 * outcome ^short = "(USCDI+ Quality) resolved | recovering | ongoing | resolvedWithSequelae | fatal | unknown"
 * recordedDate ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * recordedDate ^short = "(USCDI+ Quality) When the event was recorded"
+* recorder ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* recorder ^short = "(USCDI+ Quality) Who recorded the adverse event"
 * resultingCondition ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * resultingCondition ^short = "(USCDI+ Quality) Effect on the subject due to this event"
 
@@ -128,14 +130,14 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreRelatedPerson
 * telecom ^short = "(USCDI+ Quality) A contact detail for the person"
 
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreDiagnosticReportNote
-* category[us-core] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* category[us-core] ^short = "(USCDI+ Quality) Service category"
 * code ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * code ^short = "(USCDI+ Quality) US Quality Core Report Code"
 * effective[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * effective[x] ^short = "(USCDI+ Quality) Diagnostically relevant time (typically the time of the procedure)"
 * imagingStudy ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * imagingStudy ^short = "(USCDI+ Quality) Reference to full details of imaging associated with the diagnostic report"
+* presentedForm ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* presentedForm ^short = "(USCDI+ Quality) Entire report as issued"
 * result ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * result ^short = "(USCDI+ Quality) Reference to full details of imaging associated with the diagnostic report"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
@@ -190,6 +192,10 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreCommunicationNotDone
 * topic.extension[codeOptions] ^short = "(USCDI+ Quality) Url of a value set of candidate topics"
 
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreImagingStudy
+* interpreter ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* interpreter ^short = "(USCDI+ Quality) Who interpreted images"
+* series.performer.actor ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* series.performer.actor ^short = "(USCDI+ Quality) Who performed the series"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) registered | available | cancelled | entered-in-error | unknown"
 
@@ -250,8 +256,6 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreLocation
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreGoal
 * description ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * description ^short = "(USCDI+ Quality) Code or text describing goal"
-* target ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* target ^short = "(USCDI+ Quality) Target outcome for the goal"
 
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreCoverage
 * beneficiary ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
@@ -340,6 +344,8 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreConditionProblemsHealthConcer
 * clinicalStatus ^short = "(USCDI+ Quality) active | recurrence | relapse | inactive | remission | resolved"
 * code ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * code ^short = "(USCDI+ Quality) Identification of the condition, problem or diagnosis"
+* extension[assertedDate] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* extension[assertedDate] ^short = "(USCDI+ Quality) Date the condition was first asserted"
 * onset[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * onset[x] ^short = "(USCDI+ Quality) Estimated or actual date, date-time, or age"
 * recordedDate ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
@@ -348,12 +354,16 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreConditionProblemsHealthConcer
 * severity ^short = "(USCDI+ Quality) Subjective severity of condition"
 
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreProcedureNotDone
+* asserter ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* asserter ^short = "(USCDI+ Quality) Person who asserts this procedure"
 * code ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * code ^short = "(USCDI+ Quality) What procedure"
 * code.extension[codeOptions] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * code.extension[codeOptions] ^short = "(USCDI+ Quality) Url of a value set of candidate procedures"
 * extension[recorded] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * extension[recorded] ^short = "(USCDI+ Quality) When the procedure was first captured in the subject's record"
+* performer.actor ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* performer.actor ^short = "(USCDI+ Quality) 𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: The reference to the practitioner"
 * reasonCode ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * reasonCode ^short = "(USCDI+ Quality) Coded reason procedure performed"
 * reasonReference ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
@@ -364,6 +374,8 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreProcedureNotDone
 * statusReason ^short = "(USCDI+ Quality) Reason for the current status"
 
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreImmunizationNotDone
+* performer.actor ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* performer.actor ^short = "(USCDI+ Quality) Individual or organization who was performing"
 * recorded ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * recorded ^short = "(USCDI+ Quality) Documented date Immunization did not occur."
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
@@ -384,6 +396,8 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationAdministrationNotDo
 * medication[x] ^short = "(USCDI+ Quality) What was administered"
 * medication[x].extension[codeOptions] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * medication[x].extension[codeOptions] ^short = "(USCDI+ Quality) Url of a value set of candidate medications"
+* performer.actor ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* performer.actor ^short = "(USCDI+ Quality) Who performed the medication administration"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) not-done"
 * statusReason ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
@@ -396,6 +410,8 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationDispenseDeclined
 * medication[x] ^short = "(USCDI+ Quality) What medication was supplied"
 * medication[x].extension[codeOptions] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * medication[x].extension[codeOptions] ^short = "(USCDI+ Quality) Url of a value set of candidate medications"
+* performer.actor ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* performer.actor ^short = "(USCDI+ Quality) Individual who was performing"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) declined"
 * statusReason[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
@@ -418,6 +434,10 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationProhibited
 * medication[x].extension[codeOptions] ^short = "(USCDI+ Quality) Url of a value set of candidate medications"
 * reasonCode ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * reasonCode ^short = "(USCDI+ Quality) Reason or indication for not ordering the medication"
+* reported[x][reportedReference] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* reported[x][reportedReference] ^short = "(USCDI+ Quality) Reported rather than primary record"
+* requester ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* requester ^short = "(USCDI+ Quality) Who/What requested the Request"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) active | on-hold | cancelled | completed | stopped | draft"
 
@@ -436,10 +456,54 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreServiceProhibited
 * reasonCode ^short = "(USCDI+ Quality) Explanation/Justification for procedure or service"
 * reasonReference ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * reasonReference ^short = "(USCDI+ Quality) Explanation/Justification for service or service"
+* requester ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* requester ^short = "(USCDI+ Quality) Who/what is requesting service"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) draft | active | on-hold | completed"
 
+RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreDeviceRequest
+* authoredOn ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* authoredOn ^short = "(USCDI+ Quality) When recorded"
+* code[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* code[x] ^short = "(USCDI+ Quality) Device requested"
+* code[x][codeCodeableConcept].extension[codeOptions] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* code[x][codeCodeableConcept].extension[codeOptions] ^short = "(USCDI+ Quality) Url of a value set of candidate devices"
+* intent ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* intent ^short = "(USCDI+ Quality) proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
+* modifierExtension[doNotPerform] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* modifierExtension[doNotPerform] ^short = "(USCDI+ Quality) Extensions that cannot be ignored"
+* reasonCode ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* reasonCode ^short = "(USCDI+ Quality) Coded Reason for request"
+* requester ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* requester ^short = "(USCDI+ Quality) Who/what is requesting diagnostics"
+* status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* status ^short = "(USCDI+ Quality) draft | active | on-hold | revoked | completed | entered-in-error | unknown"
+
+RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreTaskRejected
+* basedOn ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* basedOn ^short = "(USCDI+ Quality) Request fulfilled by this task"
+* code ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* code ^short = "(USCDI+ Quality) Task Type"
+* code.extension[codeOptions] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* code.extension[codeOptions] ^short = "(USCDI+ Quality) Url of a value set of candidate tasks"
+* executionPeriod ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* executionPeriod ^short = "(USCDI+ Quality) The time action first taken meets expectation of the rejected use case."
+* focus ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* focus ^short = "(USCDI+ Quality) What task is acting on"
+* for ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* for ^short = "(USCDI+ Quality) Beneficiary of the Task"
+* reasonCode ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* reasonCode ^short = "(USCDI+ Quality) Why task is needed"
+* requester ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* requester ^short = "(USCDI+ Quality) Who is asking for task to be done"
+* status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* status ^short = "(USCDI+ Quality) The potential performer who claimed ownership of the task has decided not to execute it prior to performing any action"
+* statusReason ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* statusReason ^short = "(USCDI+ Quality) Reason for current status"
+
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreImmunization
+* location ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* location ^short = "(USCDI+ Quality) Where the vaccine was administered"
 * lotNumber ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * lotNumber ^short = "(USCDI+ Quality) Vaccine lot number"
 * occurrence[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
@@ -452,10 +516,14 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreImmunization
 * vaccineCode ^short = "(USCDI+ Quality) Vaccine Product Type (bind to CVX)"
 
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreImmunizationDone
+* location ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* location ^short = "(USCDI+ Quality) Where the vaccine was administered"
 * lotNumber ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * lotNumber ^short = "(USCDI+ Quality) Vaccine lot number"
 * occurrence[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * occurrence[x] ^short = "(USCDI+ Quality) Vaccine administration date"
+* performer.actor ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* performer.actor ^short = "(USCDI+ Quality) Individual or organization who was performing"
 * primarySource ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * primarySource ^short = "(USCDI+ Quality) Indicates context the data was recorded in"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
@@ -492,24 +560,14 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreDiagnosticReportLab
 * category[LaboratorySlice] ^short = "(USCDI+ Quality) Service category"
 * code ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * code ^short = "(USCDI+ Quality) US Core Laboratory Report Order Code"
+* effective[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* effective[x] ^short = "(USCDI+ Quality) Diagnostically relevant time (typically the time of specimen collection)"
+* issued ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* issued ^short = "(USCDI+ Quality) DateTime this version was made"
 * result ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * result ^short = "(USCDI+ Quality) Observations"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) registered | partial | preliminary | final +"
-
-RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreDeviceRequest
-* authoredOn ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* authoredOn ^short = "(USCDI+ Quality) When recorded"
-* code[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* code[x] ^short = "(USCDI+ Quality) Device requested"
-* code[x][codeCodeableConcept].extension[codeOptions] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* code[x][codeCodeableConcept].extension[codeOptions] ^short = "(USCDI+ Quality) Url of a value set of candidate devices"
-* intent ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* intent ^short = "(USCDI+ Quality) proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
-* modifierExtension[doNotPerform] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* modifierExtension[doNotPerform] ^short = "(USCDI+ Quality) Extensions that cannot be ignored"
-* status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* status ^short = "(USCDI+ Quality) draft | active | on-hold | revoked | completed | entered-in-error | unknown"
 
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreDeviceRequested
 * authoredOn ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
@@ -522,6 +580,8 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreDeviceRequested
 * intent ^short = "(USCDI+ Quality) proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
 * modifierExtension[doNotPerform] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * modifierExtension[doNotPerform] ^short = "(USCDI+ Quality) Extension"
+* requester ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* requester ^short = "(USCDI+ Quality) Who/what is requesting diagnostics"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) draft | active | on-hold | revoked | completed | entered-in-error | unknown"
 
@@ -558,6 +618,8 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreServiceRequested
 * reasonCode ^short = "(USCDI+ Quality) Explanation/Justification for procedure or service"
 * reasonReference ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * reasonReference ^short = "(USCDI+ Quality) Explanation/Justification for service or service"
+* requester ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* requester ^short = "(USCDI+ Quality) Who/what is requesting service"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) draft | active | on-hold | completed"
 
@@ -658,6 +720,8 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationDispenseDone
 * dosageInstruction.timing ^short = "(USCDI+ Quality) When medication should be administered"
 * medication[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * medication[x] ^short = "(USCDI+ Quality) What medication was supplied"
+* performer.actor ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* performer.actor ^short = "(USCDI+ Quality) Individual who was performing"
 * quantity ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * quantity ^short = "(USCDI+ Quality) Amount dispensed"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
@@ -718,6 +782,10 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationRequested
 * reasonCode ^short = "(USCDI+ Quality) Reason or indication for ordering or not ordering the medication"
 * reasonReference ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * reasonReference ^short = "(USCDI+ Quality) US Quality Core Condition or Observation that supports the prescription"
+* reported[x][reportedReference] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* reported[x][reportedReference] ^short = "(USCDI+ Quality) Reported rather than primary record"
+* requester ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* requester ^short = "(USCDI+ Quality) Who/What requested the Request"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) active | on-hold | cancelled | completed | stopped | draft"
 
@@ -734,6 +802,8 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationAdministration
 * medication[x] ^short = "(USCDI+ Quality) What was administered"
 * medication[x].extension[codeOptions] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * medication[x].extension[codeOptions] ^short = "(USCDI+ Quality) Url of a value set of candidate medications"
+* performer.actor ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* performer.actor ^short = "(USCDI+ Quality) Who performed the medication administration"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) in-progress | not-done | on-hold | completed | entered-in-error | stopped | unknown"
 
@@ -750,6 +820,8 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationAdministrationDone
 * medication[x] ^short = "(USCDI+ Quality) What was administered"
 * medication[x].extension[codeOptions] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * medication[x].extension[codeOptions] ^short = "(USCDI+ Quality) Url of a value set of candidate medications"
+* performer.actor ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* performer.actor ^short = "(USCDI+ Quality) Who performed the medication administration"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) in-progress | on-hold | completed | stopped"
 
@@ -766,20 +838,36 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreDeviceProhibited
 * intent ^short = "(USCDI+ Quality) proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
 * modifierExtension[doNotPerform] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * modifierExtension[doNotPerform] ^short = "(USCDI+ Quality) Extension"
+* requester ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* requester ^short = "(USCDI+ Quality) Who/what is requesting diagnostics"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) draft | active | on-hold | revoked | completed | entered-in-error | unknown"
 
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreNutritionOrder
-* intent ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* intent ^short = "(USCDI+ Quality) proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
+* enteralFormula ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* enteralFormula ^short = "(USCDI+ Quality) Enteral formula components"
+* enteralFormula.baseFormulaType ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* enteralFormula.baseFormulaType ^short = "(USCDI+ Quality) Type of enteral or infant formula"
+* enteralFormula.baseFormulaType.extension[codeOptions] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* enteralFormula.baseFormulaType.extension[codeOptions] ^short = "(USCDI+ Quality) Url of a value set of candidate enteral formulas"
 * oralDiet ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * oralDiet ^short = "(USCDI+ Quality) Oral diet components"
 * oralDiet.type ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * oralDiet.type ^short = "(USCDI+ Quality) Oral diet components"
+* oralDiet.type.extension[codeOptions] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* oralDiet.type.extension[codeOptions] ^short = "(USCDI+ Quality) Url of a value set of candidate oral diet types"
+* orderer ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* orderer ^short = "(USCDI+ Quality) Who ordered the diet, formula or nutritional supplement"
 * patient ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * patient ^short = "(USCDI+ Quality) The person who requires the diet, formula or nutritional supplement"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) draft | active | on-hold | revoked | completed | entered-in-error | unknown"
+* supplement ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* supplement ^short = "(USCDI+ Quality) Supplement components"
+* supplement.type ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* supplement.type ^short = "(USCDI+ Quality) Type of supplement product requested"
+* supplement.type.extension[codeOptions] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* supplement.type.extension[codeOptions] ^short = "(USCDI+ Quality) Url of a value set of candidate nutritional supplements"
 
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCorePatient
 * address ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
@@ -858,12 +946,16 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreProcedure
 * statusReason ^short = "(USCDI+ Quality) Reason for current status"
 
 RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreProcedureDone
+* asserter ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* asserter ^short = "(USCDI+ Quality) Person who asserts this procedure"
 * code ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * code ^short = "(USCDI+ Quality) What procedure"
 * partOf ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * partOf ^short = "(USCDI+ Quality) Part of referenced event"
 * performed[x] ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * performed[x] ^short = "(USCDI+ Quality) When the procedure was performed"
+* performer.actor ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* performer.actor ^short = "(USCDI+ Quality) 𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: The reference to the practitioner"
 * reasonCode ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * reasonCode ^short = "(USCDI+ Quality) Coded reason procedure performed"
 * reasonReference ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
@@ -882,26 +974,14 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreTask
 * executionPeriod ^short = "(USCDI+ Quality) Start and end time of execution"
 * focus ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * focus ^short = "(USCDI+ Quality) What task is acting on"
+* for ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* for ^short = "(USCDI+ Quality) Beneficiary of the Task"
 * reasonCode ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * reasonCode ^short = "(USCDI+ Quality) Why task is needed"
+* requester ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* requester ^short = "(USCDI+ Quality) Who is asking for task to be done"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) draft | requested | received | accepted | rejected | ready | cancelled | in-progress | on-hold | failed | completed | entered-in-error"
-* statusReason ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* statusReason ^short = "(USCDI+ Quality) Reason for current status"
-
-RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreTaskRejected
-* basedOn ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* basedOn ^short = "(USCDI+ Quality) Request fulfilled by this task"
-* code ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* code ^short = "(USCDI+ Quality) Task Type"
-* executionPeriod ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* executionPeriod ^short = "(USCDI+ Quality) The time action first taken meets expectation of the rejected use case."
-* focus ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* focus ^short = "(USCDI+ Quality) What task is acting on"
-* reasonCode ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* reasonCode ^short = "(USCDI+ Quality) Why task is needed"
-* status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
-* status ^short = "(USCDI+ Quality) The potential performer who claimed ownership of the task has decided not to execute it prior to performing any action"
 * statusReason ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * statusReason ^short = "(USCDI+ Quality) Reason for current status"
 
@@ -914,8 +994,12 @@ RuleSet: GeneratedUSCDIQualityFlagsForUSQualityCoreTaskDone
 * executionPeriod ^short = "(USCDI+ Quality) Start and end time of execution"
 * focus ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * focus ^short = "(USCDI+ Quality) What task is acting on"
+* for ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* for ^short = "(USCDI+ Quality) Beneficiary of the Task"
 * reasonCode ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * reasonCode ^short = "(USCDI+ Quality) Why task is needed"
+* requester ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
+* requester ^short = "(USCDI+ Quality) Who is asking for task to be done"
 * status ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true
 * status ^short = "(USCDI+ Quality) draft | requested | received | accepted | ready | in-progress | on-hold | completed"
 * statusReason ^extension[http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-uscdi-quality-extension].valueBoolean = true

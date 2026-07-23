@@ -49,5 +49,6 @@ Description: "Profile of Task for decision support/quality metrics. Defines the 
   * ^short = "Start and end time of execution"
   * ^mustSupport = false
 * reasonCode ^mustSupport = false
+* requester ^short = "Who is asking for task to be done"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreTask

@@ -22,5 +22,6 @@ Description: "Positive profile of MedicationDispense for decision support/qualit
 * medication[x] ^short = "What medication was supplied"
 * quantity ^short = "Amount dispensed"
 * whenPrepared ^short = "When product was packaged and reviewed"
+* performer.actor ^short = "Individual who was performing"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationDispenseDone

@@ -33,5 +33,6 @@ Description: "Negation profile of ServiceRequest for decision support/quality me
   * ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * reasonReference ^short = "Explanation/Justification for service or service"
 * intent ^short = "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
+* requester ^short = "Who/what is requesting service"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreServiceProhibited

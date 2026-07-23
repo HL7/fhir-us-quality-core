@@ -71,6 +71,17 @@
         ]
       },
       {
+        "path": "recorder",
+        "short": "Who recorded the adverse event",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
         "path": "resultingCondition",
         "short": "Effect on the subject due to this event",
         "dataElements": [
@@ -839,6 +850,17 @@
         ]
       },
       {
+        "path": "extension:assertedDate",
+        "short": "Date the condition was first asserted",
+        "dataElements": [
+          {
+            "class": "Problems",
+            "name": "Date of Diagnosis",
+            "path": "uscdiquality.html#data-element-problems-date-of-diagnosis"
+          }
+        ]
+      },
+      {
         "path": "onset[x]",
         "short": "Estimated or actual date, date-time, or age",
         "dataElements": [
@@ -1059,6 +1081,11 @@
         "dataElements": [
           {
             "class": "Health Insurance Information",
+            "name": "Coverage Status",
+            "path": "uscdiquality.html#data-element-health-insurance-information-coverage-status"
+          },
+          {
+            "class": "Health Insurance Information",
             "name": "Health Insurance Coverage Period",
             "path": "uscdiquality.html#data-element-health-insurance-information-health-insurance-coverage-period"
           }
@@ -1176,6 +1203,17 @@
         ]
       },
       {
+        "path": "requester",
+        "short": "Who/what is requesting diagnostics",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
         "path": "status",
         "short": "draft | active | on-hold | revoked | completed | entered-in-error | unknown",
         "dataElements": [
@@ -1239,6 +1277,11 @@
         "short": "Device requested",
         "dataElements": [
           {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
+          {
             "class": "Orders",
             "name": "Medical Device Order",
             "path": "uscdiquality.html#data-element-orders-medical-device-order"
@@ -1249,6 +1292,11 @@
         "path": "code[x][codeCodeableConcept].extension:codeOptions",
         "short": "Url of a value set of candidate devices",
         "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
           {
             "class": "Medical Devices",
             "name": "Device Type",
@@ -1272,6 +1320,11 @@
         "short": "Extensions that cannot be ignored",
         "dataElements": [
           {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
+          {
             "class": "Orders",
             "name": "Medical Device Order",
             "path": "uscdiquality.html#data-element-orders-medical-device-order"
@@ -1279,9 +1332,36 @@
         ]
       },
       {
+        "path": "reasonCode",
+        "short": "Coded Reason for request",
+        "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          }
+        ]
+      },
+      {
+        "path": "requester",
+        "short": "Who/what is requesting diagnostics",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
         "path": "status",
         "short": "draft | active | on-hold | revoked | completed | entered-in-error | unknown",
         "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
           {
             "class": "Orders",
             "name": "Medical Device Order",
@@ -1382,6 +1462,17 @@
         ]
       },
       {
+        "path": "requester",
+        "short": "Who/what is requesting diagnostics",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
         "path": "status",
         "short": "draft | active | on-hold | revoked | completed | entered-in-error | unknown",
         "dataElements": [
@@ -1463,6 +1554,28 @@
         ]
       },
       {
+        "path": "effective[x]",
+        "short": "Diagnostically relevant time (typically the time of specimen collection)",
+        "dataElements": [
+          {
+            "class": "Laboratory",
+            "name": "Specimen Collection Date and Time",
+            "path": "uscdiquality.html#data-element-laboratory-specimen-collection-date-and-time"
+          }
+        ]
+      },
+      {
+        "path": "issued",
+        "short": "DateTime this version was made",
+        "dataElements": [
+          {
+            "class": "Laboratory",
+            "name": "Laboratory Result Report Date and Time",
+            "path": "uscdiquality.html#data-element-laboratory-laboratory-result-report-date-and-time"
+          }
+        ]
+      },
+      {
         "path": "result",
         "short": "Observations",
         "dataElements": [
@@ -1533,17 +1646,6 @@
     "path": "StructureDefinition-us-quality-core-diagnosticreport-note.html",
     "uscdiQualityElements": [
       {
-        "path": "category:us-core",
-        "short": "Service category",
-        "dataElements": [
-          {
-            "class": "Clinical Notes",
-            "name": "Procedure Note",
-            "path": "uscdiquality.html#data-element-clinical-notes-procedure-note"
-          }
-        ]
-      },
-      {
         "path": "code",
         "short": "US Quality Core Report Code",
         "dataElements": [
@@ -1582,14 +1684,25 @@
         ]
       },
       {
-        "path": "result",
-        "short": "Reference to full details of imaging associated with the diagnostic report",
+        "path": "presentedForm",
+        "short": "Entire report as issued",
         "dataElements": [
           {
             "class": "Clinical Notes",
             "name": "Procedure Note",
             "path": "uscdiquality.html#data-element-clinical-notes-procedure-note"
           },
+          {
+            "class": "Diagnostic Imaging",
+            "name": "Diagnostic Imaging Report",
+            "path": "uscdiquality.html#data-element-diagnostic-imaging-diagnostic-imaging-report"
+          }
+        ]
+      },
+      {
+        "path": "result",
+        "short": "Reference to full details of imaging associated with the diagnostic report",
+        "dataElements": [
           {
             "class": "Clinical Tests",
             "name": "Clinical Test Result/Report",
@@ -1890,22 +2003,6 @@
             "path": "uscdiquality.html#data-element-goals-and-preferences-sdoh-goals"
           }
         ]
-      },
-      {
-        "path": "target",
-        "short": "Target outcome for the goal",
-        "dataElements": [
-          {
-            "class": "Goals and Preferences",
-            "name": "Patient Goals",
-            "path": "uscdiquality.html#data-element-goals-and-preferences-patient-goals"
-          },
-          {
-            "class": "Goals and Preferences",
-            "name": "SDOH Goals",
-            "path": "uscdiquality.html#data-element-goals-and-preferences-sdoh-goals"
-          }
-        ]
       }
     ],
     "hasUsCoreLineage": true,
@@ -1931,14 +2028,31 @@
     "path": "StructureDefinition-us-quality-core-imagingstudy.html",
     "uscdiQualityElements": [
       {
+        "path": "interpreter",
+        "short": "Who interpreted images",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
+        "path": "series.performer.actor",
+        "short": "Who performed the series",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
         "path": "status",
         "short": "registered | available | cancelled | entered-in-error | unknown",
         "dataElements": [
-          {
-            "class": "Diagnostic Imaging",
-            "name": "Diagnostic Imaging Reference",
-            "path": "uscdiquality.html#data-element-diagnostic-imaging-diagnostic-imaging-reference"
-          },
           {
             "class": "Diagnostic Imaging",
             "name": "Diagnostic Imaging Status",
@@ -1966,6 +2080,17 @@
     "title": "US Quality Core Immunization",
     "path": "StructureDefinition-us-quality-core-immunization.html",
     "uscdiQualityElements": [
+      {
+        "path": "location",
+        "short": "Where the vaccine was administered",
+        "dataElements": [
+          {
+            "class": "Immunizations",
+            "name": "Immunization Record Source",
+            "path": "uscdiquality.html#data-element-immunizations-immunization-record-source"
+          }
+        ]
+      },
       {
         "path": "lotNumber",
         "short": "Vaccine lot number",
@@ -2059,6 +2184,17 @@
     "path": "StructureDefinition-us-quality-core-immunizationdone.html",
     "uscdiQualityElements": [
       {
+        "path": "location",
+        "short": "Where the vaccine was administered",
+        "dataElements": [
+          {
+            "class": "Immunizations",
+            "name": "Immunization Record Source",
+            "path": "uscdiquality.html#data-element-immunizations-immunization-record-source"
+          }
+        ]
+      },
+      {
         "path": "lotNumber",
         "short": "Vaccine lot number",
         "dataElements": [
@@ -2082,6 +2218,17 @@
             "class": "Procedures",
             "name": "Performance Time",
             "path": "uscdiquality.html#data-element-procedures-performance-time"
+          }
+        ]
+      },
+      {
+        "path": "performer.actor",
+        "short": "Individual or organization who was performing",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
           }
         ]
       },
@@ -2150,6 +2297,17 @@
     "title": "US Quality Core Immunization Not Done",
     "path": "StructureDefinition-us-quality-core-immunizationnotdone.html",
     "uscdiQualityElements": [
+      {
+        "path": "performer.actor",
+        "short": "Individual or organization who was performing",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
       {
         "path": "recorded",
         "short": "Documented date Immunization did not occur.",
@@ -2415,6 +2573,17 @@
         ]
       },
       {
+        "path": "performer.actor",
+        "short": "Who performed the medication administration",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
         "path": "status",
         "short": "in-progress | not-done | on-hold | completed | entered-in-error | stopped | unknown",
         "dataElements": [
@@ -2552,6 +2721,17 @@
         ]
       },
       {
+        "path": "performer.actor",
+        "short": "Who performed the medication administration",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
         "path": "status",
         "short": "in-progress | on-hold | completed | stopped",
         "dataElements": [
@@ -2658,6 +2838,17 @@
             "class": "Medications",
             "name": "Medication Administration",
             "path": "uscdiquality.html#data-element-medications-medication-administration"
+          }
+        ]
+      },
+      {
+        "path": "performer.actor",
+        "short": "Who performed the medication administration",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
           }
         ]
       },
@@ -2914,6 +3105,17 @@
         ]
       },
       {
+        "path": "performer.actor",
+        "short": "Individual who was performing",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
         "path": "status",
         "short": "declined",
         "dataElements": [
@@ -3062,6 +3264,17 @@
             "class": "Medications",
             "name": "Medications",
             "path": "uscdiquality.html#data-element-medications-medications"
+          }
+        ]
+      },
+      {
+        "path": "performer.actor",
+        "short": "Individual who was performing",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
           }
         ]
       },
@@ -3219,6 +3432,28 @@
             "class": "Healthcare Information Attributes",
             "name": "Reason Not Performed",
             "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          }
+        ]
+      },
+      {
+        "path": "reported[x][reportedReference]",
+        "short": "Reported rather than primary record",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
+        "path": "requester",
+        "short": "Who/What requested the Request",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
           }
         ]
       },
@@ -3969,6 +4204,28 @@
         ]
       },
       {
+        "path": "reported[x][reportedReference]",
+        "short": "Reported rather than primary record",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
+        "path": "requester",
+        "short": "Who/What requested the Request",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
         "path": "status",
         "short": "active | on-hold | cancelled | completed | stopped | draft",
         "dataElements": [
@@ -4020,8 +4277,30 @@
     "path": "StructureDefinition-us-quality-core-nutritionorder.html",
     "uscdiQualityElements": [
       {
-        "path": "intent",
-        "short": "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option",
+        "path": "enteralFormula",
+        "short": "Enteral formula components",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Nutrition Order",
+            "path": "uscdiquality.html#data-element-orders-nutrition-order"
+          }
+        ]
+      },
+      {
+        "path": "enteralFormula.baseFormulaType",
+        "short": "Type of enteral or infant formula",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Nutrition Order",
+            "path": "uscdiquality.html#data-element-orders-nutrition-order"
+          }
+        ]
+      },
+      {
+        "path": "enteralFormula.baseFormulaType.extension:codeOptions",
+        "short": "Url of a value set of candidate enteral formulas",
         "dataElements": [
           {
             "class": "Orders",
@@ -4053,6 +4332,28 @@
         ]
       },
       {
+        "path": "oralDiet.type.extension:codeOptions",
+        "short": "Url of a value set of candidate oral diet types",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Nutrition Order",
+            "path": "uscdiquality.html#data-element-orders-nutrition-order"
+          }
+        ]
+      },
+      {
+        "path": "orderer",
+        "short": "Who ordered the diet, formula or nutritional supplement",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
         "path": "patient",
         "short": "The person who requires the diet, formula or nutritional supplement",
         "dataElements": [
@@ -4066,6 +4367,39 @@
       {
         "path": "status",
         "short": "draft | active | on-hold | revoked | completed | entered-in-error | unknown",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Nutrition Order",
+            "path": "uscdiquality.html#data-element-orders-nutrition-order"
+          }
+        ]
+      },
+      {
+        "path": "supplement",
+        "short": "Supplement components",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Nutrition Order",
+            "path": "uscdiquality.html#data-element-orders-nutrition-order"
+          }
+        ]
+      },
+      {
+        "path": "supplement.type",
+        "short": "Type of supplement product requested",
+        "dataElements": [
+          {
+            "class": "Orders",
+            "name": "Nutrition Order",
+            "path": "uscdiquality.html#data-element-orders-nutrition-order"
+          }
+        ]
+      },
+      {
+        "path": "supplement.type.extension:codeOptions",
+        "short": "Url of a value set of candidate nutritional supplements",
         "dataElements": [
           {
             "class": "Orders",
@@ -5660,6 +5994,17 @@
     "path": "StructureDefinition-us-quality-core-proceduredone.html",
     "uscdiQualityElements": [
       {
+        "path": "asserter",
+        "short": "Person who asserts this procedure",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
         "path": "code",
         "short": "What procedure",
         "dataElements": [
@@ -5704,6 +6049,17 @@
             "class": "Procedures",
             "name": "Performance Time",
             "path": "uscdiquality.html#data-element-procedures-performance-time"
+          }
+        ]
+      },
+      {
+        "path": "performer.actor",
+        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: The reference to the practitioner",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
           }
         ]
       },
@@ -5802,6 +6158,17 @@
     "path": "StructureDefinition-us-quality-core-procedurenotdone.html",
     "uscdiQualityElements": [
       {
+        "path": "asserter",
+        "short": "Person who asserts this procedure",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
         "path": "code",
         "short": "What procedure",
         "dataElements": [
@@ -5831,6 +6198,17 @@
             "class": "Healthcare Information Attributes",
             "name": "Reason Not Performed",
             "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          }
+        ]
+      },
+      {
+        "path": "performer.actor",
+        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: The reference to the practitioner",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
           }
         ]
       },
@@ -6246,11 +6624,6 @@
           },
           {
             "class": "Orders",
-            "name": "Portable Medical Order",
-            "path": "uscdiquality.html#data-element-orders-portable-medical-order"
-          },
-          {
-            "class": "Orders",
             "name": "Procedure Order",
             "path": "uscdiquality.html#data-element-orders-procedure-order"
           },
@@ -6284,11 +6657,6 @@
             "class": "Orders",
             "name": "Laboratory Order",
             "path": "uscdiquality.html#data-element-orders-laboratory-order"
-          },
-          {
-            "class": "Orders",
-            "name": "Portable Medical Order",
-            "path": "uscdiquality.html#data-element-orders-portable-medical-order"
           },
           {
             "class": "Orders",
@@ -6380,11 +6748,6 @@
           },
           {
             "class": "Orders",
-            "name": "Portable Medical Order",
-            "path": "uscdiquality.html#data-element-orders-portable-medical-order"
-          },
-          {
-            "class": "Orders",
             "name": "Procedure Order",
             "path": "uscdiquality.html#data-element-orders-procedure-order"
           }
@@ -6428,6 +6791,17 @@
         ]
       },
       {
+        "path": "requester",
+        "short": "Who/what is requesting service",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
         "path": "status",
         "short": "draft | active | on-hold | completed",
         "dataElements": [
@@ -6445,11 +6819,6 @@
             "class": "Orders",
             "name": "Laboratory Order",
             "path": "uscdiquality.html#data-element-orders-laboratory-order"
-          },
-          {
-            "class": "Orders",
-            "name": "Portable Medical Order",
-            "path": "uscdiquality.html#data-element-orders-portable-medical-order"
           },
           {
             "class": "Orders",
@@ -6544,11 +6913,6 @@
           },
           {
             "class": "Orders",
-            "name": "Portable Medical Order",
-            "path": "uscdiquality.html#data-element-orders-portable-medical-order"
-          },
-          {
-            "class": "Orders",
             "name": "Procedure Order",
             "path": "uscdiquality.html#data-element-orders-procedure-order"
           },
@@ -6580,18 +6944,8 @@
           },
           {
             "class": "Orders",
-            "name": "Portable Medical Order",
-            "path": "uscdiquality.html#data-element-orders-portable-medical-order"
-          },
-          {
-            "class": "Orders",
             "name": "Procedure Order",
             "path": "uscdiquality.html#data-element-orders-procedure-order"
-          },
-          {
-            "class": "Procedures",
-            "name": "Procedure Type",
-            "path": "uscdiquality.html#data-element-procedures-procedure-type"
           },
           {
             "class": "Procedures",
@@ -6673,11 +7027,6 @@
           },
           {
             "class": "Orders",
-            "name": "Portable Medical Order",
-            "path": "uscdiquality.html#data-element-orders-portable-medical-order"
-          },
-          {
-            "class": "Orders",
             "name": "Procedure Order",
             "path": "uscdiquality.html#data-element-orders-procedure-order"
           }
@@ -6733,11 +7082,6 @@
             "class": "Orders",
             "name": "Laboratory Order",
             "path": "uscdiquality.html#data-element-orders-laboratory-order"
-          },
-          {
-            "class": "Orders",
-            "name": "Portable Medical Order",
-            "path": "uscdiquality.html#data-element-orders-portable-medical-order"
           },
           {
             "class": "Orders",
@@ -6832,11 +7176,6 @@
           },
           {
             "class": "Orders",
-            "name": "Portable Medical Order",
-            "path": "uscdiquality.html#data-element-orders-portable-medical-order"
-          },
-          {
-            "class": "Orders",
             "name": "Procedure Order",
             "path": "uscdiquality.html#data-element-orders-procedure-order"
           },
@@ -6868,18 +7207,8 @@
           },
           {
             "class": "Orders",
-            "name": "Portable Medical Order",
-            "path": "uscdiquality.html#data-element-orders-portable-medical-order"
-          },
-          {
-            "class": "Orders",
             "name": "Procedure Order",
             "path": "uscdiquality.html#data-element-orders-procedure-order"
-          },
-          {
-            "class": "Procedures",
-            "name": "Procedure Type",
-            "path": "uscdiquality.html#data-element-procedures-procedure-type"
           },
           {
             "class": "Procedures",
@@ -6961,11 +7290,6 @@
           },
           {
             "class": "Orders",
-            "name": "Portable Medical Order",
-            "path": "uscdiquality.html#data-element-orders-portable-medical-order"
-          },
-          {
-            "class": "Orders",
             "name": "Procedure Order",
             "path": "uscdiquality.html#data-element-orders-procedure-order"
           }
@@ -7004,6 +7328,17 @@
         ]
       },
       {
+        "path": "requester",
+        "short": "Who/what is requesting service",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
         "path": "status",
         "short": "draft | active | on-hold | completed",
         "dataElements": [
@@ -7021,11 +7356,6 @@
             "class": "Orders",
             "name": "Laboratory Order",
             "path": "uscdiquality.html#data-element-orders-laboratory-order"
-          },
-          {
-            "class": "Orders",
-            "name": "Portable Medical Order",
-            "path": "uscdiquality.html#data-element-orders-portable-medical-order"
           },
           {
             "class": "Orders",
@@ -7576,6 +7906,17 @@
         ]
       },
       {
+        "path": "for",
+        "short": "Beneficiary of the Task",
+        "dataElements": [
+          {
+            "class": "Task",
+            "name": "Task Code",
+            "path": "uscdiquality.html#data-element-task-task-code"
+          }
+        ]
+      },
+      {
         "path": "reasonCode",
         "short": "Why task is needed",
         "dataElements": [
@@ -7583,6 +7924,17 @@
             "class": "Task",
             "name": "Task Status",
             "path": "uscdiquality.html#data-element-task-task-status"
+          }
+        ]
+      },
+      {
+        "path": "requester",
+        "short": "Who is asking for task to be done",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
           }
         ]
       },
@@ -7690,6 +8042,17 @@
         ]
       },
       {
+        "path": "for",
+        "short": "Beneficiary of the Task",
+        "dataElements": [
+          {
+            "class": "Task",
+            "name": "Task Code",
+            "path": "uscdiquality.html#data-element-task-task-code"
+          }
+        ]
+      },
+      {
         "path": "reasonCode",
         "short": "Why task is needed",
         "dataElements": [
@@ -7697,6 +8060,17 @@
             "class": "Task",
             "name": "Task Status",
             "path": "uscdiquality.html#data-element-task-task-status"
+          }
+        ]
+      },
+      {
+        "path": "requester",
+        "short": "Who is asking for task to be done",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
           }
         ]
       },
@@ -7775,9 +8149,25 @@
         "short": "Task Type",
         "dataElements": [
           {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
+          {
             "class": "Task",
             "name": "Task Code",
             "path": "uscdiquality.html#data-element-task-task-code"
+          }
+        ]
+      },
+      {
+        "path": "code.extension:codeOptions",
+        "short": "Url of a value set of candidate tasks",
+        "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
           }
         ]
       },
@@ -7804,6 +8194,17 @@
         ]
       },
       {
+        "path": "for",
+        "short": "Beneficiary of the Task",
+        "dataElements": [
+          {
+            "class": "Task",
+            "name": "Task Code",
+            "path": "uscdiquality.html#data-element-task-task-code"
+          }
+        ]
+      },
+      {
         "path": "reasonCode",
         "short": "Why task is needed",
         "dataElements": [
@@ -7815,9 +8216,25 @@
         ]
       },
       {
+        "path": "requester",
+        "short": "Who is asking for task to be done",
+        "dataElements": [
+          {
+            "class": "Provenance",
+            "name": "Author",
+            "path": "uscdiquality.html#data-element-provenance-author"
+          }
+        ]
+      },
+      {
         "path": "status",
         "short": "The potential performer who claimed ownership of the task has decided not to execute it prior to performing any action",
         "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
           {
             "class": "Task",
             "name": "Task Status",
@@ -7829,6 +8246,11 @@
         "path": "statusReason",
         "short": "Reason for current status",
         "dataElements": [
+          {
+            "class": "Healthcare Information Attributes",
+            "name": "Reason Not Performed",
+            "path": "uscdiquality.html#data-element-healthcare-information-attributes-reason-not-performed"
+          },
           {
             "class": "Task",
             "name": "Task Status",
