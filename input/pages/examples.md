@@ -1,8 +1,5 @@
 {:toc}
 
-{: .note}
-> TODO: Update examples to new content
-
 **USQualityCoreAdverseEvent**
 * [Mild Rash Example](AdverseEvent-example.html)
 

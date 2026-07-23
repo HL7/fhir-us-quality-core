@@ -1,8 +1,5 @@
 {:toc}
 
-{: .note}
-> TODO: Add in a list of QI-Core 8 profiles not present in this guide?
-
 ### Relationship with US Core and QI-Core
 
 US Quality Core v1.0.0 is based on QI-Core 8.0.0-ballot and uses US Core
