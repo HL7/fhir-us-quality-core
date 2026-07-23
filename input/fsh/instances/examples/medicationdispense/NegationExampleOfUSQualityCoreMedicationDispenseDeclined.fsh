@@ -23,4 +23,4 @@ Usage: #example
   * route = $sct#394899003 "oral administration of treatment"
   * doseAndRate
     * type = $dose-rate-type#ordered "Ordered"
-    * doseQuantity = 5 'ml' "ml"
+    * doseQuantity = 5 'mL' "mL"

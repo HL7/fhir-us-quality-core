@@ -18,5 +18,5 @@ Usage: #example
   * route = $sct#394899003 "oral administration of treatment"
   * doseAndRate
     * type = $dose-rate-type#ordered "Ordered"
-    * doseQuantity = 10 'ml' "ml"
-* dispenseRequest.quantity = 1000 'ml' "ml"
+    * doseQuantity = 10 'mL' "mL"
+* dispenseRequest.quantity = 1000 'mL' "mL"

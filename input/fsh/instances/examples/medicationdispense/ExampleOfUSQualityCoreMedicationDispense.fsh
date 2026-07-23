@@ -12,7 +12,7 @@ Usage: #example
 * subject.reference = "Patient/example"
 * performer.actor.reference = "Practitioner/example"
 * authorizingPrescription.reference = "MedicationRequest/example"
-* quantity = 100 'ml' "ml"
+* quantity = 100 'mL' "mL"
 * daysSupply = 30 'd' "Day"
 * whenPrepared = "2012-05-30T16:20:00+00:00"
 * whenHandedOver = "2012-05-31T10:20:00+00:00"
@@ -27,7 +27,7 @@ Usage: #example
   * route = $sct#394899003 "oral administration of treatment"
   * doseAndRate
     * type = $dose-rate-type#ordered "Ordered"
-    * doseQuantity = 5 'ml' "ml"
+    * doseQuantity = 5 'mL' "mL"
 * substitution
   * wasSubstituted = false
   * type = $v3-substanceAdminSubstitution#N "none"
