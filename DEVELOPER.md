@@ -8,6 +8,7 @@ common update workflows.
 
 - [Source Layout](#source-layout)
 - [How To Make Changes](#how-to-make-changes)
+- [Maintained Input Schemas](#maintained-input-schemas)
 - [Automation-Driven Content](#automation-driven-content)
 - [Hand-Maintained Content](#hand-maintained-content)
 - [Generators](#generators)
@@ -65,6 +66,118 @@ Do not edit files under `input/fsh/generated/` or `input/data/generated/` by
 hand. If generated output is wrong, update the maintained JSON or authored
 source and rerun the relevant generator.
 
+## Maintained Input Schemas
+
+The two JSON files under `data/` are hand-maintained generator inputs. The
+examples below show their basic shapes; arrays may contain any number of entries,
+including none where the corresponding behavior is not needed.
+
+### `data/uscdi_plus_quality.json`
+
+This file is an array with one object per USCDI+ Quality data element:
+
+```json
+[
+  {
+    "class": "Adverse Events",
+    "name": "Adverse Event Condition",
+    "description": "Description shown in the USCDI+ Quality table.",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
+    "mappings": {
+      "usCore": [],
+      "usQualityCore": [
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-adverseevent",
+          "elements": [
+            "AdverseEvent.resultingCondition"
+          ]
+        }
+      ]
+    }
+  }
+]
+```
+
+- `class`, `name`, and `description` supply the data class, data element name,
+  and descriptive text shown on the USCDI+ Quality page.
+- `narrative.note` is either a Markdown string or `null`. A non-null value
+  adds a note link and the corresponding note below the table.
+- `narrative.profileOverride` is either a Markdown string or `null`. A non-null
+  value replaces the generated links in the "Implement with US Quality Core
+  Profile(s)" cell for that data element.
+- `mappings.usCore` contains US Core canonical profile URLs. These mappings do
+  not include individual element paths.
+- `mappings.usQualityCore` contains US Quality Core canonical profile URLs and
+  the FHIR element paths represented by each profile. Element paths begin with
+  the FHIR resource type, for example `AdverseEvent.resultingCondition`.
+- Every data element must have at least one US Core or US Quality Core mapping.
+
+### `data/rest.json`
+
+This file is an object keyed by FHIR resource type. Each value describes the
+resource's CapabilityStatement and search requirements:
+
+```json
+{
+  "Observation": {
+    "documentation": "Resource-level guidance in Markdown.",
+    "interactions": {
+      "read": "SHALL",
+      "search-type": "SHALL"
+    },
+    "revIncludes": [
+      {
+        "value": "Provenance:target",
+        "expectation": "SHALL"
+      }
+    ],
+    "searchParams": {
+      "patient": {
+        "type": "reference",
+        "documentation": "Search parameter guidance in Markdown.",
+        "expectation": "SHALL",
+        "expression": "Observation.subject.where(resolve() is Patient)"
+      },
+      "date": {
+        "type": "date",
+        "documentation": "Search parameter guidance in Markdown.",
+        "expectation": "MAY",
+        "expression": "Observation.effective"
+      }
+    },
+    "searchCombinations": [
+      {
+        "params": [
+          "patient",
+          "date"
+        ],
+        "expectation": "SHALL"
+      }
+    ]
+  }
+}
+```
+
+- Each top-level key is an R4 resource type. The configured resource types must
+  exactly match those inferred from the profile mappings in
+  `data/uscdi_plus_quality.json`.
+- `documentation` is the resource-level CapabilityStatement guidance. It may be
+  an empty string when no additional text is needed.
+- `interactions` maps FHIR resource interaction codes to expectation codes such
+  as `SHALL` or `MAY`.
+- `revIncludes` lists supported `_revinclude` values and their expectations.
+- `searchParams` is keyed by search parameter code. Every configured search
+  parameter requires `type`, `documentation`, `expectation`, and `expression`.
+- `searchCombinations` lists required parameter combinations. Each `params`
+  array contains search parameter codes and `expectation` states the
+  combination's conformance level.
+- `revIncludes`, `searchParams`, and `searchCombinations` may be empty when a
+  resource has no requirements of that kind. Supported profile URLs are
+  inferred from `data/uscdi_plus_quality.json` and are not repeated here.
+
 ## Automation-Driven Content
 
 Use this workflow when changing USCDI+ Quality mappings, generated flags,
@@ -78,10 +191,17 @@ Edit `data/uscdi_plus_quality.json`.
 Use this file when adding or changing:
 
 - USCDI+ Quality data element entries
-- data element `notes`
+- data element `narrative.note` notes
+- data element `narrative.profileOverride` overrides for the "Implement with US
+  Quality Core Profile(s)" table cell
 - mapped US Quality Core profiles
 - mapped US Quality Core element paths to flag
 - mapped US Core profiles
+
+Both `narrative` values are nullable. A non-null `note` adds the existing
+data-element note link and note text. A non-null `profileOverride` replaces the
+generated US Quality Core profile links in that data element's table cell. When
+either value is `null`, that behavior is omitted.
 
 US Quality Core mappings include profile URLs and element paths. US Core
 mappings include only profile URLs; they do not include element mappings.

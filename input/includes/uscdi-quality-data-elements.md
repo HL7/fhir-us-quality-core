@@ -19,8 +19,8 @@
 {% assign profile_rowspan = 3 %}
 {% endif %}
     <tr class="usqc-uscdi-quality-element">
-      <th scope="row"><span id="{{ item.dataElementId | escape }}"></span>{{ item.name | escape }}{% if item.notes != "" %} <a href="#{{ item.noteId | escape }}">(see note)</a>{% endif %}</th>
-      <td rowspan="{{ profile_rowspan }}" class="usqc-uscdi-quality-profile-cell">{% if item.usQualityCore.size > 0 %}<ul class="usqc-profile-list">{% for profile in item.usQualityCore %}<li><a href="{{ profile.path | escape }}">{{ profile.title | escape }}</a></li>{% endfor %}</ul>{% else %}&mdash;{% endif %}</td>
+      <th scope="row"><span id="{{ item.dataElementId | escape }}"></span>{{ item.name | escape }}{% if item.note != nil %} <a href="#{{ item.noteId | escape }}">(see note)</a>{% endif %}</th>
+      <td rowspan="{{ profile_rowspan }}" class="usqc-uscdi-quality-profile-cell">{% if item.profileOverride != nil %}{{ item.profileOverride | markdownify }}{% elsif item.usQualityCore.size > 0 %}<ul class="usqc-profile-list">{% for profile in item.usQualityCore %}<li><a href="{{ profile.path | escape }}">{{ profile.title | escape }}</a></li>{% endfor %}</ul>{% else %}&mdash;{% endif %}</td>
       <td rowspan="{{ profile_rowspan }}" class="usqc-uscdi-quality-profile-cell">{% if item.usCore.size > 0 %}<ul class="usqc-profile-list">{% for profile in item.usCore %}<li><a href="{{ site.data.fhir.ver.uscore }}/StructureDefinition-{{ profile.id | escape }}.html">{{ profile.title | escape }}</a></li>{% endfor %}</ul>{% else %}&mdash;{% endif %}</td>
     </tr>
 {% if item.description != "" %}
@@ -42,7 +42,7 @@
 {% for item in section.notes %}
 ##### {{ item.class }}: {{ item.name }}
 
-{{ item.notes }}
+{{ item.note }}
 
 {% endfor %}
 {% endif %}

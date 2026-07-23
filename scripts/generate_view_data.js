@@ -88,14 +88,23 @@ function usCoreMapping(mapping, fhirDefs) {
   };
 }
 
+function narrativeValue(dataElement, key) {
+  const value = dataElement.narrative?.[key];
+  return value == null ? null : String(value).trim();
+}
+
 function resolvedDataElement(dataElement, profilesById, fhirDefs) {
+  const note = narrativeValue(dataElement, 'note');
+  const profileOverride = narrativeValue(dataElement, 'profileOverride');
+
   return {
     class: dataElement.class,
     name: dataElement.name,
     description: markdownText(dataElement.description ?? ''),
     dataElementId: dataElementId(dataElement),
     noteId: noteId(dataElement),
-    notes: String(dataElement.notes ?? '').trim(),
+    note,
+    profileOverride,
     usQualityCore: uniqueMappings(dataElement.mappings.usQualityCore).map(mapping =>
       usQualityCoreMapping(mapping, profilesById)
     ),
@@ -108,7 +117,7 @@ function uscdiQualityDataElementsData(dataElements, profilesById, fhirDefs) {
 
   return {
     groups: groupsByClass(elements),
-    notes: elements.filter(element => element.notes)
+    notes: elements.filter(element => element.note != null)
   };
 }
 
