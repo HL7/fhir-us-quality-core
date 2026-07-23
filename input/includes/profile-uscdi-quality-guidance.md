@@ -9,7 +9,7 @@ The following elements are specifically relevant to USCDI+ Quality V2 data class
 
 **USCDI+ Quality Elements:**
 
-{: .usqc-generated-table .usqc-profile-uscdi-quality-elements}
+{: .table-bordered .usqc-generated-table .usqc-profile-uscdi-quality-elements}
 | Profile element | Description | USCDI+ Quality Data Element(s) |
 |---|---|---|
 {% for element in profile_notes.uscdiQualityElements -%}
