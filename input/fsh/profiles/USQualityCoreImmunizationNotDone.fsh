@@ -29,5 +29,6 @@ Description: "Negation profile of Communication for decision support/quality met
 * location 0..1
 * location only Reference(USQualityCoreLocation)
   * ^short = "Where the vaccine was administered"
+* performer.actor ^short = "Individual or organization who was performing"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreImmunizationNotDone

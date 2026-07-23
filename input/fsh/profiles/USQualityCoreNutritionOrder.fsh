@@ -22,6 +22,22 @@ Description: "Defines constraints and extensions on the NutritionOrder resource 
 * oralDiet.type 0..1
 * oralDiet.type only CodeableConcept
   * ^short = "Oral diet components"
+  * extension contains $codeOptions named codeOptions 0..1
+  * extension[codeOptions] ^short = "Url of a value set of candidate oral diet types"
+    * ^definition = "A logical reference (e.g. a reference to ValueSet.url) to a value set/version that identifies a set of possible oral diet types."
+* supplement.type
+  * ^short = "Type of supplement product requested"
+  * extension contains $codeOptions named codeOptions 0..1
+  * extension[codeOptions] ^short = "Url of a value set of candidate nutritional supplements"
+    * ^definition = "A logical reference (e.g. a reference to ValueSet.url) to a value set/version that identifies a set of possible nutritional supplements."
+* enteralFormula.baseFormulaType
+  * ^short = "Type of enteral or infant formula"
+  * extension contains $codeOptions named codeOptions 0..1
+  * extension[codeOptions] ^short = "Url of a value set of candidate enteral formulas"
+    * ^definition = "A logical reference (e.g. a reference to ValueSet.url) to a value set/version that identifies a set of possible enteral formulas."
+* supplement ^short = "Supplement components"
+* enteralFormula ^short = "Enteral formula components"
+* orderer ^short = "Who ordered the diet, formula or nutritional supplement"
 * intent ^short = "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
 * status ^short = "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.

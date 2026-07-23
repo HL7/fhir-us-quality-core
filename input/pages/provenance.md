@@ -4,6 +4,7 @@ US Core maps the US Core data elements that communicate the author and author ro
 
 ### Author and Author Role Data Elements
 
+{: .table-bordered}
 | US Quality Core Profile | Data Element Corresponding to Author Provenance | Target Resource Types Corresponding to Author Role Provenance |
 |---|---|---|
 | [US Quality Core AdverseEvent](StructureDefinition-us-quality-core-adverseevent.html) | AdverseEvent.recorder | US Quality Core Practitioner Profile, US Quality Core PractitionerRole Profile, US Quality Core Patient Profile, US Quality Core RelatedPerson Profile |

@@ -3,7 +3,10 @@
     "class": "Adverse Events",
     "name": "Adverse Event Condition",
     "description": "Change to patient condition that could be an unintended effect of clinical interventions. Examples include but are not limited to rash, fracture, fever, etc.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -22,7 +25,10 @@
     "class": "Adverse Events",
     "name": "Adverse Event Outcome",
     "description": "Resulting patient status or consequence following an unexpected condition change or clinical event. Examples include but are not limited to hospitalized, recovered, recovered with sequelae, and death.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -46,7 +52,10 @@
     "class": "Allergies and Intolerances",
     "name": "Drug Class Allergy Intolerance",
     "description": "Pharmacologic category for an agent believed to cause a harmful or undesired physiologic response following exposure.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -65,7 +74,10 @@
     "class": "Allergies and Intolerances",
     "name": "Medication Allergy Intolerance",
     "description": "Pharmacologic agent believed to cause a harmful or undesired physiologic response following exposure.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -84,7 +96,10 @@
     "class": "Allergies and Intolerances",
     "name": "Non-Medication Allergy Intolerance",
     "description": "Non-pharmacologic agent believed to cause a harmful or undesired physiologic response following exposure. Examples include but are not limited to latex, eggs, pollen, and peanuts.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -103,7 +118,10 @@
     "class": "Allergies and Intolerances",
     "name": "Reaction",
     "description": "Harmful or undesired physiologic response following exposure to a substance",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -122,7 +140,10 @@
     "class": "Allergies and Intolerances",
     "name": "Reaction Date and Time",
     "description": "Last date and time a patient had a reaction to an allergen.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -141,7 +162,10 @@
     "class": "Allergies and Intolerances",
     "name": "Allergy Intolerance Onset Date and Time",
     "description": "Date and time when an allergy or intolerance developed.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -160,7 +184,10 @@
     "class": "Allergies and Intolerances",
     "name": "Allergy Intolerance Recorded Date and Time",
     "description": "Date and time of documentation for the allergy.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -179,7 +206,10 @@
     "class": "Care Plans",
     "name": "Assessment and Plan of Treatment",
     "description": "Health professional's conclusions and working assumptions that will guide treatment of the patient.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -198,7 +228,10 @@
     "class": "Care Plans",
     "name": "Care Plan",
     "description": "Shared plan informed by members of a coordinated care team that details conditions, needs, and goals along with strategies for addressing them. Usage notes: Includes problems, health concerns, assessments, goals, and interventions from across care settings. Examples include but are not limited to clinical care plans, condition-specific care plans, coordinated care plan.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -222,7 +255,10 @@
     "class": "Care Team Members",
     "name": "Care Team Member Identifier",
     "description": "Sequence of characters used to uniquely refer to a member of the care team. Examples include but are not limited to National Provider Identifier (NPI) and National Council of State Boards of Nursing Identifier (NCSBN ID).",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -263,7 +299,10 @@
     "class": "Care Team Members",
     "name": "Care Team Member Location",
     "description": "Place where care is delivered by a care team member. Examples include but are not limited to clinic address, and location description.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -299,7 +338,10 @@
     "class": "Care Team Members",
     "name": "Care Team Member Name",
     "description": "Word or phrase that constitutes the distinctive designation of a care team member. Examples include but are not limited to given name, middle name, surname, and name suffix.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -331,7 +373,10 @@
     "class": "Care Team Members",
     "name": "Care Team Member Role",
     "description": "Responsibility of an individual within the care team. Examples include but are not limited to primary care physician and caregiver.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -363,7 +408,10 @@
     "class": "Care Team Members",
     "name": "Care Team Member Telecom",
     "description": "Phone or email contact information for a care team member.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -398,7 +446,10 @@
     "class": "Clinical Notes",
     "name": "Consultation Note",
     "description": "Narrative summary of care provided in response to a request from a clinician for an opinion, advice, or service. Examples include but are not limited to dermatology, dentistry, and acupuncture.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -414,7 +465,10 @@
     "class": "Clinical Notes",
     "name": "Discharge Summary Note",
     "description": "Narrative summary of a patient's admission and course in a hospital or post-acute care setting. Usage note: Must contain admission and discharge dates and locations, discharge instructions, and reason(s) for hospitalization. Examples include but are not limited to dermatology discharge summary, hematology discharge summary, and neurology discharge summary.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -430,7 +484,10 @@
     "class": "Clinical Notes",
     "name": "Emergency Department Note",
     "description": "Narrative summary of care delivered in an emergency department.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -446,7 +503,10 @@
     "class": "Clinical Notes",
     "name": "History & Physical",
     "description": "Narrative summary of current and past conditions and observations used to inform an episode of care. Examples include but are not limited to admission, surgery, and other procedure.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -462,7 +522,10 @@
     "class": "Clinical Notes",
     "name": "Operative Note",
     "description": "Narrative summary of a surgical procedure. Usage note: May include procedures performed, operative and anesthesia times, findings observed, fluids administered, specimens obtained, and complications identified.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -478,7 +541,10 @@
     "class": "Clinical Notes",
     "name": "Procedure Note",
     "description": "Narrative summary of non-operative procedure. Examples include but are not limited to interventional cardiology, gastrointestinal endoscopy, and osteopathic manipulation.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -489,8 +555,7 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
           "elements": [
-            "DiagnosticReport.category:us-core",
-            "DiagnosticReport.result"
+            "DiagnosticReport.presentedForm"
           ]
         }
       ]
@@ -500,7 +565,10 @@
     "class": "Clinical Notes",
     "name": "Progress Note",
     "description": "Narrative summary of a patient's interval status during an encounter. Examples include but are not limited to hospitalization, outpatient visit, and treatment with a post-acute care provider, or other healthcare encounter.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -516,7 +584,10 @@
     "class": "Clinical Tests",
     "name": "Clinical Test",
     "description": "Non-imaging or non-laboratory test. Examples include but are not limited to electrocardiogram (ECG), visual acuity exam, macular exam, and graded exercise testing (GXT).",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -541,7 +612,10 @@
     "class": "Clinical Tests",
     "name": "Clinical Test Result/Report",
     "description": "Findings of clinical tests.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -566,7 +640,10 @@
     "class": "Clinical Tests",
     "name": "Clinical Test Status",
     "description": "The completion status of a clinical test at the level of a single observation.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -591,7 +668,10 @@
     "class": "Communications",
     "name": "Communication Status",
     "description": "The current state of the communication transition.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -618,7 +698,10 @@
     "class": "Communications",
     "name": "Communication Topic",
     "description": "Purpose or content of communication.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -649,7 +732,10 @@
     "class": "Communications",
     "name": "Reason Not Communicated",
     "description": "The reason why a communication did not happen.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -672,24 +758,19 @@
     "class": "Diagnostic Imaging",
     "name": "Diagnostic Imaging Reference",
     "description": "The technical details of the retrieval access path to indicate network services that can be used to access DICOM studies, series, or instances content and metadata (e.g., a DICOMweb server endpoint providing QIDO-RS, WADO-RS, or WADO-URI).",
-    "notes": "",
+    "narrative": {
+      "note": "We are seeking implementer feedback on whether this level of detail is necessary for quality reporting. The proposed mapping to DocumentReference.content.attachment.url semantically aligns with the USCDI+ Quality data element definition by identifying the location of the referenced document content, but feedback through US Quality Core will help determine whether this mapping should be retained.",
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
-        {
-          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
-        }
+
       ],
       "usQualityCore": [
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
           "elements": [
             "DiagnosticReport.imagingStudy"
-          ]
-        },
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy",
-          "elements": [
-            "ImagingStudy.status"
           ]
         }
       ]
@@ -699,7 +780,10 @@
     "class": "Diagnostic Imaging",
     "name": "Diagnostic Imaging Report",
     "description": "Interpreted results of imaging tests. Usage Note: Includes both structured and unstructured (narrative) components.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -708,7 +792,8 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
           "elements": [
-            "DiagnosticReport.result"
+            "DiagnosticReport.result",
+            "DiagnosticReport.presentedForm"
           ]
         },
         {
@@ -724,7 +809,10 @@
     "class": "Diagnostic Imaging",
     "name": "Diagnostic Imaging Status",
     "description": "The current status of the imaging study- registered, available, cancelled, entered-in-error, or unknown.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -749,7 +837,10 @@
     "class": "Diagnostic Imaging",
     "name": "Diagnostic Imaging Test",
     "description": "Tests that generate visual images and require interpretation by qualified professionals. Examples include but are not limited to computed tomography-head, radiograph-chest, and ultrasound-pelvis.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -774,7 +865,10 @@
     "class": "Encounter Information",
     "name": "Diagnosis Rank",
     "description": "Ordinal number or code that identifies the priority or significance of a diagnosis for a given encounter.",
-    "notes": "In QI-Core, information about principal diagnosis is represented using the Claim profile. In US Quality Core v1.0.0-ballot, support for the Claim profile is not required for conformance. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
+    "narrative": {
+      "note": "In QI-Core, information about principal diagnosis is represented using the Claim profile. In US Quality Core v1.0.0-ballot, support for the Claim profile is not required for conformance. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -793,7 +887,10 @@
     "class": "Encounter Information",
     "name": "Encounter Diagnosis",
     "description": "Coded diagnoses associated with an episode of care.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -820,7 +917,10 @@
     "class": "Encounter Information",
     "name": "Encounter Diagnosis Role",
     "description": "The specific use or role of diagnosis within the context of an encounter e.g., admitting diagnosis, principal diagnosis, discharge diagnosis, etc.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -839,7 +939,10 @@
     "class": "Encounter Information",
     "name": "Encounter Disposition",
     "description": "Place or setting where the patient went after a hospital stay or encounter.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -859,7 +962,10 @@
     "class": "Encounter Information",
     "name": "Encounter Identifier",
     "description": "Sequence of characters by which an encounter is known.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -880,7 +986,10 @@
     "class": "Encounter Information",
     "name": "Encounter Location",
     "description": "Place where a patient's care is delivered.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -900,7 +1009,10 @@
     "class": "Encounter Information",
     "name": "Encounter Status",
     "description": "Current state of the encounter: Planned; Arrived; Triaged; In progress; On leave; Finished; Canceled; Entered in error; Unknown.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -919,7 +1031,10 @@
     "class": "Encounter Information",
     "name": "Encounter Time",
     "description": "Date/times related to an encounter. Examples include but are not limited to scheduled appointment time, check in time, and start and stop times.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -938,7 +1053,10 @@
     "class": "Encounter Information",
     "name": "Encounter Type",
     "description": "Category of health care service. Examples include but are not limited to office visit, telephone assessment, and home visit.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -957,7 +1075,10 @@
     "class": "Encounter Information",
     "name": "Present on Admission",
     "description": "An indicator of whether a patient's condition or diagnosis was known to be present at the time of admission.",
-    "notes": "In QI-Core, information about present on admission is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. We have reintroduced the Present on Admission extension for Encounter.diagnosis in this US Quality Core v1.0.0-ballot and it is (USCDI+ Quality) tagged.",
+    "narrative": {
+      "note": "In QI-Core, information about present on admission is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. We have reintroduced the Present on Admission extension for Encounter.diagnosis in this US Quality Core v1.0.0-ballot and it is (USCDI+ Quality) tagged.",
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -976,7 +1097,10 @@
     "class": "Facility Information",
     "name": "Facility Address",
     "description": "Physical location of available services or resources.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -995,7 +1119,10 @@
     "class": "Facility Information",
     "name": "Facility Identifier",
     "description": "Sequence of characters representing a physical place of available services or resources.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1014,7 +1141,10 @@
     "class": "Facility Information",
     "name": "Facility Name",
     "description": "Word or words by which a facility is known.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1033,7 +1163,10 @@
     "class": "Facility Information",
     "name": "Facility Type",
     "description": "Category of service or resource available in a location. Examples include but are not limited to hospital, laboratory, pharmacy, ambulatory clinic, long-term and post-acute care facility, and food pantry.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1052,7 +1185,10 @@
     "class": "Family Health History",
     "name": "Family Health History",
     "description": "Family member health condition(s) that are relevant to a patient's care.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -1068,7 +1204,10 @@
     "class": "Goals and Preferences",
     "name": "Advance Directive Observation",
     "description": "Information about a patient or provider authored document indicating its location, content, type, and verification status. Usage note: May include structured or unstructured data, whether a person has one or more advance directive documents, the type of advance directive, the location of the document, and whether it has been verified. Such documents may be used should a person be unable to communicate their wishes, preferences, or priorities to their provider. Examples include but are not limited to an indication that a living will is on file, a reference to the location of durable medical power of attorney, and the validating provider.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -1087,7 +1226,10 @@
     "class": "Goals and Preferences",
     "name": "Care Experience Preference",
     "description": "Person's goals, preferences, and priorities for overall experiences during their care and treatment. Examples include but are not limited to religious beliefs, dislikes and fears, and thoughts and feelings to be shared.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -1103,7 +1245,10 @@
     "class": "Goals and Preferences",
     "name": "Patient Goals",
     "description": "Desired outcomes of patient's care. Examples include but are not limited to blood pressure control, functional ability, and nutrition.",
-    "notes": "",
+    "narrative": {
+      "note": "We are seeking feedback on the use of additional Goal elements (e.g., Goal.target) as it relates to this USCDI+ Quality data element.",
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1112,8 +1257,7 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-goal",
           "elements": [
-            "Goal.description",
-            "Goal.target"
+            "Goal.description"
           ]
         }
       ]
@@ -1123,7 +1267,10 @@
     "class": "Goals and Preferences",
     "name": "SDOH Goals",
     "description": "Desired future states for an identified Social Determinants of Health-related health concern, condition, or diagnosis. Examples include but are not limited to food security, transportation security, and ability to access health care.",
-    "notes": "",
+    "narrative": {
+      "note": "We are seeking feedback on the use of additional Goal elements (e.g., Goal.target) as it relates to this USCDI+ Quality data element.",
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1132,8 +1279,7 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-goal",
           "elements": [
-            "Goal.description",
-            "Goal.target"
+            "Goal.description"
           ]
         }
       ]
@@ -1143,7 +1289,10 @@
     "class": "Goals and Preferences",
     "name": "Treatment Intervention Preference",
     "description": "Person's goals, preferences, and priorities for care and treatment in case that person is unable to make medical decisions because of a serious illness or injury. Examples include but are not limited to thoughts on cardiopulmonary resuscitation, mental health treatment preferences, and thoughts on pain management.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -1159,7 +1308,10 @@
     "class": "Health Insurance Information",
     "name": "Coverage Status",
     "description": "Presence or absence of health care insurance.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1168,7 +1320,8 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-coverage",
           "elements": [
-            "Coverage.status"
+            "Coverage.status",
+            "Coverage.period"
           ]
         }
       ]
@@ -1178,7 +1331,10 @@
     "class": "Health Insurance Information",
     "name": "Coverage Type",
     "description": "Category of healthcare payers, insurance products, or benefits. Examples include but are not limited to Medicaid, commercial, HMO, Veterans Benefits Administration, Medicare Part D, and dental.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1197,7 +1353,10 @@
     "class": "Health Insurance Information",
     "name": "Group Identifier",
     "description": "Sequence of characters used to uniquely refer to a specific health insurance plan.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1219,7 +1378,10 @@
     "class": "Health Insurance Information",
     "name": "Health Insurance Beneficiary",
     "description": "The party who benefits from the health insurance coverage.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1238,7 +1400,10 @@
     "class": "Health Insurance Information",
     "name": "Health Insurance Coverage Period",
     "description": "The time frame in which the policy is in force.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1257,7 +1422,10 @@
     "class": "Health Insurance Information",
     "name": "Health Insurance Payer",
     "description": "Issuer of the policy.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1282,7 +1450,10 @@
     "class": "Health Insurance Information",
     "name": "Health Insurance Plan Identifier",
     "description": "Sequence of characters used to uniquely refer to an insurance plan.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1301,7 +1472,10 @@
     "class": "Health Insurance Information",
     "name": "Insurance Plan Name",
     "description": "Name of the health plan benefit offering assigned to the Plan Identifier.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1321,7 +1495,10 @@
     "class": "Health Insurance Information",
     "name": "Member Identifier",
     "description": "Sequence of characters used to uniquely refer to an individual with respect to their insurance.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1342,7 +1519,10 @@
     "class": "Health Insurance Information",
     "name": "Payer Identifier",
     "description": "Sequence of characters used to uniquely refer to an insurance payer.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1367,7 +1547,10 @@
     "class": "Health Insurance Information",
     "name": "Relationship to Subscriber",
     "description": "Relationship of a patient to the primary insured person.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1386,7 +1569,10 @@
     "class": "Health Insurance Information",
     "name": "Subscriber Identifier",
     "description": "Sequence of characters used to uniquely refer to the individual that selects insurance benefits.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1405,7 +1591,10 @@
     "class": "Health Status Assessments",
     "name": "Alcohol Use",
     "description": "Evaluation of a patient's consumption of alcohol. Examples include but are not limited to history of alcohol use, alcohol use disorder identification test and alcohol intake assessment.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1454,7 +1643,10 @@
     "class": "Health Status Assessments",
     "name": "Disability Status",
     "description": "Assessment of a patient's physical, cognitive, or psychiatric disabilities. Examples include but are not limited to American Community Survey, Veterans RAND Health Survey, and Patient-Reported Outcomes Measurement Information System (PROMIS).",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1503,7 +1695,10 @@
     "class": "Health Status Assessments",
     "name": "Functional Status",
     "description": "Assessment of a person's ability to perform activities of daily living and activities across other situations and settings. Examples include but are not limited to Functional Assessment Standardized Items (FASI) and Timed Up and Go (TUG).",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1552,7 +1747,10 @@
     "class": "Health Status Assessments",
     "name": "Health Concerns",
     "description": "Health-related issue or worry. Examples include but are not limited to weight gain and cancer risk.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1572,7 +1770,10 @@
     "class": "Health Status Assessments",
     "name": "Mental/Cognitive Status",
     "description": "Assessment or screening for the presence of a mental or behavioral problem. Examples include but are not limited to Confusion Assessment Method (CAM) and Patient Health Questionnaire (PHQ).",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1621,7 +1822,10 @@
     "class": "Health Status Assessments",
     "name": "Physical Activity",
     "description": "Evaluation of a patient's current or usual exercise. Examples include but are not limited to frequency of muscle-strengthening physical activity, days per week with moderate to strenuous physical activity, and minutes per day of moderate to strenuous physical activity.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1670,7 +1874,10 @@
     "class": "Health Status Assessments",
     "name": "Pregnancy Status",
     "description": "State or condition of being pregnant or intent to become pregnant. Examples include but are not limited to pregnant, not pregnant, and unknown.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -1689,7 +1896,10 @@
     "class": "Health Status Assessments",
     "name": "SDOH Assessment",
     "description": "Screening questionnaire-based, structured evaluation for a Social Determinants of Health-related risk. Examples include but are not limited to food, housing, transportation security, and health literacy.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1738,7 +1948,10 @@
     "class": "Health Status Assessments",
     "name": "Smoking Status",
     "description": "Assessment of a patient's smoking behaviors. Examples include but are not limited to pack- years and current use.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -1754,7 +1967,10 @@
     "class": "Health Status Assessments",
     "name": "Substance Use",
     "description": "Evaluation of a patient's reported use of drugs or other substances for non-medical purposes or in excess of a valid prescription. Examples include but are not limited to substance use disorder score, and substance use knowledge assessment.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1803,7 +2019,10 @@
     "class": "Healthcare Information Attributes",
     "name": "Reason Not Performed",
     "description": "Explanation or justification provided when an order or practice guideline is not carried out. Usage note: Should be included with a procedure, immunization, and medication.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1866,6 +2085,25 @@
             "ServiceRequest.code.extension:codeOptions",
             "ServiceRequest.authoredOn"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequest",
+          "elements": [
+            "DeviceRequest.reasonCode",
+            "DeviceRequest.status",
+            "DeviceRequest.code[x]",
+            "DeviceRequest.code[x]:codeCodeableConcept.extension:codeOptions",
+            "DeviceRequest.modifierExtension:doNotPerform"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected",
+          "elements": [
+            "Task.statusReason",
+            "Task.status",
+            "Task.code",
+            "Task.code.extension:codeOptions"
+          ]
         }
       ]
     }
@@ -1874,7 +2112,10 @@
     "class": "Immunizations",
     "name": "Immunization Record Source",
     "description": "Immunization event information source. Examples include but are not limited to facility administering the immunization and an external record.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1883,13 +2124,15 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization",
           "elements": [
-            "Immunization.primarySource"
+            "Immunization.primarySource",
+            "Immunization.location"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationdone",
           "elements": [
-            "Immunization.primarySource"
+            "Immunization.primarySource",
+            "Immunization.location"
           ]
         }
       ]
@@ -1899,7 +2142,10 @@
     "class": "Immunizations",
     "name": "Immunization Status",
     "description": "State of an immunization event.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1924,7 +2170,10 @@
     "class": "Immunizations",
     "name": "Immunizations",
     "description": "Vaccine product administered, planned, or reported.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1949,7 +2198,10 @@
     "class": "Immunizations",
     "name": "Lot Number",
     "description": "Sequence of characters representing a specific quantity of manufactured material within a batch of a vaccine product.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1974,7 +2226,10 @@
     "class": "Immunizations",
     "name": "Vaccination Administration Date and Time",
     "description": "The date and time the vaccination event occurred.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -1999,7 +2254,10 @@
     "class": "Laboratory",
     "name": "Result Interpretation",
     "description": "Categorical assessment of a laboratory value, often in relation to a test's reference range. Examples include but are not limited to high, low, critical high, and normal.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2018,7 +2276,10 @@
     "class": "Laboratory",
     "name": "Result Reference Range",
     "description": "Upper and lower limit of quantitative test values expected for a designated population of individuals.Usage note: Reference range values may differ by patient characteristics, laboratory test manufacturer, and laboratory test performer.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2037,7 +2298,10 @@
     "class": "Laboratory",
     "name": "Result Status",
     "description": "State or condition of a laboratory test.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2062,7 +2326,10 @@
     "class": "Laboratory",
     "name": "Result Unit of Measure",
     "description": "Unit of measurement to report quantitative results.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2081,7 +2348,10 @@
     "class": "Laboratory",
     "name": "Specimen Condition Acceptability",
     "description": "Information about a specimen, including the container, that is used to determine a laboratory's criteria for acceptability. Usage note: This may include information about the contents of the container, the container, and the label. Examples include but are not limited to hemolyzed, clotted, container leaking, and missing patient name.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -2102,7 +2372,10 @@
     "class": "Laboratory",
     "name": "Specimen Identifier",
     "description": "Sequence of characters assigned by a laboratory for an individual specimen. Example includes but is not limited to accession number.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -2123,7 +2396,10 @@
     "class": "Laboratory",
     "name": "Specimen Source Site",
     "description": "Body location from where a specimen was obtained. Examples include but are not limited to right internal jugular, left arm, and right eye.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -2144,7 +2420,10 @@
     "class": "Laboratory",
     "name": "Specimen Type",
     "description": "Substance being sampled or tested. Examples include but are not limited to nasopharyngeal swab, whole blood, serum, urine, and wound swab.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -2164,8 +2443,11 @@
   {
     "class": "Laboratory",
     "name": "Tests",
-    "description": "Analysis of specimens derived from humans which provide information for the diagnosis, prevention,treatmentofdisease,orassessment of health.",
-    "notes": "",
+    "description": "Analysis of specimens derived from humans which provide information for the diagnosis, prevention, treatment of disease, or assessment of health.",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2193,8 +2475,11 @@
   {
     "class": "Laboratory",
     "name": "Values/Results",
-    "description": "Documentedfindingsofatestedspecimen including structured and unstructured components",
-    "notes": "",
+    "description": "Documented findings of a tested specimen including structured and unstructured components",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2219,7 +2504,10 @@
     "class": "Laboratory",
     "name": "Laboratory Result Report Date and Time",
     "description": "The date and time when the laboratory result(s) report is made available to inform clinical decision making.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2230,6 +2518,12 @@
           "elements": [
             "Observation.issued"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab",
+          "elements": [
+            "DiagnosticReport.issued"
+          ]
         }
       ]
     }
@@ -2238,12 +2532,13 @@
     "class": "Laboratory",
     "name": "Specimen Collection Date and Time",
     "description": "Date and time the test sample was collected.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
-        {
-          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen|9.0.0"
-        }
+
       ],
       "usQualityCore": [
         {
@@ -2251,6 +2546,12 @@
           "elements": [
             "Observation.effective[x]",
             "Observation.specimen"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab",
+          "elements": [
+            "DiagnosticReport.effective[x]"
           ]
         }
       ]
@@ -2260,7 +2561,10 @@
     "class": "Medical Devices",
     "name": "Device Type",
     "description": "Kind of instrument, machine, appliance, implant, software, and similar medical device.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -2299,7 +2603,10 @@
     "class": "Medical Devices",
     "name": "Unique Device Identifier (UDI)",
     "description": "Numeric or alphanumeric code that uniquely identifies a medical device. Usage note: Contains a device identifier (DI) and one or more production identifiers (PI).",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -2315,7 +2622,10 @@
     "class": "Medications",
     "name": "Days Supply",
     "description": "Number of days supply of medication dispensed by the pharmacy.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2354,7 +2664,10 @@
     "class": "Medications",
     "name": "Dispense Status",
     "description": "State of a medication with regards to dispensing or other activity. Examples include but are not limited to dispensed, partially dispensed, not dispensed.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2385,7 +2698,10 @@
     "class": "Medications",
     "name": "Dose",
     "description": "Amount of a medication for each administration.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2436,7 +2752,10 @@
     "class": "Medications",
     "name": "Dose Unit of Measure",
     "description": "Units of measure of a medication. Examples include but are not limited to milligram (mg) and milliliter (mL).",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2485,7 +2804,10 @@
     "class": "Medications",
     "name": "Indication",
     "description": "Sign, symptom, or medical condition that is the reason for giving or taking a medication.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2512,7 +2834,10 @@
     "class": "Medications",
     "name": "Medication Adherence",
     "description": "Statement of whether a medication has been consumed according to instructions. Examples include but are not limited to taking as directed, taking less than directed, and not taking.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2537,7 +2862,10 @@
     "class": "Medications",
     "name": "Medication Administration",
     "description": "Information about the event of a patient consuming or otherwise being given a medication. Examples include but are not limited to swallowing a tablet, administering an injection, and a long running infusion.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2577,7 +2905,10 @@
     "class": "Medications",
     "name": "Medication Instructions",
     "description": "Directions for administering or taking a medication. Usage note: May include route, quantity, timing/frequency, and special instructions (PRN, sliding scale, taper). Examples include but are not limited to prescription directions for taking a medication, and package instructions for over-the-counter medications.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2644,7 +2975,10 @@
     "class": "Medications",
     "name": "Medication Quantity",
     "description": "The amount of medication, including the unit of measure, that is prescribed or dispensed.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2682,8 +3016,11 @@
   {
     "class": "Medications",
     "name": "Medications",
-    "description": "Pharmacologicagentusedinthediagnosis, cure, mitigation, treatment, or prevention of disease.",
-    "notes": "",
+    "description": "Pharmacologic agent used in the diagnosis, cure, mitigation, treatment, or prevention of disease.",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2738,7 +3075,10 @@
     "class": "Medications",
     "name": "Route of Administration",
     "description": "Physiological administration path of a therapeutic agent into or onto a patient. Examples include but are not limited to oral, topical, and intravenous.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2787,7 +3127,10 @@
     "class": "Medications",
     "name": "Date and Time Medication Administered",
     "description": "A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true).",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2818,7 +3161,10 @@
     "class": "Medications",
     "name": "Date and Time Medication Prescribed",
     "description": "The date when the prescription was initially written or authored.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2843,7 +3189,10 @@
     "class": "Newborn's Delivery Information",
     "name": "Birth Outcome",
     "description": "The clinical status and health indicators of the newborn including clinical event during labor, delivery, and the immediate post-partum period.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2863,7 +3212,10 @@
     "class": "Newborn's Delivery Information",
     "name": "Birth Weight",
     "description": "The weight of the infant/fetus at birth/delivery.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2883,7 +3235,10 @@
     "class": "Newborn's Delivery Information",
     "name": "Gestational Age at Delivery",
     "description": "Gestational age at delivery refers to how far along the pregnancy is at delivery, generally expressed as a combination of weeks and days.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2903,7 +3258,10 @@
     "class": "Newborn's Delivery Information",
     "name": "Birth Date and Time",
     "description": "The recorded date time of birth of the newborn documented in the fetal record.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2923,7 +3281,10 @@
     "class": "Orders",
     "name": "Clinical Test Order",
     "description": "Provider-authored request for the performance of a non-laboratory or non-imaging test.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -2969,7 +3330,10 @@
     "class": "Orders",
     "name": "Diagnostic Imaging Order",
     "description": "Provider-authored request for the performance of a diagnostic imaging study.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3015,7 +3379,10 @@
     "class": "Orders",
     "name": "Laboratory Order",
     "description": "Provider-authored request for laboratory testing.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3061,7 +3428,10 @@
     "class": "Orders",
     "name": "Medical Device Order",
     "description": "Provider-authored request for medical devices. Examples include but are not limited to therapeutic footwear, insulin infusion pump, and continuous positive airway pressure (CPAP) machine.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3104,7 +3474,10 @@
     "class": "Orders",
     "name": "Medication Order",
     "description": "Provider-authored request for the dispensing of a therapeutic agent.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3156,7 +3529,10 @@
     "class": "Orders",
     "name": "Nutrition Order",
     "description": "A provider-authored request for nutrition support such as therapeutic diets, enteral feedings, parenteral nutrition, or oral nutritional supplements.",
-    "notes": "",
+    "narrative": {
+      "note": "We are seeking implementer feedback on whether US Quality Core should include mappings for Nutrition Order beyond NutritionOrder.oralDiet to also include NutritionOrder.enteralFormula and NutritionOrder.supplement. These elements align with the broader Nutrition Order definition which includes enteral feedings and nutritional supplements; however, their implementation support and need in quality reporting requires additional feedback.",
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3165,11 +3541,17 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-nutritionorder",
           "elements": [
-            "NutritionOrder.intent",
             "NutritionOrder.patient",
             "NutritionOrder.status",
             "NutritionOrder.oralDiet",
-            "NutritionOrder.oralDiet.type"
+            "NutritionOrder.oralDiet.type",
+            "NutritionOrder.oralDiet.type.extension:codeOptions",
+            "NutritionOrder.supplement",
+            "NutritionOrder.supplement.type",
+            "NutritionOrder.supplement.type.extension:codeOptions",
+            "NutritionOrder.enteralFormula",
+            "NutritionOrder.enteralFormula.baseFormulaType",
+            "NutritionOrder.enteralFormula.baseFormulaType.extension:codeOptions"
           ]
         }
       ]
@@ -3179,44 +3561,18 @@
     "class": "Orders",
     "name": "Portable Medical Order",
     "description": "Provider-authored request for end-of-life or life-sustaining care for a person who has a serious life-limiting medical condition. Usage note: These are meant to follow a person regardless of when and where such an order might be needed (e.g., hospital, care facility, community, home). There are variations in requirements and names for portable medical orders based on jurisdiction. Examples include, but are not limited to, POLST (Portable Medical Order for Life-Sustaining Treatment), MOLST (Medical Orders for Life-Sustaining Treatment), and out-of-hospital DNR (do-not-resuscitate).",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
-        {
-          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
-        },
         {
           "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference|9.0.0"
         }
       ],
       "usQualityCore": [
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
-          "elements": [
-            "ServiceRequest.code",
-            "ServiceRequest.status",
-            "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
-          ]
-        },
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
-          "elements": [
-            "ServiceRequest.code",
-            "ServiceRequest.status",
-            "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
-          ]
-        },
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
-          "elements": [
-            "ServiceRequest.code",
-            "ServiceRequest.status",
-            "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
-          ]
-        }
+
       ]
     }
   },
@@ -3224,7 +3580,10 @@
     "class": "Orders",
     "name": "Procedure Order",
     "description": "Provider-authored request for the delivery of patient care services.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3267,7 +3626,10 @@
     "class": "Patient Demographics/Information",
     "name": "Current Address",
     "description": "Place where a person is located or may be contacted.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3292,7 +3654,10 @@
     "class": "Patient Demographics/Information",
     "name": "Date of Birth",
     "description": "Known or estimated year, month, and day of the patient's birth.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3311,7 +3676,10 @@
     "class": "Patient Demographics/Information",
     "name": "Date of Death",
     "description": "Known or estimated year, month, and day of the patient's death.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3330,7 +3698,10 @@
     "class": "Patient Demographics/Information",
     "name": "Email Address",
     "description": "Unique identifier of an individual's email account that is used to send and receive email messages.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3352,7 +3723,10 @@
     "class": "Patient Demographics/Information",
     "name": "Ethnicity",
     "description": "Patient's self-identification as Hispanic/ Latino or Non- Hispanic/ Non-Latino.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3371,7 +3745,10 @@
     "class": "Patient Demographics/Information",
     "name": "First Name",
     "description": "A personal name used before a family name.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3393,7 +3770,10 @@
     "class": "Patient Demographics/Information",
     "name": "Interpreter Needed",
     "description": "Indication of whether a person needs language interpretation services.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3412,7 +3792,10 @@
     "class": "Patient Demographics/Information",
     "name": "Last Name",
     "description": "Portion of one's personal name indicating familial or communal ties.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3433,7 +3816,10 @@
     "class": "Patient Demographics/Information",
     "name": "Middle Name (Including middle initial)",
     "description": "A second or subsequent given name, between the first given name and the family name or surname.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3454,7 +3840,10 @@
     "class": "Patient Demographics/Information",
     "name": "Name Suffix",
     "description": "Name component following family name that may be used to describe a person's position in a family.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3475,7 +3864,10 @@
     "class": "Patient Demographics/Information",
     "name": "Occupation",
     "description": "Type of work of a person. Examples include but are not limited to infantry, business analyst, and social worker.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -3491,7 +3883,10 @@
     "class": "Patient Demographics/Information",
     "name": "Occupation Industry",
     "description": "Type of business that compensates for work or assigns work to an unpaid worker or volunteer. Examples include but are not limited to U.S. Army, cement manufacturing, and children and youth services.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -3507,7 +3902,10 @@
     "class": "Patient Demographics/Information",
     "name": "Patient Identifier",
     "description": "An identifier for the patient.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3528,7 +3926,10 @@
     "class": "Patient Demographics/Information",
     "name": "Phone Number",
     "description": "Numbers and symbols to contact an individual when using a phone.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3550,7 +3951,10 @@
     "class": "Patient Demographics/Information",
     "name": "Phone Number Type",
     "description": "Contact point when using a phone. Examples include but are not limited to home, work, and mobile.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3569,7 +3973,10 @@
     "class": "Patient Demographics/Information",
     "name": "Preferred Language",
     "description": "Documented language that the patient would like to use when discussing health care.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3589,7 +3996,10 @@
     "class": "Patient Demographics/Information",
     "name": "Previous Address",
     "description": "Prior place where a person may have been located or could have been contacted. Includes street name, number, city/town, state, and zip code.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3614,7 +4024,10 @@
     "class": "Patient Demographics/Information",
     "name": "Previous Name",
     "description": "Any first and last name an individual may have used in the past for any reason.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3638,7 +4051,10 @@
     "class": "Patient Demographics/Information",
     "name": "Race",
     "description": "An individual's response to the race question based upon self-identification.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3657,7 +4073,10 @@
     "class": "Patient Demographics/Information",
     "name": "Related Person's Name",
     "description": "Name of a person with a legal or familial relationship to a patient.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3676,7 +4095,10 @@
     "class": "Patient Demographics/Information",
     "name": "Relationship Type",
     "description": "Relationship of a person to a patient. Examples include but are not limited to parent, next-of-kin, guardian, and custodian.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3695,7 +4117,10 @@
     "class": "Patient Demographics/Information",
     "name": "Sex",
     "description": "Documentation of a specific instance of sex.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3714,7 +4139,10 @@
     "class": "Patient Demographics/Information",
     "name": "Tribal Affiliation",
     "description": "Tribe or band with which an individual associates.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3733,7 +4161,10 @@
     "class": "Pregnancy Information",
     "name": "Delivery Procedures",
     "description": "The method by which a baby is delivered (e.g., vaginal delivery, cesarean section).",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3758,7 +4189,10 @@
     "class": "Pregnancy Information",
     "name": "Estimated Date of Delivery",
     "description": "The estimated due date (EDD) is the date that spontaneous onset of labor is expected to occur.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3778,7 +4212,10 @@
     "class": "Pregnancy Information",
     "name": "Fetal Presentation",
     "description": "The anatomical part of the fetus closest to the maternal pelvic inlet at the onset of labor.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3798,7 +4235,10 @@
     "class": "Pregnancy Information",
     "name": "Gestational Age",
     "description": "The estimated age of the pregnancy, expressed in weeks and fractions of weeks.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3818,7 +4258,10 @@
     "class": "Pregnancy Information",
     "name": "Gravidity",
     "description": "The number of pregnancies, current and past, regardless of the pregnancy outcome.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3837,8 +4280,11 @@
   {
     "class": "Pregnancy Information",
     "name": "Parity",
-    "description": "Parity is defined as the number of pregnancies reaching 20 weeks and 0 days ofgestation or beyond, including the present pregnancy",
-    "notes": "",
+    "description": "Parity is defined as the number of pregnancies reaching 20 weeks and 0 days of gestation or beyond, including the present pregnancy",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3858,7 +4304,10 @@
     "class": "Pregnancy Information",
     "name": "Pregnancy Outcomes",
     "description": "The clinical conclusion of the pregnancy focusing on the end status of the pregnancy and the clinical status of the mother.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3878,7 +4327,10 @@
     "class": "Pregnancy Information",
     "name": "Preterm Births",
     "description": "Number of births or deliveries that have occurred before 37 0/7 weeks of gestation",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3898,7 +4350,10 @@
     "class": "Pregnancy Information",
     "name": "Term Births",
     "description": "Number of deliveries that have occurred at 37 0/7 weeks of gestation, or after.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3918,7 +4373,10 @@
     "class": "Pregnancy Information",
     "name": "Delivery Date and Time",
     "description": "The date and time when the newborn is completely delivered, either by full expulsion from the birth canal or full removal from the uterus, documented in the maternal record.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3938,7 +4396,10 @@
     "class": "Problems",
     "name": "Condition Status",
     "description": "Statement of how a diagnosis, problem, or condition presents or manifests in the patient. Examples include but are not limited to active, resolved, recurrence, and remission.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3957,7 +4418,10 @@
     "class": "Problems",
     "name": "Date of Diagnosis",
     "description": "Date of first determination by a qualified professional of the presence of a problem or condition affecting a patient.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -3966,7 +4430,8 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
           "elements": [
-            "Condition.recordedDate"
+            "Condition.recordedDate",
+            "Condition.extension:assertedDate"
           ]
         },
         {
@@ -3982,7 +4447,10 @@
     "class": "Problems",
     "name": "Date of Onset",
     "description": "Date when a problem/condition started.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4007,7 +4475,10 @@
     "class": "Problems",
     "name": "Date of Resolution",
     "description": "Date of subsiding or termination of a symptom, problem or condition.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4032,7 +4503,10 @@
     "class": "Problems",
     "name": "Problems",
     "description": "Condition, diagnosis, or reason for seeking medical attention.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4052,7 +4526,10 @@
     "class": "Problems",
     "name": "SDOH Problems/Health Concerns",
     "description": "Social Determinants of Health-related health concerns, conditions, or diagnoses. Examples include but are not limited to homelessness and food insecurity.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4072,7 +4549,10 @@
     "class": "Procedures",
     "name": "Performance Time",
     "description": "Time and/or date an activity is performed. Examples include but are not limited to vaccine or medication administration times, surgery start time, time ultrasound performed, and laboratory specimen collection time.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4115,7 +4595,10 @@
     "class": "Procedures",
     "name": "Procedure Reason Code",
     "description": "An explanation or justification for a service requested in coded or textual form.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4170,7 +4653,10 @@
     "class": "Procedures",
     "name": "Procedure Status",
     "description": "The status of planned or performed activity.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4204,7 +4690,10 @@
     "class": "Procedures",
     "name": "Procedure Type",
     "description": "The specific type of medical procedure performed.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4217,21 +4706,9 @@
           ]
         },
         {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
-          "elements": [
-            "ServiceRequest.code"
-          ]
-        },
-        {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
           "elements": [
             "Procedure.code"
-          ]
-        },
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
-          "elements": [
-            "ServiceRequest.code"
           ]
         }
       ]
@@ -4241,7 +4718,10 @@
     "class": "Procedures",
     "name": "Procedures",
     "description": "Activity performed for or on a patient as part of the provision of care.",
-    "notes": "In QI-Core, information about principal procedure is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. Implementers may determine the appropriate implementation approach to support this USCDI+ Quality data element. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
+    "narrative": {
+      "note": "In QI-Core, information about principal procedure is represented using the Claim profile. In US Quality Core v1.0.0, support for the Claim profile is not required for conformance. Implementers may determine the appropriate implementation approach to support this USCDI+ Quality data element. We encourage the quality community to provide additional input on information needed to support quality measurement use cases through the HL7 ballot process for US Quality Core.",
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4268,7 +4748,10 @@
     "class": "Procedures",
     "name": "Reason for Referral",
     "description": "Explanation or justification for a referral or consultation.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4323,7 +4806,10 @@
     "class": "Procedures",
     "name": "SDOH Interventions",
     "description": "Actions or services to address an identified Social Determinants of Health-related health concern, condition, or diagnosis. Examples include but are not limited to education about food pantry program and referral to non- emergency medical transportation program.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4372,15 +4858,152 @@
     "class": "Provenance",
     "name": "Author",
     "description": "Actor that created or revised the data. Usage note: The actor may be a provider, a patient, a device, an outside medical record, or something else. The source of the information can be used to form assessments about its quality, reliability, trustworthiness, or can indicate where to go to determine the origins of the information.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": "[Individual Provenance](provenance.html)"
+    },
     "mappings": {
       "usCore": [
-        {
-          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|9.0.0"
-        }
+
       ],
       "usQualityCore": [
-
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-adverseevent",
+          "elements": [
+            "AdverseEvent.recorder"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequest",
+          "elements": [
+            "DeviceRequest.requester"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-deviceprohibited",
+          "elements": [
+            "DeviceRequest.requester"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequested",
+          "elements": [
+            "DeviceRequest.requester"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy",
+          "elements": [
+            "ImagingStudy.interpreter",
+            "ImagingStudy.series.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationdone",
+          "elements": [
+            "Immunization.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationnotdone",
+          "elements": [
+            "Immunization.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministration",
+          "elements": [
+            "MedicationAdministration.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationdone",
+          "elements": [
+            "MedicationAdministration.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone",
+          "elements": [
+            "MedicationAdministration.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone",
+          "elements": [
+            "MedicationDispense.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined",
+          "elements": [
+            "MedicationDispense.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested",
+          "elements": [
+            "MedicationRequest.requester",
+            "MedicationRequest.reported[x]:reportedReference"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationprohibited",
+          "elements": [
+            "MedicationRequest.requester",
+            "MedicationRequest.reported[x]:reportedReference"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-nutritionorder",
+          "elements": [
+            "NutritionOrder.orderer"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
+          "elements": [
+            "Procedure.asserter",
+            "Procedure.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone",
+          "elements": [
+            "Procedure.asserter",
+            "Procedure.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
+          "elements": [
+            "ServiceRequest.requester"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.requester"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-task",
+          "elements": [
+            "Task.requester"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskdone",
+          "elements": [
+            "Task.requester"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected",
+          "elements": [
+            "Task.requester"
+          ]
+        }
       ]
     }
   },
@@ -4388,7 +5011,10 @@
     "class": "Provenance",
     "name": "Author Organization",
     "description": "Organization associated with author.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -4404,7 +5030,10 @@
     "class": "Provenance",
     "name": "Author Role",
     "description": "Category of actor that participated in the creation or revision of data. Usage note: The source of the information can be used to form assessments about its quality, reliability, trustworthiness, or can indicate where to go to determine the origins of the information. Examples include but are not limited to provider, patient, family member, and device.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": "[Individual Provenance](provenance.html)"
+    },
     "mappings": {
       "usCore": [
         {
@@ -4420,7 +5049,10 @@
     "class": "Provenance",
     "name": "Author Time Stamp",
     "description": "Date and time of author action.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -4436,7 +5068,10 @@
     "class": "Referrals",
     "name": "Referral Status",
     "description": "The current state of a referral e.g., draft, active, on-hold, revoked, completed, entered-in-error, unknown.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4467,7 +5102,10 @@
     "class": "Referrals",
     "name": "Referral Date and Time",
     "description": "Date and time when a provider wrote an order requesting services.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4498,7 +5136,10 @@
     "class": "Task",
     "name": "Task Code",
     "description": "Identifies the type of task that is involved.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4510,7 +5151,8 @@
             "Task.code",
             "Task.focus",
             "Task.basedOn",
-            "Task.executionPeriod"
+            "Task.executionPeriod",
+            "Task.for"
           ]
         },
         {
@@ -4519,7 +5161,8 @@
             "Task.code",
             "Task.focus",
             "Task.basedOn",
-            "Task.executionPeriod"
+            "Task.executionPeriod",
+            "Task.for"
           ]
         },
         {
@@ -4528,7 +5171,8 @@
             "Task.code",
             "Task.focus",
             "Task.basedOn",
-            "Task.executionPeriod"
+            "Task.executionPeriod",
+            "Task.for"
           ]
         }
       ]
@@ -4537,8 +5181,11 @@
   {
     "class": "Task",
     "name": "Task Status",
-    "description": "Thecurrent status of the task.",
-    "notes": "",
+    "description": "The current status of the task.",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4575,7 +5222,10 @@
     "class": "Vital Signs",
     "name": "Average Blood Pressure",
     "description": "Arithmetic average of systolic and diastolic components of two of more blood pressure readings in a specified time period or according to a specified algorithm or protocol. Examples include but are not limited to 3-day morning and evening home monitoring, clinical encounter repeat average, and 24-hour ambulatory measurement.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -4591,7 +5241,10 @@
     "class": "Vital Signs",
     "name": "BMI",
     "description": "Body mass index is a value derived from the mass and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m², resulting from mass in kilograms and height in meters.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -4607,7 +5260,10 @@
     "class": "Vital Signs",
     "name": "BMI Percentile (2 - 20 years)",
     "description": "BMI-for-age percentile shows how a child's weight compares to that of other children of the same age and sex.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -4623,7 +5279,10 @@
     "class": "Vital Signs",
     "name": "Body Height",
     "description": "The vertical measurement of an individual's stature from the feet to the top of the head when standing upright.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -4639,7 +5298,10 @@
     "class": "Vital Signs",
     "name": "Body Temperature",
     "description": "Temperature is a measure of the patient's ability to generate and get rid of heat.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -4655,7 +5317,10 @@
     "class": "Vital Signs",
     "name": "Body Weight",
     "description": "The measurement of weight without heavy items located on the person.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -4671,7 +5336,10 @@
     "class": "Vital Signs",
     "name": "Diastolic Blood Pressure",
     "description": "Diastolic Blood Pressure",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -4687,7 +5355,10 @@
     "class": "Vital Signs",
     "name": "Head Occipital-frontal Circumference Percentile (Birth - 36 Months)",
     "description": "Measurement of head circumference, or OFC (occipital frontal circumference), is a reflection of head growth and is a useful tool in tracking and monitoring childhood growth and development.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -4703,7 +5374,10 @@
     "class": "Vital Signs",
     "name": "Heart Rate",
     "description": "Number of times the heart beats each minute.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -4719,7 +5393,10 @@
     "class": "Vital Signs",
     "name": "Inhaled Oxygen Concentration",
     "description": "Inhaled oxygen concentration is the percent of oxygen inhaled (FIO2).",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -4735,7 +5412,10 @@
     "class": "Vital Signs",
     "name": "Pain Severity",
     "description": "A patient's self-reported or clinically observed assessment of the intensity of pain, expressed using a standardized scale or measure.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
 
@@ -4755,7 +5435,10 @@
     "class": "Vital Signs",
     "name": "Pulse Oximetry",
     "description": "Pulse oximetry is a test used to measure the oxygen level (oxygen saturation) of the blood.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -4771,7 +5454,10 @@
     "class": "Vital Signs",
     "name": "Respiratory Rate",
     "description": "The respiration rate is the number of breaths a person takes per minute.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -4787,7 +5473,10 @@
     "class": "Vital Signs",
     "name": "Systolic Blood Pressure",
     "description": "Systolic Blood Pressure",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {
@@ -4803,7 +5492,10 @@
     "class": "Vital Signs",
     "name": "Weight-for-length Percentile (Birth - 24 Months)",
     "description": "The higher the percentile number, the bigger a child is compared with other kids of the same age and gender, whether it's for height or weight.",
-    "notes": "",
+    "narrative": {
+      "note": null,
+      "profileOverride": null
+    },
     "mappings": {
       "usCore": [
         {

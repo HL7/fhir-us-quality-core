@@ -53,6 +53,9 @@ Description: "Positive profile of MedicationRequest for decision support/quality
 * intent ^short = "proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"
 * medication[x] ^short = "Medication to be taken"
 * medication[x].extension[codeOptions] ^short = "Url of a value set of candidate medications"
+* requester ^short = "Who/What requested the Request"
+* reportedReference ^short = "Reported rather than primary record"
+* reported[x][reportedReference] ^short = "Reported rather than primary record"
 * reasonCode ^short = "Reason or indication for ordering or not ordering the medication"
 * reasonReference ^short = "US Quality Core Condition or Observation that supports the prescription"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.

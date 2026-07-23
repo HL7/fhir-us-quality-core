@@ -17,5 +17,7 @@ Description: "Positive profile of Immunization for decision support/quality metr
 * occurrence[x] ^short = "Vaccine administration date"
 * primarySource ^short = "Indicates context the data was recorded in"
 * vaccineCode ^short = "Vaccine Product Type (bind to CVX)"
+* location ^short = "Where the vaccine was administered"
+* performer.actor ^short = "Individual or organization who was performing"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreImmunizationDone

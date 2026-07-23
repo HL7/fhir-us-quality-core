@@ -39,5 +39,7 @@ Description: "Profile of DeviceRequest for decision support/quality metrics. Def
 * subject only Reference(USQualityCorePatient)
   * ^short = "Focus of request"
 * authoredOn ^short = "When recorded"
+* reasonCode ^short = "Coded Reason for request"
+* requester ^short = "Who/what is requesting diagnostics"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreDeviceRequest

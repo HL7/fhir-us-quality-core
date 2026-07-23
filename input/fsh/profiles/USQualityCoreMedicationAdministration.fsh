@@ -43,5 +43,6 @@ Description: "Profile of MedicationAdministration for decision support/quality m
   * route from SNOMEDCTRouteCodes (preferred)
     * ^short = "Path of substance into body"
   * dose ^short = "Amount of medication per dose"
+* performer.actor ^short = "Who performed the medication administration"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationAdministration

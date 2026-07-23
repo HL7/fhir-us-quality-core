@@ -23,6 +23,9 @@ Description: "Profile of TaskRejected for decision support/quality metrics. Defi
   * ^short = "Reason for current status"
   * ^mustSupport = false
 * code ^short = "Task Type"
+  * extension contains $codeOptions named codeOptions 0..1
+  * extension[codeOptions] ^short = "Url of a value set of candidate tasks"
+    * ^definition = "A logical reference (e.g. a reference to ValueSet.url) to a value set/version that identifies a set of possible coded values representing the task."
 * focus only Reference(Resource)
   * ^short = "What task is acting on"
   * ^mustSupport = false
@@ -32,5 +35,6 @@ Description: "Profile of TaskRejected for decision support/quality metrics. Defi
 * executionPeriod 1..1
   * ^short = "The time action first taken meets expectation of the rejected use case."
 * reasonCode ^short = "Why task is needed"
+* requester ^short = "Who is asking for task to be done"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreTaskRejected

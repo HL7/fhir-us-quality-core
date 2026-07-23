@@ -23,5 +23,6 @@ Description: "Positive profile of DeviceRequest for decision support/quality met
 * code[x][codeCodeableConcept].extension[codeOptions] ^short = "Url of a value set of candidate devices"
 * status ^short = "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
 * intent ^short = "proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option"
+* requester ^short = "Who/what is requesting diagnostics"
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreDeviceRequested
