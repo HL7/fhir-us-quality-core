@@ -4,16 +4,6 @@
 
 {% include disclaimer.md %}
 
-  {: .note}
-  > Placing some internal notes in this pink note box right now on the top of each
-  > page until we have a first stable build.
-  >
-  > We took a pass at the new scope. We are putting anything
-  > that does not fall in USCDI+ Quality as 'out of scope', and in this
-  > version of the guide that means we have removed profiles
-  > that do not have any USCDI+ Quality tagged elements. Also, out of scope
-  > now are the artifacts that provide bindings to CQL.
-
 ### Summary
 {: #summary}
 
