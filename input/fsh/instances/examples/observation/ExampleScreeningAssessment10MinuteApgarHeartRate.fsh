@@ -21,6 +21,6 @@ Usage: #example
 * valueCodeableConcept
   * coding = $loinc#LA6718-6 "At least 100 beats per minute"
     * extension
-      * url = "http://hl7.org/fhir/StructureDefinition/ordinalValue"
+      * url = "http://hl7.org/fhir/StructureDefinition/itemWeight"
       * valueDecimal = 2
   * text = "2. At least 100 beats per minute"
