@@ -107,7 +107,8 @@ This file is an array with one object per USCDI+ Quality data element:
   adds a note link and the corresponding note below the table.
 - `narrative.profileOverride` is either a Markdown string or `null`. A non-null
   value replaces the generated links in the "Implement with US Quality Core
-  Profile(s)" cell for that data element.
+  Profile(s)" cell and leaves the "Implement with US Core Profile(s)" cell
+  blank for that data element.
 - `mappings.usCore` contains US Core canonical profile URLs. These mappings do
   not include individual element paths.
 - `mappings.usQualityCore` contains US Quality Core canonical profile URLs and
@@ -200,8 +201,9 @@ Use this file when adding or changing:
 
 Both `narrative` values are nullable. A non-null `note` adds the existing
 data-element note link and note text. A non-null `profileOverride` replaces the
-generated US Quality Core profile links in that data element's table cell. When
-either value is `null`, that behavior is omitted.
+generated US Quality Core profile links in that data element's table cell and
+leaves its US Core profiles cell blank. When either value is `null`, that
+behavior is omitted.
 
 US Quality Core mappings include profile URLs and element paths. US Core
 mappings include only profile URLs; they do not include element mappings.
