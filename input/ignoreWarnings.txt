@@ -1,6 +1,6 @@
 == Suppressed Messages ==
 
-# The following messages are being generated from the inherited/base resource snapshot
+# 01. The following messages are being generated from the inherited/base resource snapshot
 INFORMATION: StructureDefinition/us-quality-core-medicationdispense: StructureDefinition.snapshot.element[32].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/us-quality-core-medicationdispensedeclined: StructureDefinition.snapshot.element[32].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/us-quality-core-medicationdispensedone: StructureDefinition.snapshot.element[32].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
@@ -9,12 +9,12 @@ INFORMATION: StructureDefinition/us-quality-core-practitioner: StructureDefiniti
 WARNING: StructureDefinition/us-quality-core-organization: StructureDefinition.snapshot: The slice 'CLIA' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 WARNING: StructureDefinition/us-quality-core-organization: StructureDefinition.snapshot: The slice 'NAIC' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 
-# The following messages are being generated from FHIR R4 ImagingStudy resource.
+# 02. The following messages are being generated from FHIR R4 ImagingStudy resource.
 A definition could not be found for Canonical URL 'http://www.rsna.org/RadLex_Playbook.aspx'
 A definition could not be found for Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1'
 The definition for the element 'ImagingStudy.series.performer.function' binds to the value set 'http://hl7.org/fhir/ValueSet/series-performer-function|4.0.1' which is experimental, but this structure is not labeled as experimental
 
-# The following messages are generated from code systems and value sets currently in 'draft' status within the inherited/base resource snapshot.
+# 03. The following messages are generated from code systems and value sets currently in 'draft' status within the inherited/base resource snapshot.
 Reference to draft CodeSystem http://hl7.org/fhir/event-status|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/CodeSystem/medicationrequest-status|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
@@ -25,8 +25,16 @@ Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medication-a
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationdispense-status|4.0.1
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/servicerequest-category|4.0.1
 
-# The publisher reports this even though the expansion parameters file is referenced by path-expansion-params
+# 04. The publisher reports this even though the expansion parameters file is referenced by path-expansion-params
 %The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
 
-# US Core 9 uses capabilitystatement-expectation as a child of capabilitystatement-search-parameter-combination; the expectation extension explicitly allows that context.
+# 05. US Core 9 uses capabilitystatement-expectation as a child of capabilitystatement-search-parameter-combination; the expectation extension explicitly allows that context.
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination%
+
+# 06. We have not implemented the Requirements resource nor marked these as conformance clauses in this version, but will consider this as a future enhancement.
+%The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause%
+%The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause%
+
+# 07. The pattern is set in a repeating slice. The pattern is expected to hold for all repetitions of that slice. (It's fixing the 'system' for the identifier.)
+
+The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
