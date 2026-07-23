@@ -5,7 +5,7 @@ Description: "Example of Alemtuzumab Medication"
 Usage: #example
 * id = "example"
 * contained = org-6
-* code = $rxnorm#1594660 "alemtuzumab 10 MG/ML [Lemtrada]"
+* code = $rxnorm#1594663 "1.2 ML alemtuzumab 10 MG/ML Injection [Lemtrada]"
 * manufacturer.reference = "#org-6"
 * form = $sct#385219001 "Conventional release solution for injection (dose form)"
 * ingredient
