@@ -35,6 +35,6 @@ Reference to draft ValueSet http://hl7.org/fhir/ValueSet/servicerequest-category
 %The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause%
 %The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause%
 
-07. The pattern is set in a repeating slice. The pattern is expected to hold for all repetitions of that slice. (It's fixing the 'system' for the identifier.)
+# 07. The pattern is set in a repeating slice. The pattern is expected to hold for all repetitions of that slice. (It's fixing the 'system' for the identifier.)
 
 The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
