@@ -555,8 +555,7 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
           "elements": [
-            "DiagnosticReport.category:us-core",
-            "DiagnosticReport.result"
+            "DiagnosticReport.presentedForm"
           ]
         }
       ]
@@ -760,26 +759,18 @@
     "name": "Diagnostic Imaging Reference",
     "description": "The technical details of the retrieval access path to indicate network services that can be used to access DICOM studies, series, or instances content and metadata (e.g., a DICOMweb server endpoint providing QIDO-RS, WADO-RS, or WADO-URI).",
     "narrative": {
-      "note": null,
+      "note": "We are seeking implementer feedback on whether this level of detail is necessary for quality reporting. The proposed mapping to DocumentReference.content.attachment.url semantically aligns with the USCDI+ Quality data element definition by identifying the location of the referenced document content, but feedback through US Quality Core will help determine whether this mapping should be retained.",
       "profileOverride": null
     },
     "mappings": {
       "usCore": [
-        {
-          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
-        }
+
       ],
       "usQualityCore": [
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
           "elements": [
             "DiagnosticReport.imagingStudy"
-          ]
-        },
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy",
-          "elements": [
-            "ImagingStudy.status"
           ]
         }
       ]
@@ -801,7 +792,8 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note",
           "elements": [
-            "DiagnosticReport.result"
+            "DiagnosticReport.result",
+            "DiagnosticReport.presentedForm"
           ]
         },
         {
@@ -1254,7 +1246,7 @@
     "name": "Patient Goals",
     "description": "Desired outcomes of patient's care. Examples include but are not limited to blood pressure control, functional ability, and nutrition.",
     "narrative": {
-      "note": null,
+      "note": "We are seeking feedback on the use of additional Goal elements (e.g., Goal.target) as it relates to this USCDI+ Quality data element.",
       "profileOverride": null
     },
     "mappings": {
@@ -1265,8 +1257,7 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-goal",
           "elements": [
-            "Goal.description",
-            "Goal.target"
+            "Goal.description"
           ]
         }
       ]
@@ -1277,7 +1268,7 @@
     "name": "SDOH Goals",
     "description": "Desired future states for an identified Social Determinants of Health-related health concern, condition, or diagnosis. Examples include but are not limited to food security, transportation security, and ability to access health care.",
     "narrative": {
-      "note": null,
+      "note": "We are seeking feedback on the use of additional Goal elements (e.g., Goal.target) as it relates to this USCDI+ Quality data element.",
       "profileOverride": null
     },
     "mappings": {
@@ -1288,8 +1279,7 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-goal",
           "elements": [
-            "Goal.description",
-            "Goal.target"
+            "Goal.description"
           ]
         }
       ]
@@ -1330,7 +1320,8 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-coverage",
           "elements": [
-            "Coverage.status"
+            "Coverage.status",
+            "Coverage.period"
           ]
         }
       ]
@@ -2094,6 +2085,25 @@
             "ServiceRequest.code.extension:codeOptions",
             "ServiceRequest.authoredOn"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequest",
+          "elements": [
+            "DeviceRequest.reasonCode",
+            "DeviceRequest.status",
+            "DeviceRequest.code[x]",
+            "DeviceRequest.code[x].extension:codeOptions",
+            "DeviceRequest.modifierExtension:doNotPerform"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected",
+          "elements": [
+            "Task.statusReason",
+            "Task.status",
+            "Task.code",
+            "Task.code.extension:codeOptions"
+          ]
         }
       ]
     }
@@ -2114,13 +2124,15 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunization",
           "elements": [
-            "Immunization.primarySource"
+            "Immunization.primarySource",
+            "Immunization.location"
           ]
         },
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationdone",
           "elements": [
-            "Immunization.primarySource"
+            "Immunization.primarySource",
+            "Immunization.location"
           ]
         }
       ]
@@ -2506,6 +2518,12 @@
           "elements": [
             "Observation.issued"
           ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab",
+          "elements": [
+            "DiagnosticReport.issued"
+          ]
         }
       ]
     }
@@ -2520,9 +2538,7 @@
     },
     "mappings": {
       "usCore": [
-        {
-          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen|9.0.0"
-        }
+
       ],
       "usQualityCore": [
         {
@@ -2530,6 +2546,12 @@
           "elements": [
             "Observation.effective[x]",
             "Observation.specimen"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-lab",
+          "elements": [
+            "DiagnosticReport.effective[x]"
           ]
         }
       ]
@@ -3508,7 +3530,7 @@
     "name": "Nutrition Order",
     "description": "A provider-authored request for nutrition support such as therapeutic diets, enteral feedings, parenteral nutrition, or oral nutritional supplements.",
     "narrative": {
-      "note": null,
+      "note": "We are seeking implementer feedback on whether US Quality Core should include mappings for Nutrition Order beyond NutritionOrder.oralDiet to also include NutritionOrder.enteralFormula and NutritionOrder.supplement. These elements align with the broader Nutrition Order definition which includes enteral feedings and nutritional supplements; however, their implementation support and need in quality reporting requires additional feedback.",
       "profileOverride": null
     },
     "mappings": {
@@ -3519,11 +3541,17 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-nutritionorder",
           "elements": [
-            "NutritionOrder.intent",
             "NutritionOrder.patient",
             "NutritionOrder.status",
             "NutritionOrder.oralDiet",
-            "NutritionOrder.oralDiet.type"
+            "NutritionOrder.oralDiet.type",
+            "NutritionOrder.oralDiet.type.extension:codeOptions",
+            "NutritionOrder.supplement",
+            "NutritionOrder.supplement.type",
+            "NutritionOrder.supplement.type.extension:codeOptions",
+            "NutritionOrder.enteralFormula",
+            "NutritionOrder.enteralFormula.baseFormulaType",
+            "NutritionOrder.enteralFormula.baseFormulaType.extension:codeOptions"
           ]
         }
       ]
@@ -3540,40 +3568,11 @@
     "mappings": {
       "usCore": [
         {
-          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
-        },
-        {
           "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference|9.0.0"
         }
       ],
       "usQualityCore": [
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
-          "elements": [
-            "ServiceRequest.code",
-            "ServiceRequest.status",
-            "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
-          ]
-        },
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
-          "elements": [
-            "ServiceRequest.code",
-            "ServiceRequest.status",
-            "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
-          ]
-        },
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
-          "elements": [
-            "ServiceRequest.code",
-            "ServiceRequest.status",
-            "ServiceRequest.intent",
-            "ServiceRequest.authoredOn"
-          ]
-        }
+
       ]
     }
   },
@@ -4431,7 +4430,8 @@
         {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-condition-problems-health-concerns",
           "elements": [
-            "Condition.recordedDate"
+            "Condition.recordedDate",
+            "Condition.extension:assertedDate"
           ]
         },
         {
@@ -4706,21 +4706,9 @@
           ]
         },
         {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequest",
-          "elements": [
-            "ServiceRequest.code"
-          ]
-        },
-        {
           "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
           "elements": [
             "Procedure.code"
-          ]
-        },
-        {
-          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
-          "elements": [
-            "ServiceRequest.code"
           ]
         }
       ]
@@ -4876,12 +4864,146 @@
     },
     "mappings": {
       "usCore": [
-        {
-          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|9.0.0"
-        }
+
       ],
       "usQualityCore": [
-
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-adverseevent",
+          "elements": [
+            "AdverseEvent.recorder"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequest",
+          "elements": [
+            "DeviceRequest.requester"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-deviceprohibited",
+          "elements": [
+            "DeviceRequest.requester"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-devicerequested",
+          "elements": [
+            "DeviceRequest.requester"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-imagingstudy",
+          "elements": [
+            "ImagingStudy.interpreter",
+            "ImagingStudy.series.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationdone",
+          "elements": [
+            "Immunization.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-immunizationnotdone",
+          "elements": [
+            "Immunization.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministration",
+          "elements": [
+            "MedicationAdministration.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationdone",
+          "elements": [
+            "MedicationAdministration.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationadministrationnotdone",
+          "elements": [
+            "MedicationAdministration.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedone",
+          "elements": [
+            "MedicationDispense.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationdispensedeclined",
+          "elements": [
+            "MedicationDispense.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationrequested",
+          "elements": [
+            "MedicationRequest.requester",
+            "MedicationRequest.reportedReference"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-medicationprohibited",
+          "elements": [
+            "MedicationRequest.requester",
+            "MedicationRequest.reportedReference"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-nutritionorder",
+          "elements": [
+            "NutritionOrder.orderer"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-proceduredone",
+          "elements": [
+            "Procedure.asserter",
+            "Procedure.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-procedurenotdone",
+          "elements": [
+            "Procedure.asserter",
+            "Procedure.performer.actor"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-servicerequested",
+          "elements": [
+            "ServiceRequest.requester"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-serviceprohibited",
+          "elements": [
+            "ServiceRequest.requester"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-task",
+          "elements": [
+            "Task.requester"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskdone",
+          "elements": [
+            "Task.requester"
+          ]
+        },
+        {
+          "profile": "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-taskrejected",
+          "elements": [
+            "Task.requester"
+          ]
+        }
       ]
     }
   },
@@ -5029,7 +5151,8 @@
             "Task.code",
             "Task.focus",
             "Task.basedOn",
-            "Task.executionPeriod"
+            "Task.executionPeriod",
+            "Task.for"
           ]
         },
         {
@@ -5038,7 +5161,8 @@
             "Task.code",
             "Task.focus",
             "Task.basedOn",
-            "Task.executionPeriod"
+            "Task.executionPeriod",
+            "Task.for"
           ]
         },
         {
@@ -5047,7 +5171,8 @@
             "Task.code",
             "Task.focus",
             "Task.basedOn",
-            "Task.executionPeriod"
+            "Task.executionPeriod",
+            "Task.for"
           ]
         }
       ]
