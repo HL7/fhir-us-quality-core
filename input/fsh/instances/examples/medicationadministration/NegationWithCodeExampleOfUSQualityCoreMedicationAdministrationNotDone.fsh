@@ -6,7 +6,7 @@ Usage: #example
 * id = "negation-with-code-example"
 * status = #not-done
 * statusReason = $sct#183966005 "Drug treatment not indicated (situation)"
-* medicationCodeableConcept = $rxnorm#1594660 "alemtuzumab 10 MG/ML [Lemtrada]"
+* medicationCodeableConcept = $rxnorm#1594663 "1.2 ML alemtuzumab 10 MG/ML Injection [Lemtrada]"
 * subject.reference = "Patient/example"
 * context.reference = "Encounter/example"
 * supportingInformation.reference = "Condition/example"
