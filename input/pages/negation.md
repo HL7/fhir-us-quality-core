@@ -17,36 +17,35 @@ For common workflow activities, US Quality Core defines general profiles and two
 | [US Quality Core Procedure](StructureDefinition-us-quality-core-procedure.html)                               | [US Quality Core Procedure Done](StructureDefinition-us-quality-core-proceduredone.html)                                      | [US Quality Core Procedure Not Done](StructureDefinition-us-quality-core-procedurenotdone.html)                               | [Procedure]({{site.data.fhir.path}}procedure.html)                               |
 | [US Quality Core ServiceRequest](StructureDefinition-us-quality-core-servicerequest.html)                     | [US Quality Core ServiceRequested](StructureDefinition-us-quality-core-servicerequested.html)                                 | [US Quality Core Service Prohibited](StructureDefinition-us-quality-core-serviceprohibited.html)                              | [ServiceRequest]({{site.data.fhir.path}}servicerequest.html)                     |
 | [US Quality Core Task](StructureDefinition-us-quality-core-task.html)                                         | [US Quality Core Task Done](StructureDefinition-us-quality-core-taskdone.html)                                                | [US Quality Core Task Rejected](StructureDefinition-us-quality-core-taskrejected.html)                                        | [Task]({{site.data.fhir.path}}task.html)                                         |
+{: .grid}
 
 Each US Quality Core Negation Profile defines at least the following information:
 
--   What activity/event did not occur (typically in terms of a value set or list of codes, or as a reference to a request)
--   Explicit indication that the action/event did not or should not occur (such as `doNotPerform` or a status of `notDone`)
--   The date, and optionally the time, a clinician indicated a reason for avoiding the activity/event
--   The reason the activity/event did not occur (Preferably represented using one of an established set of [Negation Reason Codes](ValueSet-us-quality-core-negation-reason-codes.html))
+-   The activity or event that did not occur, typically represented by a value set or as a reference to a request
+-   An explicit indication that the action or event did not or should not occur, for example such as `doNotPerform` is set to true or a status of `not-done`
+-   The date, and optionally the time, when a clinician documented a reason for not performing the activity or event
+-   The reason the activity or event did not occur, represented using an established [Negation Reason Codes](ValueSet-us-quality-core-negation-reason-codes.html) where applicable
 
 **NOTE:** Although these aspects are all present within each negation profile defined by US Quality Core, they are represented differently in the various FHIR resources. As a result, each negation profile uses a combination of constraints and extensions to ensure complete representation of negated actions or events within US Quality Core.
 
 ### Using US Quality Core Negation Profiles
 
-#### Kinds of Negation Statements
-
 The US Quality Core negation profiles support three general classes of negation statements:
 
-1. Documentation that an activity was not performed for a reason (i.e. a `notDone` event)
-2. Documentation that an activity should not be performed for a reason (i.e. a `doNotPerform` request)
-3. Documentation that a request was not performed for a reason (i.e. a `taskRejected`)
+1. Activity Not Done for a Reason - documentation that an activity was not performed for a reason (i.e. a `not-done` event)
+2. Do Not Perform Requests - documentation that an activity should not be performed for a reason (i.e. a `doNotPerform` request)
+3. Rejected Requests - documentation that a request was not performed for a reason (i.e. a `taskRejected`)
  
-#### Extent of Negation
+#### Activity Not Done for a Reason
 
 The negation profiles in US Quality Core can be used to make two different types of negative statements:
 
-1.	 Documentation that a particular activity/event should not or did not occur
-2.	 Documentation that a class of activities/events should not or did not occur (typically represented with a value set)
+1.	 Documenting that one member of a value set was not performed for a given reason. This is to document that a particular activity or event, represented with a specific code, should not or did not occur
+2.	 Documenting that no members of an entire value set were performed for a given reason. This is to documentation that a class of activities or events, typically represented with a value set, should not or did not occur
 
 ##### Documenting that one member of a value set was not performed for a given reason
 
-In the following example the measure numerator criterion allows for documentation that specifies a single antithrombotic medication using a CodeableConcept drawn from the list of possible expected medications (in the value set) was not administered. In the example the profiled MedicationAdministration resource documents that the clinician specifically did not administer ticagrelor 90 MG Oral Tablet because drug treatment is not indicated. The evidence of a reason for not administering this single member of the value set “Antithrombotic Therapy for Ischemic Stroke” fulfills criteria for the numerator.
+In the following example, the quality measure numerator criterion allows for documentation that specifies a single antithrombotic medication drawn from the list of possible expected medications, as defined by the “Antithrombotic Therapy for Ischemic Stroke” value set, was not administered. In this example, the profiled MedicationAdministration resource documents that the clinician did not administer ticagrelor 90 MG Oral Tablet because drug treatment is not indicated. The evidence of documented reason for not administering this medication, which is a member of the “Antithrombotic Therapy for Ischemic Stroke” value set, satisfies the numerator criteria. 
 
 ```json
 {
@@ -84,11 +83,11 @@ See the [MedicationAdministration example using a specific code](MedicationAdmin
 
 ##### Documenting that no members of an entire value set were performed for a given reason
 
-This kind of negation statement applies when a measure criterion can be satisfied when none of the concepts in a value set represent an appropriate treatment. This approach allows systems to document that no activities in a particular value set were performed using a single profiled data instance, rather than requiring documentation of multiple individual activities from that value set.
+This type of negation statement applies when a quality measure criterion can be satisfied if none of the concepts in a value set represent an appropriate treatment. It allows a system to document that no activities in a given value set were performed using a single profiled data instance, rather than requiring documentation of eacha activity in the value set.
 
-Using the [codeOptions](http://hl7.org/fhir/StructureDefinition/codeOptions) extension, the following example documents that providers did not administer any of the medications in the "Antithrombotic Therapy for Ischemic Stroke" value set, fulfilling the criteria for the numerator:
+Using the [codeOptions](https://hl7.org/fhir/extensions/StructureDefinition-codeOptions.html) extension, the following example documents that providers did not administer any of the medications in the "Antithrombotic Therapy for Ischemic Stroke" value set, thereby satisfying the numerator criteria.
 
-**NOTE:** Implementing systems must ensure that this approach does not result in conflicting data. For example, the above example indicating no administration of a medication in the Antithrombotic Therapy value set should not be used if there are administrations of individual medications in the same value set. In other words, it is a contradiction to say "a provider administered a specific medication" at the same time as "a provider did not administer any of the medications in this value set" if that value set includes the medication that was administered in the specific case.
+**NOTE:** Implementing systems must ensure that this approach does not result in conflicting data. For example, the above example indicating no administration of a medication in the Antithrombotic Therapy value set should not be used if there are administrations of individual medications in the same value set. In other words, it is contradictory to say "a provider administered a specific medication" at the same time as "a provider did not administer any of the medications in this value set" if that value set includes the medication that was administered in the specific case.
 
 ```json
 {
