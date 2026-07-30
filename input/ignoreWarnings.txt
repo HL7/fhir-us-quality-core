@@ -36,7 +36,6 @@ Reference to draft ValueSet http://hl7.org/fhir/ValueSet/servicerequest-category
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination%
 
 # 06. We have not implemented the Requirements resource nor marked these as conformance clauses in this version, but will consider this as a future enhancement.
-%The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause%
 %The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause%
 
 # 07. The pattern is set in a repeating slice. The pattern is expected to hold for all repetitions of that slice. (It's fixing the 'system' for the identifier.)
@@ -48,7 +47,6 @@ The repeating element has a pattern. The pattern will apply to all the repeats (
 Pinned the version of http://terminology.hl7.org/CodeSystem/%
 Pinned the version of http://terminology.hl7.org/ValueSet/%
 Pinned the version of http://hl7.org/fhir/%
-Pinned the version of http://phinvads.cdc.gov/fhir/ValueSet/%
 Pinned the version of http://dicom.nema.org/%
 Pinned the version of https://www.cms.gov/%
 
