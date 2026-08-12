@@ -18,7 +18,6 @@
 <artifact id="Condition/health-concern-example" key="Condition-health-concern-example" name="Condition Problems Health Concerns example"/>
 <artifact id="Condition/appendicitis-example" key="Condition-appendicitis-example" name="Condition example - appendicitis"/>
 <artifact id="Coverage/example" key="Coverage-example" name="Coverage example"/>
-<artifact deprecated="true" id="Coverage/example-new" key="Coverage-example-new" name="Coverage example - Subscriber ID"/>
 <artifact id="Observation/example-obstetric-delivery" key="Observation-example-obstetric-delivery" name="Date and time of obstetric delivery example"/>
 <artifact id="Observation/example-delivery-date-estimate" key="Observation-example-delivery-date-estimate" name="Delivery date estimated example"/>
 <artifact id="DeviceRequest/example" key="DeviceRequest-example" name="DeviceRequest general example"/>
@@ -28,7 +27,6 @@
 <artifact id="DiagnosticReport/example" key="DiagnosticReport-example" name="DiagnosticReportLab example"/>
 <artifact id="DiagnosticReport/note-example" key="DiagnosticReport-note-example" name="DiagnosticReportNote example"/>
 <artifact id="Encounter/example" key="Encounter-example" name="Encounter example"/>
-<artifact deprecated="true" id="Encounter/encounter-ed-example" key="Encounter-encounter-ed-example" name="Encounter example of emergency visit that escalated into inpatient patient"/>
 <artifact id="Parameters/manifest" key="Parameters-manifest" name="Expansion Parameters"/>
 <artifact id="Observation/example-gestation" key="Observation-example-gestation" name="Gestation age at birth observation example"/>
 <artifact id="Observation/laboratory-result-observation-example-blood-glucose" key="Observation-laboratory-result-observation-example-blood-glucose" name="Glucose Laboratory Result Observation Example"/>
@@ -99,8 +97,6 @@
 <artifact id="Task/negation-example" key="Task-negation-example" name="Task Rejected example rejecting a proposal using a value set"/>
 <artifact id="Task/example" key="Task-example" name="Task general example"/>
 <artifact id="Task/done-example" key="Task-done-example" name="Task positive example"/>
-<artifact deprecated="true" id="Task/rejected-with-code-example" key="Task-rejected-with-code-example" name="TaskRejected example rejecting a proposal using a code"/>
-<artifact deprecated="true" id="Task/rejected-example" key="Task-rejected-example" name="TaskRejected example rejecting a proposal using a value set"/>
 <artifact id="StructureDefinition/us-quality-core-adverseevent" key="StructureDefinition-us-quality-core-adverseevent" name="US Quality Core AdverseEvent"/>
 <artifact id="StructureDefinition/us-quality-core-allergyintolerance" key="StructureDefinition-us-quality-core-allergyintolerance" name="US Quality Core AllergyIntolerance"/>
 <artifact id="StructureDefinition/us-quality-core-careplan" key="StructureDefinition-us-quality-core-careplan" name="US Quality Core CarePlan"/>
