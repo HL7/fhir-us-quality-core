@@ -15,6 +15,7 @@ INFORMATION: StructureDefinition/us-quality-core-adverseevent: StructureDefiniti
 INFORMATION: StructureDefinition/us-quality-core-patient: Patient.address.extension: The extension http://hl7.org/fhir/StructureDefinition/iso21090-preferred|5.3.0 is deprecated with the note: 'Use rank element or "rank extension" (StructureDefinition-rank.html) instead'
 INFORMATION: StructureDefinition/us-quality-core-questionnaireresponse: StructureDefinition.snapshot.element[29].type[0].extension[1]: The extension http://hl7.org/fhir/StructureDefinition/regex|5.3.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
 INFORMATION: StructureDefinition/us-quality-core-simple-observation: StructureDefinition.snapshot.element[14].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
+%The element Procedure.performer.actor has types/profiles/targets that are marked as must support, but the element itself is not marked as must-support%
 
 # 02. The following messages are being generated from FHIR R4 ImagingStudy resource.
 A definition could not be found for Canonical URL 'http://www.rsna.org/RadLex_Playbook.aspx'

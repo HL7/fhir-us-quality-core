@@ -23,5 +23,20 @@ Description: "Profile of CareTeam for decision support/quality metrics. Defines 
     * ^isModifier = false
   * member only Reference(USQualityCorePatient or USQualityCorePractitioner or USQualityCorePractitionerRole or USQualityCoreOrganization or USQualityCoreCareTeam or USQualityCoreRelatedPerson)
     * ^short = "Who is involved"
+// Elementdefinition-type-must-support flags on Reference target profiles.
+* subject ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type[0].targetProfile[0].extension.valueBoolean = true
+* participant.member ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* participant.member ^type[0].targetProfile[0].extension.valueBoolean = false
+* participant.member ^type[0].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* participant.member ^type[0].targetProfile[1].extension.valueBoolean = true
+* participant.member ^type[0].targetProfile[2].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* participant.member ^type[0].targetProfile[2].extension.valueBoolean = true
+* participant.member ^type[0].targetProfile[3].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* participant.member ^type[0].targetProfile[3].extension.valueBoolean = false
+* participant.member ^type[0].targetProfile[4].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* participant.member ^type[0].targetProfile[4].extension.valueBoolean = false
+* participant.member ^type[0].targetProfile[5].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* participant.member ^type[0].targetProfile[5].extension.valueBoolean = true
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreCareTeam
