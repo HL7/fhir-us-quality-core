@@ -46,5 +46,12 @@ Description: "Profile of Coverage for decision support/quality metrics. Defines 
 * class[plan] ^short = "Plan"
   * value ^short = "Plan Number"
   * name ^short = "Plan Name"
+// Elementdefinition-type-must-support flags on Reference target profiles.
+* payor ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* payor ^type[0].targetProfile[0].extension.valueBoolean = false
+* payor ^type[0].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* payor ^type[0].targetProfile[1].extension.valueBoolean = true
+* payor ^type[0].targetProfile[2].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* payor ^type[0].targetProfile[2].extension.valueBoolean = false
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreCoverage

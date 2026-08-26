@@ -126,5 +126,26 @@ Description: "The US Quality Core Observation Screening Assessment Profile is ba
   * ^short = "Related Observations or QuestionnaireResponses that the observation is made from"
   * ^definition = "Observations or QuestionnaireResponses from which this observation value is derived."
 * issued ^short = "Date/Time this version was made available"
+// Elementdefinition-type-must-support flags on Reference target profiles.
+* subject ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type[0].targetProfile[0].extension.valueBoolean = true
+* subject ^type[0].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type[0].targetProfile[1].extension.valueBoolean = false
+* performer ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performer ^type[0].targetProfile[0].extension.valueBoolean = true
+* performer ^type[0].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performer ^type[0].targetProfile[1].extension.valueBoolean = false
+* performer ^type[0].targetProfile[2].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performer ^type[0].targetProfile[2].extension.valueBoolean = true
+* performer ^type[0].targetProfile[3].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performer ^type[0].targetProfile[3].extension.valueBoolean = false
+* performer ^type[0].targetProfile[4].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performer ^type[0].targetProfile[4].extension.valueBoolean = false
+* performer ^type[0].targetProfile[5].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performer ^type[0].targetProfile[5].extension.valueBoolean = false
+* derivedFrom ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* derivedFrom ^type[0].targetProfile[0].extension.valueBoolean = true
+* derivedFrom ^type[0].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* derivedFrom ^type[0].targetProfile[1].extension.valueBoolean = true
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreObservationScreeningAssessment

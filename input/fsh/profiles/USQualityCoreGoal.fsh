@@ -31,5 +31,8 @@ Description: "Profile of Goal for decision support/quality metrics. Defines the 
   * ^binding.description = "Codes describing events that can trigger the initiation of a goal."
 * target ^short = "Target outcome for the goal"
 * expressedBy ^short = "Who's responsible for creating Goal?"
+// Elementdefinition-type-must-support flags on Reference target profiles.
+* subject ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type[0].targetProfile[0].extension.valueBoolean = true
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreGoal
