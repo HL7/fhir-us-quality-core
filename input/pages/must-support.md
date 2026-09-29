@@ -6,7 +6,7 @@ Like QI-Core, US Quality Core flags USCDI+ Quality elements with a [US Quality C
 
 Each US Quality Core profile includes a summary of USCDI+ Quality elements in their *USCDI+ Quality Elements Support Expectations* section (see Figure 1 for an example).  
 
-{% include img-portrait.html img="must-support-uscdi-plus-expectations.png" caption="Figure 1. Summary of USCDI+ Quality Elements in a US Quality Core Profile"%}
+{% include img-portrait.html img="must-support-uscdi-plus-expectations.png" alt="Summary" caption="Figure 1. Summary of USCDI+ Quality Elements in a US Quality Core Profile"%}
 
 Figure 2 illustrates how the USCDI+ Quality flag is presented in the Formal View of Profile Content, the "Key Elements Table" tab, on the US Quality Core profile pages.
 

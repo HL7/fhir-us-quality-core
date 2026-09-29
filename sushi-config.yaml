@@ -51,6 +51,7 @@ parameters:
   pin-canonicals: pin-all #<<<< comment out to speed up
   pin-manifest: manifest #<<<< comment out to speed up
   # ==================================================
+  accessibility-checks: true
 pages:
   index.md:
     title: US Quality Core Implementation Guide
