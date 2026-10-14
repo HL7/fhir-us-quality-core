@@ -61,5 +61,16 @@ Description: "Profile of DiagnosticReport for Note exchange for decision support
 * media ^short = "Key images associated with this report"
 * presentedForm ^short = "Entire report as issued"
 * resultsInterpreter ^short = "Primary result interpreter"
+// Elementdefinition-type-must-support flags on Reference target profiles.
+* subject ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type[0].targetProfile[0].extension.valueBoolean = true
+* performer ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performer ^type[0].targetProfile[0].extension.valueBoolean = true
+* performer ^type[0].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performer ^type[0].targetProfile[1].extension.valueBoolean = true
+* result ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* result ^type[0].targetProfile[0].extension.valueBoolean = false
+* result ^type[0].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* result ^type[0].targetProfile[1].extension.valueBoolean = true
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreDiagnosticReportNote

@@ -26,5 +26,20 @@ Description: "The US Quality Core QuestionnaireResponse Profile is based upon th
   * answer.value[x] only Coding or string or decimal or date or dateTime or integer or Quantity
     * ^short = "Single-valued answer to the question"
 * item.answer ^short = "The response(s) to the question"
+// Elementdefinition-type-must-support flags on Reference target profiles.
+* subject ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type[0].targetProfile[0].extension.valueBoolean = true
+* author ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* author ^type[0].targetProfile[0].extension.valueBoolean = true
+* author ^type[0].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* author ^type[0].targetProfile[1].extension.valueBoolean = false
+* author ^type[0].targetProfile[2].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* author ^type[0].targetProfile[2].extension.valueBoolean = false
+* author ^type[0].targetProfile[3].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* author ^type[0].targetProfile[3].extension.valueBoolean = false
+* author ^type[0].targetProfile[4].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* author ^type[0].targetProfile[4].extension.valueBoolean = false
+* author ^type[0].targetProfile[5].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* author ^type[0].targetProfile[5].extension.valueBoolean = false
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreQuestionnaireResponse

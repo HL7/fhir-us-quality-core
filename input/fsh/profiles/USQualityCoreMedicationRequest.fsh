@@ -74,5 +74,22 @@ Description: "Profile of MedicationRequest for decision support/quality metrics.
   * expectedSupplyDuration ^short = "Number of days supply per dispense"
 * reportedReference ^short = "Reported rather than primary record"
 * reported[x][reportedReference] ^short = "Reported rather than primary record"
+// Elementdefinition-type-must-support flags on Reference target profiles.
+* reported[x] ^type[1].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* reported[x] ^type[1].targetProfile[0].extension.valueBoolean = true
+* reported[x] ^type[1].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* reported[x] ^type[1].targetProfile[1].extension.valueBoolean = false
+* reported[x] ^type[1].targetProfile[2].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* reported[x] ^type[1].targetProfile[2].extension.valueBoolean = false
+* reported[x] ^type[1].targetProfile[3].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* reported[x] ^type[1].targetProfile[3].extension.valueBoolean = false
+* subject ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type[0].targetProfile[0].extension.valueBoolean = true
+* requester ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* requester ^type[0].targetProfile[0].extension.valueBoolean = true
+* requester ^type[0].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* requester ^type[0].targetProfile[1].extension.valueBoolean = false
+* requester ^type[0].targetProfile[2].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* requester ^type[0].targetProfile[2].extension.valueBoolean = false
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreMedicationRequest

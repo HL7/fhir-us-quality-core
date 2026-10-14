@@ -84,5 +84,14 @@ Description: "Profile of Encounter for decision support/quality metrics. Defines
 * serviceProvider only Reference(USQualityCoreOrganization)
   * ^short = "The organization (facility) responsible for this encounter"
 * diagnosis.rank ^short = "Ranking of the diagnosis (for each role type)"
+// Elementdefinition-type-must-support flags on Reference target profiles.
+* subject ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type[0].targetProfile[0].extension.valueBoolean = true
+* participant.individual ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* participant.individual ^type[0].targetProfile[0].extension.valueBoolean = true
+* participant.individual ^type[0].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* participant.individual ^type[0].targetProfile[1].extension.valueBoolean = false
+* participant.individual ^type[0].targetProfile[2].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* participant.individual ^type[0].targetProfile[2].extension.valueBoolean = false
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreEncounter

@@ -27,5 +27,8 @@ Description: "Defines constraints and extensions on the CarePlan resource for th
 * contributor ^short = "Who provided the content of the care plan"
 * intent ^short = "proposal | plan | order | option"
 * status ^short = "draft | active | on-hold | revoked | completed | entered-in-error | unknown"
+// Elementdefinition-type-must-support flags on Reference target profiles.
+* subject ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type[0].targetProfile[0].extension.valueBoolean = true
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreCarePlan

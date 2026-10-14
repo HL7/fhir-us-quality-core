@@ -48,5 +48,16 @@ Description: "Profile of Procedure for decision support/quality metrics. Defines
   * ^type[0].targetProfile[2] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note"
   * ^type[0].targetProfile[3] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
   * ^type[0].targetProfile[4] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
+// Elementdefinition-type-must-support flags on Reference target profiles.
+* subject ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type[0].targetProfile[0].extension.valueBoolean = true
+* performer.actor ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performer.actor ^type[0].targetProfile[0].extension.valueBoolean = true
+* performer.actor ^type[0].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performer.actor ^type[0].targetProfile[1].extension.valueBoolean = false
+* performer.actor ^type[0].targetProfile[2].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performer.actor ^type[0].targetProfile[2].extension.valueBoolean = false
+* performer.actor ^type[0].targetProfile[3].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performer.actor ^type[0].targetProfile[3].extension.valueBoolean = false
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreProcedure

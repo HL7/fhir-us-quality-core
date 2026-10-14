@@ -44,5 +44,20 @@ Description: "Profile of ServiceRequest for decision support/quality metrics. De
   * ^type[0].targetProfile[2] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-diagnosticreport-note"
   * ^type[0].targetProfile[3] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
   * ^type[0].targetProfile[4] = "http://hl7.org/fhir/us/quality-core/StructureDefinition/us-quality-core-simple-observation"
+// Elementdefinition-type-must-support flags on Reference target profiles.
+* subject ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type[0].targetProfile[0].extension.valueBoolean = true
+* requester ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* requester ^type[0].targetProfile[0].extension.valueBoolean = true
+* requester ^type[0].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* requester ^type[0].targetProfile[1].extension.valueBoolean = false
+* requester ^type[0].targetProfile[2].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* requester ^type[0].targetProfile[2].extension.valueBoolean = false
+* requester ^type[0].targetProfile[3].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* requester ^type[0].targetProfile[3].extension.valueBoolean = false
+* requester ^type[0].targetProfile[4].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* requester ^type[0].targetProfile[4].extension.valueBoolean = false
+* requester ^type[0].targetProfile[5].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* requester ^type[0].targetProfile[5].extension.valueBoolean = false
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreServiceRequest

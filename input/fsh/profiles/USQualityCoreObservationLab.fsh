@@ -95,5 +95,8 @@ Description: "The US Quality Core Laboratory Result Observation Profile is based
   * ^short = "Result reference range"
 * specimen ^short = "Specimen used for this observation"
 * performer ^short = "Who is responsible for the observation"
+// Elementdefinition-type-must-support flags on Reference target profiles.
+* subject ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type[0].targetProfile[0].extension.valueBoolean = true
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreObservationLab

@@ -89,5 +89,14 @@ Description: "Profile of DiagnosticReport for laboratory results for decision su
   * ^short = "Responsible Diagnostic Service"
 * result only Reference(USQualityCoreObservationLab)
   * ^short = "Observations"
+// Elementdefinition-type-must-support flags on Reference target profiles.
+* subject ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type[0].targetProfile[0].extension.valueBoolean = true
+* performer ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performer ^type[0].targetProfile[0].extension.valueBoolean = true
+* performer ^type[0].targetProfile[1].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performer ^type[0].targetProfile[1].extension.valueBoolean = false
+* performer ^type[0].targetProfile[2].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* performer ^type[0].targetProfile[2].extension.valueBoolean = false
 // Generated USCDI+ Quality flag insert. Keep this at the end of the profile so all element and slice rules exist before the RuleSet is applied.
 * insert GeneratedUSCDIQualityFlagsForUSQualityCoreDiagnosticReportLab
