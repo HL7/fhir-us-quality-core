@@ -4,9 +4,16 @@
 
 This page lists the change history for each version of **US Quality Core**. 
 
-### Version 1.0.0-ballot
+### Version 1.0.0 (Ballot Reconciliation)
+{: id="v1.0.0"}
 
-{: #v1.0.0}
+This section records changes from Version 1.0.0-ballot for the upcoming Version 1.0.0 release.
+
+* Restores [USQualityCoreClaim](StructureDefinition-us-quality-core-claim.html) as an optional interim mechanism for billing-related quality measurement without USCDI+ Quality mappings, with MAY expectations for Claim resource support, read and search interactions, and patient search. Its inclusion does not require clinical exchange implementations to create, obtain, or expose claims data. [FHIR-58928](https://jira.hl7.org/browse/FHIR-58928). See [Optional Claim Support](us-quality-core-general-requirements.html#optional-claim-support) and [Capability Statements](capability-statements.html).
+* Clarifies that required profile support is determined by USCDI+ Quality flagged elements and directly supported US Core profile mappings; profiles without mappings are optional. [FHIR-58928](https://jira.hl7.org/browse/FHIR-58928). See [General Requirements](us-quality-core-general-requirements.html#summary-of-conformance-requirements).
+
+### Version 1.0.0-ballot
+{: id="v1.0.0-ballot"}
 
 Version 1.0.0-ballot establishes US Quality Core as an STU 1.0.0-ballot release for implementing USCDI+ Quality V2 in FHIR R4. This version updates the 2026 US Quality Core Implementation Guide, which
 was based on <a href="https://hl7.org/fhir/us/qicore/STU6/">QI-Core v6.0.0</a>

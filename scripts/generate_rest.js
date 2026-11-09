@@ -21,7 +21,7 @@ const {
   write
 } = require('./lib/io');
 const { addAssignment, addCodeAssignment, generatedFshFile, ruleSetToFsh } = require('./lib/fsh-output');
-const { profileMaps, requireProfileDefinition } = require('./lib/profiles');
+const { profileMaps, profileResourceType, requireProfileDefinition } = require('./lib/profiles');
 const {
   searchRequirementDocumentation,
   usCoreDocumentationContext
@@ -289,10 +289,11 @@ function addResource(
   index,
   config,
   fhirDefs,
-  documentationContext
+  documentationContext,
+  resourceExpectation
 ) {
   const resourcePath = `resource[${index}]`;
-  addExpectation(ruleSet, `${resourcePath}.extension[0]`, 'SHALL');
+  addExpectation(ruleSet, `${resourcePath}.extension[0]`, resourceExpectation);
   (resourceConfig.searchCombinations ?? []).forEach((combination, combinationIndex) => {
     addSearchCombination(ruleSet, `${resourcePath}.extension[${combinationIndex + 1}]`, combination);
   });
@@ -304,7 +305,8 @@ function addResource(
     searchRequirementDocumentation(
       resource,
       resourceConfig,
-      documentationContext
+      documentationContext,
+      resourceExpectation
     )
   );
   addInteractions(ruleSet, resourcePath, resourceConfig.interactions);
@@ -409,21 +411,21 @@ function writeSearchParameters(entries, config) {
 
 function assertResourceCoverage(resources, supportedProfilesByResource) {
   const configuredResources = new Set(Object.keys(resources));
-  const mappedResources = new Set(supportedProfilesByResource.keys());
-  const missingConfigs = [...mappedResources].filter(resource => !configuredResources.has(resource)).sort();
-  const unmappedConfigs = [...configuredResources].filter(resource => !mappedResources.has(resource)).sort();
+  const supportedResources = new Set(supportedProfilesByResource.keys());
+  const missingConfigs = [...supportedResources].filter(resource => !configuredResources.has(resource)).sort();
+  const unsupportedConfigs = [...configuredResources].filter(resource => !supportedResources.has(resource)).sort();
 
   if (missingConfigs.length) {
     throw new Error(
-      `Mapped USCDI+ Quality profile resources are missing from definitions/capabilities.json:\n- ${missingConfigs.join(
+      `Supported profile resources are missing from definitions/capabilities.json:\n- ${missingConfigs.join(
         '\n- '
       )}`
     );
   }
 
-  if (unmappedConfigs.length) {
+  if (unsupportedConfigs.length) {
     throw new Error(
-      `definitions/capabilities.json includes resources with no definitions/uscdi_plus_quality.json profile mappings:\n- ${unmappedConfigs.join(
+      `definitions/capabilities.json includes resources with no authored profiles or USCDI+ Quality profile mappings:\n- ${unsupportedConfigs.join(
         '\n- '
       )}`
     );
@@ -443,9 +445,21 @@ async function main(log) {
   const { byId: profilesById, byName: profilesByName } = await log.step('Parsing authored FSH profiles', () =>
     profileMaps(parseFsh(FSH_FILES))
   );
-  const supportedProfilesByResource = await log.step('Inferring supported profiles by REST resource', () =>
+  const requiredProfilesByResource = await log.step('Inferring required profiles by REST resource', () =>
     mappedProfilesByResource(dataElements, profilesById, profilesByName, fhirDefs)
   );
+  const supportedProfilesByResource = new Map(
+    [...requiredProfilesByResource].map(([resource, urls]) => [resource, [...urls]])
+  );
+  // Authored profiles without USCDI+ Quality mappings are also available for optional support.
+  for (const profile of profilesById.values()) {
+    if (!profile.id?.startsWith(local.profileIdPrefix)) continue;
+    const resource = profileResourceType(profile, profilesById, profilesByName, fhirDefs);
+    const urls = supportedProfilesByResource.get(resource) ?? [];
+    const url = `${config.canonical.replace(/\/$/, '')}/StructureDefinition/${profile.id}`;
+    if (!urls.includes(url)) urls.push(url);
+    supportedProfilesByResource.set(resource, urls);
+  }
   const ruleSet = new RuleSet(generated.capabilityStatementRestRuleSetName);
   let searchParameterCount = 0;
 
@@ -460,7 +474,8 @@ async function main(log) {
         index,
         config,
         fhirDefs,
-        documentationContext
+        documentationContext,
+        requiredProfilesByResource.has(resource) ? 'SHALL' : 'MAY'
       );
     });
     addSystemInteractions(ruleSet);

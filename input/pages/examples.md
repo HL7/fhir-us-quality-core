@@ -13,6 +13,9 @@
 ### US Quality Core CareTeam
 * [Example of a CareTeam involved in the delivery of care for a pregnancy](CareTeam-example.html)
 
+### US Quality Core Claim
+* [Vision Claim Example](Claim-example.html)
+
 ### US Quality Core Communication
 * [Radiology Report Notification Example](Communication-example.html)
 

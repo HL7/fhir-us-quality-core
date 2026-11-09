@@ -3,6 +3,8 @@
 ### Profile List
 The following table lists the US Quality Core profiles that are part of the IG, directly supported US Core profiles, and the underlying FHIR resources.
 
+Inclusion in this list does not by itself require support for a profile. Required profiles are identified by their USCDI+ Quality flagged elements or directly supported US Core profile mappings. See [General Requirements](us-quality-core-general-requirements.html#summary-of-conformance-requirements) for profile support and exchange requirements.
+
 {% include profile-table.md %}
 
 ### Referencing US Quality Core Profiles

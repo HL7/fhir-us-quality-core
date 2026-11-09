@@ -36,5 +36,22 @@ Servers supporting this profile **SHALL** support the following search parameter
 
 {% endfor %}
 
+{% elsif search.optionalSearches.size > 0 %}
+#### Optional US Quality Core Server Search Parameters
+
+Servers **MAY** support the following searches. These searches are not required for conformance to this guide. See the [US Quality Core Server CapabilityStatement](CapabilityStatement-us-quality-core-server.html#{{ search.capabilityStatementAnchor }}) for the interaction and search expectations for `{{ search.resource }}`.
+
+{% for requirement in search.optionalSearches %}
+1. **MAY** support {{ requirement.statement }}.
+
+    `{{ requirement.request }}`
+
+    **Example:**
+
+    > `{{ requirement.example }}`
+
+    **Implementation Notes:** Fetches a bundle of {{ profile_notes.title }} resources matching the specified search criteria. {{ requirement.searchGuidance }}
+
+{% endfor %}
 {% endif %}
 {% endif %}
