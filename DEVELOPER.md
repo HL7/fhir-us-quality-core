@@ -188,8 +188,10 @@ resource's CapabilityStatement and search requirements:
 ```
 
 - Each top-level key is an R4 resource type. The configured resource types must
-  exactly match those inferred from the profile mappings in
-  `definitions/uscdi_plus_quality.json`.
+  exactly match those inferred from authored US Quality Core profiles and the
+  profile mappings in `definitions/uscdi_plus_quality.json`. Resource support
+  is generated as `SHALL` when at least one profile for that resource has a
+  USCDI+ Quality mapping, and `MAY` otherwise.
 - Resource-level CapabilityStatement documentation is generated from the
   required search parameter and combination metadata. The generator compares
   each requirement with the configured US Core Server CapabilityStatement to
@@ -197,8 +199,9 @@ resource's CapabilityStatement and search requirements:
   It also generates rationale text from the resource type and search shape.
   Combination matching is independent of parameter order, and matching
   individual parameters must have the same search type.
-  When a resource has no required searches, the generator emits the standard
-  no-additional-search guidance.
+  When a required resource has no required searches, the generator emits the
+  standard no-additional-search guidance. Resources without mapped profiles
+  receive optional-support guidance.
 - `interactions` maps FHIR resource interaction codes to expectation codes such
   as `SHALL` or `MAY`.
 - `revIncludes` lists supported `_revinclude` values and their expectations.
@@ -225,7 +228,10 @@ resource's CapabilityStatement and search requirements:
   also define `rationaleOverride`.
 - `revIncludes`, `searchParams`, and `searchCombinations` may be empty when a
   resource has no requirements of that kind. Supported profile URLs are
-  inferred from `definitions/uscdi_plus_quality.json` and are not repeated here.
+  inferred from authored US Quality Core profiles and
+  `definitions/uscdi_plus_quality.json` and are not repeated here. For optional
+  resources such as Claim, interactions, search parameters, and search behavior
+  expectations are configured as `MAY`.
 
 ## Automation-Driven Content
 
@@ -291,9 +297,11 @@ Use this file when adding or changing:
 - search parameter expressions
 - required search parameter combinations
 
-The REST generator uses this definition, together with mappings in
-`definitions/uscdi_plus_quality.json`, to generate CapabilityStatement REST
-rules and local SearchParameter FSH.
+The REST generator uses this definition, together with authored profiles and
+mappings in `definitions/uscdi_plus_quality.json`, to generate CapabilityStatement
+REST rules and local SearchParameter FSH. An optional profile does not need a
+USCDI+ Quality mapping or a generated flag insert; its resource still needs an
+entry in `definitions/capabilities.json`.
 
 After editing REST/search requirements, run:
 
@@ -448,8 +456,9 @@ configuration when they can be read from SUSHI config.
   USCDI+ Quality flagging. This file identifies the US Quality Core profiles
   and element paths that should receive the USCDI+ Quality extension and
   short-text prefix. Its US Core and US Quality Core profile mappings also
-  determine which profiles are supported in generated CapabilityStatement rest
-  rules.
+  determine which profiles require support in generated CapabilityStatement rest
+  rules. Authored US Quality Core profiles without mappings are included for
+  optional support.
 - `definitions/capabilities.json` - the RESTful interaction and search
   requirement source for generated SearchParameter definitions and
   CapabilityStatement rest rules.
@@ -463,9 +472,10 @@ CapabilityStatement rest section driven by
 `input/fsh/generated/search-parameters/` and generates
 `input/fsh/generated/USQualityCoreCapabilityStatementRest.fsh`, which is
 inserted into the authored server and client CapabilityStatement instances.
-Supported profile lists are inferred from
+Supported profile lists are inferred from authored US Quality Core profiles and
 `definitions/uscdi_plus_quality.json`; do not duplicate them in
-`definitions/capabilities.json`. The generated search alignment and
+`definitions/capabilities.json`. Resources without mapped profiles have `MAY`
+support expectations. The generated search alignment and
 rationale rows are also reused by profile notes through the view-data
 generator.
 

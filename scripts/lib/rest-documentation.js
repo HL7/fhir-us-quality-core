@@ -268,9 +268,14 @@ function searchRequirementRows(resource, resourceConfig, documentationContext) {
 function searchRequirementDocumentation(
   resource,
   resourceConfig,
-  documentationContext
+  documentationContext,
+  resourceExpectation = 'SHALL'
 ) {
   const rows = searchRequirementRows(resource, resourceConfig, documentationContext);
+
+  if (resourceExpectation === 'MAY') {
+    return `Support for this resource is optional because its profiles have no ${labels.uscdiQuality} mappings. Implementations MAY support the interactions and search parameters listed below. See [Search Requirement Selection](${rest.searchRequirementSelectionPath}) for how search expectations are selected.`;
+  }
 
   if (!rows.length) {
     return `Search requirements are selected according to the rules described in [Search Requirement Selection](${rest.searchRequirementSelectionPath}). ${labels.implementationGuide} does not define additional required individual search parameters or required search parameter combinations for this resource. Implementations still support the required interactions in this CapabilityStatement and any applicable US Core requirements independently.`;

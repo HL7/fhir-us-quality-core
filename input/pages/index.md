@@ -65,12 +65,16 @@ with US Core and QI-Core](relationship-with-uscore-qicore.html).
 
 The US Quality Core IG provides requirements and guidance for representing and
 exchanging clinical data used in quality measurement programs in FHIR within the
-US Realm.  The scope of the data described in this guide is defined by the
+US Realm. Its baseline conformance requirements cover the data described in the
 [USCDI+ Quality Data Element List](https://uscdiplus.healthit.gov/uscdiplus?id=uscdi_record&table=x_g_sshh_uscdi_domain&sys_id=7ddf78228745b95098e5edb90cbb3525&view=sp), which establishes a consistent baseline of
-harmonized data elements for a wide range of quality measurement use cases. The scope of this implementation guide is limited to the representation and
-exchange of data described in the USCDI+ Quality Data Element List. This IG includes
-only those FHIR profiles, extensions, and constraints needed to represent and
-exchange data relevant to USCDI+ Quality.
+harmonized data elements for a wide range of quality measurement use cases. The
+profiles, extensions, and constraints required for conformance support the
+representation and exchange of data relevant to USCDI+ Quality.
+
+Profiles may also be included for optional use. Inclusion in this guide does not
+by itself make support for a profile part of the baseline conformance requirements.
+See [General Requirements](us-quality-core-general-requirements.html#summary-of-conformance-requirements)
+for profile support and exchange requirements.
 
 This guide defines a standardized method for exchanging this data between
 producers of data (e.g., health information systems that store the data and respond to data requests) and the quality measurement systems that calculate measure reports based on this data.  This exchange definition does not

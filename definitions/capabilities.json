@@ -1997,5 +1997,30 @@
         "expectation": "SHALL"
       }
     ]
+  },
+  "Claim": {
+    "interactions": {
+      "read": "MAY",
+      "search-type": "MAY"
+    },
+    "revIncludes": [],
+    "searchParams": {
+      "patient": {
+        "type": "reference",
+        "documentation": "The client **MAY** search for claims for a patient using a patient reference.",
+        "expectation": "MAY",
+        "expression": "Claim.patient",
+        "exampleValue": "Patient/example",
+        "multipleOr": {
+          "value": true,
+          "expectation": "MAY"
+        },
+        "multipleAnd": {
+          "value": true,
+          "expectation": "MAY"
+        }
+      }
+    },
+    "searchCombinations": []
   }
 }

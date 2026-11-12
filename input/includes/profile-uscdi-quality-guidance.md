@@ -3,6 +3,7 @@
 {% if profile_notes %}
 ### USCDI+ Quality Element Support Expectations
 
+{% if profile_notes.uscdiQualityElements.size > 0 %}
 Systems are expected to support this profile as part of implementing USCDI+ Quality V2 in FHIR and meeting the conformance requirements of this guide.
 
 The following elements are specifically relevant to USCDI+ Quality V2 data classes and elements. Systems are expected to support these elements as applicable to their role in US Quality Core data exchange. See the [Must Support](must-support.html) section of this guide for more information. These elements are flagged as (USCDI+ Quality) in the formal profile views.
@@ -18,4 +19,7 @@ The following elements are specifically relevant to USCDI+ Quality V2 data class
 {%- capture data_elements -%}{%- for item in element.dataElements -%}{%- assign data_class = item.class | replace: "|", "&#124;" -%}{%- assign data_name = item.name | replace: "|", "&#124;" -%}[{{ data_class }}: {{ data_name }}]({{ item.path }}){%- unless forloop.last %}, {% endunless -%}{%- endfor -%}{%- endcapture -%}
 | `{{ element_path }}` | {{ element_short }} | {{ data_elements | strip }} |
 {% endfor %}
+{% else %}
+This profile has no USCDI+ Quality mappings or flagged elements. Implementations **MAY** support this profile; support is not required for conformance to this guide. Resources exchanged using this profile **SHALL** conform to its constraints. See the [General Requirements](us-quality-core-general-requirements.html) for profile support expectations.
+{% endif %}
 {% endif %}

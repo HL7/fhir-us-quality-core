@@ -62,6 +62,19 @@
       ]
     },
     {
+      "name": "Claim",
+      "path": "claim.html",
+      "profiles": [
+        {
+          "title": "US Quality Core Claim",
+          "path": "StructureDefinition-us-quality-core-claim.html",
+          "depth": 0,
+          "showResource": true,
+          "usCore": null
+        }
+      ]
+    },
+    {
       "name": "Communication",
       "path": "communication.html",
       "profiles": [

@@ -7,17 +7,25 @@ This page documents requirements common to all US Quality Core actors in this gu
 
 In addition to adherence to core FHIR requirements, conformance to this US Quality Core Implementation Guide also requires the following:
 
-- Implementations **SHALL** support all [US Quality Core profiles](profiles.html).
+- Implementations **SHALL** support [US Quality Core profiles](profiles.html) containing at least one element flagged as USCDI+ Quality, and the directly supported US Core profiles identified in the [USCDI+ Quality mappings](uscdiquality.html). Implementations **MAY** support profiles without USCDI+ Quality mappings, such as [US Quality Core Claim](StructureDefinition-us-quality-core-claim.html).
 - Implementations **SHALL** support all elements flagged as USCDI+ Quality and all elements flagged MustSupport in underlying US Core profiles.
 - Server implementations **SHALL** support the requirements described in the [US Quality Core Server CapabilityStatement](CapabilityStatement-us-quality-core-server.html).
 - Server implementations **SHALL** support all interactions, search parameters, and combined search parameters that have `SHALL` conformance expectations in the US Quality Core Server CapabilityStatement.
-- Server implementations **SHALL** declare their support of the US Quality Core profiles in a FHIR CapabilityStatement.
-- Quality improvement applications **SHALL** recognize and process all MustSupport elements in US Quality Core.
+- Server implementations **SHALL** declare which US Quality Core profiles they support in a FHIR CapabilityStatement, including any optional profiles they support.
+- Quality improvement applications **SHALL** recognize and process all MustSupport elements in the US Quality Core profiles they support.
 - Modifier elements **SHALL** be treated as MustSupport, even if not explicitly declared.
     - Applications **SHALL NOT** process resource instances that include unknown modifier elements.
 - If a target resource referenced by a US Quality Core profile has a US Quality Core profile, it **SHALL** conform to the US Quality Core profile.
-- Quality improvement applications **SHALL** be simultaneously compliant with US Quality Core profiles and US Core profiles. Where a US Quality Core profile is derived from a US Core profile, the more restrictive bindings defined by US Quality Core **SHALL** be applied where they exist.
+- Quality improvement applications **SHALL** comply with the constraints of the US Quality Core profiles they support and any underlying US Core profiles. Where a US Quality Core profile is derived from a US Core profile, the more restrictive bindings defined by US Quality Core **SHALL** be applied where they exist.
 - Applications **SHOULD** use the preferred value sets as defined by US Quality Core profiles.
+
+### Optional Claim Support
+
+US Quality Core remains focused on clinical data. Version 1.0.0 retains the [US Quality Core Claim profile](StructureDefinition-us-quality-core-claim.html) as an interim mechanism to support quality measures that use billing-related data elements while longer-term approaches are considered.
+
+Implementations **MAY** use the Claim profile when the relevant billing data is available from an appropriate source system. Its inclusion does not require systems implementing US Quality Core's clinical exchange capabilities to create, obtain, or expose claims data.
+
+Claim support is not required as part of this guide's baseline server capabilities, search APIs, or CapabilityStatement requirements. Claim resource support, `read`, `search-type`, and `patient` search all have **MAY** expectations in the [US Quality Core CapabilityStatements](capability-statements.html). These entries describe optional exchange capabilities. When an implementation exchanges a resource using the Claim profile, the resource **SHALL** conform to the profile's constraints, including the requirements for referenced resources.
 
 ### API Requirements
 

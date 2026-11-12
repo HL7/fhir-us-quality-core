@@ -737,6 +737,220 @@
       ]
     }
   },
+  "us-quality-core-claim": {
+    "title": "US Quality Core Claim",
+    "uscdiQualityElements": [],
+    "usCore": null,
+    "conformanceIndicators": {
+      "elements": [
+        {
+          "path": "status",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "type",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "use",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "patient",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "created",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "provider",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "priority",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "payee.type",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "careTeam.sequence",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "careTeam.provider",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "supportingInfo.sequence",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "supportingInfo.category",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "diagnosis.sequence",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "diagnosis.diagnosis[x]",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "procedure.sequence",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "procedure.procedure[x]",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "insurance",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "insurance.sequence",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "insurance.focal",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "insurance.coverage",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "accident.date",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "item.sequence",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "item.productOrService",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "item.detail.sequence",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "item.detail.productOrService",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "item.detail.subDetail.sequence",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        },
+        {
+          "path": "item.detail.subDetail.productOrService",
+          "fhir": {
+            "mandatory": true
+          },
+          "usQualityCore": {}
+        }
+      ]
+    },
+    "search": {
+      "resource": "Claim",
+      "capabilityStatementAnchor": "Claim1-35",
+      "requiredSearches": [],
+      "optionalSearches": [
+        {
+          "usCoreExpectation": null,
+          "rationale": "The client **MAY** search for claims for a patient using a patient reference.",
+          "statement": "searching for all Claim resources for a patient using the `patient` search parameter",
+          "additionalRequirements": [],
+          "searchGuidance": "See [how to search by reference](https://hl7.org/fhir/R4/search.html#reference).",
+          "request": "GET [base]/Claim?patient={Patient/}[id]",
+          "example": "GET [base]/Claim?patient=Patient/example"
+        }
+      ]
+    }
+  },
   "us-quality-core-communication": {
     "title": "US Quality Core Communication",
     "uscdiQualityElements": [

@@ -456,11 +456,21 @@ function profileSearchData(
     .map(requirement =>
       documentedSearchRequirement(profile, resource, resourceConfig, requirement)
     );
+  // Profiles with only optional searches still need discoverable search guidance.
+  const optionalSearches = requiredSearches.length ? [] : Object.entries(resourceConfig.searchParams ?? {})
+    .filter(([, searchParam]) => searchParam.expectation === 'MAY')
+    .map(([code, searchParam]) => documentedSearchRequirement(profile, resource, resourceConfig, {
+      params: [code],
+      types: [searchParam.type],
+      usCoreExpectation: null,
+      rationale: searchParam.documentation
+    }));
 
   return {
     resource,
     capabilityStatementAnchor: `${resource}1-${resourceIndex + 1}`,
-    requiredSearches
+    requiredSearches,
+    ...(optionalSearches.length ? { optionalSearches } : {})
   };
 }
 
@@ -499,13 +509,15 @@ function assertProfileExampleOverrides(
   }
 }
 
-function assertProfilesHaveUscdiQualityElements(profileElements) {
-  const missing = profileElements.filter(({ elements }) => elements.length === 0);
+function assertProfilesHaveUscdiQualityElements(profileElements, mappedElements) {
+  const missing = profileElements.filter(({ profile, elements }) =>
+    mappedElements.has(profile.id) && elements.length === 0
+  );
   if (!missing.length) return;
 
   throw new Error(
     [
-      'Every US Quality Core profile must have generated USCDI+ Quality elements.',
+      'Every mapped US Quality Core profile must have generated USCDI+ Quality elements.',
       'Missing elements:',
       ...missing.map(({ profile }) => `- ${profile.id}`)
     ].join('\n')
@@ -576,7 +588,7 @@ function profileNotesData(
       }))
     }));
 
-  assertProfilesHaveUscdiQualityElements(profileElements);
+  assertProfilesHaveUscdiQualityElements(profileElements, mappedElements);
 
   return Object.fromEntries(
     profileElements
