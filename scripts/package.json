@@ -12,6 +12,6 @@
     "generate:uscdi-quality-csv": "node generate_uscdi_quality_csv.js"
   },
   "dependencies": {
-    "fsh-sushi": "3.20.0"
+    "fsh-sushi": "latest"
   }
 }
