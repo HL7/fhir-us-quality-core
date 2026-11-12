@@ -2,6 +2,8 @@ The MedicationAdministration profile defines the conformance expectations for a 
 
 To create an expression indicating existence of a MedicationAdministration, use the profile [USQualityCoreMedicationAdministrationDone](StructureDefinition-us-quality-core-medicationadministrationdone.html); to specifically request information that a MedicationAdministration intentionally did not occur for a medical, patient or system reason, use the profile [USQualityCoreMedicationAdministrationNotDone](StructureDefinition-us-quality-core-medicationadministrationnotdone.html).
 
+{% include profile-net-new.md profile="us-quality-core-medicationadministration" %}
+
 {% include profile-uscdi-quality-guidance.md profile="us-quality-core-medicationadministration" %}
 
 {% include profile-us-core-guidance.md profile="us-quality-core-medicationadministration" %}

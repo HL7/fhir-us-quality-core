@@ -4,6 +4,8 @@ To create an expression indicating existence of a MedicationDispense event, use 
 
 For a more complete discussion of representation of negation within US Quality Core and quality improvement artifacts, see the [Negation in US Quality Core](us-quality-core-general-requirements.html#negation-in-us-quality-core) topic.
 
+{% include profile-net-new.md profile="us-quality-core-medicationdispensedeclined" %}
+
 {% include profile-uscdi-quality-guidance.md profile="us-quality-core-medicationdispensedeclined" %}
 
 {% include profile-us-core-guidance.md profile="us-quality-core-medicationdispensedeclined" %}

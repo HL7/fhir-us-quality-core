@@ -37,7 +37,7 @@ const {
   sortByDisplayTitle,
   usCoreAncestor
 } = require('./lib/profiles');
-const { profileConformanceIndicators } = require('./lib/conformance-indicators');
+const { profileConformanceIndicators, profileNetNewRequirements } = require('./lib/conformance-indicators');
 const {
   assertAllDataElementsMapped,
   generatedUscdiQualityElements,
@@ -599,6 +599,7 @@ function profileNotesData(
             uscdiQualityElements: elements,
             usCore: usCore ? usCoreProfileSummary(usCore) : null,
             conformanceIndicators: profileConformanceIndicators(compiledProfile, baseResource, usCore),
+            netNewRequirements: profileNetNewRequirements(compiledProfile, baseResource, usCore, fhirDefs, compiledProfilesById),
             search: profileSearchData(
               profile,
               resourceTypes,

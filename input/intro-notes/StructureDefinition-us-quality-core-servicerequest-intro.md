@@ -2,6 +2,8 @@ The ServiceRequest profile defines the conformance expectations for a ServiceReq
 
 To create an expression indicating the existence of a service request, use the profile [USQualityCoreServiceRequested](StructureDefinition-us-quality-core-servicerequested.html); to specifically request information that a ServiceRequest intentionally did not occur for a medical, patient or system reason, use the profile [USQualityCoreServiceProhibited](StructureDefinition-us-quality-core-serviceprohibited.html).
 
+{% include profile-net-new.md profile="us-quality-core-servicerequest" %}
+
 {% include profile-uscdi-quality-guidance.md profile="us-quality-core-servicerequest" %}
 
 {% include profile-us-core-guidance.md profile="us-quality-core-servicerequest" %}

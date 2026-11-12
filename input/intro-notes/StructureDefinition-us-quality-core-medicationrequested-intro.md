@@ -4,6 +4,8 @@ To create an expression indicating the existence of a medication request, use th
 
 Note that the doNotPerform and statuses indicating positive intent are implied by the use of the MedicationRequested profile.
 
+{% include profile-net-new.md profile="us-quality-core-medicationrequested" %}
+
 {% include profile-uscdi-quality-guidance.md profile="us-quality-core-medicationrequested" %}
 
 {% include profile-us-core-guidance.md profile="us-quality-core-medicationrequested" %}

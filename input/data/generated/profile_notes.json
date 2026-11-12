@@ -164,6 +164,7 @@
         }
       ]
     },
+    "netNewRequirements": [],
     "search": {
       "resource": "AdverseEvent",
       "capabilityStatementAnchor": "AdverseEvent1-1",
@@ -388,6 +389,41 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "patient",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "onset[x]",
+        "changes": [
+          "USCDI+ Quality support",
+          "Types removed: string"
+        ]
+      },
+      {
+        "path": "recordedDate",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "lastOccurrence",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      }
+    ],
     "search": {
       "resource": "AllergyIntolerance",
       "capabilityStatementAnchor": "AllergyIntolerance1-2",
@@ -602,6 +638,28 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "category",
+        "changes": [
+          "Cardinality: 0..* → 0..1"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "CarePlan",
       "capabilityStatementAnchor": "CarePlan1-3",
@@ -717,6 +775,56 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "participant.member",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core CareTeam",
+                "path": "StructureDefinition-us-quality-core-careteam.html"
+              },
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "CareTeam",
       "capabilityStatementAnchor": "CareTeam1-4",
@@ -863,6 +971,7 @@
         }
       ]
     },
+    "netNewRequirements": [],
     "search": {
       "resource": "Communication",
       "capabilityStatementAnchor": "Communication1-5",
@@ -1031,6 +1140,7 @@
         }
       ]
     },
+    "netNewRequirements": [],
     "search": {
       "resource": "Communication",
       "capabilityStatementAnchor": "Communication1-5",
@@ -1211,6 +1321,7 @@
         }
       ]
     },
+    "netNewRequirements": [],
     "search": {
       "resource": "Communication",
       "capabilityStatementAnchor": "Communication1-5",
@@ -1424,6 +1535,60 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "extension:assertedDate",
+        "changes": [
+          "New extension (0..1)",
+          "Must Support"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "Group"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "encounter",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Encounter",
+                "path": "StructureDefinition-us-quality-core-encounter.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "onset[x]",
+        "changes": [
+          "USCDI+ Quality support",
+          "Types removed: string"
+        ]
+      },
+      {
+        "path": "abatement[x]",
+        "changes": [
+          "USCDI+ Quality support",
+          "Types removed: string"
+        ]
+      }
+    ],
     "search": {
       "resource": "Condition",
       "capabilityStatementAnchor": "Condition1-6",
@@ -1768,6 +1933,43 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "severity",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "Group"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "onset[x]",
+        "changes": [
+          "Types removed: string"
+        ]
+      },
+      {
+        "path": "abatement[x]",
+        "changes": [
+          "Types removed: string"
+        ]
+      }
+    ],
     "search": {
       "resource": "Condition",
       "capabilityStatementAnchor": "Condition1-6",
@@ -2247,6 +2449,72 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "policyHolder",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "beneficiary",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "payor",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "class:group.name",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      }
+    ],
     "search": {
       "resource": "Coverage",
       "capabilityStatementAnchor": "Coverage1-7",
@@ -2428,6 +2696,7 @@
         }
       ]
     },
+    "netNewRequirements": [],
     "search": {
       "resource": "DeviceRequest",
       "capabilityStatementAnchor": "DeviceRequest1-9",
@@ -2654,6 +2923,7 @@
         }
       ]
     },
+    "netNewRequirements": [],
     "search": {
       "resource": "DeviceRequest",
       "capabilityStatementAnchor": "DeviceRequest1-9",
@@ -2863,6 +3133,7 @@
         }
       ]
     },
+    "netNewRequirements": [],
     "search": {
       "resource": "DeviceRequest",
       "capabilityStatementAnchor": "DeviceRequest1-9",
@@ -3140,6 +3411,113 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "basedOn",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "ImmunizationRecommendation"
+              },
+              {
+                "title": "US Quality Core CarePlan",
+                "path": "StructureDefinition-us-quality-core-careplan.html"
+              },
+              {
+                "title": "US Quality Core MedicationRequest",
+                "path": "StructureDefinition-us-quality-core-medicationrequest.html"
+              },
+              {
+                "title": "US Quality Core NutritionOrder",
+                "path": "StructureDefinition-us-quality-core-nutritionorder.html"
+              },
+              {
+                "title": "US Quality Core ServiceRequest",
+                "path": "StructureDefinition-us-quality-core-servicerequest.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "category",
+        "changes": [
+          "Binding: example → preferred"
+        ]
+      },
+      {
+        "path": "category:LaboratorySlice",
+        "changes": [
+          "Binding: example → preferred"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "encounter",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Encounter",
+                "path": "StructureDefinition-us-quality-core-encounter.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "performer",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "result",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Laboratory Result Observation",
+                "path": "StructureDefinition-us-quality-core-observation-lab.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "DiagnosticReport",
       "capabilityStatementAnchor": "DiagnosticReport1-10",
@@ -3453,6 +3831,87 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "encounter",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Encounter",
+                "path": "StructureDefinition-us-quality-core-encounter.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "performer",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "result",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Observation Clinical Result",
+                "path": "StructureDefinition-us-quality-core-observation-clinical-result.html"
+              },
+              {
+                "title": "US Quality Core Laboratory Result Observation",
+                "path": "StructureDefinition-us-quality-core-observation-lab.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "imagingStudy",
+        "changes": [
+          "USCDI+ Quality support",
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core ImagingStudy",
+                "path": "StructureDefinition-us-quality-core-imagingstudy.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "DiagnosticReport",
       "capabilityStatementAnchor": "DiagnosticReport1-10",
@@ -3978,6 +4437,181 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "priority",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "participant.individual",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "reasonReference",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "ImmunizationRecommendation"
+              },
+              {
+                "title": "US Quality Core Condition Encounter Diagnosis",
+                "path": "StructureDefinition-us-quality-core-condition-encounter-diagnosis.html"
+              },
+              {
+                "title": "US Quality Core Condition Problems Health Concerns",
+                "path": "StructureDefinition-us-quality-core-condition-problems-health-concerns.html"
+              },
+              {
+                "title": "US Quality Core Procedure",
+                "path": "StructureDefinition-us-quality-core-procedure.html"
+              },
+              {
+                "title": "US Quality Core Simple Observation",
+                "path": "StructureDefinition-us-quality-core-simple-observation.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "diagnosis",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "diagnosis.extension:diagnosisPresentOnAdmission",
+        "changes": [
+          "New extension (0..1)",
+          "Must Support"
+        ]
+      },
+      {
+        "path": "diagnosis.use",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "diagnosis.rank",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "hospitalization.origin",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Location",
+                "path": "StructureDefinition-us-quality-core-location.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "hospitalization.destination",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Location",
+                "path": "StructureDefinition-us-quality-core-location.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "hospitalization.dischargeDisposition",
+        "changes": [
+          "Binding: preferred → extensible",
+          "Value set changed"
+        ]
+      },
+      {
+        "path": "location.location",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Location",
+                "path": "StructureDefinition-us-quality-core-location.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "serviceProvider",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "partOf",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Encounter",
+                "path": "StructureDefinition-us-quality-core-encounter.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "Encounter",
       "capabilityStatementAnchor": "Encounter1-12",
@@ -4141,6 +4775,28 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "start[x]",
+        "changes": [
+          "Binding: example → preferred"
+        ]
+      }
+    ],
     "search": {
       "resource": "Goal",
       "capabilityStatementAnchor": "Goal1-14",
@@ -4259,6 +4915,7 @@
         }
       ]
     },
+    "netNewRequirements": [],
     "search": {
       "resource": "ImagingStudy",
       "capabilityStatementAnchor": "ImagingStudy1-15",
@@ -4489,6 +5146,68 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "",
+        "changes": [
+          "Validation rule added: qim-1"
+        ]
+      },
+      {
+        "path": "statusReason",
+        "changes": [
+          "Binding: example → preferred"
+        ]
+      },
+      {
+        "path": "vaccineCode.extension:codeOptions",
+        "changes": [
+          "New extension (0..1)"
+        ]
+      },
+      {
+        "path": "patient",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "encounter",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Encounter",
+                "path": "StructureDefinition-us-quality-core-encounter.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "location",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Location",
+                "path": "StructureDefinition-us-quality-core-location.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "Immunization",
       "capabilityStatementAnchor": "Immunization1-16",
@@ -4732,6 +5451,74 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "",
+        "changes": [
+          "Validation rule added: qim-1"
+        ]
+      },
+      {
+        "path": "status",
+        "changes": [
+          "Fixed value: completed"
+        ]
+      },
+      {
+        "path": "statusReason",
+        "changes": [
+          "Binding: example → preferred"
+        ]
+      },
+      {
+        "path": "vaccineCode.extension:codeOptions",
+        "changes": [
+          "New extension (0..1)"
+        ]
+      },
+      {
+        "path": "patient",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "encounter",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Encounter",
+                "path": "StructureDefinition-us-quality-core-encounter.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "location",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Location",
+                "path": "StructureDefinition-us-quality-core-location.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "Immunization",
       "capabilityStatementAnchor": "Immunization1-16",
@@ -4978,6 +5765,83 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "",
+        "changes": [
+          "Validation rule added: qim-1"
+        ]
+      },
+      {
+        "path": "status",
+        "changes": [
+          "Fixed value: not-done"
+        ]
+      },
+      {
+        "path": "statusReason",
+        "changes": [
+          "Cardinality: 0..1 → 1..1",
+          "Binding: example → extensible",
+          "Value set changed"
+        ]
+      },
+      {
+        "path": "vaccineCode.extension:codeOptions",
+        "changes": [
+          "New extension (0..1)",
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "patient",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "encounter",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Encounter",
+                "path": "StructureDefinition-us-quality-core-encounter.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "recorded",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "location",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Location",
+                "path": "StructureDefinition-us-quality-core-location.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "Immunization",
       "capabilityStatementAnchor": "Immunization1-16",
@@ -5203,6 +6067,42 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "status",
+        "changes": [
+          "Fixed value: active"
+        ]
+      },
+      {
+        "path": "managingOrganization",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "partOf",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Location",
+                "path": "StructureDefinition-us-quality-core-location.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "Location",
       "capabilityStatementAnchor": "Location1-17",
@@ -5251,6 +6151,39 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "manufacturer",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "ingredient.item[x]",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "Substance"
+              },
+              {
+                "title": "US Quality Core Medication",
+                "path": "StructureDefinition-us-quality-core-medication.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "Medication",
       "capabilityStatementAnchor": "Medication1-18",
@@ -5454,6 +6387,7 @@
         }
       ]
     },
+    "netNewRequirements": [],
     "search": {
       "resource": "MedicationAdministration",
       "capabilityStatementAnchor": "MedicationAdministration1-19",
@@ -5695,6 +6629,7 @@
         }
       ]
     },
+    "netNewRequirements": [],
     "search": {
       "resource": "MedicationAdministration",
       "capabilityStatementAnchor": "MedicationAdministration1-19",
@@ -5933,6 +6868,7 @@
         }
       ]
     },
+    "netNewRequirements": [],
     "search": {
       "resource": "MedicationAdministration",
       "capabilityStatementAnchor": "MedicationAdministration1-19",
@@ -6300,6 +7236,74 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "",
+        "changes": [
+          "Validation rule added: mdp-1"
+        ]
+      },
+      {
+        "path": "extension:recorded",
+        "changes": [
+          "New extension (0..1)"
+        ]
+      },
+      {
+        "path": "medication[x]",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Medication",
+                "path": "StructureDefinition-us-quality-core-medication.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "medication[x].extension:codeOptions",
+        "changes": [
+          "New extension (0..1)"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "authorizingPrescription",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core MedicationRequest",
+                "path": "StructureDefinition-us-quality-core-medicationrequest.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "daysSupply",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      }
+    ],
     "search": {
       "resource": "MedicationDispense",
       "capabilityStatementAnchor": "MedicationDispense1-20",
@@ -6617,6 +7621,99 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "",
+        "changes": [
+          "Validation rule added: mdp-1"
+        ]
+      },
+      {
+        "path": "extension",
+        "changes": [
+          "Cardinality: 0..* → 1..*"
+        ]
+      },
+      {
+        "path": "extension:recorded",
+        "changes": [
+          "New extension (1..1)",
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "status",
+        "changes": [
+          "Fixed value: declined"
+        ]
+      },
+      {
+        "path": "statusReason[x]",
+        "changes": [
+          "Cardinality: 0..1 → 1..1",
+          "USCDI+ Quality support",
+          "Binding: example → extensible",
+          "Value set changed",
+          "Types removed: Reference",
+          "Reference profiles changed"
+        ]
+      },
+      {
+        "path": "medication[x]",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Medication",
+                "path": "StructureDefinition-us-quality-core-medication.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "medication[x].extension:codeOptions",
+        "changes": [
+          "New extension (0..1)",
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "authorizingPrescription",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core MedicationRequest",
+                "path": "StructureDefinition-us-quality-core-medicationrequest.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "daysSupply",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      }
+    ],
     "search": {
       "resource": "MedicationDispense",
       "capabilityStatementAnchor": "MedicationDispense1-20",
@@ -6955,6 +8052,80 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "",
+        "changes": [
+          "Validation rule added: mdp-1"
+        ]
+      },
+      {
+        "path": "extension:recorded",
+        "changes": [
+          "New extension (0..1)"
+        ]
+      },
+      {
+        "path": "status",
+        "changes": [
+          "Value set changed"
+        ]
+      },
+      {
+        "path": "medication[x]",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Medication",
+                "path": "StructureDefinition-us-quality-core-medication.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "medication[x].extension:codeOptions",
+        "changes": [
+          "New extension (0..1)"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "authorizingPrescription",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core MedicationRequest",
+                "path": "StructureDefinition-us-quality-core-medicationrequest.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "daysSupply",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      }
+    ],
     "search": {
       "resource": "MedicationDispense",
       "capabilityStatementAnchor": "MedicationDispense1-20",
@@ -7465,6 +8636,235 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "",
+        "changes": [
+          "Validation rule added: mrq-1"
+        ]
+      },
+      {
+        "path": "status",
+        "changes": [
+          "Value set changed"
+        ]
+      },
+      {
+        "path": "doNotPerform",
+        "changes": [
+          "Cardinality: 0..1 → 1..1",
+          "USCDI+ Quality support",
+          "Fixed value: true"
+        ]
+      },
+      {
+        "path": "reported[x]",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "reported[x]:reportedReference",
+        "changes": [
+          "New slice (0..1)",
+          "USCDI+ Quality support",
+          "Types removed: boolean",
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "medication[x].extension:codeOptions",
+        "changes": [
+          "New extension (0..1)",
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "encounter",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Encounter",
+                "path": "StructureDefinition-us-quality-core-encounter.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "authoredOn",
+        "changes": [
+          "Cardinality: 0..1 → 1..1"
+        ]
+      },
+      {
+        "path": "requester",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "reasonCode",
+        "changes": [
+          "Cardinality: 0..* → 1..1",
+          "Value set changed"
+        ]
+      },
+      {
+        "path": "reasonReference",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Condition Encounter Diagnosis",
+                "path": "StructureDefinition-us-quality-core-condition-encounter-diagnosis.html"
+              },
+              {
+                "title": "US Quality Core Condition Problems Health Concerns",
+                "path": "StructureDefinition-us-quality-core-condition-problems-health-concerns.html"
+              },
+              {
+                "title": "US Quality Core Simple Observation",
+                "path": "StructureDefinition-us-quality-core-simple-observation.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.bounds[x]",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.frequency",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.frequencyMax",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.period",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.periodMax",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.periodUnit",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.asNeeded[x]",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dispenseRequest.validityPeriod",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dispenseRequest.expectedSupplyDuration",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      }
+    ],
     "search": {
       "resource": "MedicationRequest",
       "capabilityStatementAnchor": "MedicationRequest1-21",
@@ -8198,6 +9598,214 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "",
+        "changes": [
+          "Validation rule added: mrq-1"
+        ]
+      },
+      {
+        "path": "doNotPerform",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "reported[x]",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "reported[x]:reportedReference",
+        "changes": [
+          "New slice (0..1)",
+          "USCDI+ Quality support",
+          "Types removed: boolean",
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "medication[x].extension:codeOptions",
+        "changes": [
+          "New extension (0..1)",
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "encounter",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Encounter",
+                "path": "StructureDefinition-us-quality-core-encounter.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "requester",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "reasonReference",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Condition Encounter Diagnosis",
+                "path": "StructureDefinition-us-quality-core-condition-encounter-diagnosis.html"
+              },
+              {
+                "title": "US Quality Core Condition Problems Health Concerns",
+                "path": "StructureDefinition-us-quality-core-condition-problems-health-concerns.html"
+              },
+              {
+                "title": "US Quality Core Simple Observation",
+                "path": "StructureDefinition-us-quality-core-simple-observation.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.bounds[x]",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.frequency",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.frequencyMax",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.period",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.periodMax",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.periodUnit",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.asNeeded[x]",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dispenseRequest.validityPeriod",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dispenseRequest.expectedSupplyDuration",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      }
+    ],
     "search": {
       "resource": "MedicationRequest",
       "capabilityStatementAnchor": "MedicationRequest1-21",
@@ -8931,6 +10539,221 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "",
+        "changes": [
+          "Validation rule added: mrq-1"
+        ]
+      },
+      {
+        "path": "status",
+        "changes": [
+          "Value set changed"
+        ]
+      },
+      {
+        "path": "doNotPerform",
+        "changes": [
+          "USCDI+ Quality support",
+          "Fixed value: false"
+        ]
+      },
+      {
+        "path": "reported[x]",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "reported[x]:reportedReference",
+        "changes": [
+          "New slice (0..1)",
+          "USCDI+ Quality support",
+          "Types removed: boolean",
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "medication[x].extension:codeOptions",
+        "changes": [
+          "New extension (0..1)",
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "encounter",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Encounter",
+                "path": "StructureDefinition-us-quality-core-encounter.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "requester",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "reasonReference",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Condition Encounter Diagnosis",
+                "path": "StructureDefinition-us-quality-core-condition-encounter-diagnosis.html"
+              },
+              {
+                "title": "US Quality Core Condition Problems Health Concerns",
+                "path": "StructureDefinition-us-quality-core-condition-problems-health-concerns.html"
+              },
+              {
+                "title": "US Quality Core Simple Observation",
+                "path": "StructureDefinition-us-quality-core-simple-observation.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.bounds[x]",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.frequency",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.frequencyMax",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.period",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.periodMax",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.timing.repeat.periodUnit",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dosageInstruction.asNeeded[x]",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dispenseRequest.validityPeriod",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "dispenseRequest.expectedSupplyDuration",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      }
+    ],
     "search": {
       "resource": "MedicationRequest",
       "capabilityStatementAnchor": "MedicationRequest1-21",
@@ -9210,6 +11033,7 @@
         }
       ]
     },
+    "netNewRequirements": [],
     "search": {
       "resource": "NutritionOrder",
       "capabilityStatementAnchor": "NutritionOrder1-22",
@@ -9394,6 +11218,32 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "Group"
+              },
+              {
+                "title": "US Core Device Profile"
+              },
+              {
+                "title": "US Quality Core Location",
+                "path": "StructureDefinition-us-quality-core-location.html"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "Observation",
       "capabilityStatementAnchor": "Observation1-23",
@@ -9791,6 +11641,42 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "encounter",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Encounter",
+                "path": "StructureDefinition-us-quality-core-encounter.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "issued",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      }
+    ],
     "search": {
       "resource": "Observation",
       "capabilityStatementAnchor": "Observation1-23",
@@ -10220,6 +12106,96 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Location",
+                "path": "StructureDefinition-us-quality-core-location.html"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "performer",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core CareTeam",
+                "path": "StructureDefinition-us-quality-core-careteam.html"
+              },
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "hasMember",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Observation Screening Assessment",
+                "path": "StructureDefinition-us-quality-core-observation-screening-assessment.html"
+              },
+              {
+                "title": "US Quality Core QuestionnaireResponse",
+                "path": "StructureDefinition-us-quality-core-questionnaireresponse.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "derivedFrom",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Observation Screening Assessment",
+                "path": "StructureDefinition-us-quality-core-observation-screening-assessment.html"
+              },
+              {
+                "title": "US Quality Core QuestionnaireResponse",
+                "path": "StructureDefinition-us-quality-core-questionnaireresponse.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "Observation",
       "capabilityStatementAnchor": "Observation1-23",
@@ -10546,6 +12522,80 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "identifier:ccn",
+        "changes": [
+          "New slice (0..1)",
+          "Pattern constraint added"
+        ]
+      },
+      {
+        "path": "identifier:ccn.use",
+        "changes": [
+          "Cardinality: 0..1 → 1..1"
+        ]
+      },
+      {
+        "path": "identifier:ccn.system",
+        "changes": [
+          "Must Support"
+        ]
+      },
+      {
+        "path": "identifier:ccn.value",
+        "changes": [
+          "Cardinality: 0..1 → 1..1",
+          "Must Support"
+        ]
+      },
+      {
+        "path": "identifier:ein",
+        "changes": [
+          "New slice (0..1)",
+          "Pattern constraint added"
+        ]
+      },
+      {
+        "path": "identifier:ein.use",
+        "changes": [
+          "Cardinality: 0..1 → 1..1"
+        ]
+      },
+      {
+        "path": "identifier:ein.system",
+        "changes": [
+          "Must Support"
+        ]
+      },
+      {
+        "path": "identifier:ein.value",
+        "changes": [
+          "Cardinality: 0..1 → 1..1",
+          "Must Support"
+        ]
+      },
+      {
+        "path": "type",
+        "changes": [
+          "Binding: example → preferred"
+        ]
+      },
+      {
+        "path": "partOf",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "Organization",
       "capabilityStatementAnchor": "Organization1-24",
@@ -11322,6 +13372,28 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "address.extension:address-preferred",
+        "changes": [
+          "New extension (0..1)"
+        ]
+      },
+      {
+        "path": "link.other",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "Patient",
       "capabilityStatementAnchor": "Patient1-25",
@@ -11801,6 +13873,36 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "identifier:ein",
+        "changes": [
+          "New slice (0..1)",
+          "USCDI+ Quality support",
+          "Pattern constraint added"
+        ]
+      },
+      {
+        "path": "identifier:ein.use",
+        "changes": [
+          "Cardinality: 0..1 → 1..1"
+        ]
+      },
+      {
+        "path": "identifier:ein.system",
+        "changes": [
+          "Cardinality: 0..1 → 1..1",
+          "Must Support"
+        ]
+      },
+      {
+        "path": "identifier:ein.value",
+        "changes": [
+          "Cardinality: 0..1 → 1..1",
+          "Must Support"
+        ]
+      }
+    ],
     "search": {
       "resource": "Practitioner",
       "capabilityStatementAnchor": "Practitioner1-26",
@@ -12076,6 +14178,89 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "identifier",
+        "changes": [
+          "Cardinality: 0..* → 1..*",
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "identifier.use",
+        "changes": [
+          "Cardinality: 0..1 → 1..1"
+        ]
+      },
+      {
+        "path": "identifier.system",
+        "changes": [
+          "Cardinality: 0..1 → 1..1",
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "identifier.value",
+        "changes": [
+          "Cardinality: 0..1 → 1..1",
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "active",
+        "changes": [
+          "Cardinality: 0..1 → 1..1"
+        ]
+      },
+      {
+        "path": "period",
+        "changes": [
+          "Cardinality: 0..1 → 1..1"
+        ]
+      },
+      {
+        "path": "practitioner",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "organization",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "location",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Location",
+                "path": "StructureDefinition-us-quality-core-location.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "PractitionerRole",
       "capabilityStatementAnchor": "PractitionerRole1-27",
@@ -12346,6 +14531,127 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "",
+        "changes": [
+          "Validation rule added: prc-1"
+        ]
+      },
+      {
+        "path": "extension",
+        "changes": [
+          "Cardinality: 0..* → 1..*"
+        ]
+      },
+      {
+        "path": "extension:recorded",
+        "changes": [
+          "New extension (1..1)"
+        ]
+      },
+      {
+        "path": "basedOn",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core CarePlan",
+                "path": "StructureDefinition-us-quality-core-careplan.html"
+              },
+              {
+                "title": "US Quality Core ServiceRequest",
+                "path": "StructureDefinition-us-quality-core-servicerequest.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "partOf",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "statusReason",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "code.extension:codeOptions",
+        "changes": [
+          "New extension (0..1)"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "performer.actor",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "reasonReference",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Core DocumentReference Profile"
+              },
+              {
+                "title": "US Quality Core Condition Encounter Diagnosis",
+                "path": "StructureDefinition-us-quality-core-condition-encounter-diagnosis.html"
+              },
+              {
+                "title": "US Quality Core Condition Problems Health Concerns",
+                "path": "StructureDefinition-us-quality-core-condition-problems-health-concerns.html"
+              },
+              {
+                "title": "US Quality Core DiagnosticReport Profile for Report and Note Exchange",
+                "path": "StructureDefinition-us-quality-core-diagnosticreport-note.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "Procedure",
       "capabilityStatementAnchor": "Procedure1-28",
@@ -12655,6 +14961,133 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "",
+        "changes": [
+          "Validation rule added: prc-1"
+        ]
+      },
+      {
+        "path": "extension",
+        "changes": [
+          "Cardinality: 0..* → 1..*"
+        ]
+      },
+      {
+        "path": "extension:recorded",
+        "changes": [
+          "New extension (1..1)"
+        ]
+      },
+      {
+        "path": "basedOn",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core CarePlan",
+                "path": "StructureDefinition-us-quality-core-careplan.html"
+              },
+              {
+                "title": "US Quality Core ServiceRequest",
+                "path": "StructureDefinition-us-quality-core-servicerequest.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "partOf",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "status",
+        "changes": [
+          "Value set changed"
+        ]
+      },
+      {
+        "path": "statusReason",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "code.extension:codeOptions",
+        "changes": [
+          "New extension (0..1)"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "performer.actor",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "reasonReference",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Core DocumentReference Profile"
+              },
+              {
+                "title": "US Quality Core Condition Encounter Diagnosis",
+                "path": "StructureDefinition-us-quality-core-condition-encounter-diagnosis.html"
+              },
+              {
+                "title": "US Quality Core Condition Problems Health Concerns",
+                "path": "StructureDefinition-us-quality-core-condition-problems-health-concerns.html"
+              },
+              {
+                "title": "US Quality Core DiagnosticReport Profile for Report and Note Exchange",
+                "path": "StructureDefinition-us-quality-core-diagnosticreport-note.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "Procedure",
       "capabilityStatementAnchor": "Procedure1-28",
@@ -12974,6 +15407,138 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "",
+        "changes": [
+          "Validation rule added: prc-1"
+        ]
+      },
+      {
+        "path": "extension",
+        "changes": [
+          "Cardinality: 0..* → 1..*"
+        ]
+      },
+      {
+        "path": "extension:recorded",
+        "changes": [
+          "New extension (1..1)",
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "basedOn",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core CarePlan",
+                "path": "StructureDefinition-us-quality-core-careplan.html"
+              },
+              {
+                "title": "US Quality Core ServiceRequest",
+                "path": "StructureDefinition-us-quality-core-servicerequest.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "partOf",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "status",
+        "changes": [
+          "Fixed value: not-done"
+        ]
+      },
+      {
+        "path": "statusReason",
+        "changes": [
+          "Cardinality: 0..1 → 1..1",
+          "USCDI+ Quality support",
+          "Binding: example → extensible",
+          "Value set changed"
+        ]
+      },
+      {
+        "path": "code.extension:codeOptions",
+        "changes": [
+          "New extension (0..1)",
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "performer.actor",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "reasonReference",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Core DocumentReference Profile"
+              },
+              {
+                "title": "US Quality Core Condition Encounter Diagnosis",
+                "path": "StructureDefinition-us-quality-core-condition-encounter-diagnosis.html"
+              },
+              {
+                "title": "US Quality Core Condition Problems Health Concerns",
+                "path": "StructureDefinition-us-quality-core-condition-problems-health-concerns.html"
+              },
+              {
+                "title": "US Quality Core DiagnosticReport Profile for Report and Note Exchange",
+                "path": "StructureDefinition-us-quality-core-diagnosticreport-note.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "Procedure",
       "capabilityStatementAnchor": "Procedure1-28",
@@ -13391,6 +15956,61 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "author",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Core Device Profile"
+              },
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "item.answer.value[x]",
+        "changes": [
+          "Types removed: Attachment, Reference, boolean, time, uri"
+        ]
+      }
+    ],
     "search": {
       "resource": "QuestionnaireResponse",
       "capabilityStatementAnchor": "QuestionnaireResponse1-30",
@@ -13550,6 +16170,28 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "patient",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "address",
+        "changes": [
+          "Additional USCDI support"
+        ]
+      }
+    ],
     "search": {
       "resource": "RelatedPerson",
       "capabilityStatementAnchor": "RelatedPerson1-31",
@@ -13968,6 +16610,137 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "",
+        "changes": [
+          "Validation rule added: srq-1"
+        ]
+      },
+      {
+        "path": "status",
+        "changes": [
+          "Value set changed"
+        ]
+      },
+      {
+        "path": "doNotPerform",
+        "changes": [
+          "Cardinality: 0..1 → 1..1",
+          "USCDI+ Quality support",
+          "Fixed value: true"
+        ]
+      },
+      {
+        "path": "code.extension:codeOptions",
+        "changes": [
+          "New extension (0..1)",
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "encounter",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Encounter",
+                "path": "StructureDefinition-us-quality-core-encounter.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "authoredOn",
+        "changes": [
+          "Cardinality: 0..1 → 1..1"
+        ]
+      },
+      {
+        "path": "requester",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Core Device Profile"
+              },
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "reasonCode",
+        "changes": [
+          "Value set changed"
+        ]
+      },
+      {
+        "path": "reasonReference",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Core DocumentReference Profile"
+              },
+              {
+                "title": "US Quality Core Condition Encounter Diagnosis",
+                "path": "StructureDefinition-us-quality-core-condition-encounter-diagnosis.html"
+              },
+              {
+                "title": "US Quality Core Condition Problems Health Concerns",
+                "path": "StructureDefinition-us-quality-core-condition-problems-health-concerns.html"
+              },
+              {
+                "title": "US Quality Core DiagnosticReport Profile for Report and Note Exchange",
+                "path": "StructureDefinition-us-quality-core-diagnosticreport-note.html"
+              },
+              {
+                "title": "US Quality Core Simple Observation",
+                "path": "StructureDefinition-us-quality-core-simple-observation.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "ServiceRequest",
       "capabilityStatementAnchor": "ServiceRequest1-32",
@@ -14422,6 +17195,117 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "",
+        "changes": [
+          "Validation rule added: srq-1"
+        ]
+      },
+      {
+        "path": "doNotPerform",
+        "changes": [
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "code.extension:codeOptions",
+        "changes": [
+          "New extension (0..1)",
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "encounter",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Encounter",
+                "path": "StructureDefinition-us-quality-core-encounter.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "requester",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Core Device Profile"
+              },
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "reasonReference",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Core DocumentReference Profile"
+              },
+              {
+                "title": "US Quality Core Condition Encounter Diagnosis",
+                "path": "StructureDefinition-us-quality-core-condition-encounter-diagnosis.html"
+              },
+              {
+                "title": "US Quality Core Condition Problems Health Concerns",
+                "path": "StructureDefinition-us-quality-core-condition-problems-health-concerns.html"
+              },
+              {
+                "title": "US Quality Core DiagnosticReport Profile for Report and Note Exchange",
+                "path": "StructureDefinition-us-quality-core-diagnosticreport-note.html"
+              },
+              {
+                "title": "US Quality Core Simple Observation",
+                "path": "StructureDefinition-us-quality-core-simple-observation.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "ServiceRequest",
       "capabilityStatementAnchor": "ServiceRequest1-32",
@@ -14876,6 +17760,124 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "",
+        "changes": [
+          "Validation rule added: srq-1"
+        ]
+      },
+      {
+        "path": "status",
+        "changes": [
+          "Value set changed"
+        ]
+      },
+      {
+        "path": "doNotPerform",
+        "changes": [
+          "USCDI+ Quality support",
+          "Fixed value: false"
+        ]
+      },
+      {
+        "path": "code.extension:codeOptions",
+        "changes": [
+          "New extension (0..1)",
+          "USCDI+ Quality support"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "encounter",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Encounter",
+                "path": "StructureDefinition-us-quality-core-encounter.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "requester",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Core Device Profile"
+              },
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "reasonReference",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Core DocumentReference Profile"
+              },
+              {
+                "title": "US Quality Core Condition Encounter Diagnosis",
+                "path": "StructureDefinition-us-quality-core-condition-encounter-diagnosis.html"
+              },
+              {
+                "title": "US Quality Core Condition Problems Health Concerns",
+                "path": "StructureDefinition-us-quality-core-condition-problems-health-concerns.html"
+              },
+              {
+                "title": "US Quality Core DiagnosticReport Profile for Report and Note Exchange",
+                "path": "StructureDefinition-us-quality-core-diagnosticreport-note.html"
+              },
+              {
+                "title": "US Quality Core Simple Observation",
+                "path": "StructureDefinition-us-quality-core-simple-observation.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "ServiceRequest",
       "capabilityStatementAnchor": "ServiceRequest1-32",
@@ -15463,6 +18465,93 @@
         }
       ]
     },
+    "netNewRequirements": [
+      {
+        "path": "category:us-core",
+        "changes": [
+          "Must Support"
+        ]
+      },
+      {
+        "path": "subject",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "performer",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "US Quality Core CareTeam",
+                "path": "StructureDefinition-us-quality-core-careteam.html"
+              },
+              {
+                "title": "US Quality Core Organization",
+                "path": "StructureDefinition-us-quality-core-organization.html"
+              },
+              {
+                "title": "US Quality Core Patient",
+                "path": "StructureDefinition-us-quality-core-patient.html"
+              },
+              {
+                "title": "US Quality Core Practitioner",
+                "path": "StructureDefinition-us-quality-core-practitioner.html"
+              },
+              {
+                "title": "US Quality Core PractitionerRole",
+                "path": "StructureDefinition-us-quality-core-practitionerrole.html"
+              },
+              {
+                "title": "US Quality Core RelatedPerson",
+                "path": "StructureDefinition-us-quality-core-relatedperson.html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "derivedFrom",
+        "changes": [
+          {
+            "text": "Reference changed",
+            "profiles": [
+              {
+                "title": "Media"
+              },
+              {
+                "title": "MolecularSequence"
+              },
+              {
+                "title": "US Core DocumentReference Profile"
+              },
+              {
+                "title": "US Quality Core ImagingStudy",
+                "path": "StructureDefinition-us-quality-core-imagingstudy.html"
+              },
+              {
+                "title": "US Quality Core QuestionnaireResponse",
+                "path": "StructureDefinition-us-quality-core-questionnaireresponse.html"
+              },
+              {
+                "title": "US Quality Core Simple Observation",
+                "path": "StructureDefinition-us-quality-core-simple-observation.html"
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "search": {
       "resource": "Observation",
       "capabilityStatementAnchor": "Observation1-23",
@@ -15740,6 +18829,7 @@
         }
       ]
     },
+    "netNewRequirements": [],
     "search": {
       "resource": "Task",
       "capabilityStatementAnchor": "Task1-34",
@@ -15992,6 +19082,7 @@
         }
       ]
     },
+    "netNewRequirements": [],
     "search": {
       "resource": "Task",
       "capabilityStatementAnchor": "Task1-34",
@@ -16277,6 +19368,7 @@
         }
       ]
     },
+    "netNewRequirements": [],
     "search": {
       "resource": "Task",
       "capabilityStatementAnchor": "Task1-34",
