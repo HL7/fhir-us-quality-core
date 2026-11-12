@@ -1,3 +1,5 @@
+{% include profile-net-new.md profile="us-quality-core-practitioner" %}
+
 {% include profile-uscdi-quality-guidance.md profile="us-quality-core-practitioner" %}
 
 {% include profile-us-core-guidance.md profile="us-quality-core-practitioner" %}

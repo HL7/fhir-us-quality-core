@@ -1,3 +1,5 @@
+const { isDeepStrictEqual } = require('node:util');
+
 const USCDI_INDICATOR_EXTENSION =
   'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement';
 const USCDI_QUALITY_INDICATOR_EXTENSION =
@@ -310,6 +312,117 @@ function profileConformanceIndicators(profile, baseResource, usCoreProfile = nul
   return { elements };
 }
 
+function typeValues(element, field, normalize = value => value) {
+  return [...new Set((element.type ?? []).flatMap(type =>
+    field === 'code' ? [type.code] : type[field] ?? []
+  ).map(normalize))].sort();
+}
+
+function profileNetNewRequirements(profile, baseResource, usCoreProfile, fhirDefs, localProfiles = new Map()) {
+  if (!usCoreProfile) return [];
+
+  const baseIndex = snapshotElementIndex(baseResource);
+  const usCoreIndex = snapshotElementIndex(usCoreProfile);
+  const canonical = value => {
+    if (!value) return value;
+    const [url, version] = value.split('|');
+    const resolvedVersion = version ?? fhirDefs?.fishForFHIR(url)?.version;
+    return resolvedVersion ? `${url}|${resolvedVersion}` : url;
+  };
+  const referenceProfile = value => {
+    const url = canonicalValue(value);
+    const id = url.split('/').at(-1);
+    const local = localProfiles.get(id);
+    const isLocal = local?.url === url;
+    const target = isLocal ? local : fhirDefs?.fishForFHIR(url);
+    return {
+      title: target?.title ?? target?.name ?? id,
+      ...(isLocal && { path: `StructureDefinition-${id}.html` })
+    };
+  };
+  const fields = [
+    ['Binding', element => element.binding?.strength],
+    ['Value set', element => canonical(element.binding?.valueSet)],
+    ['Types', element => typeValues(element, 'code')],
+    ['Type profiles', element => typeValues(element, 'profile', canonical)],
+    ['Reference profiles', element => typeValues(element, 'targetProfile', canonical)]
+  ];
+
+  return snapshotElements(profile).flatMap(element => {
+    const inherited = matchingElement(element, usCoreIndex);
+    const newSlice = isSliceRoot(element) && !inherited;
+    const datatype = element.base?.path?.split('.')[0];
+    const ancestor = inherited
+      ?? onlyElement(usCoreIndex.unslicedByPath.get(elementPath(element)))
+      ?? matchingElement(element, baseIndex)
+      ?? snapshotElements(fhirDefs?.fishForFHIR(datatype))
+        .find(candidate => candidate.path === element.base?.path);
+    const baseline = ancestor ?? element.base ?? {};
+    const changes = [];
+    const cardinality = value => `${value.min ?? 0}..${value.max ?? '*'}`;
+    const describe = value => value == null || value === '' ? '(none)'
+      : typeof value === 'object' ? JSON.stringify(value) : String(value);
+
+    if (newSlice) {
+      changes.push(`New ${elementPath(element).endsWith('.extension') ? 'extension' : 'slice'} (${cardinality(element)})`);
+    } else if (cardinality(element) !== cardinality(baseline)) {
+      changes.push(`Cardinality: ${cardinality(baseline)} → ${cardinality(element)}`);
+    }
+
+    if (element.max !== '0') {
+      const indicators = conformanceIndicatorRow(element, baseIndex, usCoreIndex);
+      if (indicators.usQualityCore.mustSupport) changes.push('Must Support');
+      if (indicators.usQualityCore.uscdi) changes.push('Additional USCDI support');
+      const baselineSupport = [indicators.fhir, indicators.usCore]
+        .some(layer => layer.mandatory || layer.mustSupport || layer.uscdi);
+      if (indicators.usQualityCore.uscdiQuality && !baselineSupport
+        && !indicators.usQualityCore.mustSupport) {
+        changes.push('USCDI+ Quality support');
+      }
+    }
+
+    if (ancestor) {
+      for (const [label, select] of fields) {
+        const before = select(ancestor);
+        const after = select(element);
+        if (isDeepStrictEqual(before, after) || (newSlice && label === 'Type profiles')) continue;
+        if (label === 'Types') {
+          const removed = before.filter(type => !after.includes(type));
+          const added = after.filter(type => !before.includes(type));
+          if (removed.length) changes.push(`Types removed: ${removed.join(', ')}`);
+          if (added.length) changes.push(`Types added: ${added.join(', ')}`);
+        } else if (label === 'Reference profiles' && after.length) {
+          changes.push({ text: 'Reference changed', profiles: after.map(referenceProfile) });
+        } else {
+          changes.push(label === 'Binding'
+            ? `Binding: ${describe(before)} → ${describe(after)}`
+            : `${label} changed`);
+        }
+      }
+    }
+
+    for (const key of Object.keys(element).filter(key => /^(fixed|pattern)[A-Z]/.test(key))) {
+      if (!isDeepStrictEqual(element[key], baseline[key])) {
+        const label = key.startsWith('fixed') ? 'Fixed value' : 'Pattern constraint';
+        changes.push(typeof element[key] === 'object'
+          ? `${label} ${baseline[key] == null ? 'added' : 'changed'}`
+          : `${label}: ${baseline[key] == null ? describe(element[key]) : `${describe(baseline[key])} → ${describe(element[key])}`}`);
+      }
+    }
+    for (const constraint of element.constraint ?? []) {
+      if (constraint.severity !== 'error') continue;
+      const previous = (baseline.constraint ?? []).find(candidate => candidate.key === constraint.key);
+      if (!previous || previous.severity !== 'error'
+        || previous.expression !== constraint.expression || previous.xpath !== constraint.xpath) {
+        changes.push(`Validation rule ${previous ? 'changed' : 'added'}: ${constraint.key}`);
+      }
+    }
+
+    return changes.length ? [{ path: elementDisplayPath(element), changes }] : [];
+  });
+}
+
 module.exports = {
-  profileConformanceIndicators
+  profileConformanceIndicators,
+  profileNetNewRequirements
 };

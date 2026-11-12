@@ -4,6 +4,8 @@ To create an expression indicating the existence of a service request, use the p
 
 Note that the doNotPerform and statuses indicating positive intent are implied by the use of the ServiceRequested profile.
 
+{% include profile-net-new.md profile="us-quality-core-servicerequested" %}
+
 {% include profile-uscdi-quality-guidance.md profile="us-quality-core-servicerequested" %}
 
 {% include profile-us-core-guidance.md profile="us-quality-core-servicerequested" %}
