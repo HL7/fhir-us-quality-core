@@ -45,7 +45,7 @@ Install the following before building the IG.
   ```
 
 - **SUSHI** - required to compile FSH. The IG Publisher reads `fsh.ini` and
-  invokes the pinned `fsh-sushi` version when building the IG. The generator
+  invokes the latest `fsh-sushi` version when building the IG. The generator
   scripts also install their local `fsh-sushi` dependency under `scripts/`, so
   a global SUSHI install is not required for the normal project workflow.
 
